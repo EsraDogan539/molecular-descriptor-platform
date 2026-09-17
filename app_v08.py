@@ -7,6 +7,7 @@ from rdkit.Chem import Draw
 
 from descriptor_engine import run_molecular_descriptor_platform
 from database_metadata import add_database_export
+from database_browser import display_database_browser
 from analysis_panel import display_analysis_panel
 from similarity_panel import display_similarity_panel
 from similarity_search import display_similarity_search_panel
@@ -95,7 +96,10 @@ def display_molecule_gallery(valid_df, max_molecules=12):
                     st.markdown(f"### {row['Molecule_ID']}")
                     mol = Chem.MolFromSmiles(row["Canonical SMILES"])
                     if mol is not None:
-                        st.image(Draw.MolToImage(mol, size=(360, 280)), use_container_width=True)
+                        st.image(
+                            Draw.MolToImage(mol, size=(360, 280)),
+                            use_container_width=True,
+                        )
                     st.write(f"**Formül:** {row['Molecular Formula']}")
                     st.write(f"**Chalcogen:** {row.get('Chalcogen Type', '—')}")
                     st.code(row["Canonical SMILES"], language=None)
@@ -115,29 +119,71 @@ sample_csv = sample_df.to_csv(index=False).encode("utf-8")
 
 with st.sidebar:
     st.title("🧬 Platform Ayarları")
+    platform_mode = st.radio(
+        "Çalışma modu",
+        ["Our Curated Database", "Analyze Your Dataset"],
+        index=0,
+    )
+
+    st.divider()
+
     project_name = st.text_input("Proje adı", value="chalcogen_project")
     selected_groups = st.multiselect(
         "Deskriptör grupları",
         options=list(DESCRIPTOR_GROUPS.keys()),
         default=["Basic", "Structural", "Chalcogen Core"],
+        disabled=platform_mode == "Our Curated Database",
     )
-    max_molecule_cards = st.slider("Gösterilecek molekül sayısı", 3, 30, 12, 3)
-    show_molecule_cards = st.checkbox("Molekül yapılarını göster", value=True)
+    max_molecule_cards = st.slider(
+        "Gösterilecek molekül sayısı",
+        3,
+        30,
+        12,
+        3,
+        disabled=platform_mode == "Our Curated Database",
+    )
+    show_molecule_cards = st.checkbox(
+        "Molekül yapılarını göster",
+        value=True,
+        disabled=platform_mode == "Our Curated Database",
+    )
+
+    st.divider()
+
     st.download_button(
-        "Örnek CSV indir", sample_csv, "sample_chalcogen_database.csv", "text/csv",
+        "Örnek kullanıcı CSV'si indir",
+        sample_csv,
+        "sample_chalcogen_database.csv",
+        "text/csv",
         use_container_width=True,
     )
-    st.caption("Zorunlu: Molecule_ID, SMILES. HOMO/LUMO/Eg, DOI ve yöntem alanları isteğe bağlıdır.")
+    st.caption(
+        "Kullanıcı verisi resmi curated database'e otomatik eklenmez. "
+        "Zorunlu alanlar: Molecule_ID ve SMILES."
+    )
 
 
 st.markdown(
     """
     <div class="hero">
       <h1>🧬 Molecular Descriptor Platform</h1>
-      <p>Chalcogen-focused curated database preparation, interpretable descriptors, fingerprints and similarity analysis.</p>
+      <p>Curated chalcogen database, interpretable descriptors, molecular analysis and independent validation workflow.</p>
     </div>
     """,
     unsafe_allow_html=True,
+)
+
+
+if platform_mode == "Our Curated Database":
+    display_database_browser()
+    st.caption("Molecular Descriptor Platform — v0.8 Scientific Core development branch")
+    st.stop()
+
+
+st.subheader("Analyze Your Dataset")
+st.caption(
+    "Kendi CSV dosyanızı analiz edin. Yüklenen kayıtlar sizin çalışma alanınızda işlenir; "
+    "yayının resmi curated database'ine otomatik olarak eklenmez."
 )
 
 uploaded_file = st.file_uploader("Molekül CSV dosyanızı yükleyin", type=["csv"])
@@ -146,7 +192,7 @@ if uploaded_file is None:
     c1, c2, c3 = st.columns(3)
     c1.info("1. CSV yükle ve yapıları doğrula")
     c2.info("2. Scientific Core descriptor'larını hesapla")
-    c3.info("3. Metadata ve kaynak bilgisini koruyarak curated database oluştur")
+    c3.info("3. Metadata ve kaynak bilgisini koruyarak analiz çıktısı oluştur")
 
 if uploaded_file is not None:
     try:
@@ -194,7 +240,7 @@ if uploaded_file is not None:
             m5.metric("Başarı", f"{success_rate:.2f}%")
 
             tabs = st.tabs([
-                "🗃️ Curated Database",
+                "🗂️ Dataset Records",
                 "📋 Genel Bakış",
                 "🧪 Scientific Core",
                 "🧬 Molekül Yapıları",
@@ -205,18 +251,27 @@ if uploaded_file is not None:
             ])
 
             with tabs[0]:
-                st.subheader("Curated Chalcogen Database")
+                st.subheader("Processed Dataset Records")
                 st.caption(
-                    "Canonical identifiers, electronic-property targets, provenance, method metadata and quality flags are kept together."
+                    "Canonical identifiers, electronic-property targets, provenance, "
+                    "method metadata and quality flags are kept together."
                 )
                 st.dataframe(database_df, use_container_width=True, hide_index=True)
 
             with tabs[1]:
                 st.subheader("Seçili Moleküler Deskriptörler")
-                st.dataframe(filtered_valid_df, use_container_width=True, hide_index=True)
+                st.dataframe(
+                    filtered_valid_df,
+                    use_container_width=True,
+                    hide_index=True,
+                )
                 if not invalid_df.empty:
                     st.subheader("Geçersiz SMILES Kayıtları")
-                    st.dataframe(invalid_df, use_container_width=True, hide_index=True)
+                    st.dataframe(
+                        invalid_df,
+                        use_container_width=True,
+                        hide_index=True,
+                    )
 
             with tabs[2]:
                 display_scientific_core_panel(valid_df)
@@ -241,9 +296,9 @@ if uploaded_file is not None:
                 database_csv = database_df.to_csv(index=False).encode("utf-8")
 
                 st.download_button(
-                    "Curated Database CSV İndir",
+                    "İşlenmiş Dataset CSV İndir",
                     database_csv,
-                    f"{project_name}_curated_database.csv",
+                    f"{project_name}_processed_database.csv",
                     "text/csv",
                     use_container_width=True,
                 )
@@ -266,5 +321,6 @@ if uploaded_file is not None:
 
     except Exception as error:
         st.error(f"Dosya işlenemedi: {error}")
+
 
 st.caption("Molecular Descriptor Platform — v0.8 Scientific Core development branch")
