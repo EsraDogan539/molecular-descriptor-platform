@@ -6,8 +6,8 @@ SCIENTIFIC_COLUMNS = [
     "Canonical SMILES",
     "InChIKey",
     "Chalcogen Type",
-    "Heavy Chalcogen Count",
-    "Chalcogen Fraction",
+    "Target Chalcogen Count",
+    "Target Chalcogen Fraction",
     "Aromatic Chalcogen Count",
     "NonAromatic Chalcogen Count",
     "Mixed Chalcogen Flag",
@@ -62,6 +62,6 @@ def display_scientific_core_panel(valid_df):
 
     st.markdown("#### Quality notes")
     st.caption(
-        "Duplicate Flag is based on canonical SMILES. Oxygen is retained as a general "
+        "Duplicate Flag is based on standardized structure identity (InChIKey when available, with canonical SMILES fallback). Oxygen is retained as a general "
         "elemental descriptor but is not counted in the S/Se/Te-focused chalcogen total."
     )
