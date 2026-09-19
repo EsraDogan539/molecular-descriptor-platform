@@ -56,7 +56,7 @@ DESCRIPTOR_GROUPS = {
     ],
     "Chalcogen Core": [
         "Molecule_ID", "Canonical SMILES", "Chalcogen Type",
-        "Heavy Chalcogen Count", "Chalcogen Fraction",
+        "Target Chalcogen Count", "Target Chalcogen Fraction",
         "Aromatic Chalcogen Count", "NonAromatic Chalcogen Count",
         "Mixed Chalcogen Flag", "Ring Incorporated Chalcogen Count",
         "Chalcogen-C Bond Count", "Chalcogen-Heteroatom Bond Count",
