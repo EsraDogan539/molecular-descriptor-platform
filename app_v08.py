@@ -167,7 +167,7 @@ st.markdown(
     """
     <div class="hero">
       <h1>🧬 Molecular Descriptor Platform</h1>
-      <p>Curated chalcogen database, interpretable descriptors, molecular analysis and independent validation workflow.</p>
+      <p>Curated chalcogen database, interpretable descriptors, molecular analysis and curation-aware validation workflow.</p>
     </div>
     """,
     unsafe_allow_html=True,
