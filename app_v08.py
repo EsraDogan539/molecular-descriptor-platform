@@ -8,8 +8,6 @@ from rdkit.Chem import Draw
 from descriptor_engine import run_molecular_descriptor_platform
 from database_metadata import add_database_export
 from database_browser import display_database_browser
-from analysis_panel import display_analysis_panel
-from similarity_panel import display_similarity_panel
 from similarity_search import display_similarity_search_panel
 from scientific_panel import display_scientific_core_panel
 
@@ -118,24 +116,24 @@ sample_csv = sample_df.to_csv(index=False).encode("utf-8")
 
 
 with st.sidebar:
-    st.title("🧬 Platform Ayarları")
+    st.title("🧬 Molecular Descriptor Platform")
     platform_mode = st.radio(
-        "Çalışma modu",
+        "Mode",
         ["Our Curated Database", "Analyze Your Dataset"],
         index=0,
     )
 
     st.divider()
 
-    project_name = st.text_input("Proje adı", value="chalcogen_project")
+    project_name = st.text_input("Project name", value="chalcogen_project")
     selected_groups = st.multiselect(
-        "Deskriptör grupları",
+        "Descriptor groups",
         options=list(DESCRIPTOR_GROUPS.keys()),
         default=["Basic", "Structural", "Chalcogen Core"],
         disabled=platform_mode == "Our Curated Database",
     )
     max_molecule_cards = st.slider(
-        "Gösterilecek molekül sayısı",
+        "Molecule cards",
         3,
         30,
         12,
@@ -143,7 +141,7 @@ with st.sidebar:
         disabled=platform_mode == "Our Curated Database",
     )
     show_molecule_cards = st.checkbox(
-        "Molekül yapılarını göster",
+        "Show molecule structures",
         value=True,
         disabled=platform_mode == "Our Curated Database",
     )
@@ -151,7 +149,7 @@ with st.sidebar:
     st.divider()
 
     st.download_button(
-        "Örnek kullanıcı CSV'si indir",
+        "Download example CSV",
         sample_csv,
         "sample_chalcogen_database.csv",
         "text/csv",
@@ -182,34 +180,35 @@ if platform_mode == "Our Curated Database":
 
 st.subheader("Analyze Your Dataset")
 st.caption(
-    "Kendi CSV dosyanızı analiz edin. Yüklenen kayıtlar sizin çalışma alanınızda işlenir; "
-    "yayının resmi curated database'ine otomatik olarak eklenmez."
+    "Upload a CSV with Molecule_ID and SMILES. The platform validates structures, "
+    "calculates general and chalcogen-aware descriptors, and returns a quality-controlled "
+    "analysis package. Uploaded records never modify the curated publication database."
 )
 
-uploaded_file = st.file_uploader("Molekül CSV dosyanızı yükleyin", type=["csv"])
+uploaded_file = st.file_uploader("Upload molecular CSV", type=["csv"])
 
 if uploaded_file is None:
     c1, c2, c3 = st.columns(3)
-    c1.info("1. CSV yükle ve yapıları doğrula")
-    c2.info("2. Scientific Core descriptor'larını hesapla")
-    c3.info("3. Metadata ve kaynak bilgisini koruyarak analiz çıktısı oluştur")
+    c1.info("1. Upload and validate molecular structures")
+    c2.info("2. Calculate selected descriptor layers")
+    c3.info("3. Review quality flags and export results")
 
 if uploaded_file is not None:
     try:
         input_df = pd.read_csv(uploaded_file)
-        st.subheader("Yüklenen Veri")
+        st.subheader("Uploaded data")
         st.dataframe(input_df.head(20), use_container_width=True, hide_index=True)
 
         if not selected_groups:
-            st.warning("En az bir deskriptör grubu seçmelisiniz.")
+            st.warning("Select at least one descriptor group.")
 
         if st.button(
-            "🧪 Scientific Core Analizini Çalıştır",
+            "Run descriptor analysis",
             type="primary",
             disabled=not selected_groups,
             use_container_width=True,
         ):
-            with st.spinner("Moleküller işleniyor..."):
+            with st.spinner("Validating structures and calculating descriptors..."):
                 results = run_molecular_descriptor_platform(
                     input_df=input_df,
                     project_name=project_name,
@@ -233,77 +232,71 @@ if uploaded_file is not None:
             success_rate = float(summary_df.loc[0, "Success Rate (%)"])
 
             m1, m2, m3, m4, m5 = st.columns(5)
-            m1.metric("Toplam Kayıt", total_records)
-            m2.metric("Geçerli", valid_count)
-            m3.metric("Geçersiz", invalid_count)
-            m4.metric("Duplicate", duplicate_count)
-            m5.metric("Başarı", f"{success_rate:.2f}%")
+            m1.metric("Records", total_records)
+            m2.metric("Valid", valid_count)
+            m3.metric("Invalid", invalid_count)
+            m4.metric("Repeated structures", duplicate_count)
+            m5.metric("Validation rate", f"{success_rate:.2f}%")
 
             tabs = st.tabs([
-                "🗂️ Dataset Records",
-                "📋 Genel Bakış",
-                "🧪 Scientific Core",
-                "🧬 Molekül Yapıları",
-                "📊 Veri Analizi",
-                "⚖️ Karşılaştırma",
-                "🔎 Benzer Molekül Arama",
-                "⬇️ İndirmeler",
+                "🗂️ Quality & Records",
+                "🧪 Descriptor Layer",
+                "🧬 Structures",
+                "🔎 Similarity Search",
+                "⬇️ Export",
             ])
 
             with tabs[0]:
-                st.subheader("Processed Dataset Records")
+                st.subheader("Quality-controlled records")
                 st.caption(
-                    "Canonical identifiers, electronic-property targets, provenance, "
-                    "method metadata and quality flags are kept together."
+                    "Canonical identifiers, user-supplied property fields, provenance metadata "
+                    "and quality flags are retained together."
                 )
                 st.dataframe(database_df, use_container_width=True, hide_index=True)
+                if not invalid_df.empty:
+                    st.markdown("#### Invalid or missing structures")
+                    st.dataframe(invalid_df, use_container_width=True, hide_index=True)
 
             with tabs[1]:
-                st.subheader("Seçili Moleküler Deskriptörler")
+                st.subheader("Selected descriptor layer")
+                st.caption(
+                    "General molecular descriptors and chalcogen-aware annotations are calculated "
+                    "from the standardized structure."
+                )
                 st.dataframe(
                     filtered_valid_df,
                     use_container_width=True,
                     hide_index=True,
                 )
-                if not invalid_df.empty:
-                    st.subheader("Geçersiz SMILES Kayıtları")
-                    st.dataframe(
-                        invalid_df,
-                        use_container_width=True,
-                        hide_index=True,
-                    )
+                with st.expander("Scientific Core summary", expanded=False):
+                    display_scientific_core_panel(valid_df)
 
             with tabs[2]:
-                display_scientific_core_panel(valid_df)
-
-            with tabs[3]:
                 if show_molecule_cards:
                     display_molecule_gallery(valid_df, max_molecule_cards)
                 else:
-                    st.info("Molekül yapıları sol menüden kapatıldı.")
+                    st.info("Molecule structure cards are disabled in the sidebar.")
 
-            with tabs[4]:
-                display_analysis_panel(valid_df)
-
-            with tabs[5]:
-                display_similarity_panel(valid_df)
-
-            with tabs[6]:
+            with tabs[3]:
+                st.caption(
+                    "Fingerprint-based similarity is provided as an exploratory tool and does not "
+                    "change the curated database."
+                )
                 display_similarity_search_panel(valid_df)
 
-            with tabs[7]:
+            with tabs[4]:
                 selected_csv = filtered_valid_df.to_csv(index=False).encode("utf-8")
                 database_csv = database_df.to_csv(index=False).encode("utf-8")
 
                 st.download_button(
-                    "İşlenmiş Dataset CSV İndir",
+                    "Download processed records CSV",
                     database_csv,
                     f"{project_name}_processed_database.csv",
                     "text/csv",
                     use_container_width=True,
                 )
                 st.download_button(
-                    "Seçili Deskriptörleri CSV Olarak İndir",
+                    "Download selected descriptors CSV",
                     selected_csv,
                     f"{project_name}_selected_descriptors.csv",
                     "text/csv",
@@ -312,7 +305,7 @@ if uploaded_file is not None:
                 with open(results["zip_file"], "rb") as file:
                     zip_data = file.read()
                 st.download_button(
-                    "Tüm Sonuçları ZIP Olarak İndir",
+                    "Download complete analysis package (ZIP)",
                     zip_data,
                     os.path.basename(results["zip_file"]),
                     "application/zip",
@@ -320,7 +313,7 @@ if uploaded_file is not None:
                 )
 
     except Exception as error:
-        st.error(f"Dosya işlenemedi: {error}")
+        st.error(f"Dataset could not be processed: {error}")
 
 
 st.caption("Molecular Descriptor Platform — v0.8 Scientific Core development branch")
