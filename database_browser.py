@@ -62,7 +62,7 @@ def display_database_browser():
     with st.expander("Database scope and split policy", expanded=False):
         st.markdown(
             "- **Development / Training:** Erol dataset\n"
-            "- **Independent External Validation:** Hakan Kayı dataset\n"
+            "- **External Validation Collection:** Hakan Kayı dataset\n"
             "- **Core scope:** records containing S, Se or Te\n"
             "- O-only and non-S/Se/Te records are retained as controls, not merged into the core benchmark.\n"
             "- External-validation records are not used for model fitting or feature selection."
