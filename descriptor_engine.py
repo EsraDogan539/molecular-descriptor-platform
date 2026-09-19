@@ -35,7 +35,7 @@ def validate_input_dataframe(input_df):
 
     if missing_columns:
         raise ValueError(
-            "Eksik sütunlar: " + ", ".join(missing_columns)
+            "Missing required columns: " + ", ".join(missing_columns)
         )
 
 
@@ -141,7 +141,7 @@ def calculate_chalcogen_aware_descriptors(mol):
     total_chalcogens = len(chalcogen_atoms)
 
     return {
-        "Chalcogen Fraction": round(
+        "Target Chalcogen Fraction": round(
             total_chalcogens / heavy_atom_count,
             4
         ),
@@ -194,7 +194,7 @@ def calculate_single_molecule_descriptors(molecule_id, smiles):
         }
 
     atom_counts = count_selected_atoms(mol)
-    heavy_chalcogen_count = (
+    target_chalcogen_count = (
         atom_counts["Sulfur Count"]
         + atom_counts["Selenium Count"]
         + atom_counts["Tellurium Count"]
@@ -235,9 +235,8 @@ def calculate_single_molecule_descriptors(molecule_id, smiles):
         "Balaban J": round(Descriptors.BalabanJ(mol), 4),
         **atom_counts,
         "Chalcogen Type": classify_chalcogen_type(atom_counts),
-        "Heavy Chalcogen Count": heavy_chalcogen_count,
-        "Total Chalcogen Count": heavy_chalcogen_count,
-        "Contains S": int(atom_counts["Sulfur Count"] > 0),
+        "Target Chalcogen Count": target_chalcogen_count,
+                "Contains S": int(atom_counts["Sulfur Count"] > 0),
         "Contains Se": int(atom_counts["Selenium Count"] > 0),
         "Contains Te": int(atom_counts["Tellurium Count"] > 0),
         **calculate_chalcogen_aware_descriptors(mol),
@@ -269,11 +268,18 @@ def process_molecular_dataset(input_df):
     invalid_df = pd.DataFrame(invalid_results)
 
     if not valid_df.empty:
+        # Structure-level duplicate detection follows the standardized identity
+        # used by the curated database. InChIKey is preferred when available;
+        # canonical SMILES is used only as a fallback.
+        identity = valid_df["InChIKey"].fillna("").astype(str).str.strip()
+        fallback = valid_df["Canonical SMILES"].fillna("").astype(str)
+        valid_df["_Structure_Identity"] = identity.where(identity.ne(""), fallback)
         duplicate_mask = valid_df.duplicated(
-            subset=["Canonical SMILES"],
+            subset=["_Structure_Identity"],
             keep=False
         )
         valid_df["Duplicate Flag"] = duplicate_mask.astype(bool)
+        valid_df = valid_df.drop(columns=["_Structure_Identity"])
 
     total_records = len(input_df)
 
