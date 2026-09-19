@@ -1,0 +1,22 @@
+Descriptor,Category,Definition,Implementation_basis,Notes
+Sulfur Count,Target chalcogen composition,Number of sulfur atoms in the standardized RDKit molecular graph,Atom symbol == S,S is one of the target chalcogens
+Selenium Count,Target chalcogen composition,Number of selenium atoms in the standardized RDKit molecular graph,Atom symbol == Se,Se is one of the target chalcogens
+Tellurium Count,Target chalcogen composition,Number of tellurium atoms in the standardized RDKit molecular graph,Atom symbol == Te,Te is one of the target chalcogens
+Target Chalcogen Count,Target chalcogen composition,Sum of sulfur selenium and tellurium atom counts,Sulfur Count + Selenium Count + Tellurium Count,Oxygen is not included in this target-focused count
+Target Chalcogen Fraction,Target chalcogen composition,Target chalcogen atoms divided by heavy atom count,Target Chalcogen Count / Heavy Atom Count,Heavy atom denominator is constrained to at least 1 in implementation
+Chalcogen Type,Target chalcogen composition,Categorical label describing which target chalcogen elements are present,S / Se / Te / Mixed / None,Mixed indicates more than one of S Se and Te
+Mixed Chalcogen Flag,Target chalcogen composition,Binary flag for presence of more than one target chalcogen element,1 when more than one of S Se Te is present otherwise 0,
+Contains S,Target chalcogen composition,Binary presence flag for sulfur,1 when Sulfur Count > 0 otherwise 0,
+Contains Se,Target chalcogen composition,Binary presence flag for selenium,1 when Selenium Count > 0 otherwise 0,
+Contains Te,Target chalcogen composition,Binary presence flag for tellurium,1 when Tellurium Count > 0 otherwise 0,
+Aromatic Chalcogen Count,Local chalcogen environment,Number of target chalcogen atoms marked aromatic by RDKit,GetIsAromatic() for S Se Te atoms,
+NonAromatic Chalcogen Count,Local chalcogen environment,Number of target chalcogen atoms not marked aromatic,Target Chalcogen Count - Aromatic Chalcogen Count,
+Ring Incorporated Chalcogen Count,Local chalcogen environment,Number of target chalcogen atoms that belong to at least one ring,IsInRing() for S Se Te atoms,
+Chalcogen-C Bond Count,Local chalcogen environment,Number of unique bonds connecting a target chalcogen atom to carbon,Unique bond traversal around S Se Te atoms,Each molecular bond is counted once
+Chalcogen-Heteroatom Bond Count,Local chalcogen environment,Number of unique bonds connecting a target chalcogen atom to a non-carbon non-hydrogen atom,Unique bond traversal around S Se Te atoms,Each molecular bond is counted once
+Aromatic Neighbor Count,Local chalcogen environment,Count of aromatic neighboring atoms encountered across unique bonds involving target chalcogens,Neighbor GetIsAromatic() during unique bond traversal,Each molecular bond is traversed once
+Conjugated Bond Count,Conjugation and aromaticity,Number of bonds marked conjugated by RDKit,GetIsConjugated(),
+Aromatic Bond Fraction,Conjugation and aromaticity,Number of aromatic bonds divided by total molecular bond count,Aromatic bonds / total bonds,Total bond denominator is constrained to at least 1
+Conjugated Atom Fraction,Conjugation and aromaticity,Number of unique atoms participating in at least one conjugated bond divided by heavy atom count,Unique atoms from conjugated bonds / Heavy Atom Count,Heavy atom denominator is constrained to at least 1
+Heteroaromatic Ring Count,Conjugation and aromaticity,Number of fully aromatic rings containing at least one non-carbon non-hydrogen atom,RDKit AtomRings plus aromaticity checks,This descriptor is not limited to chalcogen-containing rings
+Duplicate Flag,Quality control,Binary flag identifying repeated standardized molecular structures within the processed dataset,InChIKey when available with canonical SMILES fallback,Repeated structures are flagged rather than automatically removed
