@@ -35,7 +35,7 @@ def find_similar_molecules(
     ]
 
     if reference_rows.empty:
-        raise ValueError("Referans molekül bulunamadı.")
+        raise ValueError("Reference molecule was not found.")
 
     reference_row = reference_rows.iloc[0]
     reference_smiles = reference_row["Canonical SMILES"]
@@ -46,7 +46,7 @@ def find_similar_molecules(
 
     if reference_fp is None:
         raise ValueError(
-            "Referans molekülün fingerprint'i oluşturulamadı."
+            "A fingerprint could not be generated for the reference molecule."
         )
 
     results = []
@@ -129,12 +129,9 @@ def find_similar_molecules(
 
 
 def display_similarity_search_panel(valid_df):
-    """
-    Kullanıcının bir referans molekül seçerek veri setindeki
-    en benzer molekülleri sıralamasını sağlar.
-    """
+    """Rank molecules in the uploaded dataset by similarity to a selected reference."""
 
-    st.subheader("Benzer Molekül Arama")
+    st.subheader("Similarity Search")
 
     if len(valid_df) < 2:
         st.info(
@@ -153,7 +150,7 @@ def display_similarity_search_panel(valid_df):
 
     with control_col_1:
         reference_id = st.selectbox(
-            "Referans molekül",
+            "Reference molecule",
             options=molecule_options,
             key="similarity_search_reference"
         )
@@ -165,7 +162,7 @@ def display_similarity_search_panel(valid_df):
 
     with control_col_2:
         top_n = st.number_input(
-            "Gösterilecek sonuç sayısı",
+            "Number of results",
             min_value=1,
             max_value=maximum_result_count,
             value=min(5, maximum_result_count),
@@ -174,7 +171,7 @@ def display_similarity_search_panel(valid_df):
 
     with control_col_3:
         minimum_similarity = st.slider(
-            "Minimum benzerlik",
+            "Minimum similarity",
             min_value=0.0,
             max_value=1.0,
             value=0.0,
@@ -185,7 +182,7 @@ def display_similarity_search_panel(valid_df):
         valid_df["Molecule_ID"].astype(str) == reference_id
     ].iloc[0]
 
-    st.markdown("### Referans Molekül")
+    st.markdown("### Reference molecule")
 
     reference_col_1, reference_col_2 = st.columns([1, 2])
 
@@ -211,12 +208,12 @@ def display_similarity_search_panel(valid_df):
         )
 
         st.write(
-            f"**Moleküler formül:** "
+            f"**Molecular formula:** "
             f"{reference_row['Molecular Formula']}"
         )
 
         st.write(
-            f"**Moleküler ağırlık:** "
+            f"**Molecular weight:** "
             f"{reference_row['Molecular Weight']}"
         )
 
@@ -240,11 +237,11 @@ def display_similarity_search_panel(valid_df):
         minimum_similarity=minimum_similarity
     )
 
-    st.markdown("### Benzerlik Sonuçları")
+    st.markdown("### Similarity results")
 
     if similar_df.empty:
         st.warning(
-            "Seçilen benzerlik eşiğine uygun molekül bulunamadı."
+            "No molecules meet the selected similarity threshold."
         )
         return
 
@@ -254,7 +251,7 @@ def display_similarity_search_panel(valid_df):
         use_container_width=True
     )
 
-    st.markdown("### En Benzer Molekül Kartları")
+    st.markdown("### Most similar molecules")
 
     cards_per_row = 3
 
@@ -297,27 +294,27 @@ def display_similarity_search_panel(valid_df):
                         )
 
                     st.metric(
-                        "Morgan Benzerliği",
+                        "Morgan similarity",
                         f"{result_row['Morgan Similarity']:.3f}"
                     )
 
                     st.write(
-                        f"**Formül:** "
+                        f"**Molecular formula:** "
                         f"{result_row['Molecular Formula']}"
                     )
 
                     st.write(
-                        f"**MW farkı:** "
+                        f"**MW difference:** "
                         f"{result_row['MW Difference']}"
                     )
 
                     st.write(
-                        f"**LogP farkı:** "
+                        f"**LogP difference:** "
                         f"{result_row['LogP Difference']}"
                     )
 
                     st.write(
-                        f"**TPSA farkı:** "
+                        f"**TPSA difference:** "
                         f"{result_row['TPSA Difference']}"
                     )
 
@@ -331,7 +328,7 @@ def display_similarity_search_panel(valid_df):
     ).encode("utf-8")
 
     st.download_button(
-        label="Benzerlik Sonuçlarını CSV Olarak İndir",
+        label="Download similarity results CSV",
         data=similarity_csv,
         file_name=(
             f"{reference_id}_similarity_search.csv"
