@@ -171,7 +171,20 @@ st.markdown(
     div[data-testid="stFileUploader"] {
         border: 1px solid var(--line);
         border-radius: 4px;
-        padding: .6rem;
+        padding: .35rem;
+        background: #FFFFFF;
+    }
+    div[data-testid="stFileUploader"] section {
+        background: #FFFFFF !important;
+        border: 1px dashed #D9DEE7 !important;
+        border-radius: 4px !important;
+    }
+    .analyze-note {
+        color: var(--muted);
+        font-size: .88rem;
+        margin-top: .8rem;
+        padding-top: .75rem;
+        border-top: 1px solid var(--line);
     }
     div[data-testid="stExpander"] {
         border: 1px solid var(--line);
@@ -419,8 +432,8 @@ if page == "about":
 
 st.header("Analyze Your Dataset")
 st.caption(
-    "Upload molecular data to validate structures and calculate general and "
-    "chalcogen-aware descriptors. User uploads remain separate from the curated database."
+    "Upload molecular structures to validate records and calculate general and "
+    "S/Se/Te-aware descriptors."
 )
 
 upload_left, upload_right = st.columns([2.1, 1])
@@ -432,8 +445,8 @@ with upload_left:
     )
 with upload_right:
     st.markdown("**Input format**")
-    st.caption("Required: Molecule_ID, SMILES")
-    st.caption("Optional property and provenance fields are retained.")
+    st.caption("Required columns: Molecule_ID, SMILES")
+    st.caption("Additional property or provenance columns are preserved.")
     st.download_button(
         "Download example CSV",
         sample_csv,
@@ -443,7 +456,11 @@ with upload_right:
     )
 
 if uploaded_file is None:
-    st.info("Choose a CSV file to begin. Analysis options appear after the file is loaded.")
+    st.markdown(
+        '<div class="analyze-note">Analysis options appear after a CSV file is loaded. '
+        'User uploads are processed separately from the curated database.</div>',
+        unsafe_allow_html=True,
+    )
     st.stop()
 
 try:
