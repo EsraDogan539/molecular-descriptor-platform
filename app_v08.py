@@ -269,11 +269,44 @@ if uploaded_file is not None:
                     "General molecular descriptors and chalcogen-aware annotations are calculated "
                     "from the standardized structure."
                 )
-                st.dataframe(
-                    filtered_valid_df,
-                    use_container_width=True,
-                    hide_index=True,
-                )
+
+                chalcogen_columns = [
+                    c for c in DESCRIPTOR_GROUPS["Chalcogen Core"]
+                    if c in valid_df.columns
+                ]
+                general_columns = [
+                    c for c in filtered_valid_df.columns
+                    if c not in chalcogen_columns
+                ]
+
+                descriptor_tabs = st.tabs([
+                    "Chalcogen-aware descriptors",
+                    "General descriptors",
+                ])
+
+                with descriptor_tabs[0]:
+                    st.caption(
+                        "S/Se/Te-focused structural annotations used in the publication descriptor layer."
+                    )
+                    st.dataframe(
+                        valid_df[chalcogen_columns],
+                        use_container_width=True,
+                        hide_index=True,
+                    )
+
+                with descriptor_tabs[1]:
+                    st.caption(
+                        "General molecular descriptors selected from the sidebar."
+                    )
+                    if general_columns:
+                        st.dataframe(
+                            filtered_valid_df[general_columns],
+                            use_container_width=True,
+                            hide_index=True,
+                        )
+                    else:
+                        st.info("No general descriptor groups are selected.")
+
                 with st.expander("Scientific Core summary", expanded=False):
                     display_scientific_core_panel(valid_df)
 
