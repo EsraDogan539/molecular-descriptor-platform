@@ -88,7 +88,7 @@ def _record_label(row):
 
 
 def _field_line(label, value):
-    return f"**{label}**  \\n{_display_value(value)}"
+    return f"**{label}:** {_display_value(value)}"
 
 
 def _render_record_detail(row):
