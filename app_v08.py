@@ -81,7 +81,7 @@ st.markdown(
     }
     .home-intro {
         max-width: 720px;
-        margin: 2.35rem auto 1.35rem auto;
+        margin: 1.95rem auto 1.15rem auto;
         text-align: center;
     }
     .home-intro h1 {
@@ -185,6 +185,19 @@ st.markdown(
     .stButton > button[kind="primary"] {
         background: var(--accent) !important;
         border-color: var(--accent) !important;
+        color: white !important;
+    }
+    a[data-testid="stBaseLinkButton-primary"],
+    a[data-testid="stLinkButton"] {
+        background: var(--accent) !important;
+        border-color: var(--accent) !important;
+        color: white !important;
+    }
+    a[data-testid="stBaseLinkButton-primary"]:hover,
+    a[data-testid="stLinkButton"]:hover {
+        background: #123D69 !important;
+        border-color: #123D69 !important;
+        color: white !important;
     }
     button[data-baseweb="tab"] {
         font-size: .92rem;
