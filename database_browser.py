@@ -36,6 +36,35 @@ def _has_value(series):
     return series.notna() & series.astype(str).str.strip().ne("")
 
 
+def _display_value(value, decimals=None):
+    if value is None or pd.isna(value) or str(value).strip().lower() in {"", "nan", "none"}:
+        return "—"
+    if decimals is not None:
+        try:
+            return f"{float(value):.{decimals}f}"
+        except (TypeError, ValueError):
+            pass
+    return str(value)
+
+
+def _display_role(value):
+    text = _display_value(value)
+    if text == "Development/Training":
+        return "Development"
+    if text == "External Validation":
+        return "External"
+    return text
+
+
+def _display_scope(value):
+    mapping = {
+        "Core_SSeTe": "Core S/Se/Te",
+        "Control_NonSSeTe": "Non-core control",
+        "O_Control": "O-only control",
+    }
+    return mapping.get(_display_value(value), _display_value(value))
+
+
 def _record_label(row):
     record_id = str(row.get("Record_ID", "Record"))
     system = row.get("System_Code")
@@ -68,15 +97,15 @@ def _render_record_detail(row):
 
     with right:
         id_cols = st.columns(3)
-        id_cols[0].metric("Record ID", str(row.get("Record_ID", "—")))
-        id_cols[1].metric("Dataset role", str(row.get("Split_Role", "—")))
-        id_cols[2].metric("Scope", str(row.get("Scope_Flag", "—")))
+        id_cols[0].metric("Record ID", _display_value(row.get("Record_ID")))
+        id_cols[1].metric("Dataset role", _display_role(row.get("Split_Role")))
+        id_cols[2].metric("Scope", _display_scope(row.get("Scope_Flag")))
 
         property_cols = st.columns(4)
-        property_cols[0].metric("HOMO (eV)", row.get("HOMO_eV", "—"))
-        property_cols[1].metric("LUMO (eV)", row.get("LUMO_eV", "—"))
-        property_cols[2].metric("Eg (eV)", row.get("Eg_eV", "—"))
-        property_cols[3].metric("Exp. Eg (eV)", row.get("Experimental_Eg_eV", "—"))
+        property_cols[0].metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
+        property_cols[1].metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
+        property_cols[2].metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
+        property_cols[3].metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
 
         details = {
             "Dataset source": row.get("Dataset_Owner"),
@@ -98,7 +127,7 @@ def _render_record_detail(row):
             "Reference": row.get("Reference"),
         }
         detail_df = pd.DataFrame(
-            [{"Field": key, "Value": value if pd.notna(value) else "—"} for key, value in details.items()]
+            [{"Field": key, "Value": _display_value(value)} for key, value in details.items()]
         )
         st.dataframe(detail_df, use_container_width=True, hide_index=True)
 
@@ -139,7 +168,7 @@ def display_database_browser():
 
     completeness_cols = st.columns(3)
     completeness_cols[0].metric("Structures available", f"{structure_count:,}")
-    completeness_cols[1].metric("Unique standardized structures", f"{unique_structure_count:,}")
+    completeness_cols[1].metric("Unique structures (development)", f"{unique_structure_count:,}")
     completeness_cols[2].metric("Eg available", f"{eg_count:,}")
 
     with st.expander("Database scope and curation policy", expanded=False):
@@ -205,9 +234,32 @@ def display_database_browser():
         "Duplicate_Flag", "Curation_Status",
     ]
     existing_columns = [c for c in preferred_columns if c in filtered.columns]
+    display_table = filtered[existing_columns].copy()
+    display_table = display_table.rename(columns={
+        "Record_ID": "Record ID",
+        "Split_Role": "Dataset role",
+        "Scope_Flag": "Scope",
+        "Molecule_Name": "Molecule / system",
+        "Donor_ID": "Donor",
+        "Acceptor_ID": "Acceptor",
+        "System_Code": "System",
+        "Unit_Type": "Unit",
+        "Chalcogen_Type": "Chalcogen",
+        "HOMO_eV": "HOMO (eV)",
+        "LUMO_eV": "LUMO (eV)",
+        "Eg_eV": "Eg (eV)",
+        "Experimental_Eg_eV": "Exp. Eg (eV)",
+        "Structure_Availability": "Structure",
+        "Duplicate_Flag": "Repeated",
+        "Curation_Status": "Curation status",
+    })
+    if "Dataset role" in display_table.columns:
+        display_table["Dataset role"] = display_table["Dataset role"].map(_display_role)
+    if "Scope" in display_table.columns:
+        display_table["Scope"] = display_table["Scope"].map(_display_scope)
 
     st.dataframe(
-        filtered[existing_columns],
+        display_table,
         use_container_width=True,
         hide_index=True,
         height=420,
