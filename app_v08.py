@@ -423,47 +423,82 @@ if page == "database":
 
 if page == "documentation":
     st.header("Documentation")
-    st.caption("Database scope, structure handling and user-analysis workflow.")
+    st.caption("Database scope, molecular identity, curation rules and user-analysis workflow.")
+
+    st.markdown(
+        """
+        <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,353</span><span class="metric-label">Eg values</span></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown("### Database scope")
     st.write(
-        "The public database contains curated development and external records. "
-        "Exact standardized structures are displayed only where supported by the source."
+        "Database v1 contains curated development and external records. Exact standardized "
+        "structures are displayed only where the source supports structure-level identity."
     )
 
     st.markdown("### Molecular identity")
     st.write(
-        "Structure-complete records are standardized with RDKit and represented by "
-        "canonical SMILES, InChI and InChIKey. Repeated standardized structures are "
-        "retained to preserve record-level provenance."
+        "Structure-complete records are standardized with RDKit and represented by canonical "
+        "SMILES, InChI and InChIKey. Repeated standardized structures are retained to preserve "
+        "record-level provenance."
+    )
+
+    st.markdown("### Curation principles")
+    st.markdown(
+        "- Missing structures or properties are left explicit; unavailable values are not imputed.\n"
+        "- S/Se/Te-focused annotations are reported separately from general molecular descriptors.\n"
+        "- Record identity and standardized structure identity are treated as distinct concepts."
     )
 
     st.markdown("### Analyze your dataset")
     st.write(
-        "Upload a CSV containing Molecule_ID and SMILES. The platform validates the "
-        "structures, calculates general and S/Se/Te-aware descriptors, and keeps user "
-        "data separate from the curated publication database."
+        "Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, "
+        "calculates general and S/Se/Te-aware descriptors, and keeps user-supplied data separate "
+        "from the curated publication database."
     )
 
     st.markdown("### Citation and data release")
     st.write(
-        "The recommended citation and permanent dataset DOI will be added with the "
-        "archived publication release."
+        "The recommended citation and permanent dataset DOI will be added with the archived "
+        "publication release."
     )
     st.stop()
 
 
 if page == "about":
     st.header("About")
+    st.caption("A curated research resource for chalcogen-focused molecular data.")
+
     st.write(
-        "Chalcogen Molecular Database is a research resource for curated molecular "
-        "records, electronic-property data and interpretable S/Se/Te structural annotations."
+        "Chalcogen Molecular Database brings together standardized molecular identity, "
+        "electronic-property data and interpretable S/Se/Te structural annotations in a "
+        "single searchable resource."
     )
+
     st.write(
-        "The platform is designed for transparent database exploration and reproducible "
-        "downstream cheminformatics workflows."
+        "The platform supports transparent record inspection, structure-aware data curation "
+        "and reproducible downstream cheminformatics workflows. Predictive modelling is treated "
+        "as a secondary use case rather than the primary purpose of the database."
     )
-    st.caption("Database v1 · Scientific Core v0.8")
+
+    st.markdown("### Current release")
+    st.markdown(
+        "**Database v1** · **Scientific Core v0.8**  \\n"
+        "3,360 records · 2,983 unique standardized development structures"
+    )
+
+    st.markdown("### Resources")
+    st.markdown(
+        "[Documentation](?page=documentation) · "
+        "[GitHub repository](https://github.com/EsraDogan539/molecular-descriptor-platform)"
+    )
     st.stop()
 
 
