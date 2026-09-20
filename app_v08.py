@@ -165,7 +165,7 @@ st.markdown(
     """
     <div class="hero">
       <h1>🧬 Molecular Descriptor Platform</h1>
-      <p>Curated chalcogen database, interpretable descriptors, molecular analysis and curation-aware validation workflow.</p>
+      <p>A curated chalcogen-focused molecular database with interpretable structural annotations and user-side descriptor analysis.</p>
     </div>
     """,
     unsafe_allow_html=True,
@@ -174,7 +174,7 @@ st.markdown(
 
 if platform_mode == "Our Curated Database":
     display_database_browser()
-    st.caption("Molecular Descriptor Platform — v0.8 Scientific Core development branch")
+    st.caption("Molecular Descriptor Platform — Database v1 / Scientific Core v0.8")
     st.stop()
 
 
@@ -316,4 +316,4 @@ if uploaded_file is not None:
         st.error(f"Dataset could not be processed: {error}")
 
 
-st.caption("Molecular Descriptor Platform — v0.8 Scientific Core development branch")
+st.caption("Molecular Descriptor Platform — Database v1 / Scientific Core v0.8")
