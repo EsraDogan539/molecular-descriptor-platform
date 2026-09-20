@@ -133,8 +133,7 @@ def display_similarity_search_panel(valid_df):
 
     if len(valid_df) < 2:
         st.info(
-            "Benzer molekül araması için en az iki geçerli "
-            "molekül gereklidir."
+            "At least two valid molecules are required for similarity search."
         )
         return
 
