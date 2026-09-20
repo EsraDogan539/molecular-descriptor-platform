@@ -181,7 +181,7 @@ def _render_record_detail(row):
 def _public_table(df):
     preferred_columns = [
         "Record_ID", "Molecule_Name", "System_Code", "Chalcogen_Type",
-        "Eg_eV", "HOMO_eV", "LUMO_eV", "Split_Role",
+        "Eg_eV", "HOMO_eV", "LUMO_eV",
     ]
     existing = [c for c in preferred_columns if c in df.columns]
     table = df[existing].copy()
@@ -194,14 +194,10 @@ def _public_table(df):
         "Eg_eV": "Eg (eV)",
         "HOMO_eV": "HOMO (eV)",
         "LUMO_eV": "LUMO (eV)",
-        "Split_Role": "Collection",
     })
 
     if "Database ID" in table.columns:
         table["Database ID"] = table["Database ID"].map(_display_record_id)
-
-    if "Collection" in table.columns:
-        table["Collection"] = table["Collection"].map(_display_role)
 
     if "Molecule / system" in table.columns and "System" in table.columns:
         table["Molecule / system"] = table["Molecule / system"].where(
@@ -248,7 +244,10 @@ def _apply_search(df, query):
 
 
 def _render_results(filtered, is_preview):
-    st.caption(f"{len(filtered):,} records")
+    st.markdown(
+        f'<div class="result-count">{len(filtered):,} matching records</div>',
+        unsafe_allow_html=True,
+    )
 
     st.dataframe(
         _public_table(filtered),
@@ -315,6 +314,28 @@ def _render_statistics(df):
 
 
 def display_database_browser():
+    st.markdown(
+        """
+        <style>
+        div[data-testid="stTextInput"] input {
+            background: #FFFFFF !important;
+            border: 1px solid #D9DEE7 !important;
+            box-shadow: none !important;
+        }
+        div[data-testid="stTextInput"] input:focus {
+            border-color: #315F86 !important;
+            box-shadow: 0 0 0 1px #315F86 !important;
+        }
+        .result-count {
+            color: #344054;
+            font-size: .88rem;
+            font-weight: 600;
+            margin: .15rem 0 .45rem 0;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     st.header("Database")
     st.caption(
         "Browse curated records and inspect molecular identity, electronic properties "
