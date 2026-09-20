@@ -353,10 +353,40 @@ def _render_statistics(df):
 
     with stat2:
         if all(c in df.columns for c in ["S_Count", "Se_Count", "Te_Count"]):
+            def _element_presence(element, count_column):
+                present = pd.to_numeric(
+                    df[count_column], errors="coerce"
+                ).fillna(0).gt(0)
+
+                for metadata_column in ["Donor_Chalcogen", "Acceptor_Chalcogen", "Chalcogen_Type"]:
+                    if metadata_column in df.columns:
+                        metadata = df[metadata_column].fillna("").astype(str)
+                        if element == "S":
+                            match = metadata.str.contains(
+                                r"(^|[^A-Za-z])S([^A-Za-z]|$)",
+                                case=False,
+                                regex=True,
+                            )
+                        elif element == "Se":
+                            match = metadata.str.contains(
+                                r"(^|[^A-Za-z])Se([^A-Za-z]|$)",
+                                case=False,
+                                regex=True,
+                            )
+                        else:
+                            match = metadata.str.contains(
+                                r"(^|[^A-Za-z])Te([^A-Za-z]|$)",
+                                case=False,
+                                regex=True,
+                            )
+                        present = present | match
+
+                return int(present.sum())
+
             counts = pd.Series({
-                "S": int((pd.to_numeric(df["S_Count"], errors="coerce").fillna(0) > 0).sum()),
-                "Se": int((pd.to_numeric(df["Se_Count"], errors="coerce").fillna(0) > 0).sum()),
-                "Te": int((pd.to_numeric(df["Te_Count"], errors="coerce").fillna(0) > 0).sum()),
+                "S": _element_presence("S", "S_Count"),
+                "Se": _element_presence("Se", "Se_Count"),
+                "Te": _element_presence("Te", "Te_Count"),
             })
             fig, ax = plt.subplots(figsize=(5.2, 3.0))
             x = list(range(len(counts)))
