@@ -125,40 +125,46 @@ with st.sidebar:
 
     st.divider()
 
-    project_name = st.text_input("Project name", value="chalcogen_project")
-    selected_groups = st.multiselect(
-        "Descriptor groups",
-        options=list(DESCRIPTOR_GROUPS.keys()),
-        default=["Basic", "Structural", "Chalcogen Core"],
-        disabled=platform_mode == "Our Curated Database",
-    )
-    max_molecule_cards = st.slider(
-        "Molecule cards",
-        3,
-        30,
-        12,
-        3,
-        disabled=platform_mode == "Our Curated Database",
-    )
-    show_molecule_cards = st.checkbox(
-        "Show molecule structures",
-        value=True,
-        disabled=platform_mode == "Our Curated Database",
-    )
+    if platform_mode == "Analyze Your Dataset":
+        project_name = st.text_input("Project name", value="chalcogen_project")
+        selected_groups = st.multiselect(
+            "Descriptor groups",
+            options=list(DESCRIPTOR_GROUPS.keys()),
+            default=["Basic", "Structural", "Chalcogen Core"],
+        )
+        max_molecule_cards = st.slider(
+            "Molecule cards",
+            3,
+            30,
+            12,
+            3,
+        )
+        show_molecule_cards = st.checkbox(
+            "Show molecule structures",
+            value=True,
+        )
 
-    st.divider()
-
-    st.download_button(
-        "Download example CSV",
-        sample_csv,
-        "sample_chalcogen_database.csv",
-        "text/csv",
-        use_container_width=True,
-    )
-    st.caption(
-        "Kullanıcı verisi resmi curated database'e otomatik eklenmez. "
-        "Zorunlu alanlar: Molecule_ID ve SMILES."
-    )
+        st.divider()
+        st.download_button(
+            "Download example CSV",
+            sample_csv,
+            "sample_chalcogen_database.csv",
+            "text/csv",
+            use_container_width=True,
+        )
+        st.caption(
+            "Uploaded data never enter the curated publication database automatically. "
+            "Required columns: Molecule_ID and SMILES."
+        )
+    else:
+        project_name = "chalcogen_project"
+        selected_groups = ["Basic", "Structural", "Chalcogen Core"]
+        max_molecule_cards = 12
+        show_molecule_cards = True
+        st.caption(
+            "Database v1 is read-only in this browser. Use Analyze Your Dataset "
+            "for user-supplied structures and descriptor calculations."
+        )
 
 
 st.markdown(
