@@ -74,8 +74,17 @@ def _display_collection(row):
     return role
 
 
+def _display_record_id(value):
+    text = _display_value(value)
+    if text.startswith("EROL_"):
+        return text.replace("EROL_", "DEV_", 1)
+    if text.startswith("HAKAN_"):
+        return text.replace("HAKAN_", "EXT_", 1)
+    return text
+
+
 def _record_label(row):
-    record_id = str(row.get("Record_ID", "Record"))
+    record_id = _display_record_id(row.get("Record_ID", "Record"))
     system = row.get("System_Code")
     molecule = row.get("Molecule_Name")
     suffix = system if pd.notna(system) and str(system).strip() else molecule
@@ -107,7 +116,7 @@ def _render_record_detail(row):
     with right:
         id_cols = st.columns(3)
         identity_items = [
-            ("Record ID", _display_value(row.get("Record_ID"))),
+            ("Database ID", _display_record_id(row.get("Record_ID"))),
             ("Collection role", _display_role(row.get("Split_Role"))),
             ("Scope", _display_scope(row.get("Scope_Flag"))),
         ]
@@ -210,14 +219,22 @@ def display_database_browser():
     chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
 
     with f1:
-        split_value = st.selectbox("Collection role", split_options)
+        split_value = st.selectbox(
+            "Collection role",
+            split_options,
+            format_func=lambda value: "All" if value == "All" else _display_role(value),
+        )
     with f2:
-        scope_value = st.selectbox("Chemical scope", scope_options)
+        scope_value = st.selectbox(
+            "Chemical scope",
+            scope_options,
+            format_func=lambda value: "All" if value == "All" else _display_scope(value),
+        )
     with f3:
         chalcogen_value = st.selectbox("Chalcogen type", chalcogen_options)
 
     search_text = st.text_input(
-        "Search by Record ID, molecule/system, donor/acceptor or InChIKey",
+        "Search by Database ID, molecule/system, donor/acceptor or InChIKey",
         value="",
     ).strip()
 
@@ -243,6 +260,11 @@ def display_database_browser():
                 mask = mask | filtered[column].astype(str).str.contains(
                     search_text, case=False, na=False, regex=False
                 )
+            if "Record_ID" in filtered.columns:
+                public_ids = filtered["Record_ID"].map(_display_record_id)
+                mask = mask | public_ids.str.contains(
+                    search_text, case=False, na=False, regex=False
+                )
             filtered = filtered[mask]
 
     st.caption(f"Showing {len(filtered):,} record(s)")
@@ -257,8 +279,8 @@ def display_database_browser():
     existing_columns = [c for c in preferred_columns if c in filtered.columns]
     display_table = filtered[existing_columns].copy()
     display_table = display_table.rename(columns={
-        "Record_ID": "Record ID",
-        "Split_Role": "Dataset role",
+        "Record_ID": "Database ID",
+        "Split_Role": "Collection role",
         "Scope_Flag": "Scope",
         "Molecule_Name": "Molecule / system",
         "Donor_ID": "Donor",
@@ -274,6 +296,8 @@ def display_database_browser():
         "Duplicate_Flag": "Repeated",
         "Curation_Status": "Curation status",
     })
+    if "Database ID" in display_table.columns:
+        display_table["Database ID"] = display_table["Database ID"].map(_display_record_id)
     if "Collection role" in display_table.columns:
         display_table["Collection role"] = display_table["Collection role"].map(_display_role)
     if "Scope" in display_table.columns:
@@ -313,6 +337,12 @@ def display_database_browser():
                 .size()
                 .reset_index(name="Count")
             )
+            if "Split_Role" in summary.columns:
+                summary["Split_Role"] = summary["Split_Role"].map(_display_role)
+                summary = summary.rename(columns={"Split_Role": "Collection role"})
+            if "Scope_Flag" in summary.columns:
+                summary["Scope_Flag"] = summary["Scope_Flag"].map(_display_scope)
+                summary = summary.rename(columns={"Scope_Flag": "Scope"})
             st.dataframe(summary, use_container_width=True, hide_index=True)
 
     if not is_preview:
