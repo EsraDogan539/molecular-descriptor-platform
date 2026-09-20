@@ -106,8 +106,8 @@ def _render_record_detail(row):
 def display_database_browser():
     st.subheader("Curated Chalcogen Database")
     st.caption(
-        "Publication-oriented database browser with explicit dataset roles, "
-        "structure availability, provenance and property completeness."
+        "Browse the versioned publication dataset by dataset role, chemical scope, "
+        "chalcogen class and molecular identity."
     )
 
     df, is_preview, source_path = load_curated_database()
@@ -118,42 +118,41 @@ def display_database_browser():
 
     if is_preview:
         st.info(
-            "Bu geliştirme dalında veri tabanının küçük bir önizlemesi gösteriliyor. "
-            "Tam v1 master dosyası bağlandığında aynı tarayıcı 3360 kaydın tamamını kullanacak."
+            "Preview data are loaded in this build. Publication metrics below refer to database v1."
         )
 
-    total_expected = 3360
-    core_expected = 3145
-    dev_expected = 3088
-    validation_expected = 272
+    total_records = len(df)
+    core_count = int((df["Scope_Flag"].astype(str) == "Core_SSeTe").sum()) if "Scope_Flag" in df.columns else 0
+    development_count = int((df["Split_Role"].astype(str) == "Development/Training").sum()) if "Split_Role" in df.columns else 0
+    external_count = total_records - development_count if "Split_Role" in df.columns else 0
 
+    st.caption("Database version: v1")
     m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Database v1", f"{total_expected:,}")
-    m2.metric("Core S/Se/Te", f"{core_expected:,}")
-    m3.metric("Development", f"{dev_expected:,}")
-    m4.metric("External collection", f"{validation_expected:,}")
+    m1.metric("Records", f"{total_records:,}")
+    m2.metric("Core S/Se/Te", f"{core_count:,}")
+    m3.metric("Development", f"{development_count:,}")
+    m4.metric("External collection", f"{external_count:,}")
 
-    completeness_cols = st.columns(3)
     structure_count = int(_has_value(df["Canonical_SMILES"]).sum()) if "Canonical_SMILES" in df.columns else 0
     eg_count = int(df["Eg_eV"].notna().sum()) if "Eg_eV" in df.columns else 0
-    provenance_count = (
-        int(_has_value(df["Reference"]).sum()) if "Reference" in df.columns else 0
-    )
+    unique_structure_count = int(df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna().nunique()) if "InChIKey" in df.columns else 0
+
+    completeness_cols = st.columns(3)
     completeness_cols[0].metric("Structures available", f"{structure_count:,}")
-    completeness_cols[1].metric("Eg available", f"{eg_count:,}")
-    completeness_cols[2].metric("Reference metadata", f"{provenance_count:,}")
+    completeness_cols[1].metric("Unique standardized structures", f"{unique_structure_count:,}")
+    completeness_cols[2].metric("Eg available", f"{eg_count:,}")
 
     with st.expander("Database scope and curation policy", expanded=False):
         st.markdown(
             "- **Development / Training:** Erol dataset\n"
-            "- **External validation collection:** Hakan Kayı dataset\n"
+            "- **External collection:** Hakan Kayı dataset\n"
             "- **Core scope:** records containing S, Se or Te\n"
             "- O-only and non-S/Se/Te records are retained as controls.\n"
-            "- Missing structures or properties remain explicit; they are not inferred in the curated release.\n"
-            "- Repeated standardized structures are flagged rather than silently removed."
+            "- Missing structures and properties remain explicit.\n"
+            "- Repeated standardized structures are retained with duplicate flags to preserve provenance."
         )
 
-    st.markdown("#### Search and filter")
+    st.markdown("#### Explore records")
     f1, f2, f3 = st.columns(3)
 
     split_options = ["All"] + _safe_unique(df, "Split_Role")
@@ -211,7 +210,7 @@ def display_database_browser():
         filtered[existing_columns],
         use_container_width=True,
         hide_index=True,
-        height=460,
+        height=420,
     )
 
     if not filtered.empty:
@@ -226,7 +225,7 @@ def display_database_browser():
         _render_record_detail(selected_row)
 
     if "Split_Role" in filtered.columns:
-        with st.expander("Current view summary", expanded=False):
+        with st.expander("Filtered view summary", expanded=False):
             group_cols = [
                 c for c in ["Split_Role", "Scope_Flag"]
                 if c in filtered.columns
@@ -247,5 +246,5 @@ def display_database_browser():
             use_container_width=True,
         )
 
-    if source_path:
-        st.caption(f"Database source in app build: {source_path}")
+    if is_preview and source_path:
+        st.caption(f"Preview source: {source_path}")
