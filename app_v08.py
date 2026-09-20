@@ -43,19 +43,45 @@ st.markdown(
     h3 { font-size: 1.10rem !important; font-weight: 650 !important; }
     p, label, .stCaption { color: var(--ink); }
     .academic-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border-bottom: 1px solid var(--line);
-        padding: .15rem 0 .85rem 0;
-        margin-bottom: 1.1rem;
+        padding: .2rem 0 .75rem 0;
+        margin-bottom: .7rem;
+        gap: 1.5rem;
     }
-    .academic-title {
-        font-size: 1.05rem;
+    .academic-brand {
+        color: var(--ink) !important;
+        text-decoration: none !important;
+        font-size: 1.02rem;
         font-weight: 700;
-        color: var(--ink);
-        margin: 0;
+        white-space: nowrap;
+    }
+    .academic-nav {
+        display: flex;
+        gap: 1.35rem;
+        align-items: center;
+        font-size: .90rem;
+    }
+    .academic-nav a {
+        color: #374151 !important;
+        text-decoration: none !important;
+        padding: .2rem 0 .45rem 0;
+        border-bottom: 2px solid transparent;
+    }
+    .academic-nav a:hover {
+        color: var(--ink) !important;
+        border-bottom-color: #AAB4C0;
+    }
+    .academic-nav a.active {
+        color: var(--ink) !important;
+        font-weight: 650;
+        border-bottom-color: var(--accent);
     }
     .home-intro {
-        max-width: 760px;
-        margin: 3.2rem auto 2.0rem auto;
+        max-width: 720px;
+        margin: 2.35rem auto 1.35rem auto;
         text-align: center;
     }
     .home-intro h1 {
@@ -66,17 +92,63 @@ st.markdown(
         font-size: 1.02rem;
         line-height: 1.6;
     }
-    .summary-line {
-        color: var(--muted);
-        font-size: .94rem;
+    .metric-row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0;
+        margin: 1.15rem auto 1.5rem auto;
+        max-width: 820px;
+    }
+    .metric-item {
+        min-width: 155px;
+        padding: .05rem 1.15rem;
         text-align: center;
-        margin: 1.15rem 0 1.4rem 0;
+        border-right: 1px solid var(--line);
+    }
+    .metric-item:last-child { border-right: 0; }
+    .metric-number {
+        display: block;
+        color: var(--ink);
+        font-size: 1.13rem;
+        font-weight: 700;
+        line-height: 1.15;
+    }
+    .metric-label {
+        display: block;
+        color: var(--muted);
+        font-size: .80rem;
+        margin-top: .28rem;
+        white-space: nowrap;
     }
     .quiet-note {
         color: var(--muted);
-        font-size: .84rem;
+        font-size: .82rem;
         text-align: center;
-        margin-top: 1.4rem;
+        margin-top: 1.25rem;
+    }
+    .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2.2rem;
+        padding-top: .9rem;
+        color: var(--muted);
+        font-size: .80rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .site-footer a {
+        color: #4B5563 !important;
+        text-decoration: none !important;
+        margin-left: .85rem;
+    }
+    .site-footer a:hover { text-decoration: underline !important; }
+    @media (max-width: 760px) {
+        .academic-header { align-items: flex-start; flex-direction: column; }
+        .academic-nav { gap: .9rem; flex-wrap: wrap; }
+        .metric-row { flex-wrap: wrap; }
+        .metric-item { min-width: 50%; margin-bottom: .8rem; }
     }
     div[data-testid="stMetric"] {
         background: transparent;
@@ -205,37 +277,46 @@ sample_df = pd.DataFrame({
 sample_csv = sample_df.to_csv(index=False).encode("utf-8")
 
 
+page = str(st.query_params.get("page", "home")).lower()
+if page not in {"home", "database", "analyze", "documentation", "about"}:
+    page = "home"
+
+nav_items = [
+    ("Database", "database"),
+    ("Analyze", "analyze"),
+    ("Documentation", "documentation"),
+    ("About", "about"),
+]
+nav_html = "".join(
+    f'<a class="{"active" if page == key else ""}" href="?page={key}">{label}</a>'
+    for label, key in nav_items
+)
+
 st.markdown(
-    """
+    f"""
     <div class="academic-header">
-      <div class="academic-title">Chalcogen Molecular Database</div>
+      <a class="academic-brand" href="?page=home">Chalcogen Molecular Database</a>
+      <nav class="academic-nav">{nav_html}</nav>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
-nav = st.radio(
-    "Navigation",
-    ["Home", "Database", "Analyze"],
-    horizontal=True,
-    label_visibility="collapsed",
-    key="top_navigation",
-)
-
-if nav == "Home":
+if page == "home":
     st.markdown(
         """
         <div class="home-intro">
           <h1>Chalcogen Molecular Database</h1>
           <p>
-            Curated molecular records with standardized structure identity,
-            electronic-property data and interpretable S/Se/Te annotations.
+            Curated molecular records with standardized structures
+            and S/Se/Te-specific annotations.
           </p>
         </div>
-        <div class="summary-line">
-          3,360 records &nbsp;&middot;&nbsp; 3,145 core S/Se/Te records
-          &nbsp;&middot;&nbsp; 2,983 unique standardized structures
-          &nbsp;&middot;&nbsp; 3,353 Eg values
+        <div class="metric-row">
+          <div class="metric-item"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,353</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -243,13 +324,9 @@ if nav == "Home":
 
     left, c1, c2, right = st.columns([1.7, 1, 1, 1.7])
     with c1:
-        if st.button("Browse database", type="primary", use_container_width=True):
-            st.session_state.top_navigation = "Database"
-            st.rerun()
+        st.link_button("Browse database", "?page=database", type="primary", use_container_width=True)
     with c2:
-        if st.button("Analyze your dataset", use_container_width=True):
-            st.session_state.top_navigation = "Analyze"
-            st.rerun()
+        st.link_button("Analyze your dataset", "?page=analyze", use_container_width=True)
 
     st.markdown(
         """
@@ -257,19 +334,73 @@ if nav == "Home":
           Database v1 &nbsp;&middot;&nbsp; Structure standardization with RDKit
           &nbsp;&middot;&nbsp; Record-level provenance retained
         </div>
+        <div class="site-footer">
+          <span>Chalcogen Molecular Database · v1</span>
+          <span>
+            <a href="?page=documentation">Documentation</a>
+            <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
+            <a href="?page=about">About</a>
+          </span>
+        </div>
         """,
         unsafe_allow_html=True,
     )
     st.stop()
 
 
-if nav == "Database":
+if page == "database":
     display_database_browser()
     st.divider()
     st.caption(
         "Database v1 · Scientific Core v0.8 · "
         "Curated records are read-only in the public browser."
     )
+    st.stop()
+
+
+if page == "documentation":
+    st.header("Documentation")
+    st.caption("Database scope, structure handling and user-analysis workflow.")
+
+    st.markdown("### Database scope")
+    st.write(
+        "The public database contains curated development and external records. "
+        "Exact standardized structures are displayed only where supported by the source."
+    )
+
+    st.markdown("### Molecular identity")
+    st.write(
+        "Structure-complete records are standardized with RDKit and represented by "
+        "canonical SMILES, InChI and InChIKey. Repeated standardized structures are "
+        "retained to preserve record-level provenance."
+    )
+
+    st.markdown("### Analyze your dataset")
+    st.write(
+        "Upload a CSV containing Molecule_ID and SMILES. The platform validates the "
+        "structures, calculates general and S/Se/Te-aware descriptors, and keeps user "
+        "data separate from the curated publication database."
+    )
+
+    st.markdown("### Citation and data release")
+    st.write(
+        "The recommended citation and permanent dataset DOI will be added with the "
+        "archived publication release."
+    )
+    st.stop()
+
+
+if page == "about":
+    st.header("About")
+    st.write(
+        "Chalcogen Molecular Database is a research resource for curated molecular "
+        "records, electronic-property data and interpretable S/Se/Te structural annotations."
+    )
+    st.write(
+        "The platform is designed for transparent database exploration and reproducible "
+        "downstream cheminformatics workflows."
+    )
+    st.caption("Database v1 · Scientific Core v0.8")
     st.stop()
 
 
