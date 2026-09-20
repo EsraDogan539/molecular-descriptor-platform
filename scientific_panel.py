@@ -31,24 +31,33 @@ def display_scientific_core_panel(valid_df):
     )
 
     if valid_df.empty:
-        st.info("Scientific Core için gösterilecek geçerli molekül bulunamadı.")
+        st.info("No valid molecules are available for the descriptor summary.")
         return
 
     total = len(valid_df)
-    s_count = int((valid_df["Chalcogen Type"] == "S").sum()) if "Chalcogen Type" in valid_df else 0
-    se_count = int((valid_df["Chalcogen Type"] == "Se").sum()) if "Chalcogen Type" in valid_df else 0
-    te_count = int((valid_df["Chalcogen Type"] == "Te").sum()) if "Chalcogen Type" in valid_df else 0
+    s_count = int((valid_df["Sulfur Count"] > 0).sum()) if "Sulfur Count" in valid_df else 0
+    se_count = int((valid_df["Selenium Count"] > 0).sum()) if "Selenium Count" in valid_df else 0
+    te_count = int((valid_df["Tellurium Count"] > 0).sum()) if "Tellurium Count" in valid_df else 0
     duplicate_count = int(valid_df.get("Duplicate Flag", False).sum()) if "Duplicate Flag" in valid_df else 0
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("Molecules", total)
-    c2.metric("S", s_count)
-    c3.metric("Se", se_count)
-    c4.metric("Te", te_count)
-    c5.metric("Duplicates", duplicate_count)
+    c2.metric("Contains S", s_count)
+    c3.metric("Contains Se", se_count)
+    c4.metric("Contains Te", te_count)
+    c5.metric("Repeated", duplicate_count)
 
     existing = [c for c in SCIENTIFIC_COLUMNS if c in valid_df.columns]
-    st.dataframe(valid_df[existing], use_container_width=True, hide_index=True)
+    display_df = valid_df[existing].rename(columns={
+        "Molecule_ID": "Molecule ID",
+        "NonAromatic Chalcogen Count": "Non-aromatic Chalcogen Count",
+        "Mixed Chalcogen Flag": "Mixed Chalcogen",
+        "Ring Incorporated Chalcogen Count": "Ring-incorporated Chalcogen Count",
+        "Chalcogen-C Bond Count": "Chalcogen–C Bond Count",
+        "Chalcogen-Heteroatom Bond Count": "Chalcogen–Heteroatom Bond Count",
+        "Duplicate Flag": "Repeated Structure",
+    })
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
 
     if "Chalcogen Type" in valid_df.columns:
         chalcogen_summary = (
@@ -62,6 +71,7 @@ def display_scientific_core_panel(valid_df):
 
     st.markdown("#### Quality notes")
     st.caption(
-        "Duplicate Flag is based on standardized structure identity (InChIKey when available, with canonical SMILES fallback). Oxygen is retained as a general "
-        "elemental descriptor but is not counted in the S/Se/Te-focused chalcogen total."
+        "Repeated Structure is based on standardized structure identity (InChIKey when available, "
+        "with canonical SMILES fallback). Oxygen is retained as a general elemental descriptor but "
+        "is not included in the S/Se/Te-focused target chalcogen count."
     )
