@@ -78,7 +78,7 @@ def filter_descriptor_columns(dataframe, selected_groups):
 
 def display_molecule_gallery(valid_df, max_molecules=12):
     if valid_df.empty:
-        st.info("Gösterilecek geçerli molekül bulunamadı.")
+        st.info("No valid molecules are available to display.")
         return
 
     count = min(len(valid_df), max_molecules)
@@ -98,8 +98,8 @@ def display_molecule_gallery(valid_df, max_molecules=12):
                             Draw.MolToImage(mol, size=(360, 280)),
                             use_container_width=True,
                         )
-                    st.write(f"**Formül:** {row['Molecular Formula']}")
-                    st.write(f"**Chalcogen:** {row.get('Chalcogen Type', '—')}")
+                    st.write(f"**Molecular formula:** {row['Molecular Formula']}")
+                    st.write(f"**Chalcogen class:** {row.get('Chalcogen Type', '—')}")
                     st.code(row["Canonical SMILES"], language=None)
 
 
