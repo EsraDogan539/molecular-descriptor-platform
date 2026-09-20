@@ -13,22 +13,114 @@ from scientific_panel import display_scientific_core_panel
 
 
 st.set_page_config(
-    page_title="Molecular Descriptor Platform v0.8",
-    page_icon="🧬",
+    page_title="Chalcogen Molecular Database",
+    page_icon=None,
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 st.markdown(
     """
     <style>
-    .block-container {max-width: 1380px; padding-top: 2rem; padding-bottom: 3rem;}
-    .hero {padding: 2rem; border: 1px solid #E5E9F2; border-radius: 24px;
-           background: linear-gradient(135deg,#FFFFFF,#F5F7FF); margin-bottom: 1.5rem;}
-    .hero h1 {margin:0 0 .4rem 0; font-size:2.6rem;}
-    .hero p {color:#667085; margin:0; font-size:1.03rem;}
-    div[data-testid="stMetric"] {border:1px solid #E7EAF2; border-radius:18px; padding:1rem; background:white;}
-    div[data-testid="stDataFrame"] {border:1px solid #E7EAF2; border-radius:16px; overflow:hidden;}
+    :root {
+        --ink: #111827;
+        --muted: #667085;
+        --line: #E5E7EB;
+        --soft: #F8FAFC;
+        --accent: #174A7E;
+    }
+    .block-container {
+        max-width: 1240px;
+        padding-top: 1.4rem;
+        padding-bottom: 2.5rem;
+    }
+    h1, h2, h3, h4 {
+        color: var(--ink);
+        letter-spacing: -0.01em;
+    }
+    h1 { font-size: 2.15rem !important; font-weight: 650 !important; }
+    h2 { font-size: 1.45rem !important; font-weight: 650 !important; }
+    h3 { font-size: 1.10rem !important; font-weight: 650 !important; }
+    p, label, .stCaption { color: var(--ink); }
+    .academic-header {
+        border-bottom: 1px solid var(--line);
+        padding: .15rem 0 .85rem 0;
+        margin-bottom: 1.1rem;
+    }
+    .academic-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0;
+    }
+    .home-intro {
+        max-width: 760px;
+        margin: 3.2rem auto 2.0rem auto;
+        text-align: center;
+    }
+    .home-intro h1 {
+        margin-bottom: .55rem;
+    }
+    .home-intro p {
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.6;
+    }
+    .summary-line {
+        color: var(--muted);
+        font-size: .94rem;
+        text-align: center;
+        margin: 1.15rem 0 1.4rem 0;
+    }
+    .quiet-note {
+        color: var(--muted);
+        font-size: .84rem;
+        text-align: center;
+        margin-top: 1.4rem;
+    }
+    div[data-testid="stMetric"] {
+        background: transparent;
+        border: 0;
+        padding: .25rem 0;
+    }
+    div[data-testid="stMetric"] [data-testid="stMetricValue"] {
+        color: var(--ink);
+        font-size: 1.25rem;
+    }
+    div[data-testid="stMetric"] [data-testid="stMetricLabel"] {
+        color: var(--muted);
+        font-size: .82rem;
+    }
+    div[data-testid="stDataFrame"] {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    div[data-testid="stFileUploader"] {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: .6rem;
+    }
+    div[data-testid="stExpander"] {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+    }
+    .stButton > button, .stDownloadButton > button {
+        border-radius: 4px !important;
+        font-weight: 600 !important;
+        box-shadow: none !important;
+    }
+    .stButton > button[kind="primary"] {
+        background: var(--accent) !important;
+        border-color: var(--accent) !important;
+    }
+    button[data-baseweb="tab"] {
+        font-size: .92rem;
+    }
+    hr {
+        border-color: var(--line);
+    }
+    footer { visibility: hidden; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -82,25 +174,23 @@ def display_molecule_gallery(valid_df, max_molecules=12):
         return
 
     count = min(len(valid_df), max_molecules)
-    for start in range(0, count, 3):
-        cols = st.columns(3)
-        for j in range(3):
+    for start in range(0, count, 4):
+        cols = st.columns(4)
+        for j in range(4):
             idx = start + j
             if idx >= count:
                 break
             row = valid_df.iloc[idx]
             with cols[j]:
-                with st.container(border=True):
-                    st.markdown(f"### {row['Molecule_ID']}")
-                    mol = Chem.MolFromSmiles(row["Canonical SMILES"])
-                    if mol is not None:
-                        st.image(
-                            Draw.MolToImage(mol, size=(360, 280)),
-                            use_container_width=True,
-                        )
-                    st.write(f"**Molecular formula:** {row['Molecular Formula']}")
-                    st.write(f"**Chalcogen class:** {row.get('Chalcogen Type', '—')}")
-                    st.code(row["Canonical SMILES"], language=None)
+                st.markdown(f"**{row['Molecule_ID']}**")
+                mol = Chem.MolFromSmiles(row["Canonical SMILES"])
+                if mol is not None:
+                    st.image(Draw.MolToImage(mol, size=(300, 220)), use_container_width=True)
+                st.caption(
+                    f"{row.get('Molecular Formula', '—')} · "
+                    f"{row.get('Chalcogen Type', '—')}"
+                )
+                st.code(row["Canonical SMILES"], language=None)
 
 
 sample_df = pd.DataFrame({
@@ -115,268 +205,267 @@ sample_df = pd.DataFrame({
 sample_csv = sample_df.to_csv(index=False).encode("utf-8")
 
 
-with st.sidebar:
-    st.title("🧬 Molecular Descriptor Platform")
-    platform_mode = st.radio(
-        "Mode",
-        ["Our Curated Database", "Analyze Your Dataset"],
-        index=0,
+st.markdown(
+    """
+    <div class="academic-header">
+      <div class="academic-title">Chalcogen Molecular Database</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+nav = st.radio(
+    "Navigation",
+    ["Home", "Database", "Analyze"],
+    horizontal=True,
+    label_visibility="collapsed",
+    key="top_navigation",
+)
+
+if nav == "Home":
+    st.markdown(
+        """
+        <div class="home-intro">
+          <h1>Chalcogen Molecular Database</h1>
+          <p>
+            Curated molecular records with standardized structure identity,
+            electronic-property data and interpretable S/Se/Te annotations.
+          </p>
+        </div>
+        <div class="summary-line">
+          3,360 records &nbsp;&middot;&nbsp; 3,145 core S/Se/Te records
+          &nbsp;&middot;&nbsp; 2,983 unique standardized structures
+          &nbsp;&middot;&nbsp; 3,353 Eg values
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
-    st.divider()
+    left, c1, c2, right = st.columns([1.7, 1, 1, 1.7])
+    with c1:
+        if st.button("Browse database", type="primary", use_container_width=True):
+            st.session_state.top_navigation = "Database"
+            st.rerun()
+    with c2:
+        if st.button("Analyze your dataset", use_container_width=True):
+            st.session_state.top_navigation = "Analyze"
+            st.rerun()
 
-    if platform_mode == "Analyze Your Dataset":
+    st.markdown(
+        """
+        <div class="quiet-note">
+          Database v1 &nbsp;&middot;&nbsp; Structure standardization with RDKit
+          &nbsp;&middot;&nbsp; Record-level provenance retained
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.stop()
+
+
+if nav == "Database":
+    display_database_browser()
+    st.divider()
+    st.caption(
+        "Database v1 · Scientific Core v0.8 · "
+        "Curated records are read-only in the public browser."
+    )
+    st.stop()
+
+
+st.header("Analyze Your Dataset")
+st.caption(
+    "Upload molecular data to validate structures and calculate general and "
+    "chalcogen-aware descriptors. User uploads remain separate from the curated database."
+)
+
+upload_left, upload_right = st.columns([2.1, 1])
+with upload_left:
+    uploaded_file = st.file_uploader(
+        "Choose a CSV file",
+        type=["csv"],
+        help="Required columns: Molecule_ID and SMILES.",
+    )
+with upload_right:
+    st.markdown("**Input format**")
+    st.caption("Required: Molecule_ID, SMILES")
+    st.caption("Optional property and provenance fields are retained.")
+    st.download_button(
+        "Download example CSV",
+        sample_csv,
+        "sample_chalcogen_database.csv",
+        "text/csv",
+        use_container_width=True,
+    )
+
+if uploaded_file is None:
+    st.info("Choose a CSV file to begin. Analysis options appear after the file is loaded.")
+    st.stop()
+
+try:
+    input_df = pd.read_csv(uploaded_file)
+    st.markdown("### Input preview")
+    st.dataframe(input_df.head(12), use_container_width=True, hide_index=True)
+
+    with st.expander("Analysis settings", expanded=False):
         project_name = st.text_input("Project name", value="chalcogen_project")
         selected_groups = st.multiselect(
             "Descriptor groups",
             options=list(DESCRIPTOR_GROUPS.keys()),
             default=["Basic", "Structural", "Chalcogen Core"],
         )
-        max_molecule_cards = st.slider(
-            "Molecule cards",
-            3,
-            30,
-            12,
-            3,
-        )
-        show_molecule_cards = st.checkbox(
-            "Show molecule structures",
-            value=True,
-        )
+        max_molecule_cards = st.slider("Maximum structures to display", 4, 24, 12, 4)
+    show_molecule_cards = True
 
-        st.divider()
-        st.download_button(
-            "Download example CSV",
-            sample_csv,
-            "sample_chalcogen_database.csv",
-            "text/csv",
-            use_container_width=True,
-        )
+    if not selected_groups:
+        st.warning("Select at least one descriptor group.")
+
+    if st.button(
+        "Run analysis",
+        type="primary",
+        disabled=not selected_groups,
+    ):
+        with st.spinner("Validating structures and calculating descriptors..."):
+            results = run_molecular_descriptor_platform(
+                input_df=input_df,
+                project_name=project_name,
+            )
+            results = add_database_export(
+                input_df=input_df,
+                results=results,
+                project_name=project_name,
+            )
+
+        valid_df = results["valid_df"]
+        invalid_df = results["invalid_df"]
+        database_df = results["database_df"]
+        summary_df = results["summary_df"]
+        filtered_valid_df = filter_descriptor_columns(valid_df, selected_groups)
+
+        total_records = int(summary_df.loc[0, "Total Records"])
+        valid_count = int(summary_df.loc[0, "Valid Molecules"])
+        invalid_count = int(summary_df.loc[0, "Invalid Molecules"])
+        duplicate_count = int(summary_df.loc[0, "Duplicate Molecules"])
+
         st.caption(
-            "Uploaded data never enter the curated publication database automatically. "
-            "Required columns: Molecule_ID and SMILES."
-        )
-    else:
-        project_name = "chalcogen_project"
-        selected_groups = ["Basic", "Structural", "Chalcogen Core"]
-        max_molecule_cards = 12
-        show_molecule_cards = True
-        st.caption(
-            "Database v1 is read-only in this browser. Use Analyze Your Dataset "
-            "for user-supplied structures and descriptor calculations."
+            f"{total_records:,} submitted · {valid_count:,} valid · "
+            f"{invalid_count:,} invalid · {duplicate_count:,} repeated structures"
         )
 
+        tabs = st.tabs([
+            "Records",
+            "Descriptors",
+            "Structures",
+            "Similarity",
+            "Export",
+        ])
 
-st.markdown(
-    """
-    <div class="hero">
-      <h1>🧬 Molecular Descriptor Platform</h1>
-      <p>A curated chalcogen-focused molecular database with interpretable structural annotations and user-side descriptor analysis.</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+        with tabs[0]:
+            st.markdown("### Records")
+            st.caption(
+                "Standardized identifiers, retained source fields and quality flags."
+            )
+            st.dataframe(database_df, use_container_width=True, hide_index=True)
+            if not invalid_df.empty:
+                st.markdown("#### Invalid structures")
+                st.dataframe(invalid_df, use_container_width=True, hide_index=True)
 
-
-if platform_mode == "Our Curated Database":
-    display_database_browser()
-    st.caption("Molecular Descriptor Platform — Database v1 / Scientific Core v0.8")
-    st.stop()
-
-
-st.subheader("Analyze Your Dataset")
-st.caption(
-    "Upload a CSV with Molecule_ID and SMILES. The platform validates structures, "
-    "calculates general and chalcogen-aware descriptors, and returns a quality-controlled "
-    "analysis package. Uploaded records never modify the curated publication database."
-)
-
-uploaded_file = st.file_uploader("Upload molecular CSV", type=["csv"])
-
-if uploaded_file is None:
-    c1, c2, c3 = st.columns(3)
-    c1.info("1. Upload and validate molecular structures")
-    c2.info("2. Calculate selected descriptor layers")
-    c3.info("3. Review quality flags and export results")
-
-if uploaded_file is not None:
-    try:
-        input_df = pd.read_csv(uploaded_file)
-        st.subheader("Uploaded data")
-        st.dataframe(input_df.head(20), use_container_width=True, hide_index=True)
-
-        if not selected_groups:
-            st.warning("Select at least one descriptor group.")
-
-        if st.button(
-            "Run descriptor analysis",
-            type="primary",
-            disabled=not selected_groups,
-            use_container_width=True,
-        ):
-            with st.spinner("Validating structures and calculating descriptors..."):
-                results = run_molecular_descriptor_platform(
-                    input_df=input_df,
-                    project_name=project_name,
+        with tabs[1]:
+            st.markdown("### Descriptors")
+            chalcogen_columns = [
+                c for c in DESCRIPTOR_GROUPS["Chalcogen Core"]
+                if c in valid_df.columns
+            ]
+            general_columns = [
+                c for c in filtered_valid_df.columns
+                if c not in chalcogen_columns
+            ]
+            descriptor_tabs = st.tabs(["Chalcogen-aware", "General"])
+            with descriptor_tabs[0]:
+                st.dataframe(
+                    valid_df[chalcogen_columns],
+                    use_container_width=True,
+                    hide_index=True,
                 )
-                results = add_database_export(
-                    input_df=input_df,
-                    results=results,
-                    project_name=project_name,
-                )
-
-            valid_df = results["valid_df"]
-            invalid_df = results["invalid_df"]
-            database_df = results["database_df"]
-            summary_df = results["summary_df"]
-            filtered_valid_df = filter_descriptor_columns(valid_df, selected_groups)
-
-            total_records = int(summary_df.loc[0, "Total Records"])
-            valid_count = int(summary_df.loc[0, "Valid Molecules"])
-            invalid_count = int(summary_df.loc[0, "Invalid Molecules"])
-            duplicate_count = int(summary_df.loc[0, "Duplicate Molecules"])
-            success_rate = float(summary_df.loc[0, "Success Rate (%)"])
-
-            m1, m2, m3, m4, m5 = st.columns(5)
-            m1.metric("Records", total_records)
-            m2.metric("Valid", valid_count)
-            m3.metric("Invalid", invalid_count)
-            m4.metric("Repeated structures", duplicate_count)
-            m5.metric("Validation rate", f"{success_rate:.2f}%")
-
-            tabs = st.tabs([
-                "🗂️ Quality & Records",
-                "🧪 Descriptor Layer",
-                "🧬 Structures",
-                "🔎 Similarity Search",
-                "⬇️ Export",
-            ])
-
-            with tabs[0]:
-                st.subheader("Quality-controlled records")
-                st.caption(
-                    "Canonical identifiers, user-supplied property fields, provenance metadata "
-                    "and quality flags are retained together."
-                )
-                st.dataframe(database_df, use_container_width=True, hide_index=True)
-                if not invalid_df.empty:
-                    st.markdown("#### Invalid or missing structures")
-                    st.dataframe(invalid_df, use_container_width=True, hide_index=True)
-
-            with tabs[1]:
-                st.subheader("Selected descriptor layer")
-                st.caption(
-                    "General molecular descriptors and chalcogen-aware annotations are calculated "
-                    "from the standardized structure."
-                )
-
-                chalcogen_columns = [
-                    c for c in DESCRIPTOR_GROUPS["Chalcogen Core"]
-                    if c in valid_df.columns
-                ]
-                general_columns = [
-                    c for c in filtered_valid_df.columns
-                    if c not in chalcogen_columns
-                ]
-
-                descriptor_tabs = st.tabs([
-                    "Chalcogen-aware descriptors",
-                    "General descriptors",
-                ])
-
-                with descriptor_tabs[0]:
-                    st.caption(
-                        "S/Se/Te-focused structural annotations used in the publication descriptor layer."
-                    )
+            with descriptor_tabs[1]:
+                if general_columns:
                     st.dataframe(
-                        valid_df[chalcogen_columns],
+                        filtered_valid_df[general_columns],
                         use_container_width=True,
                         hide_index=True,
                     )
-
-                with descriptor_tabs[1]:
-                    st.caption(
-                        "General molecular descriptors selected from the sidebar."
-                    )
-                    if general_columns:
-                        st.dataframe(
-                            filtered_valid_df[general_columns],
-                            use_container_width=True,
-                            hide_index=True,
-                        )
-                    else:
-                        st.info("No general descriptor groups are selected.")
-
-                with st.expander("Scientific Core summary", expanded=False):
-                    display_scientific_core_panel(valid_df)
-
-            with tabs[2]:
-                if show_molecule_cards:
-                    display_molecule_gallery(valid_df, max_molecule_cards)
                 else:
-                    st.info("Molecule structure cards are disabled in the sidebar.")
+                    st.info("No general descriptor groups are selected.")
+            with st.expander("Descriptor summary", expanded=False):
+                display_scientific_core_panel(valid_df)
 
-            with tabs[3]:
-                st.caption(
-                    "Fingerprint-based similarity is provided as an exploratory tool and does not "
-                    "change the curated database."
+        with tabs[2]:
+            st.markdown("### Structures")
+            display_molecule_gallery(valid_df, max_molecule_cards)
+
+        with tabs[3]:
+            st.markdown("### Similarity Search")
+            st.caption(
+                "Exploratory fingerprint-based molecular similarity. "
+                "Similarity does not imply equivalent electronic behavior."
+            )
+            display_similarity_search_panel(valid_df)
+
+        with tabs[4]:
+            st.markdown("### Export")
+            selected_csv = filtered_valid_df.to_csv(index=False).encode("utf-8")
+            database_csv = database_df.to_csv(index=False).encode("utf-8")
+
+            r1c1, r1c2 = st.columns([3, 1])
+            with r1c1:
+                st.markdown("**Processed records**")
+                st.caption("Standardized records with retained provenance and quality fields.")
+            with r1c2:
+                st.download_button(
+                    "Download CSV",
+                    database_csv,
+                    f"{project_name}_processed_database.csv",
+                    "text/csv",
+                    use_container_width=True,
+                    key="download_processed",
                 )
-                display_similarity_search_panel(valid_df)
 
-            with tabs[4]:
-                st.subheader("Export results")
-                st.caption(
-                    "Download the processed records, the descriptor subset selected in the sidebar, "
-                    "or the complete analysis package."
+            st.divider()
+            r2c1, r2c2 = st.columns([3, 1])
+            with r2c1:
+                st.markdown("**Descriptor table**")
+                st.caption("Descriptor groups selected for this analysis.")
+            with r2c2:
+                st.download_button(
+                    "Download CSV",
+                    selected_csv,
+                    f"{project_name}_selected_descriptors.csv",
+                    "text/csv",
+                    use_container_width=True,
+                    key="download_descriptors",
                 )
 
-                selected_csv = filtered_valid_df.to_csv(index=False).encode("utf-8")
-                database_csv = database_df.to_csv(index=False).encode("utf-8")
+            st.divider()
+            with open(results["zip_file"], "rb") as file:
+                zip_data = file.read()
+            r3c1, r3c2 = st.columns([3, 1])
+            with r3c1:
+                st.markdown("**Complete package**")
+                st.caption("Processed data, descriptors, fingerprints and run summary.")
+            with r3c2:
+                st.download_button(
+                    "Download ZIP",
+                    zip_data,
+                    os.path.basename(results["zip_file"]),
+                    "application/zip",
+                    use_container_width=True,
+                    key="download_package",
+                )
 
-                with st.container(border=True):
-                    st.markdown("**Processed records**")
-                    st.caption(
-                        "Canonical identifiers, retained input properties, provenance fields and quality flags."
-                    )
-                    st.download_button(
-                        "Download processed records CSV",
-                        database_csv,
-                        f"{project_name}_processed_database.csv",
-                        "text/csv",
-                        use_container_width=True,
-                    )
+except Exception as error:
+    st.error(f"Dataset could not be processed: {error}")
 
-                with st.container(border=True):
-                    st.markdown("**Selected descriptor layer**")
-                    st.caption(
-                        "Only the descriptor groups selected in the sidebar."
-                    )
-                    st.download_button(
-                        "Download selected descriptors CSV",
-                        selected_csv,
-                        f"{project_name}_selected_descriptors.csv",
-                        "text/csv",
-                        use_container_width=True,
-                    )
-
-                with open(results["zip_file"], "rb") as file:
-                    zip_data = file.read()
-
-                with st.container(border=True):
-                    st.markdown("**Complete analysis package**")
-                    st.caption(
-                        "Descriptors, fingerprints, invalid-structure report and run summary in one ZIP archive."
-                    )
-                    st.download_button(
-                        "Download complete analysis package (ZIP)",
-                        zip_data,
-                        os.path.basename(results["zip_file"]),
-                        "application/zip",
-                        use_container_width=True,
-                    )
-
-    except Exception as error:
-        st.error(f"Dataset could not be processed: {error}")
-
-
-st.caption("Molecular Descriptor Platform — Database v1 / Scientific Core v0.8")
+st.divider()
+st.caption(
+    "Chalcogen Molecular Database · Database v1 · Scientific Core v0.8"
+)
