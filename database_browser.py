@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 from rdkit import Chem
 from rdkit.Chem import Draw
@@ -301,6 +302,18 @@ def _render_results(filtered, is_preview):
         )
 
 
+def _style_axes(ax, ylabel="Records"):
+    ax.set_facecolor("white")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_color("#B8C0CC")
+    ax.spines["bottom"].set_color("#B8C0CC")
+    ax.tick_params(axis="both", colors="#344054", labelsize=9)
+    ax.set_ylabel(ylabel, color="#344054", fontsize=9)
+    ax.grid(axis="y", linestyle=":", linewidth=0.6, alpha=0.5)
+    ax.set_axisbelow(True)
+
+
 def _render_statistics(df):
     st.markdown("### Statistics")
     st.caption("Descriptive overview of database v1.")
@@ -309,9 +322,34 @@ def _render_statistics(df):
 
     with stat1:
         if "Split_Role" in df.columns:
-            role = df["Split_Role"].map(_display_role).value_counts().rename("Records")
-            st.markdown("#### Collection composition")
-            st.bar_chart(role, height=260)
+            role = df["Split_Role"].map(_display_role).value_counts()
+            fig, ax = plt.subplots(figsize=(5.2, 3.0))
+            x = list(range(len(role)))
+            bars = ax.bar(
+                x,
+                role.values,
+                facecolor="white",
+                edgecolor="#344054",
+                linewidth=1.0,
+            )
+            for i, bar in enumerate(bars):
+                bar.set_hatch("///" if i % 2 == 0 else "\\\\")
+                ax.text(
+                    bar.get_x() + bar.get_width() / 2,
+                    bar.get_height() + max(role.values) * 0.025,
+                    f"{int(bar.get_height()):,}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                    color="#111827",
+                )
+            ax.set_xticks(x)
+            ax.set_xticklabels(role.index)
+            ax.set_title("Collection composition", loc="left", fontsize=11, fontweight="bold")
+            _style_axes(ax)
+            fig.tight_layout()
+            st.pyplot(fig, use_container_width=True)
+            plt.close(fig)
 
     with stat2:
         if all(c in df.columns for c in ["S_Count", "Se_Count", "Te_Count"]):
@@ -319,19 +357,53 @@ def _render_statistics(df):
                 "S": int((pd.to_numeric(df["S_Count"], errors="coerce").fillna(0) > 0).sum()),
                 "Se": int((pd.to_numeric(df["Se_Count"], errors="coerce").fillna(0) > 0).sum()),
                 "Te": int((pd.to_numeric(df["Te_Count"], errors="coerce").fillna(0) > 0).sum()),
-            }, name="Records")
-            st.markdown("#### Chalcogen coverage")
-            st.bar_chart(counts, height=260)
+            })
+            fig, ax = plt.subplots(figsize=(5.2, 3.0))
+            x = list(range(len(counts)))
+            bars = ax.bar(
+                x,
+                counts.values,
+                facecolor="white",
+                edgecolor="#344054",
+                linewidth=1.0,
+            )
+            for i, bar in enumerate(bars):
+                bar.set_hatch(["///", "\\\\", "xx"][i])
+                ax.text(
+                    bar.get_x() + bar.get_width() / 2,
+                    bar.get_height() + max(counts.values) * 0.025,
+                    f"{int(bar.get_height()):,}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                    color="#111827",
+                )
+            ax.set_xticks(x)
+            ax.set_xticklabels(counts.index)
+            ax.set_title("Chalcogen coverage", loc="left", fontsize=11, fontweight="bold")
+            _style_axes(ax)
+            fig.tight_layout()
+            st.pyplot(fig, use_container_width=True)
+            plt.close(fig)
 
     if "Eg_eV" in df.columns:
         eg = pd.to_numeric(df["Eg_eV"], errors="coerce").dropna()
         if not eg.empty:
-            bins = pd.cut(eg, bins=16)
-            hist = bins.value_counts(sort=False)
-            hist.index = [f"{x.left:.2f}–{x.right:.2f}" for x in hist.index]
-            st.markdown("#### Eg distribution")
-            st.bar_chart(hist.rename("Records"), height=280)
-
+            fig, ax = plt.subplots(figsize=(10.6, 3.6))
+            ax.hist(
+                eg,
+                bins=16,
+                facecolor="white",
+                edgecolor="#344054",
+                linewidth=1.0,
+                hatch="///",
+            )
+            ax.set_xlabel("Eg (eV)", color="#344054", fontsize=9)
+            ax.set_title("Eg distribution", loc="left", fontsize=11, fontweight="bold")
+            _style_axes(ax)
+            fig.tight_layout()
+            st.pyplot(fig, use_container_width=True)
+            plt.close(fig)
 
 def display_database_browser():
     st.markdown(
