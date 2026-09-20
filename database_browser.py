@@ -91,6 +91,25 @@ def _field_line(label, value):
     return f"**{label}:** {_display_value(value)}"
 
 
+def _display_count(value):
+    if value is None or pd.isna(value):
+        return "—"
+    try:
+        return str(int(float(value)))
+    except (TypeError, ValueError):
+        return _display_value(value)
+
+
+def _display_method(value):
+    text = _display_value(value)
+    if text == "—":
+        return text
+    lowered = text.lower()
+    if "source sdf quantum-chemical properties" in lowered:
+        return "Quantum-chemical calculation (exact level not stated)"
+    return text
+
+
 def _render_record_detail(row):
     record_id = _display_record_id(row.get("Record_ID"))
     collection = _display_collection(row)
@@ -139,9 +158,9 @@ def _render_record_detail(row):
         c1, c2 = st.columns(2)
         with c1:
             st.markdown("#### Chalcogen environment")
-            st.markdown(_field_line("S count", row.get("S_Count")))
-            st.markdown(_field_line("Se count", row.get("Se_Count")))
-            st.markdown(_field_line("Te count", row.get("Te_Count")))
+            st.markdown(_field_line("S count", _display_count(row.get("S_Count"))))
+            st.markdown(_field_line("Se count", _display_count(row.get("Se_Count"))))
+            st.markdown(_field_line("Te count", _display_count(row.get("Te_Count"))))
             st.markdown(_field_line("Chalcogen type", row.get("Chalcogen_Type")))
 
         with c2:
@@ -154,9 +173,8 @@ def _render_record_detail(row):
                 ]
             ) or "—"
             st.markdown(_field_line("Donor / Acceptor", donor_acceptor))
-            st.markdown(_field_line("Method", row.get("Method")))
+            st.markdown(_field_line("Method", _display_method(row.get("Method"))))
             st.markdown(_field_line("Basis set", row.get("Basis_Set")))
-            st.markdown(_field_line("Reference", row.get("Reference")))
 
         with st.expander("Additional record metadata", expanded=False):
             metadata = {
@@ -168,6 +186,8 @@ def _render_record_detail(row):
                 "Structure availability": row.get("Structure_Availability"),
                 "Curation status": row.get("Curation_Status"),
                 "Repeated structure": row.get("Duplicate_Flag"),
+                "Source method description": row.get("Method"),
+                "Reference": row.get("Reference"),
             }
             st.dataframe(
                 pd.DataFrame(
