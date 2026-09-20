@@ -266,6 +266,43 @@ def filter_descriptor_columns(dataframe, selected_groups):
     return dataframe[existing]
 
 
+DISPLAY_LABELS = {
+    "Molecule_ID": "Molecule ID",
+    "Original SMILES": "Original SMILES",
+    "Canonical SMILES": "Canonical SMILES",
+    "InChIKey": "InChIKey",
+    "Molecular Formula": "Molecular Formula",
+    "Molecular Weight": "Molecular Weight",
+    "Exact Molecular Weight": "Exact Molecular Weight",
+    "HOMO_eV": "HOMO (eV)",
+    "LUMO_eV": "LUMO (eV)",
+    "Eg_eV": "Eg (eV)",
+    "Property_Source": "Property Source",
+    "DOI_or_Reference": "DOI / Reference",
+    "Chalcogen Type": "Chalcogen Type",
+    "Target Chalcogen Count": "Target Chalcogen Count",
+    "Target Chalcogen Fraction": "Target Chalcogen Fraction",
+    "Aromatic Chalcogen Count": "Aromatic Chalcogen Count",
+    "NonAromatic Chalcogen Count": "Non-aromatic Chalcogen Count",
+    "Mixed Chalcogen Flag": "Mixed Chalcogen",
+    "Ring Incorporated Chalcogen Count": "Ring-incorporated Chalcogen Count",
+    "Chalcogen-C Bond Count": "Chalcogen–C Bond Count",
+    "Chalcogen-Heteroatom Bond Count": "Chalcogen–Heteroatom Bond Count",
+    "Aromatic Neighbor Count": "Aromatic Neighbor Count",
+    "Conjugated Bond Count": "Conjugated Bond Count",
+    "Aromatic Bond Fraction": "Aromatic Bond Fraction",
+    "Conjugated Atom Fraction": "Conjugated Atom Fraction",
+    "Heteroaromatic Ring Count": "Heteroaromatic Ring Count",
+    "Duplicate Flag": "Repeated Structure",
+}
+
+
+def display_table(dataframe):
+    table = dataframe.copy()
+    table = table.rename(columns={c: DISPLAY_LABELS.get(c, c.replace("_", " ")) for c in table.columns})
+    return table
+
+
 def display_molecule_gallery(valid_df, max_molecules=12):
     if valid_df.empty:
         st.info("No valid molecules are available to display.")
@@ -466,7 +503,7 @@ if uploaded_file is None:
 try:
     input_df = pd.read_csv(uploaded_file)
     st.markdown("### Input preview")
-    st.dataframe(input_df.head(12), use_container_width=True, hide_index=True)
+    st.dataframe(display_table(input_df.head(12)), use_container_width=True, hide_index=True)
 
     with st.expander("Analysis settings", expanded=False):
         project_name = st.text_input("Project name", value="chalcogen_project")
@@ -526,10 +563,10 @@ try:
             st.caption(
                 "Standardized identifiers, retained source fields and quality flags."
             )
-            st.dataframe(database_df, use_container_width=True, hide_index=True)
+            st.dataframe(display_table(database_df), use_container_width=True, hide_index=True)
             if not invalid_df.empty:
                 st.markdown("#### Invalid structures")
-                st.dataframe(invalid_df, use_container_width=True, hide_index=True)
+                st.dataframe(display_table(invalid_df), use_container_width=True, hide_index=True)
 
         with tabs[1]:
             st.markdown("### Descriptors")
@@ -544,14 +581,14 @@ try:
             descriptor_tabs = st.tabs(["Chalcogen-aware", "General"])
             with descriptor_tabs[0]:
                 st.dataframe(
-                    valid_df[chalcogen_columns],
+                    display_table(valid_df[chalcogen_columns]),
                     use_container_width=True,
                     hide_index=True,
                 )
             with descriptor_tabs[1]:
                 if general_columns:
                     st.dataframe(
-                        filtered_valid_df[general_columns],
+                        display_table(filtered_valid_df[general_columns]),
                         use_container_width=True,
                         hide_index=True,
                     )
@@ -580,7 +617,7 @@ try:
             r1c1, r1c2 = st.columns([3, 1])
             with r1c1:
                 st.markdown("**Processed records**")
-                st.caption("Standardized records with retained provenance and quality fields.")
+                st.caption("Standardized records with retained source fields and quality flags.")
             with r1c2:
                 st.download_button(
                     "Download CSV",
@@ -595,7 +632,7 @@ try:
             r2c1, r2c2 = st.columns([3, 1])
             with r2c1:
                 st.markdown("**Descriptor table**")
-                st.caption("Descriptor groups selected for this analysis.")
+                st.caption("Selected descriptor groups for the current analysis.")
             with r2c2:
                 st.download_button(
                     "Download CSV",
@@ -612,7 +649,7 @@ try:
             r3c1, r3c2 = st.columns([3, 1])
             with r3c1:
                 st.markdown("**Complete package**")
-                st.caption("Processed data, descriptors, fingerprints and run summary.")
+                st.caption("Processed records, descriptors, fingerprints and run summary.")
             with r3c2:
                 st.download_button(
                     "Download ZIP",
