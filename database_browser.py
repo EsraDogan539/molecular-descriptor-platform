@@ -97,9 +97,16 @@ def _render_record_detail(row):
 
     with right:
         id_cols = st.columns(3)
-        id_cols[0].metric("Record ID", _display_value(row.get("Record_ID")))
-        id_cols[1].metric("Dataset role", _display_role(row.get("Split_Role")))
-        id_cols[2].metric("Scope", _display_scope(row.get("Scope_Flag")))
+        identity_items = [
+            ("Record ID", _display_value(row.get("Record_ID"))),
+            ("Dataset role", _display_role(row.get("Split_Role"))),
+            ("Scope", _display_scope(row.get("Scope_Flag"))),
+        ]
+        for col, (label, value) in zip(id_cols, identity_items):
+            with col:
+                with st.container(border=True):
+                    st.caption(label)
+                    st.markdown(f"**{value}**")
 
         property_cols = st.columns(4)
         property_cols[0].metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
@@ -129,7 +136,12 @@ def _render_record_detail(row):
         detail_df = pd.DataFrame(
             [{"Field": key, "Value": _display_value(value)} for key, value in details.items()]
         )
-        st.dataframe(detail_df, use_container_width=True, hide_index=True)
+        st.dataframe(
+            detail_df,
+            use_container_width=True,
+            hide_index=True,
+            height=360,
+        )
 
 
 def display_database_browser():
@@ -257,6 +269,11 @@ def display_database_browser():
         display_table["Dataset role"] = display_table["Dataset role"].map(_display_role)
     if "Scope" in display_table.columns:
         display_table["Scope"] = display_table["Scope"].map(_display_scope)
+
+    for column in display_table.columns:
+        display_table[column] = display_table[column].map(
+            lambda value: _display_value(value)
+        )
 
     st.dataframe(
         display_table,
