@@ -254,8 +254,16 @@ def display_similarity_search_panel(valid_df):
     ]
     compact_columns = [column for column in compact_columns if column in similar_df.columns]
 
+    display_df = similar_df[compact_columns].rename(columns={
+        "Molecule_ID": "Molecule ID",
+        "Molecular Formula": "Molecular Formula",
+        "Morgan Similarity": "Morgan Similarity",
+        "MW Difference": "MW Difference",
+        "LogP Difference": "LogP Difference",
+    })
+
     st.dataframe(
-        similar_df[compact_columns],
+        display_df,
         hide_index=True,
         use_container_width=True
     )
@@ -302,10 +310,8 @@ def display_similarity_search_panel(valid_df):
                             use_container_width=True
                         )
 
-                    st.metric(
-                        "Morgan similarity",
-                        f"{result_row['Morgan Similarity']:.3f}"
-                    )
+                    st.caption("Morgan similarity")
+                    st.markdown(f"### {result_row['Morgan Similarity']:.3f}")
 
                     st.caption(
                         f"{result_row['Molecular Formula']} · "
