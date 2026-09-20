@@ -1,8 +1,11 @@
 import os
+import platform
 import pandas as pd
+import numpy as np
 import streamlit as st
 
 from rdkit import Chem
+from rdkit import rdBase
 from rdkit.Chem import Draw
 
 from descriptor_engine import run_molecular_descriptor_platform
@@ -463,6 +466,19 @@ if page == "documentation":
         "calculates general and S/Se/Te-aware descriptors, and keeps user-supplied data separate "
         "from the curated publication database."
     )
+
+    st.markdown("### Software environment")
+    with st.expander("Runtime versions", expanded=False):
+        st.code(
+            "\n".join([
+                f"Python {platform.python_version()}",
+                f"Streamlit {st.__version__}",
+                f"RDKit {rdBase.rdkitVersion}",
+                f"pandas {pd.__version__}",
+                f"NumPy {np.__version__}",
+            ]),
+            language=None,
+        )
 
     st.markdown("### Citation and data release")
     st.write(
