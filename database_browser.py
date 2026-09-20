@@ -70,7 +70,7 @@ def _display_collection(row):
     if role == "Development":
         return "Development collection"
     if role == "External":
-        return "External validation collection"
+        return "External collection"
     return role
 
 
@@ -92,49 +92,77 @@ def _record_label(row):
 
 
 def _render_record_detail(row):
-    st.markdown("#### Record detail")
+    record_id = _display_record_id(row.get("Record_ID"))
+    collection = _display_collection(row)
+    chalcogen = _display_value(row.get("Chalcogen_Type"))
 
-    left, right = st.columns([1, 2])
+    st.markdown(f"### {record_id}")
+    st.caption(f"{collection} · {chalcogen}")
+
+    left, right = st.columns([1, 2.25], gap="large")
 
     with left:
         smiles = row.get("Canonical_SMILES")
         if pd.notna(smiles) and str(smiles).strip():
             mol = Chem.MolFromSmiles(str(smiles))
             if mol is not None:
-                st.image(
-                    Draw.MolToImage(mol, size=(440, 320)),
-                    use_container_width=True,
-                )
+                st.image(Draw.MolToImage(mol, size=(420, 320)), use_container_width=True)
             else:
-                st.info("Canonical SMILES is present but could not be rendered.")
+                st.info("The standardized structure could not be rendered.")
         else:
             st.info("Exact standardized structure is not available for this record.")
 
-        st.caption(f"Structure availability: {row.get('Structure_Availability', '—')}")
-        st.caption(f"Curation status: {row.get('Curation_Status', '—')}")
+        if pd.notna(smiles) and str(smiles).strip():
+            st.caption("Canonical SMILES")
+            st.code(str(smiles), language=None)
 
     with right:
-        id_cols = st.columns(3)
-        identity_items = [
-            ("Database ID", _display_record_id(row.get("Record_ID"))),
-            ("Collection role", _display_role(row.get("Split_Role"))),
-            ("Scope", _display_scope(row.get("Scope_Flag"))),
-        ]
-        for col, (label, value) in zip(id_cols, identity_items):
-            with col:
-                with st.container(border=True):
-                    st.caption(label)
-                    st.markdown(f"**{value}**")
-
-        property_cols = st.columns(4)
-        property_cols[0].metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
-        property_cols[1].metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
-        property_cols[2].metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
-        property_cols[3].metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
-
-        details = {
-            "Collection": _display_collection(row),
+        st.markdown("#### Identity")
+        identity = {
+            "Database ID": record_id,
             "Molecule / system": row.get("Molecule_Name") or row.get("System_Code"),
+            "InChIKey": row.get("InChIKey"),
+            "Structure availability": row.get("Structure_Availability"),
+        }
+        st.dataframe(
+            pd.DataFrame(
+                [{"Field": k, "Value": _display_value(v)} for k, v in identity.items()]
+            ),
+            use_container_width=True,
+            hide_index=True,
+        )
+
+        st.markdown("#### Electronic properties")
+        e1, e2, e3, e4 = st.columns(4)
+        e1.metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
+        e2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
+        e3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
+        e4.metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
+
+        chalcogen_fields = [
+            ("O count", "O_Count"),
+            ("S count", "S_Count"),
+            ("Se count", "Se_Count"),
+            ("Te count", "Te_Count"),
+            ("Chalcogen type", "Chalcogen_Type"),
+        ]
+        available_chalcogen = [
+            (label, column) for label, column in chalcogen_fields if column in row.index
+        ]
+        if available_chalcogen:
+            st.markdown("#### Chalcogen environment")
+            st.dataframe(
+                pd.DataFrame([
+                    {"Field": label, "Value": _display_value(row.get(column))}
+                    for label, column in available_chalcogen
+                ]),
+                use_container_width=True,
+                hide_index=True,
+            )
+
+        st.markdown("#### Provenance")
+        provenance = {
+            "Collection": collection,
             "Donor / Acceptor": " / ".join(
                 [
                     str(v)
@@ -144,214 +172,228 @@ def _render_record_detail(row):
             ) or "—",
             "Unit type": row.get("Unit_Type"),
             "Oligomer n": row.get("Oligomer_n"),
-            "Chalcogen type": row.get("Chalcogen_Type"),
-            "InChIKey": row.get("InChIKey"),
             "Method": row.get("Method"),
             "Basis set": row.get("Basis_Set"),
             "Conditions": row.get("Solvent_or_Conditions"),
             "Reference": row.get("Reference"),
+            "Curation status": row.get("Curation_Status"),
         }
-        detail_df = pd.DataFrame(
-            [{"Field": key, "Value": _display_value(value)} for key, value in details.items()]
-        )
         st.dataframe(
-            detail_df,
+            pd.DataFrame(
+                [{"Field": k, "Value": _display_value(v)} for k, v in provenance.items()]
+            ),
             use_container_width=True,
             hide_index=True,
-            height=360,
         )
 
 
-def display_database_browser():
-    st.subheader("Curated Chalcogen Database")
-    st.caption(
-        "Browse the versioned publication dataset by collection role, chemical scope, "
-        "chalcogen class and molecular identity."
-    )
-
-    df, is_preview, source_path = load_curated_database()
-
-    if df.empty:
-        st.warning("Curated database file is not available in this build yet.")
-        return
-
-    if is_preview:
-        st.info(
-            "Preview data are loaded in this build. Publication metrics below refer to database v1."
-        )
-
-    total_records = len(df)
-    core_count = int((df["Scope_Flag"].astype(str) == "Core_SSeTe").sum()) if "Scope_Flag" in df.columns else 0
-    development_count = int((df["Split_Role"].astype(str) == "Development/Training").sum()) if "Split_Role" in df.columns else 0
-    external_count = total_records - development_count if "Split_Role" in df.columns else 0
-
-    st.caption("Database version: v1")
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Records", f"{total_records:,}")
-    m2.metric("Core S/Se/Te", f"{core_count:,}")
-    m3.metric("Development", f"{development_count:,}")
-    m4.metric("External collection", f"{external_count:,}")
-
-    structure_count = int(_has_value(df["Canonical_SMILES"]).sum()) if "Canonical_SMILES" in df.columns else 0
-    eg_count = int(df["Eg_eV"].notna().sum()) if "Eg_eV" in df.columns else 0
-    unique_structure_count = int(df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna().nunique()) if "InChIKey" in df.columns else 0
-
-    completeness_cols = st.columns(3)
-    completeness_cols[0].metric("Structures available", f"{structure_count:,}")
-    completeness_cols[1].metric("Unique structures (development)", f"{unique_structure_count:,}")
-    completeness_cols[2].metric("Eg available", f"{eg_count:,}")
-
-    with st.expander("Database scope and curation policy", expanded=False):
-        st.markdown(
-            "- **Development collection:** structure-complete records used for database development and downstream modelling examples\n"
-            "- **External validation collection:** separately curated literature/system-level records retained as an external collection\n"
-            "- **Core scope:** records containing S, Se or Te\n"
-            "- O-only and non-S/Se/Te records are retained as controls.\n"
-            "- Missing structures and properties remain explicit.\n"
-            "- Repeated standardized structures are retained with duplicate flags to preserve provenance."
-        )
-
-    st.markdown("#### Explore records")
-    f1, f2, f3 = st.columns(3)
-
-    split_options = ["All"] + _safe_unique(df, "Split_Role")
-    scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
-    chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
-
-    with f1:
-        split_value = st.selectbox(
-            "Collection role",
-            split_options,
-            format_func=lambda value: "All" if value == "All" else _display_role(value),
-        )
-    with f2:
-        scope_value = st.selectbox(
-            "Chemical scope",
-            scope_options,
-            format_func=lambda value: "All" if value == "All" else _display_scope(value),
-        )
-    with f3:
-        chalcogen_value = st.selectbox("Chalcogen type", chalcogen_options)
-
-    search_text = st.text_input(
-        "Search by Database ID, molecule/system, donor/acceptor or InChIKey",
-        value="",
-    ).strip()
-
-    filtered = df.copy()
-
-    if split_value != "All" and "Split_Role" in filtered.columns:
-        filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
-    if scope_value != "All" and "Scope_Flag" in filtered.columns:
-        filtered = filtered[filtered["Scope_Flag"].astype(str) == scope_value]
-    if chalcogen_value != "All" and "Chalcogen_Type" in filtered.columns:
-        filtered = filtered[filtered["Chalcogen_Type"].astype(str) == chalcogen_value]
-
-    if search_text:
-        searchable_columns = [
-            c for c in [
-                "Record_ID", "Molecule_Name", "Donor_ID", "Acceptor_ID",
-                "System_Code", "InChIKey", "Canonical_SMILES"
-            ] if c in filtered.columns
-        ]
-        if searchable_columns:
-            mask = pd.Series(False, index=filtered.index)
-            for column in searchable_columns:
-                mask = mask | filtered[column].astype(str).str.contains(
-                    search_text, case=False, na=False, regex=False
-                )
-            if "Record_ID" in filtered.columns:
-                public_ids = filtered["Record_ID"].map(_display_record_id)
-                mask = mask | public_ids.str.contains(
-                    search_text, case=False, na=False, regex=False
-                )
-            filtered = filtered[mask]
-
-    st.caption(f"Showing {len(filtered):,} record(s)")
-
+def _public_table(df):
     preferred_columns = [
-        "Record_ID", "Split_Role", "Scope_Flag", "Molecule_Name",
-        "Donor_ID", "Acceptor_ID", "System_Code", "Unit_Type",
-        "Chalcogen_Type", "HOMO_eV", "LUMO_eV", "Eg_eV",
-        "Experimental_Eg_eV", "Structure_Availability",
-        "Duplicate_Flag", "Curation_Status",
+        "Record_ID", "Molecule_Name", "System_Code", "Chalcogen_Type",
+        "Eg_eV", "HOMO_eV", "LUMO_eV", "Split_Role",
     ]
-    existing_columns = [c for c in preferred_columns if c in filtered.columns]
-    display_table = filtered[existing_columns].copy()
-    display_table = display_table.rename(columns={
+    existing = [c for c in preferred_columns if c in df.columns]
+    table = df[existing].copy()
+    table = table.rename(columns={
         "Record_ID": "Database ID",
-        "Split_Role": "Collection role",
-        "Scope_Flag": "Scope",
         "Molecule_Name": "Molecule / system",
-        "Donor_ID": "Donor",
-        "Acceptor_ID": "Acceptor",
         "System_Code": "System",
-        "Unit_Type": "Unit",
         "Chalcogen_Type": "Chalcogen",
+        "Eg_eV": "Eg (eV)",
         "HOMO_eV": "HOMO (eV)",
         "LUMO_eV": "LUMO (eV)",
-        "Eg_eV": "Eg (eV)",
-        "Experimental_Eg_eV": "Exp. Eg (eV)",
-        "Structure_Availability": "Structure",
-        "Duplicate_Flag": "Repeated",
-        "Curation_Status": "Curation status",
+        "Split_Role": "Collection",
     })
-    if "Database ID" in display_table.columns:
-        display_table["Database ID"] = display_table["Database ID"].map(_display_record_id)
-    if "Collection role" in display_table.columns:
-        display_table["Collection role"] = display_table["Collection role"].map(_display_role)
-    if "Scope" in display_table.columns:
-        display_table["Scope"] = display_table["Scope"].map(_display_scope)
+    if "Database ID" in table.columns:
+        table["Database ID"] = table["Database ID"].map(_display_record_id)
+    if "Collection" in table.columns:
+        table["Collection"] = table["Collection"].map(_display_role)
 
-    for column in display_table.columns:
-        display_table[column] = display_table[column].map(
-            lambda value: _display_value(value)
+    if "Molecule / system" in table.columns and "System" in table.columns:
+        table["Molecule / system"] = table["Molecule / system"].where(
+            table["Molecule / system"].notna(), table["System"]
         )
+        table = table.drop(columns=["System"])
+    elif "System" in table.columns and "Molecule / system" not in table.columns:
+        table = table.rename(columns={"System": "Molecule / system"})
 
+    for col in table.columns:
+        if col in {"Eg (eV)", "HOMO (eV)", "LUMO (eV)"}:
+            table[col] = table[col].map(lambda v: _display_value(v, 3))
+        else:
+            table[col] = table[col].map(_display_value)
+    return table
+
+
+def _render_results(filtered, is_preview):
+    st.caption(f"Showing {len(filtered):,} record(s)")
     st.dataframe(
-        display_table,
+        _public_table(filtered),
         use_container_width=True,
         hide_index=True,
-        height=420,
+        height=430,
     )
 
-    if not filtered.empty:
-        record_labels = [_record_label(row) for _, row in filtered.iterrows()]
-        selected_label = st.selectbox(
-            "Inspect a record",
-            record_labels,
-            index=0,
-        )
-        selected_position = record_labels.index(selected_label)
-        selected_row = filtered.iloc[selected_position]
-        _render_record_detail(selected_row)
+    if filtered.empty:
+        return
 
-    if "Split_Role" in filtered.columns:
-        with st.expander("Filtered view summary", expanded=False):
-            group_cols = [
-                c for c in ["Split_Role", "Scope_Flag"]
-                if c in filtered.columns
-            ]
-            summary = (
-                filtered.groupby(group_cols, dropna=False)
-                .size()
-                .reset_index(name="Count")
-            )
-            if "Split_Role" in summary.columns:
-                summary["Split_Role"] = summary["Split_Role"].map(_display_role)
-                summary = summary.rename(columns={"Split_Role": "Collection role"})
-            if "Scope_Flag" in summary.columns:
-                summary["Scope_Flag"] = summary["Scope_Flag"].map(_display_scope)
-                summary = summary.rename(columns={"Scope_Flag": "Scope"})
-            st.dataframe(summary, use_container_width=True, hide_index=True)
+    st.markdown("#### Record detail")
+    labels = [_record_label(row) for _, row in filtered.iterrows()]
+    selected = st.selectbox("Select a record", labels, label_visibility="collapsed")
+    row = filtered.iloc[labels.index(selected)]
+    _render_record_detail(row)
 
     if not is_preview:
+        st.divider()
         st.download_button(
-            "Download filtered database CSV",
+            "Download filtered records",
             filtered.to_csv(index=False).encode("utf-8"),
             "chalcogen_database_filtered.csv",
             "text/csv",
-            use_container_width=True,
+        )
+
+
+def _render_statistics(df):
+    st.markdown("### Database statistics")
+    st.caption("Descriptive counts from database v1.")
+
+    if "Split_Role" in df.columns:
+        role = df["Split_Role"].map(_display_role).value_counts().rename("Records")
+        st.markdown("#### Collection composition")
+        st.bar_chart(role)
+
+    if all(c in df.columns for c in ["S_Count", "Se_Count", "Te_Count"]):
+        counts = pd.Series({
+            "S": int((pd.to_numeric(df["S_Count"], errors="coerce").fillna(0) > 0).sum()),
+            "Se": int((pd.to_numeric(df["Se_Count"], errors="coerce").fillna(0) > 0).sum()),
+            "Te": int((pd.to_numeric(df["Te_Count"], errors="coerce").fillna(0) > 0).sum()),
+        }, name="Records")
+        st.markdown("#### Chalcogen coverage")
+        st.bar_chart(counts)
+
+    if "Eg_eV" in df.columns:
+        eg = pd.to_numeric(df["Eg_eV"], errors="coerce").dropna()
+        if not eg.empty:
+            bins = pd.cut(eg, bins=16)
+            hist = bins.value_counts(sort=False)
+            hist.index = [f"{x.left:.2f}–{x.right:.2f}" for x in hist.index]
+            st.markdown("#### Eg distribution")
+            st.bar_chart(hist.rename("Records"))
+
+
+def display_database_browser():
+    st.header("Database")
+    st.caption(
+        "Browse curated records, search by molecular identity, and inspect "
+        "structure, electronic properties and provenance."
+    )
+
+    df, is_preview, source_path = load_curated_database()
+    if df.empty:
+        st.warning("The curated database file is not available in this build.")
+        return
+
+    total = len(df)
+    core = int((df["Scope_Flag"].astype(str) == "Core_SSeTe").sum()) if "Scope_Flag" in df.columns else 0
+    unique = int(
+        df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna().nunique()
+    ) if "InChIKey" in df.columns else 0
+    eg_count = int(df["Eg_eV"].notna().sum()) if "Eg_eV" in df.columns else 0
+
+    st.caption(
+        f"{total:,} records · {core:,} core S/Se/Te · "
+        f"{unique:,} unique standardized structures · {eg_count:,} Eg values"
+    )
+
+    if is_preview:
+        st.info("A preview dataset is loaded in this build.")
+
+    browse_tab, search_tab, stats_tab = st.tabs(["Browse", "Search", "Statistics"])
+
+    with browse_tab:
+        f1, f2, f3, f4 = st.columns(4)
+
+        split_options = ["All"] + _safe_unique(df, "Split_Role")
+        scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
+        chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
+
+        with f1:
+            split_value = st.selectbox(
+                "Collection",
+                split_options,
+                format_func=lambda v: "All" if v == "All" else _display_role(v),
+                key="browse_collection",
+            )
+        with f2:
+            scope_value = st.selectbox(
+                "Scope",
+                scope_options,
+                format_func=lambda v: "All" if v == "All" else _display_scope(v),
+                key="browse_scope",
+            )
+        with f3:
+            chalcogen_value = st.selectbox(
+                "Chalcogen",
+                chalcogen_options,
+                key="browse_chalcogen",
+            )
+        with f4:
+            eg_value = st.selectbox(
+                "Eg available",
+                ["All", "Available", "Missing"],
+                key="browse_eg",
+            )
+
+        filtered = df.copy()
+        if split_value != "All" and "Split_Role" in filtered.columns:
+            filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
+        if scope_value != "All" and "Scope_Flag" in filtered.columns:
+            filtered = filtered[filtered["Scope_Flag"].astype(str) == scope_value]
+        if chalcogen_value != "All" and "Chalcogen_Type" in filtered.columns:
+            filtered = filtered[filtered["Chalcogen_Type"].astype(str) == chalcogen_value]
+        if eg_value == "Available" and "Eg_eV" in filtered.columns:
+            filtered = filtered[filtered["Eg_eV"].notna()]
+        elif eg_value == "Missing" and "Eg_eV" in filtered.columns:
+            filtered = filtered[filtered["Eg_eV"].isna()]
+
+        _render_results(filtered, is_preview)
+
+    with search_tab:
+        query = st.text_input(
+            "Search database",
+            placeholder="Database ID, molecule/system, donor, acceptor, InChIKey or SMILES",
+        ).strip()
+
+        if not query:
+            st.caption("Enter a molecular identifier or keyword.")
+        else:
+            searchable = [
+                c for c in [
+                    "Record_ID", "Molecule_Name", "Donor_ID", "Acceptor_ID",
+                    "System_Code", "InChIKey", "Canonical_SMILES"
+                ] if c in df.columns
+            ]
+            mask = pd.Series(False, index=df.index)
+            for column in searchable:
+                mask = mask | df[column].astype(str).str.contains(
+                    query, case=False, na=False, regex=False
+                )
+            if "Record_ID" in df.columns:
+                public_ids = df["Record_ID"].map(_display_record_id)
+                mask = mask | public_ids.str.contains(
+                    query, case=False, na=False, regex=False
+                )
+            _render_results(df[mask], is_preview)
+
+    with stats_tab:
+        _render_statistics(df)
+
+    with st.expander("Curation notes", expanded=False):
+        st.markdown(
+            "- Development records contain exact standardized molecular structures.\n"
+            "- External records are retained at the level supported by the source.\n"
+            "- Missing structures and properties are left explicit.\n"
+            "- Repeated standardized structures are retained to preserve record-level provenance."
         )
 
     if is_preview and source_path:
