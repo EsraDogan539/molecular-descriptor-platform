@@ -345,9 +345,10 @@ def _render_statistics(df):
                 )
             ax.set_xticks(x)
             ax.set_xticklabels(role.index)
-            ax.set_title("Collection composition", loc="left", fontsize=11, fontweight="bold")
+            ax.set_title("Collection composition", loc="left", fontsize=11, fontweight="bold", pad=12)
+            ax.margins(y=0.12)
             _style_axes(ax)
-            fig.tight_layout()
+            fig.tight_layout(pad=1.4)
             st.pyplot(fig, use_container_width=True)
             plt.close(fig)
 
@@ -410,9 +411,10 @@ def _render_statistics(df):
                 )
             ax.set_xticks(x)
             ax.set_xticklabels(counts.index)
-            ax.set_title("Chalcogen coverage", loc="left", fontsize=11, fontweight="bold")
+            ax.set_title("Chalcogen coverage", loc="left", fontsize=11, fontweight="bold", pad=12)
+            ax.margins(y=0.12)
             _style_axes(ax)
-            fig.tight_layout()
+            fig.tight_layout(pad=1.4)
             st.pyplot(fig, use_container_width=True)
             plt.close(fig)
 
@@ -429,9 +431,9 @@ def _render_statistics(df):
                 hatch="///",
             )
             ax.set_xlabel("Eg (eV)", color="#344054", fontsize=9)
-            ax.set_title("Eg distribution", loc="left", fontsize=11, fontweight="bold")
+            ax.set_title("Eg distribution", loc="left", fontsize=11, fontweight="bold", pad=12)
             _style_axes(ax)
-            fig.tight_layout()
+            fig.tight_layout(pad=1.4)
             st.pyplot(fig, use_container_width=True)
             plt.close(fig)
 
