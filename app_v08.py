@@ -324,32 +324,56 @@ if uploaded_file is not None:
                 display_similarity_search_panel(valid_df)
 
             with tabs[4]:
+                st.subheader("Export results")
+                st.caption(
+                    "Download the processed records, the descriptor subset selected in the sidebar, "
+                    "or the complete analysis package."
+                )
+
                 selected_csv = filtered_valid_df.to_csv(index=False).encode("utf-8")
                 database_csv = database_df.to_csv(index=False).encode("utf-8")
 
-                st.download_button(
-                    "Download processed records CSV",
-                    database_csv,
-                    f"{project_name}_processed_database.csv",
-                    "text/csv",
-                    use_container_width=True,
-                )
-                st.download_button(
-                    "Download selected descriptors CSV",
-                    selected_csv,
-                    f"{project_name}_selected_descriptors.csv",
-                    "text/csv",
-                    use_container_width=True,
-                )
+                with st.container(border=True):
+                    st.markdown("**Processed records**")
+                    st.caption(
+                        "Canonical identifiers, retained input properties, provenance fields and quality flags."
+                    )
+                    st.download_button(
+                        "Download processed records CSV",
+                        database_csv,
+                        f"{project_name}_processed_database.csv",
+                        "text/csv",
+                        use_container_width=True,
+                    )
+
+                with st.container(border=True):
+                    st.markdown("**Selected descriptor layer**")
+                    st.caption(
+                        "Only the descriptor groups selected in the sidebar."
+                    )
+                    st.download_button(
+                        "Download selected descriptors CSV",
+                        selected_csv,
+                        f"{project_name}_selected_descriptors.csv",
+                        "text/csv",
+                        use_container_width=True,
+                    )
+
                 with open(results["zip_file"], "rb") as file:
                     zip_data = file.read()
-                st.download_button(
-                    "Download complete analysis package (ZIP)",
-                    zip_data,
-                    os.path.basename(results["zip_file"]),
-                    "application/zip",
-                    use_container_width=True,
-                )
+
+                with st.container(border=True):
+                    st.markdown("**Complete analysis package**")
+                    st.caption(
+                        "Descriptors, fingerprints, invalid-structure report and run summary in one ZIP archive."
+                    )
+                    st.download_button(
+                        "Download complete analysis package (ZIP)",
+                        zip_data,
+                        os.path.basename(results["zip_file"]),
+                        "application/zip",
+                        use_container_width=True,
+                    )
 
     except Exception as error:
         st.error(f"Dataset could not be processed: {error}")
