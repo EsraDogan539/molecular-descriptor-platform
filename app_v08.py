@@ -27,7 +27,7 @@ st.markdown(
         --muted: #667085;
         --line: #E5E7EB;
         --soft: #F8FAFC;
-        --accent: #174A7E;
+        --accent: #315F86;
     }
     .block-container {
         max-width: 1240px;
@@ -195,8 +195,8 @@ st.markdown(
     }
     a[data-testid="stBaseLinkButton-primary"]:hover,
     a[data-testid="stLinkButton"]:hover {
-        background: #123D69 !important;
-        border-color: #123D69 !important;
+        background: #274F70 !important;
+        border-color: #274F70 !important;
         color: white !important;
     }
     button[data-baseweb="tab"] {
