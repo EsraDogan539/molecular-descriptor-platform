@@ -131,8 +131,6 @@ def find_similar_molecules(
 def display_similarity_search_panel(valid_df):
     """Rank molecules in the uploaded dataset by similarity to a selected reference."""
 
-    st.subheader("Similarity Search")
-
     if len(valid_df) < 2:
         st.info(
             "Benzer molekül araması için en az iki geçerli "
@@ -146,7 +144,7 @@ def display_similarity_search_panel(valid_df):
         .tolist()
     )
 
-    control_col_1, control_col_2, control_col_3 = st.columns(3)
+    control_col_1, control_col_2, control_col_3 = st.columns([1.35, 0.75, 1.1])
 
     with control_col_1:
         reference_id = st.selectbox(
@@ -171,7 +169,7 @@ def display_similarity_search_panel(valid_df):
 
     with control_col_3:
         minimum_similarity = st.slider(
-            "Minimum similarity",
+            "Minimum Tanimoto similarity",
             min_value=0.0,
             max_value=1.0,
             value=0.0,
@@ -182,9 +180,10 @@ def display_similarity_search_panel(valid_df):
         valid_df["Molecule_ID"].astype(str) == reference_id
     ].iloc[0]
 
-    st.markdown("### Reference molecule")
+    st.caption("Morgan fingerprints: radius 2, 2048 bits · similarity metric: Tanimoto")
 
-    reference_col_1, reference_col_2 = st.columns([1, 2])
+    st.markdown("### Reference")
+    reference_col_1, reference_col_2 = st.columns([0.75, 2.25])
 
     with reference_col_1:
         reference_mol = Chem.MolFromSmiles(
@@ -194,7 +193,7 @@ def display_similarity_search_panel(valid_df):
         if reference_mol is not None:
             reference_image = Draw.MolToImage(
                 reference_mol,
-                size=(450, 320)
+                size=(300, 220)
             )
 
             st.image(
@@ -245,8 +244,18 @@ def display_similarity_search_panel(valid_df):
         )
         return
 
+    compact_columns = [
+        "Rank",
+        "Molecule_ID",
+        "Molecular Formula",
+        "Morgan Similarity",
+        "MW Difference",
+        "LogP Difference",
+    ]
+    compact_columns = [column for column in compact_columns if column in similar_df.columns]
+
     st.dataframe(
-        similar_df,
+        similar_df[compact_columns],
         hide_index=True,
         use_container_width=True
     )
@@ -285,7 +294,7 @@ def display_similarity_search_panel(valid_df):
                     if mol is not None:
                         molecule_image = Draw.MolToImage(
                             mol,
-                            size=(400, 300)
+                            size=(280, 210)
                         )
 
                         st.image(
@@ -298,30 +307,17 @@ def display_similarity_search_panel(valid_df):
                         f"{result_row['Morgan Similarity']:.3f}"
                     )
 
-                    st.write(
-                        f"**Molecular formula:** "
-                        f"{result_row['Molecular Formula']}"
+                    st.caption(
+                        f"{result_row['Molecular Formula']} · "
+                        f"ΔMW {result_row['MW Difference']} · "
+                        f"ΔLogP {result_row['LogP Difference']}"
                     )
 
-                    st.write(
-                        f"**MW difference:** "
-                        f"{result_row['MW Difference']}"
-                    )
-
-                    st.write(
-                        f"**LogP difference:** "
-                        f"{result_row['LogP Difference']}"
-                    )
-
-                    st.write(
-                        f"**TPSA difference:** "
-                        f"{result_row['TPSA Difference']}"
-                    )
-
-                    st.code(
-                        result_row["Canonical SMILES"],
-                        language=None
-                    )
+                    with st.expander("Structure identifier", expanded=False):
+                        st.code(
+                            result_row["Canonical SMILES"],
+                            language=None
+                        )
 
     similarity_csv = similar_df.to_csv(
         index=False
