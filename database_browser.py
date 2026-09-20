@@ -65,6 +65,15 @@ def _display_scope(value):
     return mapping.get(_display_value(value), _display_value(value))
 
 
+def _display_collection(row):
+    role = _display_role(row.get("Split_Role"))
+    if role == "Development":
+        return "Development collection"
+    if role == "External":
+        return "External validation collection"
+    return role
+
+
 def _record_label(row):
     record_id = str(row.get("Record_ID", "Record"))
     system = row.get("System_Code")
@@ -99,7 +108,7 @@ def _render_record_detail(row):
         id_cols = st.columns(3)
         identity_items = [
             ("Record ID", _display_value(row.get("Record_ID"))),
-            ("Dataset role", _display_role(row.get("Split_Role"))),
+            ("Collection role", _display_role(row.get("Split_Role"))),
             ("Scope", _display_scope(row.get("Scope_Flag"))),
         ]
         for col, (label, value) in zip(id_cols, identity_items):
@@ -115,7 +124,7 @@ def _render_record_detail(row):
         property_cols[3].metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
 
         details = {
-            "Dataset source": row.get("Dataset_Owner"),
+            "Collection": _display_collection(row),
             "Molecule / system": row.get("Molecule_Name") or row.get("System_Code"),
             "Donor / Acceptor": " / ".join(
                 [
@@ -147,7 +156,7 @@ def _render_record_detail(row):
 def display_database_browser():
     st.subheader("Curated Chalcogen Database")
     st.caption(
-        "Browse the versioned publication dataset by dataset role, chemical scope, "
+        "Browse the versioned publication dataset by collection role, chemical scope, "
         "chalcogen class and molecular identity."
     )
 
@@ -185,8 +194,8 @@ def display_database_browser():
 
     with st.expander("Database scope and curation policy", expanded=False):
         st.markdown(
-            "- **Development / Training:** Erol dataset\n"
-            "- **External collection:** Hakan Kayı dataset\n"
+            "- **Development collection:** structure-complete records used for database development and downstream modelling examples\n"
+            "- **External validation collection:** separately curated literature/system-level records retained as an external collection\n"
             "- **Core scope:** records containing S, Se or Te\n"
             "- O-only and non-S/Se/Te records are retained as controls.\n"
             "- Missing structures and properties remain explicit.\n"
@@ -201,7 +210,7 @@ def display_database_browser():
     chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
 
     with f1:
-        split_value = st.selectbox("Dataset role", split_options)
+        split_value = st.selectbox("Collection role", split_options)
     with f2:
         scope_value = st.selectbox("Chemical scope", scope_options)
     with f3:
@@ -265,8 +274,8 @@ def display_database_browser():
         "Duplicate_Flag": "Repeated",
         "Curation_Status": "Curation status",
     })
-    if "Dataset role" in display_table.columns:
-        display_table["Dataset role"] = display_table["Dataset role"].map(_display_role)
+    if "Collection role" in display_table.columns:
+        display_table["Collection role"] = display_table["Collection role"].map(_display_role)
     if "Scope" in display_table.columns:
         display_table["Scope"] = display_table["Scope"].map(_display_scope)
 
