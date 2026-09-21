@@ -17,7 +17,7 @@ from scientific_panel import display_scientific_core_panel
 
 st.set_page_config(
     page_title="ChalMolDB | Chalcogen Molecular Database",
-    page_icon=None,
+    page_icon="static/chalmoldb_icon.svg",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -30,7 +30,9 @@ st.markdown(
         --muted: #667085;
         --line: #E5E7EB;
         --soft: #F8FAFC;
-        --accent: #315F86;
+        --accent: #1F4E79;
+        --accent-dark: #163A5B;
+        --accent-light: #5DA9E9;
     }
     .block-container {
         max-width: 1240px;
@@ -57,9 +59,32 @@ st.markdown(
     .academic-brand {
         color: var(--ink) !important;
         text-decoration: none !important;
-        font-size: 1.02rem;
-        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: .62rem;
         white-space: nowrap;
+    }
+    .academic-brand img {
+        width: 42px;
+        height: 42px;
+        display: block;
+    }
+    .brand-copy {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.04;
+    }
+    .brand-copy strong {
+        color: var(--accent-dark);
+        font-size: 1.03rem;
+        font-weight: 750;
+        letter-spacing: -0.015em;
+    }
+    .brand-copy small {
+        color: var(--muted);
+        font-size: .67rem;
+        font-weight: 500;
+        margin-top: .19rem;
     }
     .academic-nav {
         display: flex;
@@ -83,12 +108,35 @@ st.markdown(
         border-bottom-color: var(--accent);
     }
     .home-intro {
-        max-width: 720px;
-        margin: 1.95rem auto 1.15rem auto;
+        max-width: 760px;
+        margin: 2.0rem auto 1.15rem auto;
         text-align: center;
     }
-    .home-intro h1 {
-        margin-bottom: .55rem;
+    .hero-brand {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: .72rem;
+    }
+    .hero-brand img {
+        width: 76px;
+        height: 76px;
+    }
+    .hero-title-wrap {
+        text-align: left;
+    }
+    .hero-title-wrap h1 {
+        color: var(--accent-dark);
+        margin: 0 !important;
+        font-size: 2.45rem !important;
+        line-height: 1 !important;
+    }
+    .hero-subbrand {
+        color: var(--muted);
+        font-size: .92rem;
+        margin-top: .36rem;
+        letter-spacing: .01em;
     }
     .home-intro p {
         color: var(--muted);
@@ -131,15 +179,17 @@ st.markdown(
         margin-top: 1.25rem;
     }
     .site-footer {
-        border-top: 1px solid var(--line);
+        border-top: 1px solid #D8E3EC;
         margin-top: 2.2rem;
-        padding-top: .9rem;
+        padding: 1rem 1.05rem;
+        background: var(--soft);
         color: var(--muted);
         font-size: .80rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
         flex-wrap: wrap;
+        border-radius: 5px;
     }
     .site-footer a {
         color: #4B5563 !important;
@@ -211,8 +261,8 @@ st.markdown(
     }
     a[data-testid="stBaseLinkButton-primary"]:hover,
     a[data-testid="stLinkButton"]:hover {
-        background: #274F70 !important;
-        border-color: #274F70 !important;
+        background: var(--accent-dark) !important;
+        border-color: var(--accent-dark) !important;
         color: white !important;
     }
     button[data-baseweb="tab"] {
@@ -362,7 +412,13 @@ nav_html = "".join(
 st.markdown(
     f"""
     <div class="academic-header">
-      <a class="academic-brand" href="?page=home">ChalMolDB</a>
+      <a class="academic-brand" href="?page=home">
+        <img src="app/static/chalmoldb_icon.svg" alt="ChalMolDB logo">
+        <span class="brand-copy">
+          <strong>ChalMolDB</strong>
+          <small>Chalcogen Molecular Database</small>
+        </span>
+      </a>
       <nav class="academic-nav">{nav_html}</nav>
     </div>
     """,
@@ -373,10 +429,15 @@ if page == "home":
     st.markdown(
         """
         <div class="home-intro">
-          <h1>ChalMolDB</h1>
+          <div class="hero-brand">
+            <img src="app/static/chalmoldb_icon.svg" alt="ChalMolDB">
+            <div class="hero-title-wrap">
+              <h1>ChalMolDB</h1>
+              <div class="hero-subbrand">Chalcogen Molecular Database</div>
+            </div>
+          </div>
           <p>
-            Chalcogen Molecular Database — a curated molecular resource
-            for chalcogen-focused electronic property studies.
+            A curated molecular resource for chalcogen-focused electronic property studies.
           </p>
         </div>
         <div class="metric-row">
