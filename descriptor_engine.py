@@ -1,4 +1,6 @@
 import os
+import re
+import tempfile
 import zipfile
 import numpy as np
 import pandas as pd
@@ -27,6 +29,9 @@ morgan_generator = rdFingerprintGenerator.GetMorganGenerator(
 def validate_input_dataframe(input_df):
     required_columns = ["Molecule_ID", "SMILES"]
 
+    if input_df is None or input_df.empty:
+        raise ValueError("The uploaded CSV does not contain any data rows.")
+
     missing_columns = [
         column
         for column in required_columns
@@ -36,7 +41,37 @@ def validate_input_dataframe(input_df):
     if missing_columns:
         raise ValueError(
             "Missing required columns: " + ", ".join(missing_columns)
+            + ". Required columns are Molecule_ID and SMILES."
         )
+
+    molecule_ids = input_df["Molecule_ID"]
+    missing_id_mask = molecule_ids.isna() | molecule_ids.astype(str).str.strip().eq("")
+    if missing_id_mask.any():
+        rows = (input_df.index[missing_id_mask] + 2).tolist()
+        preview = ", ".join(map(str, rows[:8]))
+        suffix = "..." if len(rows) > 8 else ""
+        raise ValueError(
+            f"Molecule_ID is missing or empty in CSV row(s): {preview}{suffix}"
+        )
+
+    normalized_ids = molecule_ids.astype(str).str.strip()
+    duplicate_ids = normalized_ids[normalized_ids.duplicated(keep=False)].unique().tolist()
+    if duplicate_ids:
+        preview = ", ".join(map(str, duplicate_ids[:8]))
+        suffix = "..." if len(duplicate_ids) > 8 else ""
+        raise ValueError(
+            "Molecule_ID values must be unique. Duplicate ID(s): "
+            f"{preview}{suffix}"
+        )
+
+
+def sanitize_project_name(project_name):
+    name = str(project_name or "").strip()
+    if not name:
+        return "chalcogen_project"
+    name = re.sub(r"[^A-Za-z0-9._-]+", "_", name)
+    name = name.strip("._-")
+    return name[:80] or "chalcogen_project"
 
 
 def count_selected_atoms(mol):
@@ -370,6 +405,9 @@ def run_molecular_descriptor_platform(
 ):
     validate_input_dataframe(input_df)
 
+    safe_project_name = sanitize_project_name(project_name)
+    output_dir = tempfile.mkdtemp(prefix="chalmoldb_")
+
     clean_input_df = input_df.copy()
 
     clean_input_df["Molecule_ID"] = (
@@ -382,11 +420,11 @@ def run_molecular_descriptor_platform(
     fingerprint_df, _ = create_fingerprint_dataset(clean_input_df)
     summary_df = pd.DataFrame([summary])
 
-    descriptor_file = f"{project_name}_descriptors.csv"
-    fingerprint_file = f"{project_name}_fingerprints.csv"
-    invalid_file = f"{project_name}_invalid_smiles.csv"
-    summary_file = f"{project_name}_summary.csv"
-    zip_file = f"{project_name}_complete_outputs.zip"
+    descriptor_file = os.path.join(output_dir, f"{safe_project_name}_descriptors.csv")
+    fingerprint_file = os.path.join(output_dir, f"{safe_project_name}_fingerprints.csv")
+    invalid_file = os.path.join(output_dir, f"{safe_project_name}_invalid_smiles.csv")
+    summary_file = os.path.join(output_dir, f"{safe_project_name}_summary.csv")
+    zip_file = os.path.join(output_dir, f"{safe_project_name}_complete_outputs.zip")
 
     valid_df.to_csv(descriptor_file, index=False)
     fingerprint_df.to_csv(fingerprint_file, index=False)
@@ -407,12 +445,14 @@ def run_molecular_descriptor_platform(
     ) as zip_output:
         for file_name in output_files:
             if os.path.exists(file_name):
-                zip_output.write(file_name, arcname=file_name)
+                zip_output.write(file_name, arcname=os.path.basename(file_name))
 
     return {
         "valid_df": valid_df,
         "invalid_df": invalid_df,
         "fingerprint_df": fingerprint_df,
         "summary_df": summary_df,
-        "zip_file": zip_file
+        "zip_file": zip_file,
+        "output_dir": output_dir,
+        "project_name": safe_project_name,
     }
