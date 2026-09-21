@@ -34,6 +34,9 @@ CHALMOLDB_ICON_SVG = """
 </svg>
 """
 
+CHALMOLDB_LOGO_URL = "https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg"
+CHALMOLDB_ICON_URL = "https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg"
+
 
 st.set_page_config(
     page_title="ChalMolDB | Chalcogen Molecular Database",
@@ -84,55 +87,18 @@ st.markdown(
         gap: .62rem;
         white-space: nowrap;
     }
-    .chalmol-mark {
-        position: relative;
-        width: 42px;
-        height: 42px;
-        flex: 0 0 42px;
-        border: 2px solid #1F4E79;
-        border-radius: 50%;
-        box-sizing: border-box;
+    .brand-logo-img {
+        width: 244px;
+        height: auto;
+        display: block;
     }
-    .chalmol-mark.large {
-        width: 76px;
-        height: 76px;
-        flex-basis: 76px;
-        border-width: 3px;
+    .hero-logo-img {
+        width: min(560px, 92%);
+        height: auto;
+        display: block;
+        margin-bottom: 1.35rem;
     }
-    .chalmol-mark .node {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        line-height: 1;
-        box-shadow: 0 0 0 2px #FFFFFF;
-    }
-    .chalmol-mark .s {
-        width: 18px; height: 18px; left: 50%; top: -7px; transform: translateX(-50%);
-        background: #D6A400; font-size: 10px;
-    }
-    .chalmol-mark .se {
-        width: 20px; height: 20px; left: -7px; bottom: 2px;
-        background: #0F766E; font-size: 8px;
-    }
-    .chalmol-mark .te {
-        width: 20px; height: 20px; right: -7px; bottom: 2px;
-        background: #6B4C8A; font-size: 8px;
-    }
-    .chalmol-mark.large .s { width: 28px; height: 28px; top: -10px; font-size: 15px; }
-    .chalmol-mark.large .se,
-    .chalmol-mark.large .te { width: 30px; height: 30px; bottom: 4px; font-size: 12px; }
-    .chalmol-mark.large .se { left: -10px; }
-    .chalmol-mark.large .te { right: -10px; }
-    .brand-copy {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.04;
-    }
+    .brand-copy { display: none; }
     .brand-copy strong {
         color: var(--accent-dark);
         font-size: 1.03rem;
@@ -200,9 +166,9 @@ st.markdown(
     }
     .hero-shell {
         display: grid;
-        grid-template-columns: 1.38fr .82fr;
+        grid-template-columns: 1.22fr .78fr;
         gap: 0;
-        min-height: 360px;
+        min-height: 420px;
         margin: 1.35rem 0 1.2rem 0;
         border: 1px solid #DCE6EF;
         border-radius: 12px;
@@ -210,7 +176,7 @@ st.markdown(
         background: linear-gradient(135deg, #F7FBFE 0%, #FFFFFF 68%);
     }
     .hero-copy {
-        padding: 2.65rem 2.8rem 2.35rem 2.8rem;
+        padding: 3.0rem 3.15rem 2.75rem 3.15rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -245,12 +211,22 @@ st.markdown(
     }
     .hero-visual {
         position: relative;
-        min-height: 360px;
+        min-height: 420px;
         background:
-          radial-gradient(circle at 74% 22%, rgba(93,169,233,.18), transparent 28%),
-          radial-gradient(circle at 34% 76%, rgba(31,78,121,.10), transparent 25%),
-          linear-gradient(145deg, #EEF6FB 0%, #FAFCFE 100%);
+          radial-gradient(circle at 76% 19%, rgba(93,169,233,.28), transparent 26%),
+          radial-gradient(circle at 27% 82%, rgba(31,78,121,.13), transparent 24%),
+          linear-gradient(145deg, #EAF4FA 0%, #F9FCFE 100%);
         overflow: hidden;
+    }
+    .hero-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 78% 23%, rgba(255,255,255,.96) 0 20px, rgba(93,169,233,.20) 21px 31px, transparent 32px),
+          radial-gradient(circle at 67% 54%, rgba(255,255,255,.94) 0 15px, rgba(31,78,121,.20) 16px 25px, transparent 26px),
+          radial-gradient(circle at 43% 67%, rgba(255,255,255,.95) 0 19px, rgba(93,169,233,.18) 20px 30px, transparent 31px);
+        opacity: .95;
     }
     .molecule-stage {
         position: absolute;
@@ -261,8 +237,8 @@ st.markdown(
     }
     .molecule-network {
         position: relative;
-        width: 300px;
-        height: 250px;
+        width: 340px;
+        height: 290px;
         transform: rotate(-4deg);
     }
     .atom {
@@ -335,18 +311,19 @@ st.markdown(
         min-height: 135px;
     }
     .feature-icon {
-        width: 34px;
-        height: 34px;
-        border-radius: 8px;
-        background: #EEF5FA;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #F4F9FC;
         color: var(--accent);
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 800;
-        font-size: .82rem;
-        margin-bottom: .8rem;
-        border: 1px solid #D8E6F0;
+        font-size: .74rem;
+        margin-bottom: .85rem;
+        border: 1px solid #CFE0EC;
+        box-shadow: inset 0 0 0 3px #FFFFFF;
     }
     .feature-card strong {
         display: block;
@@ -405,7 +382,7 @@ st.markdown(
     }
     .site-footer {
         margin-top: 2.2rem;
-        padding: 1.25rem 1.35rem;
+        padding: 1.45rem 1.55rem;
         background: var(--accent-dark);
         color: #D8E4EE;
         font-size: .80rem;
@@ -643,15 +620,7 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        <span class="chalmol-mark" aria-hidden="true">
-          <span class="node s">S</span>
-          <span class="node se">Se</span>
-          <span class="node te">Te</span>
-        </span>
-        <span class="brand-copy">
-          <strong>ChalMolDB</strong>
-          <small>Chalcogen Molecular Database</small>
-        </span>
+        <img class="brand-logo-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg" alt="ChalMolDB — Chalcogen Molecular Database">
       </a>
       <nav class="academic-nav">{nav_html}</nav>
     </div>
@@ -665,8 +634,7 @@ if page == "home":
         <div class="hero-shell">
           <div class="hero-copy">
             <div class="hero-kicker">Curated molecular data · S / Se / Te</div>
-            <h1 class="hero-heading">ChalMolDB</h1>
-            <div class="hero-name">Chalcogen Molecular Database</div>
+            <img class="hero-logo-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg" alt="ChalMolDB — Chalcogen Molecular Database">
             <p>
               A curated molecular database for chalcogen-focused electronic property studies,
               combining standardized identity, provenance and interpretable structural annotations.
@@ -713,22 +681,22 @@ if page == "home":
         <div class="section-label">What ChalMolDB provides</div>
         <div class="feature-grid">
           <div class="feature-card">
-            <div class="feature-icon">DB</div>
+            <div class="feature-icon">▤</div>
             <strong>Curated Molecular Records</strong>
             <span>Standardized molecular identity, electronic properties and record-level provenance.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">S/Se/Te</div>
+            <div class="feature-icon">⬡</div>
             <strong>Chalcogen-Aware Descriptors</strong>
             <span>Interpretable annotations describing sulfur, selenium and tellurium environments.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">SIM</div>
+            <div class="feature-icon">◎</div>
             <strong>Similarity Search</strong>
             <span>Structure-based exploratory comparison using molecular fingerprints.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">CSV</div>
+            <div class="feature-icon">⇩</div>
             <strong>Export & Reuse</strong>
             <span>Downloadable processed records, descriptor tables and reproducible analysis outputs.</span>
           </div>
