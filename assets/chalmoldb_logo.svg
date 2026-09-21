@@ -1,13 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" role="img">
-<rect width="520" height="130" fill="#fff"/>
-<g transform="translate(8,5)">
-<path d="M58 14 L91 33 L91 72 L58 101 L25 72 L25 33 Z" fill="none" stroke="#1F4E79" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-<g font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
-<circle cx="58" cy="14" r="14" fill="#D6A400"/><text x="58" y="14" font-size="18" fill="#fff">S</text>
-<circle cx="25" cy="72" r="16" fill="#0F766E"/><text x="25" y="72" font-size="17" fill="#fff">Se</text>
-<circle cx="91" cy="72" r="16" fill="#6B4C8A"/><text x="91" y="72" font-size="17" fill="#fff">Te</text>
-<circle cx="25" cy="33" r="7" fill="#5DA9E9"/><circle cx="91" cy="33" r="7" fill="#5DA9E9"/><circle cx="58" cy="101" r="7" fill="#5DA9E9"/>
-</g></g>
-<text x="128" y="55" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#163A5B">ChalMolDB</text>
-<text x="130" y="84" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#667085">Chalcogen Molecular Database</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" role="img" aria-labelledby="t d">
+<title id="t">ChalMolDB</title><desc id="d">Chalcogen Molecular Database</desc>
+<defs>
+  <linearGradient id="bond" x1="0" x2="1"><stop stop-color="#7B8794"/><stop offset="1" stop-color="#AAB3BD"/></linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#163A5B" flood-opacity=".12"/></filter>
+</defs>
+<g transform="translate(10 10)" filter="url(#soft)" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="url(#bond)" stroke-width="4">
+    <path d="M55 28 91 49 91 91 55 112 19 91 19 49Z"/>
+    <path d="M91 49 127 28 163 49 163 91 127 112 91 91"/>
+    <path d="M55 28 91 7 127 28"/>
+    <path d="M55 112 91 133 127 112"/>
+  </g>
+  <g fill="#D7DCE2" stroke="#8E99A5" stroke-width="2">
+    <circle cx="19" cy="49" r="8"/><circle cx="19" cy="91" r="8"/>
+    <circle cx="91" cy="7" r="8"/><circle cx="91" cy="133" r="8"/>
+    <circle cx="163" cy="49" r="8"/><circle cx="163" cy="91" r="8"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <circle cx="55" cy="28" r="15" fill="#E4B52D" stroke="#C99814" stroke-width="2"/><text x="55" y="28" font-size="17" fill="#fff">S</text>
+    <circle cx="127" cy="28" r="17" fill="#2D9B8F" stroke="#17766D" stroke-width="2"/><text x="127" y="28" font-size="15" fill="#fff">Se</text>
+    <circle cx="127" cy="112" r="17" fill="#76608F" stroke="#5B466F" stroke-width="2"/><text x="127" y="112" font-size="15" fill="#fff">Te</text>
+    <circle cx="55" cy="112" r="8" fill="#D7DCE2" stroke="#8E99A5" stroke-width="2"/>
+    <circle cx="91" cy="49" r="8" fill="#D7DCE2" stroke="#8E99A5" stroke-width="2"/>
+    <circle cx="91" cy="91" r="8" fill="#D7DCE2" stroke="#8E99A5" stroke-width="2"/>
+    <circle cx="163" cy="70" r="8" fill="#D7DCE2" stroke="#8E99A5" stroke-width="2"/>
+  </g>
+</g>
+<text x="205" y="69" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="800" letter-spacing="-1.6" fill="#153A5B">ChalMolDB</text>
+<text x="208" y="101" font-family="Inter,Arial,Helvetica,sans-serif" font-size="18" font-weight="500" letter-spacing=".3" fill="#6B7582">Chalcogen Molecular Database</text>
 </svg>
