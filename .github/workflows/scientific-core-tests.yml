@@ -29,8 +29,8 @@ jobs:
 
       - name: Run scientific core tests
         run: |
-          python -m pytest -q tests/test_scientific_core.py
+          python -m pytest -q tests
 
       - name: Syntax-check v0.8 application files
         run: |
-          python -m py_compile descriptor_engine.py scientific_panel.py app_v08.py
+          python -m py_compile descriptor_engine.py database_metadata.py database_browser.py similarity_search.py scientific_panel.py app_v08.py
