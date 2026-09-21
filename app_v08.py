@@ -463,6 +463,86 @@ st.markdown(
         overflow: hidden;
         box-shadow: 0 4px 14px rgba(22,58,91,.035);
     }
+    .analyze-toolbar {
+        display: grid;
+        grid-template-columns: 1.65fr .85fr;
+        gap: 1rem;
+        align-items: stretch;
+        margin-bottom: 1.2rem;
+    }
+    .upload-side-card {
+        border: 1px solid #DFE7EF;
+        border-radius: 9px;
+        background: #FBFCFD;
+        padding: 1rem 1.05rem;
+        min-height: 100%;
+    }
+    .upload-side-card strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: .88rem;
+        margin-bottom: .45rem;
+    }
+    .upload-side-card span {
+        display: block;
+        color: var(--muted);
+        font-size: .79rem;
+        line-height: 1.48;
+        margin-bottom: .22rem;
+    }
+    .analysis-summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: .75rem;
+        margin: .95rem 0 1.1rem 0;
+    }
+    .analysis-summary-item {
+        border: 1px solid #E0E7EE;
+        border-radius: 8px;
+        padding: .72rem .82rem;
+        background: #FFFFFF;
+    }
+    .analysis-summary-item span {
+        display: block;
+        color: #7A8794;
+        font-size: .70rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+    }
+    .analysis-summary-item strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: 1.05rem;
+        margin-top: .14rem;
+    }
+    .workspace-title {
+        color: var(--accent-dark);
+        font-size: 1.06rem;
+        font-weight: 750;
+        margin: 1rem 0 .2rem 0;
+    }
+    .workspace-caption {
+        color: var(--muted);
+        font-size: .82rem;
+        margin-bottom: .75rem;
+    }
+    .export-row {
+        border: 1px solid #E0E7EE;
+        border-radius: 8px;
+        padding: .85rem .95rem;
+        margin-bottom: .7rem;
+        background: #FFFFFF;
+    }
+    .export-row strong {
+        color: var(--accent-dark);
+    }
+    @media (max-width: 760px) {
+        .analyze-toolbar,
+        .analysis-summary {
+            grid-template-columns: 1fr;
+        }
+    }
+
     div[data-testid="stFileUploader"] {
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -943,7 +1023,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-upload_left, upload_right = st.columns([2.1, 1])
+st.markdown('<div class="section-rule-title">Upload dataset</div>', unsafe_allow_html=True)
+upload_left, upload_right = st.columns([1.75, 1], gap="large")
 with upload_left:
     uploaded_file = st.file_uploader(
         "Choose a CSV file",
@@ -951,9 +1032,17 @@ with upload_left:
         help="Required columns: Molecule_ID and SMILES.",
     )
 with upload_right:
-    st.markdown("**Input format**")
-    st.caption("Required columns: Molecule_ID, SMILES")
-    st.caption("Additional property or provenance columns are preserved.")
+    st.markdown(
+        """
+        <div class="upload-side-card">
+          <strong>Input format</strong>
+          <span>Required: Molecule_ID, SMILES</span>
+          <span>Optional property and provenance columns are preserved.</span>
+          <span>User uploads remain separate from the curated ChalMolDB release.</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     st.download_button(
         "Download example CSV",
         sample_csv,
@@ -972,10 +1061,10 @@ if uploaded_file is None:
 
 try:
     input_df = pd.read_csv(uploaded_file)
-    st.markdown("### Input preview")
+    st.markdown('<div class="section-rule-title">Input preview</div>', unsafe_allow_html=True)
     st.dataframe(display_table(input_df.head(12)), use_container_width=True, hide_index=True)
 
-    with st.expander("Analysis settings", expanded=False):
+    with st.expander("Analysis settings", expanded=True):
         project_name = st.text_input("Project name", value="chalcogen_project")
         selected_groups = st.multiselect(
             "Descriptor groups",
@@ -1015,9 +1104,16 @@ try:
         invalid_count = int(summary_df.loc[0, "Invalid Molecules"])
         duplicate_count = int(summary_df.loc[0, "Duplicate Molecules"])
 
-        st.caption(
-            f"{total_records:,} submitted · {valid_count:,} valid · "
-            f"{invalid_count:,} invalid · {duplicate_count:,} repeated structures"
+        st.markdown(
+            f"""
+            <div class="analysis-summary">
+              <div class="analysis-summary-item"><span>Submitted</span><strong>{total_records:,}</strong></div>
+              <div class="analysis-summary-item"><span>Valid</span><strong>{valid_count:,}</strong></div>
+              <div class="analysis-summary-item"><span>Invalid</span><strong>{invalid_count:,}</strong></div>
+              <div class="analysis-summary-item"><span>Repeated</span><strong>{duplicate_count:,}</strong></div>
+            </div>
+            """,
+            unsafe_allow_html=True,
         )
 
         tabs = st.tabs([
@@ -1029,7 +1125,7 @@ try:
         ])
 
         with tabs[0]:
-            st.markdown("### Records")
+            st.markdown('<div class="workspace-title">Records</div>', unsafe_allow_html=True)
             st.caption(
                 "Standardized identifiers, retained source fields and quality flags."
             )
@@ -1039,7 +1135,7 @@ try:
                 st.dataframe(display_table(invalid_df), use_container_width=True, hide_index=True)
 
         with tabs[1]:
-            st.markdown("### Descriptors")
+            st.markdown('<div class="workspace-title">Descriptors</div>', unsafe_allow_html=True)
             chalcogen_columns = [
                 c for c in DESCRIPTOR_GROUPS["Chalcogen Core"]
                 if c in valid_df.columns
@@ -1068,11 +1164,11 @@ try:
                 display_scientific_core_panel(valid_df)
 
         with tabs[2]:
-            st.markdown("### Structures")
+            st.markdown('<div class="workspace-title">Structures</div>', unsafe_allow_html=True)
             display_molecule_gallery(valid_df, max_molecule_cards)
 
         with tabs[3]:
-            st.markdown("### Similarity Search")
+            st.markdown('<div class="workspace-title">Similarity Search</div>', unsafe_allow_html=True)
             st.caption(
                 "Exploratory fingerprint-based molecular similarity. "
                 "Similarity does not imply equivalent electronic behavior."
@@ -1080,55 +1176,56 @@ try:
             display_similarity_search_panel(valid_df)
 
         with tabs[4]:
-            st.markdown("### Export")
+            st.markdown('<div class="workspace-title">Export</div>', unsafe_allow_html=True)
             selected_csv = filtered_valid_df.to_csv(index=False).encode("utf-8")
             database_csv = database_df.to_csv(index=False).encode("utf-8")
 
-            r1c1, r1c2 = st.columns([3, 1])
-            with r1c1:
-                st.markdown("**Processed records**")
-                st.caption("Standardized records with retained source fields and quality flags.")
-            with r1c2:
-                st.download_button(
-                    "Download CSV",
-                    database_csv,
-                    f"{project_name}_processed_database.csv",
-                    "text/csv",
-                    use_container_width=True,
-                    key="download_processed",
-                )
+            with st.container(border=True):
+                r1c1, r1c2 = st.columns([3, 1])
+                with r1c1:
+                    st.markdown("**Processed records**")
+                    st.caption("Standardized records with retained source fields and quality flags.")
+                with r1c2:
+                    st.download_button(
+                        "Download CSV",
+                        database_csv,
+                        f"{project_name}_processed_database.csv",
+                        "text/csv",
+                        use_container_width=True,
+                        key="download_processed",
+                    )
 
-            st.divider()
-            r2c1, r2c2 = st.columns([3, 1])
-            with r2c1:
-                st.markdown("**Descriptor table**")
-                st.caption("Selected descriptor groups for the current analysis.")
-            with r2c2:
-                st.download_button(
-                    "Download CSV",
-                    selected_csv,
-                    f"{project_name}_selected_descriptors.csv",
-                    "text/csv",
-                    use_container_width=True,
-                    key="download_descriptors",
-                )
+            with st.container(border=True):
+                r2c1, r2c2 = st.columns([3, 1])
+                with r2c1:
+                    st.markdown("**Descriptor table**")
+                    st.caption("Selected descriptor groups for the current analysis.")
+                with r2c2:
+                    st.download_button(
+                        "Download CSV",
+                        selected_csv,
+                        f"{project_name}_selected_descriptors.csv",
+                        "text/csv",
+                        use_container_width=True,
+                        key="download_descriptors",
+                    )
 
-            st.divider()
             with open(results["zip_file"], "rb") as file:
                 zip_data = file.read()
-            r3c1, r3c2 = st.columns([3, 1])
-            with r3c1:
-                st.markdown("**Complete package**")
-                st.caption("Processed records, descriptors, fingerprints and run summary.")
-            with r3c2:
-                st.download_button(
-                    "Download ZIP",
-                    zip_data,
-                    os.path.basename(results["zip_file"]),
-                    "application/zip",
-                    use_container_width=True,
-                    key="download_package",
-                )
+            with st.container(border=True):
+                r3c1, r3c2 = st.columns([3, 1])
+                with r3c1:
+                    st.markdown("**Complete package**")
+                    st.caption("Processed records, descriptors, fingerprints and run summary.")
+                with r3c2:
+                    st.download_button(
+                        "Download ZIP",
+                        zip_data,
+                        os.path.basename(results["zip_file"]),
+                        "application/zip",
+                        use_container_width=True,
+                        key="download_package",
+                    )
 
 except Exception as error:
     st.error(f"Dataset could not be processed: {error}")
