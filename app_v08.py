@@ -8,7 +8,7 @@ from rdkit import Chem
 from rdkit import rdBase
 from rdkit.Chem import Draw
 
-from descriptor_engine import run_molecular_descriptor_platform
+from descriptor_engine import run_molecular_descriptor_platform, validate_input_dataframe
 from database_metadata import add_database_export
 from database_browser import display_database_browser, display_database_statistics
 from similarity_search import display_similarity_search_panel
@@ -1124,6 +1124,14 @@ if uploaded_file is None:
 
 try:
     input_df = pd.read_csv(uploaded_file)
+    validate_input_dataframe(input_df)
+
+    if len(input_df) > 5000:
+        st.warning(
+            f"This file contains {len(input_df):,} rows. Descriptor and fingerprint "
+            "generation may take longer for large datasets."
+        )
+
     st.markdown('<div class="section-rule-title">Input preview</div>', unsafe_allow_html=True)
     st.dataframe(display_table(input_df.head(12)), use_container_width=True, hide_index=True)
 
@@ -1146,16 +1154,19 @@ try:
         type="primary",
         disabled=not selected_groups,
     ):
-        with st.spinner("Validating structures and calculating descriptors..."):
+        with st.status("Running molecular analysis...", expanded=True) as status:
+            st.write("Validating structures and standardizing molecular identity...")
             results = run_molecular_descriptor_platform(
                 input_df=input_df,
                 project_name=project_name,
             )
+            st.write("Preparing curated metadata and downloadable outputs...")
             results = add_database_export(
                 input_df=input_df,
                 results=results,
                 project_name=project_name,
             )
+            status.update(label="Analysis complete", state="complete", expanded=False)
 
         valid_df = results["valid_df"]
         invalid_df = results["invalid_df"]
@@ -1291,8 +1302,19 @@ try:
                         key="download_package",
                     )
 
+except pd.errors.EmptyDataError:
+    st.error("The uploaded CSV is empty or could not be read as a table.")
+except pd.errors.ParserError:
+    st.error("The uploaded file could not be parsed as CSV. Check the delimiter and quoting.")
+except UnicodeDecodeError:
+    st.error("The uploaded CSV could not be decoded. Please save it as UTF-8 and try again.")
+except ValueError as error:
+    st.error(str(error))
 except Exception as error:
-    st.error(f"Dataset could not be processed: {error}")
+    st.error(
+        "The dataset could not be processed because of an unexpected error. "
+        f"Details: {error}"
+    )
 
 st.divider()
 st.caption(
