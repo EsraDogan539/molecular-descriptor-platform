@@ -181,8 +181,8 @@ def display_similarity_search_panel(valid_df):
 
     st.caption("Morgan fingerprints: radius 2, 2048 bits · similarity metric: Tanimoto")
 
-    st.markdown("### Reference")
-    reference_col_1, reference_col_2 = st.columns([0.75, 2.25])
+    st.markdown('<div class="section-rule-title">Reference molecule</div>', unsafe_allow_html=True)
+    reference_col_1, reference_col_2 = st.columns([0.7, 2.3], gap="large")
 
     with reference_col_1:
         reference_mol = Chem.MolFromSmiles(
@@ -235,7 +235,7 @@ def display_similarity_search_panel(valid_df):
         minimum_similarity=minimum_similarity
     )
 
-    st.markdown("### Similarity results")
+    st.markdown('<div class="section-rule-title">Similarity results</div>', unsafe_allow_html=True)
 
     if similar_df.empty:
         st.warning(
@@ -267,7 +267,7 @@ def display_similarity_search_panel(valid_df):
         use_container_width=True
     )
 
-    st.markdown("### Most similar molecules")
+    st.markdown('<div class="section-rule-title">Most similar molecules</div>', unsafe_allow_html=True)
 
     cards_per_row = 3
 
