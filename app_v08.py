@@ -88,12 +88,12 @@ st.markdown(
         white-space: nowrap;
     }
     .brand-logo-img {
-        width: 244px;
+        width: 286px;
         height: auto;
         display: block;
     }
     .hero-logo-img {
-        width: min(560px, 92%);
+        width: min(610px, 96%);
         height: auto;
         display: block;
         margin-bottom: 1.35rem;
@@ -213,90 +213,20 @@ st.markdown(
         position: relative;
         min-height: 420px;
         background:
-          radial-gradient(circle at 76% 19%, rgba(93,169,233,.28), transparent 26%),
-          radial-gradient(circle at 27% 82%, rgba(31,78,121,.13), transparent 24%),
+          radial-gradient(circle at 78% 18%, rgba(93,169,233,.20), transparent 26%),
           linear-gradient(145deg, #EAF4FA 0%, #F9FCFE 100%);
         overflow: hidden;
-    }
-    .hero-visual::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(circle at 78% 23%, rgba(255,255,255,.96) 0 20px, rgba(93,169,233,.20) 21px 31px, transparent 32px),
-          radial-gradient(circle at 67% 54%, rgba(255,255,255,.94) 0 15px, rgba(31,78,121,.20) 16px 25px, transparent 26px),
-          radial-gradient(circle at 43% 67%, rgba(255,255,255,.95) 0 19px, rgba(93,169,233,.18) 20px 30px, transparent 31px);
-        opacity: .95;
-    }
-    .molecule-stage {
-        position: absolute;
-        inset: 0;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .molecule-network {
-        position: relative;
-        width: 340px;
-        height: 290px;
-        transform: rotate(-4deg);
+    .hero-molecule-svg {
+        width: 96%;
+        height: auto;
+        display: block;
+        transform: translateX(2%);
+        filter: drop-shadow(0 18px 24px rgba(22,58,91,.10));
     }
-    .atom {
-        position: absolute;
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        border: 2px solid rgba(22,58,91,.22);
-        background: rgba(255,255,255,.92);
-        box-shadow: 0 8px 22px rgba(22,58,91,.10);
-        z-index: 2;
-    }
-    .atom.core {
-        width: 54px;
-        height: 54px;
-        background: #FFFFFF;
-        border-color: rgba(31,78,121,.35);
-    }
-    .atom.s { background: #F3CF58; border-color: #D6A400; }
-    .atom.se { background: #3BA79C; border-color: #0F766E; }
-    .atom.te { background: #80639A; border-color: #6B4C8A; }
-    .atom.a1 { left: 34px; top: 92px; }
-    .atom.a2 { left: 106px; top: 36px; }
-    .atom.a3 { left: 184px; top: 70px; }
-    .atom.a4 { left: 210px; top: 150px; }
-    .atom.a5 { left: 126px; top: 174px; }
-    .atom.a6 { left: 58px; top: 154px; }
-    .atom.a7 { left: 124px; top: 104px; }
-    .mol-bond {
-        position: absolute;
-        height: 4px;
-        background: rgba(31,78,121,.34);
-        transform-origin: left center;
-        border-radius: 8px;
-        z-index: 1;
-    }
-    .mol-bond.b1 { width: 92px; left: 62px; top: 106px; transform: rotate(-38deg); }
-    .mol-bond.b2 { width: 88px; left: 132px; top: 58px; transform: rotate(24deg); }
-    .mol-bond.b3 { width: 88px; left: 201px; top: 95px; transform: rotate(72deg); }
-    .mol-bond.b4 { width: 92px; left: 150px; top: 190px; transform: rotate(-17deg); }
-    .mol-bond.b5 { width: 82px; left: 79px; top: 176px; transform: rotate(15deg); }
-    .mol-bond.b6 { width: 74px; left: 72px; top: 132px; transform: rotate(55deg); }
-    .mol-bond.b7 { width: 72px; left: 148px; top: 128px; transform: rotate(-25deg); }
-    .element-tag {
-        position: absolute;
-        z-index: 3;
-        color: white;
-        font-size: .70rem;
-        font-weight: 800;
-        line-height: 42px;
-        text-align: center;
-        width: 42px;
-        height: 42px;
-        pointer-events: none;
-    }
-    .element-tag.t1 { left: 106px; top: 36px; }
-    .element-tag.t2 { left: 58px; top: 154px; }
-    .element-tag.t3 { left: 210px; top: 150px; }
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -311,19 +241,22 @@ st.markdown(
         min-height: 135px;
     }
     .feature-icon {
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        background: #F4F9FC;
-        color: var(--accent);
+        width: 42px;
+        height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 800;
-        font-size: .74rem;
-        margin-bottom: .85rem;
-        border: 1px solid #CFE0EC;
-        box-shadow: inset 0 0 0 3px #FFFFFF;
+        margin-bottom: .9rem;
+        color: var(--accent);
+    }
+    .feature-icon svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
     .feature-card strong {
         display: block;
@@ -381,22 +314,29 @@ st.markdown(
         margin-top: 1.25rem;
     }
     .site-footer {
-        margin-top: 2.2rem;
-        padding: 1.45rem 1.55rem;
-        background: var(--accent-dark);
-        color: #D8E4EE;
-        font-size: .80rem;
+        margin-top: 2.4rem;
+        padding: 2rem 2.15rem;
+        background: #0D263B;
+        color: #BFD0DE;
+        font-size: .81rem;
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        align-items: center;
+        gap: 1.4rem;
         flex-wrap: wrap;
-        border-radius: 8px;
+        border-radius: 10px;
+        box-shadow: 0 14px 32px rgba(13,38,59,.10);
+        border-top: 1px solid rgba(255,255,255,.08);
     }
-    .site-footer strong { color: #FFFFFF; }
+    .site-footer strong {
+        color: #FFFFFF;
+        font-size: .94rem;
+        letter-spacing: .01em;
+    }
     .site-footer a {
-        color: #E7EFF6 !important;
+        color: #DDE8F0 !important;
         text-decoration: none !important;
-        margin-left: .85rem;
+        margin-left: 1rem;
     }
     .site-footer a:hover { text-decoration: underline !important; }
     @media (max-width: 760px) {
@@ -641,27 +581,36 @@ if page == "home":
             </p>
           </div>
           <div class="hero-visual" aria-hidden="true">
-            <div class="molecule-stage">
-              <div class="molecule-network">
-                <div class="mol-bond b1"></div>
-                <div class="mol-bond b2"></div>
-                <div class="mol-bond b3"></div>
-                <div class="mol-bond b4"></div>
-                <div class="mol-bond b5"></div>
-                <div class="mol-bond b6"></div>
-                <div class="mol-bond b7"></div>
-                <div class="atom a1"></div>
-                <div class="atom s a2"></div>
-                <div class="atom core a3"></div>
-                <div class="atom te a4"></div>
-                <div class="atom core a5"></div>
-                <div class="atom se a6"></div>
-                <div class="atom core a7"></div>
-                <div class="element-tag t1">S</div>
-                <div class="element-tag t2">Se</div>
-                <div class="element-tag t3">Te</div>
-              </div>
-            </div>
+            <svg class="hero-molecule-svg" viewBox="0 0 760 540" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="heroBg" cx="68%" cy="24%" r="74%"><stop stop-color="#ffffff"/><stop offset=".52" stop-color="#eef6fb"/><stop offset="1" stop-color="#dfeaf2"/></radialGradient>
+                <radialGradient id="heroC" cx="32%" cy="25%" r="72%"><stop stop-color="#ffffff"/><stop offset=".48" stop-color="#dbe1e7"/><stop offset="1" stop-color="#8b96a1"/></radialGradient>
+                <radialGradient id="heroS" cx="30%" cy="24%" r="72%"><stop stop-color="#fff5b6"/><stop offset=".42" stop-color="#e7bd39"/><stop offset="1" stop-color="#ad7e00"/></radialGradient>
+                <radialGradient id="heroSe" cx="30%" cy="24%" r="72%"><stop stop-color="#c6fff6"/><stop offset=".42" stop-color="#39aa9e"/><stop offset="1" stop-color="#0d6b63"/></radialGradient>
+                <radialGradient id="heroTe" cx="30%" cy="24%" r="72%"><stop stop-color="#eee6f7"/><stop offset=".42" stop-color="#846b9f"/><stop offset="1" stop-color="#55406d"/></radialGradient>
+                <linearGradient id="heroBond" x1="0" x2="1"><stop stop-color="#99a4af"/><stop offset=".5" stop-color="#cbd2d9"/><stop offset="1" stop-color="#7f8a95"/></linearGradient>
+                <filter id="heroShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#173b5b" flood-opacity=".20"/></filter>
+              </defs>
+              <rect width="760" height="540" rx="22" fill="url(#heroBg)"/>
+              <g opacity=".28" stroke="#8ea2b1" stroke-width="2" fill="none"><path d="M548 56 638 108 638 212 548 264 458 212 458 108Z"/><path d="M120 315 185 353 185 428 120 466 55 428 55 353Z"/></g>
+              <g filter="url(#heroShadow)" stroke-linecap="round">
+                <g stroke="url(#heroBond)" stroke-width="14">
+                  <path d="M182 257 282 176"/><path d="M282 176 398 207"/><path d="M398 207 459 310"/>
+                  <path d="M459 310 351 367"/><path d="M351 367 233 348"/><path d="M233 348 182 257"/>
+                  <path d="M282 176 310 274"/><path d="M398 207 310 274"/><path d="M310 274 351 367"/>
+                  <path d="M459 310 568 267"/><path d="M568 267 632 341"/>
+                </g>
+                <g stroke="#f9fbfc" stroke-width="3">
+                  <circle cx="182" cy="257" r="31" fill="url(#heroC)"/><circle cx="282" cy="176" r="39" fill="url(#heroS)"/>
+                  <circle cx="398" cy="207" r="31" fill="url(#heroC)"/><circle cx="459" cy="310" r="43" fill="url(#heroTe)"/>
+                  <circle cx="351" cy="367" r="31" fill="url(#heroC)"/><circle cx="233" cy="348" r="43" fill="url(#heroSe)"/>
+                  <circle cx="310" cy="274" r="33" fill="url(#heroC)"/><circle cx="568" cy="267" r="27" fill="url(#heroC)"/><circle cx="632" cy="341" r="24" fill="url(#heroC)"/>
+                </g>
+                <g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="#fff">
+                  <text x="282" y="176" font-size="23">S</text><text x="233" y="348" font-size="22">Se</text><text x="459" y="310" font-size="22">Te</text>
+                </g>
+              </g>
+            </svg>
           </div>
         </div>
         """,
@@ -681,22 +630,22 @@ if page == "home":
         <div class="section-label">What ChalMolDB provides</div>
         <div class="feature-grid">
           <div class="feature-card">
-            <div class="feature-icon">▤</div>
+            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="7" rx="9" ry="4"/><path d="M7 7v9c0 2.2 4 4 9 4s9-1.8 9-4V7"/><path d="M7 16v8c0 2.2 4 4 9 4s9-1.8 9-4v-8"/></svg></div>
             <strong>Curated Molecular Records</strong>
             <span>Standardized molecular identity, electronic properties and record-level provenance.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">⬡</div>
+            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 7 16 3l6 4v7l-6 4-6-4Z"/><path d="m22 14 6 4v7l-6 4-6-4v-7"/><circle cx="10" cy="7" r="1.6"/><circle cx="22" cy="14" r="1.6"/></svg></div>
             <strong>Chalcogen-Aware Descriptors</strong>
             <span>Interpretable annotations describing sulfur, selenium and tellurium environments.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">◎</div>
+            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="7"/><path d="m18 18 8 8"/><circle cx="13" cy="13" r="2.5"/></svg></div>
             <strong>Similarity Search</strong>
             <span>Structure-based exploratory comparison using molecular fingerprints.</span>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">⇩</div>
+            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v15"/><path d="m10 14 6 6 6-6"/><path d="M7 24v4h18v-4"/></svg></div>
             <strong>Export & Reuse</strong>
             <span>Downloadable processed records, descriptor tables and reproducible analysis outputs.</span>
           </div>
