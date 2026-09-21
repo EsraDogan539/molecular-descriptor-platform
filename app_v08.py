@@ -1,6 +1,5 @@
 import os
 import platform
-import base64
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -34,11 +33,6 @@ CHALMOLDB_ICON_SVG = """
   </g>
 </svg>
 """
-
-CHALMOLDB_ICON_DATA_URI = (
-    "data:image/svg+xml;base64,"
-    + base64.b64encode(CHALMOLDB_ICON_SVG.encode("utf-8")).decode("ascii")
-)
 
 
 st.set_page_config(
@@ -90,11 +84,50 @@ st.markdown(
         gap: .62rem;
         white-space: nowrap;
     }
-    .academic-brand img {
+    .chalmol-mark {
+        position: relative;
         width: 42px;
         height: 42px;
-        display: block;
+        flex: 0 0 42px;
+        border: 2px solid #1F4E79;
+        border-radius: 50%;
+        box-sizing: border-box;
     }
+    .chalmol-mark.large {
+        width: 76px;
+        height: 76px;
+        flex-basis: 76px;
+        border-width: 3px;
+    }
+    .chalmol-mark .node {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        line-height: 1;
+        box-shadow: 0 0 0 2px #FFFFFF;
+    }
+    .chalmol-mark .s {
+        width: 18px; height: 18px; left: 50%; top: -7px; transform: translateX(-50%);
+        background: #D6A400; font-size: 10px;
+    }
+    .chalmol-mark .se {
+        width: 20px; height: 20px; left: -7px; bottom: 2px;
+        background: #0F766E; font-size: 8px;
+    }
+    .chalmol-mark .te {
+        width: 20px; height: 20px; right: -7px; bottom: 2px;
+        background: #6B4C8A; font-size: 8px;
+    }
+    .chalmol-mark.large .s { width: 28px; height: 28px; top: -10px; font-size: 15px; }
+    .chalmol-mark.large .se,
+    .chalmol-mark.large .te { width: 30px; height: 30px; bottom: 4px; font-size: 12px; }
+    .chalmol-mark.large .se { left: -10px; }
+    .chalmol-mark.large .te { right: -10px; }
     .brand-copy {
         display: flex;
         flex-direction: column;
@@ -144,10 +177,6 @@ st.markdown(
         justify-content: center;
         gap: 1rem;
         margin-bottom: .72rem;
-    }
-    .hero-brand img {
-        width: 76px;
-        height: 76px;
     }
     .hero-title-wrap {
         text-align: left;
@@ -439,7 +468,11 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        <img src="{CHALMOLDB_ICON_DATA_URI}" alt="ChalMolDB logo">
+        <span class="chalmol-mark" aria-hidden="true">
+          <span class="node s">S</span>
+          <span class="node se">Se</span>
+          <span class="node te">Te</span>
+        </span>
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
           <small>Chalcogen Molecular Database</small>
@@ -456,7 +489,11 @@ if page == "home":
         f"""
         <div class="home-intro">
           <div class="hero-brand">
-            <img src="{CHALMOLDB_ICON_DATA_URI}" alt="ChalMolDB logo">
+            <span class="chalmol-mark large" aria-hidden="true">
+              <span class="node s">S</span>
+              <span class="node se">Se</span>
+              <span class="node te">Te</span>
+            </span>
             <div class="hero-title-wrap">
               <h1>ChalMolDB</h1>
               <div class="hero-subbrand">Chalcogen Molecular Database</div>
