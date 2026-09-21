@@ -306,10 +306,10 @@ def _style_axes(ax, ylabel="Records"):
     ax.set_facecolor("white")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.spines["left"].set_color("#B8C0CC")
-    ax.spines["bottom"].set_color("#B8C0CC")
-    ax.tick_params(axis="both", colors="#344054", labelsize=9)
-    ax.set_ylabel(ylabel, color="#344054", fontsize=9)
+    ax.spines["left"].set_color("#C8D5E0")
+    ax.spines["bottom"].set_color("#C8D5E0")
+    ax.tick_params(axis="both", colors="#163A5B", labelsize=9)
+    ax.set_ylabel(ylabel, color="#163A5B", fontsize=9)
     ax.grid(axis="y", linestyle=":", linewidth=0.6, alpha=0.5)
     ax.set_axisbelow(True)
 
@@ -325,15 +325,15 @@ def _render_statistics(df):
             role = df["Split_Role"].map(_display_role).value_counts()
             fig, ax = plt.subplots(figsize=(5.2, 3.0))
             x = list(range(len(role)))
+            role_colors = ["#1F4E79", "#5DA9E9"]
             bars = ax.bar(
                 x,
                 role.values,
-                facecolor="white",
-                edgecolor="#344054",
-                linewidth=1.0,
+                color=[role_colors[i % len(role_colors)] for i in range(len(role))],
+                edgecolor="#163A5B",
+                linewidth=0.8,
             )
             for i, bar in enumerate(bars):
-                bar.set_hatch("///" if i % 2 == 0 else "\\\\")
                 ax.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_height() + max(role.values) * 0.025,
@@ -391,15 +391,15 @@ def _render_statistics(df):
             })
             fig, ax = plt.subplots(figsize=(5.2, 3.0))
             x = list(range(len(counts)))
+            element_colors = ["#D6A400", "#0F766E", "#6B4C8A"]
             bars = ax.bar(
                 x,
                 counts.values,
-                facecolor="white",
-                edgecolor="#344054",
-                linewidth=1.0,
+                color=element_colors,
+                edgecolor="#163A5B",
+                linewidth=0.8,
             )
             for i, bar in enumerate(bars):
-                bar.set_hatch(["///", "\\\\", "xx"][i])
                 ax.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_height() + max(counts.values) * 0.025,
@@ -425,12 +425,11 @@ def _render_statistics(df):
             ax.hist(
                 eg,
                 bins=16,
-                facecolor="white",
-                edgecolor="#344054",
-                linewidth=1.0,
-                hatch="///",
+                color="#5DA9E9",
+                edgecolor="#163A5B",
+                linewidth=0.8,
             )
-            ax.set_xlabel("Eg (eV)", color="#344054", fontsize=9)
+            ax.set_xlabel("Eg (eV)", color="#163A5B", fontsize=9)
             ax.set_title("Eg distribution", loc="left", fontsize=11, fontweight="bold", pad=12)
             _style_axes(ax)
             fig.tight_layout(pad=1.4)
@@ -447,11 +446,11 @@ def display_database_browser():
             box-shadow: none !important;
         }
         div[data-testid="stTextInput"] input:focus {
-            border-color: #315F86 !important;
-            box-shadow: 0 0 0 1px #315F86 !important;
+            border-color: #1F4E79 !important;
+            box-shadow: 0 0 0 1px #1F4E79 !important;
         }
         .result-count {
-            color: #344054;
+            color: #163A5B;
             font-size: .88rem;
             font-weight: 600;
             margin: .15rem 0 .45rem 0;
