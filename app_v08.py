@@ -142,7 +142,7 @@ st.markdown(
     .hero-brand {
         display: flex;
         align-items: center;
-        gap: 1.15rem;
+        gap: .88rem;
         margin: .1rem 0 1.25rem 0;
     }
     .hero-mark-img {
@@ -167,7 +167,7 @@ st.markdown(
         color: #657286;
         font-size: 1.11rem;
         font-weight: 500;
-        margin-top: .55rem;
+        margin-top: .30rem;
         letter-spacing: .005em;
     }
     .home-intro p {
@@ -179,7 +179,7 @@ st.markdown(
         display: grid;
         grid-template-columns: 1.16fr .84fr;
         gap: 0;
-        min-height: 420px;
+        min-height: 388px;
         margin: 1.35rem 0 1.2rem 0;
         border: 1px solid #DCE6EF;
         border-radius: 12px;
@@ -187,7 +187,7 @@ st.markdown(
         background: linear-gradient(135deg, #F7FBFE 0%, #FFFFFF 68%);
     }
     .hero-copy {
-        padding: 3.35rem 3.35rem 3.05rem 3.35rem;
+        padding: 2.95rem 3.15rem 2.75rem 3.15rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -222,7 +222,7 @@ st.markdown(
     }
     .hero-visual {
         position: relative;
-        min-height: 420px;
+        min-height: 388px;
         background:
           radial-gradient(circle at 72% 22%, rgba(255,255,255,.78), transparent 29%),
           radial-gradient(circle at 34% 78%, rgba(111,160,194,.12), transparent 28%),
@@ -365,7 +365,7 @@ st.markdown(
         .metric-row { flex-wrap: wrap; }
         .metric-item { min-width: 50%; margin-bottom: .8rem; }
         .hero-shell { grid-template-columns: 1fr; }
-        .hero-visual { min-height: 220px; }
+        .hero-visual { min-height: 210px; }
         .hero-copy { padding: 2rem 1.5rem; }
         .hero-brand { gap: .85rem; }
         .hero-mark-img { width: 88px; height: 76px; }
@@ -628,7 +628,6 @@ if page == "home":
               </defs>
               <g opacity=".17" stroke="#7D95A7" stroke-width="2" fill="none">
                 <path d="M560 46 650 98 650 202 560 254 470 202 470 98Z"/>
-                <path d="M110 326 175 364 175 439 110 477 45 439 45 364Z"/>
                 <path d="M642 360 686 386 686 437 642 463 598 437 598 386Z"/>
               </g>
               <g filter="url(#heroShadow)" stroke-linecap="round">
