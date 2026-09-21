@@ -282,7 +282,7 @@ def _render_results(filtered, is_preview):
         return
 
     st.divider()
-    st.markdown("### Inspect a record")
+    st.markdown('<div class="section-rule-title">Inspect a record</div>', unsafe_allow_html=True)
     labels = [_record_label(row) for _, row in filtered.iterrows()]
     selected = st.selectbox(
         "Record",
@@ -315,7 +315,7 @@ def _style_axes(ax, ylabel="Records"):
 
 
 def _render_statistics(df):
-    st.markdown("### Statistics")
+    st.markdown('<div class="section-rule-title">Distribution overview</div>', unsafe_allow_html=True)
     st.caption("Descriptive overview of database v1.")
 
     stat1, stat2 = st.columns(2, gap="large")
@@ -459,10 +459,15 @@ def display_database_browser():
         """,
         unsafe_allow_html=True,
     )
-    st.header("Database")
-    st.caption(
-        "Browse curated records and inspect molecular identity, electronic properties "
-        "and provenance."
+    st.markdown(
+        """
+        <div class="page-intro">
+          <div class="page-eyebrow">Curated records</div>
+          <div class="page-title">Database</div>
+          <div class="page-description">Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
     df, is_preview, source_path = load_curated_database()
@@ -557,9 +562,15 @@ def display_database_browser():
 
 def display_database_statistics():
     """Render the publication-database statistics as a standalone page."""
-    st.header("Statistics")
-    st.caption(
-        "Database composition, chalcogen coverage and electronic-property availability."
+    st.markdown(
+        """
+        <div class="page-intro">
+          <div class="page-eyebrow">Database overview</div>
+          <div class="page-title">Statistics</div>
+          <div class="page-description">Database composition, chalcogen coverage and electronic-property availability across the current ChalMolDB release.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
     df, is_preview, source_path = load_curated_database()
