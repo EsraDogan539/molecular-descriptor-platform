@@ -8,3 +8,7 @@ font="sans serif"
 [server]
 headless=true
 enableStaticServing=true
+maxUploadSize=50
+
+[browser]
+gatherUsageStats=false
