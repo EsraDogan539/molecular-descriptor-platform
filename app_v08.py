@@ -1,5 +1,6 @@
 import os
 import platform
+import base64
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -33,6 +34,11 @@ CHALMOLDB_ICON_SVG = """
   </g>
 </svg>
 """
+
+CHALMOLDB_ICON_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    + base64.b64encode(CHALMOLDB_ICON_SVG.encode("utf-8")).decode("ascii")
+)
 
 
 st.set_page_config(
@@ -84,7 +90,7 @@ st.markdown(
         gap: .62rem;
         white-space: nowrap;
     }
-    .academic-brand svg {
+    .academic-brand img {
         width: 42px;
         height: 42px;
         display: block;
@@ -139,7 +145,7 @@ st.markdown(
         gap: 1rem;
         margin-bottom: .72rem;
     }
-    .hero-brand svg {
+    .hero-brand img {
         width: 76px;
         height: 76px;
     }
@@ -433,7 +439,7 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        {CHALMOLDB_ICON_SVG}
+        <img src="{CHALMOLDB_ICON_DATA_URI}" alt="ChalMolDB logo">
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
           <small>Chalcogen Molecular Database</small>
@@ -447,10 +453,10 @@ st.markdown(
 
 if page == "home":
     st.markdown(
-        """
+        f"""
         <div class="home-intro">
           <div class="hero-brand">
-            {CHALMOLDB_ICON_SVG}
+            <img src="{CHALMOLDB_ICON_DATA_URI}" alt="ChalMolDB logo">
             <div class="hero-title-wrap">
               <h1>ChalMolDB</h1>
               <div class="hero-subbrand">Chalcogen Molecular Database</div>
