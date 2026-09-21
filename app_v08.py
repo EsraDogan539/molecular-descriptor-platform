@@ -84,32 +84,34 @@ st.markdown(
         text-decoration: none !important;
         display: inline-flex;
         align-items: center;
-        gap: .62rem;
+        gap: .72rem;
         white-space: nowrap;
     }
-    .brand-logo-img {
-        width: 286px;
-        height: auto;
+    .brand-mark-img {
+        width: 66px;
+        height: 58px;
+        object-fit: contain;
         display: block;
+        flex: 0 0 auto;
     }
-    .hero-logo-img {
-        width: min(610px, 96%);
-        height: auto;
-        display: block;
-        margin-bottom: 1.35rem;
+    .brand-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1;
     }
-    .brand-copy { display: none; }
     .brand-copy strong {
         color: var(--accent-dark);
-        font-size: 1.03rem;
-        font-weight: 750;
-        letter-spacing: -0.015em;
+        font-size: 1.58rem;
+        font-weight: 800;
+        letter-spacing: -0.035em;
     }
     .brand-copy small {
         color: var(--muted);
-        font-size: .67rem;
+        font-size: .69rem;
         font-weight: 500;
-        margin-top: .19rem;
+        margin-top: .30rem;
+        letter-spacing: .01em;
     }
     .academic-nav {
         display: flex;
@@ -138,11 +140,17 @@ st.markdown(
         text-align: center;
     }
     .hero-brand {
-        display: inline-flex;
+        display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: .72rem;
+        gap: 1.15rem;
+        margin: .1rem 0 1.25rem 0;
+    }
+    .hero-mark-img {
+        width: 116px;
+        height: 98px;
+        object-fit: contain;
+        display: block;
+        flex: 0 0 auto;
     }
     .hero-title-wrap {
         text-align: left;
@@ -150,14 +158,17 @@ st.markdown(
     .hero-title-wrap h1 {
         color: var(--accent-dark);
         margin: 0 !important;
-        font-size: 2.45rem !important;
-        line-height: 1 !important;
+        font-size: 3.35rem !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.045em;
+        line-height: .94 !important;
     }
     .hero-subbrand {
-        color: var(--muted);
-        font-size: .92rem;
-        margin-top: .36rem;
-        letter-spacing: .01em;
+        color: #657286;
+        font-size: 1.11rem;
+        font-weight: 500;
+        margin-top: .55rem;
+        letter-spacing: .005em;
     }
     .home-intro p {
         color: var(--muted);
@@ -166,7 +177,7 @@ st.markdown(
     }
     .hero-shell {
         display: grid;
-        grid-template-columns: 1.22fr .78fr;
+        grid-template-columns: 1.16fr .84fr;
         gap: 0;
         min-height: 420px;
         margin: 1.35rem 0 1.2rem 0;
@@ -176,7 +187,7 @@ st.markdown(
         background: linear-gradient(135deg, #F7FBFE 0%, #FFFFFF 68%);
     }
     .hero-copy {
-        padding: 3.0rem 3.15rem 2.75rem 3.15rem;
+        padding: 3.35rem 3.35rem 3.05rem 3.35rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -187,7 +198,7 @@ st.markdown(
         font-weight: 700;
         letter-spacing: .11em;
         text-transform: uppercase;
-        margin-bottom: .8rem;
+        margin-bottom: 1.05rem;
     }
     .hero-heading {
         color: var(--accent-dark);
@@ -204,28 +215,37 @@ st.markdown(
     }
     .hero-copy p {
         color: #44546A;
-        font-size: 1.10rem;
-        line-height: 1.65;
-        max-width: 650px;
-        margin: 1.35rem 0 0 0;
+        font-size: 1.08rem;
+        line-height: 1.67;
+        max-width: 610px;
+        margin: 1.15rem 0 0 0;
     }
     .hero-visual {
         position: relative;
         min-height: 420px;
         background:
-          radial-gradient(circle at 78% 18%, rgba(93,169,233,.20), transparent 26%),
-          linear-gradient(145deg, #EAF4FA 0%, #F9FCFE 100%);
+          radial-gradient(circle at 72% 22%, rgba(255,255,255,.78), transparent 29%),
+          radial-gradient(circle at 34% 78%, rgba(111,160,194,.12), transparent 28%),
+          linear-gradient(145deg, #E6F1F8 0%, #F6FAFD 100%);
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .hero-visual::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,.18), transparent 24%);
+        pointer-events: none;
+    }
     .hero-molecule-svg {
-        width: 96%;
+        width: 119%;
+        max-width: none;
         height: auto;
         display: block;
-        transform: translateX(2%);
-        filter: drop-shadow(0 18px 24px rgba(22,58,91,.10));
+        transform: translate(7%, 1%);
+        filter: drop-shadow(0 20px 26px rgba(22,58,91,.13));
     }
     .feature-grid {
         display: grid;
@@ -347,7 +367,12 @@ st.markdown(
         .hero-shell { grid-template-columns: 1fr; }
         .hero-visual { min-height: 220px; }
         .hero-copy { padding: 2rem 1.5rem; }
-        .hero-heading { font-size: 2.45rem; }
+        .hero-brand { gap: .85rem; }
+        .hero-mark-img { width: 88px; height: 76px; }
+        .hero-title-wrap h1 { font-size: 2.45rem !important; }
+        .brand-mark-img { width: 58px; height: 50px; }
+        .brand-copy strong { font-size: 1.38rem; }
+        .hero-molecule-svg { width: 108%; transform: translateX(4%); }
         .feature-grid { grid-template-columns: 1fr 1fr; }
     }
     div[data-testid="stMetric"] {
@@ -560,7 +585,11 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        <img class="brand-logo-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg" alt="ChalMolDB — Chalcogen Molecular Database">
+        <img class="brand-mark-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg" alt="">
+        <span class="brand-copy">
+          <strong>ChalMolDB</strong>
+          <small>Chalcogen Molecular Database</small>
+        </span>
       </a>
       <nav class="academic-nav">{nav_html}</nav>
     </div>
@@ -574,7 +603,13 @@ if page == "home":
         <div class="hero-shell">
           <div class="hero-copy">
             <div class="hero-kicker">Curated molecular data · S / Se / Te</div>
-            <img class="hero-logo-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg" alt="ChalMolDB — Chalcogen Molecular Database">
+            <div class="hero-brand">
+              <img class="hero-mark-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg" alt="">
+              <div class="hero-title-wrap">
+                <h1>ChalMolDB</h1>
+                <div class="hero-subbrand">Chalcogen Molecular Database</div>
+              </div>
+            </div>
             <p>
               A curated molecular database for chalcogen-focused electronic property studies,
               combining standardized identity, provenance and interpretable structural annotations.
@@ -591,8 +626,11 @@ if page == "home":
                 <linearGradient id="heroBond" x1="0" x2="1"><stop stop-color="#99a4af"/><stop offset=".5" stop-color="#cbd2d9"/><stop offset="1" stop-color="#7f8a95"/></linearGradient>
                 <filter id="heroShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#173b5b" flood-opacity=".20"/></filter>
               </defs>
-              <rect width="760" height="540" rx="22" fill="url(#heroBg)"/>
-              <g opacity=".28" stroke="#8ea2b1" stroke-width="2" fill="none"><path d="M548 56 638 108 638 212 548 264 458 212 458 108Z"/><path d="M120 315 185 353 185 428 120 466 55 428 55 353Z"/></g>
+              <g opacity=".17" stroke="#7D95A7" stroke-width="2" fill="none">
+                <path d="M560 46 650 98 650 202 560 254 470 202 470 98Z"/>
+                <path d="M110 326 175 364 175 439 110 477 45 439 45 364Z"/>
+                <path d="M642 360 686 386 686 437 642 463 598 437 598 386Z"/>
+              </g>
               <g filter="url(#heroShadow)" stroke-linecap="round">
                 <g stroke="url(#heroBond)" stroke-width="14">
                   <path d="M182 257 282 176"/><path d="M282 176 398 207"/><path d="M398 207 459 310"/>
