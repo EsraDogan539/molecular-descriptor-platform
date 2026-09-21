@@ -247,6 +247,70 @@ st.markdown(
         transform: translate(7%, 1%);
         filter: drop-shadow(0 20px 26px rgba(22,58,91,.13));
     }
+
+    .page-intro {
+        margin: 1.45rem 0 1.65rem 0;
+        padding: 1.55rem 1.7rem 1.5rem 1.7rem;
+        border: 1px solid #DFE8EF;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #F8FBFD 0%, #FFFFFF 72%);
+    }
+    .page-eyebrow {
+        color: var(--accent);
+        font-size: .74rem;
+        font-weight: 750;
+        letter-spacing: .11em;
+        text-transform: uppercase;
+        margin-bottom: .48rem;
+    }
+    .page-title {
+        color: var(--accent-dark);
+        font-size: 2rem;
+        line-height: 1.08;
+        font-weight: 780;
+        letter-spacing: -0.025em;
+        margin: 0;
+    }
+    .page-description {
+        color: var(--muted);
+        font-size: .96rem;
+        line-height: 1.58;
+        max-width: 790px;
+        margin-top: .6rem;
+    }
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin: 1.1rem 0 1.4rem 0;
+    }
+    .info-card {
+        border: 1px solid #DFE7EF;
+        border-radius: 9px;
+        padding: 1.15rem 1.2rem;
+        background: #FFFFFF;
+    }
+    .info-card strong {
+        color: var(--accent-dark);
+        display: block;
+        font-size: .93rem;
+        margin-bottom: .35rem;
+    }
+    .info-card span {
+        color: var(--muted);
+        font-size: .84rem;
+        line-height: 1.5;
+        display: block;
+    }
+    .section-rule-title {
+        color: var(--accent-dark);
+        font-size: .78rem;
+        font-weight: 750;
+        letter-spacing: .09em;
+        text-transform: uppercase;
+        margin: 1.55rem 0 .65rem 0;
+    }
+
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -374,35 +438,41 @@ st.markdown(
         .brand-copy strong { font-size: 1.38rem; }
         .hero-molecule-svg { width: 108%; transform: translateX(4%); }
         .feature-grid { grid-template-columns: 1fr 1fr; }
+        .info-grid { grid-template-columns: 1fr; }
+        .page-title { font-size: 1.7rem; }
     }
     div[data-testid="stMetric"] {
-        background: transparent;
-        border: 0;
-        padding: .25rem 0;
+        background: #FFFFFF;
+        border: 1px solid #E1E8EF;
+        border-radius: 8px;
+        padding: .78rem .9rem;
+        min-height: 84px;
     }
     div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-        color: var(--ink);
-        font-size: 1.25rem;
+        color: var(--accent-dark);
+        font-size: 1.28rem;
+        font-weight: 700;
     }
     div[data-testid="stMetric"] [data-testid="stMetricLabel"] {
         color: var(--muted);
         font-size: .82rem;
     }
     div[data-testid="stDataFrame"] {
-        border: 1px solid var(--line);
-        border-radius: 4px;
+        border: 1px solid #DFE7EF;
+        border-radius: 8px;
         overflow: hidden;
+        box-shadow: 0 4px 14px rgba(22,58,91,.035);
     }
     div[data-testid="stFileUploader"] {
         border: 1px solid var(--line);
-        border-radius: 4px;
-        padding: .35rem;
+        border-radius: 8px;
+        padding: .42rem;
         background: #FFFFFF;
     }
     div[data-testid="stFileUploader"] section {
         background: #FFFFFF !important;
         border: 1px dashed #D9DEE7 !important;
-        border-radius: 4px !important;
+        border-radius: 7px !important;
     }
     .analyze-note {
         color: var(--muted);
@@ -412,8 +482,25 @@ st.markdown(
         border-top: 1px solid var(--line);
     }
     div[data-testid="stExpander"] {
-        border: 1px solid var(--line);
-        border-radius: 4px;
+        border: 1px solid #DFE7EF;
+        border-radius: 8px;
+        background: #FFFFFF;
+    }
+    div[data-baseweb="select"] > div {
+        border-radius: 7px !important;
+        border-color: #D9E2EA !important;
+    }
+    div[data-testid="stTextInput"] input,
+    div[data-testid="stNumberInput"] input {
+        border-radius: 7px !important;
+    }
+    div[data-testid="stTabs"] [data-baseweb="tab-list"] {
+        gap: 1.1rem;
+        border-bottom: 1px solid #E3E9EF;
+    }
+    div[data-testid="stTabs"] button[data-baseweb="tab"] {
+        padding-left: .1rem;
+        padding-right: .1rem;
     }
     .stButton > button, .stDownloadButton > button {
         border-radius: 4px !important;
@@ -736,8 +823,16 @@ if page == "statistics":
 
 
 if page == "documentation":
-    st.header("Documentation")
-    st.caption("Database scope, molecular identity, curation rules and user-analysis workflow.")
+    st.markdown(
+        """
+        <div class="page-intro">
+          <div class="page-eyebrow">Reference guide</div>
+          <div class="page-title">Documentation</div>
+          <div class="page-description">Database scope, molecular identity, curation rules and the user-analysis workflow for ChalMolDB.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         """
@@ -751,34 +846,34 @@ if page == "documentation":
         unsafe_allow_html=True,
     )
 
-    st.markdown("### Database scope")
+    st.markdown('<div class="section-rule-title">Database scope</div>', unsafe_allow_html=True)
     st.write(
         "Database v1 contains curated development and external records. Exact standardized "
         "structures are displayed only where the source supports structure-level identity."
     )
 
-    st.markdown("### Molecular identity")
+    st.markdown('<div class="section-rule-title">Molecular identity</div>', unsafe_allow_html=True)
     st.write(
         "Structure-complete records are standardized with RDKit and represented by canonical "
         "SMILES, InChI and InChIKey. Repeated standardized structures are retained to preserve "
         "record-level provenance."
     )
 
-    st.markdown("### Curation principles")
+    st.markdown('<div class="section-rule-title">Curation principles</div>', unsafe_allow_html=True)
     st.markdown(
         "- Missing structures or properties are left explicit; unavailable values are not imputed.\n"
         "- S/Se/Te-focused annotations are reported separately from general molecular descriptors.\n"
         "- Record identity and standardized structure identity are treated as distinct concepts."
     )
 
-    st.markdown("### Analyze your dataset")
+    st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
     st.write(
         "Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, "
         "calculates general and S/Se/Te-aware descriptors, and keeps user-supplied data separate "
         "from the curated publication database."
     )
 
-    st.markdown("### Software environment")
+    st.markdown('<div class="section-rule-title">Software environment</div>', unsafe_allow_html=True)
     with st.expander("Runtime versions", expanded=False):
         st.code(
             "\n".join([
@@ -791,7 +886,7 @@ if page == "documentation":
             language=None,
         )
 
-    st.markdown("### Citation and data release")
+    st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
         "The recommended citation and permanent dataset DOI will be added with the archived "
         "publication release."
@@ -800,8 +895,16 @@ if page == "documentation":
 
 
 if page == "about":
-    st.header("About")
-    st.caption("ChalMolDB — a curated research resource for chalcogen-focused molecular data.")
+    st.markdown(
+        """
+        <div class="page-intro">
+          <div class="page-eyebrow">Research resource</div>
+          <div class="page-title">About ChalMolDB</div>
+          <div class="page-description">A curated research resource for chalcogen-focused molecular data, designed around transparent identity, provenance and reusable scientific descriptors.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.write(
         "ChalMolDB (Chalcogen Molecular Database) brings together standardized molecular identity, "
@@ -815,13 +918,13 @@ if page == "about":
         "as a secondary use case rather than the primary purpose of the database."
     )
 
-    st.markdown("### Current release")
+    st.markdown('<div class="section-rule-title">Current release</div>', unsafe_allow_html=True)
     st.markdown(
         "**Database v1** · **Scientific Core v0.8**  \\n"
         "3,360 records · 2,983 unique standardized development structures"
     )
 
-    st.markdown("### Resources")
+    st.markdown('<div class="section-rule-title">Resources</div>', unsafe_allow_html=True)
     st.markdown(
         "[Documentation](?page=documentation) · "
         "[GitHub repository](https://github.com/EsraDogan539/molecular-descriptor-platform)"
@@ -829,10 +932,15 @@ if page == "about":
     st.stop()
 
 
-st.header("Analyze Your Dataset")
-st.caption(
-    "Upload molecular structures to validate records and calculate general and "
-    "S/Se/Te-aware descriptors."
+st.markdown(
+    """
+    <div class="page-intro">
+      <div class="page-eyebrow">User analysis workspace</div>
+      <div class="page-title">Analyze Your Dataset</div>
+      <div class="page-description">Upload molecular structures to validate records and calculate general and S/Se/Te-aware descriptors while keeping user data separate from the curated publication database.</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 upload_left, upload_right = st.columns([2.1, 1])
