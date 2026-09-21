@@ -1,4 +1,5 @@
 import os
+import html
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -115,57 +116,55 @@ def _render_record_detail(row):
     record_id = _display_record_id(row.get("Record_ID"))
     collection = _display_collection(row)
     chalcogen = _display_value(row.get("Chalcogen_Type"))
+    smiles = row.get("Canonical_SMILES")
 
-    st.markdown(f"### {record_id}")
-    st.caption(f"{collection} · {chalcogen}")
+    st.markdown(
+        f"""
+        <div class="record-heading">
+          <div class="record-id">{html.escape(str(record_id))}</div>
+          <div class="record-meta">{html.escape(str(collection))} · {html.escape(str(chalcogen))}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    left, right = st.columns([1.05, 2.25], gap="large")
+    with st.container(border=True):
+        left, right = st.columns([0.88, 2.35], gap="large")
 
-    with left:
-        smiles = row.get("Canonical_SMILES")
-        if pd.notna(smiles) and str(smiles).strip():
-            mol = Chem.MolFromSmiles(str(smiles))
-            if mol is not None:
-                st.image(Draw.MolToImage(mol, size=(420, 300)), use_container_width=True)
+        with left:
+            if pd.notna(smiles) and str(smiles).strip():
+                mol = Chem.MolFromSmiles(str(smiles))
+                if mol is not None:
+                    st.image(Draw.MolToImage(mol, size=(360, 245)), use_container_width=True)
+                else:
+                    st.info("The standardized structure could not be rendered.")
+
+                st.markdown('<div class="detail-label">Canonical SMILES</div>', unsafe_allow_html=True)
+                st.code(str(smiles), language=None)
             else:
-                st.info("The standardized structure could not be rendered.")
+                st.info("Exact standardized structure is not available for this record.")
 
-            st.caption("Canonical SMILES")
-            st.code(str(smiles), language=None)
-        else:
-            st.info("Exact standardized structure is not available for this record.")
+        with right:
+            molecule_system = row.get("Molecule_Name") or row.get("System_Code")
+            identity_html = f"""
+            <div class="detail-section">
+              <div class="detail-section-title">Identity</div>
+              <div class="detail-field-grid detail-field-grid-3">
+                <div class="detail-field"><span>Database ID</span><strong>{html.escape(str(_display_value(record_id)))}</strong></div>
+                <div class="detail-field"><span>Molecule / system</span><strong>{html.escape(str(_display_value(molecule_system)))}</strong></div>
+                <div class="detail-field"><span>InChIKey</span><strong>{html.escape(str(_display_value(row.get("InChIKey"))))}</strong></div>
+              </div>
+            </div>
+            """
+            st.markdown(identity_html, unsafe_allow_html=True)
 
-    with right:
-        st.markdown("#### Identity")
-        i1, i2, i3 = st.columns(3)
-        i1.markdown(_field_line("Database ID", record_id))
-        i2.markdown(_field_line(
-            "Molecule / system",
-            row.get("Molecule_Name") or row.get("System_Code"),
-        ))
-        i3.markdown(_field_line("InChIKey", row.get("InChIKey")))
+            st.markdown('<div class="detail-section-title detail-metric-title">Electronic properties</div>', unsafe_allow_html=True)
+            e1, e2, e3, e4 = st.columns(4)
+            e1.metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
+            e2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
+            e3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
+            e4.metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
 
-        st.divider()
-
-        st.markdown("#### Electronic properties")
-        e1, e2, e3, e4 = st.columns(4)
-        e1.metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
-        e2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
-        e3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
-        e4.metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
-
-        st.divider()
-
-        c1, c2 = st.columns(2)
-        with c1:
-            st.markdown("#### Chalcogen environment")
-            st.markdown(_field_line("S count", _display_count(row.get("S_Count"))))
-            st.markdown(_field_line("Se count", _display_count(row.get("Se_Count"))))
-            st.markdown(_field_line("Te count", _display_count(row.get("Te_Count"))))
-            st.markdown(_field_line("Chalcogen type", row.get("Chalcogen_Type")))
-
-        with c2:
-            st.markdown("#### Provenance")
             donor_acceptor = " / ".join(
                 [
                     str(v)
@@ -173,30 +172,50 @@ def _render_record_detail(row):
                     if pd.notna(v) and str(v).strip()
                 ]
             ) or "—"
-            st.markdown(_field_line("Donor / Acceptor", donor_acceptor))
-            st.markdown(_field_line("Method", _display_method(row.get("Method"))))
-            st.markdown(_field_line("Basis set", row.get("Basis_Set")))
 
-        with st.expander("Additional record metadata", expanded=False):
-            metadata = {
-                "Collection": collection,
-                "Scope": _display_scope(row.get("Scope_Flag")),
-                "Unit type": row.get("Unit_Type"),
-                "Oligomer n": row.get("Oligomer_n"),
-                "Conditions": row.get("Solvent_or_Conditions"),
-                "Structure availability": row.get("Structure_Availability"),
-                "Curation status": row.get("Curation_Status"),
-                "Repeated structure": row.get("Duplicate_Flag"),
-                "Source method description": row.get("Method"),
-                "Reference": row.get("Reference"),
-            }
-            st.dataframe(
-                pd.DataFrame(
-                    [{"Field": key, "Value": _display_value(value)} for key, value in metadata.items()]
-                ),
-                use_container_width=True,
-                hide_index=True,
-            )
+            detail_html = f"""
+            <div class="detail-bottom-grid">
+              <div class="detail-subcard">
+                <div class="detail-section-title">Chalcogen environment</div>
+                <div class="compact-fields">
+                  <div><span>S count</span><strong>{html.escape(_display_count(row.get("S_Count")))}</strong></div>
+                  <div><span>Se count</span><strong>{html.escape(_display_count(row.get("Se_Count")))}</strong></div>
+                  <div><span>Te count</span><strong>{html.escape(_display_count(row.get("Te_Count")))}</strong></div>
+                  <div><span>Type</span><strong>{html.escape(str(_display_value(row.get("Chalcogen_Type"))))}</strong></div>
+                </div>
+              </div>
+              <div class="detail-subcard">
+                <div class="detail-section-title">Provenance</div>
+                <div class="compact-fields provenance-fields">
+                  <div><span>Donor / Acceptor</span><strong>{html.escape(donor_acceptor)}</strong></div>
+                  <div><span>Method</span><strong>{html.escape(str(_display_method(row.get("Method"))))}</strong></div>
+                  <div><span>Basis set</span><strong>{html.escape(str(_display_value(row.get("Basis_Set"))))}</strong></div>
+                </div>
+              </div>
+            </div>
+            """
+            st.markdown(detail_html, unsafe_allow_html=True)
+
+            with st.expander("Additional record metadata", expanded=False):
+                metadata = {
+                    "Collection": collection,
+                    "Scope": _display_scope(row.get("Scope_Flag")),
+                    "Unit type": row.get("Unit_Type"),
+                    "Oligomer n": row.get("Oligomer_n"),
+                    "Conditions": row.get("Solvent_or_Conditions"),
+                    "Structure availability": row.get("Structure_Availability"),
+                    "Curation status": row.get("Curation_Status"),
+                    "Repeated structure": row.get("Duplicate_Flag"),
+                    "Source method description": row.get("Method"),
+                    "Reference": row.get("Reference"),
+                }
+                st.dataframe(
+                    pd.DataFrame(
+                        [{"Field": key, "Value": _display_value(value)} for key, value in metadata.items()]
+                    ),
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
 
 def _public_table(df):
@@ -303,14 +322,16 @@ def _render_results(filtered, is_preview):
 
 
 def _style_axes(ax, ylabel="Records"):
-    ax.set_facecolor("white")
+    ax.set_facecolor("#FFFFFF")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.spines["left"].set_color("#C8D5E0")
-    ax.spines["bottom"].set_color("#C8D5E0")
-    ax.tick_params(axis="both", colors="#163A5B", labelsize=9)
-    ax.set_ylabel(ylabel, color="#163A5B", fontsize=9)
-    ax.grid(axis="y", linestyle=":", linewidth=0.6, alpha=0.5)
+    ax.spines["left"].set_color("#CBD6DF")
+    ax.spines["bottom"].set_color("#CBD6DF")
+    ax.spines["left"].set_linewidth(0.8)
+    ax.spines["bottom"].set_linewidth(0.8)
+    ax.tick_params(axis="both", colors="#35516A", labelsize=8.5)
+    ax.set_ylabel(ylabel, color="#50677B", fontsize=8.5, labelpad=7)
+    ax.grid(axis="y", color="#DCE5EC", linestyle=":", linewidth=0.55, alpha=0.8)
     ax.set_axisbelow(True)
 
 
@@ -318,39 +339,42 @@ def _render_statistics(df):
     st.markdown('<div class="section-rule-title">Distribution overview</div>', unsafe_allow_html=True)
     st.caption("Descriptive overview of database v1.")
 
-    stat1, stat2 = st.columns(2, gap="large")
+    stat1, stat2 = st.columns(2, gap="medium")
 
     with stat1:
         if "Split_Role" in df.columns:
-            role = df["Split_Role"].map(_display_role).value_counts()
-            fig, ax = plt.subplots(figsize=(5.2, 3.0))
-            x = list(range(len(role)))
-            role_colors = ["#1F4E79", "#5DA9E9"]
-            bars = ax.bar(
-                x,
-                role.values,
-                color=[role_colors[i % len(role_colors)] for i in range(len(role))],
-                edgecolor="#163A5B",
-                linewidth=0.8,
-            )
-            for i, bar in enumerate(bars):
-                ax.text(
-                    bar.get_x() + bar.get_width() / 2,
-                    bar.get_height() + max(role.values) * 0.025,
-                    f"{int(bar.get_height()):,}",
-                    ha="center",
-                    va="bottom",
-                    fontsize=9,
-                    color="#111827",
+            with st.container(border=True):
+                role = df["Split_Role"].map(_display_role).value_counts()
+                fig, ax = plt.subplots(figsize=(5.2, 2.55))
+                fig.patch.set_facecolor("#FFFFFF")
+                x = list(range(len(role)))
+                role_colors = ["#1F4E79", "#5DA9E9"]
+                bars = ax.bar(
+                    x,
+                    role.values,
+                    color=[role_colors[i % len(role_colors)] for i in range(len(role))],
+                    edgecolor="#315C7D",
+                    linewidth=0.65,
+                    width=0.68,
                 )
-            ax.set_xticks(x)
-            ax.set_xticklabels(role.index)
-            ax.set_title("Collection composition", loc="left", fontsize=11, fontweight="bold", pad=12)
-            ax.margins(y=0.12)
-            _style_axes(ax)
-            fig.tight_layout(pad=1.4)
-            st.pyplot(fig, use_container_width=True)
-            plt.close(fig)
+                for bar in bars:
+                    ax.text(
+                        bar.get_x() + bar.get_width() / 2,
+                        bar.get_height() + max(role.values) * 0.022,
+                        f"{int(bar.get_height()):,}",
+                        ha="center",
+                        va="bottom",
+                        fontsize=8.5,
+                        color="#334155",
+                    )
+                ax.set_xticks(x)
+                ax.set_xticklabels(role.index)
+                ax.set_title("Collection composition", loc="left", fontsize=10, fontweight="semibold", color="#163A5B", pad=8)
+                ax.margins(y=0.12)
+                _style_axes(ax)
+                fig.tight_layout(pad=0.9)
+                st.pyplot(fig, use_container_width=True)
+                plt.close(fig)
 
     with stat2:
         if all(c in df.columns for c in ["S_Count", "Se_Count", "Te_Count"]):
@@ -384,57 +408,63 @@ def _render_statistics(df):
 
                 return int(present.sum())
 
-            counts = pd.Series({
-                "S": _element_presence("S", "S_Count"),
-                "Se": _element_presence("Se", "Se_Count"),
-                "Te": _element_presence("Te", "Te_Count"),
-            })
-            fig, ax = plt.subplots(figsize=(5.2, 3.0))
-            x = list(range(len(counts)))
-            element_colors = ["#D6A400", "#0F766E", "#6B4C8A"]
-            bars = ax.bar(
-                x,
-                counts.values,
-                color=element_colors,
-                edgecolor="#163A5B",
-                linewidth=0.8,
-            )
-            for i, bar in enumerate(bars):
-                ax.text(
-                    bar.get_x() + bar.get_width() / 2,
-                    bar.get_height() + max(counts.values) * 0.025,
-                    f"{int(bar.get_height()):,}",
-                    ha="center",
-                    va="bottom",
-                    fontsize=9,
-                    color="#111827",
+            with st.container(border=True):
+                counts = pd.Series({
+                    "S": _element_presence("S", "S_Count"),
+                    "Se": _element_presence("Se", "Se_Count"),
+                    "Te": _element_presence("Te", "Te_Count"),
+                })
+                fig, ax = plt.subplots(figsize=(5.2, 2.55))
+                fig.patch.set_facecolor("#FFFFFF")
+                x = list(range(len(counts)))
+                element_colors = ["#D6A400", "#0F766E", "#6B4C8A"]
+                bars = ax.bar(
+                    x,
+                    counts.values,
+                    color=element_colors,
+                    edgecolor="#315C7D",
+                    linewidth=0.65,
+                    width=0.68,
                 )
-            ax.set_xticks(x)
-            ax.set_xticklabels(counts.index)
-            ax.set_title("Chalcogen coverage", loc="left", fontsize=11, fontweight="bold", pad=12)
-            ax.margins(y=0.12)
-            _style_axes(ax)
-            fig.tight_layout(pad=1.4)
-            st.pyplot(fig, use_container_width=True)
-            plt.close(fig)
+                for bar in bars:
+                    ax.text(
+                        bar.get_x() + bar.get_width() / 2,
+                        bar.get_height() + max(counts.values) * 0.022,
+                        f"{int(bar.get_height()):,}",
+                        ha="center",
+                        va="bottom",
+                        fontsize=8.5,
+                        color="#334155",
+                    )
+                ax.set_xticks(x)
+                ax.set_xticklabels(counts.index)
+                ax.set_title("Chalcogen coverage", loc="left", fontsize=10, fontweight="semibold", color="#163A5B", pad=8)
+                ax.margins(y=0.12)
+                _style_axes(ax)
+                fig.tight_layout(pad=0.9)
+                st.pyplot(fig, use_container_width=True)
+                plt.close(fig)
 
     if "Eg_eV" in df.columns:
         eg = pd.to_numeric(df["Eg_eV"], errors="coerce").dropna()
         if not eg.empty:
-            fig, ax = plt.subplots(figsize=(10.6, 3.6))
-            ax.hist(
-                eg,
-                bins=16,
-                color="#5DA9E9",
-                edgecolor="#163A5B",
-                linewidth=0.8,
-            )
-            ax.set_xlabel("Eg (eV)", color="#163A5B", fontsize=9)
-            ax.set_title("Eg distribution", loc="left", fontsize=11, fontweight="bold", pad=12)
-            _style_axes(ax)
-            fig.tight_layout(pad=1.4)
-            st.pyplot(fig, use_container_width=True)
-            plt.close(fig)
+            with st.container(border=True):
+                fig, ax = plt.subplots(figsize=(10.6, 2.95))
+                fig.patch.set_facecolor("#FFFFFF")
+                ax.hist(
+                    eg,
+                    bins=16,
+                    color="#5DA9E9",
+                    edgecolor="#315C7D",
+                    linewidth=0.65,
+                )
+                ax.set_xlabel("Eg (eV)", color="#50677B", fontsize=8.5)
+                ax.set_title("Eg distribution", loc="left", fontsize=10, fontweight="semibold", color="#163A5B", pad=8)
+                _style_axes(ax)
+                fig.tight_layout(pad=0.9)
+                st.pyplot(fig, use_container_width=True)
+                plt.close(fig)
+
 
 def display_database_browser():
     st.markdown(
@@ -454,6 +484,100 @@ def display_database_browser():
             font-size: .88rem;
             font-weight: 600;
             margin: .15rem 0 .45rem 0;
+        }
+        .record-heading {
+            margin: .2rem 0 .65rem 0;
+        }
+        .record-id {
+            color: #172033;
+            font-size: 1.14rem;
+            font-weight: 750;
+            letter-spacing: -.01em;
+        }
+        .record-meta {
+            color: #6B7280;
+            font-size: .82rem;
+            margin-top: .18rem;
+        }
+        .detail-label {
+            color: #6B7280;
+            font-size: .76rem;
+            font-weight: 600;
+            margin: .15rem 0 .35rem 0;
+        }
+        .detail-section {
+            padding-bottom: .85rem;
+            border-bottom: 1px solid #E5EAF0;
+            margin-bottom: .85rem;
+        }
+        .detail-section-title {
+            color: #163A5B;
+            font-size: .92rem;
+            font-weight: 750;
+            letter-spacing: -.01em;
+            margin-bottom: .58rem;
+        }
+        .detail-metric-title {
+            margin-top: .05rem;
+            margin-bottom: .45rem;
+        }
+        .detail-field-grid {
+            display: grid;
+            gap: .75rem;
+        }
+        .detail-field-grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .detail-field {
+            min-width: 0;
+        }
+        .detail-field span,
+        .compact-fields span {
+            display: block;
+            color: #788493;
+            font-size: .72rem;
+            margin-bottom: .13rem;
+        }
+        .detail-field strong,
+        .compact-fields strong {
+            display: block;
+            color: #172033;
+            font-size: .82rem;
+            font-weight: 650;
+            line-height: 1.38;
+            overflow-wrap: anywhere;
+        }
+        .detail-bottom-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: .75rem;
+            margin-top: .85rem;
+        }
+        .detail-subcard {
+            border: 1px solid #E2E9EF;
+            border-radius: 8px;
+            background: #FBFCFD;
+            padding: .8rem .9rem;
+        }
+        .compact-fields {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: .58rem .8rem;
+        }
+        .provenance-fields {
+            grid-template-columns: 1fr;
+        }
+        div[data-testid="stCode"] pre {
+            white-space: pre !important;
+            overflow-x: auto !important;
+            font-size: .78rem !important;
+        }
+        @media (max-width: 760px) {
+            .detail-field-grid-3,
+            .detail-bottom-grid,
+            .compact-fields {
+                grid-template-columns: 1fr;
+            }
         }
         </style>
         """,
