@@ -247,32 +247,80 @@ st.markdown(
         position: relative;
         min-height: 360px;
         background:
-          radial-gradient(circle at 68% 28%, rgba(93,169,233,.22), transparent 27%),
-          radial-gradient(circle at 46% 72%, rgba(31,78,121,.14), transparent 25%),
-          linear-gradient(145deg, #EDF5FA 0%, #F9FCFE 100%);
+          radial-gradient(circle at 74% 22%, rgba(93,169,233,.18), transparent 28%),
+          radial-gradient(circle at 34% 76%, rgba(31,78,121,.10), transparent 25%),
+          linear-gradient(145deg, #EEF6FB 0%, #FAFCFE 100%);
         overflow: hidden;
     }
-    .orb {
+    .molecule-stage {
         position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .molecule-network {
+        position: relative;
+        width: 300px;
+        height: 250px;
+        transform: rotate(-4deg);
+    }
+    .atom {
+        position: absolute;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        border: 2px solid rgba(31,78,121,.28);
-        background: rgba(255,255,255,.82);
-        box-shadow: 0 10px 28px rgba(22,58,91,.08);
+        border: 2px solid rgba(22,58,91,.22);
+        background: rgba(255,255,255,.92);
+        box-shadow: 0 8px 22px rgba(22,58,91,.10);
+        z-index: 2;
     }
-    .orb.o1 { width: 76px; height: 76px; top: 50px; right: 72px; }
-    .orb.o2 { width: 44px; height: 44px; top: 142px; right: 138px; }
-    .orb.o3 { width: 58px; height: 58px; bottom: 62px; right: 48px; }
-    .orb.o4 { width: 34px; height: 34px; bottom: 116px; left: 56px; }
-    .bond {
+    .atom.core {
+        width: 54px;
+        height: 54px;
+        background: #FFFFFF;
+        border-color: rgba(31,78,121,.35);
+    }
+    .atom.s { background: #F3CF58; border-color: #D6A400; }
+    .atom.se { background: #3BA79C; border-color: #0F766E; }
+    .atom.te { background: #80639A; border-color: #6B4C8A; }
+    .atom.a1 { left: 34px; top: 92px; }
+    .atom.a2 { left: 106px; top: 36px; }
+    .atom.a3 { left: 184px; top: 70px; }
+    .atom.a4 { left: 210px; top: 150px; }
+    .atom.a5 { left: 126px; top: 174px; }
+    .atom.a6 { left: 58px; top: 154px; }
+    .atom.a7 { left: 124px; top: 104px; }
+    .mol-bond {
         position: absolute;
-        height: 3px;
-        background: rgba(31,78,121,.30);
+        height: 4px;
+        background: rgba(31,78,121,.34);
         transform-origin: left center;
-        border-radius: 4px;
+        border-radius: 8px;
+        z-index: 1;
     }
-    .bond.b1 { width: 96px; top: 119px; right: 92px; transform: rotate(55deg); }
-    .bond.b2 { width: 115px; bottom: 118px; right: 93px; transform: rotate(-38deg); }
-    .bond.b3 { width: 88px; bottom: 100px; left: 75px; transform: rotate(18deg); }
+    .mol-bond.b1 { width: 92px; left: 62px; top: 106px; transform: rotate(-38deg); }
+    .mol-bond.b2 { width: 88px; left: 132px; top: 58px; transform: rotate(24deg); }
+    .mol-bond.b3 { width: 88px; left: 201px; top: 95px; transform: rotate(72deg); }
+    .mol-bond.b4 { width: 92px; left: 150px; top: 190px; transform: rotate(-17deg); }
+    .mol-bond.b5 { width: 82px; left: 79px; top: 176px; transform: rotate(15deg); }
+    .mol-bond.b6 { width: 74px; left: 72px; top: 132px; transform: rotate(55deg); }
+    .mol-bond.b7 { width: 72px; left: 148px; top: 128px; transform: rotate(-25deg); }
+    .element-tag {
+        position: absolute;
+        z-index: 3;
+        color: white;
+        font-size: .70rem;
+        font-weight: 800;
+        line-height: 42px;
+        text-align: center;
+        width: 42px;
+        height: 42px;
+        pointer-events: none;
+    }
+    .element-tag.t1 { left: 106px; top: 36px; }
+    .element-tag.t2 { left: 58px; top: 154px; }
+    .element-tag.t3 { left: 210px; top: 150px; }
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -625,13 +673,27 @@ if page == "home":
             </p>
           </div>
           <div class="hero-visual" aria-hidden="true">
-            <div class="orb o1"></div>
-            <div class="orb o2"></div>
-            <div class="orb o3"></div>
-            <div class="orb o4"></div>
-            <div class="bond b1"></div>
-            <div class="bond b2"></div>
-            <div class="bond b3"></div>
+            <div class="molecule-stage">
+              <div class="molecule-network">
+                <div class="mol-bond b1"></div>
+                <div class="mol-bond b2"></div>
+                <div class="mol-bond b3"></div>
+                <div class="mol-bond b4"></div>
+                <div class="mol-bond b5"></div>
+                <div class="mol-bond b6"></div>
+                <div class="mol-bond b7"></div>
+                <div class="atom a1"></div>
+                <div class="atom s a2"></div>
+                <div class="atom core a3"></div>
+                <div class="atom te a4"></div>
+                <div class="atom core a5"></div>
+                <div class="atom se a6"></div>
+                <div class="atom core a7"></div>
+                <div class="element-tag t1">S</div>
+                <div class="element-tag t2">Se</div>
+                <div class="element-tag t3">Te</div>
+              </div>
+            </div>
           </div>
         </div>
         """,
