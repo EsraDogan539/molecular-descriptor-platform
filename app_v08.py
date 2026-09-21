@@ -475,7 +475,10 @@ st.markdown(
         border-radius: 9px;
         background: #FBFCFD;
         padding: 1rem 1.05rem;
-        min-height: 100%;
+        min-height: 118px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .upload-side-card strong {
         display: block;
@@ -566,6 +569,13 @@ st.markdown(
         border-radius: 8px;
         background: #FFFFFF;
     }
+    div[data-testid="stExpander"] details[open] > div {
+        padding-top: .45rem !important;
+        padding-bottom: .65rem !important;
+    }
+    div[data-testid="stExpander"] label {
+        margin-bottom: .18rem !important;
+    }
     div[data-baseweb="select"] > div {
         border-radius: 7px !important;
         border-color: #D9E2EA !important;
@@ -583,9 +593,18 @@ st.markdown(
         padding-right: .1rem;
     }
     .stButton > button, .stDownloadButton > button {
-        border-radius: 4px !important;
+        border-radius: 7px !important;
         font-weight: 600 !important;
         box-shadow: none !important;
+    }
+    .analyze-run-anchor + div[data-testid="stButton"] {
+        width: 210px;
+    }
+    .analyze-run-anchor + div[data-testid="stButton"] > button {
+        width: 210px !important;
+        min-height: 44px;
+        font-weight: 700 !important;
+        letter-spacing: .01em;
     }
     .stButton > button[kind="primary"] {
         background: var(--accent) !important;
@@ -1026,6 +1045,7 @@ st.markdown(
 st.markdown('<div class="section-rule-title">Upload dataset</div>', unsafe_allow_html=True)
 upload_left, upload_right = st.columns([1.75, 1], gap="large")
 with upload_left:
+    st.markdown('<div class="upload-align-anchor"></div>', unsafe_allow_html=True)
     uploaded_file = st.file_uploader(
         "Choose a CSV file",
         type=["csv"],
@@ -1077,6 +1097,7 @@ try:
     if not selected_groups:
         st.warning("Select at least one descriptor group.")
 
+    st.markdown('<div class="analyze-run-anchor"></div>', unsafe_allow_html=True)
     if st.button(
         "Run analysis",
         type="primary",
