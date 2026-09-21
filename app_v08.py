@@ -14,10 +14,30 @@ from database_browser import display_database_browser, display_database_statisti
 from similarity_search import display_similarity_search_panel
 from scientific_panel import display_scientific_core_panel
 
+CHALMOLDB_ICON_SVG = """
+<svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <path d="M60 18 L92 36 L92 74 L60 102 L28 74 L28 36 Z"
+        fill="none" stroke="#1F4E79" stroke-width="5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700"
+     text-anchor="middle" dominant-baseline="central">
+    <circle cx="60" cy="18" r="16" fill="#D6A400"/>
+    <text x="60" y="18" font-size="20" fill="#FFFFFF">S</text>
+    <circle cx="28" cy="74" r="17" fill="#0F766E"/>
+    <text x="28" y="74" font-size="18" fill="#FFFFFF">Se</text>
+    <circle cx="92" cy="74" r="17" fill="#6B4C8A"/>
+    <text x="92" y="74" font-size="18" fill="#FFFFFF">Te</text>
+    <circle cx="28" cy="36" r="8" fill="#5DA9E9"/>
+    <circle cx="92" cy="36" r="8" fill="#5DA9E9"/>
+    <circle cx="60" cy="102" r="8" fill="#5DA9E9"/>
+  </g>
+</svg>
+"""
+
 
 st.set_page_config(
     page_title="ChalMolDB | Chalcogen Molecular Database",
-    page_icon="static/chalmoldb_icon.svg",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -64,7 +84,7 @@ st.markdown(
         gap: .62rem;
         white-space: nowrap;
     }
-    .academic-brand img {
+    .academic-brand svg {
         width: 42px;
         height: 42px;
         display: block;
@@ -119,7 +139,7 @@ st.markdown(
         gap: 1rem;
         margin-bottom: .72rem;
     }
-    .hero-brand img {
+    .hero-brand svg {
         width: 76px;
         height: 76px;
     }
@@ -413,7 +433,7 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        <img src="app/static/chalmoldb_icon.svg" alt="ChalMolDB logo">
+        {CHALMOLDB_ICON_SVG}
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
           <small>Chalcogen Molecular Database</small>
@@ -430,7 +450,7 @@ if page == "home":
         """
         <div class="home-intro">
           <div class="hero-brand">
-            <img src="app/static/chalmoldb_icon.svg" alt="ChalMolDB">
+            {CHALMOLDB_ICON_SVG}
             <div class="hero-title-wrap">
               <h1>ChalMolDB</h1>
               <div class="hero-subbrand">Chalcogen Molecular Database</div>
