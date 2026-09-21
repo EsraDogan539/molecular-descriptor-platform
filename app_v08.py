@@ -10,13 +10,13 @@ from rdkit.Chem import Draw
 
 from descriptor_engine import run_molecular_descriptor_platform
 from database_metadata import add_database_export
-from database_browser import display_database_browser
+from database_browser import display_database_browser, display_database_statistics
 from similarity_search import display_similarity_search_panel
 from scientific_panel import display_scientific_core_panel
 
 
 st.set_page_config(
-    page_title="Chalcogen Molecular Database",
+    page_title="ChalMolDB | Chalcogen Molecular Database",
     page_icon=None,
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -344,11 +344,12 @@ sample_csv = sample_df.to_csv(index=False).encode("utf-8")
 
 
 page = str(st.query_params.get("page", "home")).lower()
-if page not in {"home", "database", "analyze", "documentation", "about"}:
+if page not in {"home", "database", "statistics", "analyze", "documentation", "about"}:
     page = "home"
 
 nav_items = [
     ("Database", "database"),
+    ("Statistics", "statistics"),
     ("Analyze", "analyze"),
     ("Documentation", "documentation"),
     ("About", "about"),
@@ -361,7 +362,7 @@ nav_html = "".join(
 st.markdown(
     f"""
     <div class="academic-header">
-      <a class="academic-brand" href="?page=home">Chalcogen Molecular Database</a>
+      <a class="academic-brand" href="?page=home">ChalMolDB</a>
       <nav class="academic-nav">{nav_html}</nav>
     </div>
     """,
@@ -372,27 +373,29 @@ if page == "home":
     st.markdown(
         """
         <div class="home-intro">
-          <h1>Chalcogen Molecular Database</h1>
+          <h1>ChalMolDB</h1>
           <p>
-            Curated molecular records with standardized structures
-            and S/Se/Te-specific annotations.
+            Chalcogen Molecular Database — a curated molecular resource
+            for chalcogen-focused electronic property studies.
           </p>
         </div>
         <div class="metric-row">
           <div class="metric-item"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">Core S/Se/Te</span></div>
           <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,353</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">272</span><span class="metric-label">External records</span></div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    left, c1, c2, right = st.columns([1.7, 1, 1, 1.7])
+    left, c1, c2, c3, right = st.columns([1.15, 1, 1, 1, 1.15])
     with c1:
-        st.link_button("Browse database", "?page=database", type="primary", use_container_width=True)
+        st.link_button("Explore database", "?page=database", type="primary", use_container_width=True)
     with c2:
-        st.link_button("Analyze your dataset", "?page=analyze", use_container_width=True)
+        st.link_button("Explore statistics", "?page=statistics", use_container_width=True)
+    with c3:
+        st.link_button("Analyze molecules", "?page=analyze", use_container_width=True)
 
     st.markdown(
         """
@@ -401,7 +404,7 @@ if page == "home":
           &nbsp;&middot;&nbsp; Record-level provenance retained
         </div>
         <div class="site-footer">
-          <span>Chalcogen Molecular Database · v1</span>
+          <span>ChalMolDB · Chalcogen Molecular Database · v1</span>
           <span>
             <a href="?page=documentation">Documentation</a>
             <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
@@ -418,9 +421,16 @@ if page == "database":
     display_database_browser()
     st.divider()
     st.caption(
-        "Database v1 · Scientific Core v0.8 · "
+        "ChalMolDB · Database v1 · Scientific Core v0.8 · "
         "Curated records are read-only in the public browser."
     )
+    st.stop()
+
+
+if page == "statistics":
+    display_database_statistics()
+    st.divider()
+    st.caption("ChalMolDB · Database v1 · Descriptive statistics")
     st.stop()
 
 
@@ -490,10 +500,10 @@ if page == "documentation":
 
 if page == "about":
     st.header("About")
-    st.caption("A curated research resource for chalcogen-focused molecular data.")
+    st.caption("ChalMolDB — a curated research resource for chalcogen-focused molecular data.")
 
     st.write(
-        "Chalcogen Molecular Database brings together standardized molecular identity, "
+        "ChalMolDB (Chalcogen Molecular Database) brings together standardized molecular identity, "
         "electronic-property data and interpretable S/Se/Te structural annotations in a "
         "single searchable resource."
     )
@@ -716,5 +726,5 @@ except Exception as error:
 
 st.divider()
 st.caption(
-    "Chalcogen Molecular Database · Database v1 · Scientific Core v0.8"
+    "ChalMolDB · Database v1 · Scientific Core v0.8"
 )
