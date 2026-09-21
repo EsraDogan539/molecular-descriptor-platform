@@ -302,6 +302,39 @@ st.markdown(
         line-height: 1.5;
         display: block;
     }
+    .release-card {
+        border: 1px solid #DFE7EF;
+        border-radius: 9px;
+        background: #FBFCFD;
+        padding: 1rem 1.1rem;
+        max-width: 620px;
+        margin-top: .55rem;
+    }
+    .release-card strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: .96rem;
+        margin-bottom: .28rem;
+    }
+    .release-card span {
+        display: block;
+        color: var(--muted);
+        font-size: .84rem;
+        line-height: 1.45;
+    }
+    .resource-links {
+        margin-top: .45rem;
+        font-size: .88rem;
+    }
+    .resource-links a {
+        color: var(--accent) !important;
+        text-decoration: none !important;
+        margin-right: 1rem;
+        border-bottom: 1px solid rgba(31,78,121,.25);
+    }
+    .resource-links a:hover {
+        border-bottom-color: var(--accent);
+    }
     .section-rule-title {
         color: var(--accent-dark);
         font-size: .78rem;
@@ -1019,14 +1052,24 @@ if page == "about":
 
     st.markdown('<div class="section-rule-title">Current release</div>', unsafe_allow_html=True)
     st.markdown(
-        "**Database v1** · **Scientific Core v0.8**  \\n"
-        "3,360 records · 2,983 unique standardized development structures"
+        """
+        <div class="release-card">
+          <strong>Database v1 · Scientific Core v0.8</strong>
+          <span>3,360 records · 2,983 unique standardized development structures</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
     st.markdown('<div class="section-rule-title">Resources</div>', unsafe_allow_html=True)
     st.markdown(
-        "[Documentation](?page=documentation) · "
-        "[GitHub repository](https://github.com/EsraDogan539/molecular-descriptor-platform)"
+        """
+        <div class="resource-links">
+          <a href="?page=documentation">Documentation</a>
+          <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
     st.stop()
 
