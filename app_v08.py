@@ -198,6 +198,128 @@ st.markdown(
         font-size: 1.02rem;
         line-height: 1.6;
     }
+    .hero-shell {
+        display: grid;
+        grid-template-columns: 1.38fr .82fr;
+        gap: 0;
+        min-height: 360px;
+        margin: 1.35rem 0 1.2rem 0;
+        border: 1px solid #DCE6EF;
+        border-radius: 12px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #F7FBFE 0%, #FFFFFF 68%);
+    }
+    .hero-copy {
+        padding: 2.65rem 2.8rem 2.35rem 2.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-kicker {
+        color: var(--accent);
+        font-size: .78rem;
+        font-weight: 700;
+        letter-spacing: .11em;
+        text-transform: uppercase;
+        margin-bottom: .8rem;
+    }
+    .hero-heading {
+        color: var(--accent-dark);
+        font-size: 3.15rem;
+        font-weight: 760;
+        letter-spacing: -0.035em;
+        line-height: 1;
+        margin: 0;
+    }
+    .hero-name {
+        color: var(--muted);
+        font-size: 1.03rem;
+        margin-top: .55rem;
+    }
+    .hero-copy p {
+        color: #44546A;
+        font-size: 1.10rem;
+        line-height: 1.65;
+        max-width: 650px;
+        margin: 1.35rem 0 0 0;
+    }
+    .hero-visual {
+        position: relative;
+        min-height: 360px;
+        background:
+          radial-gradient(circle at 68% 28%, rgba(93,169,233,.22), transparent 27%),
+          radial-gradient(circle at 46% 72%, rgba(31,78,121,.14), transparent 25%),
+          linear-gradient(145deg, #EDF5FA 0%, #F9FCFE 100%);
+        overflow: hidden;
+    }
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(31,78,121,.28);
+        background: rgba(255,255,255,.82);
+        box-shadow: 0 10px 28px rgba(22,58,91,.08);
+    }
+    .orb.o1 { width: 76px; height: 76px; top: 50px; right: 72px; }
+    .orb.o2 { width: 44px; height: 44px; top: 142px; right: 138px; }
+    .orb.o3 { width: 58px; height: 58px; bottom: 62px; right: 48px; }
+    .orb.o4 { width: 34px; height: 34px; bottom: 116px; left: 56px; }
+    .bond {
+        position: absolute;
+        height: 3px;
+        background: rgba(31,78,121,.30);
+        transform-origin: left center;
+        border-radius: 4px;
+    }
+    .bond.b1 { width: 96px; top: 119px; right: 92px; transform: rotate(55deg); }
+    .bond.b2 { width: 115px; bottom: 118px; right: 93px; transform: rotate(-38deg); }
+    .bond.b3 { width: 88px; bottom: 100px; left: 75px; transform: rotate(18deg); }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin: 1.15rem 0 1.35rem 0;
+    }
+    .feature-card {
+        border: 1px solid #DFE7EF;
+        border-radius: 10px;
+        padding: 1.15rem 1.15rem 1.05rem 1.15rem;
+        background: #FFFFFF;
+        min-height: 135px;
+    }
+    .feature-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: #EEF5FA;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: .82rem;
+        margin-bottom: .8rem;
+        border: 1px solid #D8E6F0;
+    }
+    .feature-card strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: .94rem;
+        margin-bottom: .35rem;
+    }
+    .feature-card span {
+        display: block;
+        color: var(--muted);
+        font-size: .81rem;
+        line-height: 1.5;
+    }
+    .section-label {
+        color: var(--accent-dark);
+        font-size: .82rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin: .35rem 0 .65rem 0;
+    }
     .metric-row {
         display: flex;
         justify-content: center;
@@ -234,20 +356,20 @@ st.markdown(
         margin-top: 1.25rem;
     }
     .site-footer {
-        border-top: 1px solid #D8E3EC;
         margin-top: 2.2rem;
-        padding: 1rem 1.05rem;
-        background: var(--soft);
-        color: var(--muted);
+        padding: 1.25rem 1.35rem;
+        background: var(--accent-dark);
+        color: #D8E4EE;
         font-size: .80rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
         flex-wrap: wrap;
-        border-radius: 5px;
+        border-radius: 8px;
     }
+    .site-footer strong { color: #FFFFFF; }
     .site-footer a {
-        color: #4B5563 !important;
+        color: #E7EFF6 !important;
         text-decoration: none !important;
         margin-left: .85rem;
     }
@@ -257,6 +379,11 @@ st.markdown(
         .academic-nav { gap: .9rem; flex-wrap: wrap; }
         .metric-row { flex-wrap: wrap; }
         .metric-item { min-width: 50%; margin-bottom: .8rem; }
+        .hero-shell { grid-template-columns: 1fr; }
+        .hero-visual { min-height: 220px; }
+        .hero-copy { padding: 2rem 1.5rem; }
+        .hero-heading { font-size: 2.45rem; }
+        .feature-grid { grid-template-columns: 1fr 1fr; }
     }
     div[data-testid="stMetric"] {
         background: transparent;
@@ -486,49 +613,83 @@ st.markdown(
 
 if page == "home":
     st.markdown(
-        f"""
-        <div class="home-intro">
-          <div class="hero-brand">
-            <span class="chalmol-mark large" aria-hidden="true">
-              <span class="node s">S</span>
-              <span class="node se">Se</span>
-              <span class="node te">Te</span>
-            </span>
-            <div class="hero-title-wrap">
-              <h1>ChalMolDB</h1>
-              <div class="hero-subbrand">Chalcogen Molecular Database</div>
-            </div>
+        """
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <div class="hero-kicker">Curated molecular data · S / Se / Te</div>
+            <h1 class="hero-heading">ChalMolDB</h1>
+            <div class="hero-name">Chalcogen Molecular Database</div>
+            <p>
+              A curated molecular database for chalcogen-focused electronic property studies,
+              combining standardized identity, provenance and interpretable structural annotations.
+            </p>
           </div>
-          <p>
-            A curated molecular resource for chalcogen-focused electronic property studies.
-          </p>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb o1"></div>
+            <div class="orb o2"></div>
+            <div class="orb o3"></div>
+            <div class="orb o4"></div>
+            <div class="bond b1"></div>
+            <div class="bond b2"></div>
+            <div class="bond b3"></div>
+          </div>
         </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    left, c1, c2, c3, right = st.columns([.55, 1, 1, 1, .55])
+    with c1:
+        st.link_button("Explore database", "?page=database", type="primary", use_container_width=True)
+    with c2:
+        st.link_button("View statistics", "?page=statistics", use_container_width=True)
+    with c3:
+        st.link_button("Analyze molecules", "?page=analyze", use_container_width=True)
+
+    st.markdown(
+        """
+        <div class="section-label">What ChalMolDB provides</div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">DB</div>
+            <strong>Curated Molecular Records</strong>
+            <span>Standardized molecular identity, electronic properties and record-level provenance.</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">S/Se/Te</div>
+            <strong>Chalcogen-Aware Descriptors</strong>
+            <span>Interpretable annotations describing sulfur, selenium and tellurium environments.</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">SIM</div>
+            <strong>Similarity Search</strong>
+            <span>Structure-based exploratory comparison using molecular fingerprints.</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">CSV</div>
+            <strong>Export & Reuse</strong>
+            <span>Downloadable processed records, descriptor tables and reproducible analysis outputs.</span>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="section-label">Database at a glance</div>
         <div class="metric-row">
           <div class="metric-item"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
           <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
           <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">S/Se/Te records</span></div>
           <div class="metric-item"><span class="metric-number">272</span><span class="metric-label">External records</span></div>
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    left, c1, c2, c3, right = st.columns([1.15, 1, 1, 1, 1.15])
-    with c1:
-        st.link_button("Explore database", "?page=database", type="primary", use_container_width=True)
-    with c2:
-        st.link_button("Explore statistics", "?page=statistics", use_container_width=True)
-    with c3:
-        st.link_button("Analyze molecules", "?page=analyze", use_container_width=True)
-
-    st.markdown(
-        """
         <div class="quiet-note">
           Database v1 &nbsp;&middot;&nbsp; Structure standardization with RDKit
           &nbsp;&middot;&nbsp; Record-level provenance retained
         </div>
         <div class="site-footer">
-          <span>ChalMolDB · Chalcogen Molecular Database · v1</span>
+          <span><strong>ChalMolDB</strong> · Chalcogen Molecular Database · Database v1</span>
           <span>
             <a href="?page=documentation">Documentation</a>
             <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
