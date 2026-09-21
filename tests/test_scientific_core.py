@@ -4,6 +4,8 @@ import pandas as pd
 from descriptor_engine import (
     calculate_single_molecule_descriptors,
     process_molecular_dataset,
+    sanitize_project_name,
+    validate_input_dataframe,
 )
 
 
@@ -74,6 +76,29 @@ class ScientificCoreTests(unittest.TestCase):
         self.assertEqual(summary["Duplicate Molecules"], 2)
         duplicate_rows = valid_df[valid_df["Duplicate Flag"]]
         self.assertEqual(len(duplicate_rows), 2)
+
+    def test_validation_rejects_duplicate_molecule_ids(self):
+        df = pd.DataFrame({
+            "Molecule_ID": ["A", "A"],
+            "SMILES": ["c1ccsc1", "c1cc[se]c1"],
+        })
+        with self.assertRaisesRegex(ValueError, "must be unique"):
+            validate_input_dataframe(df)
+
+    def test_validation_rejects_missing_molecule_id(self):
+        df = pd.DataFrame({
+            "Molecule_ID": ["A", ""],
+            "SMILES": ["c1ccsc1", "c1cc[se]c1"],
+        })
+        with self.assertRaisesRegex(ValueError, "missing or empty"):
+            validate_input_dataframe(df)
+
+    def test_project_name_is_sanitized_for_output_files(self):
+        self.assertEqual(
+            sanitize_project_name("../../my project:01"),
+            "my_project_01",
+        )
+        self.assertEqual(sanitize_project_name(""), "chalcogen_project")
 
 
 if __name__ == "__main__":
