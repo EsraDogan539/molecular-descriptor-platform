@@ -102,7 +102,9 @@ def build_curated_database(input_df, valid_df):
 
 def add_database_export(input_df, results, project_name):
     database_df = build_curated_database(input_df, results["valid_df"])
-    database_file = f"{project_name}_curated_database.csv"
+    safe_project_name = results.get("project_name", str(project_name).strip() or "chalcogen_project")
+    output_dir = results.get("output_dir") or os.path.dirname(results["zip_file"]) or "."
+    database_file = os.path.join(output_dir, f"{safe_project_name}_curated_database.csv")
     database_df.to_csv(database_file, index=False)
 
     zip_file = results["zip_file"]
@@ -112,7 +114,7 @@ def add_database_export(input_df, results, project_name):
             mode="a",
             compression=zipfile.ZIP_DEFLATED,
         ) as zip_output:
-            zip_output.write(database_file, arcname=database_file)
+            zip_output.write(database_file, arcname=os.path.basename(database_file))
 
     results["database_df"] = database_df
     results["database_file"] = database_file
