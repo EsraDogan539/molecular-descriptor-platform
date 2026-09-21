@@ -488,67 +488,61 @@ def display_database_browser():
     if is_preview:
         st.info("A preview dataset is loaded in this build.")
 
-    browse_tab, stats_tab = st.tabs(["Browse", "Statistics"])
+    query = st.text_input(
+        "Search",
+        placeholder="Database ID, molecule/system, donor, acceptor, InChIKey or SMILES",
+    ).strip()
 
-    with browse_tab:
-        query = st.text_input(
-            "Search",
-            placeholder="Database ID, molecule/system, donor, acceptor, InChIKey or SMILES",
-        ).strip()
+    f1, f2, f3, f4 = st.columns(4)
 
-        f1, f2, f3, f4 = st.columns(4)
+    split_options = ["All"] + _safe_unique(df, "Split_Role")
+    scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
+    chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
 
-        split_options = ["All"] + _safe_unique(df, "Split_Role")
-        scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
-        chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
+    with f1:
+        split_value = st.selectbox(
+            "Collection",
+            split_options,
+            format_func=lambda value: "All" if value == "All" else _display_role(value),
+            key="browse_collection",
+        )
+    with f2:
+        scope_value = st.selectbox(
+            "Scope",
+            scope_options,
+            format_func=lambda value: "All" if value == "All" else _display_scope(value),
+            key="browse_scope",
+        )
+    with f3:
+        chalcogen_value = st.selectbox(
+            "Chalcogen",
+            chalcogen_options,
+            key="browse_chalcogen",
+        )
+    with f4:
+        eg_value = st.selectbox(
+            "Eg",
+            ["All", "Available", "Missing"],
+            key="browse_eg",
+        )
 
-        with f1:
-            split_value = st.selectbox(
-                "Collection",
-                split_options,
-                format_func=lambda value: "All" if value == "All" else _display_role(value),
-                key="browse_collection",
-            )
-        with f2:
-            scope_value = st.selectbox(
-                "Scope",
-                scope_options,
-                format_func=lambda value: "All" if value == "All" else _display_scope(value),
-                key="browse_scope",
-            )
-        with f3:
-            chalcogen_value = st.selectbox(
-                "Chalcogen",
-                chalcogen_options,
-                key="browse_chalcogen",
-            )
-        with f4:
-            eg_value = st.selectbox(
-                "Eg",
-                ["All", "Available", "Missing"],
-                key="browse_eg",
-            )
+    filtered = _apply_search(df.copy(), query)
 
-        filtered = _apply_search(df.copy(), query)
+    if split_value != "All" and "Split_Role" in filtered.columns:
+        filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
 
-        if split_value != "All" and "Split_Role" in filtered.columns:
-            filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
+    if scope_value != "All" and "Scope_Flag" in filtered.columns:
+        filtered = filtered[filtered["Scope_Flag"].astype(str) == scope_value]
 
-        if scope_value != "All" and "Scope_Flag" in filtered.columns:
-            filtered = filtered[filtered["Scope_Flag"].astype(str) == scope_value]
+    if chalcogen_value != "All" and "Chalcogen_Type" in filtered.columns:
+        filtered = filtered[filtered["Chalcogen_Type"].astype(str) == chalcogen_value]
 
-        if chalcogen_value != "All" and "Chalcogen_Type" in filtered.columns:
-            filtered = filtered[filtered["Chalcogen_Type"].astype(str) == chalcogen_value]
+    if eg_value == "Available" and "Eg_eV" in filtered.columns:
+        filtered = filtered[filtered["Eg_eV"].notna()]
+    elif eg_value == "Missing" and "Eg_eV" in filtered.columns:
+        filtered = filtered[filtered["Eg_eV"].isna()]
 
-        if eg_value == "Available" and "Eg_eV" in filtered.columns:
-            filtered = filtered[filtered["Eg_eV"].notna()]
-        elif eg_value == "Missing" and "Eg_eV" in filtered.columns:
-            filtered = filtered[filtered["Eg_eV"].isna()]
-
-        _render_results(filtered, is_preview)
-
-    with stats_tab:
-        _render_statistics(df)
+    _render_results(filtered, is_preview)
 
     with st.expander("Curation notes", expanded=False):
         st.markdown(
@@ -558,5 +552,41 @@ def display_database_browser():
             "- Repeated standardized structures are retained to preserve record-level provenance."
         )
 
+    if is_preview and source_path:
+        st.caption(f"Preview source: {source_path}")
+
+
+def display_database_statistics():
+    """Render the publication-database statistics as a standalone page."""
+    st.header("Statistics")
+    st.caption(
+        "Database composition, chalcogen coverage and electronic-property availability."
+    )
+
+    df, is_preview, source_path = load_curated_database()
+    if df.empty:
+        st.warning("The curated database file is not available in this build.")
+        return
+
+    total = len(df)
+    core = int(
+        (df["Scope_Flag"].astype(str) == "Core_SSeTe").sum()
+    ) if "Scope_Flag" in df.columns else 0
+    unique = int(
+        df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna().nunique()
+    ) if "InChIKey" in df.columns else 0
+    eg_count = int(df["Eg_eV"].notna().sum()) if "Eg_eV" in df.columns else 0
+
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Records", f"{total:,}")
+    m2.metric("Core S/Se/Te", f"{core:,}")
+    m3.metric("Unique structures", f"{unique:,}")
+    m4.metric("Eg values", f"{eg_count:,}")
+
+    st.divider()
+    _render_statistics(df)
+
+    if is_preview:
+        st.info("A preview dataset is loaded in this build.")
     if is_preview and source_path:
         st.caption(f"Preview source: {source_path}")
