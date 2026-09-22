@@ -5,7 +5,7 @@ Use this checklist before tagging v0.11.0.
 ## Release identity
 - [x] v0.11 development identity is active on the development branch.
 - [x] Set Scientific Core version to 0.11.0 only after final acceptance.
-- [ ] Confirm final release label is shown consistently in UI and manifests.
+- [x] Confirm final release label is shown consistently in UI and manifests.
 
 ## Publication-friendly statistics
 - [x] Release snapshot shows total records, unique standardized structures, core S/Se/Te records, Eg coverage, reference-backed records and repeated-structure groups.
@@ -50,11 +50,11 @@ Use this checklist before tagging v0.11.0.
 - [x] v0.9 regression smoke checks remain enabled.
 - [x] v0.10 release smoke checks remain enabled.
 - [x] v0.11 release smoke checks are implemented.
-- [ ] Full pytest suite passes.
-- [ ] Syntax checks pass.
-- [ ] Database release audit passes.
-- [ ] Performance baseline passes.
-- [ ] Final release-candidate CI is green.
+- [x] Full pytest suite passes.
+- [x] Syntax checks pass.
+- [x] Database release audit passes.
+- [x] Performance baseline passes.
+- [x] Final release-candidate CI is green.
 
 ## UI acceptance
 - [x] Statistics desktop review completed.
