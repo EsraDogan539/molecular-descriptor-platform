@@ -1007,7 +1007,7 @@ if page == "home":
     )
 
     st.markdown(
-        """
+        f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
           <div class="metric-item"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
