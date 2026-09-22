@@ -4,7 +4,7 @@ Use this checklist before tagging v0.11.0.
 
 ## Release identity
 - [x] v0.11 development identity is active on the development branch.
-- [ ] Set Scientific Core version to 0.11.0 only after final acceptance.
+- [x] Set Scientific Core version to 0.11.0 only after final acceptance.
 - [ ] Confirm final release label is shown consistently in UI and manifests.
 
 ## Publication-friendly statistics
@@ -58,15 +58,15 @@ Use this checklist before tagging v0.11.0.
 
 ## UI acceptance
 - [x] Statistics desktop review completed.
-- [ ] Advanced filters desktop review completed.
-- [ ] Query replay desktop review completed.
-- [ ] 400 px mobile review completed for Database filters and replay.
-- [ ] No page-level horizontal overflow.
+- [x] Advanced filters desktop review completed.
+- [x] Query replay desktop review completed.
+- [x] 400 px mobile review completed for Database filters and replay.
+- [x] No page-level horizontal overflow.
 
 ## Release preparation
-- [ ] Freeze v0.11 scientific behavior.
-- [ ] Set release metadata to v0.11.0.
-- [ ] Prepare final v0.11.0 release notes.
+- [x] Freeze v0.11 scientific behavior.
+- [x] Set release metadata to v0.11.0.
+- [x] Prepare final v0.11.0 release notes.
 - [ ] Confirm Streamlit deployment uses final release commit.
 - [ ] Tag v0.11.0.
 - [ ] Archive v0.11.0 and obtain DOI.
