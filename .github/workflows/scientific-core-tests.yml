@@ -5,6 +5,7 @@ on:
     branches:
       - v0.8-scientific-core
       - v0.9-development
+      - v0.10-development
   pull_request:
     branches:
       - main
@@ -36,7 +37,7 @@ jobs:
         run: |
           python -m py_compile release_metadata.py descriptor_engine.py descriptor_dictionary.py run_manifest.py database_metadata.py database_quality.py database_browser.py similarity_search.py scientific_panel.py app_v08.py
 
-      - name: Run v0.9 performance baseline
+      - name: Run performance baseline
         run: |
           python benchmarks/performance_baseline.py --rows 200
 
@@ -44,6 +45,6 @@ jobs:
         run: |
           python scripts/database_release_audit.py
 
-      - name: Run v0.9 release smoke checks
+      - name: Run release smoke checks
         run: |
           python scripts/v09_release_smoke.py
