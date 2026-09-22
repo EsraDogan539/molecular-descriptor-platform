@@ -14,6 +14,7 @@ from database_quality import (
     reference_mask,
 )
 from database_comparison import comparison_export, comparison_table
+from database_filters import apply_advanced_filters, numeric_bounds
 from provenance_export import (
     citation_ready_record,
     doi_url,
@@ -903,6 +904,115 @@ def display_database_browser():
             )
             reference_value = "All"
 
+    numeric_ranges = {}
+    minimum_counts = {}
+    categorical_filters = {}
+
+    with st.expander("Advanced filters", expanded=False):
+        st.caption(
+            "Optional property, composition and provenance filters. "
+            "Missing values do not match an actively enabled numeric filter."
+        )
+
+        st.markdown("**Electronic-property ranges**")
+        property_specs = [
+            ("HOMO", "HOMO_eV", "eV"),
+            ("LUMO", "LUMO_eV", "eV"),
+            ("Eg", "Eg_eV", "eV"),
+        ]
+        for label, column, unit in property_specs:
+            lower_bound, upper_bound = numeric_bounds(df, column)
+            if lower_bound is None:
+                continue
+            enabled = st.checkbox(
+                f"Filter {label}",
+                value=False,
+                key=f"advanced_enable_{column}",
+            )
+            r1, r2 = st.columns(2)
+            with r1:
+                lower = st.number_input(
+                    f"{label} minimum ({unit})",
+                    min_value=float(lower_bound),
+                    max_value=float(upper_bound),
+                    value=float(lower_bound),
+                    step=0.05,
+                    disabled=not enabled,
+                    key=f"advanced_min_{column}",
+                )
+            with r2:
+                upper = st.number_input(
+                    f"{label} maximum ({unit})",
+                    min_value=float(lower_bound),
+                    max_value=float(upper_bound),
+                    value=float(upper_bound),
+                    step=0.05,
+                    disabled=not enabled,
+                    key=f"advanced_max_{column}",
+                )
+            if enabled:
+                numeric_ranges[column] = (
+                    min(float(lower), float(upper)),
+                    max(float(lower), float(upper)),
+                )
+
+        st.markdown("**Minimum chalcogen counts**")
+        count_columns = [("S", "S_Count"), ("Se", "Se_Count"), ("Te", "Te_Count")]
+        cc1, cc2, cc3 = st.columns(3)
+        for container, (label, column) in zip((cc1, cc2, cc3), count_columns):
+            _, max_count = numeric_bounds(df, column)
+            if max_count is None:
+                continue
+            with container:
+                enabled = st.checkbox(
+                    f"Filter {label} count",
+                    value=False,
+                    key=f"advanced_enable_{column}",
+                )
+                minimum = st.number_input(
+                    f"Minimum {label}",
+                    min_value=0,
+                    max_value=max(0, int(max_count)),
+                    value=0,
+                    step=1,
+                    disabled=not enabled,
+                    key=f"advanced_min_{column}",
+                )
+                if enabled:
+                    minimum_counts[column] = int(minimum)
+
+        st.markdown("**Provenance and computational metadata**")
+        a1, a2 = st.columns(2)
+        with a1:
+            owner_value = st.selectbox(
+                "Dataset / owner",
+                ["All"] + _safe_unique(df, "Dataset_Owner"),
+                key="advanced_dataset_owner",
+            )
+            method_value = st.selectbox(
+                "Method",
+                ["All"] + _safe_unique(df, "Method"),
+                key="advanced_method",
+            )
+        with a2:
+            basis_value = st.selectbox(
+                "Basis set",
+                ["All"] + _safe_unique(df, "Basis_Set"),
+                key="advanced_basis",
+            )
+            curation_value = st.selectbox(
+                "Curation status",
+                ["All"] + _safe_unique(df, "Curation_Status"),
+                key="advanced_curation_status",
+            )
+
+        categorical_filters = {
+            "Dataset_Owner": owner_value,
+            "Method": method_value,
+            "Basis_Set": basis_value,
+            "Curation_Status": curation_value,
+        }
+
     filtered = _apply_search(df, query)
     standardized_query_smiles = None
 
@@ -923,6 +1033,13 @@ def display_database_browser():
     if reference_value != "All":
         ref_mask = reference_mask(filtered)
         filtered = filtered[ref_mask] if reference_value == "Available" else filtered[~ref_mask]
+
+    filtered = apply_advanced_filters(
+        filtered,
+        numeric_ranges=numeric_ranges,
+        minimum_counts=minimum_counts,
+        categorical_filters=categorical_filters,
+    )
 
     if structure_query:
         try:
@@ -959,6 +1076,9 @@ def display_database_browser():
             "chalcogen": chalcogen_value,
             "eg": eg_value,
             "reference_or_doi": reference_value,
+            "advanced_numeric_ranges": numeric_ranges,
+            "advanced_minimum_counts": minimum_counts,
+            "advanced_categorical": categorical_filters,
         },
         result_record_ids=(
             filtered["Record_ID"].tolist()
