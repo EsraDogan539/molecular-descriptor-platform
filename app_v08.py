@@ -1132,8 +1132,13 @@ if page == "documentation":
 
     st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
-        "The recommended citation and permanent dataset DOI will be added with the archived "
-        "publication release."
+        "ChalMolDB Database v1 · Scientific Core v0.11.0 is archived on Zenodo. "
+        "Version DOI: 10.5281/zenodo.22903550. "
+        "Concept DOI for all ChalMolDB versions: 10.5281/zenodo.22903549."
+    )
+    st.markdown(
+        "[Archived v0.11.0 release](https://doi.org/10.5281/zenodo.22903550) · "
+        "[All versions](https://doi.org/10.5281/zenodo.22903549)"
     )
     st.stop()
 
@@ -1179,6 +1184,7 @@ if page == "about":
         <div class="resource-links">
           <a href="?page=documentation">Documentation</a>
           <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
+          <a href="https://doi.org/10.5281/zenodo.22903550" target="_blank">Zenodo v0.11.0 DOI</a>
         </div>
         """,
         unsafe_allow_html=True,
