@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 from rdkit import Chem
 from rdkit.Chem import Draw
 
+from database_quality import (
+    available_reference_column,
+    coverage_table,
+    database_quality_summary,
+    reference_mask,
+)
+
 
 FULL_DATABASE_PATHS = [
     "data/chalcogen_database_v1_master.csv.gz",
@@ -187,9 +194,11 @@ def _render_record_detail(row):
               <div class="detail-subcard">
                 <div class="detail-section-title">Provenance</div>
                 <div class="compact-fields provenance-fields">
+                  <div><span>Dataset / owner</span><strong>{html.escape(str(_display_value(row.get("Dataset_Owner"))))}</strong></div>
                   <div><span>Donor / Acceptor</span><strong>{html.escape(donor_acceptor)}</strong></div>
                   <div><span>Method</span><strong>{html.escape(str(_display_method(row.get("Method"))))}</strong></div>
                   <div><span>Basis set</span><strong>{html.escape(str(_display_value(row.get("Basis_Set"))))}</strong></div>
+                  <div><span>Reference / DOI</span><strong>{html.escape(str(_display_value(row.get(available_reference_column(row.to_frame().T)) if available_reference_column(row.to_frame().T) else None)))}</strong></div>
                 </div>
               </div>
             </div>
@@ -197,8 +206,11 @@ def _render_record_detail(row):
             st.markdown(detail_html, unsafe_allow_html=True)
 
             with st.expander("Additional record metadata", expanded=False):
+                row_df = row.to_frame().T
+                reference_column = available_reference_column(row_df)
                 metadata = {
                     "Collection": collection,
+                    "Dataset / owner": row.get("Dataset_Owner"),
                     "Scope": _display_scope(row.get("Scope_Flag")),
                     "Unit type": row.get("Unit_Type"),
                     "Oligomer n": row.get("Oligomer_n"),
@@ -207,7 +219,7 @@ def _render_record_detail(row):
                     "Curation status": row.get("Curation_Status"),
                     "Repeated structure": row.get("Duplicate_Flag"),
                     "Source method description": row.get("Method"),
-                    "Reference": row.get("Reference"),
+                    "Reference / DOI": row.get(reference_column) if reference_column else None,
                 }
                 st.dataframe(
                     pd.DataFrame(
@@ -263,7 +275,9 @@ def _apply_search(df, query):
     searchable = [
         c for c in [
             "Record_ID", "Molecule_Name", "Donor_ID", "Acceptor_ID",
-            "System_Code", "InChIKey", "Canonical_SMILES"
+            "System_Code", "InChIKey", "Canonical_SMILES",
+            "Dataset_Owner", "Method", "Basis_Set", "Curation_Status",
+            "DOI_or_Reference", "DOI", "Reference", "Source_Reference", "Citation",
         ]
         if c in df.columns
     ]
@@ -618,10 +632,10 @@ def display_database_browser():
 
     query = st.text_input(
         "Search",
-        placeholder="Database ID, molecule/system, donor, acceptor, InChIKey or SMILES",
+        placeholder="ID, molecule/system, structure, method, source or reference",
     ).strip()
 
-    f1, f2, f3, f4 = st.columns(4)
+    f1, f2, f3, f4, f5 = st.columns(5)
 
     split_options = ["All"] + _safe_unique(df, "Split_Role")
     scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
@@ -653,6 +667,13 @@ def display_database_browser():
             ["All", "Available", "Missing"],
             key="browse_eg",
         )
+    with f5:
+        reference_value = st.selectbox(
+            "Reference",
+            ["All", "Available", "Missing"],
+            key="browse_reference",
+            help="Uses the first available reference/DOI field in this database build.",
+        )
 
     filtered = _apply_search(df, query)
 
@@ -669,6 +690,10 @@ def display_database_browser():
         filtered = filtered[filtered["Eg_eV"].notna()]
     elif eg_value == "Missing" and "Eg_eV" in filtered.columns:
         filtered = filtered[filtered["Eg_eV"].isna()]
+
+    if reference_value != "All":
+        ref_mask = reference_mask(filtered)
+        filtered = filtered[ref_mask] if reference_value == "Available" else filtered[~ref_mask]
 
     _render_results(filtered, is_preview)
 
@@ -716,6 +741,32 @@ def display_database_statistics():
     m2.metric("Core S/Se/Te", f"{core:,}")
     m3.metric("Unique structures", f"{unique:,}")
     m4.metric("Eg values", f"{eg_count:,}")
+
+    st.markdown('<div class="section-rule-title">Data coverage</div>', unsafe_allow_html=True)
+    coverage = coverage_table(df)
+    if not coverage.empty:
+        st.dataframe(
+            coverage,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Field": st.column_config.TextColumn(width="medium"),
+                "Available": st.column_config.NumberColumn(format="%d"),
+                "Missing": st.column_config.NumberColumn(format="%d"),
+                "Coverage (%)": st.column_config.ProgressColumn(
+                    min_value=0,
+                    max_value=100,
+                    format="%.1f%%",
+                ),
+            },
+        )
+
+    quality = database_quality_summary(df)
+    st.caption(
+        f"Quality checks · Missing record IDs: {quality['Missing Record IDs']:,} · "
+        f"Duplicate record IDs: {quality['Duplicate Record IDs']:,} · "
+        f"Repeated standardized structures retained: {quality['Repeated Standardized Structures']:,}"
+    )
 
     st.divider()
     _render_statistics(df)
