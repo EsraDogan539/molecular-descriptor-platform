@@ -336,34 +336,55 @@ def process_molecular_dataset(input_df):
     return valid_df, invalid_df, summary
 
 
-def fingerprint_to_list(fingerprint):
-    array = np.zeros(fingerprint.GetNumBits(), dtype=int)
+def fingerprint_to_array(fingerprint):
+    array = np.zeros(fingerprint.GetNumBits(), dtype=np.uint8)
     DataStructs.ConvertToNumpyArray(fingerprint, array)
-    return array.tolist()
+    return array
+
+
+def fingerprint_to_list(fingerprint):
+    return fingerprint_to_array(fingerprint).tolist()
+
+
+def calculate_fingerprint_vector(mol):
+    morgan_fp = morgan_generator.GetFingerprint(mol)
+    maccs_fp = MACCSkeys.GenMACCSKeys(mol)
+    morgan_bits = fingerprint_to_array(morgan_fp)
+    maccs_bits = fingerprint_to_array(maccs_fp)
+    return np.concatenate((morgan_bits, maccs_bits))
+
+
+def fingerprint_column_names(vector_length):
+    morgan_count = MORGAN_N_BITS
+    maccs_count = vector_length - morgan_count
+    return (
+        [f"Morgan_{index}" for index in range(morgan_count)]
+        + [f"MACCS_{index}" for index in range(maccs_count)]
+    )
 
 
 def calculate_fingerprint_columns(mol):
-    morgan_fp = morgan_generator.GetFingerprint(mol)
-    maccs_fp = MACCSkeys.GenMACCSKeys(mol)
+    vector = calculate_fingerprint_vector(mol)
+    columns = fingerprint_column_names(len(vector))
+    return dict(zip(columns, vector.tolist()))
 
-    morgan_bits = fingerprint_to_list(morgan_fp)
-    maccs_bits = fingerprint_to_list(maccs_fp)
 
-    fingerprint_columns = {}
+def _build_fingerprint_dataframe(metadata_rows, fingerprint_vectors):
+    if not metadata_rows:
+        return pd.DataFrame()
 
-    for index, value in enumerate(morgan_bits):
-        fingerprint_columns[f"Morgan_{index}"] = value
-
-    for index, value in enumerate(maccs_bits):
-        fingerprint_columns[f"MACCS_{index}"] = value
-
-    return fingerprint_columns
+    matrix = np.vstack(fingerprint_vectors)
+    bit_columns = fingerprint_column_names(matrix.shape[1])
+    bit_df = pd.DataFrame(matrix, columns=bit_columns, dtype=np.uint8)
+    metadata_df = pd.DataFrame(metadata_rows).reset_index(drop=True)
+    return pd.concat([metadata_df, bit_df], axis=1)
 
 
 def create_fingerprint_dataset(input_df):
     validate_input_dataframe(input_df)
 
-    fingerprint_results = []
+    metadata_rows = []
+    fingerprint_vectors = []
     invalid_results = []
 
     for _, row in input_df.iterrows():
@@ -389,16 +410,19 @@ def create_fingerprint_dataset(input_df):
             })
             continue
 
-        result = {
+        metadata_rows.append({
             "Molecule_ID": molecule_id,
             "Original SMILES": smiles,
             "Canonical SMILES": Chem.MolToSmiles(mol, canonical=True)
-        }
+        })
+        fingerprint_vectors.append(calculate_fingerprint_vector(mol))
 
-        result.update(calculate_fingerprint_columns(mol))
-        fingerprint_results.append(result)
+    fingerprint_df = _build_fingerprint_dataframe(
+        metadata_rows,
+        fingerprint_vectors,
+    )
+    return fingerprint_df, pd.DataFrame(invalid_results)
 
-    return pd.DataFrame(fingerprint_results), pd.DataFrame(invalid_results)
 
 def process_molecular_dataset_with_fingerprints(input_df):
     """Calculate descriptors and fingerprints from a single RDKit parse per row."""
@@ -406,7 +430,8 @@ def process_molecular_dataset_with_fingerprints(input_df):
 
     valid_results = []
     invalid_results = []
-    fingerprint_results = []
+    fingerprint_metadata = []
+    fingerprint_vectors = []
 
     for _, row in input_df.iterrows():
         molecule_id = row["Molecule_ID"]
@@ -445,17 +470,19 @@ def process_molecular_dataset_with_fingerprints(input_df):
         )
         valid_results.append(descriptor_result)
 
-        fingerprint_result = {
+        fingerprint_metadata.append({
             "Molecule_ID": molecule_id,
             "Original SMILES": smiles,
             "Canonical SMILES": descriptor_result["Canonical SMILES"],
-        }
-        fingerprint_result.update(calculate_fingerprint_columns(mol))
-        fingerprint_results.append(fingerprint_result)
+        })
+        fingerprint_vectors.append(calculate_fingerprint_vector(mol))
 
     valid_df = pd.DataFrame(valid_results)
     invalid_df = pd.DataFrame(invalid_results)
-    fingerprint_df = pd.DataFrame(fingerprint_results)
+    fingerprint_df = _build_fingerprint_dataframe(
+        fingerprint_metadata,
+        fingerprint_vectors,
+    )
 
     if not valid_df.empty:
         identity = valid_df["InChIKey"].fillna("").astype(str).str.strip()
