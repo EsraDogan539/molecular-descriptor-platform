@@ -17,6 +17,7 @@ from database_comparison import comparison_export, comparison_table
 from provenance_export import (
     citation_ready_record,
     doi_url,
+    extract_doi,
     record_reference_value,
 )
 from query_manifest import build_query_manifest, query_manifest_json
@@ -1000,13 +1001,13 @@ def display_database_browser():
 
 
 def display_database_statistics():
-    """Render the publication-database statistics as a standalone page."""
+    """Render a concise, publication-friendly overview of the current database release."""
     st.markdown(
         """
         <div class="page-intro">
           <div class="page-eyebrow">Database overview</div>
           <div class="page-title">Statistics</div>
-          <div class="page-description">Database composition, chalcogen coverage and electronic-property availability across the current ChalMolDB release.</div>
+          <div class="page-description">A concise snapshot of database size, molecular identity, chalcogen coverage, provenance and electronic-property availability.</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1021,18 +1022,54 @@ def display_database_statistics():
     core = int(
         (df["Scope_Flag"].astype(str) == "Core_SSeTe").sum()
     ) if "Scope_Flag" in df.columns else 0
-    unique = int(
-        df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna().nunique()
-    ) if "InChIKey" in df.columns else 0
-    eg_count = int(df["Eg_eV"].notna().sum()) if "Eg_eV" in df.columns else 0
 
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Records", f"{total:,}")
-    m2.metric("Core S/Se/Te", f"{core:,}")
-    m3.metric("Unique structures", f"{unique:,}")
-    m4.metric("Eg values", f"{eg_count:,}")
+    structure_ids = (
+        df["InChIKey"].dropna().astype(str).replace("", pd.NA).dropna()
+        if "InChIKey" in df.columns
+        else pd.Series(dtype="object")
+    )
+    unique = int(structure_ids.nunique())
+    repeated_groups = int((structure_ids.value_counts() > 1).sum())
 
-    st.markdown('<div class="section-rule-title">Data coverage</div>', unsafe_allow_html=True)
+    eg_count = int(
+        pd.to_numeric(df["Eg_eV"], errors="coerce").notna().sum()
+    ) if "Eg_eV" in df.columns else 0
+
+    reference_column = available_reference_column(df)
+    doi_count = 0
+    if reference_column:
+        doi_count = int(
+            df[reference_column]
+            .apply(lambda value: extract_doi(value) is not None)
+            .sum()
+        )
+
+    st.markdown(
+        '<div class="section-rule-title">Release snapshot</div>',
+        unsafe_allow_html=True,
+    )
+    k1, k2, k3 = st.columns(3)
+    k1.metric("Total records", f"{total:,}")
+    k2.metric("Unique standardized structures", f"{unique:,}")
+    k3.metric("Core S/Se/Te records", f"{core:,}")
+
+    k4, k5, k6 = st.columns(3)
+    k4.metric("Records with Eg", f"{eg_count:,}")
+    k5.metric("DOI-backed records", f"{doi_count:,}")
+    k6.metric("Repeated structure groups", f"{repeated_groups:,}")
+
+    st.caption(
+        "Unique-structure and repeated-group counts use standardized InChIKey identity where an exact "
+        "structure is available. DOI-backed records require a DOI that can be parsed from the stored "
+        "reference field."
+    )
+
+    _render_statistics(df)
+
+    st.markdown(
+        '<div class="section-rule-title">Data availability</div>',
+        unsafe_allow_html=True,
+    )
     coverage = coverage_table(df)
     if not coverage.empty:
         st.dataframe(
@@ -1052,14 +1089,17 @@ def display_database_statistics():
         )
 
     quality = database_quality_summary(df)
-    st.caption(
-        f"Quality checks · Missing record IDs: {quality['Missing Record IDs']:,} · "
-        f"Duplicate record IDs: {quality['Duplicate Record IDs']:,} · "
-        f"Records in repeated standardized structures: {quality['Repeated Standardized Structures']:,}"
-    )
-
-    st.divider()
-    _render_statistics(df)
+    with st.expander("Quality-control summary", expanded=False):
+        st.write(
+            f"Missing record IDs: {quality['Missing Record IDs']:,} · "
+            f"Duplicate record IDs: {quality['Duplicate Record IDs']:,} · "
+            f"Records in repeated standardized structures: "
+            f"{quality['Repeated Standardized Structures']:,}"
+        )
+        st.caption(
+            "Repeated standardized structures are retained intentionally to preserve "
+            "record-level provenance."
+        )
 
     if is_preview:
         st.info("A preview dataset is loaded in this build.")
