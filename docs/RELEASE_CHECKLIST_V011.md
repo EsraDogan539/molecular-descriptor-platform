@@ -44,7 +44,7 @@ Use this checklist before tagging v0.11.0.
 - [x] Advanced filtering is documented.
 - [x] Query replay is documented.
 - [x] Public provenance wording is aligned with neutral collection labels.
-- [ ] Add permanent DOI and recommended citation after archival release.
+- [x] Add permanent DOI and recommended citation after archival release.
 
 ## Automated validation
 - [x] v0.9 regression smoke checks remain enabled.
@@ -67,7 +67,7 @@ Use this checklist before tagging v0.11.0.
 - [x] Freeze v0.11 scientific behavior.
 - [x] Set release metadata to v0.11.0.
 - [x] Prepare final v0.11.0 release notes.
-- [ ] Confirm Streamlit deployment uses final release commit.
-- [ ] Tag v0.11.0.
-- [ ] Archive v0.11.0 and obtain DOI.
-- [ ] Add DOI/citation metadata to platform and manuscript.
+- [x] Confirm Streamlit deployment uses final release commit.
+- [x] Tag v0.11.0.
+- [x] Archive v0.11.0 and obtain DOI.
+- [x] Add DOI/citation metadata to platform; manuscript synchronization prepared.
