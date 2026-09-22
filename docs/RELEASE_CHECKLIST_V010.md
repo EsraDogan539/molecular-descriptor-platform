@@ -60,10 +60,10 @@ Use this checklist before tagging v0.10.0.
 - [x] Citation-ready export desktop review.
 - [x] Query manifest desktop review.
 - [ ] Documentation desktop review.
-- [ ] 400 px mobile review for Database structure search.
-- [ ] 400 px mobile review for record comparison.
-- [ ] 400 px mobile review for query reproducibility.
-- [ ] No page-level horizontal overflow.
+- [x] 400 px mobile review for Database structure search.
+- [x] 400 px mobile review for record comparison.
+- [x] 400 px mobile review for query reproducibility.
+- [x] No page-level horizontal overflow.
 
 ## Release preparation
 - [ ] Update v0.10 roadmap completion state.
