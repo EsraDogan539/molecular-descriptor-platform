@@ -136,7 +136,9 @@ def database_quality_summary(df):
     duplicate_record_ids = 0
     if "Record_ID" in df.columns:
         ids = df["Record_ID"].fillna("").astype(str).str.strip()
-        duplicate_record_ids = int(ids.ne("") & ids.duplicated(keep=False).sum())
+        duplicate_record_ids = int(
+            (ids.ne("") & ids.duplicated(keep=False)).sum()
+        )
 
     missing_record_ids = 0
     if "Record_ID" in df.columns:
