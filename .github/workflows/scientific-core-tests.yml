@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - v0.8-scientific-core
+      - v0.9-development
   pull_request:
     branches:
       - main
