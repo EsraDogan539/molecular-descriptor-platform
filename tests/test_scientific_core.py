@@ -1,4 +1,5 @@
 import unittest
+import zipfile
 import pandas as pd
 
 from descriptor_engine import (
@@ -8,6 +9,7 @@ from descriptor_engine import (
     create_fingerprint_dataset,
     sanitize_project_name,
     validate_input_dataframe,
+    run_molecular_descriptor_platform,
 )
 
 from descriptor_dictionary import (
@@ -165,6 +167,31 @@ class ScientificCoreTests(unittest.TestCase):
         }
         scientific_outputs = set(result) - excluded
         self.assertTrue(scientific_outputs.issubset(documented))
+
+    def test_analysis_export_records_descriptor_dictionary_version(self):
+        df = pd.DataFrame({
+            "Molecule_ID": ["S1"],
+            "SMILES": ["c1ccsc1"],
+        })
+        results = run_molecular_descriptor_platform(
+            df,
+            project_name="dictionary_test",
+        )
+
+        self.assertEqual(
+            results["descriptor_dictionary_version"],
+            DESCRIPTOR_DICTIONARY_VERSION,
+        )
+        self.assertEqual(
+            results["summary_df"].iloc[0]["Descriptor Dictionary Version"],
+            DESCRIPTOR_DICTIONARY_VERSION,
+        )
+
+        with zipfile.ZipFile(results["zip_file"]) as archive:
+            names = archive.namelist()
+        self.assertTrue(
+            any("descriptor_dictionary_v0.9.0.csv" in name for name in names)
+        )
 
 
 if __name__ == "__main__":
