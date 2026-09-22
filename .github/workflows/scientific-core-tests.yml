@@ -6,6 +6,7 @@ on:
       - v0.8-scientific-core
       - v0.9-development
       - v0.10-development
+      - v0.11-development
   pull_request:
     branches:
       - main
