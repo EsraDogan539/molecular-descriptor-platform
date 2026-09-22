@@ -67,6 +67,6 @@ Use this checklist before tagging v0.10.0.
 
 ## Release preparation
 - [ ] Update v0.10 roadmap completion state.
-- [ ] Prepare v0.10.0 release notes.
+- [x] Prepare v0.10.0 release notes.
 - [ ] Confirm Streamlit deployment uses final v0.10 release commit.
 - [ ] Tag v0.10.0 only after final UI/mobile review.
