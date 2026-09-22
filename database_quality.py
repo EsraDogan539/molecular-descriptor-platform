@@ -171,7 +171,7 @@ def coverage_table(df):
     if reference_column is not None:
         available = int(reference_mask(df).sum())
         rows.append({
-            "Field": "Reference / DOI",
+            "Field": "Reference / source",
             "Available": available,
             "Missing": total - available,
             "Coverage (%)": round(100 * available / total, 1) if total else 0.0,
