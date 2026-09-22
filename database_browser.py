@@ -14,6 +14,11 @@ from database_quality import (
     reference_mask,
 )
 from database_comparison import comparison_export, comparison_table
+from provenance_export import (
+    citation_ready_record,
+    doi_url,
+    record_reference_value,
+)
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -131,6 +136,8 @@ def _render_record_detail(row):
     collection = _display_collection(row)
     chalcogen = _display_value(row.get("Chalcogen_Type"))
     smiles = row.get("Canonical_SMILES")
+    reference_column, reference_value = record_reference_value(row)
+    reference_link = doi_url(reference_value)
 
     st.markdown(
         f"""
@@ -187,6 +194,15 @@ def _render_record_detail(row):
                 ]
             ) or "—"
 
+            reference_text = _display_value(reference_value)
+            if reference_link:
+                reference_html = (
+                    f'<a href="{html.escape(reference_link)}" target="_blank" '
+                    f'rel="noopener noreferrer">{html.escape(reference_text)}</a>'
+                )
+            else:
+                reference_html = html.escape(str(reference_text))
+
             detail_html = f"""
             <div class="detail-bottom-grid">
               <div class="detail-subcard">
@@ -205,7 +221,7 @@ def _render_record_detail(row):
                   <div><span>Donor / Acceptor</span><strong>{html.escape(donor_acceptor)}</strong></div>
                   <div><span>Method</span><strong>{html.escape(str(_display_method(row.get("Method"))))}</strong></div>
                   <div><span>Basis set</span><strong>{html.escape(str(_display_value(row.get("Basis_Set"))))}</strong></div>
-                  <div><span>Reference / DOI</span><strong>{html.escape(str(_display_value(row.get(available_reference_column(row.to_frame().T)) if available_reference_column(row.to_frame().T) else None)))}</strong></div>
+                  <div><span>Reference / DOI</span><strong>{reference_html}</strong></div>
                 </div>
               </div>
             </div>
@@ -235,6 +251,18 @@ def _render_record_detail(row):
                     use_container_width=True,
                     hide_index=True,
                 )
+
+            citation_df = citation_ready_record(
+                row=row,
+                public_record_id=record_id,
+            )
+            st.download_button(
+                "Download citation-ready record CSV",
+                citation_df.to_csv(index=False).encode("utf-8"),
+                f"{record_id}_citation_record.csv",
+                "text/csv",
+                key=f"citation_record_{record_id}",
+            )
 
 
 def _public_table(df):
