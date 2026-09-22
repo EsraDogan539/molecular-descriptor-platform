@@ -36,7 +36,7 @@ class DatabaseQualityTests(unittest.TestCase):
         self.assertEqual(int(coverage.loc["Eg", "Available"]), 3)
         self.assertEqual(int(coverage.loc["Eg", "Missing"]), 1)
         self.assertEqual(int(coverage.loc["Standardized structure", "Available"]), 2)
-        self.assertEqual(int(coverage.loc["Reference / DOI", "Available"]), 2)
+        self.assertEqual(int(coverage.loc["Reference / source", "Available"]), 2)
 
     def test_quality_summary_flags_record_id_duplicates(self):
         summary = database_quality_summary(self.df)
