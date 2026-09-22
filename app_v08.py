@@ -1051,6 +1051,14 @@ if page == "documentation":
         "values and SMILES/InChIKey consistency before release."
     )
 
+    st.markdown('<div class="section-rule-title">Reproducibility manifest</div>', unsafe_allow_html=True)
+    st.write(
+        "Every complete analysis package includes a machine-readable run_manifest.json file. "
+        "It records the normalized project name, UTC creation time, input row/column structure, "
+        "a SHA-256 checksum of the submitted table, analysis counts, Descriptor Dictionary version, "
+        "Morgan/MACCS fingerprint settings, software versions and the files included in the package."
+    )
+
     st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
     st.write(
         "Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, "
@@ -1374,7 +1382,10 @@ try:
                 r3c1, r3c2 = st.columns([3, 1])
                 with r3c1:
                     st.markdown("**Complete package**")
-                    st.caption("Processed records, descriptors, fingerprints and run summary.")
+                    st.caption(
+                        "Processed records, descriptors, fingerprints, curated metadata, "
+                        "descriptor dictionary and reproducibility manifest."
+                    )
                 with r3c2:
                     st.download_button(
                         "Download ZIP",
