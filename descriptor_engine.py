@@ -202,32 +202,7 @@ def calculate_chalcogen_aware_descriptors(mol):
     }
 
 
-def calculate_single_molecule_descriptors(molecule_id, smiles):
-    if pd.isna(smiles):
-        return None, {
-            "Molecule_ID": molecule_id,
-            "SMILES": "",
-            "Status": "Missing SMILES"
-        }
-
-    smiles = str(smiles).strip()
-
-    if not smiles:
-        return None, {
-            "Molecule_ID": molecule_id,
-            "SMILES": "",
-            "Status": "Empty SMILES"
-        }
-
-    mol = Chem.MolFromSmiles(smiles)
-
-    if mol is None:
-        return None, {
-            "Molecule_ID": molecule_id,
-            "SMILES": smiles,
-            "Status": "Invalid SMILES"
-        }
-
+def _descriptor_result_from_mol(molecule_id, smiles, mol):
     atom_counts = count_selected_atoms(mol)
     target_chalcogen_count = (
         atom_counts["Sulfur Count"]
@@ -244,7 +219,7 @@ def calculate_single_molecule_descriptors(molecule_id, smiles):
         inchi = ""
         inchikey = ""
 
-    result = {
+    return {
         "Molecule_ID": molecule_id,
         "Original SMILES": smiles,
         "Canonical SMILES": canonical_smiles,
@@ -271,14 +246,41 @@ def calculate_single_molecule_descriptors(molecule_id, smiles):
         **atom_counts,
         "Chalcogen Type": classify_chalcogen_type(atom_counts),
         "Target Chalcogen Count": target_chalcogen_count,
-                "Contains S": int(atom_counts["Sulfur Count"] > 0),
+        "Contains S": int(atom_counts["Sulfur Count"] > 0),
         "Contains Se": int(atom_counts["Selenium Count"] > 0),
         "Contains Te": int(atom_counts["Tellurium Count"] > 0),
         **calculate_chalcogen_aware_descriptors(mol),
         "Status": "Valid"
     }
 
-    return result, None
+
+def calculate_single_molecule_descriptors(molecule_id, smiles):
+    if pd.isna(smiles):
+        return None, {
+            "Molecule_ID": molecule_id,
+            "SMILES": "",
+            "Status": "Missing SMILES"
+        }
+
+    smiles = str(smiles).strip()
+
+    if not smiles:
+        return None, {
+            "Molecule_ID": molecule_id,
+            "SMILES": "",
+            "Status": "Empty SMILES"
+        }
+
+    mol = Chem.MolFromSmiles(smiles)
+
+    if mol is None:
+        return None, {
+            "Molecule_ID": molecule_id,
+            "SMILES": smiles,
+            "Status": "Invalid SMILES"
+        }
+
+    return _descriptor_result_from_mol(molecule_id, smiles, mol), None
 
 
 def process_molecular_dataset(input_df):
@@ -398,6 +400,91 @@ def create_fingerprint_dataset(input_df):
 
     return pd.DataFrame(fingerprint_results), pd.DataFrame(invalid_results)
 
+def process_molecular_dataset_with_fingerprints(input_df):
+    """Calculate descriptors and fingerprints from a single RDKit parse per row."""
+    validate_input_dataframe(input_df)
+
+    valid_results = []
+    invalid_results = []
+    fingerprint_results = []
+
+    for _, row in input_df.iterrows():
+        molecule_id = row["Molecule_ID"]
+        smiles = row["SMILES"]
+
+        if pd.isna(smiles):
+            invalid_results.append({
+                "Molecule_ID": molecule_id,
+                "SMILES": "",
+                "Status": "Missing SMILES"
+            })
+            continue
+
+        smiles = str(smiles).strip()
+        if not smiles:
+            invalid_results.append({
+                "Molecule_ID": molecule_id,
+                "SMILES": "",
+                "Status": "Empty SMILES"
+            })
+            continue
+
+        mol = Chem.MolFromSmiles(smiles)
+        if mol is None:
+            invalid_results.append({
+                "Molecule_ID": molecule_id,
+                "SMILES": smiles,
+                "Status": "Invalid SMILES"
+            })
+            continue
+
+        descriptor_result = _descriptor_result_from_mol(
+            molecule_id=molecule_id,
+            smiles=smiles,
+            mol=mol,
+        )
+        valid_results.append(descriptor_result)
+
+        fingerprint_result = {
+            "Molecule_ID": molecule_id,
+            "Original SMILES": smiles,
+            "Canonical SMILES": descriptor_result["Canonical SMILES"],
+        }
+        fingerprint_result.update(calculate_fingerprint_columns(mol))
+        fingerprint_results.append(fingerprint_result)
+
+    valid_df = pd.DataFrame(valid_results)
+    invalid_df = pd.DataFrame(invalid_results)
+    fingerprint_df = pd.DataFrame(fingerprint_results)
+
+    if not valid_df.empty:
+        identity = valid_df["InChIKey"].fillna("").astype(str).str.strip()
+        fallback = valid_df["Canonical SMILES"].fillna("").astype(str)
+        valid_df["_Structure_Identity"] = identity.where(identity.ne(""), fallback)
+        duplicate_mask = valid_df.duplicated(
+            subset=["_Structure_Identity"],
+            keep=False,
+        )
+        valid_df["Duplicate Flag"] = duplicate_mask.astype(bool)
+        valid_df = valid_df.drop(columns=["_Structure_Identity"])
+
+    total_records = len(input_df)
+    summary = {
+        "Total Records": total_records,
+        "Valid Molecules": len(valid_df),
+        "Invalid Molecules": len(invalid_df),
+        "Duplicate Molecules": int(
+            valid_df["Duplicate Flag"].sum()
+        ) if not valid_df.empty else 0,
+        "Success Rate (%)": round(
+            100 * len(valid_df) / total_records,
+            2,
+        ) if total_records else 0,
+    }
+
+    return valid_df, invalid_df, fingerprint_df, summary
+
+
 
 def run_molecular_descriptor_platform(
     input_df,
@@ -416,8 +503,9 @@ def run_molecular_descriptor_platform(
         .str.strip()
     )
 
-    valid_df, invalid_df, summary = process_molecular_dataset(clean_input_df)
-    fingerprint_df, _ = create_fingerprint_dataset(clean_input_df)
+    valid_df, invalid_df, fingerprint_df, summary = (
+        process_molecular_dataset_with_fingerprints(clean_input_df)
+    )
     summary_df = pd.DataFrame([summary])
 
     descriptor_file = os.path.join(output_dir, f"{safe_project_name}_descriptors.csv")
