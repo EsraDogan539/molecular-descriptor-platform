@@ -4,6 +4,7 @@ import pandas as pd
 
 from database_quality import (
     available_reference_column,
+    classify_numeric_measurement,
     coverage_table,
     database_quality_summary,
     provenance_label,
@@ -52,6 +53,22 @@ class DatabaseQualityTests(unittest.TestCase):
         no_ref = self.df.drop(columns=["Reference"])
         self.assertIsNone(available_reference_column(no_ref))
         self.assertFalse(reference_mask(no_ref).any())
+
+    def test_multi_valued_experimental_measurements_are_preserved(self):
+        self.assertEqual(classify_numeric_measurement("1.80; 1.50"), "multi-valued")
+        self.assertEqual(classify_numeric_measurement("1.46; 0.83"), "multi-valued")
+        self.assertEqual(classify_numeric_measurement("2.10"), "scalar")
+        self.assertEqual(classify_numeric_measurement("reported"), "non-numeric")
+
+        df = pd.DataFrame({
+            "Experimental_Eg_eV": ["1.80; 1.50", "2.10", None, "1.46; 0.83"],
+        })
+        coverage = coverage_table(df).set_index("Field")
+        self.assertEqual(int(coverage.loc["Experimental Eg", "Available"]), 3)
+        self.assertEqual(
+            int(coverage.loc["Experimental Eg (multi-valued records)", "Available"]),
+            2,
+        )
 
 
 if __name__ == "__main__":
