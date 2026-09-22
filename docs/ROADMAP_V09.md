@@ -11,7 +11,7 @@ ChalMolDB v0.9 builds on the stable v0.8 Scientific Core release. The goal is to
 - Maintain responsive behavior and clear error states.
 - Add tests for every new data-processing rule.
 
-## 1. Performance and scalability
+## 1. Performance and scalability — completed
 
 - Profile database loading, filtering, descriptor generation, structure rendering, and similarity search.
 - Cache stable curated-database transformations where safe.
@@ -25,7 +25,7 @@ ChalMolDB v0.9 builds on the stable v0.8 Scientific Core release. The goal is to
 - Repeated navigation does not trigger avoidable expensive recomputation.
 - Analysis performance is measured and documented.
 
-## 2. Descriptor experience
+## 2. Descriptor experience — completed
 
 - Add an in-app descriptor dictionary linked to the versioned scientific definitions.
 - Improve descriptor grouping and discoverability.
@@ -36,6 +36,16 @@ ChalMolDB v0.9 builds on the stable v0.8 Scientific Core release. The goal is to
 ### Exit criteria
 - Every exposed descriptor has a visible definition and unit where applicable.
 - UI terminology stays synchronized with the descriptor dictionary.
+
+### Progress note
+
+Implemented in the development branch:
+- CI performance baseline and documented benchmark history.
+- Single-pass RDKit descriptor/fingerprint processing and vectorized fingerprint export.
+- Versioned Descriptor Dictionary v0.9.0 exposed in Documentation and Analyze.
+- Descriptor dictionary version retained in analysis ZIP exports.
+- Provenance-aware database search, conditional reference/DOI filtering and field-level coverage reporting.
+- Automated database release audit for record IDs, populated SMILES, numeric property integrity and structure identity consistency.
 
 ## 3. Similarity and molecular comparison
 
@@ -49,7 +59,7 @@ ChalMolDB v0.9 builds on the stable v0.8 Scientific Core release. The goal is to
 - Similarity results clearly state method and threshold.
 - Users can inspect why two records are similar or different without leaving the workflow.
 
-## 4. Database quality and provenance
+## 4. Database quality and provenance — in progress
 
 - Strengthen provenance visibility at record level.
 - Improve DOI/reference discovery and filtering.
