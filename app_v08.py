@@ -405,6 +405,51 @@ st.markdown(
         text-transform: uppercase;
         margin: .35rem 0 .65rem 0;
     }
+    .about-intro {
+        color: var(--ink);
+        font-size: .96rem;
+        line-height: 1.65;
+        max-width: 980px;
+        margin: .2rem 0 1rem 0;
+    }
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin: .5rem 0 1.35rem 0;
+    }
+    .about-card {
+        border: 1px solid #DFE7EF;
+        border-radius: 10px;
+        padding: 1rem 1.1rem;
+        background: #FFFFFF;
+        min-height: 150px;
+    }
+    .about-card strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: .96rem;
+        margin-bottom: .38rem;
+    }
+    .about-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: .82rem;
+        line-height: 1.55;
+    }
+    .citation-box {
+        border-left: 3px solid var(--accent);
+        background: #F7FAFC;
+        padding: .9rem 1rem;
+        margin: .25rem 0 1.4rem 0;
+        border-radius: 0 8px 8px 0;
+        color: var(--muted);
+        font-size: .82rem;
+        line-height: 1.55;
+    }
+    .citation-box strong {
+        color: var(--accent-dark);
+    }
     .metric-row {
         display: flex;
         justify-content: center;
@@ -897,6 +942,41 @@ if page == "home":
     with c3:
         if st.button("Analyze molecules", use_container_width=True, key="home_analyze_molecules"):
             _navigate_home("analyze")
+
+    st.markdown(
+        """
+        <div class="section-label">About ChalMolDB</div>
+        <div class="about-intro">
+          <strong>ChalMolDB</strong> is a curated research platform for sulfur-, selenium- and tellurium-containing molecular systems.
+          It brings standardized molecular identity, electronic-property data, interpretable chalcogen-aware descriptors,
+          provenance-aware record inspection and reproducible query workflows into one interface.
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <strong>What is ChalMolDB?</strong>
+            <p>A searchable, structure-aware molecular database designed for systematic exploration of chalcogen-focused molecular data.</p>
+          </div>
+          <div class="about-card">
+            <strong>Who is it for?</strong>
+            <p>Researchers in computational chemistry, cheminformatics, organic electronics and materials informatics who need to find, compare and interpret S/Se/Te-containing molecules.</p>
+          </div>
+          <div class="about-card">
+            <strong>Where does the data come from?</strong>
+            <p>Curated molecular records are retained with record-level provenance. Standardized structures, electronic properties and descriptor layers are handled within the scientific core while source records remain traceable.</p>
+          </div>
+          <div class="about-card">
+            <strong>Why is it useful?</strong>
+            <p>It helps users search molecular motifs, compare related structures, filter HOMO/LUMO/Eg values, inspect provenance and reproduce the same query later through exportable query manifests.</p>
+          </div>
+        </div>
+        <div class="citation-box">
+          <strong>How to cite ChalMolDB</strong><br>
+          Current archived release: Database v1 · Scientific Core v0.11.0<br>
+          Version DOI: 10.5281/zenodo.22903550 · Concept DOI: 10.5281/zenodo.22903549
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         """
