@@ -16,6 +16,7 @@ from descriptor_engine import (
     process_molecular_dataset_with_fingerprints,
 )
 from similarity_search import find_similar_molecules
+from structure_search import structure_search
 
 
 DATABASE_PATH = "data/chalcogen_database_v1_master.csv.gz"
@@ -69,6 +70,46 @@ def main():
         lambda: _public_table(database_df),
     )
 
+    benchmark_smiles = "c1ccsc1"
+    _, exact_structure_seconds = timed(
+        "Database exact structure search",
+        lambda: structure_search(
+            database_df,
+            query_smiles=benchmark_smiles,
+            mode="Exact",
+        ),
+    )
+    _, substructure_seconds = timed(
+        "Database substructure search",
+        lambda: structure_search(
+            database_df,
+            query_smiles=benchmark_smiles,
+            mode="Substructure",
+        ),
+    )
+
+    similarity_query = None
+    if "Canonical_SMILES" in database_df.columns:
+        available_smiles = database_df["Canonical_SMILES"].dropna().astype(str)
+        available_smiles = available_smiles[available_smiles.str.strip().ne("")]
+        if not available_smiles.empty:
+            similarity_query = available_smiles.iloc[0]
+
+    if similarity_query:
+        _, structure_similarity_seconds = timed(
+            "Database structure similarity search",
+            lambda: structure_search(
+                database_df,
+                query_smiles=similarity_query,
+                mode="Similarity",
+                minimum_similarity=0.40,
+                top_n=50,
+            ),
+        )
+    else:
+        structure_similarity_seconds = 0.0
+        print("Database structure similarity search: skipped")
+
     analysis_df = build_analysis_frame(args.rows)
 
     processed, descriptor_seconds = timed(
@@ -114,6 +155,9 @@ def main():
         improvement = 100 * (separate_total - combined_seconds) / separate_total
         print(f"Combined pipeline improvement: {improvement:.1f}%")
     print(f"Similarity total: {similarity_seconds:.4f} s")
+    print(f"Database exact structure search total: {exact_structure_seconds:.4f} s")
+    print(f"Database substructure search total: {substructure_seconds:.4f} s")
+    print(f"Database structure similarity search total: {structure_similarity_seconds:.4f} s")
 
 
 if __name__ == "__main__":
