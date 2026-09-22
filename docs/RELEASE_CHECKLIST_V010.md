@@ -43,7 +43,7 @@ Use this checklist before tagging v0.10.0.
 - [x] Exact structure search is benchmarked.
 - [x] Substructure search is benchmarked.
 - [x] Database structure-similarity search is benchmarked.
-- [ ] Record final v0.10 CI benchmark timings in documentation.
+- [x] Record final v0.10 CI benchmark timings in documentation.
 
 ## Automated validation
 - [x] Full pytest suite passes on v0.10 development branch.
