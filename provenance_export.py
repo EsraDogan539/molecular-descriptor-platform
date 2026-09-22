@@ -6,6 +6,7 @@ import pandas as pd
 
 from database_quality import available_reference_column
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
+from public_labels import public_collection_label
 
 
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
@@ -63,7 +64,7 @@ def citation_ready_record(
         ("Database record ID", public_record_id),
         ("Database version", DATABASE_VERSION),
         ("Scientific core version", SCIENTIFIC_CORE_VERSION),
-        ("Dataset / owner", row.get("Dataset_Owner")),
+        ("Collection source", public_collection_label(row.get("Split_Role"), row.get("Dataset_Owner"))),
         ("Collection role", row.get("Split_Role")),
         ("Scope", row.get("Scope_Flag")),
         ("Molecule / system", row.get("Molecule_Name") or row.get("System_Code")),
