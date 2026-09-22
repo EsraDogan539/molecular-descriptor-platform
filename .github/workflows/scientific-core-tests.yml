@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m pytest -q tests
 
-      - name: Syntax-check v0.8 application files
+      - name: Syntax-check application files
         run: |
           python -m py_compile descriptor_engine.py descriptor_dictionary.py database_metadata.py database_quality.py database_browser.py similarity_search.py scientific_panel.py app_v08.py
 
