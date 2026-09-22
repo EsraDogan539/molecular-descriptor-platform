@@ -945,7 +945,7 @@ if page == "database":
     display_database_browser()
     st.divider()
     st.caption(
-        "ChalMolDB · Database v1 · Scientific Core v0.8 · "
+        "ChalMolDB · Database v1 · Scientific Core v0.9 · "
         "Curated records are read-only in the public browser."
     )
     st.stop()
@@ -1115,7 +1115,7 @@ if page == "about":
     st.markdown(
         """
         <div class="release-card">
-          <strong>Database v1 · Scientific Core v0.8</strong>
+          <strong>Database v1 · Scientific Core v0.9</strong>
           <span>3,360 records · 2,983 unique standardized development structures</span>
         </div>
         """,
@@ -1412,5 +1412,5 @@ except Exception as error:
 
 st.divider()
 st.caption(
-    "ChalMolDB · Database v1 · Scientific Core v0.8"
+    "ChalMolDB · Database v1 · Scientific Core v0.9"
 )
