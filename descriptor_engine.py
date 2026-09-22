@@ -13,6 +13,11 @@ from rdkit.Chem import (
     MACCSkeys
 )
 
+from descriptor_dictionary import (
+    DESCRIPTOR_DICTIONARY_VERSION,
+    descriptor_dictionary_dataframe,
+)
+
 RDLogger.DisableLog("rdApp.error")
 
 
@@ -533,24 +538,31 @@ def run_molecular_descriptor_platform(
     valid_df, invalid_df, fingerprint_df, summary = (
         process_molecular_dataset_with_fingerprints(clean_input_df)
     )
+    summary["Descriptor Dictionary Version"] = DESCRIPTOR_DICTIONARY_VERSION
     summary_df = pd.DataFrame([summary])
 
     descriptor_file = os.path.join(output_dir, f"{safe_project_name}_descriptors.csv")
     fingerprint_file = os.path.join(output_dir, f"{safe_project_name}_fingerprints.csv")
     invalid_file = os.path.join(output_dir, f"{safe_project_name}_invalid_smiles.csv")
     summary_file = os.path.join(output_dir, f"{safe_project_name}_summary.csv")
+    dictionary_file = os.path.join(
+        output_dir,
+        f"{safe_project_name}_descriptor_dictionary_v{DESCRIPTOR_DICTIONARY_VERSION}.csv",
+    )
     zip_file = os.path.join(output_dir, f"{safe_project_name}_complete_outputs.zip")
 
     valid_df.to_csv(descriptor_file, index=False)
     fingerprint_df.to_csv(fingerprint_file, index=False)
     invalid_df.to_csv(invalid_file, index=False)
     summary_df.to_csv(summary_file, index=False)
+    descriptor_dictionary_dataframe().to_csv(dictionary_file, index=False)
 
     output_files = [
         descriptor_file,
         fingerprint_file,
         invalid_file,
-        summary_file
+        summary_file,
+        dictionary_file,
     ]
 
     with zipfile.ZipFile(
@@ -567,6 +579,7 @@ def run_molecular_descriptor_platform(
         "invalid_df": invalid_df,
         "fingerprint_df": fingerprint_df,
         "summary_df": summary_df,
+        "descriptor_dictionary_version": DESCRIPTOR_DICTIONARY_VERSION,
         "zip_file": zip_file,
         "output_dir": output_dir,
         "project_name": safe_project_name,
