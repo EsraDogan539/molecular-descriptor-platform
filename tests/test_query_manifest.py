@@ -2,6 +2,8 @@ import unittest
 
 from query_manifest import (
     build_query_manifest,
+    load_query_manifest,
+    replay_configuration,
     result_set_sha256,
     sha256_json,
 )
@@ -89,6 +91,46 @@ class QueryManifestTests(unittest.TestCase):
             sha256_json({"a": 1, "b": 2}),
             sha256_json({"b": 2, "a": 1}),
         )
+
+    def test_load_query_manifest_accepts_json_bytes(self):
+        manifest = self._build(
+            text_query="thiophene",
+            filters={
+                "collection": "Development/Training",
+                "scope": "Core_SSeTe",
+                "chalcogen": "S",
+                "eg": "Available",
+                "reference_or_doi": "Available",
+                "advanced_numeric_ranges": {"Eg_eV": [2.0, 3.0]},
+                "advanced_minimum_counts": {"S_Count": 1},
+                "advanced_categorical": {"Method": "DFT"},
+            },
+        )
+        import json
+        payload = json.dumps(manifest).encode("utf-8")
+        loaded = load_query_manifest(payload)
+        self.assertEqual(loaded["query"]["text_query"], "thiophene")
+
+    def test_replay_configuration_restores_core_query_fields(self):
+        manifest = self._build(
+            text_query="thiophene",
+            structure_query="c1ccsc1",
+            structure_mode="Similarity",
+            minimum_similarity=0.55,
+            maximum_results=25,
+        )
+        replay = replay_configuration(manifest)
+        self.assertEqual(replay["text_query"], "thiophene")
+        self.assertEqual(replay["structure_query"], "c1ccsc1")
+        self.assertEqual(replay["structure_mode"], "Similarity")
+        self.assertEqual(replay["minimum_similarity"], 0.55)
+        self.assertEqual(replay["maximum_results"], 25)
+
+    def test_invalid_schema_is_rejected(self):
+        manifest = self._build()
+        manifest["schema_version"] = "99.0"
+        with self.assertRaises(ValueError):
+            load_query_manifest(manifest)
 
 
 if __name__ == "__main__":
