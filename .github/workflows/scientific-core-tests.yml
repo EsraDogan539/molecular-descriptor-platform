@@ -39,3 +39,7 @@ jobs:
       - name: Run v0.9 performance baseline
         run: |
           python benchmarks/performance_baseline.py --rows 200
+
+      - name: Audit curated database quality
+        run: |
+          python scripts/database_release_audit.py
