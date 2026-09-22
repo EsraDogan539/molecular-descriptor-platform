@@ -10,7 +10,11 @@ if ROOT not in sys.path:
 import pandas as pd
 
 from database_browser import _apply_search, _public_table
-from descriptor_engine import create_fingerprint_dataset, process_molecular_dataset
+from descriptor_engine import (
+    create_fingerprint_dataset,
+    process_molecular_dataset,
+    process_molecular_dataset_with_fingerprints,
+)
 from similarity_search import find_similar_molecules
 
 
@@ -78,6 +82,11 @@ def main():
         lambda: create_fingerprint_dataset(analysis_df),
     )
 
+    _, combined_seconds = timed(
+        "Combined descriptor + fingerprint pipeline",
+        lambda: process_molecular_dataset_with_fingerprints(analysis_df),
+    )
+
     if len(valid_df) > 1:
         reference_id = valid_df.iloc[0]["Molecule_ID"]
         _, similarity_seconds = timed(
@@ -98,6 +107,12 @@ def main():
     per_row_fingerprint = fingerprint_seconds / max(args.rows, 1)
     print(f"Descriptor per row: {per_row_descriptor:.6f} s")
     print(f"Fingerprint per row: {per_row_fingerprint:.6f} s")
+    separate_total = descriptor_seconds + fingerprint_seconds
+    print(f"Separate descriptor + fingerprint total: {separate_total:.4f} s")
+    print(f"Combined pipeline total: {combined_seconds:.4f} s")
+    if separate_total > 0:
+        improvement = 100 * (separate_total - combined_seconds) / separate_total
+        print(f"Combined pipeline improvement: {improvement:.1f}%")
     print(f"Similarity total: {similarity_seconds:.4f} s")
 
 
