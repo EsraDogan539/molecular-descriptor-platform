@@ -17,6 +17,7 @@ from descriptor_dictionary import (
     DESCRIPTOR_DICTIONARY_VERSION,
     descriptor_dictionary_dataframe,
 )
+from run_manifest import build_run_manifest, write_run_manifest
 
 RDLogger.DisableLog("rdApp.error")
 
@@ -549,6 +550,7 @@ def run_molecular_descriptor_platform(
         output_dir,
         f"{safe_project_name}_descriptor_dictionary_v{DESCRIPTOR_DICTIONARY_VERSION}.csv",
     )
+    manifest_file = os.path.join(output_dir, f"{safe_project_name}_run_manifest.json")
     zip_file = os.path.join(output_dir, f"{safe_project_name}_complete_outputs.zip")
 
     valid_df.to_csv(descriptor_file, index=False)
@@ -565,6 +567,27 @@ def run_molecular_descriptor_platform(
         dictionary_file,
     ]
 
+    manifest = build_run_manifest(
+        input_df=clean_input_df,
+        project_name=safe_project_name,
+        summary=summary,
+        descriptor_dictionary_version=DESCRIPTOR_DICTIONARY_VERSION,
+        output_files=output_files,
+        fingerprint_settings={
+            "morgan": {
+                "radius": MORGAN_RADIUS,
+                "bits": MORGAN_N_BITS,
+            },
+            "maccs": {
+                "bits": int(
+                    fingerprint_df.filter(regex=r"^MACCS_").shape[1]
+                ) if not fingerprint_df.empty else 167,
+            },
+        },
+    )
+    write_run_manifest(manifest, manifest_file)
+    output_files.append(manifest_file)
+
     with zipfile.ZipFile(
         zip_file,
         mode="w",
@@ -580,6 +603,9 @@ def run_molecular_descriptor_platform(
         "fingerprint_df": fingerprint_df,
         "summary_df": summary_df,
         "descriptor_dictionary_version": DESCRIPTOR_DICTIONARY_VERSION,
+        "manifest": manifest,
+        "manifest_file": manifest_file,
+        "output_files": output_files,
         "zip_file": zip_file,
         "output_dir": output_dir,
         "project_name": safe_project_name,
