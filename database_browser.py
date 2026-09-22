@@ -19,6 +19,7 @@ from provenance_export import (
     doi_url,
     record_reference_value,
 )
+from query_manifest import build_query_manifest, query_manifest_json
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -902,6 +903,7 @@ def display_database_browser():
             reference_value = "All"
 
     filtered = _apply_search(df, query)
+    standardized_query_smiles = None
 
     if split_value != "All" and "Split_Role" in filtered.columns:
         filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
@@ -930,13 +932,58 @@ def display_database_browser():
                 minimum_similarity=minimum_similarity,
                 top_n=int(structure_top_n),
             )
+            standardized_query_smiles = standardized_query["canonical_smiles"]
             st.caption(
                 f"Structure query · {structure_mode} · standardized as "
-                f"{standardized_query['canonical_smiles']} · {len(filtered):,} records"
+                f"{standardized_query_smiles} · {len(filtered):,} records"
             )
         except ValueError as error:
             st.error(str(error))
             filtered = filtered.iloc[0:0].copy()
+
+    query_manifest = build_query_manifest(
+        text_query=query,
+        structure_query=structure_query,
+        standardized_structure_query=standardized_query_smiles,
+        structure_mode=structure_mode,
+        minimum_similarity=minimum_similarity,
+        maximum_results=int(structure_top_n),
+        fingerprint_method="Morgan",
+        fingerprint_radius=MORGAN_RADIUS,
+        fingerprint_bits=MORGAN_N_BITS,
+        similarity_metric=SIMILARITY_METRIC,
+        filters={
+            "collection": split_value,
+            "scope": scope_value,
+            "chalcogen": chalcogen_value,
+            "eg": eg_value,
+            "reference_or_doi": reference_value,
+        },
+        result_record_ids=(
+            filtered["Record_ID"].tolist()
+            if "Record_ID" in filtered.columns
+            else filtered.index.astype(str).tolist()
+        ),
+    )
+
+    with st.expander("Query reproducibility", expanded=False):
+        st.caption(
+            "Machine-readable search configuration, release versions and SHA-256 "
+            "checksums for the current result set."
+        )
+        q1, q2 = st.columns(2)
+        q1.metric("Result records", f"{len(filtered):,}")
+        q2.caption(
+            f"Query checksum · {query_manifest['query_checksum_sha256'][:16]}…\n\n"
+            f"Result-set checksum · {query_manifest['result_record_ids_sha256'][:16]}…"
+        )
+        st.download_button(
+            "Download query manifest JSON",
+            query_manifest_json(query_manifest).encode("utf-8"),
+            "chalmoldb_query_manifest.json",
+            "application/json",
+            key="download_query_manifest",
+        )
 
     _render_results(filtered, is_preview)
 
