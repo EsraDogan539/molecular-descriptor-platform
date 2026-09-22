@@ -96,8 +96,18 @@ def main():
         converted = pd.to_numeric(df[column], errors="coerce")
         bad = int((present & converted.isna()).sum())
         if bad:
-            non_numeric[column] = bad
-            warnings.append(f"{bad} non-numeric populated value(s) in {column}.")
+            examples = (
+                df.loc[present & converted.isna(), column]
+                .astype(str)
+                .drop_duplicates()
+                .head(6)
+                .tolist()
+            )
+            non_numeric[column] = (bad, examples)
+            warnings.append(
+                f"{bad} non-numeric populated value(s) in {column}: "
+                + ", ".join(examples)
+            )
 
     print(f"Missing Record IDs: {missing_ids}")
     print(f"Records with duplicate Record IDs: {duplicate_ids}")
@@ -106,8 +116,9 @@ def main():
     print(f"SMILES/InChIKey mismatches: {identity_mismatches}")
     if non_numeric:
         print("Non-numeric property values:")
-        for column, count in non_numeric.items():
-            print(f"  - {column}: {count}")
+        for column, details in non_numeric.items():
+            count, examples = details
+            print(f"  - {column}: {count} · examples: {', '.join(examples)}")
     else:
         print("Non-numeric populated property values: 0")
 
