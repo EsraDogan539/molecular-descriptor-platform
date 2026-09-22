@@ -49,3 +49,22 @@ v0.10 validation includes:
 
 ## Scope
 v0.10 does not add predictive ML for unseen molecules, generative design, automated molecule ranking or automated scientific conclusions.
+
+
+## CI performance snapshot
+
+Measured on the GitHub Actions Ubuntu runner with the current Database v1 build. These timings are environment-specific profiling values, not deployment guarantees.
+
+| Operation | Time |
+|---|---:|
+| Database load | 0.0613 s |
+| Text database search | 0.0154 s |
+| Public-table formatting | 0.0267 s |
+| Exact structure search | 0.7186 s |
+| Substructure search | 0.5709 s |
+| Structure similarity search | 0.6016 s |
+| Descriptor processing (200 rows) | 0.1716 s |
+| Fingerprint generation (200 rows) | 0.0689 s |
+| Combined descriptor + fingerprint pipeline (200 rows) | 0.2316 s |
+
+The v0.10 structure-search measurements currently include reparsing curated structures during each query. They establish a release baseline for future caching/indexing work rather than a claim of optimized search latency.
