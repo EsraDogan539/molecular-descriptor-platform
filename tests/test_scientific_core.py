@@ -4,6 +4,8 @@ import pandas as pd
 from descriptor_engine import (
     calculate_single_molecule_descriptors,
     process_molecular_dataset,
+    process_molecular_dataset_with_fingerprints,
+    create_fingerprint_dataset,
     sanitize_project_name,
     validate_input_dataframe,
 )
@@ -99,6 +101,36 @@ class ScientificCoreTests(unittest.TestCase):
             "my_project_01",
         )
         self.assertEqual(sanitize_project_name(""), "chalcogen_project")
+
+    def test_combined_pipeline_matches_separate_outputs(self):
+        df = pd.DataFrame({
+            "Molecule_ID": ["S1", "SE1", "BAD"],
+            "SMILES": ["c1ccsc1", "c1cc[se]c1", "not_a_smiles"],
+        })
+
+        valid_old, invalid_old, summary_old = process_molecular_dataset(df)
+        fp_old, _ = create_fingerprint_dataset(df)
+
+        valid_new, invalid_new, fp_new, summary_new = (
+            process_molecular_dataset_with_fingerprints(df)
+        )
+
+        pd.testing.assert_frame_equal(
+            valid_old.reset_index(drop=True),
+            valid_new.reset_index(drop=True),
+            check_dtype=False,
+        )
+        pd.testing.assert_frame_equal(
+            invalid_old.reset_index(drop=True),
+            invalid_new.reset_index(drop=True),
+            check_dtype=False,
+        )
+        pd.testing.assert_frame_equal(
+            fp_old.reset_index(drop=True),
+            fp_new.reset_index(drop=True),
+            check_dtype=False,
+        )
+        self.assertEqual(summary_old, summary_new)
 
 
 if __name__ == "__main__":
