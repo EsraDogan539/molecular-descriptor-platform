@@ -345,7 +345,11 @@ def _render_record_comparison(filtered):
     if len(filtered) < 2:
         return
 
-    labels = [_record_label(row) for _, row in filtered.iterrows()]
+    record_lookup = {
+        _record_label(row): row
+        for _, row in filtered.iterrows()
+    }
+    labels = list(record_lookup.keys())
 
     with st.expander("Compare records", expanded=False):
         st.caption(
@@ -369,8 +373,8 @@ def _render_record_comparison(filtered):
                 key="database_compare_candidate",
             )
 
-        reference_row = filtered.iloc[labels.index(reference_label)]
-        candidate_row = filtered.iloc[labels.index(candidate_label)]
+        reference_row = record_lookup[reference_label]
+        candidate_row = record_lookup[candidate_label]
 
         left, right = st.columns(2, gap="large")
         with left:
@@ -437,13 +441,17 @@ def _render_results(filtered, is_preview):
 
     st.divider()
     st.markdown('<div class="section-rule-title">Inspect a record</div>', unsafe_allow_html=True)
-    labels = [_record_label(row) for _, row in filtered.iterrows()]
+    record_lookup = {
+        _record_label(row): row
+        for _, row in filtered.iterrows()
+    }
+    labels = list(record_lookup.keys())
     selected = st.selectbox(
         "Record",
         labels,
         label_visibility="collapsed",
     )
-    row = filtered.iloc[labels.index(selected)]
+    row = record_lookup[selected]
     _render_record_detail(row)
 
     if not is_preview:
