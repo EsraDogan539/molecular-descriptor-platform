@@ -972,7 +972,7 @@ if page == "documentation":
         <div class="page-intro">
           <div class="page-eyebrow">Reference guide</div>
           <div class="page-title">Documentation</div>
-          <div class="page-description">Database scope, molecular identity, curation rules and the user-analysis workflow for ChalMolDB.</div>
+          <div class="page-description">Database scope, structure-first search, molecular comparison, provenance, reproducibility and the user-analysis workflow for ChalMolDB.</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1001,6 +1001,22 @@ if page == "documentation":
         "Structure-complete records are standardized with RDKit and represented by canonical "
         "SMILES, InChI and InChIKey. Repeated standardized structures are retained to preserve "
         "record-level provenance."
+    )
+
+    st.markdown('<div class="section-rule-title">Structure-first database search</div>', unsafe_allow_html=True)
+    st.write(
+        "The Database workspace supports Exact standardized-identity search, RDKit graph "
+        "substructure matching and Morgan/Tanimoto similarity search. Similarity uses a Morgan "
+        "fingerprint with radius 2 and 2048 bits. Structural similarity is descriptive and does "
+        "not establish equivalent electronic properties."
+    )
+
+    st.markdown('<div class="section-rule-title">Curated record comparison</div>', unsafe_allow_html=True)
+    st.write(
+        "Filtered database records can be compared side by side. The comparison retains molecular "
+        "identity, HOMO, LUMO, Eg, experimental Eg where available, chalcogen context, calculation "
+        "method and basis-set metadata. Numeric deltas are reported as candidate minus reference; "
+        "multi-valued experimental measurements are preserved rather than silently collapsed."
     )
 
     st.markdown('<div class="section-rule-title">Curation principles</div>', unsafe_allow_html=True)
@@ -1052,19 +1068,32 @@ if page == "documentation":
         "present in the release and should not be interpreted as a quality score."
     )
 
+    st.write(
+        "Valid DOI values are normalized to https://doi.org links in record detail views. "
+        "Citation-ready record CSV exports preserve record identity, standardized structure, "
+        "electronic properties, method/basis metadata, source reference and release versions. "
+        "Non-DOI references remain explicit source text."
+    )
+
     st.markdown('<div class="section-rule-title">Release quality checks</div>', unsafe_allow_html=True)
     st.write(
-        "The v0.9 development workflow automatically audits missing or duplicate record IDs, "
+        "The release workflow automatically audits missing or duplicate record IDs, "
         "populated Canonical SMILES that cannot be parsed, non-numeric populated electronic-property "
         "values and SMILES/InChIKey consistency before release."
     )
 
-    st.markdown('<div class="section-rule-title">Reproducibility manifest</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-rule-title">Reproducibility manifests</div>', unsafe_allow_html=True)
     st.write(
-        "Every complete analysis package includes a machine-readable run_manifest.json file. "
+        "Every complete user-analysis package includes a machine-readable run_manifest.json file. "
         "It records the normalized project name, UTC creation time, input row/column structure, "
         "a SHA-256 checksum of the submitted table, analysis counts, Descriptor Dictionary version, "
         "Morgan/MACCS fingerprint settings, software versions and the files included in the package."
+    )
+    st.write(
+        "Database searches can also export a query manifest JSON. It records the raw and standardized "
+        "structure query, search mode, active filters, Morgan/Tanimoto settings where applicable, "
+        "result count, release versions, a deterministic query-configuration SHA-256 checksum and "
+        "an ordered result-record-set SHA-256 checksum."
     )
 
     st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
