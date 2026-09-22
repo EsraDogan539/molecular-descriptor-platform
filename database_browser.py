@@ -28,6 +28,7 @@ from query_manifest import (
     replay_configuration,
 )
 from public_labels import public_collection_label, sanitize_public_dataframe
+from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
