@@ -3,6 +3,7 @@
 import pandas as pd
 
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
+from public_labels import public_collection_label
 
 
 COMPARISON_FIELDS = [
