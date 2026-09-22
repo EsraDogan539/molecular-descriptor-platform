@@ -52,21 +52,21 @@ Use this checklist before tagging v0.10.0.
 - [x] v0.10 structure-search smoke check is enabled.
 - [x] v0.10 comparison/provenance smoke check is enabled.
 - [x] v0.10 query-manifest smoke check is enabled.
-- [ ] Final release-candidate CI is green.
+- [x] Final release-candidate CI is green.
 
 ## UI review
 - [x] Database structure search desktop review.
 - [x] Curated record comparison desktop review.
 - [x] Citation-ready export desktop review.
 - [x] Query manifest desktop review.
-- [ ] Documentation desktop review.
+- [x] Documentation desktop review.
 - [x] 400 px mobile review for Database structure search.
 - [x] 400 px mobile review for record comparison.
 - [x] 400 px mobile review for query reproducibility.
 - [x] No page-level horizontal overflow.
 
 ## Release preparation
-- [ ] Update v0.10 roadmap completion state.
+- [x] Update v0.10 roadmap completion state.
 - [x] Prepare v0.10.0 release notes.
 - [ ] Confirm Streamlit deployment uses final v0.10 release commit.
 - [ ] Tag v0.10.0 only after final UI/mobile review.
