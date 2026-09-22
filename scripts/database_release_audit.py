@@ -33,6 +33,33 @@ def meaningful(series):
     return text.ne("") & ~text.str.lower().isin({"nan", "none", "null", "n/a", "na"})
 
 
+
+def classify_numeric_measurement(value):
+    if pd.isna(value):
+        return "missing"
+
+    text = str(value).strip()
+    if text.lower() in {"", "nan", "none", "null", "n/a", "na"}:
+        return "missing"
+
+    try:
+        float(text)
+        return "scalar"
+    except ValueError:
+        pass
+
+    if ";" in text:
+        parts = [part.strip() for part in text.split(";")]
+        if len(parts) > 1 and all(parts):
+            try:
+                [float(part) for part in parts]
+                return "multi-valued"
+            except ValueError:
+                pass
+
+    return "non-numeric"
+
+
 def main():
     df, path = load_database()
     failures = []
@@ -89,15 +116,31 @@ def main():
             )
 
     non_numeric = {}
+    multi_valued = {}
     for column in PROPERTY_COLUMNS:
         if column not in df.columns:
             continue
-        present = meaningful(df[column])
-        converted = pd.to_numeric(df[column], errors="coerce")
-        bad = int((present & converted.isna()).sum())
+
+        classes = df[column].map(classify_numeric_measurement)
+        bad_mask = classes.eq("non-numeric")
+        multi_mask = classes.eq("multi-valued")
+
+        bad = int(bad_mask.sum())
+        multi_count = int(multi_mask.sum())
+
+        if multi_count:
+            examples = (
+                df.loc[multi_mask, column]
+                .astype(str)
+                .drop_duplicates()
+                .head(6)
+                .tolist()
+            )
+            multi_valued[column] = (multi_count, examples)
+
         if bad:
             examples = (
-                df.loc[present & converted.isna(), column]
+                df.loc[bad_mask, column]
                 .astype(str)
                 .drop_duplicates()
                 .head(6)
@@ -114,6 +157,14 @@ def main():
     print(f"Rows with standardized structure: {structure_rows}")
     print(f"Malformed populated Canonical SMILES: {malformed_smiles}")
     print(f"SMILES/InChIKey mismatches: {identity_mismatches}")
+    if multi_valued:
+        print("Multi-valued numeric property records:")
+        for column, details in multi_valued.items():
+            count, examples = details
+            print(f"  - {column}: {count} · examples: {', '.join(examples)}")
+    else:
+        print("Multi-valued numeric property records: 0")
+
     if non_numeric:
         print("Non-numeric property values:")
         for column, details in non_numeric.items():
