@@ -22,6 +22,7 @@ from provenance_export import (
     record_reference_value,
 )
 from query_manifest import build_query_manifest, query_manifest_json
+from public_labels import public_collection_label, sanitize_public_dataframe
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -220,7 +221,7 @@ def _render_record_detail(row):
               <div class="detail-subcard">
                 <div class="detail-section-title">Provenance</div>
                 <div class="compact-fields provenance-fields">
-                  <div><span>Dataset / owner</span><strong>{html.escape(str(_display_value(row.get("Dataset_Owner"))))}</strong></div>
+                  <div><span>Collection source</span><strong>{html.escape(str(public_collection_label(row.get("Split_Role"), row.get("Dataset_Owner"))))}</strong></div>
                   <div><span>Donor / Acceptor</span><strong>{html.escape(donor_acceptor)}</strong></div>
                   <div><span>Method</span><strong>{html.escape(str(_display_method(row.get("Method"))))}</strong></div>
                   <div><span>Basis set</span><strong>{html.escape(str(_display_value(row.get("Basis_Set"))))}</strong></div>
@@ -236,7 +237,7 @@ def _render_record_detail(row):
                 reference_column = available_reference_column(row_df)
                 metadata = {
                     "Collection": collection,
-                    "Dataset / owner": row.get("Dataset_Owner"),
+                    "Collection source": public_collection_label(row.get("Split_Role"), row.get("Dataset_Owner")),
                     "Scope": _display_scope(row.get("Scope_Flag")),
                     "Unit type": row.get("Unit_Type"),
                     "Oligomer n": row.get("Oligomer_n"),
@@ -315,7 +316,7 @@ def _apply_search(df, query):
         c for c in [
             "Record_ID", "Molecule_Name", "Donor_ID", "Acceptor_ID",
             "System_Code", "InChIKey", "Canonical_SMILES",
-            "Dataset_Owner", "Method", "Basis_Set", "Curation_Status",
+            "Method", "Basis_Set", "Curation_Status",
             "DOI_or_Reference", "DOI", "Reference", "Source_Reference", "Citation",
         ]
         if c in df.columns
@@ -498,7 +499,7 @@ def _render_results(filtered, is_preview):
         st.divider()
         st.download_button(
             "Download filtered records",
-            filtered.to_csv(index=False).encode("utf-8"),
+            sanitize_public_dataframe(filtered).to_csv(index=False).encode("utf-8"),
             "chalcogen_database_filtered.csv",
             "text/csv",
         )
@@ -984,11 +985,6 @@ def display_database_browser():
         st.markdown("**Provenance and computational metadata**")
         a1, a2 = st.columns(2)
         with a1:
-            owner_value = st.selectbox(
-                "Dataset / owner",
-                ["All"] + _safe_unique(df, "Dataset_Owner"),
-                key="advanced_dataset_owner",
-            )
             method_value = st.selectbox(
                 "Method",
                 ["All"] + _safe_unique(df, "Method"),
@@ -1007,7 +1003,6 @@ def display_database_browser():
             )
 
         categorical_filters = {
-            "Dataset_Owner": owner_value,
             "Method": method_value,
             "Basis_Set": basis_value,
             "Curation_Status": curation_value,
