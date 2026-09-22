@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use ChalMolDB in your research, please cite this software release."
+title: "ChalMolDB v0.11.0 — Chalcogen Molecular Database"
+type: software
+version: "0.11.0"
+date-released: "2026-09-22"
+doi: "10.5281/zenodo.22903550"
+url: "https://github.com/EsraDogan539/molecular-descriptor-platform"
+repository-code: "https://github.com/EsraDogan539/molecular-descriptor-platform"
+license: MIT
+authors:
+  - family-names: "Doğan"
+    given-names: "Esra Nur"
+    orcid: "https://orcid.org/0000-0001-5755-7596"
+    affiliation: "Ankara University"
+preferred-citation:
+  type: software
+  title: "ChalMolDB v0.11.0 — Chalcogen Molecular Database"
+  authors:
+    - family-names: "Doğan"
+      given-names: "Esra Nur"
+      orcid: "https://orcid.org/0000-0001-5755-7596"
+  year: 2026
+  version: "0.11.0"
+  doi: "10.5281/zenodo.22903550"
