@@ -46,8 +46,10 @@ Implemented in the development branch:
 - Descriptor dictionary version retained in analysis ZIP exports.
 - Provenance-aware database search, conditional reference/DOI filtering and field-level coverage reporting.
 - Automated database release audit for record IDs, populated SMILES, numeric property integrity and structure identity consistency.
+- Side-by-side similarity comparison with method-aware CSV export.
+- Machine-readable run manifest with input checksum, software versions, descriptor version, fingerprint settings and package inventory.
 
-## 3. Similarity and molecular comparison
+## 3. Similarity and molecular comparison — in progress
 
 - Improve reference-molecule comparison layout.
 - Add side-by-side molecular identity and descriptor-difference views.
@@ -72,7 +74,7 @@ Implemented in the development branch:
 - Provenance is inspectable for every curated record where source metadata exists.
 - Quality checks run automatically before a database release.
 
-## 5. Export and reproducibility
+## 5. Export and reproducibility — in progress
 
 - Add version metadata to CSV/ZIP exports.
 - Include a machine-readable run manifest in analysis packages.
