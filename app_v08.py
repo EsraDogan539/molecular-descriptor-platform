@@ -17,6 +17,12 @@ from descriptor_dictionary import (
     DESCRIPTOR_DICTIONARY_VERSION,
     descriptor_dictionary_dataframe,
 )
+from release_metadata import (
+    ASSET_BASE_URL,
+    DATABASE_VERSION,
+    RELEASE_LABEL,
+    SCIENTIFIC_CORE_DISPLAY_VERSION,
+)
 
 CHALMOLDB_ICON_SVG = """
 <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
@@ -38,8 +44,8 @@ CHALMOLDB_ICON_SVG = """
 </svg>
 """
 
-CHALMOLDB_LOGO_URL = "https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_logo.svg"
-CHALMOLDB_ICON_URL = "https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg"
+CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
+CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
 
 
 st.set_page_config(
@@ -808,7 +814,7 @@ st.markdown(
     f"""
     <div class="academic-header">
       <a class="academic-brand" href="?page=home">
-        <img class="brand-mark-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg" alt="">
+        <img class="brand-mark-img" src="{CHALMOLDB_ICON_URL}" alt="">
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
           <small>Chalcogen Molecular Database</small>
@@ -822,12 +828,12 @@ st.markdown(
 
 if page == "home":
     st.markdown(
-        """
+        f"""
         <div class="hero-shell">
           <div class="hero-copy">
             <div class="hero-kicker">Curated molecular data · S / Se / Te</div>
             <div class="hero-brand">
-              <img class="hero-mark-img" src="https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/v0.8-scientific-core/assets/chalmoldb_icon.svg" alt="">
+              <img class="hero-mark-img" src="{CHALMOLDB_ICON_URL}" alt="">
               <div class="hero-title-wrap">
                 <h1>ChalMolDB</h1>
                 <div class="hero-subbrand">Chalcogen Molecular Database</div>
@@ -924,11 +930,11 @@ if page == "home":
           <div class="metric-item"><span class="metric-number">272</span><span class="metric-label">External records</span></div>
         </div>
         <div class="quiet-note">
-          Database v1 &nbsp;&middot;&nbsp; Structure standardization with RDKit
+          Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structure standardization with RDKit
           &nbsp;&middot;&nbsp; Record-level provenance retained
         </div>
         <div class="site-footer">
-          <span><strong>ChalMolDB</strong> · Chalcogen Molecular Database · Database v1</span>
+          <span><strong>ChalMolDB</strong> · Chalcogen Molecular Database · Database v{DATABASE_VERSION}</span>
           <span>
             <a href="?page=documentation">Documentation</a>
             <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
@@ -945,7 +951,7 @@ if page == "database":
     display_database_browser()
     st.divider()
     st.caption(
-        "ChalMolDB · Database v1 · Scientific Core v0.9 · "
+        f"ChalMolDB · {RELEASE_LABEL} · "
         "Curated records are read-only in the public browser."
     )
     st.stop()
@@ -954,7 +960,9 @@ if page == "database":
 if page == "statistics":
     display_database_statistics()
     st.divider()
-    st.caption("ChalMolDB · Database v1 · Descriptive statistics")
+    st.caption(
+        f"ChalMolDB · Database v{DATABASE_VERSION} · Descriptive statistics"
+    )
     st.stop()
 
 
@@ -984,7 +992,7 @@ if page == "documentation":
 
     st.markdown('<div class="section-rule-title">Database scope</div>', unsafe_allow_html=True)
     st.write(
-        "Database v1 contains curated development and external records. Exact standardized "
+        f"Database v{DATABASE_VERSION} contains curated development and external records. Exact standardized "
         "structures are displayed only where the source supports structure-level identity."
     )
 
@@ -1113,9 +1121,9 @@ if page == "about":
 
     st.markdown('<div class="section-rule-title">Current release</div>', unsafe_allow_html=True)
     st.markdown(
-        """
+        f"""
         <div class="release-card">
-          <strong>Database v1 · Scientific Core v0.9</strong>
+          <strong>{RELEASE_LABEL}</strong>
           <span>3,360 records · 2,983 unique standardized development structures</span>
         </div>
         """,
@@ -1412,5 +1420,5 @@ except Exception as error:
 
 st.divider()
 st.caption(
-    "ChalMolDB · Database v1 · Scientific Core v0.9"
+    f"ChalMolDB · {RELEASE_LABEL}"
 )
