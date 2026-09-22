@@ -433,9 +433,9 @@ def process_molecular_dataset_with_fingerprints(input_df):
     fingerprint_metadata = []
     fingerprint_vectors = []
 
-    for _, row in input_df.iterrows():
-        molecule_id = row["Molecule_ID"]
-        smiles = row["SMILES"]
+    for row in input_df.itertuples(index=False):
+        molecule_id = row.Molecule_ID
+        smiles = row.SMILES
 
         if pd.isna(smiles):
             invalid_results.append({
