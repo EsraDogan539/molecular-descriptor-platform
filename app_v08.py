@@ -883,13 +883,20 @@ if page == "home":
         unsafe_allow_html=True,
     )
 
+    def _navigate_home(target_page: str) -> None:
+        st.query_params["page"] = target_page
+        st.rerun()
+
     left, c1, c2, c3, right = st.columns([.55, 1, 1, 1, .55])
     with c1:
-        st.link_button("Explore database", "?page=database", type="primary", use_container_width=True)
+        if st.button("Explore database", type="primary", use_container_width=True, key="home_explore_database"):
+            _navigate_home("database")
     with c2:
-        st.link_button("View statistics", "?page=statistics", use_container_width=True)
+        if st.button("View statistics", use_container_width=True, key="home_view_statistics"):
+            _navigate_home("statistics")
     with c3:
-        st.link_button("Analyze molecules", "?page=analyze", use_container_width=True)
+        if st.button("Analyze molecules", use_container_width=True, key="home_analyze_molecules"):
+            _navigate_home("analyze")
 
     st.markdown(
         """
