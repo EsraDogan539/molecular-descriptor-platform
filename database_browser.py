@@ -21,7 +21,12 @@ from provenance_export import (
     extract_doi,
     record_reference_value,
 )
-from query_manifest import build_query_manifest, query_manifest_json
+from query_manifest import (
+    build_query_manifest,
+    load_query_manifest,
+    query_manifest_json,
+    replay_configuration,
+)
 from public_labels import public_collection_label, sanitize_public_dataframe
 from structure_search import (
     MORGAN_N_BITS,
@@ -650,6 +655,115 @@ def _render_statistics(df):
                 plt.close(fig)
 
 
+
+def _valid_choice(value, options, fallback="All"):
+    return value if value in options else fallback
+
+
+def _clamp(value, lower, upper):
+    try:
+        numeric = float(value)
+    except (TypeError, ValueError):
+        numeric = float(lower)
+    return min(max(numeric, float(lower)), float(upper))
+
+
+def _apply_replay_manifest_to_session(manifest, df):
+    """Map a validated query manifest onto Streamlit widget state safely."""
+    config = replay_configuration(manifest)
+    filters = config.get("filters") or {}
+
+    st.session_state["database_text_query"] = config.get("text_query", "")
+    st.session_state["database_structure_query"] = config.get("structure_query", "")
+
+    mode = config.get("structure_mode", "Exact")
+    st.session_state["database_structure_mode"] = (
+        mode if mode in {"Exact", "Substructure", "Similarity"} else "Exact"
+    )
+    st.session_state["database_structure_threshold"] = _clamp(
+        config.get("minimum_similarity", 0.40), 0.0, 1.0
+    )
+    st.session_state["database_structure_top_n"] = int(
+        _clamp(config.get("maximum_results", 50), 1, 250)
+    )
+
+    split_options = ["All"] + _safe_unique(df, "Split_Role")
+    scope_options = ["All"] + _safe_unique(df, "Scope_Flag")
+    chalcogen_options = ["All"] + _safe_unique(df, "Chalcogen_Type")
+
+    st.session_state["browse_collection"] = _valid_choice(
+        filters.get("collection", "All"), split_options
+    )
+    st.session_state["browse_scope"] = _valid_choice(
+        filters.get("scope", "All"), scope_options
+    )
+    st.session_state["browse_chalcogen"] = _valid_choice(
+        filters.get("chalcogen", "All"), chalcogen_options
+    )
+    st.session_state["browse_eg"] = _valid_choice(
+        filters.get("eg", "All"), ["All", "Available", "Missing"]
+    )
+    st.session_state["browse_reference"] = _valid_choice(
+        filters.get("reference_or_doi", "All"), ["All", "Available", "Missing"]
+    )
+
+    numeric_ranges = filters.get("advanced_numeric_ranges") or {}
+    for column in ("HOMO_eV", "LUMO_eV", "Eg_eV"):
+        lower_bound, upper_bound = numeric_bounds(df, column)
+        enabled = column in numeric_ranges and lower_bound is not None
+        st.session_state[f"advanced_enable_{column}"] = enabled
+        if lower_bound is None:
+            continue
+        bounds = numeric_ranges.get(column, [lower_bound, upper_bound])
+        if not isinstance(bounds, (list, tuple)) or len(bounds) != 2:
+            bounds = [lower_bound, upper_bound]
+        low = _clamp(bounds[0], lower_bound, upper_bound)
+        high = _clamp(bounds[1], lower_bound, upper_bound)
+        st.session_state[f"advanced_min_{column}"] = min(low, high)
+        st.session_state[f"advanced_max_{column}"] = max(low, high)
+
+    minimum_counts = filters.get("advanced_minimum_counts") or {}
+    for column in ("S_Count", "Se_Count", "Te_Count"):
+        _, max_count = numeric_bounds(df, column)
+        enabled = column in minimum_counts and max_count is not None
+        st.session_state[f"advanced_enable_{column}"] = enabled
+        if max_count is None:
+            continue
+        value = int(_clamp(minimum_counts.get(column, 0), 0, max(0, int(max_count))))
+        st.session_state[f"advanced_min_{column}"] = value
+
+    categorical = filters.get("advanced_categorical") or {}
+    categorical_specs = {
+        "Method": "advanced_method",
+        "Basis_Set": "advanced_basis",
+        "Curation_Status": "advanced_curation_status",
+    }
+    for column, state_key in categorical_specs.items():
+        options = ["All"] + _safe_unique(df, column)
+        st.session_state[state_key] = _valid_choice(
+            categorical.get(column, "All"), options
+        )
+
+    manifest_db = str(config.get("manifest_database_version") or "")
+    manifest_core = str(config.get("manifest_scientific_core_version") or "")
+    warning_parts = []
+    if manifest_db and manifest_db != str(DATABASE_VERSION):
+        warning_parts.append(
+            f"database v{manifest_db} → current v{DATABASE_VERSION}"
+        )
+    if manifest_core and manifest_core != str(SCIENTIFIC_CORE_VERSION):
+        warning_parts.append(
+            f"scientific core {manifest_core} → current {SCIENTIFIC_CORE_VERSION}"
+        )
+
+    if warning_parts:
+        st.session_state["query_replay_notice"] = (
+            "Query restored with release differences: " + "; ".join(warning_parts) + "."
+        )
+    else:
+        st.session_state["query_replay_notice"] = "Query restored from manifest."
+
+
 def display_database_browser():
     st.markdown(
         """
@@ -800,6 +914,36 @@ def display_database_browser():
     if is_preview:
         st.info("A preview dataset is loaded in this build.")
 
+    replay_notice = st.session_state.pop("query_replay_notice", None)
+    if replay_notice:
+        if "release differences" in replay_notice:
+            st.warning(replay_notice)
+        else:
+            st.success(replay_notice)
+
+    with st.expander("Replay saved query", expanded=False):
+        st.caption(
+            "Upload a ChalMolDB query manifest to restore its text, structure and "
+            "filter configuration. The query is re-run against the current database release."
+        )
+        replay_file = st.file_uploader(
+            "Query manifest JSON",
+            type=["json"],
+            key="database_query_replay_upload",
+        )
+        replay_button = st.button(
+            "Restore query",
+            disabled=replay_file is None,
+            key="database_query_replay_apply",
+        )
+        if replay_button and replay_file is not None:
+            try:
+                manifest = load_query_manifest(replay_file.getvalue())
+                _apply_replay_manifest_to_session(manifest, df)
+                st.rerun()
+            except (UnicodeDecodeError, ValueError) as error:
+                st.error(str(error))
+
     structure_query = ""
     structure_mode = "Exact"
     minimum_similarity = 0.40
@@ -852,6 +996,7 @@ def display_database_browser():
     query = st.text_input(
         "Search",
         placeholder="ID, molecule/system, structure, method, source or reference",
+        key="database_text_query",
     ).strip()
 
     f1, f2, f3, f4, f5 = st.columns(5)
