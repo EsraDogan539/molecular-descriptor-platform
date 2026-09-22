@@ -70,4 +70,4 @@ Use this checklist before tagging v0.11.0.
 - [x] Confirm Streamlit deployment uses final release commit.
 - [x] Tag v0.11.0.
 - [x] Archive v0.11.0 and obtain DOI.
-- [x] Add DOI/citation metadata to platform; manuscript synchronization prepared.
+- [x] Add DOI/citation metadata to platform and manuscript.
