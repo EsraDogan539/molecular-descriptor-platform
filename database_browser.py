@@ -668,12 +668,23 @@ def display_database_browser():
             key="browse_eg",
         )
     with f5:
-        reference_value = st.selectbox(
-            "Reference",
-            ["All", "Available", "Missing"],
-            key="browse_reference",
-            help="Uses the first available reference/DOI field in this database build.",
-        )
+        reference_column = available_reference_column(df)
+        if reference_column:
+            reference_value = st.selectbox(
+                "Reference / DOI",
+                ["All", "Available", "Missing"],
+                key="browse_reference",
+                help=f"Filtering uses the {reference_column} field in this database build.",
+            )
+        else:
+            st.selectbox(
+                "Reference / DOI",
+                ["Not included in this release"],
+                disabled=True,
+                key="browse_reference_unavailable",
+                help="No dedicated reference/DOI field is present in this database release.",
+            )
+            reference_value = "All"
 
     filtered = _apply_search(df, query)
 
@@ -765,7 +776,7 @@ def display_database_statistics():
     st.caption(
         f"Quality checks · Missing record IDs: {quality['Missing Record IDs']:,} · "
         f"Duplicate record IDs: {quality['Duplicate Record IDs']:,} · "
-        f"Repeated standardized structures retained: {quality['Repeated Standardized Structures']:,}"
+        f"Records in repeated standardized structures: {quality['Repeated Standardized Structures']:,}"
     )
 
     st.divider()
