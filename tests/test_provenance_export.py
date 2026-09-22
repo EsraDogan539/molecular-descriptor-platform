@@ -70,6 +70,8 @@ class ProvenanceExportTests(unittest.TestCase):
             SCIENTIFIC_CORE_VERSION,
         )
         self.assertEqual(export["Canonical SMILES"], "c1ccsc1")
+        self.assertEqual(export["Collection source"], "Development collection")
+        self.assertNotIn("dataset", str(export["Collection source"]).lower())
         self.assertEqual(export["Experimental Eg (eV)"], "1.80; 1.50")
         self.assertEqual(export["DOI"], "10.1000/example")
         self.assertEqual(
