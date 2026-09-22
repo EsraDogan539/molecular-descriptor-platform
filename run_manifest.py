@@ -10,9 +10,11 @@ import numpy as np
 import pandas as pd
 import rdkit
 
-
-MANIFEST_SCHEMA_VERSION = "1.0"
-SCIENTIFIC_CORE_VERSION = "0.9-development"
+from release_metadata import (
+    DATABASE_VERSION,
+    MANIFEST_SCHEMA_VERSION,
+    SCIENTIFIC_CORE_VERSION,
+)
 
 
 def dataframe_sha256(df):
@@ -31,6 +33,7 @@ def build_run_manifest(
 ):
     return {
         "manifest_schema_version": MANIFEST_SCHEMA_VERSION,
+        "database_version": DATABASE_VERSION,
         "scientific_core_version": SCIENTIFIC_CORE_VERSION,
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
         "project_name": str(project_name),
