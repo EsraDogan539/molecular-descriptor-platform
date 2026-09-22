@@ -13,6 +13,12 @@ from database_quality import (
     database_quality_summary,
     reference_mask,
 )
+from structure_search import (
+    MORGAN_N_BITS,
+    MORGAN_RADIUS,
+    SIMILARITY_METRIC,
+    structure_search,
+)
 
 
 FULL_DATABASE_PATHS = [
@@ -233,7 +239,7 @@ def _render_record_detail(row):
 def _public_table(df):
     preferred_columns = [
         "Record_ID", "Molecule_Name", "System_Code", "Chalcogen_Type",
-        "Eg_eV", "HOMO_eV", "LUMO_eV",
+        "Structure Similarity", "Eg_eV", "HOMO_eV", "LUMO_eV",
     ]
     existing = [c for c in preferred_columns if c in df.columns]
     table = df[existing].copy()
@@ -243,6 +249,7 @@ def _public_table(df):
         "Molecule_Name": "Molecule / system",
         "System_Code": "System",
         "Chalcogen_Type": "Chalcogen",
+        "Structure Similarity": "Similarity",
         "Eg_eV": "Eg (eV)",
         "HOMO_eV": "HOMO (eV)",
         "LUMO_eV": "LUMO (eV)",
@@ -260,7 +267,7 @@ def _public_table(df):
         table = table.rename(columns={"System": "Molecule / system"})
 
     for column in table.columns:
-        if column in {"Eg (eV)", "HOMO (eV)", "LUMO (eV)"}:
+        if column in {"Eg (eV)", "HOMO (eV)", "LUMO (eV)", "Similarity"}:
             table[column] = table[column].map(lambda value: _display_value(value, 3))
         else:
             table[column] = table[column].map(_display_value)
@@ -630,6 +637,55 @@ def display_database_browser():
     if is_preview:
         st.info("A preview dataset is loaded in this build.")
 
+    structure_query = ""
+    structure_mode = "Exact"
+    minimum_similarity = 0.40
+    structure_top_n = 50
+
+    with st.expander("Structure search", expanded=False):
+        st.caption(
+            "Search standardized curated structures by exact identity, graph substructure "
+            "or Morgan/Tanimoto fingerprint similarity."
+        )
+        structure_query = st.text_input(
+            "Query SMILES",
+            placeholder="e.g. c1ccsc1",
+            key="database_structure_query",
+        ).strip()
+
+        sc1, sc2 = st.columns([1, 1])
+        with sc1:
+            structure_mode = st.selectbox(
+                "Search mode",
+                ["Exact", "Substructure", "Similarity"],
+                key="database_structure_mode",
+            )
+        with sc2:
+            if structure_mode == "Similarity":
+                structure_top_n = st.number_input(
+                    "Maximum results",
+                    min_value=1,
+                    max_value=250,
+                    value=50,
+                    step=1,
+                    key="database_structure_top_n",
+                )
+
+        if structure_mode == "Similarity":
+            minimum_similarity = st.slider(
+                "Minimum Tanimoto similarity",
+                min_value=0.0,
+                max_value=1.0,
+                value=0.40,
+                step=0.05,
+                key="database_structure_threshold",
+            )
+            st.caption(
+                f"Morgan fingerprint · radius {MORGAN_RADIUS} · "
+                f"{MORGAN_N_BITS} bits · {SIMILARITY_METRIC}. "
+                "Structural similarity does not imply equivalent electronic properties."
+            )
+
     query = st.text_input(
         "Search",
         placeholder="ID, molecule/system, structure, method, source or reference",
@@ -705,6 +761,23 @@ def display_database_browser():
     if reference_value != "All":
         ref_mask = reference_mask(filtered)
         filtered = filtered[ref_mask] if reference_value == "Available" else filtered[~ref_mask]
+
+    if structure_query:
+        try:
+            filtered, standardized_query = structure_search(
+                filtered,
+                query_smiles=structure_query,
+                mode=structure_mode,
+                minimum_similarity=minimum_similarity,
+                top_n=int(structure_top_n),
+            )
+            st.caption(
+                f"Structure query · {structure_mode} · standardized as "
+                f"{standardized_query['canonical_smiles']} · {len(filtered):,} records"
+            )
+        except ValueError as error:
+            st.error(str(error))
+            filtered = filtered.iloc[0:0].copy()
 
     _render_results(filtered, is_preview)
 
