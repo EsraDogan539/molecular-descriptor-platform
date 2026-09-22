@@ -1011,6 +1011,13 @@ if page == "documentation":
         "not establish equivalent electronic properties."
     )
 
+    st.markdown('<div class="section-rule-title">Advanced research filters</div>', unsafe_allow_html=True)
+    st.write(
+        "Optional filters can constrain HOMO, LUMO and Eg ranges; minimum S, Se and Te counts; "
+        "and method, basis-set and curation metadata. Numeric filters are applied only when "
+        "explicitly enabled, and missing values do not silently satisfy an active numeric filter."
+    )
+
     st.markdown('<div class="section-rule-title">Curated record comparison</div>', unsafe_allow_html=True)
     st.write(
         "Filtered database records can be compared side by side. The comparison retains molecular "
@@ -1057,10 +1064,10 @@ if page == "documentation":
 
     st.markdown('<div class="section-rule-title">Provenance and data coverage</div>', unsafe_allow_html=True)
     st.write(
-        "Record-level provenance is retained from the source dataset, including dataset/owner, "
-        "calculation method, basis set and curation status where available. Dedicated DOI or "
-        "reference fields are searchable and filterable only when they are present in the release; "
-        "missing provenance is kept explicit rather than inferred."
+        "Record-level provenance is retained internally from the source material, while the public "
+        "interface uses neutral collection labels. Calculation method, basis set, curation status "
+        "and source/reference text are shown where available. Missing provenance is kept explicit "
+        "rather than inferred."
     )
     st.write(
         "The Statistics page reports field-level availability for electronic properties, "
@@ -1094,6 +1101,13 @@ if page == "documentation":
         "structure query, search mode, active filters, Morgan/Tanimoto settings where applicable, "
         "result count, release versions, a deterministic query-configuration SHA-256 checksum and "
         "an ordered result-record-set SHA-256 checksum."
+    )
+    st.write(
+        "Saved query manifests can be replayed in the Database workspace. ChalMolDB validates the "
+        "manifest schema, restores compatible search and filter settings, constrains restored numeric "
+        "values to the current release bounds and re-runs the query against the currently loaded "
+        "database. A release-difference notice is shown when the saved manifest and current release "
+        "do not match."
     )
 
     st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
