@@ -654,7 +654,7 @@ def display_database_browser():
             key="browse_eg",
         )
 
-    filtered = _apply_search(df.copy(), query)
+    filtered = _apply_search(df, query)
 
     if split_value != "All" and "Split_Role" in filtered.columns:
         filtered = filtered[filtered["Split_Role"].astype(str) == split_value]
