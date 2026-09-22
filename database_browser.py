@@ -13,6 +13,7 @@ from database_quality import (
     database_quality_summary,
     reference_mask,
 )
+from database_comparison import comparison_export, comparison_table
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -304,6 +305,117 @@ def _apply_search(df, query):
     return df[mask]
 
 
+def _render_comparison_structure(row, title):
+    st.markdown(f"**{title}**")
+    record_id = _display_record_id(row.get("Record_ID"))
+    molecule_system = row.get("Molecule_Name")
+    if pd.isna(molecule_system) or not str(molecule_system).strip():
+        molecule_system = row.get("System_Code")
+
+    st.caption(
+        f"{record_id} · {_display_value(molecule_system)} · "
+        f"{_display_value(row.get('Chalcogen_Type'))}"
+    )
+
+    smiles = row.get("Canonical_SMILES")
+    if pd.notna(smiles) and str(smiles).strip():
+        mol = Chem.MolFromSmiles(str(smiles))
+        if mol is not None:
+            st.image(
+                Draw.MolToImage(mol, size=(360, 235)),
+                use_container_width=True,
+            )
+        st.code(str(smiles), language=None)
+    else:
+        st.info("Exact standardized structure is not available for this record.")
+
+    p1, p2, p3 = st.columns(3)
+    p1.metric("HOMO (eV)", _display_value(row.get("HOMO_eV"), 3))
+    p2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
+    p3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
+
+    st.caption(
+        f"Experimental Eg: {_display_value(row.get('Experimental_Eg_eV'))} · "
+        f"Method: {_display_method(row.get('Method'))} · "
+        f"Basis: {_display_value(row.get('Basis_Set'))}"
+    )
+
+
+def _render_record_comparison(filtered):
+    if len(filtered) < 2:
+        return
+
+    labels = [_record_label(row) for _, row in filtered.iterrows()]
+
+    with st.expander("Compare records", expanded=False):
+        st.caption(
+            "Compare two curated records descriptively. Property differences do not "
+            "establish causal structure-property relationships."
+        )
+        c1, c2 = st.columns(2)
+        with c1:
+            reference_label = st.selectbox(
+                "Reference record",
+                labels,
+                key="database_compare_reference",
+            )
+        with c2:
+            candidate_options = [
+                label for label in labels if label != reference_label
+            ]
+            candidate_label = st.selectbox(
+                "Candidate record",
+                candidate_options,
+                key="database_compare_candidate",
+            )
+
+        reference_row = filtered.iloc[labels.index(reference_label)]
+        candidate_row = filtered.iloc[labels.index(candidate_label)]
+
+        left, right = st.columns(2, gap="large")
+        with left:
+            _render_comparison_structure(
+                reference_row,
+                f"Reference · {_display_record_id(reference_row.get('Record_ID'))}",
+            )
+        with right:
+            _render_comparison_structure(
+                candidate_row,
+                f"Candidate · {_display_record_id(candidate_row.get('Record_ID'))}",
+            )
+
+        st.markdown(
+            '<div class="section-rule-title">Property and provenance comparison</div>',
+            unsafe_allow_html=True,
+        )
+        comparison_df = comparison_table(reference_row, candidate_row)
+        if not comparison_df.empty:
+            st.dataframe(
+                comparison_df,
+                use_container_width=True,
+                hide_index=True,
+            )
+
+        reference_column = available_reference_column(filtered)
+        export_df = comparison_export(
+            reference_row=reference_row,
+            candidate_row=candidate_row,
+            reference_public_id=_display_record_id(reference_row.get("Record_ID")),
+            candidate_public_id=_display_record_id(candidate_row.get("Record_ID")),
+            reference_column=reference_column,
+        )
+        st.download_button(
+            "Download comparison CSV",
+            export_df.to_csv(index=False).encode("utf-8"),
+            (
+                f"{_display_record_id(reference_row.get('Record_ID'))}_vs_"
+                f"{_display_record_id(candidate_row.get('Record_ID'))}_comparison.csv"
+            ),
+            "text/csv",
+            key="download_database_comparison",
+        )
+
+
 def _render_results(filtered, is_preview):
     st.markdown(
         f'<div class="result-count">{len(filtered):,} matching records</div>',
@@ -320,6 +432,8 @@ def _render_results(filtered, is_preview):
     if filtered.empty:
         st.info("No records match the current search and filters.")
         return
+
+    _render_record_comparison(filtered)
 
     st.divider()
     st.markdown('<div class="section-rule-title">Inspect a record</div>', unsafe_allow_html=True)
