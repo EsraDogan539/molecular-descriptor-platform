@@ -947,26 +947,25 @@ if page == "home":
         """
         <div class="section-label">About ChalMolDB</div>
         <div class="about-intro">
-          <strong>ChalMolDB</strong> is a curated research platform for sulfur-, selenium- and tellurium-containing molecular systems.
-          It brings standardized molecular identity, electronic-property data, interpretable chalcogen-aware descriptors,
-          provenance-aware record inspection and reproducible query workflows into one interface.
+          <strong>Find structures, compare electronic properties, trace provenance, and reproduce your queries in one chalcogen-focused research environment.</strong><br>
+          ChalMolDB is a curated research platform for sulfur-, selenium- and tellurium-containing molecular systems.
         </div>
         <div class="about-grid">
           <div class="about-card">
             <strong>What is ChalMolDB?</strong>
-            <p>A searchable, structure-aware molecular database designed for systematic exploration of chalcogen-focused molecular data.</p>
+            <p>A searchable, structure-aware database for systematic exploration of chalcogen-focused molecular data.</p>
           </div>
           <div class="about-card">
             <strong>Who is it for?</strong>
-            <p>Researchers in computational chemistry, cheminformatics, organic electronics and materials informatics who need to find, compare and interpret S/Se/Te-containing molecules.</p>
+            <p>Researchers in computational chemistry, cheminformatics, organic electronics and materials informatics working with S/Se/Te-containing molecules.</p>
           </div>
           <div class="about-card">
             <strong>Where does the data come from?</strong>
-            <p>Curated molecular records are retained with record-level provenance. Standardized structures, electronic properties and descriptor layers are handled within the scientific core while source records remain traceable.</p>
+            <p>Records are curated from documented computational and literature-derived sources, with original provenance retained at record level.</p>
           </div>
           <div class="about-card">
             <strong>Why is it useful?</strong>
-            <p>It helps users search molecular motifs, compare related structures, filter HOMO/LUMO/Eg values, inspect provenance and reproduce the same query later through exportable query manifests.</p>
+            <p>Search molecular motifs, compare structures, filter HOMO/LUMO/Eg values, inspect provenance, and replay saved queries.</p>
           </div>
         </div>
         <div class="citation-box">
