@@ -1,7 +1,13 @@
 """Release-level smoke checks for ChalMolDB v0.9."""
 
 import json
+import os
+import sys
 import zipfile
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
 import pandas as pd
 
