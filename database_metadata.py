@@ -2,6 +2,8 @@ import os
 import zipfile
 import pandas as pd
 
+from run_manifest import build_run_manifest, write_run_manifest
+
 
 METADATA_ALIASES = {
     "Compound_Name": ["Compound_Name", "Compound Name", "Name"],
@@ -107,15 +109,51 @@ def add_database_export(input_df, results, project_name):
     database_file = os.path.join(output_dir, f"{safe_project_name}_curated_database.csv")
     database_df.to_csv(database_file, index=False)
 
+    output_files = list(results.get("output_files", []))
+    if database_file not in output_files:
+        output_files.append(database_file)
+
+    manifest_file = results.get("manifest_file")
+    if manifest_file:
+        manifest = build_run_manifest(
+            input_df=input_df,
+            project_name=safe_project_name,
+            summary=results["summary_df"].iloc[0].to_dict(),
+            descriptor_dictionary_version=results.get(
+                "descriptor_dictionary_version",
+                "unknown",
+            ),
+            output_files=[
+                path for path in output_files
+                if path != manifest_file
+            ],
+            fingerprint_settings=results.get("manifest", {}).get(
+                "fingerprints",
+                {},
+            ),
+        )
+        write_run_manifest(manifest, manifest_file)
+        if manifest_file not in output_files:
+            output_files.append(manifest_file)
+        results["manifest"] = manifest
+
     zip_file = results["zip_file"]
     if os.path.exists(zip_file):
-        with zipfile.ZipFile(
-            zip_file,
-            mode="a",
-            compression=zipfile.ZIP_DEFLATED,
-        ) as zip_output:
-            zip_output.write(database_file, arcname=os.path.basename(database_file))
+        os.remove(zip_file)
+
+    with zipfile.ZipFile(
+        zip_file,
+        mode="w",
+        compression=zipfile.ZIP_DEFLATED,
+    ) as zip_output:
+        for file_name in output_files:
+            if os.path.exists(file_name):
+                zip_output.write(
+                    file_name,
+                    arcname=os.path.basename(file_name),
+                )
 
     results["database_df"] = database_df
     results["database_file"] = database_file
+    results["output_files"] = output_files
     return results
