@@ -13,6 +13,10 @@ from database_metadata import add_database_export
 from database_browser import display_database_browser, display_database_statistics
 from similarity_search import display_similarity_search_panel
 from scientific_panel import display_scientific_core_panel
+from descriptor_dictionary import (
+    DESCRIPTOR_DICTIONARY_VERSION,
+    descriptor_dictionary_dataframe,
+)
 
 CHALMOLDB_ICON_SVG = """
 <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
@@ -998,6 +1002,35 @@ if page == "documentation":
         "- Record identity and standardized structure identity are treated as distinct concepts."
     )
 
+    st.markdown('<div class="section-rule-title">Descriptor dictionary</div>', unsafe_allow_html=True)
+    st.write(
+        "Descriptor definitions are versioned with the scientific core so that the terminology "
+        "shown in the interface and the exported analysis context remains explicit."
+    )
+    descriptor_reference_df = descriptor_dictionary_dataframe()
+    descriptor_group_filter = st.multiselect(
+        "Filter descriptor dictionary",
+        options=["Basic", "Structural", "Topological", "Element Counts", "Chalcogen Core", "Quality"],
+        default=[],
+        key="documentation_descriptor_filter",
+        placeholder="All descriptor groups",
+    )
+    if descriptor_group_filter:
+        descriptor_reference_df = descriptor_dictionary_dataframe(descriptor_group_filter)
+    st.dataframe(
+        descriptor_reference_df,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "Descriptor": st.column_config.TextColumn(width="medium"),
+            "Group": st.column_config.TextColumn(width="small"),
+            "Unit": st.column_config.TextColumn(width="small"),
+            "Definition": st.column_config.TextColumn(width="large"),
+            "Interpretation": st.column_config.TextColumn(width="large"),
+        },
+    )
+    st.caption(f"Descriptor Dictionary v{DESCRIPTOR_DICTIONARY_VERSION}")
+
     st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
     st.write(
         "Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, "
@@ -1235,6 +1268,36 @@ try:
                     )
                 else:
                     st.info("No general descriptor groups are selected.")
+            with st.expander("Descriptor dictionary", expanded=False):
+                dictionary_groups = [
+                    group for group in selected_groups
+                    if group in {"Basic", "Structural", "Topological", "Element Counts", "Chalcogen Core"}
+                ]
+                dictionary_df = descriptor_dictionary_dataframe(dictionary_groups)
+                st.caption(
+                    f"Scientific definitions and interpretation notes · "
+                    f"Dictionary v{DESCRIPTOR_DICTIONARY_VERSION}"
+                )
+                st.dataframe(
+                    dictionary_df,
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Descriptor": st.column_config.TextColumn(width="medium"),
+                        "Group": st.column_config.TextColumn(width="small"),
+                        "Unit": st.column_config.TextColumn(width="small"),
+                        "Definition": st.column_config.TextColumn(width="large"),
+                        "Interpretation": st.column_config.TextColumn(width="large"),
+                    },
+                )
+                st.download_button(
+                    "Download descriptor dictionary",
+                    dictionary_df.to_csv(index=False).encode("utf-8"),
+                    f"chalmoldb_descriptor_dictionary_v{DESCRIPTOR_DICTIONARY_VERSION}.csv",
+                    "text/csv",
+                    key="download_descriptor_dictionary",
+                )
+
             with st.expander("Descriptor summary", expanded=False):
                 display_scientific_core_panel(valid_df)
 
