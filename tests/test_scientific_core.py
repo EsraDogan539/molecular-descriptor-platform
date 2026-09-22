@@ -1,5 +1,6 @@
 import unittest
 import zipfile
+import json
 import pandas as pd
 
 from descriptor_engine import (
@@ -17,6 +18,8 @@ from descriptor_dictionary import (
     DESCRIPTOR_DICTIONARY_VERSION,
     descriptor_dictionary_dataframe,
 )
+
+from run_manifest import dataframe_sha256
 
 
 class ScientificCoreTests(unittest.TestCase):
@@ -191,6 +194,46 @@ class ScientificCoreTests(unittest.TestCase):
             names = archive.namelist()
         self.assertTrue(
             any("descriptor_dictionary_v0.9.0.csv" in name for name in names)
+        )
+
+    def test_run_manifest_is_included_and_reproducible(self):
+        df = pd.DataFrame({
+            "Molecule_ID": ["S1", "SE1"],
+            "SMILES": ["c1ccsc1", "c1cc[se]c1"],
+        })
+        results = run_molecular_descriptor_platform(
+            df,
+            project_name="manifest test",
+        )
+
+        self.assertEqual(results["project_name"], "manifest_test")
+        self.assertEqual(
+            results["manifest"]["input"]["sha256"],
+            dataframe_sha256(df),
+        )
+        self.assertEqual(
+            results["manifest"]["fingerprints"]["morgan"]["radius"],
+            2,
+        )
+        self.assertEqual(
+            results["manifest"]["fingerprints"]["morgan"]["bits"],
+            2048,
+        )
+
+        with zipfile.ZipFile(results["zip_file"]) as archive:
+            names = archive.namelist()
+            manifest_name = next(
+                name for name in names
+                if name.endswith("_run_manifest.json")
+            )
+            payload = json.loads(
+                archive.read(manifest_name).decode("utf-8")
+            )
+
+        self.assertEqual(payload["project_name"], "manifest_test")
+        self.assertIn(
+            "manifest_test_descriptors.csv",
+            payload["outputs"],
         )
 
 
