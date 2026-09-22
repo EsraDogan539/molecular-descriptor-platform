@@ -356,25 +356,34 @@ def _render_record_comparison(filtered):
             "Compare two curated records descriptively. Property differences do not "
             "establish causal structure-property relationships."
         )
-        c1, c2 = st.columns(2)
-        with c1:
-            reference_label = st.selectbox(
-                "Reference record",
-                labels,
-                key="database_compare_reference",
-            )
-        with c2:
-            candidate_options = [
-                label for label in labels if label != reference_label
-            ]
-            candidate_label = st.selectbox(
-                "Candidate record",
-                candidate_options,
-                key="database_compare_candidate",
-            )
+        with st.form("database_compare_form"):
+            c1, c2 = st.columns(2)
+            with c1:
+                reference_label = st.selectbox(
+                    "Reference record",
+                    labels,
+                    key="database_compare_reference",
+                )
+            with c2:
+                candidate_options = [
+                    label for label in labels if label != reference_label
+                ]
+                candidate_label = st.selectbox(
+                    "Candidate record",
+                    candidate_options,
+                    key="database_compare_candidate",
+                )
+            submitted = st.form_submit_button("Compare selected records")
+
+        if not submitted:
+            st.caption("Choose two records and press Compare selected records.")
+            return
 
         reference_row = record_lookup[reference_label]
         candidate_row = record_lookup[candidate_label]
+
+        st.session_state["database_compare_last_reference"] = reference_label
+        st.session_state["database_compare_last_candidate"] = candidate_label
 
         left, right = st.columns(2, gap="large")
         with left:
