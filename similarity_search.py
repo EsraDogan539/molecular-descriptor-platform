@@ -51,16 +51,21 @@ def find_similar_molecules(
 
     results = []
 
-    for _, row in valid_df.iterrows():
+    molecule_id_idx = valid_df.columns.get_loc("Molecule_ID")
+    smiles_idx = valid_df.columns.get_loc("Canonical SMILES")
+    formula_idx = valid_df.columns.get_loc("Molecular Formula")
+    mw_idx = valid_df.columns.get_loc("Molecular Weight")
+    logp_idx = valid_df.columns.get_loc("LogP")
+    tpsa_idx = valid_df.columns.get_loc("TPSA")
 
-        molecule_id = str(row["Molecule_ID"])
+    for row in valid_df.itertuples(index=False, name=None):
+        molecule_id = str(row[molecule_id_idx])
 
         if molecule_id == str(reference_id):
             continue
 
-        target_fp = calculate_morgan_fingerprint(
-            row["Canonical SMILES"]
-        )
+        target_smiles = row[smiles_idx]
+        target_fp = calculate_morgan_fingerprint(target_smiles)
 
         if target_fp is None:
             continue
@@ -73,31 +78,35 @@ def find_similar_molecules(
         if similarity < minimum_similarity:
             continue
 
+        molecular_weight = row[mw_idx]
+        logp = row[logp_idx]
+        tpsa = row[tpsa_idx]
+
         results.append({
             "Molecule_ID": molecule_id,
-            "Canonical SMILES": row["Canonical SMILES"],
-            "Molecular Formula": row["Molecular Formula"],
+            "Canonical SMILES": target_smiles,
+            "Molecular Formula": row[formula_idx],
             "Morgan Similarity": round(similarity, 4),
-            "Molecular Weight": row["Molecular Weight"],
-            "LogP": row["LogP"],
-            "TPSA": row["TPSA"],
+            "Molecular Weight": molecular_weight,
+            "LogP": logp,
+            "TPSA": tpsa,
             "MW Difference": round(
                 abs(
-                    float(row["Molecular Weight"])
+                    float(molecular_weight)
                     - float(reference_row["Molecular Weight"])
                 ),
                 4
             ),
             "LogP Difference": round(
                 abs(
-                    float(row["LogP"])
+                    float(logp)
                     - float(reference_row["LogP"])
                 ),
                 4
             ),
             "TPSA Difference": round(
                 abs(
-                    float(row["TPSA"])
+                    float(tpsa)
                     - float(reference_row["TPSA"])
                 ),
                 4
