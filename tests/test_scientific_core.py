@@ -10,6 +10,12 @@ from descriptor_engine import (
     validate_input_dataframe,
 )
 
+from descriptor_dictionary import (
+    DESCRIPTOR_DEFINITIONS,
+    DESCRIPTOR_DICTIONARY_VERSION,
+    descriptor_dictionary_dataframe,
+)
+
 
 class ScientificCoreTests(unittest.TestCase):
     def test_sulfur_classification_and_aromatic_environment(self):
@@ -131,6 +137,34 @@ class ScientificCoreTests(unittest.TestCase):
             check_dtype=False,
         )
         self.assertEqual(summary_old, summary_new)
+
+    def test_descriptor_dictionary_is_unique_and_versioned(self):
+        dictionary_df = descriptor_dictionary_dataframe()
+        self.assertFalse(dictionary_df.empty)
+        self.assertEqual(DESCRIPTOR_DICTIONARY_VERSION, "0.9.0")
+        self.assertEqual(
+            len(dictionary_df["Descriptor"]),
+            dictionary_df["Descriptor"].nunique(),
+        )
+        self.assertTrue(
+            {"Descriptor", "Group", "Unit", "Definition", "Interpretation"}
+            .issubset(dictionary_df.columns)
+        )
+
+    def test_descriptor_dictionary_covers_scientific_core_outputs(self):
+        result, invalid = calculate_single_molecule_descriptors(
+            "DICT_001",
+            "c1ccsc1",
+        )
+        self.assertIsNone(invalid)
+        documented = {item["Descriptor"] for item in DESCRIPTOR_DEFINITIONS}
+        excluded = {
+            "Molecule_ID", "Original SMILES", "Canonical SMILES", "InChI",
+            "InChIKey", "Valid SMILES", "Molecular Formula", "Status",
+            "Contains S", "Contains Se", "Contains Te",
+        }
+        scientific_outputs = set(result) - excluded
+        self.assertTrue(scientific_outputs.issubset(documented))
 
 
 if __name__ == "__main__":
