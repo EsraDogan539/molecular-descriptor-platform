@@ -1031,6 +1031,26 @@ if page == "documentation":
     )
     st.caption(f"Descriptor Dictionary v{DESCRIPTOR_DICTIONARY_VERSION}")
 
+    st.markdown('<div class="section-rule-title">Provenance and data coverage</div>', unsafe_allow_html=True)
+    st.write(
+        "Record-level provenance is retained from the source dataset, including dataset/owner, "
+        "calculation method, basis set and curation status where available. Dedicated DOI or "
+        "reference fields are searchable and filterable only when they are present in the release; "
+        "missing provenance is kept explicit rather than inferred."
+    )
+    st.write(
+        "The Statistics page reports field-level availability for electronic properties, "
+        "standardized structures, method metadata and references. Coverage describes what is "
+        "present in the release and should not be interpreted as a quality score."
+    )
+
+    st.markdown('<div class="section-rule-title">Release quality checks</div>', unsafe_allow_html=True)
+    st.write(
+        "The v0.9 development workflow automatically audits missing or duplicate record IDs, "
+        "populated Canonical SMILES that cannot be parsed, non-numeric populated electronic-property "
+        "values and SMILES/InChIKey consistency before release."
+    )
+
     st.markdown('<div class="section-rule-title">Analyze your dataset</div>', unsafe_allow_html=True)
     st.write(
         "Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, "
