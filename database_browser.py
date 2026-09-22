@@ -1036,6 +1036,7 @@ def display_database_statistics():
     ) if "Eg_eV" in df.columns else 0
 
     reference_column = available_reference_column(df)
+    reference_count = int(reference_mask(df).sum()) if reference_column else 0
     doi_count = 0
     if reference_column:
         doi_count = int(
@@ -1055,13 +1056,13 @@ def display_database_statistics():
 
     k4, k5, k6 = st.columns(3)
     k4.metric("Records with Eg", f"{eg_count:,}")
-    k5.metric("DOI-backed records", f"{doi_count:,}")
+    k5.metric("Reference-backed records", f"{reference_count:,}")
     k6.metric("Repeated structure groups", f"{repeated_groups:,}")
 
     st.caption(
         "Unique-structure and repeated-group counts use standardized InChIKey identity where an exact "
-        "structure is available. DOI-backed records require a DOI that can be parsed from the stored "
-        "reference field."
+        "structure is available. Reference-backed records contain a stored source/reference value. "
+        f"Parsed DOI records: {doi_count:,}."
     )
 
     _render_statistics(df)
