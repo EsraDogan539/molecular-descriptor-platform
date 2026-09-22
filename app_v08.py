@@ -806,14 +806,14 @@ nav_items = [
     ("About", "about"),
 ]
 nav_html = "".join(
-    f'<a class="{"active" if page == key else ""}" href="?page={key}">{label}</a>'
+    f'<a class="{"active" if page == key else ""}" href="?page={key}" target="_self">{label}</a>'
     for label, key in nav_items
 )
 
 st.markdown(
     f"""
     <div class="academic-header">
-      <a class="academic-brand" href="?page=home">
+      <a class="academic-brand" href="?page=home" target="_self">
         <img class="brand-mark-img" src="{CHALMOLDB_ICON_URL}" alt="">
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
@@ -936,9 +936,9 @@ if page == "home":
         <div class="site-footer">
           <span><strong>ChalMolDB</strong> · Chalcogen Molecular Database · Database v{DATABASE_VERSION}</span>
           <span>
-            <a href="?page=documentation">Documentation</a>
+            <a href="?page=documentation" target="_self">Documentation</a>
             <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
-            <a href="?page=about">About</a>
+            <a href="?page=about" target="_self">About</a>
           </span>
         </div>
         """,
@@ -1177,7 +1177,7 @@ if page == "about":
     st.markdown(
         """
         <div class="resource-links">
-          <a href="?page=documentation">Documentation</a>
+          <a href="?page=documentation" target="_self">Documentation</a>
           <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
         </div>
         """,
