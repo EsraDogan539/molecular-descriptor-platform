@@ -35,7 +35,7 @@ jobs:
 
       - name: Syntax-check application files
         run: |
-          python -m py_compile release_metadata.py descriptor_engine.py descriptor_dictionary.py run_manifest.py database_metadata.py database_quality.py structure_search.py database_browser.py similarity_search.py scientific_panel.py app_v08.py
+          python -m py_compile release_metadata.py descriptor_engine.py descriptor_dictionary.py run_manifest.py database_metadata.py database_quality.py database_comparison.py structure_search.py database_browser.py similarity_search.py scientific_panel.py app_v08.py
 
       - name: Run performance baseline
         run: |
