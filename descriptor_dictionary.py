@@ -2,8 +2,7 @@
 
 import pandas as pd
 
-
-DESCRIPTOR_DICTIONARY_VERSION = "0.9.0"
+from release_metadata import DESCRIPTOR_DICTIONARY_VERSION
 
 DESCRIPTOR_DEFINITIONS = [
     {
