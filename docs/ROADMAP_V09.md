@@ -49,7 +49,7 @@ Implemented in the development branch:
 - Side-by-side similarity comparison with method-aware CSV export.
 - Machine-readable run manifest with input checksum, software versions, descriptor version, fingerprint settings and package inventory.
 
-## 3. Similarity and molecular comparison — in progress
+## 3. Similarity and molecular comparison — completed
 
 - Improve reference-molecule comparison layout.
 - Add side-by-side molecular identity and descriptor-difference views.
@@ -61,7 +61,7 @@ Implemented in the development branch:
 - Similarity results clearly state method and threshold.
 - Users can inspect why two records are similar or different without leaving the workflow.
 
-## 4. Database quality and provenance — in progress
+## 4. Database quality and provenance — completed
 
 - Strengthen provenance visibility at record level.
 - Improve DOI/reference discovery and filtering.
@@ -74,7 +74,7 @@ Implemented in the development branch:
 - Provenance is inspectable for every curated record where source metadata exists.
 - Quality checks run automatically before a database release.
 
-## 5. Export and reproducibility — in progress
+## 5. Export and reproducibility — completed
 
 - Add version metadata to CSV/ZIP exports.
 - Include a machine-readable run manifest in analysis packages.
@@ -84,7 +84,7 @@ Implemented in the development branch:
 ### Exit criteria
 - An exported analysis package contains enough metadata to reproduce the calculation settings.
 
-## 6. Reliability and release process
+## 6. Reliability and release process — completed
 
 - Keep full CI green on the development branch.
 - Expand tests for validation, metadata handling, similarity, and export behavior.
@@ -113,3 +113,19 @@ Implemented in the development branch:
 Development branch: `v0.9-development`
 
 Stable baseline: `v0.8.0`
+
+
+### v0.9 release readiness
+
+Validated before release:
+- Full CI suite: passed.
+- Automated release smoke checks: passed.
+- Database release audit: passed.
+- Desktop live UI review: passed.
+- Statistics coverage review: passed.
+- Analyze workflow review: passed.
+- Descriptor Dictionary review: passed.
+- Similarity pairwise comparison review: passed.
+- Export/reproducibility package review: passed.
+- Documentation review: passed.
+- 400 px mobile review: passed.
