@@ -289,10 +289,10 @@ def process_molecular_dataset(input_df):
     valid_results = []
     invalid_results = []
 
-    for _, row in input_df.iterrows():
+    for row in input_df.itertuples(index=False):
         valid_result, invalid_result = calculate_single_molecule_descriptors(
-            molecule_id=row["Molecule_ID"],
-            smiles=row["SMILES"]
+            molecule_id=row.Molecule_ID,
+            smiles=row.SMILES
         )
 
         if valid_result is not None:
@@ -387,9 +387,9 @@ def create_fingerprint_dataset(input_df):
     fingerprint_vectors = []
     invalid_results = []
 
-    for _, row in input_df.iterrows():
-        molecule_id = row["Molecule_ID"]
-        smiles = row["SMILES"]
+    for row in input_df.itertuples(index=False):
+        molecule_id = row.Molecule_ID
+        smiles = row.SMILES
 
         if pd.isna(smiles):
             invalid_results.append({
