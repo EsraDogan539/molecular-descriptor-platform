@@ -33,6 +33,34 @@ def _meaningful_mask(series):
     return text.ne("") & ~text.str.lower().isin({"nan", "none", "null", "n/a", "na"})
 
 
+
+def classify_numeric_measurement(value):
+    """Classify a property cell without collapsing multiple reported measurements."""
+    if pd.isna(value):
+        return "missing"
+
+    text = str(value).strip()
+    if text.lower() in {"", "nan", "none", "null", "n/a", "na"}:
+        return "missing"
+
+    try:
+        float(text)
+        return "scalar"
+    except ValueError:
+        pass
+
+    if ";" in text:
+        parts = [part.strip() for part in text.split(";")]
+        if len(parts) > 1 and all(parts):
+            try:
+                [float(part) for part in parts]
+                return "multi-valued"
+            except ValueError:
+                pass
+
+    return "non-numeric"
+
+
 def available_reference_column(df):
     for column in REFERENCE_COLUMNS:
         if column in df.columns:
@@ -93,6 +121,26 @@ def coverage_table(df):
     for label, column in PROPERTY_COLUMNS:
         if column not in df.columns:
             continue
+
+        if column == "Experimental_Eg_eV":
+            classes = df[column].map(classify_numeric_measurement)
+            available = int(classes.isin({"scalar", "multi-valued"}).sum())
+            rows.append({
+                "Field": label,
+                "Available": available,
+                "Missing": total - available,
+                "Coverage (%)": round(100 * available / total, 1) if total else 0.0,
+            })
+            multi_valued = int(classes.eq("multi-valued").sum())
+            if multi_valued:
+                rows.append({
+                    "Field": "Experimental Eg (multi-valued records)",
+                    "Available": multi_valued,
+                    "Missing": total - multi_valued,
+                    "Coverage (%)": round(100 * multi_valued / total, 1) if total else 0.0,
+                })
+            continue
+
         available = int(pd.to_numeric(df[column], errors="coerce").notna().sum())
         rows.append({
             "Field": label,
