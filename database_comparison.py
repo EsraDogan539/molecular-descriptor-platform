@@ -102,9 +102,9 @@ def comparison_export(
             "Candidate - Reference": None,
         },
         {
-            "Field": "Dataset / owner",
-            "Reference": reference_row.get("Dataset_Owner"),
-            "Candidate": candidate_row.get("Dataset_Owner"),
+            "Field": "Collection source",
+            "Reference": public_collection_label(reference_row.get("Split_Role"), reference_row.get("Dataset_Owner")),
+            "Candidate": public_collection_label(candidate_row.get("Split_Role"), candidate_row.get("Dataset_Owner")),
             "Candidate - Reference": None,
         },
         {
