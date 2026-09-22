@@ -110,3 +110,15 @@ v0.10 is ready when a user can:
 4. compare selected records,
 5. export the search/comparison with enough metadata to reproduce the workflow,
 6. use the complete flow on desktop and mobile without layout failure.
+
+
+## Completion status
+
+**Completed for v0.10.0 release candidate.**
+
+The structure-first workflow, curated-record comparison, provenance/citation export, reproducible query manifest, validation, performance baseline, desktop review and 400 px mobile review are complete.
+
+Remaining release operations are administrative only:
+- confirm the final deployed commit,
+- create the v0.10.0 tag,
+- publish the GitHub release.
