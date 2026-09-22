@@ -93,3 +93,67 @@ def query_manifest_json(manifest):
         sort_keys=True,
         default=str,
     )
+
+
+def load_query_manifest(payload):
+    """Parse and validate a ChalMolDB query-manifest payload.
+
+    Accepts UTF-8 bytes, JSON text, or an already-decoded mapping.
+    Validation is intentionally limited to fields needed for replay so that
+    compatible manifests from earlier scientific-core releases remain usable.
+    """
+    if isinstance(payload, bytes):
+        payload = payload.decode("utf-8")
+    if isinstance(payload, str):
+        try:
+            manifest = json.loads(payload)
+        except json.JSONDecodeError as exc:
+            raise ValueError("The uploaded file is not valid JSON.") from exc
+    elif isinstance(payload, dict):
+        manifest = payload
+    else:
+        raise ValueError("Unsupported query-manifest payload.")
+
+    if not isinstance(manifest, dict):
+        raise ValueError("The query manifest must contain a JSON object.")
+
+    schema_version = str(manifest.get("schema_version", "")).strip()
+    if schema_version != QUERY_MANIFEST_SCHEMA_VERSION:
+        raise ValueError(
+            f"Unsupported query-manifest schema: {schema_version or 'missing'}. "
+            f"Expected {QUERY_MANIFEST_SCHEMA_VERSION}."
+        )
+
+    query = manifest.get("query")
+    if not isinstance(query, dict):
+        raise ValueError("The query manifest does not contain a valid query configuration.")
+
+    structure = query.get("structure")
+    if structure is not None and not isinstance(structure, dict):
+        raise ValueError("The query manifest contains an invalid structure configuration.")
+
+    filters = query.get("filters")
+    if filters is not None and not isinstance(filters, dict):
+        raise ValueError("The query manifest contains an invalid filters configuration.")
+
+    return manifest
+
+
+def replay_configuration(manifest):
+    """Return the replayable query configuration from a validated manifest."""
+    manifest = load_query_manifest(manifest)
+    query = manifest["query"]
+    structure = query.get("structure") or {}
+    fingerprint = query.get("fingerprint") or {}
+    filters = query.get("filters") or {}
+
+    return {
+        "text_query": query.get("text_query") or "",
+        "structure_query": structure.get("input_smiles") or "",
+        "structure_mode": structure.get("mode") or "Exact",
+        "minimum_similarity": fingerprint.get("minimum_similarity", 0.40),
+        "maximum_results": fingerprint.get("maximum_results", 50),
+        "filters": filters,
+        "manifest_database_version": manifest.get("database_version"),
+        "manifest_scientific_core_version": manifest.get("scientific_core_version"),
+    }
