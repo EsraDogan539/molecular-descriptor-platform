@@ -44,6 +44,45 @@ def doi_url(value):
     return f"https://doi.org/{doi}" if doi else None
 
 
+# Columns that may hold a DOI or DOI URL separately from free-text references.
+DOI_SOURCE_COLUMNS = ("DOI", "DOI_or_Reference", "Source_URL")
+
+
+def is_meaningful(value):
+    """Return True for a non-missing, non-blank value (NaN-safe)."""
+    if value is None:
+        return False
+    try:
+        if pd.isna(value):
+            return False
+    except (TypeError, ValueError):
+        pass
+    return str(value).strip().lower() not in {"", "nan", "none"}
+
+
+def first_meaningful(*values):
+    """Return the first non-missing value.
+
+    ``a or b`` is not safe for pandas rows because float NaN is truthy.
+    """
+    for value in values:
+        if is_meaningful(value):
+            return value
+    return None
+
+
+def record_doi(row, reference_value=None):
+    """Return a record's DOI from its reference text or a dedicated DOI/URL field."""
+    doi = extract_doi(reference_value)
+    if doi:
+        return doi
+    for column in DOI_SOURCE_COLUMNS:
+        doi = extract_doi(row.get(column))
+        if doi:
+            return doi
+    return None
+
+
 def record_reference_value(row):
     row_df = row.to_frame().T
     column = available_reference_column(row_df)
@@ -58,7 +97,7 @@ def citation_ready_record(
 ):
     """Return a citation-ready single-record table preserving source values."""
     reference_column, reference_value = record_reference_value(row)
-    doi = extract_doi(reference_value)
+    doi = record_doi(row, reference_value)
 
     fields = [
         ("Database record ID", public_record_id),
@@ -67,7 +106,7 @@ def citation_ready_record(
         ("Collection source", public_collection_label(row.get("Split_Role"), row.get("Dataset_Owner"))),
         ("Collection role", row.get("Split_Role")),
         ("Scope", row.get("Scope_Flag")),
-        ("Molecule / system", row.get("Molecule_Name") or row.get("System_Code")),
+        ("Molecule / system", first_meaningful(row.get("Molecule_Name"), row.get("System_Code"))),
         ("Canonical SMILES", row.get("Canonical_SMILES")),
         ("InChIKey", row.get("InChIKey")),
         ("Chalcogen type", row.get("Chalcogen_Type")),
@@ -83,7 +122,7 @@ def citation_ready_record(
         ("Reference field", reference_column),
         ("Reference / DOI", reference_value),
         ("DOI", doi),
-        ("DOI URL", doi_url(reference_value)),
+        ("DOI URL", doi_url(doi)),
         ("Curation status", row.get("Curation_Status")),
     ]
 

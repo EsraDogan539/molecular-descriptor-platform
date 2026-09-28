@@ -14,11 +14,18 @@ from database_quality import (
     reference_mask,
 )
 from database_comparison import comparison_export, comparison_table
-from database_filters import apply_advanced_filters, numeric_bounds
+from database_filters import (
+    TARGET_CHALCOGENS,
+    apply_advanced_filters,
+    chalcogen_presence_mask,
+    numeric_bounds,
+)
 from provenance_export import (
     citation_ready_record,
     doi_url,
     extract_doi,
+    first_meaningful,
+    record_doi,
     record_reference_value,
 )
 from query_manifest import (
@@ -147,7 +154,7 @@ def _render_record_detail(row):
     chalcogen = _display_value(row.get("Chalcogen_Type"))
     smiles = row.get("Canonical_SMILES")
     reference_column, reference_value = record_reference_value(row)
-    reference_link = doi_url(reference_value)
+    reference_link = doi_url(record_doi(row, reference_value))
 
     st.markdown(
         f"""
@@ -176,7 +183,7 @@ def _render_record_detail(row):
                 st.info("Exact standardized structure is not available for this record.")
 
         with right:
-            molecule_system = row.get("Molecule_Name") or row.get("System_Code")
+            molecule_system = first_meaningful(row.get("Molecule_Name"), row.get("System_Code"))
             identity_html = f"""
             <div class="detail-section">
               <div class="detail-section-title">Identity</div>
@@ -569,34 +576,8 @@ def _render_statistics(df):
     with stat2:
         if all(c in df.columns for c in ["S_Count", "Se_Count", "Te_Count"]):
             def _element_presence(element, count_column):
-                present = pd.to_numeric(
-                    df[count_column], errors="coerce"
-                ).fillna(0).gt(0)
-
-                for metadata_column in ["Donor_Chalcogen", "Acceptor_Chalcogen", "Chalcogen_Type"]:
-                    if metadata_column in df.columns:
-                        metadata = df[metadata_column].fillna("").astype(str)
-                        if element == "S":
-                            match = metadata.str.contains(
-                                r"(^|[^A-Za-z])S([^A-Za-z]|$)",
-                                case=False,
-                                regex=True,
-                            )
-                        elif element == "Se":
-                            match = metadata.str.contains(
-                                r"(^|[^A-Za-z])Se([^A-Za-z]|$)",
-                                case=False,
-                                regex=True,
-                            )
-                        else:
-                            match = metadata.str.contains(
-                                r"(^|[^A-Za-z])Te([^A-Za-z]|$)",
-                                case=False,
-                                regex=True,
-                            )
-                        present = present | match
-
-                return int(present.sum())
+                # Shared with the advanced filter so statistics and filtering agree.
+                return int(chalcogen_presence_mask(df, element).sum())
 
             with st.container(border=True):
                 counts = pd.Series({
@@ -732,6 +713,11 @@ def _apply_replay_manifest_to_session(manifest, df):
             continue
         value = int(_clamp(minimum_counts.get(column, 0), 0, max(0, int(max_count))))
         st.session_state[f"advanced_min_{column}"] = value
+
+    required = filters.get("advanced_required_chalcogens") or []
+    st.session_state["advanced_required_chalcogens"] = [
+        element for element in required if element in TARGET_CHALCOGENS
+    ]
 
     categorical = filters.get("advanced_categorical") or {}
     categorical_specs = {
@@ -1053,6 +1039,7 @@ def display_database_browser():
 
     numeric_ranges = {}
     minimum_counts = {}
+    required_chalcogens = []
     categorical_filters = {}
 
     with st.expander("Advanced filters", expanded=False):
@@ -1103,7 +1090,23 @@ def display_database_browser():
                     max(float(lower), float(upper)),
                 )
 
-        st.markdown("**Minimum chalcogen counts**")
+        st.markdown("**Chalcogen content**")
+        required_chalcogens = st.multiselect(
+            "Must contain",
+            list(TARGET_CHALCOGENS),
+            key="advanced_required_chalcogens",
+            help=(
+                "Keeps records that contain every selected element. Uses atom counts for "
+                "structure-complete records and donor/acceptor chalcogen metadata for "
+                "records without an exact structure."
+            ),
+        )
+
+        st.markdown("**Minimum chalcogen atom counts**")
+        st.caption(
+            "Atom counts are available only for structure-complete records; "
+            "records without counts do not match an enabled count filter."
+        )
         count_columns = [("S", "S_Count"), ("Se", "Se_Count"), ("Te", "Te_Count")]
         cc1, cc2, cc3 = st.columns(3)
         for container, (label, column) in zip((cc1, cc2, cc3), count_columns):
@@ -1180,6 +1183,7 @@ def display_database_browser():
         numeric_ranges=numeric_ranges,
         minimum_counts=minimum_counts,
         categorical_filters=categorical_filters,
+        required_chalcogens=required_chalcogens,
     )
 
     if structure_query:
@@ -1220,6 +1224,12 @@ def display_database_browser():
             "advanced_numeric_ranges": numeric_ranges,
             "advanced_minimum_counts": minimum_counts,
             "advanced_categorical": categorical_filters,
+            # Optional key; omitted when unused so existing manifests keep their checksum.
+            **(
+                {"advanced_required_chalcogens": list(required_chalcogens)}
+                if required_chalcogens
+                else {}
+            ),
         },
         result_record_ids=(
             filtered["Record_ID"].tolist()
@@ -1298,13 +1308,14 @@ def display_database_statistics():
 
     reference_column = available_reference_column(df)
     reference_count = int(reference_mask(df).sum()) if reference_column else 0
-    doi_count = 0
-    if reference_column:
-        doi_count = int(
-            df[reference_column]
-            .apply(lambda value: extract_doi(value) is not None)
-            .sum()
-        )
+    doi_count = int(
+        df.apply(
+            lambda row: record_doi(
+                row, row.get(reference_column) if reference_column else None
+            ) is not None,
+            axis=1,
+        ).sum()
+    ) if len(df) else 0
 
     st.markdown(
         '<div class="section-rule-title">Release snapshot</div>',
