@@ -699,6 +699,14 @@ st.markdown(
         border-color: var(--accent) !important;
         color: white !important;
     }
+    /* The global `p` colour rule otherwise darkens labels inside primary buttons. */
+    .stButton > button[kind="primary"] p,
+    .stButton > button[kind="primary"] span,
+    .stDownloadButton > button[kind="primary"] p,
+    a[data-testid="stBaseLinkButton-primary"] p,
+    a[data-testid="stLinkButton"] p {
+        color: white !important;
+    }
     a[data-testid="stBaseLinkButton-primary"],
     a[data-testid="stLinkButton"] {
         background: var(--accent) !important;
