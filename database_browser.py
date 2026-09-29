@@ -284,7 +284,7 @@ def _render_record_detail(row):
 
 def _public_table(df):
     preferred_columns = [
-        "Record_ID", "Molecule_Name", "System_Code", "Chalcogen_Type",
+        "Record_ID", "Molecule_Name", "System_Code", "Unit_Type", "Chalcogen_Type",
         "Structure Similarity", "Eg_eV", "HOMO_eV", "LUMO_eV",
     ]
     existing = [c for c in preferred_columns if c in df.columns]
@@ -294,6 +294,7 @@ def _public_table(df):
         "Record_ID": "Database ID",
         "Molecule_Name": "Molecule / system",
         "System_Code": "System",
+        "Unit_Type": "Unit type",
         "Chalcogen_Type": "Chalcogen",
         "Structure Similarity": "Similarity",
         "Eg_eV": "Eg (eV)",
@@ -311,6 +312,11 @@ def _public_table(df):
         table = table.drop(columns=["System"])
     elif "System" in table.columns and "Molecule / system" not in table.columns:
         table = table.rename(columns={"System": "Molecule / system"})
+
+    # Oligomer series (monomer ... polymer) share a system code; without the unit
+    # type they read as duplicate systems. Shown only when the results contain it.
+    if "Unit type" in table.columns and not table["Unit type"].notna().any():
+        table = table.drop(columns=["Unit type"])
 
     for column in table.columns:
         if column in {"Eg (eV)", "HOMO (eV)", "LUMO (eV)", "Similarity"}:
