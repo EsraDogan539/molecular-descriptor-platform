@@ -1,7 +1,18 @@
 
-# Molecular Descriptor Platform
+# ChalMolDB — Chalcogen Molecular Database
 
-A Streamlit-based molecular descriptor and similarity analysis platform developed for cheminformatics and materials informatics studies.
+A curated chalcogen-focused molecular database and Streamlit research interface for standardized molecular identity, electronic-property data, interpretable S/Se/Te descriptors, structure-first exploration, provenance-aware inspection, and reproducible query workflows.
+
+**Current archived release:** Database v1 · Scientific Core v0.11.0  
+**Version DOI:** https://doi.org/10.5281/zenodo.22903550  
+**Concept DOI (all versions):** https://doi.org/10.5281/zenodo.22903549  
+**GitHub release:** https://github.com/EsraDogan539/molecular-descriptor-platform/releases/tag/v0.11.0
+
+## Citation
+
+Doğan, E. N. (2026). *ChalMolDB v0.11.0 — Chalcogen Molecular Database* (Version 0.11.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22903550
+
+For references to the evolving ChalMolDB software record across versions, use the concept DOI: https://doi.org/10.5281/zenodo.22903549
 
 ## Features
 
@@ -25,7 +36,7 @@ MOL_002,CCO
 
 ## Scientific Core terminology
 
-The publication-oriented `v0.8-scientific-core` branch uses a fixed S/Se/Te-focused descriptor vocabulary.
+The publication-oriented scientific core uses a fixed S/Se/Te-focused descriptor vocabulary. The archived publication release is `v0.11.0`.
 
 - **Target Chalcogen Count** = `Sulfur Count + Selenium Count + Tellurium Count`
 - **Target Chalcogen Fraction** = `Target Chalcogen Count / Heavy Atom Count`
