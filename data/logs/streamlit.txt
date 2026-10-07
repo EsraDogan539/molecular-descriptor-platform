@@ -1,96 +1,111 @@
-2026-10-07 11:05:51.369 Uvicorn server started on :::8501
+2026-10-07 11:09:35.860 Uvicorn server started on :::8501
 
   You can now view your Streamlit app in your browser.
 
   Local URL: http://localhost:8501
-  Network URL: http://10.1.0.107:8501
-  External URL: http://134.33.79.112:8501
+  Network URL: http://10.1.0.157:8501
+  External URL: http://57.151.136.169:8501
 
-2026-10-07 11:06:21.702 Please replace `use_container_width` with `width`.
-
-`use_container_width` will be removed after 2025-12-31.
-
-For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:22.178 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:07.994 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:22.193 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:08.431 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:25.721 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:08.439 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:25.738 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:12.038 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:25.745 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:12.057 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:30.673 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:12.066 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:30.686 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:16.557 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:30.692 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:16.570 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:30.710 Please replace `st.components.v1.html` with `st.iframe`.
+2026-10-07 11:10:16.577 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 11:10:16.589 Please replace `st.components.v1.html` with `st.iframe`.
 
 `st.components.v1.html` will be removed after 2026-06-01.
-2026-10-07 11:06:40.508 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:26.376 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:40.951 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:26.719 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:06:40.959 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:26.726 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 11:10:30.763 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 11:10:31.051 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 11:10:31.057 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
 findfont: Failed to find font weight semibold for DejaVu Sans, now using 700.
-2026-10-07 11:07:13.469 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:47.225 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:07:13.593 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:47.361 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:07:13.714 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:47.491 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:07:13.886 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:47.671 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
 For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
-2026-10-07 11:07:25.588 Please replace `use_container_width` with `width`.
+2026-10-07 11:10:59.362 Please replace `use_container_width` with `width`.
 
 `use_container_width` will be removed after 2025-12-31.
 
