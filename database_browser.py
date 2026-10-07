@@ -36,12 +36,24 @@ from query_manifest import (
 )
 from public_labels import public_collection_label, sanitize_public_dataframe
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
+from structures_3d import COORDINATE_ATTRIBUTION, load_structure_blocks, structure_block_for
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
     SIMILARITY_METRIC,
     structure_search,
 )
+
+
+try:  # optional molecule editor; the SMILES box keeps working without it
+    from streamlit_ketcher import st_ketcher
+except Exception:  # pragma: no cover - depends on the deployment environment
+    st_ketcher = None
+
+
+@st.cache_data(show_spinner=False)
+def _structure_blocks():
+    return load_structure_blocks()
 
 
 FULL_DATABASE_PATHS = [
@@ -280,6 +292,17 @@ def _render_record_detail(row):
                 "text/csv",
                 key=f"citation_record_{record_id}",
             )
+
+            sdf_block = structure_block_for(row.get("Record_ID"), _structure_blocks())
+            if sdf_block:
+                st.download_button(
+                    "Download 3D structure (SDF)",
+                    sdf_block.encode("utf-8"),
+                    f"{record_id}_3D.sdf",
+                    "chemical/x-mdl-sdfile",
+                    key=f"structure_3d_{record_id}",
+                )
+                st.caption(COORDINATE_ATTRIBUTION)
 
 
 def _public_table(df):
@@ -947,6 +970,19 @@ def display_database_browser():
             "Search standardized curated structures by exact identity, graph substructure "
             "or Morgan/Tanimoto fingerprint similarity."
         )
+        if st_ketcher is not None and st.toggle(
+            "Draw structure", value=False, key="database_draw_structure",
+            help="Draw a query in the Ketcher editor and press Apply; the SMILES field is filled automatically.",
+        ):
+            drawn = st_ketcher(
+                st.session_state.get("database_structure_query", ""),
+                height=420,
+                key="database_ketcher",
+            )
+            if drawn and drawn != st.session_state.get("database_last_drawn_smiles"):
+                st.session_state["database_last_drawn_smiles"] = drawn
+                st.session_state["database_structure_query"] = drawn
+
         structure_query = st.text_input(
             "Query SMILES",
             placeholder="e.g. c1ccsc1",
