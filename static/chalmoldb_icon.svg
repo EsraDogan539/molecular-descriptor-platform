@@ -1,9 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img">
-<rect width="120" height="120" rx="20" fill="#F8FAFC"/>
-<path d="M60 18 L92 36 L92 74 L60 102 L28 74 L28 36 Z" fill="none" stroke="#1F4E79" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<g font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
-<circle cx="60" cy="18" r="16" fill="#D6A400"/><text x="60" y="18" font-size="20" fill="#fff">S</text>
-<circle cx="28" cy="74" r="17" fill="#0F766E"/><text x="28" y="74" font-size="18" fill="#fff">Se</text>
-<circle cx="92" cy="74" r="17" fill="#6B4C8A"/><text x="92" y="74" font-size="18" fill="#fff">Te</text>
-<circle cx="28" cy="36" r="8" fill="#5DA9E9"/><circle cx="92" cy="36" r="8" fill="#5DA9E9"/><circle cx="60" cy="102" r="8" fill="#5DA9E9"/>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 140" role="img" aria-label="ChalMolDB molecular mark">
+<rect width="154" height="140" rx="20" fill="#F8FAFC"/>
+<defs>
+<radialGradient id="cmC" cx="32%" cy="25%" r="72%"><stop stop-color="#ffffff"/><stop offset=".48" stop-color="#dbe1e7"/><stop offset="1" stop-color="#8b96a1"/></radialGradient>
+<radialGradient id="cmS" cx="30%" cy="24%" r="72%"><stop stop-color="#fff5b6"/><stop offset=".42" stop-color="#e7bd39"/><stop offset="1" stop-color="#ad7e00"/></radialGradient>
+<radialGradient id="cmSe" cx="30%" cy="24%" r="72%"><stop stop-color="#c6fff6"/><stop offset=".42" stop-color="#39aa9e"/><stop offset="1" stop-color="#0d6b63"/></radialGradient>
+<radialGradient id="cmTe" cx="30%" cy="24%" r="72%"><stop stop-color="#eee6f7"/><stop offset=".42" stop-color="#846b9f"/><stop offset="1" stop-color="#55406d"/></radialGradient>
+<linearGradient id="cmBond" x1="0" x2="1"><stop stop-color="#99a4af"/><stop offset=".5" stop-color="#cbd2d9"/><stop offset="1" stop-color="#7f8a95"/></linearGradient>
+<filter id="cmShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#173b5b" flood-opacity=".18"/></filter>
+</defs>
+<g transform="translate(0 0)" filter="url(#cmShadow)" stroke-linecap="round">
+<g stroke="url(#cmBond)" stroke-width="6">
+<path d="M48.0 36.0 77.4 53.0"/>
+<path d="M77.4 53.0 77.4 87.0"/>
+<path d="M77.4 87.0 48.0 104.0"/>
+<path d="M48.0 104.0 18.6 87.0"/>
+<path d="M18.6 87.0 18.6 53.0"/>
+<path d="M18.6 53.0 48.0 36.0"/>
+<path d="M77.4 53.0 106.9 36.0"/>
+<path d="M106.9 36.0 136.3 53.0"/>
+<path d="M136.3 53.0 136.3 87.0"/>
+<path d="M136.3 87.0 106.9 104.0"/>
+<path d="M106.9 104.0 77.4 87.0"/>
+</g><g stroke="#ffffff" stroke-width="1.6">
+<circle cx="48.0" cy="36.0" r="13" fill="url(#cmS)"/>
+<circle cx="77.4" cy="53.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="77.4" cy="87.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="48.0" cy="104.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="18.6" cy="87.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="18.6" cy="53.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="106.9" cy="36.0" r="14" fill="url(#cmSe)"/>
+<circle cx="136.3" cy="53.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="136.3" cy="87.0" r="7.5" fill="url(#cmC)"/>
+<circle cx="106.9" cy="104.0" r="14" fill="url(#cmTe)"/>
+</g><g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="#ffffff">
+<text x="48.0" y="36.5" font-size="13">S</text>
+<text x="106.9" y="36.5" font-size="11.5">Se</text>
+<text x="106.9" y="104.5" font-size="11.5">Te</text>
+</g></g>
+</svg>
