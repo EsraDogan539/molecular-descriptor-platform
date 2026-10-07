@@ -41,3 +41,31 @@ def test_release_bundle_covers_every_development_record():
     dev_ids = db.loc[db.Split_Role == "Development/Training", "Record_ID"]
     assert len(blocks) == len(dev_ids) == 3088
     assert all(structure_block_for(rid, blocks) for rid in dev_ids)
+
+
+def test_external_bundle_matches_structured_external_records():
+    from structures_3d import EXTERNAL_STRUCTURES_3D_PATH, coordinate_attribution
+
+    blocks = load_structure_blocks(EXTERNAL_STRUCTURES_3D_PATH)
+    db = pd.read_csv("data/chalcogen_database_v1_master.csv.gz", low_memory=False)
+    expected = db.loc[
+        db.Structure_Availability.eq("Exact structure + 3D coordinates (author geometry file)"), "Record_ID"
+    ]
+    assert len(blocks) == len(expected) == 33
+    assert all(rid.startswith("HAKAN_") for rid in expected)
+    for rid in expected:
+        block = structure_block_for(rid, blocks)
+        assert block is not None
+        assert "Kay" in coordinate_attribution(block)
+
+
+def test_attribution_is_per_collection():
+    from structures_3d import COORDINATE_ATTRIBUTION, coordinate_attribution
+
+    dev_block = parse_sdf_blocks(SAMPLE)["DEV_0001"]
+    assert coordinate_attribution(dev_block) == COORDINATE_ATTRIBUTION
+    ext_block = SAMPLE.replace("DEV_0001", "EXT_0001").replace(
+        "$$$$", "> <Coordinate_Source>\nGroup X file\n\n> <Coordinate_License>\nCC BY 4.0\n\n$$$$"
+    )
+    caption = coordinate_attribution(parse_sdf_blocks(ext_block)["EXT_0001"])
+    assert caption == "3D coordinates: Group X file; CC BY 4.0."

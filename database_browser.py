@@ -36,7 +36,7 @@ from query_manifest import (
 )
 from public_labels import public_collection_label, sanitize_public_dataframe
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
-from structures_3d import COORDINATE_ATTRIBUTION, load_structure_blocks, structure_block_for
+from structures_3d import coordinate_attribution, load_all_structure_blocks, structure_block_for
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -53,7 +53,7 @@ except Exception:  # pragma: no cover - depends on the deployment environment
 
 @st.cache_data(show_spinner=False)
 def _structure_blocks():
-    return load_structure_blocks()
+    return load_all_structure_blocks()
 
 
 FULL_DATABASE_PATHS = [
@@ -269,6 +269,8 @@ def _render_record_detail(row):
                     "Conditions": row.get("Solvent_or_Conditions"),
                     "Structure availability": row.get("Structure_Availability"),
                     "Curation status": row.get("Curation_Status"),
+                    "Curation note": row.get("Curation_Note"),
+                    "Repeat unit SMILES": row.get("Repeat_Unit_SMILES"),
                     "Repeated structure": row.get("Duplicate_Flag"),
                     "Source method description": row.get("Method"),
                     "Reference / DOI": row.get(reference_column) if reference_column else None,
@@ -302,7 +304,9 @@ def _render_record_detail(row):
                     "chemical/x-mdl-sdfile",
                     key=f"structure_3d_{record_id}",
                 )
-                st.caption(COORDINATE_ATTRIBUTION)
+                attribution = coordinate_attribution(sdf_block)
+                if attribution:
+                    st.caption(attribution)
 
 
 def _public_table(df):
