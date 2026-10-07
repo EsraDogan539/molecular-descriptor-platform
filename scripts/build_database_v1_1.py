@@ -143,16 +143,16 @@ def main():
     a39 = ["EROL_1093", "EROL_1249"]
     a39_smiles = set(df.loc[df.Record_ID.isin(a39), "Acceptor_SMILES"])
     assert len(a39_smiles) == 1
-    # This acceptor fragment occurs in no other record, and A39 is the only acceptor missing for donors D21/D24.
+    # Every other record with this acceptor fragment is A39, and A39 is the only acceptor missing for D21/D24.
     for rid, donor in (("EROL_1093", "D21"), ("EROL_1249", "D24")):
         present = set(df.loc[dev & (df.Donor_ID == donor), "Acceptor_ID"].dropna())
         assert "A39" not in present, (rid, donor)
-    other = df.loc[dev & ~df.Record_ID.isin(a39), "Acceptor_SMILES"]
-    assert not other.isin(a39_smiles).any()
+    same_fragment = dev & ~df.Record_ID.isin(a39) & df.Acceptor_SMILES.isin(a39_smiles)
+    assert same_fragment.sum() > 0 and set(df.loc[same_fragment, "Acceptor_ID"]) == {"A39"}
     df.loc[df.Record_ID.isin(a39), "Acceptor_ID"] = "A39"
     df.loc[df.Record_ID.isin(a39), "Curation_Note"] = (
-        "Acceptor_ID A39 assigned by curation: source title gives the donor only; the acceptor fragment is "
-        "unique to these two records and A39 is the only acceptor otherwise missing for this donor."
+        "Acceptor_ID A39 assigned by curation: the source title gives the donor only; the acceptor fragment "
+        "is the one used by all other A39 records, and A39 is the only acceptor otherwise missing for this donor."
     )
     assert df.loc[dev, ["Donor_ID", "Acceptor_ID"]].notna().all().all()
     dup_pair = df.loc[dev].duplicated(["Donor_ID", "Acceptor_ID"], keep=False)
