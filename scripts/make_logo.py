@@ -59,7 +59,14 @@ def defs(p, shadow=(2.5, 2.5, 0.18)):
 </defs>"""
 
 
-def molecule(p, rr, link, bond_w, c_r, x_r, font, ox, oy, edge=1.6):
+def is_double(a, b):
+    """Kekule structure of each ring: X-Ca, Ca=Cb, Cb-Cc, Cc=Cd, Cd-X; inter-ring bonds single."""
+    if a[-1] != b[-1]:
+        return False
+    return {a[:2], b[:2]} in ({"Ca", "Cb"}, {"Cc", "Cd"})
+
+
+def molecule(p, rr, link, bond_w, c_r, x_r, font, ox, oy, edge=1.6, double_bonds=False):
     atoms, bonds = terchalcogenophene(rr, link)
     n = lambda v: f"{v:.1f}"  # noqa: E731
     out = [f'<g transform="translate({n(ox)} {n(oy)})" filter="url(#{p}Shadow)" stroke-linecap="round">',
@@ -67,6 +74,15 @@ def molecule(p, rr, link, bond_w, c_r, x_r, font, ox, oy, edge=1.6):
     for a, b in bonds:
         _, x1, y1 = atoms[a]
         _, x2, y2 = atoms[b]
+        if double_bonds and is_double(a, b):
+            # two thinner parallel sticks
+            length = math.hypot(x2 - x1, y2 - y1)
+            nx, ny = -(y2 - y1) / length, (x2 - x1) / length
+            off, w = 0.6 * bond_w, 0.45 * bond_w
+            for sgn in (1, -1):
+                out.append(f'<path stroke-width="{w:.1f}" d="M{n(x1 + sgn * off * nx)} {n(y1 + sgn * off * ny)} '
+                           f'{n(x2 + sgn * off * nx)} {n(y2 + sgn * off * ny)}"/>')
+            continue
         out.append(f'<path d="M{n(x1)} {n(y1)} {n(x2)} {n(y2)}"/>')
     out.append(f'</g><g stroke="#ffffff" stroke-width="{edge}">')
     for el, x, y in atoms.values():
@@ -115,7 +131,7 @@ def main():
         (ROOT / folder / "chalmoldb_logo.svg").write_text(logo)
 
     hero_body, _, _ = molecule("hero", rr=56, link=58, bond_w=13, c_r=19, x_r=36, font=23, ox=380, oy=280,
-                               edge=3)
+                               edge=3, double_bonds=True)
     hero = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540">\n'
             f'{defs("hero", (9, 10, 0.20))}\n{hero_body}\n</svg>\n')
     (ROOT / "assets/hero_molecule.svg").write_text(hero)
