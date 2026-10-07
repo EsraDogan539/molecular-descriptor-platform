@@ -8,7 +8,6 @@ names were changed (spaces replaced by underscores).
 | Folder | Systems | Family in ChalMolDB |
 |---|---|---|
 | `A-DAD_Monomer`, `A-DAD_Hexamer` | 16 + 16 | benzochalcogenadiazole (Ozkilinc & Kayi 2019) — repeat unit of the polymer records |
-| `B-DAD_Monomer`, `B-DAD_Hexamer` | 16 + 16 | B_system / benzochalcogenadiazole-like DAD (3,4-ethylenedioxy-chalcogenophene donors) |
 | `C-DAD_Monomer`, `C-DAD_Hexamer` | 16 + 16 | chalcogendiazoloquinoxaline (Kayi, Sen & Ozkilinc 2024) |
 
 Each system code (e.g. `SeTeSe`) gives the donor, acceptor and donor chalcogen. The files are TD-DFT
@@ -21,15 +20,18 @@ A file's chemical identity is accepted when the intended family structure has th
 the coordinates or as the file's Gaussian connectivity block. Coordinates are released only when, in addition,
 the formula matches and every ring chalcogen bond length is plausible for that element.
 
-## Findings of the automated check
+## Results of the automated check
 
-| Set | Identity confirmed | Coordinates released | Issue |
+| Set | Identity confirmed | Coordinates released | Note |
 |---|---|---|---|
-| C monomers, C hexamers | 32/32 | 32/32 | none |
+| C monomers, C hexamers | 32/32 | 32/32 | used for the chalcogendiazoloquinoxaline records |
 | A hexamers | 16/16 | 15/16 | `A-OSO6`: S–N 1.897 Å, identical to the Se–N length of `A-OSeO6` (relabelled Se geometry) |
-| A monomers | 16/16 | 3/16 | ring bond lengths do not change with the element (e.g. X–N 1.767 Å for O, S, Se and Te): geometries were not re-optimized after the chalcogen was changed |
-| B monomers | 16/16 | 1/16 (`OOO`) | all other files keep the `OOO` bond lengths (X–C 1.40 Å, X–N 1.43 Å for S, Se and Te) |
-| B hexamers | 0/16 | 0/16 | every file has 2 H fewer than the intended structure (C108H60 instead of C108H62); one benzo ring is missing both H atoms and has a 1.265 Å C–C bond |
+| A monomers | 16/16 | 3/16 | ring bond lengths do not change with the element (e.g. X–N 1.767 Å for O, S, Se and Te) |
 
-In ChalMolDB the B-system property values are kept as supplied but marked as unverified (`Curation_Note`); no
-structure is assigned to B-system records that lack a consistent geometry file.
+The A family appears in ChalMolDB only as polymer records, so the A files serve as structure references
+for the repeat unit; no A coordinates are attached to records.
+
+The geometry files of a third family (B system, 3,4-ethylenedioxychalcogenophene donors) were also checked.
+The hexamer files contain two H atoms fewer than the intended structures, and 15 of 16 monomer files were not
+re-optimized after the chalcogen was changed. The 112 B-system records were therefore removed in Database
+v1.1, and their geometry files are not distributed.

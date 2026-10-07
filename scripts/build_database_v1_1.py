@@ -1,6 +1,7 @@
-"""Build ChalMolDB Database v1.1 from the v1 master table.
+"""Build ChalMolDB Database v1.1 from the archived Database v1 table.
 
-All changes are deterministic assignments, so the script can be re-run on its own output.
+Input: data/releases/chalcogen_database_v1.csv.gz (Database v1, as archived on Zenodo).
+Output: data/chalcogen_database_v1_master.csv.gz (the table the application reads).
 Requires RDKit. Run from the repository root:
 
     python scripts/build_external_structures.py   # writes data/build/external_structures.{csv,sdf}
@@ -9,8 +10,9 @@ Requires RDKit. Run from the repository root:
 Changes (see docs/DATABASE_CHANGELOG.md):
   1. Neutral collection metadata (Dataset_Owner, Dataset_Name, Paper_Use).
   2. Development records: Donor_ID / Acceptor_ID for all records, source DOI, DFT level.
-  3. External records: exact structures where they can be confirmed, repeat-unit SMILES for every record,
-     provenance of the B-system records, English source-family notes.
+  3. External records: the B-system family (112 records) is removed because its geometry files are not
+     consistent with the reported systems; exact structures where they can be confirmed and repeat-unit
+     SMILES for every remaining record. Record identifiers are not renumbered.
   4. Duplicate_Flag = the record's InChIKey is shared with at least one other record.
   5. 3D coordinates of external records whose geometry file passes all checks
      (data/structures_3d_external.sdf.gz).
@@ -28,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import build_external_structures as bes  # noqa: E402
 
+V1 = ROOT / "data" / "releases" / "chalcogen_database_v1.csv.gz"
 MASTER = ROOT / "data" / "chalcogen_database_v1_master.csv.gz"
 EXT_CSV = ROOT / "data" / "build" / "external_structures.csv"
 EXT_SDF = ROOT / "data" / "build" / "external_structures.sdf"
@@ -38,10 +41,6 @@ DEV_REFERENCE = (
     "T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360-5369, Supporting Information "
     "(Band Gap and Reorganization Energy Prediction of Conducting Polymers by the Integration of Machine "
     "Learning and Density Functional Theory)"
-)
-B_REFERENCE = (
-    "Kayı group DFT calculations (Ankara University), released with ChalMolDB; "
-    "experimental polymer band gaps from E. Poverenov et al., J. Am. Chem. Soc. 2014, 136, 5138-5149, where available"
 )
 EXT_COORD_SOURCE = (
     "H. Kayı group, Ankara University: B3LYP/LANL2DZ geometry file {file} "
@@ -54,25 +53,15 @@ FAMILY_CODE = {
     "B_system / benzochalcogenadiazole-like DAD": "B",
     "chalcogendiazoloquinoxaline": "C",
 }
-B_FAMILY_LABEL = "ethylenedioxychalcogenophene-benzochalcogenadiazole DAD (B system)"
-FAMILY_CODE[B_FAMILY_LABEL] = "B"
 
 STATUS = {
     "file_3d": (
         "Exact structure + 3D coordinates (author geometry file)",
         "Ready - exact structure confirmed against author geometry file; 3D coordinates included",
     ),
-    "file_no3d": (
-        "Exact structure (author geometry file); 3D coordinates withheld",
-        "Exact structure confirmed; geometry file failed coordinate checks (see Curation_Note)",
-    ),
     "template": (
         "Exact structure from family template (verified on n = 1 and n = 6 geometry files)",
         "Ready - exact structure from verified family template; no 3D coordinates",
-    ),
-    "pending": (
-        "System-level metadata; exact structure not verified",
-        "External metadata; structure not verified and property values reported as supplied (unverified)",
     ),
     "polymer": (
         "Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value",
@@ -112,8 +101,8 @@ def split_code(code):
 
 
 def main():
-    df = pd.read_csv(MASTER, low_memory=False)
-    n0 = len(df)
+    df = pd.read_csv(V1, low_memory=False)
+    assert len(df) == 3360
     if "Repeat_Unit_SMILES" not in df.columns:
         df.insert(df.columns.get_loc("Structure_Availability"), "Repeat_Unit_SMILES", pd.NA)
     if "Curation_Note" not in df.columns:
@@ -168,12 +157,12 @@ def main():
     df.loc[dev, "Basis_Set"] = "6-311+G(d)"
 
     # 3. External records --------------------------------------------------------------------------
-    b_rows = ext & df.Family.map(FAMILY_CODE).eq("B")
-    df.loc[b_rows, "Family"] = B_FAMILY_LABEL
-    df.loc[b_rows, "Reference"] = B_REFERENCE
-    df.loc[b_rows, "Notes"] = df.loc[b_rows, "Notes"].astype(str).str.replace(
-        "Source family: Band Gap Data-B Sistemi", "Source family: band-gap data, B system", regex=False
-    )
+    b_rows = df.Record_ID.str.startswith("HAKAN_") & df.Family.map(FAMILY_CODE).eq("B")
+    assert b_rows.sum() == 112
+    df = df[~b_rows].reset_index(drop=True)
+    dev = df.Record_ID.str.startswith("EROL_")
+    ext = df.Record_ID.str.startswith("HAKAN_")
+    assert dev.sum() == 3088 and ext.sum() == 160
 
     built = pd.read_csv(EXT_CSV)
     built["n"] = built.Unit_Type.map({"Monomer": 1, "Hexamer": 6})
@@ -195,32 +184,13 @@ def main():
             status, mol = "polymer", None
         elif key in built.index:
             b = built.loc[key]
-            if fam == "B" and n == 6:
-                status, mol = "pending", None
-                note = (f"Geometry file {b.File} describes {b.Formula_in_file}, not the intended {b.Formula} "
-                        "(two H atoms missing on one benzo ring); no structure assigned. Property values are reported "
-                        "as supplied and could not be verified against a consistent geometry.")
-            elif b.Identity_confirmed:
-                mol = bes.build_template(fam, donor, acceptor, n)
-                status = "file_3d" if b.Export_3D else "file_no3d"
-                if not b.Export_3D:
-                    note = f"Geometry file {b.File}: {b.Notes}."
-                    if fam == "B":
-                        note += " Property values are reported as supplied; the geometry they were computed on is not a re-optimized structure of this system."
-            else:
-                status, mol = "pending", None
-                note = f"Geometry file {b.File}: {b.Notes}."
-        elif fam == "C":
-            status, mol = "template", bes.build_template(fam, donor, acceptor, n)
+            assert b.Identity_confirmed and b.Export_3D, b.File
+            status, mol = "file_3d", bes.build_template(fam, donor, acceptor, n)
         else:
-            status, mol = "pending", None
-            if fam == "B":
-                note = ("No geometry file; the B-system monomer and hexamer files failed the geometry checks, so "
-                        "no structure is assigned and the property values are reported as supplied (unverified).")
+            assert fam == "C", rec.Record_ID
+            status, mol = "template", bes.build_template(fam, donor, acceptor, n)
 
         df.at[idx, "Structure_Availability"], df.at[idx, "Curation_Status"] = STATUS[status]
-        if note:
-            df.at[idx, "Curation_Note"] = note
         if mol is not None:
             fields = structure_fields(mol)
             formula = fields.pop("_formula")
@@ -241,13 +211,15 @@ def main():
         else:
             for k in ("Canonical_SMILES", "InChI", "InChIKey"):
                 df.at[idx, k] = pd.NA
+        if note:
+            df.at[idx, "Curation_Note"] = note
 
     # 4. Duplicate flag ----------------------------------------------------------------------------
     has_key = df.InChIKey.notna()
     df["Duplicate_Flag"] = has_key & df.InChIKey.duplicated(keep=False)
 
     df.loc[df.Curation_Note.isna(), "Curation_Note"] = ""
-    assert len(df) == n0
+    assert len(df) == 3248
     df.to_csv(MASTER, index=False, compression={"method": "gzip", "mtime": 0})
     with gzip.GzipFile(EXT_3D, "wb", mtime=0) as fh:
         fh.write("".join(blocks).encode("utf-8"))

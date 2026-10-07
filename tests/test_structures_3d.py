@@ -51,7 +51,7 @@ def test_external_bundle_matches_structured_external_records():
     expected = db.loc[
         db.Structure_Availability.eq("Exact structure + 3D coordinates (author geometry file)"), "Record_ID"
     ]
-    assert len(blocks) == len(expected) == 33
+    assert len(blocks) == len(expected) == 32
     assert all(rid.startswith("HAKAN_") for rid in expected)
     for rid in expected:
         block = structure_block_for(rid, blocks)

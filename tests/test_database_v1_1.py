@@ -10,9 +10,9 @@ def db():
 
 
 def test_record_counts_unchanged(db):
-    assert len(db) == 3360
+    assert len(db) == 3248
     assert db.Record_ID.str.startswith("EROL_").sum() == 3088
-    assert db.Record_ID.str.startswith("HAKAN_").sum() == 272
+    assert db.Record_ID.str.startswith("HAKAN_").sum() == 160
     assert db.Record_ID.is_unique
 
 
@@ -38,15 +38,13 @@ def test_duplicate_flag_is_shared_inchikey(db):
 
 def test_external_structures_consistent_with_system_code(db):
     ext = db[db.Record_ID.str.startswith("HAKAN_") & db.InChIKey.notna()]
-    assert len(ext) == 112
+    assert len(ext) == 96
     for _, r in ext.iterrows():
         n = int(r.Oligomer_n)
         donor, acceptor = r.Donor_Chalcogen, r.Acceptor_Chalcogen
         counts = {e: 0 for e in ("O", "S", "Se", "Te")}
         counts[acceptor] += n
         counts[donor] += 2 * n
-        if r.Family.startswith("ethylenedioxy"):
-            counts["O"] += 4 * n
         for e, c in counts.items():
             assert int(r[f"{e}_Count"]) == c, (r.Record_ID, e)
 
@@ -57,9 +55,12 @@ def test_every_external_record_has_repeat_unit(db):
     assert ext.Repeat_Unit_SMILES.str.count(r"\*").eq(2).all()
 
 
-def test_unverified_b_system_records_are_flagged(db):
-    b = db[db.Family.astype(str).str.contains("B system")]
-    assert len(b) == 112
-    no_structure = b[b.InChIKey.isna() & b.Oligomer_n.ne("polymer")]
-    assert len(no_structure) == 80
-    assert no_structure.Curation_Note.str.contains("unverified|could not be verified").all()
+def test_b_system_removed_without_renumbering(db):
+    assert not db.Family.astype(str).str.contains("B_system|B system").any()
+    v1 = pd.read_csv("data/releases/chalcogen_database_v1.csv.gz", low_memory=False)
+    kept = v1[~v1.Family.astype(str).str.startswith("B_system")]
+    assert list(kept.Record_ID) == list(db.Record_ID)
+    merged = kept.merge(db, on="Record_ID", suffixes=("_v1", "_v11"))
+    for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
+        a, b = merged[f"{col}_v1"].astype(str), merged[f"{col}_v11"].astype(str)
+        assert (a == b).all(), col
