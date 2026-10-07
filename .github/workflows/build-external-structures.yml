@@ -2,7 +2,7 @@ name: Build external structures (temporary)
 on:
   push:
     branches: [feat/db-v1.1]
-    paths: ["scripts/build_external_structures.py", "data/sources/**", ".github/workflows/build-external-structures.yml"]
+    paths: ["scripts/build_external_structures.py", "scripts/build_database_v1_1.py", "data/sources/**", ".github/workflows/build-external-structures.yml"]
 permissions:
   contents: write
 jobs:
@@ -12,8 +12,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -r requirements.txt > /dev/null
-      - run: python scripts/build_external_structures.py > data/build_log.txt 2>&1 || true
+      - run: pip install -r requirements.txt pytest > /dev/null
+      - run: |
+          python scripts/build_external_structures.py > data/build_log.txt 2>&1 || true
+          python scripts/build_database_v1_1.py > data/build_db_log.txt 2>&1 || true
+          python -m pytest -q tests > data/test_log.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data/build data/build_log.txt; git commit -m "Build external structures [skip ci]" || true; git push
+          git add -A data; git commit -m "Build external structures [skip ci]" || true; git push
