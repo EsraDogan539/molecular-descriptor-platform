@@ -1,0 +1,202 @@
+........................................................................ [ 94%]
+....                                                                     [100%]
+==================================== PASSES ====================================
+________________ test_database_page_renders_without_exceptions _________________
+----------------------------- Captured stderr call -----------------------------
+2026-10-07 09:03:14.049 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-07 09:03:14.934 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.154 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.158 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+------------------------------ Captured log call -------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:479 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+____________ test_draw_structure_toggle_renders_without_exceptions _____________
+----------------------------- Captured stderr call -----------------------------
+2026-10-07 09:03:15.311 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-07 09:03:15.426 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.632 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.635 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.757 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.967 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-07 09:03:15.970 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+------------------------------ Captured log call -------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:479 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+WARNING  streamlit.deprecation_util:deprecation_util.py:81 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+=========================== short test summary info ============================
+PASSED tests/test_app_smoke.py::test_database_page_renders_without_exceptions
+PASSED tests/test_app_smoke.py::test_draw_structure_toggle_renders_without_exceptions
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_presence_uses_counts_and_metadata
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_s_token_does_not_match_se
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_required_chalcogens_filter_combines_with_and
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_required_chalcogens_empty_is_noop
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_first_meaningful_skips_nan
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_record_doi_falls_back_to_source_url
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_citation_record_uses_system_code_and_source_url_doi
+PASSED tests/test_chalcogen_presence_and_provenance.py::test_release_database_chalcogen_presence_counts
+PASSED tests/test_database_comparison.py::DatabaseComparisonTests::test_export_contains_identity_provenance_and_release_versions
+PASSED tests/test_database_comparison.py::DatabaseComparisonTests::test_multi_valued_experimental_measurements_are_preserved
+PASSED tests/test_database_comparison.py::DatabaseComparisonTests::test_numeric_property_deltas_are_signed_candidate_minus_reference
+PASSED tests/test_database_filters.py::test_numeric_bounds_ignores_missing_values
+PASSED tests/test_database_filters.py::test_no_advanced_filters_preserves_all_rows
+PASSED tests/test_database_filters.py::test_numeric_range_excludes_missing_and_outside_values
+PASSED tests/test_database_filters.py::test_minimum_chalcogen_count_is_explicit
+PASSED tests/test_database_filters.py::test_categorical_filters_use_exact_matching
+PASSED tests/test_database_filters.py::test_filters_compose_across_categories
+PASSED tests/test_database_metadata.py::DatabaseMetadataTests::test_curated_export_refreshes_manifest_and_zip
+PASSED tests/test_database_metadata.py::DatabaseMetadataTests::test_metadata_aliases_are_normalized_and_preserved
+PASSED tests/test_database_metadata.py::DatabaseMetadataTests::test_missing_optional_metadata_does_not_fail
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_coverage_table_reports_available_and_missing
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_multi_valued_experimental_measurements_are_preserved
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_provenance_label_prefers_reference_then_method
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_quality_summary_flags_record_id_duplicates
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_reference_detection_is_schema_aware
+PASSED tests/test_database_quality.py::DatabaseQualityTests::test_reference_helpers_handle_missing_reference_column
+PASSED tests/test_editor_dependency.py::test_molecule_editor_component_is_installed
+PASSED tests/test_provenance_export.py::ProvenanceExportTests::test_builds_https_doi_url
+PASSED tests/test_provenance_export.py::ProvenanceExportTests::test_citation_ready_export_preserves_record_and_versions
+PASSED tests/test_provenance_export.py::ProvenanceExportTests::test_extracts_plain_and_prefixed_doi
+PASSED tests/test_provenance_export.py::ProvenanceExportTests::test_returns_none_for_non_doi_reference
+PASSED tests/test_public_labels.py::test_public_record_ids_remove_person_linked_prefixes
+PASSED tests/test_public_labels.py::test_public_collection_labels_are_neutral
+PASSED tests/test_public_labels.py::test_public_dataframe_does_not_expose_person_linked_labels
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_filter_change_changes_query_checksum
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_invalid_schema_is_rejected
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_load_query_manifest_accepts_json_bytes
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_non_similarity_query_omits_fingerprint_block
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_query_checksum_is_deterministic
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_replay_configuration_restores_core_query_fields
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_result_set_checksum_is_deterministic_and_order_sensitive
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_sha256_json_is_key_order_independent
+PASSED tests/test_query_manifest.py::QueryManifestTests::test_similarity_settings_are_recorded
+PASSED tests/test_release_metadata.py::ReleaseMetadataTests::test_release_label_is_composed_from_central_versions
+PASSED tests/test_release_metadata.py::ReleaseMetadataTests::test_run_manifest_uses_central_release_versions
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_analysis_export_records_descriptor_dictionary_version
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_combined_pipeline_matches_separate_outputs
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_descriptor_dictionary_covers_scientific_core_outputs
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_descriptor_dictionary_is_unique_and_versioned
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_duplicate_detection_uses_standardized_structure_identity
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_invalid_smiles
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_mixed_chalcogen_detection
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_oxygen_is_not_counted_as_target_chalcogen
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_project_name_is_sanitized_for_output_files
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_run_manifest_is_included_and_reproducible
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_selenium_classification
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_sulfur_classification_and_aromatic_environment
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_tellurium_classification
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_validation_rejects_duplicate_molecule_ids
+PASSED tests/test_scientific_core.py::ScientificCoreTests::test_validation_rejects_missing_molecule_id
+PASSED tests/test_similarity_search.py::SimilaritySearchTests::test_equivalent_structure_ranks_first
+PASSED tests/test_similarity_search.py::SimilaritySearchTests::test_minimum_similarity_filters_results
+PASSED tests/test_similarity_search.py::SimilaritySearchTests::test_similarity_export_contains_method_metadata
+PASSED tests/test_structure_search.py::StructureSearchTests::test_empty_query_smiles_is_rejected
+PASSED tests/test_structure_search.py::StructureSearchTests::test_exact_search_matches_equivalent_smiles
+PASSED tests/test_structure_search.py::StructureSearchTests::test_invalid_query_smiles_is_rejected
+PASSED tests/test_structure_search.py::StructureSearchTests::test_query_smiles_is_canonicalized
+PASSED tests/test_structure_search.py::StructureSearchTests::test_similarity_search_ranks_identical_structures_first
+PASSED tests/test_structure_search.py::StructureSearchTests::test_similarity_settings_are_scientifically_explicit
+PASSED tests/test_structure_search.py::StructureSearchTests::test_substructure_search_uses_molecular_graph
+PASSED tests/test_structures_3d.py::test_parse_sdf_blocks_keys_by_public_id
+PASSED tests/test_structures_3d.py::test_structure_block_accepts_internal_and_public_ids
+PASSED tests/test_structures_3d.py::test_missing_bundle_returns_empty_mapping
+PASSED tests/test_structures_3d.py::test_release_bundle_covers_every_development_record
+76 passed in 3.31s
+Name: streamlit-ketcher
+Version: 0.0.1
+Summary: Ketcher editor component for Streamlit.
+Home-page: https://github.com/mik-laj/streamlit-ketcher
+Author: 
+Author-email: Kamil Bregula <dzakus13+pypi@gmail.com>
+License: Apache-2.0
+Location: /opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages
+Requires: streamlit
+Required-by: 
+---
+Name: streamlit
+Version: 1.64.0
+Summary: A faster way to build and share data apps
+Home-page: https://streamlit.io
+Author: 
+Author-email: Snowflake Inc <hello@streamlit.io>
+License-Expression: Apache-2.0
+Location: /opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages
+Requires: altair, anyio, click, httptools, itsdangerous, numpy, packaging, pandas, pillow, protobuf, pyarrow, pydeck, python-multipart, requests, starlette, toml, typing-extensions, uvicorn, watchdog, websockets
+Required-by: streamlit-ketcher
