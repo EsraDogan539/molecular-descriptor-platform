@@ -1,0 +1,21 @@
+name: Debug tests (temporary)
+on:
+  push:
+    branches: [ci/debug-tests]
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: |
+          pip install -r requirements.txt pytest > /dev/null
+          mkdir -p debug
+          python -m pytest -q -rA tests > debug/pytest.txt 2>&1 || true
+          pip show streamlit-ketcher streamlit >> debug/pytest.txt 2>&1 || true
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add debug; git commit -m "debug output [skip ci]" || true; git push
