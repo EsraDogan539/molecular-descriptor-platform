@@ -5,3 +5,4 @@ rdkit==2026.03.6
 openpyxl
 matplotlib
 streamlit-ketcher
+py3Dmol
