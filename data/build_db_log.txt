@@ -1,7 +1,12 @@
-Traceback (most recent call last):
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/build_database_v1_1.py", line 265, in <module>
-    main()
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/build_database_v1_1.py", line 151, in main
-    assert not other.isin(a39_smiles).any()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError
+Family                                                              Structure_Availability                                                           
+benzochalcogenadiazole                                              Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                    48
+chalcogendiazoloquinoxaline                                         Exact structure + 3D coordinates (author geometry file)                              32
+                                                                    Exact structure from family template (verified on n = 1 and n = 6 geometry files)    64
+                                                                    Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                    16
+ethylenedioxychalcogenophene-benzochalcogenadiazole DAD (B system)  Exact structure (author geometry file); 3D coordinates withheld                      15
+                                                                    Exact structure + 3D coordinates (author geometry file)                               1
+                                                                    Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                    16
+                                                                    System-level metadata; exact structure pending author confirmation                   80
+external records with exact structure: 112
+external 3D blocks: 33
+Duplicate_Flag true: 210 | cross-collection InChIKey overlaps: 0
