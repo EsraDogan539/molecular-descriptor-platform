@@ -64,6 +64,6 @@ def test_b_system_removed_without_renumbering(db):
     for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
         a, b = merged[f"{col}_v1"], merged[f"{col}_v11"]
         if col == "Experimental_Eg_eV":
-            assert (a.astype(str) == b.astype(str)).all(), col
+            assert (a.fillna("").astype(str) == b.fillna("").astype(str)).all(), col
         else:
             assert ((a - b).abs().lt(1e-9) | (a.isna() & b.isna())).all(), col
