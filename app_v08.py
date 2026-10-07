@@ -979,8 +979,8 @@ if page == "home":
         </div>
         <div class="citation-box">
           <strong>How to cite ChalMolDB</strong><br>
-          Current archived release: Database v1 · Scientific Core v0.11.0<br>
-          Version DOI: 10.5281/zenodo.22903550 · Concept DOI: 10.5281/zenodo.22903549
+          Current release: Database v1.1 · Scientific Core v0.11.0<br>
+          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1: 10.5281/zenodo.22903550
         </div>
         """,
         unsafe_allow_html=True,
@@ -1261,13 +1261,14 @@ if page == "documentation":
 
     st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
-        "ChalMolDB Database v1 · Scientific Core v0.11.0 is archived on Zenodo. "
-        "Version DOI: 10.5281/zenodo.22903550. "
-        "Concept DOI for all ChalMolDB versions: 10.5281/zenodo.22903549."
+        f"The current release is ChalMolDB Database v{DATABASE_VERSION} · Scientific Core v0.11.0. All releases are "
+        "archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest "
+        "version; Database v1 has the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
+        "docs/DATABASE_CHANGELOG.md of the repository."
     )
     st.markdown(
-        "[Archived v0.11.0 release](https://doi.org/10.5281/zenodo.22903550) · "
-        "[All versions](https://doi.org/10.5281/zenodo.22903549)"
+        "[All archived versions](https://doi.org/10.5281/zenodo.22903549) · "
+        "[Database v1 release](https://doi.org/10.5281/zenodo.22903550)"
     )
     st.stop()
 
