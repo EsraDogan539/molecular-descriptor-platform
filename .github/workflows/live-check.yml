@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install playwright > /dev/null && python -m playwright install --with-deps chromium > /dev/null
-      - run: python scripts/live_check.py > live.txt 2>&1 || true; mkdir -p docs/live_check; cp live.txt docs/live_check/
+      - run: mkdir -p docs/live_check; python scripts/live_probe.py > docs/live_check/probe_stdout.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add -A docs/live_check; git commit -m "Live check results [skip ci]" || true; git push
