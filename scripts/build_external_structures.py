@@ -44,12 +44,14 @@ TEMPLATES = {
     # 4,9-bis(chalcogenophen-2-yl)-[1,2,5]chalcogenadiazolo[3,4-g]quinoxaline
     "C": "c1cc([*:L]){X}c1-c1c2nccnc2c(-c2ccc([*:R]){X}2)c2n{Y}nc12",
 }
-# Plausible X-C / X-N bond lengths (Angstrom) for chalcogens in these rings at B3LYP/LANL2DZ.
+# Plausible ring X-C / X-N bond lengths (Angstrom) at B3LYP/LANL2DZ: the range observed in the
+# element-consistent geometries of this set (C family, A/B hexamers) widened by about 0.05 A.
+# Only bonds of chalcogens in five-membered (chalcogenophene / chalcogenadiazole) rings are checked.
 BOND_RANGES = {
-    ("O", "C"): (1.33, 1.46), ("O", "N"): (1.33, 1.46),
-    ("S", "C"): (1.68, 1.90), ("S", "N"): (1.58, 1.82),
-    ("Se", "C"): (1.82, 2.02), ("Se", "N"): (1.75, 1.95),
-    ("Te", "C"): (2.00, 2.22), ("Te", "N"): (1.90, 2.10),
+    ("O", "C"): (1.35, 1.47), ("O", "N"): (1.37, 1.47),
+    ("S", "C"): (1.76, 1.88), ("S", "N"): (1.70, 1.83),
+    ("Se", "C"): (1.87, 2.01), ("Se", "N"): (1.80, 1.93),
+    ("Te", "C"): (2.04, 2.19), ("Te", "N"): (1.95, 2.08),
 }
 FAMILY_LABEL = {
     "A": "benzochalcogenadiazole",
@@ -148,7 +150,7 @@ def bond_length_check(mol, coords):
         if pair not in BOND_RANGES:
             pair = pair[::-1]
             a1, a2 = a2, a1
-        if pair in BOND_RANGES:
+        if pair in BOND_RANGES and a1.IsInRingSize(5) and a2.IsInRingSize(5):
             d = math.dist(coords[a1.GetIdx()], coords[a2.GetIdx()])
             lo, hi = BOND_RANGES[pair]
             if not lo <= d <= hi:
