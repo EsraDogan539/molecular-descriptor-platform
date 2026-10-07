@@ -543,7 +543,7 @@ def _render_record_comparison(filtered):
 
 def _render_results(filtered, is_preview):
     st.markdown(
-        f'<div class="result-count">{len(filtered):,} matching records</div>',
+        f'<div class="result-count">{len(filtered):,} matching record{"" if len(filtered) == 1 else "s"}</div>',
         unsafe_allow_html=True,
     )
 
