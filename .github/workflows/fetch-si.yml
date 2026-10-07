@@ -13,19 +13,27 @@ jobs:
         run: |
           mkdir -p si_source
           UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-          for url in \
-            "https://pmc.ncbi.nlm.nih.gov/articles/instance/12152970/bin/ci5c00345_si_002.zip" \
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC12152970/bin/ci5c00345_si_002.zip" \
-            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12152970/bin/ci5c00345_si_002.zip" \
-            "https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_002.zip"; do
-            echo "trying $url"
-            if curl -fsSL -A "$UA" -o si_source/ci5c00345_si_002.zip "$url" && unzip -tq si_source/ci5c00345_si_002.zip; then
-              echo "$url" > si_source/SOURCE_URL.txt; break
-            fi
+          : > si_source/attempts.txt
+          try() {
+            code=$(curl -sSL -A "$UA" -o "$2" -w "%{http_code} %{content_type} %{size_download}" "$1" || echo "curl-failed")
+            echo "$1 -> $code" >> si_source/attempts.txt
+          }
+          try "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12152970/supplementaryFiles" si_source/europepmc_supp.zip
+          try "https://pmc.ncbi.nlm.nih.gov/articles/instance/12152970/bin/ci5c00345_si_002.zip" si_source/pmc1.zip
+          try "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12152970/bin/ci5c00345_si_002.zip" si_source/pmc2.zip
+          try "https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_002.zip" si_source/acs.zip
+          for f in si_source/*.zip; do
+            if unzip -tq "$f" >/dev/null 2>&1; then echo "VALID $f" >> si_source/attempts.txt; unzip -l "$f" > "$f.listing.txt"; else echo "INVALID $f" >> si_source/attempts.txt; rm -f "$f"; fi
           done
-          ls -la si_source
-          unzip -l si_source/ci5c00345_si_002.zip > si_source/listing.txt || true
-          head -40 si_source/listing.txt; tail -5 si_source/listing.txt
+          # unpack nested SI archive if the Europe PMC bundle was obtained
+          if [ -f si_source/europepmc_supp.zip ]; then
+            mkdir -p si_source/epmc && unzip -oq si_source/europepmc_supp.zip -d si_source/epmc
+            find si_source/epmc -name "*si_002*.zip" -exec cp {} si_source/ci5c00345_si_002.zip \;
+          fi
+          for f in si_source/pmc1.zip si_source/pmc2.zip si_source/acs.zip; do [ -f "$f" ] && cp "$f" si_source/ci5c00345_si_002.zip && break; done
+          [ -f si_source/ci5c00345_si_002.zip ] && unzip -l si_source/ci5c00345_si_002.zip > si_source/listing.txt
+          rm -rf si_source/epmc si_source/europepmc_supp.zip si_source/pmc1.zip si_source/pmc2.zip si_source/acs.zip
+          cat si_source/attempts.txt
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
