@@ -913,23 +913,46 @@ if page == "home":
                 <path d="M560 46 650 98 650 202 560 254 470 202 470 98Z"/>
                 <path d="M642 360 686 386 686 437 642 463 598 437 598 386Z"/>
               </g>
-              <g filter="url(#heroShadow)" stroke-linecap="round">
-                <g stroke="url(#heroBond)" stroke-width="14">
-                  <path d="M182 257 282 176"/><path d="M282 176 398 207"/><path d="M398 207 459 310"/>
-                  <path d="M459 310 351 367"/><path d="M351 367 233 348"/><path d="M233 348 182 257"/>
-                  <path d="M282 176 310 274"/><path d="M398 207 310 274"/><path d="M310 274 351 367"/>
-                  <path d="M459 310 568 267"/><path d="M568 267 632 341"/>
-                </g>
-                <g stroke="#f9fbfc" stroke-width="3">
-                  <circle cx="182" cy="257" r="31" fill="url(#heroC)"/><circle cx="282" cy="176" r="39" fill="url(#heroS)"/>
-                  <circle cx="398" cy="207" r="31" fill="url(#heroC)"/><circle cx="459" cy="310" r="43" fill="url(#heroTe)"/>
-                  <circle cx="351" cy="367" r="31" fill="url(#heroC)"/><circle cx="233" cy="348" r="43" fill="url(#heroSe)"/>
-                  <circle cx="310" cy="274" r="33" fill="url(#heroC)"/><circle cx="568" cy="267" r="27" fill="url(#heroC)"/><circle cx="632" cy="341" r="24" fill="url(#heroC)"/>
-                </g>
-                <g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="#fff">
-                  <text x="282" y="176" font-size="23">S</text><text x="233" y="348" font-size="22">Se</text><text x="459" y="310" font-size="22">Te</text>
-                </g>
-              </g>
+              <g transform="translate(380.0 280.0)" filter="url(#heroShadow)" stroke-linecap="round">
+              <g stroke="url(#heroBond)" stroke-width="13">
+              <path d="M-161.7 -29.7 -108.4 9.0"/>
+              <path d="M-108.4 9.0 -128.8 71.6"/>
+              <path d="M-128.8 71.6 -194.6 71.6"/>
+              <path d="M-194.6 71.6 -214.9 9.0"/>
+              <path d="M-214.9 9.0 -161.7 -29.7"/>
+              <path d="M0.0 29.7 53.3 -9.0"/>
+              <path d="M53.3 -9.0 32.9 -71.6"/>
+              <path d="M32.9 -71.6 -32.9 -71.6"/>
+              <path d="M-32.9 -71.6 -53.3 -9.0"/>
+              <path d="M-53.3 -9.0 0.0 29.7"/>
+              <path d="M-108.4 9.0 -53.3 -9.0"/>
+              <path d="M161.7 -29.7 214.9 9.0"/>
+              <path d="M214.9 9.0 194.6 71.6"/>
+              <path d="M194.6 71.6 128.8 71.6"/>
+              <path d="M128.8 71.6 108.4 9.0"/>
+              <path d="M108.4 9.0 161.7 -29.7"/>
+              <path d="M53.3 -9.0 108.4 9.0"/>
+              </g><g stroke="#ffffff" stroke-width="3">
+              <circle cx="-161.7" cy="-29.7" r="36" fill="url(#heroS)"/>
+              <circle cx="-108.4" cy="9.0" r="19" fill="url(#heroC)"/>
+              <circle cx="-128.8" cy="71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="-194.6" cy="71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="-214.9" cy="9.0" r="19" fill="url(#heroC)"/>
+              <circle cx="0.0" cy="29.7" r="36" fill="url(#heroSe)"/>
+              <circle cx="53.3" cy="-9.0" r="19" fill="url(#heroC)"/>
+              <circle cx="32.9" cy="-71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="-32.9" cy="-71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="-53.3" cy="-9.0" r="19" fill="url(#heroC)"/>
+              <circle cx="161.7" cy="-29.7" r="36" fill="url(#heroTe)"/>
+              <circle cx="214.9" cy="9.0" r="19" fill="url(#heroC)"/>
+              <circle cx="194.6" cy="71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="128.8" cy="71.6" r="19" fill="url(#heroC)"/>
+              <circle cx="108.4" cy="9.0" r="19" fill="url(#heroC)"/>
+              </g><g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="#ffffff">
+              <text x="-161.7" y="-28.8" font-size="23.0">S</text>
+              <text x="0.0" y="30.7" font-size="20.2">Se</text>
+              <text x="161.7" y="-28.8" font-size="20.2">Te</text>
+              </g></g>
             </svg>
           </div>
         </div>
