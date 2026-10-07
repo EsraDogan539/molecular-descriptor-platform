@@ -889,6 +889,7 @@ def display_database_browser():
             color: #788493;
             font-size: .72rem;
             margin-bottom: .13rem;
+            word-spacing: .12em;
         }
         .detail-field strong,
         .compact-fields strong {

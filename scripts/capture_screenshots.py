@@ -58,8 +58,12 @@ def main():
         page.goto(f"{args.url}/?page=database")
         wait_ready(page, "matching records")
         try:
+            page.get_by_text("Structure search").first.click()
+            page.wait_for_timeout(1500)
             page.get_by_text("Draw structure").first.click()
-            page.wait_for_timeout(10000)
+            page.wait_for_timeout(15000)
+            page.get_by_text("Structure search").first.scroll_into_view_if_needed()
+            page.wait_for_timeout(1000)
             page.screenshot(path=out / "05_structure_editor.png")
         except Exception as exc:
             log.append(f"editor: {exc}")
