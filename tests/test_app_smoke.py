@@ -1,9 +1,13 @@
 """Headless smoke test of the Database page, with and without the molecule editor."""
+from pathlib import Path
+
 from streamlit.testing.v1 import AppTest
+
+APP = Path(__file__).resolve().parents[1] / "app_v08.py"
 
 
 def _database_page():
-    at = AppTest.from_file("app_v08.py", default_timeout=120)
+    at = AppTest.from_file(str(APP), default_timeout=120)
     at.query_params["page"] = "database"
     return at
 
