@@ -25,6 +25,7 @@ with sync_playwright() as p:
             page.wait_for_timeout(3000)
             if page.get_by_text("3,248").count():
                 ok = True; break
+            note("home text sample: " + page.locator("body").inner_text()[:600].replace("\n", " | "))
             note("old version still served; waiting")
         except Exception as exc:
             note(f"home not ready: {type(exc).__name__}")
