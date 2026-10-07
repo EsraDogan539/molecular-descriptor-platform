@@ -2,7 +2,7 @@ name: Build external structures (temporary)
 on:
   push:
     branches: [feat/db-v1.1]
-    paths: ["scripts/build_external_structures.py", "scripts/build_database_v1_1.py", "data/sources/**", ".github/workflows/build-external-structures.yml"]
+    paths: ["scripts/build_external_structures.py", "scripts/build_database_v1_1.py", "data/sources/**", "tests/**", "*.py", ".github/workflows/build-external-structures.yml"]
 permissions:
   contents: write
 jobs:
