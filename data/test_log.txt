@@ -1,0 +1,85 @@
+.........F........................F..................................... [ 84%]
+.............                                                            [100%]
+=================================== FAILURES ===================================
+_______________ test_release_database_chalcogen_presence_counts ________________
+
+    def test_release_database_chalcogen_presence_counts():
+        """Filter counts must match the published statistics (2,907 / 644 / 119)."""
+        df = pd.read_csv("data/chalcogen_database_v1_master.csv.gz", low_memory=False)
+>       assert int(chalcogen_presence_mask(df, "S").sum()) == 2907
+E       AssertionError: assert 2858 == 2907
+E        +  where 2858 = int(np.int64(2858))
+E        +    where np.int64(2858) = sum()
+E        +      where sum = 0        True\n1        True\n2        True\n3        True\n4        True\n        ...  \n3243    False\n3244    False\n3245    False\n3246    False\n3247    False\nLength: 3248, dtype: bool.sum
+E        +        where 0        True\n1        True\n2        True\n3        True\n4        True\n        ...  \n3243    False\n3244    False\n3245    False\n3246    False\n3247    False\nLength: 3248, dtype: bool = chalcogen_presence_mask(       Record_ID  ... Curation_Note\n0      EROL_0001  ...           NaN\n1      EROL_0002  ...           NaN\n2      ERO...70  ...           NaN\n3246  HAKAN_0271  ...           NaN\n3247  HAKAN_0272  ...           NaN\n\n[3248 rows x 57 columns], 'S')
+
+tests/test_chalcogen_presence_and_provenance.py:90: AssertionError
+__________________ test_b_system_removed_without_renumbering ___________________
+
+db =        Record_ID  ... Curation_Note
+0      EROL_0001  ...           NaN
+1      EROL_0002  ...           NaN
+2      ERO...70  ...           NaN
+3246  HAKAN_0271  ...           NaN
+3247  HAKAN_0272  ...           NaN
+
+[3248 rows x 57 columns]
+
+    def test_b_system_removed_without_renumbering(db):
+        assert not db.Family.astype(str).str.contains("B_system|B system").any()
+        v1 = pd.read_csv("data/releases/chalcogen_database_v1.csv.gz", low_memory=False)
+        kept = v1[~v1.Family.astype(str).str.startswith("B_system")]
+        assert list(kept.Record_ID) == list(db.Record_ID)
+        merged = kept.merge(db, on="Record_ID", suffixes=("_v1", "_v11"))
+        for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
+            a, b = merged[f"{col}_v1"].astype(str), merged[f"{col}_v11"].astype(str)
+>           assert (a == b).all(), col
+E           AssertionError: Eg_eV
+E           assert np.False_
+E            +  where np.False_ = all()
+E            +    where all = 0       3.068...48, dtype: str == 0       3.068...48, dtype: str
+E                 
+E                 Full diff:
+E                   0       3.068356
+E                   1       2.975565
+E                   2       2.088202
+E                   3       2.861277
+E                   4       2.964681
+E                             ...
+E                   3243        0.72
+E                   3244        0.84
+E                   3245         NaN
+E                   3246        0.63
+E                   3247        0.66
+E                 - Name: Eg_eV_v11, Length: 3248, dtype: str
+E                 ?               -
+E                 + Name: Eg_eV_v1, Length: 3248, dtype: str.all
+
+tests/test_database_v1_1.py:66: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_chalcogen_presence_and_provenance.py::test_release_database_chalcogen_presence_counts - AssertionError: assert 2858 == 2907
+ +  where 2858 = int(np.int64(2858))
+ +    where np.int64(2858) = sum()
+ +      where sum = 0        True\n1        True\n2        True\n3        True\n4        True\n        ...  \n3243    False\n3244    False\n3245    False\n3246    False\n3247    False\nLength: 3248, dtype: bool.sum
+ +        where 0        True\n1        True\n2        True\n3        True\n4        True\n        ...  \n3243    False\n3244    False\n3245    False\n3246    False\n3247    False\nLength: 3248, dtype: bool = chalcogen_presence_mask(       Record_ID  ... Curation_Note\n0      EROL_0001  ...           NaN\n1      EROL_0002  ...           NaN\n2      ERO...70  ...           NaN\n3246  HAKAN_0271  ...           NaN\n3247  HAKAN_0272  ...           NaN\n\n[3248 rows x 57 columns], 'S')
+FAILED tests/test_database_v1_1.py::test_b_system_removed_without_renumbering - AssertionError: Eg_eV
+assert np.False_
+ +  where np.False_ = all()
+ +    where all = 0       3.068...48, dtype: str == 0       3.068...48, dtype: str
+      
+      Full diff:
+        0       3.068356
+        1       2.975565
+        2       2.088202
+        3       2.861277
+        4       2.964681
+                  ...
+        3243        0.72
+        3244        0.84
+        3245         NaN
+        3246        0.63
+        3247        0.66
+      - Name: Eg_eV_v11, Length: 3248, dtype: str
+      ?               -
+      + Name: Eg_eV_v1, Length: 3248, dtype: str.all
+2 failed, 83 passed in 6.26s

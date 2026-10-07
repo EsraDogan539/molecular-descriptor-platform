@@ -5497,110 +5497,6 @@ benzochalcogenadiazole
 WKDPDTIBNWGAIG-UHFFFAOYSA-N
 
 $$$$
-B-OOO1-uv
-     RDKit          3D
-
- 39 44  0  0  0  0  0  0  0  0999 V2000
-   -2.9228    0.4328    0.0193 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -3.6767    1.6198    0.0823 O   0  0  0  0  0  0  0  0  0  0  0  0
-   -5.0347    1.2837    0.0819 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -5.1505   -0.0836    0.0183 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -6.3003   -0.8707   -0.0187 O   0  0  0  0  0  0  0  0  0  0  0  0
-   -5.9896   -2.2787    0.3086 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -4.7581   -2.7640   -0.4693 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -3.5508   -1.9912   -0.0906 O   0  0  0  0  0  0  0  0  0  0  0  0
-   -3.8194   -0.6254   -0.0241 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -1.4801    0.4911    0.0128 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -0.7128   -0.6788    0.0081 C   0  0  0  0  0  0  0  0  0  0  0  0
-    0.7128   -0.6788   -0.0070 C   0  0  0  0  0  0  0  0  0  0  0  0
-    1.4801    0.4911   -0.0124 C   0  0  0  0  0  0  0  0  0  0  0  0
-    2.9228    0.4328   -0.0188 C   0  0  0  0  0  0  0  0  0  0  0  0
-    3.6767    1.6198   -0.0816 O   0  0  0  0  0  0  0  0  0  0  0  0
-    5.0347    1.2838   -0.0812 C   0  0  0  0  0  0  0  0  0  0  0  0
-    5.1505   -0.0836   -0.0179 C   0  0  0  0  0  0  0  0  0  0  0  0
-    6.3003   -0.8708    0.0189 O   0  0  0  0  0  0  0  0  0  0  0  0
-    5.9895   -2.2785   -0.3096 C   0  0  0  0  0  0  0  0  0  0  0  0
-    4.7582   -2.7644    0.4683 C   0  0  0  0  0  0  0  0  0  0  0  0
-    3.5508   -1.9912    0.0907 O   0  0  0  0  0  0  0  0  0  0  0  0
-    3.8194   -0.6254    0.0245 C   0  0  0  0  0  0  0  0  0  0  0  0
-    0.7301    1.7257   -0.0058 C   0  0  0  0  0  0  0  0  0  0  0  0
-    1.1839    2.9959   -0.0092 N   0  0  0  0  0  0  0  0  0  0  0  0
-   -0.0000    3.7904   -0.0008 O   0  0  0  0  0  0  0  0  0  0  0  0
-   -1.1839    2.9959    0.0081 N   0  0  0  0  0  0  0  0  0  0  0  0
-   -0.7301    1.7257    0.0055 C   0  0  0  0  0  0  0  0  0  0  0  0
-   -5.7402    2.0951    0.1239 H   0  0  0  0  0  0  0  0  0  0  0  0
-   -5.8214   -2.3658    1.3904 H   0  0  0  0  0  0  0  0  0  0  0  0
-   -6.8781   -2.8473    0.0234 H   0  0  0  0  0  0  0  0  0  0  0  0
-   -4.9169   -2.6563   -1.5500 H   0  0  0  0  0  0  0  0  0  0  0  0
-   -4.5233   -3.8032   -0.2268 H   0  0  0  0  0  0  0  0  0  0  0  0
-   -1.2258   -1.6350    0.0152 H   0  0  0  0  0  0  0  0  0  0  0  0
-    1.2258   -1.6350   -0.0137 H   0  0  0  0  0  0  0  0  0  0  0  0
-    5.7402    2.0952   -0.1229 H   0  0  0  0  0  0  0  0  0  0  0  0
-    6.8780   -2.8473   -0.0250 H   0  0  0  0  0  0  0  0  0  0  0  0
-    5.8210   -2.3646   -1.3914 H   0  0  0  0  0  0  0  0  0  0  0  0
-    4.5233   -3.8034    0.2250 H   0  0  0  0  0  0  0  0  0  0  0  0
-    4.9174   -2.6575    1.5491 H   0  0  0  0  0  0  0  0  0  0  0  0
-  1  2  1  0
-  2  3  1  0
-  3  4  2  0
-  4  5  1  0
-  5  6  1  0
-  6  7  1  0
-  7  8  1  0
-  8  9  1  0
-  1 10  1  0
- 10 11  2  0
- 11 12  1  0
- 12 13  2  0
- 13 14  1  0
- 14 15  1  0
- 15 16  1  0
- 16 17  2  0
- 17 18  1  0
- 18 19  1  0
- 19 20  1  0
- 20 21  1  0
- 21 22  1  0
- 13 23  1  0
- 23 24  2  0
- 24 25  1  0
- 25 26  1  0
- 26 27  2  0
-  9  1  2  0
- 27 10  1  0
-  9  4  1  0
- 22 14  2  0
- 27 23  1  0
- 22 17  1  0
-  3 28  1  0
-  6 29  1  0
-  6 30  1  0
-  7 31  1  0
-  7 32  1  0
- 11 33  1  0
- 12 34  1  0
- 16 35  1  0
- 19 36  1  0
- 19 37  1  0
- 20 38  1  0
- 20 39  1  0
-M  END
->  <File>  (19) 
-B-DAD_Monomer/B-OOO1-uv.gjf
-
->  <System_Code>  (19) 
-OOO
-
->  <Unit_Type>  (19) 
-Monomer
-
->  <Family>  (19) 
-B_system / benzochalcogenadiazole-like DAD
-
->  <InChIKey>  (19) 
-NKVGWWRPLYDZNG-UHFFFAOYSA-N
-
-$$$$
 C-OOO6-UV
      RDKit          3D
 
@@ -5987,22 +5883,22 @@ C-OOO6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (20) 
+>  <_StereochemDone>  (19) 
 1
 
->  <File>  (20) 
+>  <File>  (19) 
 C-DAD_Hexamer/C-OOO6-UV.gjf
 
->  <System_Code>  (20) 
+>  <System_Code>  (19) 
 OOO
 
->  <Unit_Type>  (20) 
+>  <Unit_Type>  (19) 
 Hexamer
 
->  <Family>  (20) 
+>  <Family>  (19) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (20) 
+>  <InChIKey>  (19) 
 IJMTVGQWUWZLRV-UHFFFAOYSA-N
 
 $$$$
@@ -6392,22 +6288,22 @@ C-OSO6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (21) 
+>  <_StereochemDone>  (20) 
 1
 
->  <File>  (21) 
+>  <File>  (20) 
 C-DAD_Hexamer/C-OSO6-UV.gjf
 
->  <System_Code>  (21) 
+>  <System_Code>  (20) 
 OSO
 
->  <Unit_Type>  (21) 
+>  <Unit_Type>  (20) 
 Hexamer
 
->  <Family>  (21) 
+>  <Family>  (20) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (21) 
+>  <InChIKey>  (20) 
 ZNKQIWRHCALLDN-UHFFFAOYSA-N
 
 $$$$
@@ -6797,22 +6693,22 @@ C-OSeO6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (22) 
+>  <_StereochemDone>  (21) 
 1
 
->  <File>  (22) 
+>  <File>  (21) 
 C-DAD_Hexamer/C-OSeO6-UV.gjf
 
->  <System_Code>  (22) 
+>  <System_Code>  (21) 
 OSeO
 
->  <Unit_Type>  (22) 
+>  <Unit_Type>  (21) 
 Hexamer
 
->  <Family>  (22) 
+>  <Family>  (21) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (22) 
+>  <InChIKey>  (21) 
 ZUHYUJVLXIDYSG-UHFFFAOYSA-N
 
 $$$$
@@ -7202,22 +7098,22 @@ C-OTeO6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (23) 
+>  <_StereochemDone>  (22) 
 1
 
->  <File>  (23) 
+>  <File>  (22) 
 C-DAD_Hexamer/C-OTeO6-UV.gjf
 
->  <System_Code>  (23) 
+>  <System_Code>  (22) 
 OTeO
 
->  <Unit_Type>  (23) 
+>  <Unit_Type>  (22) 
 Hexamer
 
->  <Family>  (23) 
+>  <Family>  (22) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (23) 
+>  <InChIKey>  (22) 
 RHEVUNCXPQAMRA-UHFFFAOYSA-N
 
 $$$$
@@ -7607,22 +7503,22 @@ C-SOS6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (24) 
+>  <_StereochemDone>  (23) 
 1
 
->  <File>  (24) 
+>  <File>  (23) 
 C-DAD_Hexamer/C-SOS6-UV.gjf
 
->  <System_Code>  (24) 
+>  <System_Code>  (23) 
 SOS
 
->  <Unit_Type>  (24) 
+>  <Unit_Type>  (23) 
 Hexamer
 
->  <Family>  (24) 
+>  <Family>  (23) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (24) 
+>  <InChIKey>  (23) 
 WROOESBSJFHGNP-UHFFFAOYSA-N
 
 $$$$
@@ -8012,22 +7908,22 @@ C-SSS6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (25) 
+>  <_StereochemDone>  (24) 
 1
 
->  <File>  (25) 
+>  <File>  (24) 
 C-DAD_Hexamer/C-SSS6-UV.gjf
 
->  <System_Code>  (25) 
+>  <System_Code>  (24) 
 SSS
 
->  <Unit_Type>  (25) 
+>  <Unit_Type>  (24) 
 Hexamer
 
->  <Family>  (25) 
+>  <Family>  (24) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (25) 
+>  <InChIKey>  (24) 
 YMIIPCDZWQQJFB-UHFFFAOYSA-N
 
 $$$$
@@ -8417,22 +8313,22 @@ C-SSeS6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (26) 
+>  <_StereochemDone>  (25) 
 1
 
->  <File>  (26) 
+>  <File>  (25) 
 C-DAD_Hexamer/C-SSeS6-UV.gjf
 
->  <System_Code>  (26) 
+>  <System_Code>  (25) 
 SSeS
 
->  <Unit_Type>  (26) 
+>  <Unit_Type>  (25) 
 Hexamer
 
->  <Family>  (26) 
+>  <Family>  (25) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (26) 
+>  <InChIKey>  (25) 
 FWCXCONAOMJXNL-UHFFFAOYSA-N
 
 $$$$
@@ -8822,22 +8718,22 @@ C-STeS6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (27) 
+>  <_StereochemDone>  (26) 
 1
 
->  <File>  (27) 
+>  <File>  (26) 
 C-DAD_Hexamer/C-STeS6-UV.gjf
 
->  <System_Code>  (27) 
+>  <System_Code>  (26) 
 STeS
 
->  <Unit_Type>  (27) 
+>  <Unit_Type>  (26) 
 Hexamer
 
->  <Family>  (27) 
+>  <Family>  (26) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (27) 
+>  <InChIKey>  (26) 
 PBUMCEPSQNAJKM-UHFFFAOYSA-N
 
 $$$$
@@ -9227,22 +9123,22 @@ C-SeOSe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (28) 
+>  <_StereochemDone>  (27) 
 1
 
->  <File>  (28) 
+>  <File>  (27) 
 C-DAD_Hexamer/C-SeOSe6-UV.gjf
 
->  <System_Code>  (28) 
+>  <System_Code>  (27) 
 SeOSe
 
->  <Unit_Type>  (28) 
+>  <Unit_Type>  (27) 
 Hexamer
 
->  <Family>  (28) 
+>  <Family>  (27) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (28) 
+>  <InChIKey>  (27) 
 RHWTYJHBSRCCET-UHFFFAOYSA-N
 
 $$$$
@@ -9632,22 +9528,22 @@ C-SeSSe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (29) 
+>  <_StereochemDone>  (28) 
 1
 
->  <File>  (29) 
+>  <File>  (28) 
 C-DAD_Hexamer/C-SeSSe6-UV.gjf
 
->  <System_Code>  (29) 
+>  <System_Code>  (28) 
 SeSSe
 
->  <Unit_Type>  (29) 
+>  <Unit_Type>  (28) 
 Hexamer
 
->  <Family>  (29) 
+>  <Family>  (28) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (29) 
+>  <InChIKey>  (28) 
 CFTZRLVMROSDLQ-UHFFFAOYSA-N
 
 $$$$
@@ -10037,22 +9933,22 @@ C-SeSeSe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (30) 
+>  <_StereochemDone>  (29) 
 1
 
->  <File>  (30) 
+>  <File>  (29) 
 C-DAD_Hexamer/C-SeSeSe6-UV.gjf
 
->  <System_Code>  (30) 
+>  <System_Code>  (29) 
 SeSeSe
 
->  <Unit_Type>  (30) 
+>  <Unit_Type>  (29) 
 Hexamer
 
->  <Family>  (30) 
+>  <Family>  (29) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (30) 
+>  <InChIKey>  (29) 
 SGKTVNBCANOSMH-UHFFFAOYSA-N
 
 $$$$
@@ -10442,22 +10338,22 @@ C-SeTeSe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (31) 
+>  <_StereochemDone>  (30) 
 1
 
->  <File>  (31) 
+>  <File>  (30) 
 C-DAD_Hexamer/C-SeTeSe6-UV.gjf
 
->  <System_Code>  (31) 
+>  <System_Code>  (30) 
 SeTeSe
 
->  <Unit_Type>  (31) 
+>  <Unit_Type>  (30) 
 Hexamer
 
->  <Family>  (31) 
+>  <Family>  (30) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (31) 
+>  <InChIKey>  (30) 
 GEQPXGNBFMEQBA-UHFFFAOYSA-N
 
 $$$$
@@ -10847,22 +10743,22 @@ C-TeOTe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (32) 
+>  <_StereochemDone>  (31) 
 1
 
->  <File>  (32) 
+>  <File>  (31) 
 C-DAD_Hexamer/C-TeOTe6-UV.gjf
 
->  <System_Code>  (32) 
+>  <System_Code>  (31) 
 TeOTe
 
->  <Unit_Type>  (32) 
+>  <Unit_Type>  (31) 
 Hexamer
 
->  <Family>  (32) 
+>  <Family>  (31) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (32) 
+>  <InChIKey>  (31) 
 GEHMVKHEAFBLCQ-UHFFFAOYSA-N
 
 $$$$
@@ -11252,22 +11148,22 @@ C-TeSTe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (33) 
+>  <_StereochemDone>  (32) 
 1
 
->  <File>  (33) 
+>  <File>  (32) 
 C-DAD_Hexamer/C-TeSTe6-UV.gjf
 
->  <System_Code>  (33) 
+>  <System_Code>  (32) 
 TeSTe
 
->  <Unit_Type>  (33) 
+>  <Unit_Type>  (32) 
 Hexamer
 
->  <Family>  (33) 
+>  <Family>  (32) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (33) 
+>  <InChIKey>  (32) 
 WHWJGPLANJTBER-UHFFFAOYSA-N
 
 $$$$
@@ -11657,22 +11553,22 @@ C-TeSeTe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (34) 
+>  <_StereochemDone>  (33) 
 1
 
->  <File>  (34) 
+>  <File>  (33) 
 C-DAD_Hexamer/C-TeSeTe6-UV.gjf
 
->  <System_Code>  (34) 
+>  <System_Code>  (33) 
 TeSeTe
 
->  <Unit_Type>  (34) 
+>  <Unit_Type>  (33) 
 Hexamer
 
->  <Family>  (34) 
+>  <Family>  (33) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (34) 
+>  <InChIKey>  (33) 
 YXUOQAHBWDFGNG-UHFFFAOYSA-N
 
 $$$$
@@ -12062,22 +11958,22 @@ C-TeTeTe6-UV
 131175  1  0
 132176  1  0
 M  END
->  <_StereochemDone>  (35) 
+>  <_StereochemDone>  (34) 
 1
 
->  <File>  (35) 
+>  <File>  (34) 
 C-DAD_Hexamer/C-TeTeTe6-UV.gjf
 
->  <System_Code>  (35) 
+>  <System_Code>  (34) 
 TeTeTe
 
->  <Unit_Type>  (35) 
+>  <Unit_Type>  (34) 
 Hexamer
 
->  <Family>  (35) 
+>  <Family>  (34) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (35) 
+>  <InChIKey>  (34) 
 RPXRFUOOBVVNRE-UHFFFAOYSA-N
 
 $$$$
@@ -12152,19 +12048,19 @@ C-OOO1c-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (36) 
+>  <File>  (35) 
 C-DAD_Monomer/C-OOO1c-UV.gjf
 
->  <System_Code>  (36) 
+>  <System_Code>  (35) 
 OOO
 
->  <Unit_Type>  (36) 
+>  <Unit_Type>  (35) 
 Monomer
 
->  <Family>  (36) 
+>  <Family>  (35) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (36) 
+>  <InChIKey>  (35) 
 PMETURAFPUPOJB-UHFFFAOYSA-N
 
 $$$$
@@ -12239,19 +12135,19 @@ C-OSO1b-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (37) 
+>  <File>  (36) 
 C-DAD_Monomer/C-OSO1b-UV.gjf
 
->  <System_Code>  (37) 
+>  <System_Code>  (36) 
 OSO
 
->  <Unit_Type>  (37) 
+>  <Unit_Type>  (36) 
 Monomer
 
->  <Family>  (37) 
+>  <Family>  (36) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (37) 
+>  <InChIKey>  (36) 
 BUSUYFNNZFJEHU-UHFFFAOYSA-N
 
 $$$$
@@ -12326,19 +12222,19 @@ C-OSeO1b-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (38) 
+>  <File>  (37) 
 C-DAD_Monomer/C-OSeO1b-UV.gjf
 
->  <System_Code>  (38) 
+>  <System_Code>  (37) 
 OSeO
 
->  <Unit_Type>  (38) 
+>  <Unit_Type>  (37) 
 Monomer
 
->  <Family>  (38) 
+>  <Family>  (37) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (38) 
+>  <InChIKey>  (37) 
 JEDGZVCGPZEJPZ-UHFFFAOYSA-N
 
 $$$$
@@ -12413,19 +12309,19 @@ C-OTeO1b-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (39) 
+>  <File>  (38) 
 C-DAD_Monomer/C-OTeO1b-UV.gjf
 
->  <System_Code>  (39) 
+>  <System_Code>  (38) 
 OTeO
 
->  <Unit_Type>  (39) 
+>  <Unit_Type>  (38) 
 Monomer
 
->  <Family>  (39) 
+>  <Family>  (38) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (39) 
+>  <InChIKey>  (38) 
 JKHPJHCFZGFNFA-UHFFFAOYSA-N
 
 $$$$
@@ -12500,19 +12396,19 @@ C-SOS1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (40) 
+>  <File>  (39) 
 C-DAD_Monomer/C-SOS1a-UV.gjf
 
->  <System_Code>  (40) 
+>  <System_Code>  (39) 
 SOS
 
->  <Unit_Type>  (40) 
+>  <Unit_Type>  (39) 
 Monomer
 
->  <Family>  (40) 
+>  <Family>  (39) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (40) 
+>  <InChIKey>  (39) 
 DIMSIBRCDZGHSG-UHFFFAOYSA-N
 
 $$$$
@@ -12587,19 +12483,19 @@ C-SSS1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (41) 
+>  <File>  (40) 
 C-DAD_Monomer/C-SSS1a-UV.gjf
 
->  <System_Code>  (41) 
+>  <System_Code>  (40) 
 SSS
 
->  <Unit_Type>  (41) 
+>  <Unit_Type>  (40) 
 Monomer
 
->  <Family>  (41) 
+>  <Family>  (40) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (41) 
+>  <InChIKey>  (40) 
 UFEGJSRIXAMOHZ-UHFFFAOYSA-N
 
 $$$$
@@ -12674,19 +12570,19 @@ C-SSeS1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (42) 
+>  <File>  (41) 
 C-DAD_Monomer/C-SSeS1a-UV.gjf
 
->  <System_Code>  (42) 
+>  <System_Code>  (41) 
 SSeS
 
->  <Unit_Type>  (42) 
+>  <Unit_Type>  (41) 
 Monomer
 
->  <Family>  (42) 
+>  <Family>  (41) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (42) 
+>  <InChIKey>  (41) 
 VCMQLIKOKUQTCO-UHFFFAOYSA-N
 
 $$$$
@@ -12761,19 +12657,19 @@ C-STeS1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (43) 
+>  <File>  (42) 
 C-DAD_Monomer/C-STeS1a-UV.gjf
 
->  <System_Code>  (43) 
+>  <System_Code>  (42) 
 STeS
 
->  <Unit_Type>  (43) 
+>  <Unit_Type>  (42) 
 Monomer
 
->  <Family>  (43) 
+>  <Family>  (42) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (43) 
+>  <InChIKey>  (42) 
 IGPAVGOGXXTPPV-UHFFFAOYSA-N
 
 $$$$
@@ -12848,19 +12744,19 @@ C-SeOSe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (44) 
+>  <File>  (43) 
 C-DAD_Monomer/C-SeOSe1a-UV.gjf
 
->  <System_Code>  (44) 
+>  <System_Code>  (43) 
 SeOSe
 
->  <Unit_Type>  (44) 
+>  <Unit_Type>  (43) 
 Monomer
 
->  <Family>  (44) 
+>  <Family>  (43) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (44) 
+>  <InChIKey>  (43) 
 FYROWOIFYMKTQN-UHFFFAOYSA-N
 
 $$$$
@@ -12935,19 +12831,19 @@ C-SeSSe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (45) 
+>  <File>  (44) 
 C-DAD_Monomer/C-SeSSe1a-UV.gjf
 
->  <System_Code>  (45) 
+>  <System_Code>  (44) 
 SeSSe
 
->  <Unit_Type>  (45) 
+>  <Unit_Type>  (44) 
 Monomer
 
->  <Family>  (45) 
+>  <Family>  (44) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (45) 
+>  <InChIKey>  (44) 
 FQZHDGNQLCWYOV-UHFFFAOYSA-N
 
 $$$$
@@ -13022,19 +12918,19 @@ C-SeSeSe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (46) 
+>  <File>  (45) 
 C-DAD_Monomer/C-SeSeSe1a-UV.gjf
 
->  <System_Code>  (46) 
+>  <System_Code>  (45) 
 SeSeSe
 
->  <Unit_Type>  (46) 
+>  <Unit_Type>  (45) 
 Monomer
 
->  <Family>  (46) 
+>  <Family>  (45) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (46) 
+>  <InChIKey>  (45) 
 VJKQVEQOAGNHGR-UHFFFAOYSA-N
 
 $$$$
@@ -13109,19 +13005,19 @@ C-SeTeSe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (47) 
+>  <File>  (46) 
 C-DAD_Monomer/C-SeTeSe1a-UV.gjf
 
->  <System_Code>  (47) 
+>  <System_Code>  (46) 
 SeTeSe
 
->  <Unit_Type>  (47) 
+>  <Unit_Type>  (46) 
 Monomer
 
->  <Family>  (47) 
+>  <Family>  (46) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (47) 
+>  <InChIKey>  (46) 
 UXWRGNXHWHFAPI-UHFFFAOYSA-N
 
 $$$$
@@ -13196,19 +13092,19 @@ C-TeOTe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (48) 
+>  <File>  (47) 
 C-DAD_Monomer/C-TeOTe1a-UV.gjf
 
->  <System_Code>  (48) 
+>  <System_Code>  (47) 
 TeOTe
 
->  <Unit_Type>  (48) 
+>  <Unit_Type>  (47) 
 Monomer
 
->  <Family>  (48) 
+>  <Family>  (47) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (48) 
+>  <InChIKey>  (47) 
 RLQLDXUZFLUTSN-UHFFFAOYSA-N
 
 $$$$
@@ -13283,19 +13179,19 @@ C-TeSTe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (49) 
+>  <File>  (48) 
 C-DAD_Monomer/C-TeSTe1a-UV.gjf
 
->  <System_Code>  (49) 
+>  <System_Code>  (48) 
 TeSTe
 
->  <Unit_Type>  (49) 
+>  <Unit_Type>  (48) 
 Monomer
 
->  <Family>  (49) 
+>  <Family>  (48) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (49) 
+>  <InChIKey>  (48) 
 MHPULXUBMWJHOE-UHFFFAOYSA-N
 
 $$$$
@@ -13370,19 +13266,19 @@ C-TeSeTe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (50) 
+>  <File>  (49) 
 C-DAD_Monomer/C-TeSeTe1a-UV.gjf
 
->  <System_Code>  (50) 
+>  <System_Code>  (49) 
 TeSeTe
 
->  <Unit_Type>  (50) 
+>  <Unit_Type>  (49) 
 Monomer
 
->  <Family>  (50) 
+>  <Family>  (49) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (50) 
+>  <InChIKey>  (49) 
 KIEZZJYGNHBPNA-UHFFFAOYSA-N
 
 $$$$
@@ -13457,19 +13353,19 @@ C-TeTeTe1a-UV
  16 30  1  0
  17 31  1  0
 M  END
->  <File>  (51) 
+>  <File>  (50) 
 C-DAD_Monomer/C-TeTeTe1a-UV.gjf
 
->  <System_Code>  (51) 
+>  <System_Code>  (50) 
 TeTeTe
 
->  <Unit_Type>  (51) 
+>  <Unit_Type>  (50) 
 Monomer
 
->  <Family>  (51) 
+>  <Family>  (50) 
 chalcogendiazoloquinoxaline
 
->  <InChIKey>  (51) 
+>  <InChIKey>  (50) 
 PXKCYJPHIAPOPN-UHFFFAOYSA-N
 
 $$$$
