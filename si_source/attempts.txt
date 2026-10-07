@@ -1,0 +1,9 @@
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12152970/supplementaryFiles -> 200 application/zip 47283536
+https://pmc.ncbi.nlm.nih.gov/articles/instance/12152970/bin/ci5c00345_si_002.zip -> 200 text/html; charset=utf-8 20492
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12152970/bin/ci5c00345_si_002.zip -> 200 text/html; charset=utf-8 20480
+https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_002.zip -> 403 text/html; charset=UTF-8 5835
+INVALID si_source/acs.zip
+INVALID si_source/ci5c00345_si_002.zip
+VALID si_source/europepmc_supp.zip
+INVALID si_source/pmc1.zip
+INVALID si_source/pmc2.zip
