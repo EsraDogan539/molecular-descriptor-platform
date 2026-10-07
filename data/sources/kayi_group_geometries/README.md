@@ -21,7 +21,7 @@ A file's chemical identity is accepted when the intended family structure has th
 the coordinates or as the file's Gaussian connectivity block. Coordinates are released only when, in addition,
 the formula matches and every ring chalcogen bond length is plausible for that element.
 
-## Findings of the automated check (to be confirmed with the authors)
+## Findings of the automated check
 
 | Set | Identity confirmed | Coordinates released | Issue |
 |---|---|---|---|
@@ -30,3 +30,6 @@ the formula matches and every ring chalcogen bond length is plausible for that e
 | A monomers | 16/16 | 3/16 | ring bond lengths do not change with the element (e.g. X–N 1.767 Å for O, S, Se and Te): geometries were not re-optimized after the chalcogen was changed |
 | B monomers | 16/16 | 1/16 (`OOO`) | all other files keep the `OOO` bond lengths (X–C 1.40 Å, X–N 1.43 Å for S, Se and Te) |
 | B hexamers | 0/16 | 0/16 | every file has 2 H fewer than the intended structure (C108H60 instead of C108H62); one benzo ring is missing both H atoms and has a 1.265 Å C–C bond |
+
+In ChalMolDB the B-system property values are kept as supplied but marked as unverified (`Curation_Note`); no
+structure is assigned to B-system records that lack a consistent geometry file.

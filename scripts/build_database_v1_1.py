@@ -71,8 +71,8 @@ STATUS = {
         "Ready - exact structure from verified family template; no 3D coordinates",
     ),
     "pending": (
-        "System-level metadata; exact structure pending author confirmation",
-        "External metadata ready; structure and property provenance pending author confirmation",
+        "System-level metadata; exact structure not verified",
+        "External metadata; structure not verified and property values reported as supplied (unverified)",
     ),
     "polymer": (
         "Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value",
@@ -198,15 +198,15 @@ def main():
             if fam == "B" and n == 6:
                 status, mol = "pending", None
                 note = (f"Geometry file {b.File} describes {b.Formula_in_file}, not the intended {b.Formula} "
-                        "(two H atoms missing on one benzo ring); structure and property values pending "
-                        "author confirmation.")
+                        "(two H atoms missing on one benzo ring); no structure assigned. Property values are reported "
+                        "as supplied and could not be verified against a consistent geometry.")
             elif b.Identity_confirmed:
                 mol = bes.build_template(fam, donor, acceptor, n)
                 status = "file_3d" if b.Export_3D else "file_no3d"
                 if not b.Export_3D:
                     note = f"Geometry file {b.File}: {b.Notes}."
                     if fam == "B":
-                        note += " Property values pending author confirmation."
+                        note += " Property values are reported as supplied; the geometry they were computed on is not a re-optimized structure of this system."
             else:
                 status, mol = "pending", None
                 note = f"Geometry file {b.File}: {b.Notes}."
@@ -215,8 +215,8 @@ def main():
         else:
             status, mol = "pending", None
             if fam == "B":
-                note = ("No geometry file; B-system monomer and hexamer files failed checks, so the structure "
-                        "and property provenance of this series are pending author confirmation.")
+                note = ("No geometry file; the B-system monomer and hexamer files failed the geometry checks, so "
+                        "no structure is assigned and the property values are reported as supplied (unverified).")
 
         df.at[idx, "Structure_Availability"], df.at[idx, "Curation_Status"] = STATUS[status]
         if note:
