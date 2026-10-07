@@ -1,5 +1,6 @@
 import os
 import html
+import re
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -36,7 +37,14 @@ from query_manifest import (
 )
 from public_labels import public_collection_label, sanitize_public_dataframe
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
-from structures_3d import COORDINATE_ATTRIBUTION, load_structure_blocks, structure_block_for
+import streamlit.components.v1 as components
+
+from structures_3d import (
+    coordinate_attribution,
+    load_all_structure_blocks,
+    structure_block_for,
+    structure_viewer_html,
+)
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -53,7 +61,7 @@ except Exception:  # pragma: no cover - depends on the deployment environment
 
 @st.cache_data(show_spinner=False)
 def _structure_blocks():
-    return load_structure_blocks()
+    return load_all_structure_blocks()
 
 
 FULL_DATABASE_PATHS = [
@@ -127,6 +135,22 @@ def _display_record_id(value):
     if text.startswith("HAKAN_"):
         return text.replace("HAKAN_", "EXT_", 1)
     return text
+
+
+PUBLIC_APP_URL = "https://chalmoldb.streamlit.app"
+
+
+def _linked_record_id():
+    """Public record ID from a ?record=DEV_0001 / EXT_0148 deep link, or None."""
+    value = st.query_params.get("record")
+    if not value:
+        return None
+    value = str(value).strip().upper()
+    return value if re.fullmatch(r"(DEV|EXT)_\d{4}", value) else None
+
+
+def record_link(public_id):
+    return f"{PUBLIC_APP_URL}/?page=database&record={public_id}"
 
 
 def _record_label(row):
@@ -269,6 +293,8 @@ def _render_record_detail(row):
                     "Conditions": row.get("Solvent_or_Conditions"),
                     "Structure availability": row.get("Structure_Availability"),
                     "Curation status": row.get("Curation_Status"),
+                    "Curation note": row.get("Curation_Note"),
+                    "Repeat unit SMILES": row.get("Repeat_Unit_SMILES"),
                     "Repeated structure": row.get("Duplicate_Flag"),
                     "Source method description": row.get("Method"),
                     "Reference / DOI": row.get(reference_column) if reference_column else None,
@@ -280,6 +306,9 @@ def _render_record_detail(row):
                     use_container_width=True,
                     hide_index=True,
                 )
+
+            st.caption("Permanent link to this record")
+            st.code(record_link(record_id), language=None)
 
             citation_df = citation_ready_record(
                 row=row,
@@ -295,6 +324,13 @@ def _render_record_detail(row):
 
             sdf_block = structure_block_for(row.get("Record_ID"), _structure_blocks())
             if sdf_block:
+                if st.toggle("Show interactive 3D structure", key=f"structure_3d_view_{record_id}"):
+                    viewer_html = structure_viewer_html(sdf_block)
+                    if viewer_html:
+                        components.html(viewer_html, height=380)
+                        st.caption("Drag to rotate, scroll to zoom. Hydrogens shown; coordinates as in the SDF file.")
+                    else:
+                        st.info("The 3D viewer is not available in this environment; download the SDF file instead.")
                 st.download_button(
                     "Download 3D structure (SDF)",
                     sdf_block.encode("utf-8"),
@@ -302,7 +338,9 @@ def _render_record_detail(row):
                     "chemical/x-mdl-sdfile",
                     key=f"structure_3d_{record_id}",
                 )
-                st.caption(COORDINATE_ATTRIBUTION)
+                attribution = coordinate_attribution(sdf_block)
+                if attribution:
+                    st.caption(attribution)
 
 
 def _public_table(df):
@@ -563,7 +601,7 @@ def _style_axes(ax, ylabel="Records"):
 
 def _render_statistics(df):
     st.markdown('<div class="section-rule-title">Distribution overview</div>', unsafe_allow_html=True)
-    st.caption("Descriptive overview of database v1.")
+    st.caption(f"Descriptive overview of Database v{DATABASE_VERSION}.")
 
     stat1, stat2 = st.columns(2, gap="medium")
 
@@ -851,6 +889,7 @@ def display_database_browser():
             color: #788493;
             font-size: .72rem;
             margin-bottom: .13rem;
+            word-spacing: .12em;
         }
         .detail-field strong,
         .compact-fields strong {
@@ -1021,6 +1060,11 @@ def display_database_browser():
                 f"{MORGAN_N_BITS} bits · {SIMILARITY_METRIC}. "
                 "Structural similarity does not imply equivalent electronic properties."
             )
+
+    linked_record = _linked_record_id()
+    if linked_record and st.session_state.get("database_linked_record") != linked_record:
+        st.session_state["database_linked_record"] = linked_record
+        st.session_state["database_text_query"] = linked_record
 
     query = st.text_input(
         "Search",

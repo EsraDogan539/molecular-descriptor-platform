@@ -1,0 +1,83 @@
+{
+  "name": "ChalMolDB",
+  "database_version": "1.1",
+  "scientific_core_version": "0.11.0",
+  "records": 3248,
+  "fields": [
+    "Record_ID",
+    "Dataset_Owner",
+    "Dataset_Name",
+    "Split_Role",
+    "Paper_Use",
+    "Scope_Flag",
+    "Source_Record_ID",
+    "Source_File",
+    "Molecule_Name",
+    "Donor_ID",
+    "Acceptor_ID",
+    "System_Code",
+    "Family",
+    "Unit_Type",
+    "Oligomer_n",
+    "Canonical_SMILES",
+    "InChI",
+    "InChIKey",
+    "Repeat_Unit_SMILES",
+    "Structure_Availability",
+    "Acceptor_SMILES",
+    "HOMO_eV",
+    "LUMO_eV",
+    "Eg_eV",
+    "Experimental_Eg_eV",
+    "HOMO_Hartree",
+    "LUMO_Hartree",
+    "Eg_Hartree",
+    "Dipole_Debye",
+    "Gas_Phase_Energy_Hartree",
+    "VDW_Surface_Area_A2",
+    "VDW_Volume_A3",
+    "O_Count",
+    "S_Count",
+    "Se_Count",
+    "Te_Count",
+    "Chalcogen_Type",
+    "Donor_Chalcogen",
+    "Acceptor_Chalcogen",
+    "Atom_Count",
+    "Bond_Count",
+    "Heavy_Atom_Count",
+    "Heteroatom_Count",
+    "Planarity_Proxy_Z_Range",
+    "Radius_of_Gyration",
+    "Max_Interatomic_Distance",
+    "Mean_Interatomic_Distance",
+    "Std_Interatomic_Distance",
+    "Method",
+    "Basis_Set",
+    "Solvent_or_Conditions",
+    "Reference",
+    "Source_URL",
+    "Curation_Status",
+    "Duplicate_Flag",
+    "Notes",
+    "Curation_Note"
+  ],
+  "files": {
+    "data/public/chalmoldb_records.csv": {
+      "sha256": "722f953f42cf120c7d67279e6338176e9a12f5b7ce1edb2f85ebc1a7251929d7",
+      "bytes": 3654725
+    },
+    "data/structures_3d_v1.sdf.gz": {
+      "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",
+      "bytes": 1813941
+    },
+    "data/structures_3d_external.sdf.gz": {
+      "sha256": "d7461e37a2ca4d55feb0602deb1504c87a91df581760d3021a2ed827153711c8",
+      "bytes": 36114
+    },
+    "docs/chalcogen_descriptor_dictionary_v1.csv": {
+      "sha256": "edd9ba6c5f8fc93413cd659b51ba2b4947d09f333643205b5eadfcb0cd8f050b",
+      "bytes": 3849
+    }
+  }
+}

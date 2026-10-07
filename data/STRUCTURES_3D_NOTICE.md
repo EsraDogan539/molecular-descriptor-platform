@@ -15,3 +15,12 @@ unmodified. ChalMolDB adds four fields to each entry: `ChalMolDB_Record_ID` (pub
 **Mapping check:** each source file `Structures_N.sdf` was matched to the record with `Source_Record_ID = N`;
 for all 3,088 records the molecule title, atom and bond counts, S/Se/O counts and the HOMO–LUMO gap (Hartree)
 agree with the curated database.
+
+# 3D structures of the external collection (Database v1.1)
+
+`structures_3d_external.sdf.gz` contains 32 B3LYP/LANL2DZ geometries supplied by the H. Kayı group (Ankara
+University) and released with ChalMolDB under CC BY 4.0: the chalcogendiazoloquinoxaline monomers and hexamers. Bond orders come from the family template; coordinates are those of the
+geometry files (`data/sources/kayi_group_geometries`). A structure is included only if its atom/bond graph,
+formula and ring chalcogen bond lengths pass the checks in `scripts/build_external_structures.py`
+(full results: `data/build/external_structures.csv`). Each entry carries `ChalMolDB_Record_ID` (public EXT_
+identifier), `ChalMolDB_InChIKey`, `Coordinate_Source` and `Coordinate_License`.

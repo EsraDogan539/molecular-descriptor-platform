@@ -1,5 +1,6 @@
 import os
 import platform
+from pathlib import Path
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -1018,10 +1019,10 @@ if page == "home":
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
-          <div class="metric-item"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">S/Se/Te records</span></div>
-          <div class="metric-item"><span class="metric-number">272</span><span class="metric-label">External records</span></div>
+          <div class="metric-item"><span class="metric-number">3,248</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,079</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,040</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">160</span><span class="metric-label">External records</span></div>
         </div>
         <div class="quiet-note">
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structure standardization with RDKit
@@ -1075,10 +1076,10 @@ if page == "documentation":
     st.markdown(
         """
         <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
-          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,360</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,145</span><span class="metric-label">Core S/Se/Te</span></div>
-          <div class="metric-item"><span class="metric-number">2,983</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,353</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,248</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,040</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">3,079</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,241</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1224,6 +1225,40 @@ if page == "documentation":
             language=None,
         )
 
+    st.markdown('<div class="section-rule-title">Data access and programmatic use</div>', unsafe_allow_html=True)
+    st.write(
+        "The complete release is distributed as static, versioned files that can be downloaded here or read "
+        "directly by scripts from the GitHub repository and the Zenodo archive. No account or API key is needed. "
+        "MANIFEST.json lists the release version and the SHA-256 checksum of every file."
+    )
+    data_files = [
+        ("Records (CSV)", "data/public/chalmoldb_records.csv", "text/csv"),
+        ("3D, development (SDF)", "data/structures_3d_v1.sdf.gz", "application/gzip"),
+        ("3D, external (SDF)", "data/structures_3d_external.sdf.gz", "application/gzip"),
+        ("Descriptors (CSV)", "docs/chalcogen_descriptor_dictionary_v1.csv", "text/csv"),
+        ("Manifest (JSON)", "data/public/MANIFEST.json", "application/json"),
+    ]
+    download_columns = st.columns(len(data_files))
+    for column, (label, path, mime) in zip(download_columns, data_files):
+        file_path = Path(path)
+        if file_path.exists():
+            column.download_button(
+                label, file_path.read_bytes(), file_path.name, mime,
+                key=f"data_access_{file_path.name}", use_container_width=True,
+            )
+    st.code(
+        "import pandas as pd\n"
+        "BASE = \"https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/main/\"\n"
+        "records = pd.read_csv(BASE + \"data/public/chalmoldb_records.csv\", low_memory=False)\n"
+        "te = records[(records[\"Te_Count\"] > 0) & records[\"InChIKey\"].notna()]",
+        language="python",
+    )
+    st.write(
+        "Each record has a permanent link, for example "
+        "https://chalmoldb.streamlit.app/?page=database&record=EXT_0148. Full instructions (Python, R, SDF "
+        "parsing and checksum verification) are in docs/DATA_ACCESS.md of the repository."
+    )
+
     st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
         "ChalMolDB Database v1 · Scientific Core v0.11.0 is archived on Zenodo. "
@@ -1266,7 +1301,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>3,360 records · 2,983 unique standardized development structures</span>
+          <span>3,248 records · 3,079 unique standardized structures</span>
         </div>
         """,
         unsafe_allow_html=True,

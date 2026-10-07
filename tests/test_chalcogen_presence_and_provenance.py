@@ -85,9 +85,9 @@ def test_citation_record_uses_system_code_and_source_url_doi():
 
 
 def test_release_database_chalcogen_presence_counts():
-    """Filter counts must match the published statistics (2,907 / 644 / 119)."""
+    """Filter counts must match the published statistics (Database v1.1: 2,858 / 595 / 70)."""
     df = pd.read_csv("data/chalcogen_database_v1_master.csv.gz", low_memory=False)
-    assert int(chalcogen_presence_mask(df, "S").sum()) == 2907
-    assert int(chalcogen_presence_mask(df, "Se").sum()) == 644
-    assert int(chalcogen_presence_mask(df, "Te").sum()) == 119
-    assert len(apply_advanced_filters(df, required_chalcogens=["Te"])) == 119
+    assert int(chalcogen_presence_mask(df, "S").sum()) == 2858
+    assert int(chalcogen_presence_mask(df, "Se").sum()) == 595
+    assert int(chalcogen_presence_mask(df, "Te").sum()) == 70
+    assert len(apply_advanced_filters(df, required_chalcogens=["Te"])) == 70
