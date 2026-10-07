@@ -12,6 +12,8 @@ bond-length checks of scripts/build_external_structures.py.
 """
 
 import gzip
+import itertools
+import math
 from pathlib import Path
 
 from public_labels import public_record_id
@@ -88,3 +90,53 @@ def structure_block_for(record_id, blocks):
     if record_id is None:
         return None
     return blocks.get(public_record_id(str(record_id)))
+
+
+def molblock_atoms(block):
+    """Return [(element, (x, y, z)), ...] from the V2000 atom block of an SDF entry."""
+    lines = block.splitlines()
+    start = next(i for i, line in enumerate(lines) if "V2000" in line)
+    n_atoms = int(lines[start][:3])
+    atoms = []
+    for line in lines[start + 1:start + 1 + n_atoms]:
+        xyz = tuple(float(line[10 * j:10 * (j + 1)]) for j in range(3))
+        atoms.append((line[31:34].strip(), xyz))
+    return atoms
+
+
+def geometry_descriptors(atoms):
+    """Coordinate-derived fields of the database, over all atoms (hydrogens included).
+
+    Planarity_Proxy_Z_Range: max - min of the z coordinates in the source frame;
+    Radius_of_Gyration: unweighted, about the geometric centre;
+    Max/Mean/Std_Interatomic_Distance: over all atom pairs (population standard deviation).
+    """
+    xyz = [c for _, c in atoms]
+    n = len(xyz)
+    centre = [sum(c[j] for c in xyz) / n for j in range(3)]
+    rg = math.sqrt(sum(sum((c[j] - centre[j]) ** 2 for j in range(3)) for c in xyz) / n)
+    d = [math.dist(a, b) for a, b in itertools.combinations(xyz, 2)]
+    mean = sum(d) / len(d)
+    std = math.sqrt(sum((x - mean) ** 2 for x in d) / len(d))
+    z = [c[2] for c in xyz]
+    return {
+        "Planarity_Proxy_Z_Range": round(max(z) - min(z), 4),
+        "Radius_of_Gyration": round(rg, 6),
+        "Max_Interatomic_Distance": round(max(d), 6),
+        "Mean_Interatomic_Distance": round(mean, 6),
+        "Std_Interatomic_Distance": round(std, 6),
+    }
+
+
+def structure_viewer_html(block, width=640, height=360):
+    """Interactive 3Dmol.js viewer (via py3Dmol) for one SDF block; None if py3Dmol is unavailable."""
+    try:
+        import py3Dmol
+    except ImportError:
+        return None
+    view = py3Dmol.view(width=width, height=height)
+    view.addModel(block, "sdf")
+    view.setStyle({"stick": {"radius": 0.14}, "sphere": {"scale": 0.22}})
+    view.setBackgroundColor("white")
+    view.zoomTo()
+    return view._make_html()

@@ -69,3 +69,29 @@ def test_attribution_is_per_collection():
     )
     caption = coordinate_attribution(parse_sdf_blocks(ext_block)["EXT_0001"])
     assert caption == "3D coordinates: Group X file; CC BY 4.0."
+
+
+def test_geometry_descriptors_reproduce_database_values():
+    from structures_3d import geometry_descriptors, load_all_structure_blocks, molblock_atoms
+
+    db = pd.read_csv("data/chalcogen_database_v1_master.csv.gz", low_memory=False)
+    blocks = load_all_structure_blocks()
+    cols = ["Planarity_Proxy_Z_Range", "Radius_of_Gyration", "Max_Interatomic_Distance",
+            "Mean_Interatomic_Distance", "Std_Interatomic_Distance"]
+    with_3d = db[db.Record_ID.map(lambda rid: structure_block_for(rid, blocks) is not None)]
+    assert len(with_3d) == 3088 + 32
+    sample = pd.concat([with_3d[with_3d.Record_ID.str.startswith("EROL_")].iloc[::300],
+                        with_3d[with_3d.Record_ID.str.startswith("HAKAN_")]])
+    for _, row in sample.iterrows():
+        got = geometry_descriptors(molblock_atoms(structure_block_for(row.Record_ID, blocks)))
+        for col in cols:
+            assert abs(got[col] - row[col]) < 2e-4, (row.Record_ID, col)
+
+
+def test_viewer_html_embeds_structure():
+    import pytest
+    from structures_3d import structure_viewer_html
+
+    pytest.importorskip("py3Dmol")
+    html = structure_viewer_html(SAMPLE)
+    assert html and "3Dmol" in html and "DEV_0001" in html

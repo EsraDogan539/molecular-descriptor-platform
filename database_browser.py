@@ -1,5 +1,6 @@
 import os
 import html
+import re
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -36,7 +37,14 @@ from query_manifest import (
 )
 from public_labels import public_collection_label, sanitize_public_dataframe
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
-from structures_3d import coordinate_attribution, load_all_structure_blocks, structure_block_for
+import streamlit.components.v1 as components
+
+from structures_3d import (
+    coordinate_attribution,
+    load_all_structure_blocks,
+    structure_block_for,
+    structure_viewer_html,
+)
 from structure_search import (
     MORGAN_N_BITS,
     MORGAN_RADIUS,
@@ -127,6 +135,22 @@ def _display_record_id(value):
     if text.startswith("HAKAN_"):
         return text.replace("HAKAN_", "EXT_", 1)
     return text
+
+
+PUBLIC_APP_URL = "https://chalmoldb.streamlit.app"
+
+
+def _linked_record_id():
+    """Public record ID from a ?record=DEV_0001 / EXT_0148 deep link, or None."""
+    value = st.query_params.get("record")
+    if not value:
+        return None
+    value = str(value).strip().upper()
+    return value if re.fullmatch(r"(DEV|EXT)_\d{4}", value) else None
+
+
+def record_link(public_id):
+    return f"{PUBLIC_APP_URL}/?page=database&record={public_id}"
 
 
 def _record_label(row):
@@ -283,6 +307,9 @@ def _render_record_detail(row):
                     hide_index=True,
                 )
 
+            st.caption("Permanent link to this record")
+            st.code(record_link(record_id), language=None)
+
             citation_df = citation_ready_record(
                 row=row,
                 public_record_id=record_id,
@@ -297,6 +324,13 @@ def _render_record_detail(row):
 
             sdf_block = structure_block_for(row.get("Record_ID"), _structure_blocks())
             if sdf_block:
+                if st.toggle("Show interactive 3D structure", key=f"structure_3d_view_{record_id}"):
+                    viewer_html = structure_viewer_html(sdf_block)
+                    if viewer_html:
+                        components.html(viewer_html, height=380)
+                        st.caption("Drag to rotate, scroll to zoom. Hydrogens shown; coordinates as in the SDF file.")
+                    else:
+                        st.info("The 3D viewer is not available in this environment; download the SDF file instead.")
                 st.download_button(
                     "Download 3D structure (SDF)",
                     sdf_block.encode("utf-8"),
@@ -1025,6 +1059,11 @@ def display_database_browser():
                 f"{MORGAN_N_BITS} bits · {SIMILARITY_METRIC}. "
                 "Structural similarity does not imply equivalent electronic properties."
             )
+
+    linked_record = _linked_record_id()
+    if linked_record and st.session_state.get("database_linked_record") != linked_record:
+        st.session_state["database_linked_record"] = linked_record
+        st.session_state["database_text_query"] = linked_record
 
     query = st.text_input(
         "Search",

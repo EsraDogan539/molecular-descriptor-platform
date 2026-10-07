@@ -1,5 +1,6 @@
 import os
 import platform
+from pathlib import Path
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -1223,6 +1224,40 @@ if page == "documentation":
             ]),
             language=None,
         )
+
+    st.markdown('<div class="section-rule-title">Data access and programmatic use</div>', unsafe_allow_html=True)
+    st.write(
+        "The complete release is distributed as static, versioned files that can be downloaded here or read "
+        "directly by scripts from the GitHub repository and the Zenodo archive. No account or API key is needed. "
+        "MANIFEST.json lists the release version and the SHA-256 checksum of every file."
+    )
+    data_files = [
+        ("All records (CSV)", "data/public/chalmoldb_records.csv", "text/csv"),
+        ("3D structures, development collection (SDF.GZ)", "data/structures_3d_v1.sdf.gz", "application/gzip"),
+        ("3D structures, external collection (SDF.GZ)", "data/structures_3d_external.sdf.gz", "application/gzip"),
+        ("Descriptor dictionary (CSV)", "docs/chalcogen_descriptor_dictionary_v1.csv", "text/csv"),
+        ("Release manifest (JSON)", "data/public/MANIFEST.json", "application/json"),
+    ]
+    download_columns = st.columns(len(data_files))
+    for column, (label, path, mime) in zip(download_columns, data_files):
+        file_path = Path(path)
+        if file_path.exists():
+            column.download_button(
+                label, file_path.read_bytes(), file_path.name, mime,
+                key=f"data_access_{file_path.name}", use_container_width=True,
+            )
+    st.code(
+        "import pandas as pd\n"
+        "BASE = \"https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/main/\"\n"
+        "records = pd.read_csv(BASE + \"data/public/chalmoldb_records.csv\", low_memory=False)\n"
+        "te = records[(records[\"Te_Count\"] > 0) & records[\"InChIKey\"].notna()]",
+        language="python",
+    )
+    st.write(
+        "Each record has a permanent link, for example "
+        "https://chalmoldb.streamlit.app/?page=database&record=EXT_0148. Full instructions (Python, R, SDF "
+        "parsing and checksum verification) are in docs/DATA_ACCESS.md of the repository."
+    )
 
     st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
