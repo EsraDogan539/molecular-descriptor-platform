@@ -4,9 +4,15 @@ Input: Gaussian input files in data/sources/kayi_group_geometries/<Family>-DAD_<
 geometries optimized at B3LYP/LANL2DZ (see data/sources/kayi_group_geometries/README.md).
 
 Bond orders cannot be read reliably from Cartesian coordinates, so each system is built from a
-family template (known chemistry) and accepted only if the template's full atom/bond graph,
-including hydrogens, is identical to the graph perceived from the coordinates. Where the input
-file also carries a Gaussian connectivity block, that graph is checked as well.
+family template (known chemistry). The template's identity (SMILES/InChIKey) is accepted when its
+full atom/bond graph, including hydrogens, equals either the graph perceived from the coordinates
+or the Gaussian connectivity block written in the input file.
+
+Coordinates are exported to the SDF only when, in addition, (i) the file's formula equals the
+template formula and (ii) every chalcogen bond length lies in a plausible range for that element
+at this level of theory (BOND_RANGES). Check (ii) catches files whose geometry was made by swapping
+atom labels on another system's structure without re-optimization (bond lengths then do not change
+with the element).
 
 Outputs (data/build/):
   external_structures.csv   one row per geometry file, with SMILES/InChI/InChIKey and checks
@@ -37,6 +43,13 @@ TEMPLATES = {
     "B": "c1({X}c([*:L])c2OCCOc12)-c1ccc(-c2{X}c([*:R])c3OCCOc23)c2n{Y}nc12",
     # 4,9-bis(chalcogenophen-2-yl)-[1,2,5]chalcogenadiazolo[3,4-g]quinoxaline
     "C": "c1cc([*:L]){X}c1-c1c2nccnc2c(-c2ccc([*:R]){X}2)c2n{Y}nc12",
+}
+# Plausible X-C / X-N bond lengths (Angstrom) for chalcogens in these rings at B3LYP/LANL2DZ.
+BOND_RANGES = {
+    ("O", "C"): (1.33, 1.46), ("O", "N"): (1.33, 1.46),
+    ("S", "C"): (1.68, 1.90), ("S", "N"): (1.58, 1.82),
+    ("Se", "C"): (1.82, 2.02), ("Se", "N"): (1.75, 1.95),
+    ("Te", "C"): (2.00, 2.22), ("Te", "N"): (1.90, 2.10),
 }
 FAMILY_LABEL = {
     "A": "benzochalcogenadiazole",
@@ -118,6 +131,31 @@ def xyz_mol(atoms, coords):
     return m
 
 
+def file_formula(atoms):
+    from collections import Counter
+    c = Counter(atoms)
+    order = ["C", "H"] + sorted(k for k in c if k not in ("C", "H"))
+    return "".join(f"{k}{c[k] if c[k] > 1 else ''}" for k in order if k in c)
+
+
+def bond_length_check(mol, coords):
+    """Return list of implausible chalcogen bonds (element pair, length)."""
+    import math
+    bad = []
+    for b in mol.GetBonds():
+        a1, a2 = b.GetBeginAtom(), b.GetEndAtom()
+        pair = (a1.GetSymbol(), a2.GetSymbol())
+        if pair not in BOND_RANGES:
+            pair = pair[::-1]
+            a1, a2 = a2, a1
+        if pair in BOND_RANGES:
+            d = math.dist(coords[a1.GetIdx()], coords[a2.GetIdx()])
+            lo, hi = BOND_RANGES[pair]
+            if not lo <= d <= hi:
+                bad.append(f"{pair[0]}-{pair[1]} {d:.3f}")
+    return sorted(set(bad))
+
+
 def graph_from_bonds(atoms, bonds):
     rw = Chem.RWMol()
     for a in atoms:
@@ -141,12 +179,32 @@ def main():
         tmpl = build_template(family, donor, acceptor, n_units)
         if tmpl is None:
             tmpl = build_template(family, donor, acceptor, n_units, kekule=True)
-        geo = xyz_mol(atoms, coords)
-        sk_t, sk_g = skeleton(tmpl), skeleton(geo)
-        geom_ok = Chem.MolToSmiles(sk_t) == Chem.MolToSmiles(sk_g)
-        conn_ok = None
-        if bonds:
-            conn_ok = Chem.MolToSmiles(graph_from_bonds(atoms, bonds)) == Chem.MolToSmiles(sk_t)
+        sk_t = skeleton(tmpl)
+        tmpl_key = Chem.MolToSmiles(sk_t)
+        formula_t = CalcMolFormula(tmpl)
+        formula_f = file_formula(atoms)
+        geo = skeleton(xyz_mol(atoms, coords))
+        geom_ok = Chem.MolToSmiles(geo) == tmpl_key
+        gauss = graph_from_bonds(atoms, bonds) if bonds else None
+        conn_ok = None if gauss is None else Chem.MolToSmiles(gauss) == tmpl_key
+        graph_ok = bool(geom_ok or conn_ok)
+
+        notes, bad = [], []
+        if formula_f != formula_t:
+            notes.append(f"file formula {formula_f} differs from intended {formula_t}")
+        if graph_ok:
+            ref = geo if geom_ok else gauss
+            match = ref.GetSubstructMatch(sk_t)
+            assert len(match) == tmpl.GetNumAtoms() == len(atoms)
+            mapped = [coords[g] for g in match]
+            bad = bond_length_check(tmpl, mapped)
+            if bad:
+                notes.append("implausible chalcogen bond lengths: " + "; ".join(bad))
+            if not geom_ok:
+                notes.append("identity from Gaussian connectivity block (distance perception differs)")
+            if conn_ok is False:
+                notes.append("Gaussian connectivity block incomplete; identity from coordinates")
+        export = graph_ok and not bad and formula_f == formula_t
 
         heavy = Chem.RemoveHs(tmpl)
         smiles = Chem.MolToSmiles(heavy)
@@ -154,19 +212,18 @@ def main():
         row = {
             "File": f"{folder}/{path.name}", "Family_Code": family, "Family": FAMILY_LABEL[family],
             "Unit_Type": unit_type, "System_Code": f"{donor}{acceptor}{donor}",
-            "Formula": CalcMolFormula(tmpl), "Atoms_in_file": len(atoms),
+            "Formula": formula_t, "Formula_in_file": formula_f, "Atoms_in_file": len(atoms),
             "Geometry_graph_match": geom_ok, "Gaussian_connectivity_match": conn_ok,
+            "Identity_confirmed": graph_ok, "Export_3D": export, "Notes": " | ".join(notes),
             "Canonical_SMILES": smiles, "InChI": inchi, "InChIKey": Chem.InchiToInchiKey(inchi),
             "Route": route,
         }
         rows.append(row)
 
-        if geom_ok:
-            match = sk_g.GetSubstructMatch(sk_t)
-            assert len(match) == tmpl.GetNumAtoms() == len(atoms)
+        if export:
             conf = Chem.Conformer(tmpl.GetNumAtoms())
-            for t_idx, g_idx in enumerate(match):
-                conf.SetAtomPosition(t_idx, coords[g_idx])
+            for t_idx, xyz in enumerate(mapped):
+                conf.SetAtomPosition(t_idx, xyz)
             out = Chem.Mol(tmpl)
             out.RemoveAllConformers(); out.AddConformer(conf, assignId=True)
             out.SetProp("_Name", path.stem)
@@ -176,11 +233,11 @@ def main():
     writer.close()
     df = pd.DataFrame(rows)
     df.to_csv(OUT / "external_structures.csv", index=False)
-    print(df[["File", "Formula", "Geometry_graph_match", "Gaussian_connectivity_match"]].to_string())
-    print("geometry matches:", int(df.Geometry_graph_match.sum()), "/", len(df))
-    print("connectivity matches:", df.Gaussian_connectivity_match.value_counts(dropna=False).to_dict())
-    if not df.Geometry_graph_match.all():
-        sys.exit(1)
+    pd.set_option("display.width", 250); pd.set_option("display.max_colwidth", 120)
+    print(df[["File", "Identity_confirmed", "Export_3D", "Notes"]].to_string())
+    print("identity confirmed:", int(df.Identity_confirmed.sum()), "/", len(df))
+    print("3D exported:", int(df.Export_3D.sum()), "/", len(df))
+    print(df.groupby(["Family_Code", "Unit_Type"])[["Identity_confirmed", "Export_3D"]].sum().to_string())
 
 
 if __name__ == "__main__":
