@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540">
+<defs>
+<radialGradient id="heroC" cx="32%" cy="25%" r="72%"><stop stop-color="#ffffff"/><stop offset=".48" stop-color="#dbe1e7"/><stop offset="1" stop-color="#8b96a1"/></radialGradient>
+<radialGradient id="heroS" cx="30%" cy="24%" r="72%"><stop stop-color="#fff5b6"/><stop offset=".42" stop-color="#e7bd39"/><stop offset="1" stop-color="#ad7e00"/></radialGradient>
+<radialGradient id="heroSe" cx="30%" cy="24%" r="72%"><stop stop-color="#c6fff6"/><stop offset=".42" stop-color="#39aa9e"/><stop offset="1" stop-color="#0d6b63"/></radialGradient>
+<radialGradient id="heroTe" cx="30%" cy="24%" r="72%"><stop stop-color="#eee6f7"/><stop offset=".42" stop-color="#846b9f"/><stop offset="1" stop-color="#55406d"/></radialGradient>
+<linearGradient id="heroBond" x1="0" x2="1"><stop stop-color="#99a4af"/><stop offset=".5" stop-color="#cbd2d9"/><stop offset="1" stop-color="#7f8a95"/></linearGradient>
+<filter id="heroShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#173b5b" flood-opacity="0.2"/></filter>
+</defs>
+<g transform="translate(380.0 280.0)" filter="url(#heroShadow)" stroke-linecap="round">
+<g stroke="url(#heroBond)" stroke-width="13">
+<path d="M-161.7 -29.7 -108.4 9.0"/>
+<path d="M-108.4 9.0 -128.8 71.6"/>
+<path d="M-128.8 71.6 -194.6 71.6"/>
+<path d="M-194.6 71.6 -214.9 9.0"/>
+<path d="M-214.9 9.0 -161.7 -29.7"/>
+<path d="M0.0 29.7 53.3 -9.0"/>
+<path d="M53.3 -9.0 32.9 -71.6"/>
+<path d="M32.9 -71.6 -32.9 -71.6"/>
+<path d="M-32.9 -71.6 -53.3 -9.0"/>
+<path d="M-53.3 -9.0 0.0 29.7"/>
+<path d="M-108.4 9.0 -53.3 -9.0"/>
+<path d="M161.7 -29.7 214.9 9.0"/>
+<path d="M214.9 9.0 194.6 71.6"/>
+<path d="M194.6 71.6 128.8 71.6"/>
+<path d="M128.8 71.6 108.4 9.0"/>
+<path d="M108.4 9.0 161.7 -29.7"/>
+<path d="M53.3 -9.0 108.4 9.0"/>
+</g><g stroke="#ffffff" stroke-width="3">
+<circle cx="-161.7" cy="-29.7" r="36" fill="url(#heroS)"/>
+<circle cx="-108.4" cy="9.0" r="19" fill="url(#heroC)"/>
+<circle cx="-128.8" cy="71.6" r="19" fill="url(#heroC)"/>
+<circle cx="-194.6" cy="71.6" r="19" fill="url(#heroC)"/>
+<circle cx="-214.9" cy="9.0" r="19" fill="url(#heroC)"/>
+<circle cx="0.0" cy="29.7" r="36" fill="url(#heroSe)"/>
+<circle cx="53.3" cy="-9.0" r="19" fill="url(#heroC)"/>
+<circle cx="32.9" cy="-71.6" r="19" fill="url(#heroC)"/>
+<circle cx="-32.9" cy="-71.6" r="19" fill="url(#heroC)"/>
+<circle cx="-53.3" cy="-9.0" r="19" fill="url(#heroC)"/>
+<circle cx="161.7" cy="-29.7" r="36" fill="url(#heroTe)"/>
+<circle cx="214.9" cy="9.0" r="19" fill="url(#heroC)"/>
+<circle cx="194.6" cy="71.6" r="19" fill="url(#heroC)"/>
+<circle cx="128.8" cy="71.6" r="19" fill="url(#heroC)"/>
+<circle cx="108.4" cy="9.0" r="19" fill="url(#heroC)"/>
+</g><g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="#ffffff">
+<text x="-161.7" y="-28.8" font-size="23.0">S</text>
+<text x="0.0" y="30.7" font-size="20.2">Se</text>
+<text x="161.7" y="-28.8" font-size="20.2">Te</text>
+</g></g>
+</svg>
