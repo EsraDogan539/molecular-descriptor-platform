@@ -1232,11 +1232,11 @@ if page == "documentation":
         "MANIFEST.json lists the release version and the SHA-256 checksum of every file."
     )
     data_files = [
-        ("All records (CSV)", "data/public/chalmoldb_records.csv", "text/csv"),
-        ("3D structures, development collection (SDF.GZ)", "data/structures_3d_v1.sdf.gz", "application/gzip"),
-        ("3D structures, external collection (SDF.GZ)", "data/structures_3d_external.sdf.gz", "application/gzip"),
-        ("Descriptor dictionary (CSV)", "docs/chalcogen_descriptor_dictionary_v1.csv", "text/csv"),
-        ("Release manifest (JSON)", "data/public/MANIFEST.json", "application/json"),
+        ("Records (CSV)", "data/public/chalmoldb_records.csv", "text/csv"),
+        ("3D, development (SDF)", "data/structures_3d_v1.sdf.gz", "application/gzip"),
+        ("3D, external (SDF)", "data/structures_3d_external.sdf.gz", "application/gzip"),
+        ("Descriptors (CSV)", "docs/chalcogen_descriptor_dictionary_v1.csv", "text/csv"),
+        ("Manifest (JSON)", "data/public/MANIFEST.json", "application/json"),
     ]
     download_columns = st.columns(len(data_files))
     for column, (label, path, mime) in zip(download_columns, data_files):

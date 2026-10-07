@@ -601,7 +601,7 @@ def _style_axes(ax, ylabel="Records"):
 
 def _render_statistics(df):
     st.markdown('<div class="section-rule-title">Distribution overview</div>', unsafe_allow_html=True)
-    st.caption("Descriptive overview of database v1.")
+    st.caption(f"Descriptive overview of Database v{DATABASE_VERSION}.")
 
     stat1, stat2 = st.columns(2, gap="medium")
 
