@@ -10,20 +10,26 @@
 <g transform="translate(380.0 280.0)" filter="url(#heroShadow)" stroke-linecap="round">
 <g stroke="url(#heroBond)" stroke-width="13">
 <path d="M-161.7 -29.7 -108.4 9.0"/>
-<path d="M-108.4 9.0 -128.8 71.6"/>
+<path stroke-width="5.9" d="M-115.8 6.6 -136.2 69.2"/>
+<path stroke-width="5.9" d="M-101.0 11.4 -121.3 74.0"/>
 <path d="M-128.8 71.6 -194.6 71.6"/>
-<path d="M-194.6 71.6 -214.9 9.0"/>
+<path stroke-width="5.9" d="M-187.2 69.2 -207.5 6.6"/>
+<path stroke-width="5.9" d="M-202.0 74.0 -222.4 11.4"/>
 <path d="M-214.9 9.0 -161.7 -29.7"/>
 <path d="M0.0 29.7 53.3 -9.0"/>
-<path d="M53.3 -9.0 32.9 -71.6"/>
+<path stroke-width="5.9" d="M60.7 -11.4 40.3 -74.0"/>
+<path stroke-width="5.9" d="M45.8 -6.6 25.5 -69.2"/>
 <path d="M32.9 -71.6 -32.9 -71.6"/>
-<path d="M-32.9 -71.6 -53.3 -9.0"/>
+<path stroke-width="5.9" d="M-40.3 -74.0 -60.7 -11.4"/>
+<path stroke-width="5.9" d="M-25.5 -69.2 -45.8 -6.6"/>
 <path d="M-53.3 -9.0 0.0 29.7"/>
 <path d="M-108.4 9.0 -53.3 -9.0"/>
 <path d="M161.7 -29.7 214.9 9.0"/>
-<path d="M214.9 9.0 194.6 71.6"/>
+<path stroke-width="5.9" d="M207.5 6.6 187.2 69.2"/>
+<path stroke-width="5.9" d="M222.4 11.4 202.0 74.0"/>
 <path d="M194.6 71.6 128.8 71.6"/>
-<path d="M128.8 71.6 108.4 9.0"/>
+<path stroke-width="5.9" d="M136.2 69.2 115.8 6.6"/>
+<path stroke-width="5.9" d="M121.3 74.0 101.0 11.4"/>
 <path d="M108.4 9.0 161.7 -29.7"/>
 <path d="M53.3 -9.0 108.4 9.0"/>
 </g><g stroke="#ffffff" stroke-width="3">
