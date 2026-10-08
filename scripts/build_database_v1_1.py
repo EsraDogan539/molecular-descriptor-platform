@@ -16,6 +16,7 @@ Changes (see docs/DATABASE_CHANGELOG.md):
   4. Duplicate_Flag = the record's InChIKey is shared with at least one other record.
   5. 3D coordinates of external records whose geometry file passes all checks
      (data/structures_3d_external.sdf.gz).
+  7. Source annotations from the source articles (scripts/annotate_external_sources.py).
   6. Coordinate-derived fields (Planarity_Proxy_Z_Range, Radius_of_Gyration, interatomic distances) for those
      records, with the same definitions as the development collection (structures_3d.geometry_descriptors).
 """
@@ -34,6 +35,7 @@ import build_external_structures as bes  # noqa: E402
 
 sys.path.insert(0, str(ROOT))
 from structures_3d import geometry_descriptors, molblock_atoms  # noqa: E402
+from annotate_external_sources import annotate  # noqa: E402
 
 V1 = ROOT / "data" / "releases" / "chalcogen_database_v1.csv.gz"
 MASTER = ROOT / "data" / "chalcogen_database_v1_master.csv.gz"
@@ -226,6 +228,7 @@ def main():
     df["Duplicate_Flag"] = has_key & df.InChIKey.duplicated(keep=False)
 
     df.loc[df.Curation_Note.isna(), "Curation_Note"] = ""
+    df = annotate(df)
     assert len(df) == 3248
     df.to_csv(MASTER, index=False, compression={"method": "gzip", "mtime": 0})
     with gzip.GzipFile(EXT_3D, "wb", mtime=0) as fh:
