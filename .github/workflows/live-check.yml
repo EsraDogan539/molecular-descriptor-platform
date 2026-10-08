@@ -7,13 +7,17 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
-      - run: pip install playwright > /dev/null && python -m playwright install --with-deps chromium > /dev/null
-      - run: mkdir -p docs/live_check; python scripts/live_probe.py > docs/live_check/probe_stdout.txt 2>&1 || true; python scripts/live_numbers.py > docs/live_check/numbers_stdout.txt 2>&1 || true
+      - run: |
+          sudo apt-get install -y poppler-utils > /dev/null 2>&1 || true
+          mkdir -p docs/keywords
+          for f in keywords_bycateg.pdf keywords.pdf keywords_byalpha.pdf; do
+            curl -sSL -A "Mozilla/5.0" -o docs/keywords/$f https://application.wiley-vch.de/vch/journals/$f || true
+          done
+          for f in docs/keywords/*.pdf; do pdftotext -layout "$f" "${f%.pdf}.txt" 2>/dev/null || true; done
+          ls -la docs/keywords > docs/keywords/listing.txt
+          rm -f docs/keywords/*.pdf
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A docs/live_check; git commit -m "Live check results [skip ci]" || true; git push
+          git add -A docs/keywords; git commit -m "Keyword catalogue [skip ci]" || true; git push
