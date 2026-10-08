@@ -29,6 +29,9 @@
     "LUMO_eV",
     "Eg_eV",
     "Experimental_Eg_eV",
+    "Experimental_Eg_Min_eV",
+    "Experimental_Eg_Max_eV",
+    "Experimental_Eg_Source",
     "HOMO_Hartree",
     "LUMO_Hartree",
     "Eg_Hartree",
@@ -64,8 +67,8 @@
   ],
   "files": {
     "data/public/chalmoldb_records.csv": {
-      "sha256": "722f953f42cf120c7d67279e6338176e9a12f5b7ce1edb2f85ebc1a7251929d7",
-      "bytes": 3654725
+      "sha256": "a24681913881b63b370c1789216b491c0c6d0f0718549e23229e890d365c2ca7",
+      "bytes": 3679585
     },
     "data/structures_3d_v1.sdf.gz": {
       "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",
