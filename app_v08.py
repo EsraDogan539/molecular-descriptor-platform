@@ -64,6 +64,14 @@ TEAM = [
 AFFILIATION = "Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye"
 CONTACT_EMAIL = "hkayi@ankara.edu.tr"
 CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
+HERO_TEXTS = {
+    "long": ("Replacing sulfur with selenium or tellurium is one of the simplest ways to tune the band gap of "
+             "donor–acceptor molecules for organic solar cells and transistors, but the relevant data are scattered "
+             "across many studies with different methods. ChalMolDB collects these records in one place, with "
+             "standardized structures and the source and level of theory of every value."),
+    "short": ("ChalMolDB brings together scattered data on how sulfur, selenium and tellurium tune the band gap of "
+              "donor–acceptor molecules, with standardized structures and the source of every value."),
+}
 
 
 def page_href(target, anchor="", extra_params=""):
@@ -957,6 +965,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+HERO_TEXT = HERO_TEXTS.get(str(st.query_params.get("hero", "long")), HERO_TEXTS["long"])  # preview switch
+
 if page == "home":
     st.markdown(
         f"""
@@ -970,10 +980,7 @@ if page == "home":
                 <div class="hero-subbrand">Chalcogen Molecular Database</div>
               </div>
             </div>
-            <p>
-              A curated molecular database for chalcogen-focused electronic property studies,
-              combining standardized identity, provenance and interpretable structural annotations.
-            </p>
+            <p>{HERO_TEXT}</p>
           </div>
           <div class="hero-visual" aria-hidden="true">
             <svg class="hero-molecule-svg" viewBox="0 0 760 540" xmlns="http://www.w3.org/2000/svg">
