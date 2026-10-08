@@ -1,7 +1,0 @@
-home: 3346 chars; exception=False
-database: 2194 chars; exception=False
-record: 2210 chars; exception=False
-statistics: 1033 chars; exception=False
-analyze: 882 chars; exception=False
-documentation: 7545 chars; exception=False
-about: 2723 chars; exception=False

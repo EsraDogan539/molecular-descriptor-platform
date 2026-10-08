@@ -2,15 +2,15 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 out = Path("docs/review"); out.mkdir(parents=True, exist_ok=True)
 B = "https://chalmoldb.streamlit.app/~/+"
-pages = [("home","?page=home"),("database","?page=database"),("record","?page=database&record=DEV_0481"),
-         ("statistics","?page=statistics"),("analyze","?page=analyze"),("documentation","?page=documentation"),("about","?page=about")]
+pages = [("home","?page=home"),("record","?page=database&record=DEV_0001"),("polymer","?page=database&record=EXT_0130"),
+         ("statistics","?page=statistics"),("about","?page=about")]
 log=[]
 with sync_playwright() as p:
     b = p.chromium.launch(); page = b.new_page(viewport={"width": 1440, "height": 6000})
     page.goto(B+"/?page=home", timeout=120000)
     w = page.get_by_text("Yes, get this app back up")
     if w.count(): w.first.click()
-    page.wait_for_timeout(60000)
+    page.wait_for_timeout(240000)
     for name, q in pages:
         page.goto(B+"/"+q, timeout=120000); page.wait_for_timeout(25000)
         if name == "record":
