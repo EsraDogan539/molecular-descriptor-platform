@@ -10,6 +10,8 @@ Changes:
   * Experimental_Eg_Min_eV / _Max_eV: numeric columns; Experimental_Eg_eV keeps the value(s) as reported.
   * Experimental_Eg_Source: which literature reference of the 2019 article each experimental value comes from.
   * Curation_Note: why the B3LYP/6-31G(d) tellurium records carry no value; level-of-theory provenance notes.
+  * HOMO/LUMO withheld for 7 oligomer records whose published HOMO/LUMO pair is inconsistent with the published Eg
+    (HOMO_LUMO_CORRECTIONS); Eg is kept.
 
 Run on its own (python scripts/annotate_external_sources.py) or from build_database_v1_1.py.
 """
@@ -52,15 +54,22 @@ EXPERIMENTAL_2019_MONOMER = {
     "SeSSe": "2.33 eV, ref. [26]",
     "SeSeSe": "2.19 eV, ref. [29]",
 }
-# Internal inconsistencies of Table 4 found during curation (values kept as published).
-SOURCE_ANOMALIES = {
-    ("OSeO", "LANL2DZ", "no"): "In the source table, Eg differs from LUMO - HOMO by about 0.2 eV for the OSeO "
-                               "oligomers at this level; Eg is kept as published.",
-    ("SeTeSe", "LANL2DZ", "yes", "6"): "In the source table, Eg (1.27 eV) differs from LUMO - HOMO (1.31 eV) for this "
-                                       "record; Eg is kept as published.",
-    ("SSeS", "LANL2DZ", "no", "6"): "In the source table, HOMO and LUMO of this record equal those of the SSS hexamer "
-                                    "and break the trend of the SSeS series (possible transcription error in the "
-                                    "source); values are kept as published.",
+# Internal inconsistencies of Table 4 found during curation. In all three cases the published Eg values reproduce
+# the published polymer band gaps by the article's 1/n extrapolation (e.g. OSeO, B3LYP/LANL2DZ: 1.37 eV from Eg,
+# 1.54 eV from LUMO - HOMO), so Eg is kept and the HOMO/LUMO pair, which cannot belong to that Eg, is withheld.
+HOMO_LUMO_CORRECTIONS = {
+    ("OSeO", "LANL2DZ", "no", "*"): (
+        "HOMO and LUMO withheld: in the source table LUMO - HOMO exceeds Eg by about 0.2 eV for the OSeO "
+        "oligomers at this level, and only the published Eg values reproduce the published polymer gap "
+        "(1.37 eV) by 1/n extrapolation. Eg is kept as published."),
+    ("SeTeSe", "LANL2DZ", "yes", "6"): (
+        "HOMO and LUMO withheld: in the source table they are identical to those of the SeTeSe pentamer at the same "
+        "level (LUMO - HOMO = 1.31 eV vs Eg = 1.27 eV); the published Eg follows the series trend and reproduces the "
+        "published polymer gap. Eg is kept as published."),
+    ("SSeS", "LANL2DZ", "no", "6"): (
+        "HOMO and LUMO withheld: in the source table they are identical to those of the SSS hexamer and break the "
+        "trend of the SSeS series; the published Eg follows the series trend and reproduces the published polymer "
+        "gap. Eg is kept as published."),
 }
 # Table 4 footnotes d, e, i: computed values that the 2019 article took from earlier work of the same group.
 EARLIER_WORK_2019 = {
@@ -131,9 +140,6 @@ def annotate(df):
             cited = sorted(float(v) for v in re.findall(r"([0-9.]+) eV", table[code]))
             assert cited == sorted(_parse_values(df.at[idx, "Experimental_Eg_eV"])), (df.at[idx, "Record_ID"], cited)
             df.at[idx, "Experimental_Eg_Source"] = f"{table[code]} as cited in {SRC_2019}"
-        for key in ((code, basis, solv), (code, basis, solv, n)):
-            if key in SOURCE_ANOMALIES and n != "polymer":
-                df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], SOURCE_ANOMALIES[key])
         if basis == "6-31G(d)":
             if pd.isna(df.at[idx, "Eg_eV"]):
                 assert "Te" in code, df.at[idx, "Record_ID"]
@@ -147,6 +153,12 @@ def annotate(df):
             df.at[idx, "Curation_Note"] = _append(
                 df.at[idx, "Curation_Note"],
                 f"Value taken by the source article from earlier work of the same group ({earlier} of {SRC_2019}).")
+        if n != "polymer":
+            for key in ((code, basis, solv, "*"), (code, basis, solv, n)):
+                if key in HOMO_LUMO_CORRECTIONS:
+                    df.at[idx, "HOMO_eV"] = pd.NA
+                    df.at[idx, "LUMO_eV"] = pd.NA
+                    df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], HOMO_LUMO_CORRECTIONS[key])
     return df
 
 

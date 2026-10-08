@@ -13,8 +13,11 @@ records are unchanged, record identifiers are not renumbered, and new records co
 - Exact structures for all 240 records (monomer and hexamer identity confirmed against the authors' geometry files,
   dimer to pentamer from the verified repeat unit); 3D coordinates for 27 records whose gas-phase geometry file
   passes all checks. Experimental monomer gaps (27 records) with their literature references.
-- Three internal inconsistencies of the source table are kept as published and noted in `Curation_Note`
-  (OSeO at B3LYP/LANL2DZ, SeTeSe hexamer with PCM, SSeS hexamer at B3LYP/LANL2DZ).
+- Three internal inconsistencies of the source table were corrected by withholding HOMO and LUMO (Eg kept) for
+  7 records: the OSeO monomer to pentamer at B3LYP/LANL2DZ (LUMO - HOMO exceeds Eg by about 0.2 eV), the SeTeSe
+  hexamer with PCM (HOMO/LUMO copied from the pentamer) and the SSeS hexamer at B3LYP/LANL2DZ (HOMO/LUMO copied
+  from the SSS hexamer). In each case only the published Eg values reproduce the published polymer gap by the
+  article's 1/n extrapolation (OSeO: 1.37 eV from Eg, 1.54 eV from LUMO - HOMO). Reasons are given in `Curation_Note`.
 
 **Removed: B-system family (112 external records, EXT_0001–EXT_0112)**
 - The authors' geometry files for this family are not consistent with the reported systems: every hexamer file
@@ -63,6 +66,7 @@ records are unchanged, record identifiers are not renumbered, and new records co
 | S/Se/Te core scope / control or non-core | 3,145 / 215 | 3,262 / 226 |
 | Records containing S / Se / Te | 2,907 / 644 / 119 | 2,969 / 706 / 154 |
 | Records with exact structure | 3,088 | 3,424 |
+| Records with HOMO and LUMO | 3,280 | 3,417 |
 | Unique InChIKeys | 2,983 | 3,173 |
 | Te records with exact structure | 0 | 126 |
 | Records with 3D coordinates | 3,088 | 3,147 |
