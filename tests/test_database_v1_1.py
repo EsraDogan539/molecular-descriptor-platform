@@ -139,7 +139,7 @@ def test_eg_context_by_record_type(db):
 
     dev = db[db.Record_ID.str.startswith("EROL_")].iloc[0]
     assert "LUMO − HOMO" in eg_definition(dev)
-    assert "6-311+G(d)" in eg_context_html(dev)
+    assert "6-311+G(d), solvation not stated in source" in eg_context_html(dev)
     ext = db[db.Record_ID.str.startswith("HAKAN_")]
     polymer = ext[ext.Oligomer_n.astype(str).eq("polymer") & ext.Eg_eV.notna()].iloc[0]
     assert "extrapolated" in eg_definition(polymer)
@@ -147,3 +147,13 @@ def test_eg_context_by_record_type(db):
     assert eg_definition(missing).startswith("no value")
     pcm = ext[ext.Solvent_or_Conditions.eq("PCM (acetonitrile)")].iloc[0]
     assert "PCM (acetonitrile)" in eg_context_html(pcm)
+
+
+def test_cached_loaders_follow_data_files(tmp_path):
+    from database_browser import _file_signature
+
+    f = tmp_path / "x.csv"
+    f.write_text("a\n1\n")
+    first = _file_signature([f, tmp_path / "absent.csv"])
+    f.write_text("a\n1\n2\n")
+    assert len(first) == 1 and _file_signature([f]) != first
