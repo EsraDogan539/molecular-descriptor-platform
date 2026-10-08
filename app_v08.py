@@ -965,7 +965,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-HERO_TEXT = HERO_TEXTS.get(str(st.query_params.get("hero", "long")), HERO_TEXTS["long"])  # preview switch
+HERO_TEXT = HERO_TEXTS["short"]
 
 if page == "home":
     st.markdown(
@@ -1447,6 +1447,8 @@ if page == "about":
         """,
         unsafe_allow_html=True,
     )
+
+    st.write(HERO_TEXTS["long"])
 
     st.write(
         "ChalMolDB (Chalcogen Molecular Database) brings together standardized molecular identity, "
