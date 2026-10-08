@@ -102,7 +102,19 @@ def test_a_family_oligomers_match_source_table(db):
     for _, r in new.iterrows():
         t = table[(table.System_Code == r.System_Code) & (table.n == r.Oligomer_n)].iloc[0]
         suffix = levels[(r.Basis_Set, r.Solvent_or_Conditions)]
-        assert float(t[f"HOMO_{suffix}"]) == r.HOMO_eV
-        assert float(t[f"LUMO_{suffix}"]) == r.LUMO_eV
         assert float(t[f"Eg_{suffix}"]) == r.Eg_eV
+        if pd.isna(r.HOMO_eV):
+            assert "HOMO and LUMO withheld" in r.Curation_Note
+        else:
+            assert float(t[f"HOMO_{suffix}"]) == r.HOMO_eV
+            assert float(t[f"LUMO_{suffix}"]) == r.LUMO_eV
     assert new.InChIKey.notna().all()
+
+
+def test_homo_lumo_corrections(db):
+    withheld = db[db.HOMO_eV.isna() & db.Eg_eV.notna() & db.Oligomer_n.ne("polymer")]
+    assert len(withheld) == 7
+    assert withheld.LUMO_eV.isna().all()
+    assert withheld.Curation_Note.str.contains("HOMO and LUMO withheld").all()
+    oligomers = db[db.HOMO_eV.notna() & db.Source_File.eq("ozkilinc_kayi_2019_table4_oligomers.csv")]
+    assert ((oligomers.LUMO_eV - oligomers.HOMO_eV - oligomers.Eg_eV).abs() <= 0.021).all()
