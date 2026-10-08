@@ -1,6 +1,6 @@
 # ChalMolDB database changelog
 
-## Database v1.1 (in preparation; not yet released)
+## Database v1.1 (2026-10-08, tag `db-v1.1`)
 
 Built from the archived Database v1 table (`data/releases/chalcogen_database_v1.csv.gz`) by
 `scripts/build_database_v1_1.py`. 3,488 records (3,088 development, 400 external); property values of the retained
@@ -40,7 +40,7 @@ records are unchanged, record identifiers are not renumbered, and new records co
   the source label is kept in `Curation_Note`.
 
 **External collection**
-- New field `Repeat_Unit_SMILES` for all 160 records (repeat unit with two `*` attachment points).
+- New field `Repeat_Unit_SMILES` for all 400 records (repeat unit with two `*` attachment points).
 - Exact structures (SMILES, InChI, InChIKey, element and atom counts) for the 96 chalcogendiazoloquinoxaline
   oligomer records: monomers and hexamers (32) confirmed against the authors' geometry files with 3D coordinates
   included; dimers to pentamers (64) from the family template verified on those files.
@@ -52,7 +52,8 @@ records are unchanged, record identifiers are not renumbered, and new records co
   on equal system code and band gap; that flag is removed.
 
 **3D structures**
-- `data/structures_3d_external.sdf.gz`: 59 external structures (CC BY 4.0, H. Kayı group).
+- `data/structures_3d_external.sdf.gz`: 59 record-linked external structures from 50 validated geometry files
+  (18 benzochalcogenadiazole, 32 chalcogendiazoloquinoxaline; CC BY 4.0, H. Kayı group).
 
 **Source annotations**
 - External notes cite the source articles; solvation recorded as gas phase or PCM (acetonitrile); numeric
