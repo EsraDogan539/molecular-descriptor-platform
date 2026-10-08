@@ -14,6 +14,8 @@ Changes:
     (HOMO_LUMO_CORRECTIONS); Eg is kept.
   * Explicit values instead of empty cells: Chalcogen_Type "None (control)" for control records, and
     Solvent_or_Conditions "not stated in source" for the development collection.
+  * Development labels in the form "D58,A1" written as "D58A1" like the rest of the collection (source label kept
+    in Curation_Note).
 
 Run on its own (python scripts/annotate_external_sources.py) or from build_database_v1_1.py.
 """
@@ -166,6 +168,13 @@ def annotate(df):
     df.loc[controls, "Chalcogen_Type"] = "None (control)"
     dev = df.Record_ID.astype(str).str.startswith("EROL_")
     df.loc[dev & df.Solvent_or_Conditions.isna(), "Solvent_or_Conditions"] = "not stated in source"
+    # one label format for the development collection: "D58,A1" (52 source labels) -> "D58A1"
+    df["Molecule_Name"] = df["Molecule_Name"].astype("object")
+    for idx in df.index[dev & df.Molecule_Name.astype(str).str.fullmatch(r"D\d+,A\d+")]:
+        source_label = str(df.at[idx, "Molecule_Name"])
+        df.at[idx, "Molecule_Name"] = source_label.replace(",", "")
+        df.at[idx, "Curation_Note"] = _append(
+            df.at[idx, "Curation_Note"], f"Source label {source_label} written as {df.at[idx, 'Molecule_Name']}.")
     return df
 
 
