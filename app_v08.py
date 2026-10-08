@@ -52,7 +52,7 @@ CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
 TEAM = [
     {
         "name": "Esra Nur Doğan",
-        "role": "Database design, data curation, software development",
+        "role": "Database design, data curation, software development; corresponding author",
         "orcid": "0000-0001-5755-7596",
     },
     {
@@ -62,7 +62,7 @@ TEAM = [
     },
 ]
 AFFILIATION = "Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye"
-CONTACT_EMAIL = "hkayi@ankara.edu.tr"
+CONTACT_EMAILS = ("endogan@ankara.edu.tr", "hkayi@ankara.edu.tr")
 CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
 HERO_TEXTS = {
     "long": ("Replacing sulfur with selenium or tellurium is one of the simplest ways to tune the band gap of "
@@ -1493,7 +1493,7 @@ if page == "about":
         for m in TEAM
     )
     st.markdown(f'<div class="team-grid">{cards}</div>', unsafe_allow_html=True)
-    st.write(f"Contact: {CONTACT_EMAIL}")
+    st.write("Contact: " + ", ".join(CONTACT_EMAILS))
 
     st.markdown('<div class="section-rule-title" id="cite">How to cite</div>', unsafe_allow_html=True)
     st.write("If you use ChalMolDB, please cite the database release:")
