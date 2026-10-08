@@ -1,0 +1,62 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED MOLECULAR DATA · S / SE / TE
+ChalMolDB
+Chalcogen Molecular Database
+
+ChalMolDB brings together scattered data on how sulfur, selenium and tellurium tune the band gap of donor–acceptor molecules, with standardized structures and the source of every value.
+
+S
+Se
+Te
+
+Explore database
+
+View statistics
+
+Analyze molecules
+
+WHAT YOU CAN DO WITH CHALMOLDB
+Find low-band-gap tellurium systems
+Records that contain Te and have a band gap below 1.5 eV.
+Try it →
+See how swapping S, Se and Te changes the gap
+One family of donor–acceptor–donor oligomers in which only the chalcogens change; pick two records in the comparison panel.
+Try it →
+Find structures similar to a molecule
+Similarity search around 4,7-di(thiophen-2-yl)-2,1,3-benzothiadiazole; draw or paste your own molecule instead.
+Try it →
+Download the data for your own analysis
+All records, 3D structures and descriptor definitions as versioned files, ready for Python, R or machine-learning workflows.
+Get the data →
+Molecular design
+Check how chalcogen choice and position shift HOMO, LUMO and band gap before planning new calculations or syntheses.
+Machine learning
+Start from a curated, provenance-tagged training set with standardized structures and documented levels of theory.
+Teaching and learning
+Explore real donor–acceptor examples of how S, Se and Te change electronic properties, with 2D and 3D structures.
+DATABASE AT A GLANCE
+3,488
+Records
+3,173
+Unique structures
+3,262
+S/Se/Te records
+400
+External records
+Development collection · 3,088 records
+Donor–acceptor molecules with exact structures and 3D coordinates, B3LYP/6-311+G(d); T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369.
+External collection · 400 records
+Benzochalcogenadiazole and chalcogendiazoloquinoxaline oligomers and polymers, B3LYP and LC-BLYP; O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167 and H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179.
+Database v1.1  ·  Structures standardized with RDKit  ·  S/Se/Te-aware descriptors  ·  Source and level of theory kept for every value
+How to cite ChalMolDB
+Current release: Database v1.1 · Scientific Core v0.11.0
+Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1: 10.5281/zenodo.22903550
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

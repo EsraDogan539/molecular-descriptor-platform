@@ -1,0 +1,123 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED RECORDS
+Database
+Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
+
+3,488 records · 3,262 core S/Se/Te · 3,173 unique standardized structures · 3,481 Eg values
+
+keyboard_arrow_right
+
+Replay saved query
+
+keyboard_arrow_right
+
+Structure search
+
+Search
+
+Collection
+
+Scope
+
+Chalcogen
+
+Eg
+
+Reference / DOI
+
+keyboard_arrow_right
+
+Advanced filters
+
+keyboard_arrow_right
+
+Query reproducibility
+
+1 matching record
+INSPECT A RECORD
+DEV_0001
+Development collection · Mixed
+Canonical SMILES
+Cc1[se]c(-c2c3cc(-c4nnco4)sc3c(-c3cc(F)c(C)[se]3)c3ccsc23)cc1F
+Identity
+Database ID
+DEV_0001
+Molecule / system
+D58,A1
+InChIKey
+BZFBFKSBVWKNGO-UHFFFAOYSA-N
+Electronic properties
+
+HOMO (eV)
+
+-5.555
+
+LUMO (eV)
+
+-2.487
+
+Eg (eV)
+
+3.068
+
+Exp. Eg (eV)
+
+—
+
+Eg: HOMO–LUMO gap (LUMO − HOMO) of the calculated structure, as reported in the source.
+Level of theory: B3LYP (Jaguar)/6-311+G(d), not stated in source. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Chalcogen environment
+S count
+2
+Se count
+2
+Te count
+0
+Type
+Mixed
+Provenance
+Collection source
+Development collection
+Donor / Acceptor
+D58 / A1
+Method
+B3LYP (Jaguar)
+Basis set
+6-311+G(d)
+Reference / DOI
+T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360-5369, Supporting Information (Band Gap and Reorganization Energy Prediction of Conducting Polymers by the Integration of Machine Learning and Density Functional Theory)
+keyboard_arrow_right
+
+Additional record metadata
+
+Permanent link to this record
+
+https://chalmoldb.streamlit.app/?page=database&record=DEV_0001
+
+Download citation-ready record CSV
+
+Show interactive 3D structure
+
+Drag to rotate, scroll to zoom. Hydrogens shown; coordinates as in the SDF file.
+
+Download 3D structure (SDF)
+
+3D coordinates: Haciefendioglu & Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 (doi:10.1021/acs.jcim.5c00345), Supporting Information; B3LYP/6-311+G(d); CC BY 4.0; redistributed unmodified.
+
+Download filtered records
+
+keyboard_arrow_right
+
+Curation notes
+
+ChalMolDB · Database v1.1 · Scientific Core v0.11.0 · Curated records are read-only in the public browser.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub
