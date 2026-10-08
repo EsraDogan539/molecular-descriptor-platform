@@ -7,11 +7,17 @@ date-released: "2026-10-07"
 doi: "10.5281/zenodo.22903549"
 url: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 repository-code: "https://github.com/EsraDogan539/molecular-descriptor-platform"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 authors:
   - family-names: "Doğan"
     given-names: "Esra Nur"
     orcid: "https://orcid.org/0000-0001-5755-7596"
+    affiliation: "Ankara University"
+  - family-names: "Kayı"
+    given-names: "Hakan"
+    orcid: "https://orcid.org/0000-0001-7300-0325"
     affiliation: "Ankara University"
 preferred-citation:
   type: software
@@ -20,6 +26,9 @@ preferred-citation:
     - family-names: "Doğan"
       given-names: "Esra Nur"
       orcid: "https://orcid.org/0000-0001-5755-7596"
+    - family-names: "Kayı"
+      given-names: "Hakan"
+      orcid: "https://orcid.org/0000-0001-7300-0325"
   year: 2026
   version: "db-v1.1"
   doi: "10.5281/zenodo.22903549"

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="ChalMolDB molecular mark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 22 156 78" role="img" aria-label="ChalMolDB molecular mark">
 <defs>
 <radialGradient id="cmC" cx="32%" cy="25%" r="72%"><stop stop-color="#ffffff"/><stop offset=".48" stop-color="#dbe1e7"/><stop offset="1" stop-color="#8b96a1"/></radialGradient>
 <radialGradient id="cmS" cx="30%" cy="24%" r="72%"><stop stop-color="#fff5b6"/><stop offset=".42" stop-color="#e7bd39"/><stop offset="1" stop-color="#ad7e00"/></radialGradient>
