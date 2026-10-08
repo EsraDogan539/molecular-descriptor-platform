@@ -41,6 +41,7 @@ import streamlit.components.v1 as components
 
 from use_cases import PRESETS, apply_preset
 from structures_3d import (
+    STRUCTURE_BUNDLES,
     coordinate_attribution,
     load_all_structure_blocks,
     structure_block_for,
@@ -60,9 +61,18 @@ except Exception:  # pragma: no cover - depends on the deployment environment
     st_ketcher = None
 
 
+def _file_signature(paths):
+    """Size and modification time of the data files, so that cached data are reloaded when a file changes."""
+    return tuple((str(p), os.path.getsize(p), os.path.getmtime(p)) for p in paths if os.path.exists(p))
+
+
 @st.cache_data(show_spinner=False)
-def _structure_blocks():
+def _load_structure_blocks(signature):
     return load_all_structure_blocks()
+
+
+def _structure_blocks():
+    return _load_structure_blocks(_file_signature(STRUCTURE_BUNDLES))
 
 
 FULL_DATABASE_PATHS = [
@@ -72,8 +82,12 @@ FULL_DATABASE_PATHS = [
 PREVIEW_DATABASE_PATH = "data/chalcogen_database_preview_v1.csv"
 
 
-@st.cache_data(show_spinner=False)
 def load_curated_database():
+    return _load_curated_database(_file_signature(FULL_DATABASE_PATHS + [PREVIEW_DATABASE_PATH]))
+
+
+@st.cache_data(show_spinner=False)
+def _load_curated_database(signature):
     for path in FULL_DATABASE_PATHS:
         if os.path.exists(path):
             compression = "gzip" if path.endswith(".gz") else "infer"
@@ -201,7 +215,8 @@ def level_of_theory(row):
     level = f"{method}/{basis}" if pd.notna(basis) and str(basis).strip() else str(method)
     conditions = row.get("Solvent_or_Conditions")
     if pd.notna(conditions) and str(conditions).strip():
-        level += f", {conditions}"
+        conditions = str(conditions)
+        level += f", solvation {conditions}" if conditions == "not stated in source" else f", {conditions}"
     return level
 
 
