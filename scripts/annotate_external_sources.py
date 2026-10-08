@@ -12,6 +12,8 @@ Changes:
   * Curation_Note: why the B3LYP/6-31G(d) tellurium records carry no value; level-of-theory provenance notes.
   * HOMO/LUMO withheld for 7 oligomer records whose published HOMO/LUMO pair is inconsistent with the published Eg
     (HOMO_LUMO_CORRECTIONS); Eg is kept.
+  * Explicit values instead of empty cells: Chalcogen_Type "None (control)" for control records, and
+    Solvent_or_Conditions "not stated in source" for the development collection.
 
 Run on its own (python scripts/annotate_external_sources.py) or from build_database_v1_1.py.
 """
@@ -159,6 +161,11 @@ def annotate(df):
                     df.at[idx, "HOMO_eV"] = pd.NA
                     df.at[idx, "LUMO_eV"] = pd.NA
                     df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], HOMO_LUMO_CORRECTIONS[key])
+    controls = df.Chalcogen_Type.isna() & df.Scope_Flag.ne("Core_SSeTe")
+    df["Chalcogen_Type"] = df["Chalcogen_Type"].astype("object")
+    df.loc[controls, "Chalcogen_Type"] = "None (control)"
+    dev = df.Record_ID.astype(str).str.startswith("EROL_")
+    df.loc[dev & df.Solvent_or_Conditions.isna(), "Solvent_or_Conditions"] = "not stated in source"
     return df
 
 

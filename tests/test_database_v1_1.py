@@ -118,3 +118,9 @@ def test_homo_lumo_corrections(db):
     assert withheld.Curation_Note.str.contains("HOMO and LUMO withheld").all()
     oligomers = db[db.HOMO_eV.notna() & db.Source_File.eq("ozkilinc_kayi_2019_table4_oligomers.csv")]
     assert ((oligomers.LUMO_eV - oligomers.HOMO_eV - oligomers.Eg_eV).abs() <= 0.021).all()
+
+
+def test_no_empty_category_fields(db):
+    assert db.Chalcogen_Type.notna().all()
+    assert set(db.loc[db.Scope_Flag.ne("Core_SSeTe"), "Chalcogen_Type"]) == {"None (control)"}
+    assert db.Solvent_or_Conditions.notna().all()
