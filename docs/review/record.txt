@@ -49,7 +49,7 @@ Identity
 Database ID
 DEV_0001
 Molecule / system
-D58,A1
+D58A1
 InChIKey
 BZFBFKSBVWKNGO-UHFFFAOYSA-N
 Electronic properties
@@ -71,7 +71,7 @@ Exp. Eg (eV)
 —
 
 Eg: HOMO–LUMO gap (LUMO − HOMO) of the calculated structure, as reported in the source.
-Level of theory: B3LYP (Jaguar)/6-311+G(d), not stated in source. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Level of theory: B3LYP (Jaguar)/6-311+G(d), solvation not stated in source. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
 Chalcogen environment
 S count
 2
