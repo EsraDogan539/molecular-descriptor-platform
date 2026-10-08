@@ -1,0 +1,23 @@
+name: Build A oligomers (temporary)
+on:
+  push:
+    branches: [feat/a-family-oligomers]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt pytest > /dev/null
+      - run: |
+          mkdir -p data/logs
+          python scripts/build_external_structures.py > data/logs/build_structures.txt 2>&1 || true
+          python scripts/build_database_v1_1.py > data/logs/build_db.txt 2>&1 || true
+          python scripts/export_public_release.py > data/logs/export.txt 2>&1 || true
+          python -m pytest -q tests > data/logs/tests.txt 2>&1 || true
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A data; git commit -m "Build A oligomers [skip ci]" || true; git push
