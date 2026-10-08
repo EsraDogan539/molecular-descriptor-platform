@@ -47,6 +47,40 @@ CHALMOLDB_ICON_SVG = """
 
 CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
 CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
+CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
+TEAM = [
+    {
+        "name": "Esra Nur Doğan",
+        "role": "Database design, data curation, software development",
+        "orcid": "0000-0001-5755-7596",
+    },
+    {
+        "name": "Hakan Kayı",
+        "role": "Scientific supervision; source of the external DFT data; corresponding author",
+        "orcid": "0000-0001-7300-0325",
+    },
+]
+AFFILIATION = "Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye"
+CONTACT_EMAIL = "hkayi@ankara.edu.tr"
+CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
+
+
+def render_credit_footer():
+    """Footer shown on every page: who made the resource, how to cite it, where the code is."""
+    st.markdown(
+        f"""
+        <div class="site-footer">
+          <span><strong>ChalMolDB</strong> · {CREDIT_LINE}<br>
+          <span class="footer-sub">{AFFILIATION}</span></span>
+          <span>
+            <a href="?page=about#team" target="_self">Team &amp; contact</a>
+            <a href="?page=about#cite" target="_self">How to cite</a>
+            <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
+          </span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 st.set_page_config(
@@ -99,8 +133,8 @@ st.markdown(
         white-space: nowrap;
     }
     .brand-mark-img {
-        width: 66px;
-        height: 58px;
+        width: 96px;
+        height: 48px;
         object-fit: contain;
         display: block;
         flex: 0 0 auto;
@@ -157,8 +191,8 @@ st.markdown(
         margin: .1rem 0 1.25rem 0;
     }
     .hero-mark-img {
-        width: 116px;
-        height: 98px;
+        width: 156px;
+        height: 78px;
         object-fit: contain;
         display: block;
         flex: 0 0 auto;
@@ -512,6 +546,12 @@ st.markdown(
         margin-left: 1rem;
     }
     .site-footer a:hover { text-decoration: underline !important; }
+    .site-footer .footer-sub { color: #9FB4C6; font-size: .76rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: .4rem 0 1rem 0; }
+    .team-card { border: 1px solid #DCE3EA; border-radius: 10px; padding: 1rem 1.15rem; background: #FFFFFF; }
+    .team-card strong { display: block; color: #163A5B; font-size: 1.02rem; margin-bottom: .2rem; }
+    .team-card span { display: block; color: #4B5563; font-size: .86rem; line-height: 1.45; }
+    .team-card a { color: #1F4E79 !important; font-size: .84rem; }
     @media (max-width: 760px) {
         .academic-header { align-items: flex-start; flex-direction: column; }
         .academic-nav { gap: .9rem; flex-wrap: wrap; }
@@ -521,9 +561,9 @@ st.markdown(
         .hero-visual { min-height: 210px; }
         .hero-copy { padding: 2rem 1.5rem; }
         .hero-brand { gap: .85rem; }
-        .hero-mark-img { width: 88px; height: 76px; }
+        .hero-mark-img { width: 120px; height: 60px; }
         .hero-title-wrap h1 { font-size: 2.45rem !important; }
-        .brand-mark-img { width: 58px; height: 50px; }
+        .brand-mark-img { width: 80px; height: 40px; }
         .brand-copy strong { font-size: 1.38rem; }
         .hero-molecule-svg { width: 108%; transform: translateX(4%); }
         .feature-grid { grid-template-columns: 1fr 1fr; }
@@ -1057,17 +1097,10 @@ if page == "home":
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structure standardization with RDKit
           &nbsp;&middot;&nbsp; Record-level provenance retained
         </div>
-        <div class="site-footer">
-          <span><strong>ChalMolDB</strong> · Chalcogen Molecular Database · Database v{DATABASE_VERSION}</span>
-          <span>
-            <a href="?page=documentation" target="_self">Documentation</a>
-            <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
-            <a href="?page=about" target="_self">About</a>
-          </span>
-        </div>
         """,
         unsafe_allow_html=True,
     )
+    render_credit_footer()
     st.stop()
 
 
@@ -1078,6 +1111,7 @@ if page == "database":
         f"ChalMolDB · {RELEASE_LABEL} · "
         "Curated records are read-only in the public browser."
     )
+    render_credit_footer()
     st.stop()
 
 
@@ -1087,6 +1121,7 @@ if page == "statistics":
     st.caption(
         f"ChalMolDB · Database v{DATABASE_VERSION} · Descriptive statistics"
     )
+    render_credit_footer()
     st.stop()
 
 
@@ -1299,6 +1334,7 @@ if page == "documentation":
         "[All archived versions](https://doi.org/10.5281/zenodo.22903549) · "
         "[Database v1 release](https://doi.org/10.5281/zenodo.22903550)"
     )
+    render_credit_footer()
     st.stop()
 
 
@@ -1343,11 +1379,42 @@ if page == "about":
         <div class="resource-links">
           <a href="?page=documentation" target="_self">Documentation</a>
           <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
-          <a href="https://doi.org/10.5281/zenodo.22903550" target="_blank">Zenodo v0.11.0 DOI</a>
+          <a href="https://doi.org/10.5281/zenodo.22903549" target="_blank">Zenodo (all versions)</a>
         </div>
         """,
         unsafe_allow_html=True,
     )
+
+    st.markdown('<div class="section-rule-title" id="team">Team</div>', unsafe_allow_html=True)
+    cards = "".join(
+        f'<div class="team-card"><strong>{m["name"]}</strong><span>{m["role"]}</span>'
+        f'<span>{AFFILIATION}</span>'
+        f'<a href="https://orcid.org/{m["orcid"]}" target="_blank">ORCID {m["orcid"]}</a></div>'
+        for m in TEAM
+    )
+    st.markdown(f'<div class="team-grid">{cards}</div>', unsafe_allow_html=True)
+    st.write(f"Contact: {CONTACT_EMAIL}")
+
+    st.markdown('<div class="section-rule-title" id="cite">How to cite</div>', unsafe_allow_html=True)
+    st.write("If you use ChalMolDB, please cite the database release:")
+    st.code(
+        f"Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v{DATABASE_VERSION}. "
+        f"Zenodo, 2026. {CONCEPT_DOI_URL}",
+        language=None,
+    )
+    st.caption(
+        "The concept DOI always resolves to the latest version; cite the version DOI of the release you used "
+        "when reporting results. A journal article describing ChalMolDB is in preparation."
+    )
+
+    st.markdown('<div class="section-rule-title">Data sources and acknowledgements</div>', unsafe_allow_html=True)
+    st.write(
+        "Development collection: T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 "
+        "(Supporting Information, CC BY 4.0). External collection: O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, "
+        "167; H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179, with geometry files supplied by the "
+        "H. Kayı group. Database content is released under CC BY 4.0 and the software under the MIT licence."
+    )
+    render_credit_footer()
     st.stop()
 
 
@@ -1397,6 +1464,7 @@ if uploaded_file is None:
         'User uploads are processed separately from the curated database.</div>',
         unsafe_allow_html=True,
     )
+    render_credit_footer()
     st.stop()
 
 try:
@@ -1630,3 +1698,4 @@ st.divider()
 st.caption(
     f"ChalMolDB · {RELEASE_LABEL}"
 )
+render_credit_footer()

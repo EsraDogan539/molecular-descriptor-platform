@@ -110,12 +110,12 @@ def check_valence(atoms, bonds):
 
 
 def main():
-    # icon: 160 x 120
+    # icon: cropped tightly around the molecule (atoms + sphere radius + shadow)
     icon_body, atoms, bonds = molecule("cm", rr=17, link=17, bond_w=4.5, c_r=5, x_r=11.5, font=11.5, ox=80, oy=60)
     check_valence(atoms, bonds)
-    head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="ChalMolDB molecular mark">'
+    head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 22 156 78" role="img" aria-label="ChalMolDB molecular mark">'
     (ROOT / "assets/chalmoldb_icon.svg").write_text(f"{head}\n{defs('cm')}\n{icon_body}\n</svg>\n")
-    tile = '<rect width="160" height="120" rx="20" fill="#F8FAFC"/>'
+    tile = '<rect x="2" y="22" width="156" height="78" rx="14" fill="#F8FAFC"/>'
     (ROOT / "static/chalmoldb_icon.svg").write_text(f"{head}\n{tile}\n{defs('cm')}\n{icon_body}\n</svg>\n")
 
     logo_body, _, _ = molecule("lg", rr=17, link=17, bond_w=4.5, c_r=5, x_r=11.5, font=11.5, ox=95, oy=75)
