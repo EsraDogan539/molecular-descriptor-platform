@@ -1,6 +1,6 @@
 # ChalMolDB database changelog
 
-## Database v1.1 (2026-10-08, tag `db-v1.1`)
+## Database v1.1 (2026-10-08, tag `db-v1.1`, DOI 10.5281/zenodo.23238884)
 
 Built from the archived Database v1 table (`data/releases/chalcogen_database_v1.csv.gz`) by
 `scripts/build_database_v1_1.py`. 3,488 records (3,088 development, 400 external); property values of the retained

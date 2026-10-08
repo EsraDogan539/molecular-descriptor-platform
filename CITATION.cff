@@ -5,6 +5,13 @@ type: software
 version: "db-v1.1"
 date-released: "2026-10-08"
 doi: "10.5281/zenodo.22903549"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23238884"
+    description: "Version DOI of Database v1.1 (db-v1.1)"
+  - type: doi
+    value: "10.5281/zenodo.22903549"
+    description: "Concept DOI (all versions)"
 url: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 repository-code: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 license:
@@ -31,4 +38,4 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0001-7300-0325"
   year: 2026
   version: "db-v1.1"
-  doi: "10.5281/zenodo.22903549"
+  doi: "10.5281/zenodo.23238884"
