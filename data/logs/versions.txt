@@ -1,0 +1,4 @@
+Name: openpyxl
+Version: 3.1.5
+Name: matplotlib
+Version: 3.11.2

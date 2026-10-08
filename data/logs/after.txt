@@ -1,0 +1,1 @@
+671b933d401b1f5894f33f0c305d37f67b5d633dc78a280f9732e2cefb7ee982  data/chalcogen_database_v1_master.csv.gz
