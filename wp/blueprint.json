@@ -1,0 +1,11 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/edit.php?post_type=page",
+  "preferredVersions": {"php": "8.2", "wp": "latest"},
+  "steps": [
+    {"step": "login", "username": "admin", "password": "password"},
+    {"step": "installTheme", "themeData": {"resource": "wordpress.org/themes", "slug": "twentytwentyone"}, "options": {"activate": true}},
+    {"step": "setSiteOptions", "options": {"blogname": "Computational Chemical Engineering Research Laboratory (practice)", "blogdescription": "Ankara University - practice copy"}},
+    {"step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; $ids = array(); foreach (array('About','Members','Publications','News','Open Positions','Contact') as $t) { $ids[$t] = wp_insert_post(array('post_title' => $t, 'post_type' => 'page', 'post_status' => 'publish', 'post_content' => '<p>' . $t . ' (practice page)</p>')); } $m = wp_create_nav_menu('Main menu'); foreach ($ids as $t => $id) { wp_update_nav_menu_item($m, 0, array('menu-item-title' => $t, 'menu-item-object' => 'page', 'menu-item-object-id' => $id, 'menu-item-type' => 'post_type', 'menu-item-status' => 'publish')); } $loc = get_theme_mod('nav_menu_locations'); if (!is_array($loc)) { $loc = array(); } $loc['primary'] = $m; set_theme_mod('nav_menu_locations', $loc); update_option('show_on_front', 'page'); update_option('page_on_front', $ids['About']); echo 'ok';"}
+  ]
+}
