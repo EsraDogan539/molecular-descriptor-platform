@@ -67,8 +67,8 @@
   ],
   "files": {
     "data/public/chalmoldb_records.csv": {
-      "sha256": "25335c435f64340e85b575e3f84a91703a8ed0ad37b4f8b96db44ab297f22806",
-      "bytes": 3988360
+      "sha256": "6c431d969e39cff18f9bdec5f7af51f083a111cb7b023acd577d9015eccb659b",
+      "bytes": 4053284
     },
     "data/structures_3d_v1.sdf.gz": {
       "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",

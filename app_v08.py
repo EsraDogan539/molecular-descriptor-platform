@@ -65,6 +65,17 @@ CONTACT_EMAIL = "hkayi@ankara.edu.tr"
 CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
 
 
+def page_href(target, anchor=""):
+    """Internal link that keeps Streamlit's embed mode when the app is shown inside another site.
+
+    The host page should load https://chalmoldb.streamlit.app/?embed=true&embedded=1; Streamlit hides the
+    `embed` parameter from st.query_params, so the visible `embedded=1` flag is used to carry it forward.
+    """
+    embedded = str(st.query_params.get("embedded", "")) == "1"
+    extra = "&embedded=1&embed=true" if embedded else ""
+    return f"?page={target}{extra}{anchor}"
+
+
 def render_credit_footer():
     """Footer shown on every page: who made the resource, how to cite it, where the code is."""
     st.markdown(
@@ -73,8 +84,8 @@ def render_credit_footer():
           <span><strong>ChalMolDB</strong> · {CREDIT_LINE}<br>
           <span class="footer-sub">{AFFILIATION}</span></span>
           <span>
-            <a href="?page=about#team" target="_self">Team &amp; contact</a>
-            <a href="?page=about#cite" target="_self">How to cite</a>
+            <a href="{page_href('about', '#team')}" target="_self">Team &amp; contact</a>
+            <a href="{page_href('about', '#cite')}" target="_self">How to cite</a>
             <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub</a>
           </span>
         </div>
@@ -900,14 +911,14 @@ nav_items = [
     ("About", "about"),
 ]
 nav_html = "".join(
-    f'<a class="{"active" if page == key else ""}" href="?page={key}" target="_self">{label}</a>'
+    f'<a class="{"active" if page == key else ""}" href="{page_href(key)}" target="_self">{label}</a>'
     for label, key in nav_items
 )
 
 st.markdown(
     f"""
     <div class="academic-header">
-      <a class="academic-brand" href="?page=home" target="_self">
+      <a class="academic-brand" href="{page_href('home')}" target="_self">
         <img class="brand-mark-img" src="{CHALMOLDB_ICON_URL}" alt="">
         <span class="brand-copy">
           <strong>ChalMolDB</strong>
@@ -1375,9 +1386,9 @@ if page == "about":
 
     st.markdown('<div class="section-rule-title">Resources</div>', unsafe_allow_html=True)
     st.markdown(
-        """
+        f"""
         <div class="resource-links">
-          <a href="?page=documentation" target="_self">Documentation</a>
+          <a href="{page_href('documentation')}" target="_self">Documentation</a>
           <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
           <a href="https://doi.org/10.5281/zenodo.22903549" target="_blank">Zenodo (all versions)</a>
         </div>
