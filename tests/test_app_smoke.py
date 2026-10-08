@@ -84,3 +84,5 @@ def test_home_shows_use_cases():
     assert not at.exception, at.exception
     html = " ".join(m.value for m in at.markdown)
     assert "What you can do with ChalMolDB" in html and "preset=te_low_gap" in html
+    assert "Development collection · 3,088 records" in html and "External collection · 400 records" in html
+    assert "What ChalMolDB provides" not in html and "Who is it for?" not in html

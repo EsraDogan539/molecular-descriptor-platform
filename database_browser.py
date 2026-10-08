@@ -185,6 +185,36 @@ def _display_method(value):
     return text
 
 
+def eg_definition(row):
+    """What the Eg value of a record means, in one sentence."""
+    if pd.isna(pd.to_numeric(row.get("Eg_eV"), errors="coerce")):
+        return "no value in the source (see the curation note)"
+    if str(row.get("Oligomer_n")).strip().lower() == "polymer":
+        return ("polymer band gap extrapolated from the oligomer series to infinite chain length, "
+                "as reported in the source; no HOMO/LUMO values")
+    return "HOMO–LUMO gap (LUMO − HOMO) of the calculated structure, as reported in the source"
+
+
+def level_of_theory(row):
+    method = _display_method(row.get("Method"))
+    basis = row.get("Basis_Set")
+    level = f"{method}/{basis}" if pd.notna(basis) and str(basis).strip() else str(method)
+    conditions = row.get("Solvent_or_Conditions")
+    if pd.notna(conditions) and str(conditions).strip():
+        level += f", {conditions}"
+    return level
+
+
+def eg_context_html(row):
+    return (
+        '<div class="eg-context">'
+        f"<div><b>Eg:</b> {html.escape(eg_definition(row))}.</div>"
+        f"<div><b>Level of theory:</b> {html.escape(level_of_theory(row))}. "
+        "Compare Eg values within one level of theory and set of conditions; values from different levels "
+        "are not directly comparable.</div></div>"
+    )
+
+
 def _render_record_detail(row):
     record_id = _display_record_id(row.get("Record_ID"))
     collection = _display_collection(row)
@@ -239,6 +269,7 @@ def _render_record_detail(row):
             e2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
             e3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
             e4.metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
+            st.markdown(eg_context_html(row), unsafe_allow_html=True)
 
             donor_acceptor = " / ".join(
                 [
@@ -874,6 +905,20 @@ def display_database_browser():
             margin-top: .05rem;
             margin-bottom: .45rem;
         }
+        .eg-context {
+            color: #50677B;
+            font-size: .82rem;
+            line-height: 1.45;
+            background: #F5F8FB;
+            border-left: 3px solid #9FB4C8;
+            border-radius: 6px;
+            padding: .5rem .75rem;
+            margin: -.2rem 0 .9rem 0;
+        }
+        .eg-context b {
+            color: #163A5B;
+            font-weight: 650;
+        }
         .detail-field-grid {
             display: grid;
             gap: .75rem;
@@ -1394,6 +1439,12 @@ def display_database_statistics():
     )
     unique = int(structure_ids.nunique())
     repeated_groups = int((structure_ids.value_counts() > 1).sum())
+    repeated_by_collection = {}
+    if "Split_Role" in df.columns and "InChIKey" in df.columns:
+        is_dev = df["Split_Role"].astype(str).eq("Development/Training")
+        for label, mask in (("development", is_dev), ("external", ~is_dev)):
+            keys = df.loc[mask, "InChIKey"].dropna().astype(str).replace("", pd.NA).dropna()
+            repeated_by_collection[label] = int((keys.value_counts() > 1).sum())
 
     eg_count = int(
         pd.to_numeric(df["Eg_eV"], errors="coerce").notna().sum()
@@ -1424,10 +1475,20 @@ def display_database_statistics():
     k5.metric("Reference-backed records", f"{reference_count:,}")
     k6.metric("Repeated structure groups", f"{repeated_groups:,}")
 
+    repeated_note = ""
+    if repeated_by_collection:
+        dev_groups = repeated_by_collection["development"]
+        ext_groups = repeated_by_collection["external"]
+        repeated_note = (
+            f" Of the {repeated_groups:,} repeated-structure groups, {dev_groups:,} are in the development "
+            "collection (records that share a standardized structure in the source library) and "
+            f"{ext_groups:,} in the external collection, where the same oligomer is reported at more than one "
+            "level of theory or set of conditions."
+        )
     st.caption(
         "Unique-structure and repeated-group counts use standardized InChIKey identity where an exact "
-        "structure is available. Reference-backed records contain a stored source/reference value. "
-        f"Parsed DOI records: {doi_count:,}."
+        f"structure is available.{repeated_note} Reference-backed records contain a stored source/reference "
+        f"value. Parsed DOI records: {doi_count:,}."
     )
 
     _render_statistics(df)

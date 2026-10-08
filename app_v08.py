@@ -432,6 +432,10 @@ st.markdown(
     .audience-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: .2rem 0 1.4rem 0; }
     .audience-row div { font-size: .88rem; color: #4B5563; line-height: 1.45; }
     .audience-row b { color: #163A5B; display: block; margin-bottom: .15rem; }
+    .source-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: .9rem 0 .6rem 0; }
+    .source-strip div { font-size: .86rem; color: #4B5563; line-height: 1.45; background: #F8FAFC;
+        border: 1px solid #E5EAF0; border-radius: 10px; padding: .75rem .9rem; }
+    .source-strip b { color: #163A5B; display: block; margin-bottom: .2rem; }
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -612,6 +616,7 @@ st.markdown(
         .feature-grid { grid-template-columns: 1fr 1fr; }
         .usecase-grid { grid-template-columns: 1fr; }
         .audience-row { grid-template-columns: 1fr; }
+        .source-strip { grid-template-columns: 1fr; }
         .info-grid { grid-template-columns: 1fr; }
         .page-title { font-size: 1.7rem; }
     }
@@ -1065,40 +1070,6 @@ if page == "home":
         if st.button("Analyze molecules", use_container_width=True, key="home_analyze_molecules"):
             _navigate_home("analyze")
 
-    st.markdown(
-        """
-        <div class="section-label">About ChalMolDB</div>
-        <div class="about-intro">
-          <strong>Find structures, compare electronic properties, trace provenance, and reproduce your queries in one chalcogen-focused research environment.</strong><br>
-          ChalMolDB is a curated research platform for sulfur-, selenium- and tellurium-containing molecular systems.
-        </div>
-        <div class="about-grid">
-          <div class="about-card">
-            <strong>What is ChalMolDB?</strong>
-            <p>A searchable, structure-aware database for systematic exploration of chalcogen-focused molecular data.</p>
-          </div>
-          <div class="about-card">
-            <strong>Who is it for?</strong>
-            <p>Researchers in computational chemistry, cheminformatics, organic electronics and materials informatics working with S/Se/Te-containing molecules.</p>
-          </div>
-          <div class="about-card">
-            <strong>Where does the data come from?</strong>
-            <p>Records are curated from documented computational and literature-derived sources, with original provenance retained at record level.</p>
-          </div>
-          <div class="about-card">
-            <strong>Why is it useful?</strong>
-            <p>Search molecular motifs, compare structures, filter HOMO/LUMO/Eg values, inspect provenance, and replay saved queries.</p>
-          </div>
-        </div>
-        <div class="citation-box">
-          <strong>How to cite ChalMolDB</strong><br>
-          Current release: Database v1.1 · Scientific Core v0.11.0<br>
-          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1: 10.5281/zenodo.22903550
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
     usecase_cards = "".join(
         f'<div class="usecase-card"><strong>{p["title"]}</strong><span>{p["text"]}</span>'
         f'<a href="{page_href("database", extra_params="&preset=" + key)}" target="_self">Try it →</a></div>'
@@ -1127,35 +1098,6 @@ if page == "home":
     )
 
     st.markdown(
-        """
-        <div class="section-label">What ChalMolDB provides</div>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="7" rx="9" ry="4"/><path d="M7 7v9c0 2.2 4 4 9 4s9-1.8 9-4V7"/><path d="M7 16v8c0 2.2 4 4 9 4s9-1.8 9-4v-8"/></svg></div>
-            <strong>Curated Molecular Records</strong>
-            <span>Standardized molecular identity, electronic properties and record-level provenance.</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 7 16 3l6 4v7l-6 4-6-4Z"/><path d="m22 14 6 4v7l-6 4-6-4v-7"/><circle cx="10" cy="7" r="1.6"/><circle cx="22" cy="14" r="1.6"/></svg></div>
-            <strong>Chalcogen-Aware Descriptors</strong>
-            <span>Interpretable annotations describing sulfur, selenium and tellurium environments.</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="7"/><path d="m18 18 8 8"/><circle cx="13" cy="13" r="2.5"/></svg></div>
-            <strong>Similarity Search</strong>
-            <span>Structure-based exploratory comparison using molecular fingerprints.</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v15"/><path d="m10 14 6 6 6-6"/><path d="M7 24v4h18v-4"/></svg></div>
-            <strong>Export & Reuse</strong>
-            <span>Downloadable processed records, descriptor tables and reproducible analysis outputs.</span>
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
@@ -1164,9 +1106,21 @@ if page == "home":
           <div class="metric-item"><span class="metric-number">3,262</span><span class="metric-label">S/Se/Te records</span></div>
           <div class="metric-item"><span class="metric-number">400</span><span class="metric-label">External records</span></div>
         </div>
+        <div class="source-strip">
+          <div><b>Development collection · 3,088 records</b>Donor–acceptor molecules with exact structures and 3D
+          coordinates, B3LYP/6-311+G(d); T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369.</div>
+          <div><b>External collection · 400 records</b>Benzochalcogenadiazole and chalcogendiazoloquinoxaline
+          oligomers and polymers, B3LYP and LC-BLYP; O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167 and
+          H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179.</div>
+        </div>
         <div class="quiet-note">
-          Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structure standardization with RDKit
-          &nbsp;&middot;&nbsp; Record-level provenance retained
+          Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structures standardized with RDKit
+          &nbsp;&middot;&nbsp; S/Se/Te-aware descriptors &nbsp;&middot;&nbsp; Source and level of theory kept for every value
+        </div>
+        <div class="citation-box">
+          <strong>How to cite ChalMolDB</strong><br>
+          Current release: Database v1.1 · Scientific Core v0.11.0<br>
+          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1: 10.5281/zenodo.22903550
         </div>
         """,
         unsafe_allow_html=True,
@@ -1451,15 +1405,10 @@ if page == "about":
     st.write(HERO_TEXTS["long"])
 
     st.write(
-        "ChalMolDB (Chalcogen Molecular Database) brings together standardized molecular identity, "
-        "electronic-property data and interpretable S/Se/Te structural annotations in a "
-        "single searchable resource."
-    )
-
-    st.write(
-        "The platform supports transparent record inspection, structure-aware data curation "
-        "and reproducible downstream cheminformatics workflows. Predictive modelling is treated "
-        "as a secondary use case rather than the primary purpose of the database."
+        "Each record keeps its standardized structure (canonical SMILES, InChI and InChIKey), its electronic "
+        "properties and interpretable S/Se/Te annotations, so that records can be inspected, compared and reused "
+        "in reproducible cheminformatics workflows. Predictive modelling is a secondary use case rather than the "
+        "primary purpose of the database."
     )
 
     st.markdown('<div class="section-rule-title">Current release</div>', unsafe_allow_html=True)

@@ -124,3 +124,26 @@ def test_no_empty_category_fields(db):
     assert db.Chalcogen_Type.notna().all()
     assert set(db.loc[db.Scope_Flag.ne("Core_SSeTe"), "Chalcogen_Type"]) == {"None (control)"}
     assert db.Solvent_or_Conditions.notna().all()
+
+
+def test_development_labels_use_one_format(db):
+    dev = db[db.Record_ID.str.startswith("EROL_")]
+    assert not dev.Molecule_Name.astype(str).str.contains(",").any()
+    relabeled = dev[dev.Curation_Note.fillna("").str.contains("Source label D")]
+    assert len(relabeled) == 52
+    assert (relabeled.Molecule_Name == relabeled.Donor_ID + relabeled.Acceptor_ID).all()
+
+
+def test_eg_context_by_record_type(db):
+    from database_browser import eg_context_html, eg_definition
+
+    dev = db[db.Record_ID.str.startswith("EROL_")].iloc[0]
+    assert "LUMO − HOMO" in eg_definition(dev)
+    assert "6-311+G(d)" in eg_context_html(dev)
+    ext = db[db.Record_ID.str.startswith("HAKAN_")]
+    polymer = ext[ext.Oligomer_n.astype(str).eq("polymer") & ext.Eg_eV.notna()].iloc[0]
+    assert "extrapolated" in eg_definition(polymer)
+    missing = ext[ext.Eg_eV.isna()].iloc[0]
+    assert eg_definition(missing).startswith("no value")
+    pcm = ext[ext.Solvent_or_Conditions.eq("PCM (acetonitrile)")].iloc[0]
+    assert "PCM (acetonitrile)" in eg_context_html(pcm)
