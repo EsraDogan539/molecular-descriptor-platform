@@ -1092,6 +1092,33 @@ if page == "home":
         unsafe_allow_html=True,
     )
 
+    usecase_cards = "".join(
+        f'<div class="usecase-card"><strong>{p["title"]}</strong><span>{p["text"]}</span>'
+        f'<a href="{page_href("database", extra_params="&preset=" + key)}" target="_self">Try it →</a></div>'
+        for key, p in PRESETS.items()
+    )
+    usecase_cards += (
+        '<div class="usecase-card"><strong>Download the data for your own analysis</strong>'
+        '<span>All records, 3D structures and descriptor definitions as versioned files, ready for '
+        'Python, R or machine-learning workflows.</span>'
+        f'<a href="{page_href("documentation", "#data-access")}" target="_self">Get the data →</a></div>'
+    )
+    st.markdown(
+        f"""
+        <div class="section-label">What you can do with ChalMolDB</div>
+        <div class="usecase-grid">{usecase_cards}</div>
+        <div class="audience-row">
+          <div><b>Molecular design</b>Check how chalcogen choice and position shift HOMO, LUMO and band gap before
+          planning new calculations or syntheses.</div>
+          <div><b>Machine learning</b>Start from a curated, provenance-tagged training set with standardized
+          structures and documented levels of theory.</div>
+          <div><b>Teaching and learning</b>Explore real donor–acceptor examples of how S, Se and Te change electronic
+          properties, with 2D and 3D structures.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.markdown(
         """
         <div class="section-label">What ChalMolDB provides</div>
@@ -1116,33 +1143,6 @@ if page == "home":
             <strong>Export & Reuse</strong>
             <span>Downloadable processed records, descriptor tables and reproducible analysis outputs.</span>
           </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    usecase_cards = "".join(
-        f'<div class="usecase-card"><strong>{p["title"]}</strong><span>{p["text"]}</span>'
-        f'<a href="{page_href("database", extra_params="&preset=" + key)}" target="_self">Try it →</a></div>'
-        for key, p in PRESETS.items()
-    )
-    usecase_cards += (
-        '<div class="usecase-card"><strong>Download the data for your own analysis</strong>'
-        '<span>All records, 3D structures and descriptor definitions as versioned files, ready for '
-        'Python, R or machine-learning workflows.</span>'
-        f'<a href="{page_href("documentation", "#data-access")}" target="_self">Get the data →</a></div>'
-    )
-    st.markdown(
-        f"""
-        <div class="section-label">What you can do with ChalMolDB</div>
-        <div class="usecase-grid">{usecase_cards}</div>
-        <div class="audience-row">
-          <div><b>Molecular design</b>Check how chalcogen choice and position shift HOMO, LUMO and band gap before
-          planning new calculations or syntheses.</div>
-          <div><b>Machine learning</b>Start from a curated, provenance-tagged training set with standardized
-          structures and documented levels of theory.</div>
-          <div><b>Teaching and learning</b>Explore real donor–acceptor examples of how S, Se and Te change electronic
-          properties, with 2D and 3D structures.</div>
         </div>
         """,
         unsafe_allow_html=True,
