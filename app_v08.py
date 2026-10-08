@@ -24,6 +24,7 @@ from release_metadata import (
     DATABASE_VERSION,
     RELEASE_LABEL,
     SCIENTIFIC_CORE_DISPLAY_VERSION,
+    SCIENTIFIC_CORE_VERSION,
 )
 
 CHALMOLDB_ICON_SVG = """
@@ -1247,7 +1248,10 @@ to compute the same descriptors; your data are not added to the database.
     st.markdown('<div class="section-rule-title">Descriptor dictionary</div>', unsafe_allow_html=True)
     st.write(
         "Descriptor definitions are versioned with the scientific core so that the terminology "
-        "shown in the interface and the exported analysis context remains explicit."
+        "shown in the interface and the exported analysis context remains explicit. ChalMolDB uses three "
+        f"independent version numbers: the Database version (the curated records, currently v{DATABASE_VERSION}), "
+        f"the Scientific Core version (the software, currently v{SCIENTIFIC_CORE_VERSION}) and the Descriptor "
+        f"Dictionary version (the descriptor definitions, currently v{DESCRIPTOR_DICTIONARY_VERSION})."
     )
     descriptor_reference_df = descriptor_dictionary_dataframe()
     descriptor_group_filter = st.multiselect(
