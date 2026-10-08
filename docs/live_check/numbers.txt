@@ -1,0 +1,3 @@
+home: 3,488=True 3,248=False Developed-by=True Team=True
+about: 3,488=True 3,248=False Developed-by=True Team=True
+statistics: 3,488=True 3,248=False Developed-by=True Team=True
