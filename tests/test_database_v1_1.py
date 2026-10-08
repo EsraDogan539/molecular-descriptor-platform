@@ -67,3 +67,26 @@ def test_b_system_removed_without_renumbering(db):
             assert (a.fillna("").astype(str) == b.fillna("").astype(str)).all(), col
         else:
             assert ((a - b).abs().lt(1e-9) | (a.isna() & b.isna())).all(), col
+
+
+def test_source_annotations(db):
+    ext = db[db.Record_ID.str.startswith("HAKAN_")]
+    assert not db.Notes.astype(str).str.contains("Hakan|Erol").any()
+    assert set(ext.Solvent_or_Conditions) == {"gas phase", "PCM (acetonitrile)"}
+    assert (ext.Solvent_or_Conditions == "PCM (acetonitrile)").sum() == 16
+    exp = db[db.Experimental_Eg_eV.notna()]
+    assert len(exp) == 21
+    assert exp.Experimental_Eg_Min_eV.notna().all() and exp.Experimental_Eg_Source.notna().all()
+    assert (exp.Experimental_Eg_Min_eV <= exp.Experimental_Eg_Max_eV).all()
+    no_value = db[db.Eg_eV.isna()]
+    assert len(no_value) == 7
+    assert no_value.Curation_Note.str.contains("6-31G\\(d\\) basis set is not defined for Te").all()
+
+
+def test_annotation_is_idempotent(db):
+    import sys
+    sys.path.insert(0, "scripts")
+    from annotate_external_sources import annotate
+
+    again = annotate(db)
+    assert again.to_csv(index=False) == db.to_csv(index=False)
