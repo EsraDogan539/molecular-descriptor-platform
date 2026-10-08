@@ -1,0 +1,8 @@
+Family                       Structure_Availability                                                           
+benzochalcogenadiazole       Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                    48
+chalcogendiazoloquinoxaline  Exact structure + 3D coordinates (author geometry file)                              32
+                             Exact structure from family template (verified on n = 1 and n = 6 geometry files)    64
+                             Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                    16
+external records with exact structure: 96
+external 3D blocks: 32
+Duplicate_Flag true: 210 | cross-collection InChIKey overlaps: 0

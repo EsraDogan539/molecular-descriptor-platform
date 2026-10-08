@@ -1,0 +1,2 @@
+ba33ffd214eac7f6095a60c9e51ae26911de655ccf20bb1be448f9e8927d5af3  data/chalcogen_database_v1_master.csv.gz
+a24681913881b63b370c1789216b491c0c6d0f0718549e23229e890d365c2ca7  data/public/chalmoldb_records.csv
