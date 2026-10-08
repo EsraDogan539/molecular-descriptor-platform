@@ -18,6 +18,7 @@ from descriptor_dictionary import (
     DESCRIPTOR_DICTIONARY_VERSION,
     descriptor_dictionary_dataframe,
 )
+from use_cases import PRESETS
 from release_metadata import (
     ASSET_BASE_URL,
     DATABASE_VERSION,
@@ -65,7 +66,7 @@ CONTACT_EMAIL = "hkayi@ankara.edu.tr"
 CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
 
 
-def page_href(target, anchor=""):
+def page_href(target, anchor="", extra_params=""):
     """Internal link that keeps Streamlit's embed mode when the app is shown inside another site.
 
     The host page should load https://chalmoldb.streamlit.app/?embed=true&embedded=1; Streamlit hides the
@@ -73,7 +74,7 @@ def page_href(target, anchor=""):
     """
     embedded = str(st.query_params.get("embedded", "")) == "1"
     extra = "&embedded=1&embed=true" if embedded else ""
-    return f"?page={target}{extra}{anchor}"
+    return f"?page={target}{extra_params}{extra}{anchor}"
 
 
 def render_credit_footer():
@@ -400,6 +401,29 @@ st.markdown(
         margin: 1.55rem 0 .65rem 0;
     }
 
+    .usecase-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin: 1.15rem 0 1.1rem 0;
+    }
+    .usecase-card {
+        border: 1px solid #DFE7EF;
+        border-left: 3px solid var(--accent);
+        border-radius: 10px;
+        padding: 1rem 1.1rem;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        gap: .45rem;
+    }
+    .usecase-card strong { color: #163A5B; font-size: .97rem; line-height: 1.3; }
+    .usecase-card span { color: #4B5563; font-size: .86rem; line-height: 1.45; flex: 1; }
+    .usecase-card a { color: var(--accent) !important; font-size: .86rem; font-weight: 600; text-decoration: none !important; }
+    .usecase-card a:hover { text-decoration: underline !important; }
+    .audience-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: .2rem 0 1.4rem 0; }
+    .audience-row div { font-size: .88rem; color: #4B5563; line-height: 1.45; }
+    .audience-row b { color: #163A5B; display: block; margin-bottom: .15rem; }
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -578,6 +602,8 @@ st.markdown(
         .brand-copy strong { font-size: 1.38rem; }
         .hero-molecule-svg { width: 108%; transform: translateX(4%); }
         .feature-grid { grid-template-columns: 1fr 1fr; }
+        .usecase-grid { grid-template-columns: 1fr; }
+        .audience-row { grid-template-columns: 1fr; }
         .info-grid { grid-template-columns: 1fr; }
         .page-title { font-size: 1.7rem; }
     }
@@ -1095,6 +1121,33 @@ if page == "home":
         unsafe_allow_html=True,
     )
 
+    usecase_cards = "".join(
+        f'<div class="usecase-card"><strong>{p["title"]}</strong><span>{p["text"]}</span>'
+        f'<a href="{page_href("database", extra_params="&preset=" + key)}" target="_self">Try it →</a></div>'
+        for key, p in PRESETS.items()
+    )
+    usecase_cards += (
+        '<div class="usecase-card"><strong>Download the data for your own analysis</strong>'
+        '<span>All records, 3D structures and descriptor definitions as versioned files, ready for '
+        'Python, R or machine-learning workflows.</span>'
+        f'<a href="{page_href("documentation", "#data-access")}" target="_self">Get the data →</a></div>'
+    )
+    st.markdown(
+        f"""
+        <div class="section-label">What you can do with ChalMolDB</div>
+        <div class="usecase-grid">{usecase_cards}</div>
+        <div class="audience-row">
+          <div><b>Molecular design</b>Check how chalcogen choice and position shift HOMO, LUMO and band gap before
+          planning new calculations or syntheses.</div>
+          <div><b>Machine learning</b>Start from a curated, provenance-tagged training set with standardized
+          structures and documented levels of theory.</div>
+          <div><b>Teaching and learning</b>Explore real donor–acceptor examples of how S, Se and Te change electronic
+          properties, with 2D and 3D structures.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.markdown(
         f"""
         <div class="section-label">Database at a glance</div>
@@ -1146,6 +1199,33 @@ if page == "documentation":
         </div>
         """,
         unsafe_allow_html=True,
+    )
+
+    st.markdown('<div class="section-rule-title" id="quick-start">Quick start</div>', unsafe_allow_html=True)
+    st.markdown(
+        f"""
+**1. Find molecules with a target property.** Open the [Database]({page_href('database')}), expand *Advanced
+filters*, tick *Filter Eg* and set the range, and choose the chalcogens a molecule must contain.
+Example: [Te-containing records with Eg below 1.5 eV]({page_href('database', extra_params='&preset=te_low_gap')}).
+
+**2. Inspect a record.** Pick a record under *Inspect a record* to see its structure, HOMO/LUMO/Eg, source and level of
+theory. Switch on *Show interactive 3D structure* where coordinates are available, and copy the permanent link to share
+the record.
+
+**3. Compare chalcogen variants.** Use the comparison panel to place two records side by side, for example the same
+oligomer with S and with Te in the acceptor. Example:
+[a series in which only the chalcogens change]({page_href('database', extra_params='&preset=chalcogen_swap')}).
+
+**4. Search by structure.** Under *Structure search*, paste a SMILES string or switch on *Draw structure*, then choose
+exact, substructure or similarity search. Example:
+[molecules similar to 4,7-di(thiophen-2-yl)-2,1,3-benzothiadiazole]({page_href('database', extra_params='&preset=similar_structures')}).
+
+**5. Save and reuse.** Download the filtered table or a citation-ready record, and export a *query manifest* to rerun
+exactly the same search later. For whole-database downloads see [Data access](#data-access) below.
+
+**6. Analyze your own molecules.** In [Analyze]({page_href('analyze')}), upload a CSV with `Molecule_ID` and `SMILES`
+to compute the same descriptors; your data are not added to the database.
+"""
     )
 
     st.markdown(
@@ -1300,7 +1380,7 @@ if page == "documentation":
             language=None,
         )
 
-    st.markdown('<div class="section-rule-title">Data access and programmatic use</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-rule-title" id="data-access">Data access and programmatic use</div>', unsafe_allow_html=True)
     st.write(
         "The complete release is distributed as static, versioned files that can be downloaded here or read "
         "directly by scripts from the GitHub repository and the Zenodo archive. No account or API key is needed. "
