@@ -1,0 +1,138 @@
+Skip to main content
+Skip to toolbar
+
+
+Dashboard
+Home
+Updates
+
+
+Posts
+All Posts
+Add Post
+Categories
+Tags
+
+
+Media
+Library
+Add Media File
+
+
+Pages
+All Pages
+Add Page
+
+
+Comments
+
+
+Appearance
+Themes
+Design
+Customize
+Widgets
+Fonts
+Menus
+Background
+Background
+Theme File Editor
+
+
+Plugins
+Installed Plugins
+Add Plugin
+Plugin File Editor
+
+
+Users
+All Users
+Add User
+Profile
+
+
+Tools
+Available Tools
+Import
+Export
+Site Health
+Export Personal Data
+Erase Personal Data
+
+
+Settings
+General
+Connectors
+Writing
+Reading
+Discussion
+Media
+Permalinks
+Privacy
+Collapse Menu
+About WordPress
+Computational Chemical Engineering Resea…
+Ctrl+K
+Open command palette
+0
+0 Comments in moderation
+New
+Howdy, admin
+Screen Options
+Help
+Menus Manage with Live Preview
+Edit Menus
+Manage Locations
+Edit your menu below, or create a new menu. Do not forget to save your changes!
+Click the Save Menu button to save your changes.
+Add menu items
+Pages
+Most Recent View All Search
+ Contact
+ Open Positions
+ News
+ Publications
+ Members
+ Sample Page
+
+ Select All
+
+Posts
+Custom Links
+Categories
+Menu structure
+Menu Name
+
+Drag the items into the order you prefer. Click the arrow on the right of the item to reveal additional configuration options.
+
+ Bulk Select
+About
+Front Page
+Edit
+Members
+Page
+Edit
+Publications
+Page
+Edit
+News
+Page
+Edit
+Open Positions
+Page
+Edit
+Contact
+Page
+Edit
+ Bulk Select
+Menu Settings
+Auto add pages
+ Automatically add new top-level pages to this menu
+Menu location
+ Primary menu
+ Secondary menu
+Delete Menu
+
+Thank you for creating with WordPress.
+
+Version 7.1.3

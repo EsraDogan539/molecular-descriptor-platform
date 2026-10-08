@@ -1,0 +1,117 @@
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/cli-util@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/logger@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/progress@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/universal@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/util@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/xdebug-bridge@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@wp-playground/blueprints@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@wp-playground/common@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@wp-playground/tools@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@wp-playground/wordpress@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-5-2@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-7-4@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-0@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-1@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-2@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-3@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-4@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/node-8-5@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/web-service-worker@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@php-wasm/scopes@3.1.57',
+npm warn EBADENGINE   required: { npm: '>=11.16.0', node: '>=24.18.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn deprecated @octokit/webhooks-types@7.6.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+WordPress Playground CLI
+
+PHP 8.3  WordPress latest
+Extensions intl
+Blueprint wp/blueprint.json
+
+The default worker count has been reduced to 3 because this machine has only 4 CPU(s). Running fewer than 6 workers may increase the likelihood of deadlock due to workers blocking on file locks.
+
+Ready! WordPress is running on http://127.0.0.1:9400 (3 workers)
+
