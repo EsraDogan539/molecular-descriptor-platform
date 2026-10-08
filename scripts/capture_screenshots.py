@@ -35,13 +35,13 @@ def main():
         page.screenshot(path=out / "01_home.png")
 
         page.goto(f"{args.url}/?page=database")
-        wait_ready(page, "matching records")
-        page.get_by_text("matching records").first.scroll_into_view_if_needed()
+        wait_ready(page, "matching record")
+        page.get_by_text("matching record").first.scroll_into_view_if_needed()
         page.wait_for_timeout(1000)
         page.screenshot(path=out / "02_database_search.png")
 
         page.goto(f"{args.url}/?page=database&record={RECORD}")
-        wait_ready(page, "matching records")
+        wait_ready(page, "matching record")
         heading = page.get_by_text("Inspect a record").first
         heading.scroll_into_view_if_needed()
         page.wait_for_timeout(1500)
@@ -56,7 +56,7 @@ def main():
             log.append(f"3D viewer: {exc}")
 
         page.goto(f"{args.url}/?page=database")
-        wait_ready(page, "matching records")
+        wait_ready(page, "matching record")
         try:
             page.get_by_text("Structure search").first.click()
             page.wait_for_timeout(1500)
