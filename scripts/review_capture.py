@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 out = Path("docs/review"); out.mkdir(parents=True, exist_ok=True)
 B = "https://chalmoldb.streamlit.app/~/+"
 pages = [("home","?page=home"),("record","?page=database&record=DEV_0001"),("polymer","?page=database&record=EXT_0130"),
-         ("statistics","?page=statistics"),("about","?page=about")]
+         ("statistics","?page=statistics")]
 log=[]
 with sync_playwright() as p:
     b = p.chromium.launch(); page = b.new_page(viewport={"width": 1440, "height": 6000})
