@@ -2,7 +2,7 @@
   "name": "ChalMolDB",
   "database_version": "1.1",
   "scientific_core_version": "0.11.0",
-  "records": 3248,
+  "records": 3488,
   "fields": [
     "Record_ID",
     "Dataset_Owner",
@@ -67,16 +67,16 @@
   ],
   "files": {
     "data/public/chalmoldb_records.csv": {
-      "sha256": "a24681913881b63b370c1789216b491c0c6d0f0718549e23229e890d365c2ca7",
-      "bytes": 3679585
+      "sha256": "21c87427e6715b065eec2e23c8c0b7c504f660e4291016f6220db7c967ef8413",
+      "bytes": 3987641
     },
     "data/structures_3d_v1.sdf.gz": {
       "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",
       "bytes": 1813941
     },
     "data/structures_3d_external.sdf.gz": {
-      "sha256": "d7461e37a2ca4d55feb0602deb1504c87a91df581760d3021a2ed827153711c8",
-      "bytes": 36114
+      "sha256": "8af75a20b55c8efbc8212fbc84e35cda9b1e4aea37b0b745698bcfce40823610",
+      "bytes": 64734
     },
     "docs/chalcogen_descriptor_dictionary_v1.csv": {
       "sha256": "edd9ba6c5f8fc93413cd659b51ba2b4947d09f333643205b5eadfcb0cd8f050b",
