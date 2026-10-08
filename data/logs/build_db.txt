@@ -8,19 +8,4 @@ chalcogendiazoloquinoxaline  Exact structure + 3D coordinates (author geometry f
                              Repeat unit only (Repeat_Unit_SMILES); extrapolated polymer value                     16
 external records with exact structure: 336
 external 3D blocks: 59
-Traceback (most recent call last):
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/build_database_v1_1.py", line 304, in <module>
-    main()
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/build_database_v1_1.py", line 300, in main
-    len(set(df.loc[dev, "InChIKey"].dropna()) & set(df.loc[ext, "InChIKey"].dropna())))
-            ~~~~~~^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/core/indexing.py", line 1200, in __getitem__
-    return self._getitem_tuple(key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/core/indexing.py", line 1395, in _getitem_tuple
-    return self._getitem_tuple_same_dim(tup)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/core/indexing.py", line 1049, in _getitem_tuple_same_dim
-    assert retval.ndim == self.ndim
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError
+Duplicate_Flag true: 450 | cross-collection InChIKey overlaps: 0
