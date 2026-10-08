@@ -3,7 +3,7 @@ message: "If you use ChalMolDB in your research, please cite this software relea
 title: "ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
 type: software
 version: "db-v1.1"
-date-released: "2026-10-07"
+date-released: "2026-10-08"
 doi: "10.5281/zenodo.22903549"
 url: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 repository-code: "https://github.com/EsraDogan539/molecular-descriptor-platform"
