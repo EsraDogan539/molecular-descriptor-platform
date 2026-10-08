@@ -89,4 +89,4 @@ def test_annotation_is_idempotent(db):
     from annotate_external_sources import annotate
 
     again = annotate(db)
-    pd.testing.assert_frame_equal(again.reset_index(drop=True), db.reset_index(drop=True), check_dtype=False)
+    assert again.to_csv(index=False) == db.to_csv(index=False)
