@@ -1,0 +1,433 @@
+{
+ "responses": [
+  {
+   "url": "https://chalmoldb.streamlit.app/?embed=true&embedded=1",
+   "status": 303,
+   "xfo": null,
+   "csp": "",
+   "loc": "https://share.streamlit.io/-/auth/app?redirect_uri=https%3A%2F%2Fchalmoldb.streamlit.app%2F%3Fembed%3Dtrue%26embedded%3D1"
+  },
+  {
+   "url": "https://share.streamlit.io/-/auth/app?redirect_uri=https%3A%2F%2Fchalmoldb.streamlit.app%2F%3Fembed%3Dtrue%26embedded%3D1",
+   "status": 303,
+   "xfo": null,
+   "csp": "",
+   "loc": "https://chalmoldb.streamlit.app/-/login?payload=MTc5MTQ2NzM1OHxYaDhCNFBHMVgzRGVCMFJWS0VBMVF2MHg0NlRBNzlYdFZSQ0k0UmQ5bVh3N05FdGQ4R2tZbkJzeTFWTU9aNXY1a29VamtuOEVKSkFnb3FEaE40bGVuVnhVOTQ5MjJVbC1QWGRsc1l3MjVraE92T0ZPU0lIdkVjc00xNXZiempPZDhDdnB0cUtpUFF5bkQxWjJBRkxTRGhMaHFBRUtYSXRmTTdmdmNZa08yVTZab0pVZk5KSG52RWZzaGpUaV9tbVRWak5ub3NJc2RoYTZ1dmhmc21YVlA2TE5TLWRLbkRYcU53YUxVMUZKSklaZHJSbXZ2Zy0wR3otZFZJQXFrVE9nNG5kTXBjaFNNQ1doYk5udTRrbERla0tWWWc1dVhibG5BNGtwbW00VXBzbmQtX1hYcWpKa1M4NG13OTZDeV9CMzdtb2Z4MERWT2RGVnluZldHTTNfdEMwMDhQQzE5Snk5YzFnRFBNM0MyODk3NDVIOHB1T3MtRzlDcmloNFFJX1FSTF83ZlNXd3NuSGZHMV9LZHZrSzdsNGlxY1o5ZGNUemRiV0U0YUI2UXdXWEVFSDlvcmc5NGRVUTZVY0xBWEI1SElwWVpzM1V1QngwSGVjQy1BR1k4NGhUR2J2RUc0MXBZM0ZiRlpjajdZc2V1bnM1eEtTcjRucElzOWt5ZzNmejZaY2hIMHZ6WHUyeU9ycGZwUnRob19YQkFxWXl0bHhUaU4zLVZ0TTNmcnlkQm45b2VEWXc3RVU9fIYR3PRJQWbbfazajQeY37NK8uuu9Sk0nUNlbD5cDwo3"
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/login?payload=MTc5MTQ2NzM1OHxYaDhCNFBHMVgzRGVCMFJWS0VBMVF2MHg0NlRBNzlYdFZSQ0k0UmQ5bVh3N05FdGQ4R2tZbkJzeTFW",
+   "status": 303,
+   "xfo": null,
+   "csp": "",
+   "loc": "https://chalmoldb.streamlit.app/?embed=true&embedded=1"
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/?embed=true&embedded=1",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1680228314&t=pageview&_s=1&dl=https%3A%2F%2Fchalmoldb.streamlit.app%2F%3Fembed%3Dtr",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/rolldown-runtime-CNC7AqOf.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/jsx-runtime-BtyjnKZj.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/tooltip-D2S4___1.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/errorDetails-BDQowOym.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/SmallDivider-BlS60Rb-.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/page-64Xl_BNC.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/schemas-Iu3KQOQJ.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-2FXfzJGp.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/popoverMenu-D49xGQkE.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/useAppState-BjTUZpyD.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/notFound-BzJWtTwJ.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/confirmationModal-BwNoJBuP.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/errorPage-CK-Jpwy3.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/login-CRVde-_5.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/iframe-PlC_b34Z.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/isEqual-Ctd7G7xk.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/streamlitAppContext-BB7rdvC6.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/icon_edit-DHRxkIDl.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/terminalContent-C2n1Mjw6.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/snowflakeOAuth-DJsOf-uV.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/index-L1R9zUDf.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/appSettings-jOmLW4LG.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/banner-D2t2_Ovp.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/toNumber-D0RjNJYc.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/ProfilePagePreview-VBYqXefU.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/CarouselOfStreamlitExampleApp-WHt6QRj6.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/SmallDivider-DuDZTfyp.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/ProfilePagePreview-BWWUYPxS.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/errorDetails-BoeL7g8o.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/usePythonVersions-CBwCrTS9.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/notFound-4fk-LevE.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/toFinite-BW9Ru4Ym.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/icon_star_outline-DH69RDEi.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/states-8om4j6Tx.css",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/queryGithubRepository-DXxeIas3.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/CSSTransition-AnhMoI_S.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/emoji_u1f626-DA0aHyeW.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/usePythonVersions-OJMc8JOG.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/popoverMenu-BlIhdTBl.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/streamlitAppPage-C9eLG_Fb.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/useUserDetails-YXenulOS.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/confirmationModal-BOsWCv_8.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/icon_analytics-CE5MjYW7.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/error-BfS6M55g.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/trim-yzKrW-as.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/index.module-Bbot1wPI.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/login-CFFZ7Nsh.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/errorPage-j7qP-ucv.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/banner-DNTp_Roh.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/appSettings-DA18COLj.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/icon_github-CfLfIzZH.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/icon_star_outline-DL_2fyLV.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/replayStats-C6TwcZID.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/bufferedData-ymD0tp_Q.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  },
+  {
+   "url": "https://chalmoldb.streamlit.app/-/build/assets/routes-CSGpNduz.js",
+   "status": 200,
+   "xfo": null,
+   "csp": "",
+   "loc": null
+  }
+ ],
+ "frames": [
+  {
+   "url": "http://127.0.0.1:8765/page.html"
+  },
+  {
+   "url": "chrome-error://chromewebdata/"
+  }
+ ],
+ "console": []
+}
