@@ -54,3 +54,33 @@ def test_embedded_mode_links_keep_embed_flag():
     html = " ".join(m.value for m in at.markdown)
     assert "page=database&embedded=1&embed=true" in html
     assert "page=about&embedded=1&embed=true#cite" in html
+
+
+def _result_count(at):
+    import re
+    for m in at.markdown:
+        hit = re.search(r"([\d,]+) matching record", m.value)
+        if hit:
+            return int(hit.group(1).replace(",", ""))
+    return None
+
+
+def test_use_case_presets_load_results():
+    from use_cases import PRESETS
+
+    for name in PRESETS:
+        at = _database_page()
+        at.query_params["preset"] = name
+        at.run()
+        assert not at.exception, (name, at.exception)
+        count = _result_count(at)
+        assert count is not None and 0 < count < 3488, (name, count)
+
+
+def test_home_shows_use_cases():
+    at = AppTest.from_file(str(APP), default_timeout=120)
+    at.query_params["page"] = "home"
+    at.run()
+    assert not at.exception, at.exception
+    html = " ".join(m.value for m in at.markdown)
+    assert "What you can do with ChalMolDB" in html and "preset=te_low_gap" in html

@@ -39,6 +39,7 @@ from public_labels import public_collection_label, sanitize_public_dataframe
 from release_metadata import DATABASE_VERSION, SCIENTIFIC_CORE_VERSION
 import streamlit.components.v1 as components
 
+from use_cases import PRESETS, apply_preset
 from structures_3d import (
     coordinate_attribution,
     load_all_structure_blocks,
@@ -951,6 +952,12 @@ def display_database_browser():
     if df.empty:
         st.warning("The curated database file is not available in this build.")
         return
+
+    preset = str(st.query_params.get("preset", "") or "")
+    if preset and st.session_state.get("database_applied_preset") != preset:
+        if apply_preset(preset, st.session_state, numeric_bounds(df, "Eg_eV")):
+            st.session_state["database_applied_preset"] = preset
+            st.session_state["query_replay_notice"] = f"Example loaded: {PRESETS[preset]['title']}."
 
     total = len(df)
     core = int(
