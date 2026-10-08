@@ -66,6 +66,10 @@ STATUS = {
         "Exact structure + 3D coordinates (author geometry file)",
         "Ready - exact structure confirmed against author geometry file; 3D coordinates included",
     ),
+    "file_no3d": (
+        "Exact structure (author geometry file); 3D coordinates not attached",
+        "Ready - exact structure confirmed against author geometry file; no 3D coordinates for this record",
+    ),
     "template": (
         "Exact structure from family template (verified on n = 1 and n = 6 geometry files)",
         "Ready - exact structure from verified family template; no 3D coordinates",
@@ -98,6 +102,49 @@ def structure_fields(mol_h):
         "Heteroatom_Count": sum(a.GetSymbol() not in ("C", "H") for a in mol_h.GetAtoms()),
         "_formula": CalcMolFormula(mol_h),
     }
+
+
+A_TABLE = ROOT / "data" / "sources" / "ozkilinc_kayi_2019_table4_oligomers.csv"
+A_LEVELS = (("631Gd", "6-31G(d)", "no"), ("LANL2DZ", "LANL2DZ", "no"), ("LANL2DZ_PCM", "LANL2DZ", "yes"))
+UNIT_NAMES = {1: "Monomer", 2: "Dimer", 3: "Trimer", 4: "Tetramer", 5: "Pentamer", 6: "Hexamer"}
+
+
+def add_a_oligomers(df):
+    """Monomer-hexamer records of the benzochalcogenadiazole family from Table 4 of the 2019 article."""
+    table = pd.read_csv(A_TABLE, dtype=str, keep_default_na=False)
+    a_poly = df[df.Family.eq("benzochalcogenadiazole")]
+    next_id = max(int(r.split("_")[1]) for r in df.Record_ID if r.startswith("HAKAN_")) + 1
+    assert next_id == 273, next_id
+    new = []
+    for _, t in table.iterrows():
+        for suffix, basis, solvent in A_LEVELS:
+            eg = t[f"Eg_{suffix}"]
+            if eg == "–":
+                continue
+            like = a_poly[(a_poly.System_Code == t.System_Code) & (a_poly.Basis_Set == basis)
+                          & (a_poly.Solvent_or_Conditions == solvent)]
+            assert len(like) == 1, (t.System_Code, basis, solvent)
+            rec = like.iloc[0].copy()
+            for col in df.columns:
+                if col not in ("Dataset_Owner", "Dataset_Name", "Split_Role", "Paper_Use", "Scope_Flag", "Family",
+                               "System_Code", "Chalcogen_Type", "Donor_Chalcogen", "Acceptor_Chalcogen", "Method",
+                               "Basis_Set", "Solvent_or_Conditions", "Reference", "Source_URL", "Notes"):
+                    rec[col] = pd.NA
+            n = int(t.n)
+            rec["Record_ID"] = f"HAKAN_{next_id:04d}"
+            rec["Source_File"] = A_TABLE.name
+            rec["Unit_Type"] = UNIT_NAMES[n]
+            rec["Oligomer_n"] = str(n)
+            rec["HOMO_eV"] = float(t[f"HOMO_{suffix}"])
+            rec["LUMO_eV"] = float(t[f"LUMO_{suffix}"])
+            rec["Eg_eV"] = float(eg)
+            rec["Experimental_Eg_eV"] = t.Experimental_Eg or pd.NA
+            rec["Notes"] = "Oligomer value from Table 4 of the source article"
+            rec["Duplicate_Flag"] = False
+            new.append(rec)
+            next_id += 1
+    out = pd.concat([df, pd.DataFrame(new)], ignore_index=True)
+    return out, len(new)
 
 
 def split_code(code):
@@ -170,6 +217,10 @@ def main():
     dev = df.Record_ID.str.startswith("EROL_")
     ext = df.Record_ID.str.startswith("HAKAN_")
     assert dev.sum() == 3088 and ext.sum() == 160
+    df, n_new = add_a_oligomers(df)
+    assert n_new == 240, n_new
+    dev = df.Record_ID.str.startswith("EROL_")
+    ext = df.Record_ID.str.startswith("HAKAN_")
 
     built = pd.read_csv(EXT_CSV)
     built["n"] = built.Unit_Type.map({"Monomer": 1, "Hexamer": 6})
@@ -191,10 +242,17 @@ def main():
             status, mol = "polymer", None
         elif key in built.index:
             b = built.loc[key]
-            assert b.Identity_confirmed and b.Export_3D, b.File
-            status, mol = "file_3d", bes.build_template(fam, donor, acceptor, n)
+            assert b.Identity_confirmed, b.File
+            mol = bes.build_template(fam, donor, acceptor, n)
+            gas_phase_geometry = rec.Solvent_or_Conditions in ("no", "gas phase")
+            if b.Export_3D and gas_phase_geometry:
+                status = "file_3d"
+            else:
+                status = "file_no3d"
+                note = (f"Geometry file {b.File}: {b.Notes}." if not b.Export_3D else
+                        f"Geometry file {b.File} is the gas-phase B3LYP/LANL2DZ geometry; this record used a "
+                        "PCM (acetonitrile) re-optimized geometry, so no coordinates are attached.")
         else:
-            assert fam == "C", rec.Record_ID
             status, mol = "template", bes.build_template(fam, donor, acceptor, n)
 
         df.at[idx, "Structure_Availability"], df.at[idx, "Curation_Status"] = STATUS[status]
@@ -229,7 +287,7 @@ def main():
 
     df.loc[df.Curation_Note.isna(), "Curation_Note"] = ""
     df = annotate(df)
-    assert len(df) == 3248
+    assert len(df) == 3248 + 240
     df.to_csv(MASTER, index=False, compression={"method": "gzip", "mtime": 0})
     with gzip.GzipFile(EXT_3D, "wb", mtime=0) as fh:
         fh.write("".join(blocks).encode("utf-8"))

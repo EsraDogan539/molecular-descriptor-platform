@@ -51,7 +51,7 @@ def test_external_bundle_matches_structured_external_records():
     expected = db.loc[
         db.Structure_Availability.eq("Exact structure + 3D coordinates (author geometry file)"), "Record_ID"
     ]
-    assert len(blocks) == len(expected) == 32
+    assert len(blocks) == len(expected) == 59
     assert all(rid.startswith("HAKAN_") for rid in expected)
     for rid in expected:
         block = structure_block_for(rid, blocks)
@@ -79,7 +79,7 @@ def test_geometry_descriptors_reproduce_database_values():
     cols = ["Planarity_Proxy_Z_Range", "Radius_of_Gyration", "Max_Interatomic_Distance",
             "Mean_Interatomic_Distance", "Std_Interatomic_Distance"]
     with_3d = db[db.Record_ID.map(lambda rid: structure_block_for(rid, blocks) is not None)]
-    assert len(with_3d) == 3088 + 32
+    assert len(with_3d) == 3088 + 59
     sample = pd.concat([with_3d[with_3d.Record_ID.str.startswith("EROL_")].iloc[::300],
                         with_3d[with_3d.Record_ID.str.startswith("HAKAN_")]])
     for _, row in sample.iterrows():

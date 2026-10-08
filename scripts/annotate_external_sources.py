@@ -40,6 +40,28 @@ EXPERIMENTAL_2019 = {
     "SSeS": "1.46 eV, ref. [30]; 0.83 eV, refs. [31, 32]",
     "SeOSe": "1.59 eV, ref. [27]",
 }
+# Table 4 of the 2019 article: monomer experimental band gaps (footnotes a [26], c [28], h [29]).
+EXPERIMENTAL_2019_MONOMER = {
+    "OOO": "2.46 eV, ref. [26]",
+    "OSO": "2.10 eV, ref. [28]",
+    "OSeO": "2.44 eV, ref. [28]",
+    "SOS": "2.47 eV, ref. [26]",
+    "SSS": "2.43 eV, ref. [26]",
+    "SSeS": "2.29 eV, ref. [29]",
+    "SeOSe": "2.41 eV, ref. [26]",
+    "SeSSe": "2.33 eV, ref. [26]",
+    "SeSeSe": "2.19 eV, ref. [29]",
+}
+# Internal inconsistencies of Table 4 found during curation (values kept as published).
+SOURCE_ANOMALIES = {
+    ("OSeO", "LANL2DZ", "no"): "In the source table, Eg differs from LUMO - HOMO by about 0.2 eV for the OSeO "
+                               "oligomers at this level; Eg is kept as published.",
+    ("SeTeSe", "LANL2DZ", "yes", "6"): "In the source table, Eg (1.27 eV) differs from LUMO - HOMO (1.31 eV) for this "
+                                       "record; Eg is kept as published.",
+    ("SSeS", "LANL2DZ", "no", "6"): "In the source table, HOMO and LUMO of this record equal those of the SSS hexamer "
+                                    "and break the trend of the SSeS series (possible transcription error in the "
+                                    "source); values are kept as published.",
+}
 # Table 4 footnotes d, e, i: computed values that the 2019 article took from earlier work of the same group.
 EARLIER_WORK_2019 = {
     ("OSO", "6-31G(d)", "no"): "ref. [35]",
@@ -102,11 +124,16 @@ def annotate(df):
 
     for idx in df.index[a]:
         code, basis, solv = df.at[idx, "System_Code"], df.at[idx, "Basis_Set"], solvent_key.at[idx]
+        n = str(df.at[idx, "Oligomer_n"])
         if df.at[idx, "Experimental_Eg_eV"] is not pd.NA and pd.notna(df.at[idx, "Experimental_Eg_eV"]):
-            assert code in EXPERIMENTAL_2019, (df.at[idx, "Record_ID"], code)
-            cited = sorted(float(v) for v in re.findall(r"([0-9.]+) eV", EXPERIMENTAL_2019[code]))
+            table = EXPERIMENTAL_2019 if n == "polymer" else EXPERIMENTAL_2019_MONOMER
+            assert n in ("polymer", "1") and code in table, (df.at[idx, "Record_ID"], code, n)
+            cited = sorted(float(v) for v in re.findall(r"([0-9.]+) eV", table[code]))
             assert cited == sorted(_parse_values(df.at[idx, "Experimental_Eg_eV"])), (df.at[idx, "Record_ID"], cited)
-            df.at[idx, "Experimental_Eg_Source"] = f"{EXPERIMENTAL_2019[code]} as cited in {SRC_2019}"
+            df.at[idx, "Experimental_Eg_Source"] = f"{table[code]} as cited in {SRC_2019}"
+        for key in ((code, basis, solv), (code, basis, solv, n)):
+            if key in SOURCE_ANOMALIES and n != "polymer":
+                df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], SOURCE_ANOMALIES[key])
         if basis == "6-31G(d)":
             if pd.isna(df.at[idx, "Eg_eV"]):
                 assert "Te" in code, df.at[idx, "Record_ID"]
@@ -115,7 +142,7 @@ def annotate(df):
                 df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], SINGLE_POINT)
         if solv == "yes":
             df.at[idx, "Curation_Note"] = _append(df.at[idx, "Curation_Note"], PCM_NOTE)
-        earlier = EARLIER_WORK_2019.get((code, basis, solv))
+        earlier = EARLIER_WORK_2019.get((code, basis, solv)) if n == "polymer" else None
         if earlier:
             df.at[idx, "Curation_Note"] = _append(
                 df.at[idx, "Curation_Note"],
