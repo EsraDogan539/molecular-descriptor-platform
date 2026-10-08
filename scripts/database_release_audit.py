@@ -9,7 +9,6 @@ RDLogger.DisableLog("rdApp.error")
 DATABASE_PATHS = [
     "data/chalcogen_database_v1_master.csv.gz",
     "data/chalcogen_database_v1_master.csv",
-    "data/chalcogen_database_preview_v1.csv",
 ]
 
 PROPERTY_COLUMNS = [
