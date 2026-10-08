@@ -10,9 +10,9 @@ def db():
 
 
 def test_record_counts_unchanged(db):
-    assert len(db) == 3248
+    assert len(db) == 3488
     assert db.Record_ID.str.startswith("EROL_").sum() == 3088
-    assert db.Record_ID.str.startswith("HAKAN_").sum() == 160
+    assert db.Record_ID.str.startswith("HAKAN_").sum() == 400
     assert db.Record_ID.is_unique
 
 
@@ -38,7 +38,7 @@ def test_duplicate_flag_is_shared_inchikey(db):
 
 def test_external_structures_consistent_with_system_code(db):
     ext = db[db.Record_ID.str.startswith("HAKAN_") & db.InChIKey.notna()]
-    assert len(ext) == 96
+    assert len(ext) == 336
     for _, r in ext.iterrows():
         n = int(r.Oligomer_n)
         donor, acceptor = r.Donor_Chalcogen, r.Acceptor_Chalcogen
@@ -59,7 +59,8 @@ def test_b_system_removed_without_renumbering(db):
     assert not db.Family.astype(str).str.contains("B_system|B system").any()
     v1 = pd.read_csv("data/releases/chalcogen_database_v1.csv.gz", low_memory=False)
     kept = v1[~v1.Family.astype(str).str.startswith("B_system")]
-    assert list(kept.Record_ID) == list(db.Record_ID)
+    assert list(kept.Record_ID) == list(db.Record_ID[: len(kept)])
+    assert list(db.Record_ID[len(kept):]) == [f"HAKAN_{i:04d}" for i in range(273, 273 + 240)]
     merged = kept.merge(db, on="Record_ID", suffixes=("_v1", "_v11"))
     for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
         a, b = merged[f"{col}_v1"], merged[f"{col}_v11"]
@@ -73,9 +74,9 @@ def test_source_annotations(db):
     ext = db[db.Record_ID.str.startswith("HAKAN_")]
     assert not db.Notes.astype(str).str.contains("Hakan|Erol").any()
     assert set(ext.Solvent_or_Conditions) == {"gas phase", "PCM (acetonitrile)"}
-    assert (ext.Solvent_or_Conditions == "PCM (acetonitrile)").sum() == 16
+    assert (ext.Solvent_or_Conditions == "PCM (acetonitrile)").sum() == 16 + 94
     exp = db[db.Experimental_Eg_eV.notna()]
-    assert len(exp) == 21
+    assert len(exp) == 21 + 27
     assert exp.Experimental_Eg_Min_eV.notna().all() and exp.Experimental_Eg_Source.notna().all()
     assert (exp.Experimental_Eg_Min_eV <= exp.Experimental_Eg_Max_eV).all()
     no_value = db[db.Eg_eV.isna()]
@@ -90,3 +91,18 @@ def test_annotation_is_idempotent(db):
 
     again = annotate(db)
     assert again.to_csv(index=False) == db.to_csv(index=False)
+
+
+def test_a_family_oligomers_match_source_table(db):
+    table = pd.read_csv("data/sources/ozkilinc_kayi_2019_table4_oligomers.csv", dtype=str, keep_default_na=False)
+    new = db[db.Source_File.eq("ozkilinc_kayi_2019_table4_oligomers.csv")]
+    assert len(new) == 240
+    levels = {("6-31G(d)", "gas phase"): "631Gd", ("LANL2DZ", "gas phase"): "LANL2DZ",
+              ("LANL2DZ", "PCM (acetonitrile)"): "LANL2DZ_PCM"}
+    for _, r in new.iterrows():
+        t = table[(table.System_Code == r.System_Code) & (table.n == r.Oligomer_n)].iloc[0]
+        suffix = levels[(r.Basis_Set, r.Solvent_or_Conditions)]
+        assert float(t[f"HOMO_{suffix}"]) == r.HOMO_eV
+        assert float(t[f"LUMO_{suffix}"]) == r.LUMO_eV
+        assert float(t[f"Eg_{suffix}"]) == r.Eg_eV
+    assert new.InChIKey.notna().all()

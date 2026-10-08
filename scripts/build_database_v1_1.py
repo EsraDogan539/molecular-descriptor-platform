@@ -219,6 +219,7 @@ def main():
     assert dev.sum() == 3088 and ext.sum() == 160
     df, n_new = add_a_oligomers(df)
     assert n_new == 240, n_new
+    dev = df.Record_ID.str.startswith("EROL_")
     ext = df.Record_ID.str.startswith("HAKAN_")
 
     built = pd.read_csv(EXT_CSV)
