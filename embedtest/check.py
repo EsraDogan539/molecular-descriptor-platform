@@ -17,7 +17,13 @@ with sync_playwright() as p:
     pg.goto("https://chalmoldb.streamlit.app/?embed=true&embedded=1", timeout=120000); pg.wait_for_timeout(90000)
     pg.screenshot(path=out / "direct.png")
     # embedded in a third-party page
-    pg2 = ctx.new_page(); pg2.on("response", onresp)
+    log.clear(); ctx2 = b.new_context(); pg2 = ctx2.new_page()
+    def onresp2(r):
+        if r.request.resource_type == "document":
+            h = r.headers
+            log.append({"url": r.url[:140], "status": r.status, "xfo": h.get("x-frame-options"), "csp": (h.get("content-security-policy") or "")[:300], "loc": h.get("location"), "setcookie": (h.get("set-cookie") or "")[:200]})
+    pg2.on("response", onresp2)
+    pg2.on("requestfailed", lambda q: log.append({"FAILED": q.url[:140], "err": q.failure}))
     msgs = []; pg2.on("console", lambda m: msgs.append(m.text[:200]))
     pg2.goto("http://127.0.0.1:8765/page.html", timeout=120000); pg2.wait_for_timeout(90000)
     pg2.screenshot(path=out / "embedded.png")
