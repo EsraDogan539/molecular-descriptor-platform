@@ -7,17 +7,13 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          sudo apt-get install -y poppler-utils > /dev/null 2>&1 || true
-          mkdir -p docs/keywords
-          for f in keywords_bycateg.pdf keywords.pdf keywords_byalpha.pdf; do
-            curl -sSL -A "Mozilla/5.0" -o docs/keywords/$f https://application.wiley-vch.de/vch/journals/$f || true
-          done
-          for f in docs/keywords/*.pdf; do pdftotext -layout "$f" "${f%.pdf}.txt" 2>/dev/null || true; done
-          ls -la docs/keywords > docs/keywords/listing.txt
-          rm -f docs/keywords/*.pdf
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install playwright > /dev/null && python -m playwright install --with-deps chromium > /dev/null
+      - run: python scripts/review_capture.py > review.txt 2>&1 || true; mkdir -p docs/review; cp review.txt docs/review/
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A docs/keywords; git commit -m "Keyword catalogue [skip ci]" || true; git push
+          git add -A docs; git commit -m "Review capture [skip ci]" || true; git push

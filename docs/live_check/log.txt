@@ -1,7 +1,0 @@
-new version live: True
-deep link selects EXT_0162: False
-3D viewer canvas present: True
-SDF download button: True
-Ketcher frame loaded: True
-documentation data-access section present: True
-public permanent link works: False
