@@ -57,6 +57,9 @@ records are unchanged, record identifiers are not renumbered, and new records co
   Experimental_Eg_Min/Max_eV and Experimental_Eg_Source; explanations for the seven B3LYP/6-31G(d) Te records
   without values (6-31G(d) is not defined for Te).
 
+- No empty category fields: `Chalcogen_Type` is "None (control)" for the 226 control records, and
+  `Solvent_or_Conditions` is "not stated in source" for the development collection.
+
 **Summary statistics (v1 → v1.1)**
 
 | | v1 | v1.1 |

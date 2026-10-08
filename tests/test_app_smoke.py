@@ -43,3 +43,14 @@ def test_documentation_page_renders_data_access():
     at.run()
     assert not at.exception, at.exception
     assert any("Data access" in m.value for m in at.markdown)
+
+
+def test_embedded_mode_links_keep_embed_flag():
+    at = AppTest.from_file(str(APP), default_timeout=120)
+    at.query_params["page"] = "about"
+    at.query_params["embedded"] = "1"
+    at.run()
+    assert not at.exception, at.exception
+    html = " ".join(m.value for m in at.markdown)
+    assert "page=database&embedded=1&embed=true" in html
+    assert "page=about&embedded=1&embed=true#cite" in html

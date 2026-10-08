@@ -10,6 +10,7 @@ A curated chalcogen-focused molecular database and Streamlit research interface 
 
 Changes between releases: [`docs/DATABASE_CHANGELOG.md`](docs/DATABASE_CHANGELOG.md).
 Programmatic access (CSV, 3D SDF, checksums, Python/R examples): [`docs/DATA_ACCESS.md`](docs/DATA_ACCESS.md).
+Embedding the platform in another website: [`docs/EMBEDDING.md`](docs/EMBEDDING.md).
 
 ## Citation
 

@@ -2,7 +2,7 @@ streamlit==1.64.0
 pandas==3.0.6
 numpy==2.5.3
 rdkit==2026.03.6
-openpyxl
-matplotlib
+openpyxl==3.1.5
+matplotlib==3.11.2
 streamlit-ketcher==0.0.1
 py3Dmol==2.5.5
