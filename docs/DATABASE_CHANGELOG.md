@@ -36,6 +36,8 @@ records are unchanged, record identifiers are not renumbered, and new records co
 - DEV_0316 and DEV_0317 are a duplicate in the source Supporting Information (D6A4 twice, D6A6 absent);
   both are kept and annotated.
 - Source DOI (10.1021/acs.jcim.5c00345), full reference and DFT level (B3LYP/6-311+G(d), Jaguar) added.
+- One label format: the 52 source labels written as "D58,A1" are written as "D58A1" like the other records;
+  the source label is kept in `Curation_Note`.
 
 **External collection**
 - New field `Repeat_Unit_SMILES` for all 160 records (repeat unit with two `*` attachment points).
