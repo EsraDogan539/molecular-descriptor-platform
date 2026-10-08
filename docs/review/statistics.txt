@@ -1,0 +1,52 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+DATABASE OVERVIEW
+Statistics
+A concise snapshot of database size, molecular identity, chalcogen coverage, provenance and electronic-property availability.
+RELEASE SNAPSHOT
+
+Total records
+
+3,488
+
+Unique standardized structures
+
+3,173
+
+Core S/Se/Te records
+
+3,262
+
+Records with Eg
+
+3,481
+
+Reference-backed records
+
+3,488
+
+Repeated structure groups
+
+199
+
+Unique-structure and repeated-group counts use standardized InChIKey identity where an exact structure is available. Reference-backed records contain a stored source/reference value. Parsed DOI records: 3,488.
+
+DISTRIBUTION OVERVIEW
+
+Descriptive overview of Database v1.1.
+
+DATA AVAILABILITY
+keyboard_arrow_right
+
+Quality-control summary
+
+ChalMolDB · Database v1.1 · Descriptive statistics
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

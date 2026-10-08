@@ -1,0 +1,49 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+RESEARCH RESOURCE
+About ChalMolDB
+A curated research resource for chalcogen-focused molecular data, designed around transparent identity, provenance and reusable scientific descriptors.
+
+Replacing sulfur with selenium or tellurium is one of the simplest ways to tune the band gap of donor–acceptor molecules for organic solar cells and transistors, but the relevant data are scattered across many studies with different methods. ChalMolDB collects these records in one place, with standardized structures and the source and level of theory of every value.
+
+ChalMolDB (Chalcogen Molecular Database) brings together standardized molecular identity, electronic-property data and interpretable S/Se/Te structural annotations in a single searchable resource.
+
+The platform supports transparent record inspection, structure-aware data curation and reproducible downstream cheminformatics workflows. Predictive modelling is treated as a secondary use case rather than the primary purpose of the database.
+
+CURRENT RELEASE
+Database v1.1 · Scientific Core v0.11.0
+3,488 records · 3,173 unique standardized structures
+RESOURCES
+Documentation GitHub repository Zenodo (all versions)
+TEAM
+Esra Nur Doğan
+Database design, data curation, software development
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+ORCID 0000-0001-5755-7596
+Hakan Kayı
+Scientific supervision; source of the external DFT data; corresponding author
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+ORCID 0000-0001-7300-0325
+
+Contact: hkayi@ankara.edu.tr
+
+HOW TO CITE
+
+If you use ChalMolDB, please cite the database release:
+
+Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v1.1. Zenodo, 2026. https://doi.org/10.5281/zenodo.22903549
+
+The concept DOI always resolves to the latest version; cite the version DOI of the release you used when reporting results. A journal article describing ChalMolDB is in preparation.
+
+DATA SOURCES AND ACKNOWLEDGEMENTS
+
+Development collection: T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 (Supporting Information, CC BY 4.0). External collection: O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167; H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179, with geometry files supplied by the H. Kayı group. Database content is released under CC BY 4.0 and the software under the MIT licence.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

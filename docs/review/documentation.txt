@@ -1,0 +1,123 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+REFERENCE GUIDE
+Documentation
+Database scope, structure-first search, molecular comparison, provenance, reproducibility and the user-analysis workflow for ChalMolDB.
+QUICK START
+
+1. Find molecules with a target property. Open the Database, expand Advanced filters, tick Filter Eg and set the range, and choose the chalcogens a molecule must contain. Example: Te-containing records with Eg below 1.5 eV.
+
+2. Inspect a record. Pick a record under Inspect a record to see its structure, HOMO/LUMO/Eg, source and level of theory. Switch on Show interactive 3D structure where coordinates are available, and copy the permanent link to share the record.
+
+3. Compare chalcogen variants. Use the comparison panel to place two records side by side, for example the same oligomer with S and with Te in the acceptor. Example: a series in which only the chalcogens change.
+
+4. Search by structure. Under Structure search, paste a SMILES string or switch on Draw structure, then choose exact, substructure or similarity search. Example: molecules similar to 4,7-di(thiophen-2-yl)-2,1,3-benzothiadiazole.
+
+5. Save and reuse. Download the filtered table or a citation-ready record, and export a query manifest to rerun exactly the same search later. For whole-database downloads see Data access below.
+
+6. Analyze your own molecules. In Analyze, upload a CSV with Molecule_ID and SMILES to compute the same descriptors; your data are not added to the database.
+
+3,488
+Records
+3,262
+Core S/Se/Te
+3,173
+Unique structures
+3,481
+Eg values
+DATABASE SCOPE
+
+Database v1.1 contains curated development and external records. Exact standardized structures are displayed only where the source supports structure-level identity.
+
+MOLECULAR IDENTITY
+
+Structure-complete records are standardized with RDKit and represented by canonical SMILES, InChI and InChIKey. Repeated standardized structures are retained to preserve record-level provenance.
+
+STRUCTURE-FIRST DATABASE SEARCH
+
+The Database workspace supports Exact standardized-identity search, RDKit graph substructure matching and Morgan/Tanimoto similarity search. Similarity uses a Morgan fingerprint with radius 2 and 2048 bits. Structural similarity is descriptive and does not establish equivalent electronic properties.
+
+ADVANCED RESEARCH FILTERS
+
+Optional filters can constrain HOMO, LUMO and Eg ranges; minimum S, Se and Te counts; and method, basis-set and curation metadata. Numeric filters are applied only when explicitly enabled, and missing values do not silently satisfy an active numeric filter.
+
+CURATED RECORD COMPARISON
+
+Filtered database records can be compared side by side. The comparison retains molecular identity, HOMO, LUMO, Eg, experimental Eg where available, chalcogen context, calculation method and basis-set metadata. Numeric deltas are reported as candidate minus reference; multi-valued experimental measurements are preserved rather than silently collapsed.
+
+CURATION PRINCIPLES
+Missing structures or properties are left explicit; unavailable values are not imputed.
+S/Se/Te-focused annotations are reported separately from general molecular descriptors.
+Record identity and standardized structure identity are treated as distinct concepts.
+DESCRIPTOR DICTIONARY
+
+Descriptor definitions are versioned with the scientific core so that the terminology shown in the interface and the exported analysis context remains explicit.
+
+Filter descriptor dictionary
+
+Descriptor Dictionary v0.9.0
+
+PROVENANCE AND DATA COVERAGE
+
+Record-level provenance is retained internally from the source material, while the public interface uses neutral collection labels. Calculation method, basis set, curation status and source/reference text are shown where available. Missing provenance is kept explicit rather than inferred.
+
+The Statistics page reports field-level availability for electronic properties, standardized structures, method metadata and references. Coverage describes what is present in the release and should not be interpreted as a quality score.
+
+Valid DOI values are normalized to https://doi.org links in record detail views. Citation-ready record CSV exports preserve record identity, standardized structure, electronic properties, method/basis metadata, source reference and release versions. Non-DOI references remain explicit source text.
+
+RELEASE QUALITY CHECKS
+
+The release workflow automatically audits missing or duplicate record IDs, populated Canonical SMILES that cannot be parsed, non-numeric populated electronic-property values and SMILES/InChIKey consistency before release.
+
+REPRODUCIBILITY MANIFESTS
+
+Every complete user-analysis package includes a machine-readable run_manifest.json file. It records the normalized project name, UTC creation time, input row/column structure, a SHA-256 checksum of the submitted table, analysis counts, Descriptor Dictionary version, Morgan/MACCS fingerprint settings, software versions and the files included in the package.
+
+Database searches can also export a query manifest JSON. It records the raw and standardized structure query, search mode, active filters, Morgan/Tanimoto settings where applicable, result count, release versions, a deterministic query-configuration SHA-256 checksum and an ordered result-record-set SHA-256 checksum.
+
+Saved query manifests can be replayed in the Database workspace. ChalMolDB validates the manifest schema, restores compatible search and filter settings, constrains restored numeric values to the current release bounds and re-runs the query against the currently loaded database. A release-difference notice is shown when the saved manifest and current release do not match.
+
+ANALYZE YOUR DATASET
+
+Upload a CSV containing Molecule_ID and SMILES. The platform validates structures, calculates general and S/Se/Te-aware descriptors, and keeps user-supplied data separate from the curated publication database.
+
+SOFTWARE ENVIRONMENT
+keyboard_arrow_right
+
+Runtime versions
+
+DATA ACCESS AND PROGRAMMATIC USE
+
+The complete release is distributed as static, versioned files that can be downloaded here or read directly by scripts from the GitHub repository and the Zenodo archive. No account or API key is needed. MANIFEST.json lists the release version and the SHA-256 checksum of every file.
+
+Records (CSV)
+
+3D, development (SDF)
+
+3D, external (SDF)
+
+Descriptors (CSV)
+
+Manifest (JSON)
+
+import pandas as pd
+BASE = "https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/main/"
+records = pd.read_csv(BASE + "data/public/chalmoldb_records.csv", low_memory=False)
+te = records[(records["Te_Count"] > 0) & records["InChIKey"].notna()]
+
+Each record has a permanent link, for example https://chalmoldb.streamlit.app/?page=database&record=EXT_0148. Full instructions (Python, R, SDF parsing and checksum verification) are in docs/DATA_ACCESS.md of the repository.
+
+CITATION AND DATA RELEASE
+
+The current release is ChalMolDB Database v1.1 · Scientific Core v0.11.0. All releases are archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest version; Database v1 has the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in docs/DATABASE_CHANGELOG.md of the repository.
+
+All archived versions · Database v1 release
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

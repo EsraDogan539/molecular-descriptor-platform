@@ -1,0 +1,30 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+USER ANALYSIS WORKSPACE
+Analyze Your Dataset
+Upload molecular structures to validate records and calculate general and S/Se/Te-aware descriptors while keeping user data separate from the curated publication database.
+UPLOAD DATASET
+
+Choose a CSV file
+
+upload
+
+Upload
+
+50MB per file • CSV
+Input format
+Required: Molecule_ID, SMILES
+Optional property and provenance columns are preserved.
+User uploads remain separate from the curated ChalMolDB release.
+
+Download example CSV
+
+Analysis options appear after a CSV file is loaded. User uploads are processed separately from the curated database.
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub
