@@ -13,29 +13,49 @@ Programmatic access (CSV, 3D SDF, checksums, Python/R examples): [`docs/DATA_ACC
 
 ## Citation
 
-Doğan, E. N. (2026). *ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22903549
+Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22903549
 
 The concept DOI covers all versions; cite the version DOI of the release you used once it is listed on Zenodo.
 
-## Features
+## What ChalMolDB offers
 
-- CSV upload with `Molecule_ID` and `SMILES` columns
-- SMILES validation
-- Molecular descriptor calculation
-- Chalcogen-specific descriptors for S, Se and Te
-- Morgan and MACCS fingerprints
-- Molecular structure cards
-- Dataset analysis panel
-- Pairwise molecule comparison
-- Similar molecule search with Morgan Tanimoto similarity
-- CSV and ZIP output files
+**Curated database (Database v1.1)**
+- 3,248 records: 3,088 donor–acceptor molecules with DFT-optimized structures and 160 oligomer and polymer
+  records of two chalcogen-substituted donor–acceptor–donor families
+- Standardized identity (RDKit canonical SMILES, InChI, InChIKey); repeated structures flagged, not removed
+- Record-level provenance: source, level of theory, solvation, curation notes
+- 3D structures for 3,120 records, with an interactive in-browser viewer and SDF download
 
-## Input Format
+**Web platform** (https://chalmoldb.streamlit.app)
+- Text, metadata and S/Se/Te-content filters; HOMO/LUMO/Eg ranges
+- Structure search by SMILES or by drawing (exact, substructure, Morgan/Tanimoto similarity)
+- Side-by-side record comparison, statistics view, citation-ready record export
+- Replayable query manifests with SHA-256 checksums
+- Permanent record links: `https://chalmoldb.streamlit.app/?page=database&record=EXT_0162`
+
+**Analyze your own molecules**
+- Upload a CSV with `Molecule_ID` and `SMILES`; structures are validated and standardized
+- General and chalcogen-aware descriptors, Morgan and MACCS fingerprints, similarity search
+- Results exported as CSV/ZIP; uploads never enter the curated database
 
 ```csv
 Molecule_ID,SMILES
-MOL_001,c1ccccc1
-MOL_002,CCO
+MOL_001,c1ccsc1
+MOL_002,c1cc[se]c1
+```
+
+## Data access and licences
+
+Records, 3D structures and checksums can be read directly by scripts; see [`docs/DATA_ACCESS.md`](docs/DATA_ACCESS.md).
+Database content: CC BY 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md)). Software: MIT ([`LICENSE`](LICENSE)).
+
+## Team
+
+- **Esra Nur Doğan** (ORCID 0000-0001-5755-7596): database design, data curation, software development
+- **Hakan Kayı** (ORCID 0000-0001-7300-0325): scientific supervision, source of the external DFT data;
+  corresponding author (hkayi@ankara.edu.tr)
+
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye.
 
 ## Scientific Core terminology
 
@@ -54,7 +74,7 @@ The exact implementation-aligned definitions are documented in
 
 The platform separates two workflows:
 
-1. **Our Curated Database** — browse and filter the versioned publication database.
+1. **Curated Database** — browse and filter the versioned publication database.
 2. **Analyze Your Dataset** — validate user-supplied structures and calculate the same general and chalcogen-aware descriptor layers.
 
 Uploaded user records do not enter the curated publication database automatically.
