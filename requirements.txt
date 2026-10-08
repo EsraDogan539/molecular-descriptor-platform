@@ -4,5 +4,5 @@ numpy==2.5.3
 rdkit==2026.03.6
 openpyxl
 matplotlib
-streamlit-ketcher
-py3Dmol
+streamlit-ketcher==0.0.1
+py3Dmol==2.5.5

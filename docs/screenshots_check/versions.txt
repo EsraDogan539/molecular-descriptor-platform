@@ -1,4 +1,0 @@
-Name: streamlit-ketcher
-Version: 0.0.1
-Name: py3Dmol
-Version: 2.5.5
