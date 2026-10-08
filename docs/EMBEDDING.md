@@ -1,17 +1,24 @@
-# Embedding ChalMolDB in another website
+# Linking ChalMolDB from another website
 
-To show ChalMolDB inside another page (for example a department website), use an iframe with both parameters
-below. `embed=true` hides Streamlit's own toolbar and padding; `embedded=1` lets ChalMolDB keep that mode when
-visitors move between its pages.
+**Recommended: link, do not embed.** Add a menu item (for example "ChalMolDB") on the department or laboratory
+website that points directly to the app:
 
-```html
-<iframe src="https://chalmoldb.streamlit.app/?embed=true&embedded=1"
-        style="width:100%; height:900px; border:0;" title="ChalMolDB"></iframe>
-<p><a href="https://chalmoldb.streamlit.app" target="_blank" rel="noopener">Open ChalMolDB in a new tab</a></p>
+```
+https://chalmoldb.streamlit.app
 ```
 
-Notes:
-- Keep the "open in a new tab" link: the hosted app sleeps after a period without visitors and needs up to a
-  minute to wake, and some browsers restrict embedded pages.
-- The credit line (developers, affiliation, how to cite) is part of the app and is shown in the embedded view.
-- Streamlit documentation: https://docs.streamlit.io/deploy/streamlit-community-cloud/share-your-app/embed-your-app
+In WordPress: Appearance → Menus → Custom Links → URL `https://chalmoldb.streamlit.app`, link text `ChalMolDB`
+→ Add to Menu → Save Menu. Clicking the menu item opens the database directly; the app carries its own credit
+line (developers, affiliation, how to cite).
+
+## Why not an iframe?
+
+Embedding the hosted app in an `<iframe>` on another domain does not work reliably on Streamlit Community Cloud.
+Every visit first passes through a login redirect on `share.streamlit.io` that relies on a cookie. Inside an iframe
+on a different site this cookie is a third-party cookie, which current browsers block, so the frame ends in a
+redirect loop (`ERR_TOO_MANY_REDIRECTS`) and stays empty. This was confirmed in a headless Chromium test
+(October 2026).
+
+True embedding would require hosting the app on a service without this login step (for example Hugging Face
+Spaces or a university server). The app already supports an embedded mode for that case: use
+`?embed=true&embedded=1` in the iframe URL so that internal links keep the embedded layout.
