@@ -50,6 +50,7 @@ CHALMOLDB_ICON_SVG = """
 CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
 CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
 CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
+VERSION_DOI_URL = "https://doi.org/10.5281/zenodo.23238884"  # Database v1.1
 TEAM = [
     {
         "name": "Esra Nur Doğan",
@@ -1121,7 +1122,7 @@ if page == "home":
         <div class="citation-box">
           <strong>How to cite ChalMolDB</strong><br>
           Current release: Database v1.1 · Scientific Core v0.11.0<br>
-          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1: 10.5281/zenodo.22903550
+          Database v1.1: 10.5281/zenodo.23238884 · Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549
         </div>
         """,
         unsafe_allow_html=True,
@@ -1383,12 +1384,12 @@ to compute the same descriptors; your data are not added to the database.
     st.write(
         f"The current release is ChalMolDB Database v{DATABASE_VERSION} · Scientific Core v0.11.0. All releases are "
         "archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest "
-        "version; Database v1 has the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
+        "version; Database v1.1 has the version DOI 10.5281/zenodo.23238884 and Database v1 the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
         "docs/DATABASE_CHANGELOG.md of the repository."
     )
     st.markdown(
-        "[All archived versions](https://doi.org/10.5281/zenodo.22903549) · "
-        "[Database v1 release](https://doi.org/10.5281/zenodo.22903550)"
+        "[Database v1.1 release](https://doi.org/10.5281/zenodo.23238884) · "
+        "[All archived versions](https://doi.org/10.5281/zenodo.22903549)"
     )
     render_credit_footer()
     st.stop()
@@ -1452,12 +1453,12 @@ if page == "about":
     st.write("If you use ChalMolDB, please cite the database release:")
     st.code(
         f"Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v{DATABASE_VERSION}. "
-        f"Zenodo, 2026. {CONCEPT_DOI_URL}",
+        f"Zenodo, 2026. {VERSION_DOI_URL}",
         language=None,
     )
     st.caption(
-        "The concept DOI always resolves to the latest version; cite the version DOI of the release you used "
-        "when reporting results. A journal article describing ChalMolDB is in preparation."
+        f"This is the version DOI of Database v{DATABASE_VERSION}. The concept DOI {CONCEPT_DOI_URL} covers all "
+        "versions and always resolves to the latest one. A journal article describing ChalMolDB is in preparation."
     )
 
     st.markdown('<div class="section-rule-title">Data sources and acknowledgements</div>', unsafe_allow_html=True)
