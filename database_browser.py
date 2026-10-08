@@ -79,11 +79,10 @@ FULL_DATABASE_PATHS = [
     "data/chalcogen_database_v1_master.csv.gz",
     "data/chalcogen_database_v1_master.csv",
 ]
-PREVIEW_DATABASE_PATH = "data/chalcogen_database_preview_v1.csv"
 
 
 def load_curated_database():
-    return _load_curated_database(_file_signature(FULL_DATABASE_PATHS + [PREVIEW_DATABASE_PATH]))
+    return _load_curated_database(_file_signature(FULL_DATABASE_PATHS))
 
 
 @st.cache_data(show_spinner=False)
@@ -92,9 +91,6 @@ def _load_curated_database(signature):
         if os.path.exists(path):
             compression = "gzip" if path.endswith(".gz") else "infer"
             return pd.read_csv(path, compression=compression), False, path
-
-    if os.path.exists(PREVIEW_DATABASE_PATH):
-        return pd.read_csv(PREVIEW_DATABASE_PATH), True, PREVIEW_DATABASE_PATH
 
     return pd.DataFrame(), True, None
 
