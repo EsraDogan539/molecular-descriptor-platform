@@ -52,7 +52,7 @@ CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
 TEAM = [
     {
         "name": "Esra Nur Doğan",
-        "role": "Database design, data curation, software development; corresponding author",
+        "role": "Database design, data curation, software development",
         "orcid": "0000-0001-5755-7596",
     },
     {
@@ -62,7 +62,7 @@ TEAM = [
     },
 ]
 AFFILIATION = "Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye"
-CONTACT_EMAILS = ("endogan@ankara.edu.tr", "hkayi@ankara.edu.tr")
+CONTACT_EMAILS = ("hkayi@ankara.edu.tr",)
 CREDIT_LINE = "Developed by Esra Nur Doğan and Hakan Kayı · Ankara University"
 HERO_TEXTS = {
     "long": ("Replacing sulfur with selenium or tellurium is one of the simplest ways to tune the band gap of "

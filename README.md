@@ -52,8 +52,7 @@ Database content: CC BY 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md)). Software: MI
 
 ## Team
 
-- **Esra Nur Doğan** (ORCID 0000-0001-5755-7596): database design, data curation, software development;
-  corresponding author (endogan@ankara.edu.tr)
+- **Esra Nur Doğan** (ORCID 0000-0001-5755-7596): database design, data curation, software development
 - **Hakan Kayı** (ORCID 0000-0001-7300-0325): scientific supervision, source of the external DFT data;
   corresponding author (hkayi@ankara.edu.tr)
 
