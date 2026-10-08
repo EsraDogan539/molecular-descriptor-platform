@@ -3,7 +3,7 @@
 
 A curated chalcogen-focused molecular database and Streamlit research interface for standardized molecular identity, electronic-property data, interpretable S/Se/Te descriptors, structure-first exploration, provenance-aware inspection, and reproducible query workflows.
 
-**Current release:** Database v1.1 · Scientific Core v0.11.0 (tag `db-v1.1`): 3,248 records, 3,079 unique standardized structures  
+**Current release:** Database v1.1 · Scientific Core v0.11.0 (tag `db-v1.1`): 3,488 records, 3,173 unique standardized structures  
 **Concept DOI (all versions, resolves to the latest):** https://doi.org/10.5281/zenodo.22903549  
 **Database v1 (v0.11.0) version DOI:** https://doi.org/10.5281/zenodo.22903550  
 **Web platform:** https://chalmoldb.streamlit.app
@@ -20,11 +20,11 @@ The concept DOI covers all versions; cite the version DOI of the release you use
 ## What ChalMolDB offers
 
 **Curated database (Database v1.1)**
-- 3,248 records: 3,088 donor–acceptor molecules with DFT-optimized structures and 160 oligomer and polymer
+- 3,488 records: 3,088 donor–acceptor molecules with DFT-optimized structures and 400 oligomer and polymer
   records of two chalcogen-substituted donor–acceptor–donor families
 - Standardized identity (RDKit canonical SMILES, InChI, InChIKey); repeated structures flagged, not removed
 - Record-level provenance: source, level of theory, solvation, curation notes
-- 3D structures for 3,120 records, with an interactive in-browser viewer and SDF download
+- 3D structures for 3,147 records, with an interactive in-browser viewer and SDF download
 
 **Web platform** (https://chalmoldb.streamlit.app)
 - Text, metadata and S/Se/Te-content filters; HOMO/LUMO/Eg ranges

@@ -3,8 +3,18 @@
 ## Database v1.1 (in preparation; not yet released)
 
 Built from the archived Database v1 table (`data/releases/chalcogen_database_v1.csv.gz`) by
-`scripts/build_database_v1_1.py`. 3,248 records (3,088 development, 160 external); property values of the retained
-records are unchanged and record identifiers are not renumbered.
+`scripts/build_database_v1_1.py`. 3,488 records (3,088 development, 400 external); property values of the retained
+records are unchanged, record identifiers are not renumbered, and new records continue the numbering (EXT_0273–EXT_0512).
+
+**Added: benzochalcogenadiazole oligomers (240 external records, EXT_0273–EXT_0512)**
+- Monomer to hexamer HOMO, LUMO and Eg values of the 16 systems from Table 4 of Ozkilinc & Kayi,
+  J. Mol. Model. 2019, 25, 167, at B3LYP/6-31G(d) (systems without Te), B3LYP/LANL2DZ and B3LYP/LANL2DZ with PCM
+  (acetonitrile); transcribed in `data/sources/ozkilinc_kayi_2019_table4_oligomers.csv` and checked record by record.
+- Exact structures for all 240 records (monomer and hexamer identity confirmed against the authors' geometry files,
+  dimer to pentamer from the verified repeat unit); 3D coordinates for 27 records whose gas-phase geometry file
+  passes all checks. Experimental monomer gaps (27 records) with their literature references.
+- Three internal inconsistencies of the source table are kept as published and noted in `Curation_Note`
+  (OSeO at B3LYP/LANL2DZ, SeTeSe hexamer with PCM, SSeS hexamer at B3LYP/LANL2DZ).
 
 **Removed: B-system family (112 external records, EXT_0001–EXT_0112)**
 - The authors' geometry files for this family are not consistent with the reported systems: every hexamer file
@@ -33,21 +43,27 @@ records are unchanged and record identifiers are not renumbered.
 
 **Duplicate flag**
 - `Duplicate_Flag` now means: the record's InChIKey is shared with at least one other record
-  (210 development records; no overlap between the collections). External records were previously flagged
+  (210 development records and 240 external records, the latter because the same oligomer is reported at several levels of theory; no overlap between the collections). External records were previously flagged
   on equal system code and band gap; that flag is removed.
 
 **3D structures**
-- `data/structures_3d_external.sdf.gz`: 32 external structures (CC BY 4.0, H. Kayı group).
+- `data/structures_3d_external.sdf.gz`: 59 external structures (CC BY 4.0, H. Kayı group).
+
+**Source annotations**
+- External notes cite the source articles; solvation recorded as gas phase or PCM (acetonitrile); numeric
+  Experimental_Eg_Min/Max_eV and Experimental_Eg_Source; explanations for the seven B3LYP/6-31G(d) Te records
+  without values (6-31G(d) is not defined for Te).
 
 **Summary statistics (v1 → v1.1)**
 
 | | v1 | v1.1 |
 |---|---|---|
-| Records | 3,360 | 3,248 |
-| External records | 272 | 160 |
-| S/Se/Te core scope / control or non-core | 3,145 / 215 | 3,040 / 208 |
-| Records containing S / Se / Te | 2,907 / 644 / 119 | 2,858 / 595 / 70 |
-| Records with exact structure | 3,088 | 3,184 |
-| Unique InChIKeys | 2,983 | 3,079 |
-| Te records with exact structure | 0 | 42 |
-| Experimental Eg values | 26 | 21 |
+| Records | 3,360 | 3,488 |
+| External records | 272 | 400 |
+| S/Se/Te core scope / control or non-core | 3,145 / 215 | 3,262 / 226 |
+| Records containing S / Se / Te | 2,907 / 644 / 119 | 2,969 / 706 / 154 |
+| Records with exact structure | 3,088 | 3,424 |
+| Unique InChIKeys | 2,983 | 3,173 |
+| Te records with exact structure | 0 | 126 |
+| Records with 3D coordinates | 3,088 | 3,147 |
+| Experimental Eg values | 26 | 48 |

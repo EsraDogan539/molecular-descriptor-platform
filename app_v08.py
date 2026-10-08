@@ -1088,10 +1088,10 @@ if page == "home":
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
-          <div class="metric-item"><span class="metric-number">3,248</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,079</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,040</span><span class="metric-label">S/Se/Te records</span></div>
-          <div class="metric-item"><span class="metric-number">160</span><span class="metric-label">External records</span></div>
+          <div class="metric-item"><span class="metric-number">3,488</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,173</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,262</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">400</span><span class="metric-label">External records</span></div>
         </div>
         <div class="quiet-note">
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structure standardization with RDKit
@@ -1140,10 +1140,10 @@ if page == "documentation":
     st.markdown(
         """
         <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
-          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,248</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,040</span><span class="metric-label">Core S/Se/Te</span></div>
-          <div class="metric-item"><span class="metric-number">3,079</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,241</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,488</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">3,262</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">3,173</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">3,481</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1367,7 +1367,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>3,248 records · 3,079 unique standardized structures</span>
+          <span>3,488 records · 3,173 unique standardized structures</span>
         </div>
         """,
         unsafe_allow_html=True,
