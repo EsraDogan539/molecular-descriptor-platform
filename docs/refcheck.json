@@ -1,0 +1,3206 @@
+[
+ {
+  "n": 1,
+  "ref": [
+   "C. K. Chiang, C. R. Fincher Jr., Y. W. Park, A. J. Heeger, H. Shirakawa, E. J. Louis, S. C. Gau, A. G. MacDiarmid",
+   "Phys. Rev. Lett.",
+   "1977",
+   "39",
+   "1098–1101"
+  ],
+  "hits": [
+   {
+    "doi": "10.1103/physrevlett.39.1098",
+    "title": "Electrical Conductivity in Doped Polyacetylene",
+    "journal": "Physical Review Letters",
+    "short": [
+     "Phys. Rev. Lett."
+    ],
+    "year": 1977,
+    "volume": "39",
+    "issue": "17",
+    "page": "1098-1101",
+    "article": null,
+    "authors": [
+     "C. K. Chiang",
+     "C. R. Fincher",
+     "Y. W. Park",
+     "A. J. Heeger",
+     "H. Shirakawa",
+     "E. J. Louis",
+     "S. C. Gau",
+     "Alan G. MacDiarmid"
+    ],
+    "n_authors": 8,
+    "score": 102.68936
+   },
+   {
+    "doi": "10.1103/physrevlett.40.1472",
+    "title": "Electrical Conductivity in Doped Polyacetylene.",
+    "journal": "Physical Review Letters",
+    "short": [
+     "Phys. Rev. Lett."
+    ],
+    "year": 1978,
+    "volume": "40",
+    "issue": "22",
+    "page": "1472-1472",
+    "article": null,
+    "authors": [
+     "C. K. Chiang",
+     "C. R. Fincher",
+     "Y. W. Park",
+     "A. J. Heeger",
+     "H. Shirakawa",
+     "E. J. Louis",
+     "S. C. Gau",
+     "Alan G. MacDiarmid"
+    ],
+    "n_authors": 8,
+    "score": 81.79407
+   },
+   {
+    "doi": "10.1063/1.436503",
+    "title": "Conducting polymers: Halogen doped polyacetylene",
+    "journal": "The Journal of Chemical Physics",
+    "short": [
+     ""
+    ],
+    "year": 1978,
+    "volume": "69",
+    "issue": "11",
+    "page": "5098-5104",
+    "article": null,
+    "authors": [
+     "C. K. Chiang",
+     "Y. W. Park",
+     "A. J. Heeger",
+     "H. Shirakawa",
+     "E. J. Louis",
+     "Alan G. MacDiarmid"
+    ],
+    "n_authors": 6,
+    "score": 50.30868
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 2,
+  "ref": [
+   "J. H. Burroughes, D. D. C. Bradley, A. R. Brown, R. N. Marks, K. Mackay, R. H. Friend, P. L. Burns, A. B. Holmes",
+   "Nature",
+   "1990",
+   "347",
+   "539–541"
+  ],
+  "hits": [
+   {
+    "doi": "10.1038/347539a0",
+    "title": "Light-emitting diodes based on conjugated polymers",
+    "journal": "Nature",
+    "short": [
+     "Nature"
+    ],
+    "year": 1990,
+    "volume": "347",
+    "issue": "6293",
+    "page": "539-541",
+    "article": null,
+    "authors": [
+     "J. H. Burroughes",
+     "D. D. C. Bradley",
+     "A. R. Brown",
+     "R. N. Marks",
+     "K. Mackay",
+     "R. H. Friend",
+     "P. L. Burns",
+     "A. B. Holmes"
+    ],
+    "n_authors": 8,
+    "score": 92.872314
+   },
+   {
+    "doi": "10.1038/348352a0",
+    "title": "Correction: Light-emitting diodes based on conjugated polymers",
+    "journal": "Nature",
+    "short": [
+     "Nature"
+    ],
+    "year": 1990,
+    "volume": "348",
+    "issue": "6299",
+    "page": "352-352",
+    "article": null,
+    "authors": [
+     "J. H. Burroughes",
+     "D. D. C. Bradley",
+     "A. R. Brown",
+     "R. N. Marks",
+     "K. Mackay",
+     "R. H. Friend",
+     "P. L. Burn",
+     "A. B. Holmes"
+    ],
+    "n_authors": 8,
+    "score": 65.63391
+   },
+   {
+    "doi": "10.1016/0379-6779(91)91251-5",
+    "title": "Light emission from poly(p-phenylene vinylene): A comparison between photo- and electro-luminescence",
+    "journal": "Synthetic Metals",
+    "short": [
+     "Synthetic Metals"
+    ],
+    "year": 1991,
+    "volume": "43",
+    "issue": "1-2",
+    "page": "3135-3141",
+    "article": null,
+    "authors": [
+     "D.D.C Bradley",
+     "A.R Brown",
+     "P.L Burn",
+     "J.H Burroughes",
+     "R.H Friend",
+     "A.B Holmes",
+     "K.D Mackay",
+     "R.N Marks"
+    ],
+    "n_authors": 8,
+    "score": 54.37721
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 3,
+  "ref": [
+   "G. Yu, J. Gao, J. C. Hummelen, F. Wudl, A. J. Heeger",
+   "Science",
+   "1995",
+   "270",
+   "1789–1791"
+  ],
+  "hits": [
+   {
+    "doi": "10.1126/science.270.5243.1789",
+    "title": "Polymer Photovoltaic Cells: Enhanced Efficiencies via a Network of Internal Donor-Acceptor Heterojunctions",
+    "journal": "Science",
+    "short": [
+     "Science"
+    ],
+    "year": 1995,
+    "volume": "270",
+    "issue": "5243",
+    "page": "1789-1791",
+    "article": null,
+    "authors": [
+     "G. Yu",
+     "J. Gao",
+     "J. C. Hummelen",
+     "F. Wudl",
+     "A. J. Heeger"
+    ],
+    "n_authors": 5,
+    "score": 74.02634
+   },
+   {
+    "doi": "10.1117/12.228121",
+    "title": "Nonlinear absorption in charge-transfer films",
+    "journal": "SPIE Proceedings",
+    "short": [
+     ""
+    ],
+    "year": 1995,
+    "volume": "2530",
+    "issue": null,
+    "page": "205",
+    "article": null,
+    "authors": [
+     "Myoungsik Cha",
+     "Niyazi Serdar Sariciftci",
+     "Alan J. Heeger",
+     "Jan C. Hummelen",
+     "Fred Wudl"
+    ],
+    "n_authors": 5,
+    "score": 41.65495
+   },
+   {
+    "doi": "10.1063/1.115294",
+    "title": "Enhanced nonlinear absorption and optical limiting in semiconducting polymer/methanofullerene charge transfer films",
+    "journal": "Applied Physics Letters",
+    "short": [
+     ""
+    ],
+    "year": 1995,
+    "volume": "67",
+    "issue": "26",
+    "page": "3850-3852",
+    "article": null,
+    "authors": [
+     "M. Cha",
+     "N. S. Sariciftci",
+     "A. J. Heeger",
+     "J. C. Hummelen",
+     "F. Wudl"
+    ],
+    "n_authors": 5,
+    "score": 38.933735
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 4,
+  "ref": [
+   "S. Günes, H. Neugebauer, N. S. Sariciftci",
+   "Chem. Rev.",
+   "2007",
+   "107",
+   "1324–1338"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/cr050149z",
+    "title": "Conjugated Polymer-Based Organic Solar Cells",
+    "journal": "Chemical Reviews",
+    "short": [
+     "Chem. Rev."
+    ],
+    "year": 2007,
+    "volume": "107",
+    "issue": "4",
+    "page": "1324-1338",
+    "article": null,
+    "authors": [
+     "Serap Günes",
+     "Helmut Neugebauer",
+     "Niyazi Serdar Sariciftci"
+    ],
+    "n_authors": 3,
+    "score": 75.6479
+   },
+   {
+    "doi": "10.1590/s0103-50532007000600013",
+    "title": "Photoelectrochemical cells based on emeraldine base form of polyaniline",
+    "journal": "Journal of the Brazilian Chemical Society",
+    "short": [
+     "J. Braz. Chem. Soc."
+    ],
+    "year": 2007,
+    "volume": "18",
+    "issue": "6",
+    "page": "1189-1193",
+    "article": null,
+    "authors": [
+     "Assefa Sergawie",
+     "Teketel Yohannes",
+     "Serap Günes",
+     "Helmut Neugebauer",
+     "Niyazi S. Sariciftci"
+    ],
+    "n_authors": 5,
+    "score": 40.743904
+   },
+   {
+    "doi": "10.1149/1.2408961",
+    "title": "Solid State Dye Sensitized Solar Cells Using Poly (3-hexylthiophene) as Hole Transport Material",
+    "journal": "ECS Transactions",
+    "short": [
+     "ECS Trans."
+    ],
+    "year": 2007,
+    "volume": "2",
+    "issue": "12",
+    "page": "145-154",
+    "article": null,
+    "authors": [
+     "Helmut Neugebauer",
+     "Serap Günes",
+     "Serdar Sariciftci"
+    ],
+    "n_authors": 3,
+    "score": 39.628605
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 5,
+  "ref": [
+   "A. Facchetti",
+   "Chem. Mater.",
+   "2011",
+   "23",
+   "733–758"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/cm102419z",
+    "title": "π-Conjugated Polymers for Organic Electronics and Photovoltaic Cell Applications",
+    "journal": "Chemistry of Materials",
+    "short": [
+     "Chem. Mater."
+    ],
+    "year": 2010,
+    "volume": "23",
+    "issue": "3",
+    "page": "733-758",
+    "article": null,
+    "authors": [
+     "Antonio Facchetti"
+    ],
+    "n_authors": 1,
+    "score": 47.82174
+   },
+   {
+    "doi": "10.1021/cm200009k",
+    "title": "Very Large Silacylic Substituent Effects on Response in Silole-Based Polymer Transistors",
+    "journal": "Chemistry of Materials",
+    "short": [
+     "Chem. Mater."
+    ],
+    "year": 2011,
+    "volume": "23",
+    "issue": "8",
+    "page": "2185-2200",
+    "article": null,
+    "authors": [
+     "Hui Huang",
+     "Jangdae Youn",
+     "Rocio Ponce Ortiz",
+     "Yan Zheng",
+     "Antonio Facchetti",
+     "Tobin Marks"
+    ],
+    "n_authors": 6,
+    "score": 27.915531
+   },
+   {
+    "doi": "10.1021/cm103326n",
+    "title": "Enhanced Thin-Film Transistor Performance by Combining 13,6-N-Sulfinylacetamidopentacene with Printed PEDOT:PSS Electrodes",
+    "journal": "Chemistry of Materials",
+    "short": [
+     "Chem. Mater."
+    ],
+    "year": 2011,
+    "volume": "23",
+    "issue": "4",
+    "page": "1061-1069",
+    "article": null,
+    "authors": [
+     "Alessandro Luzio",
+     "Chiara Musumeci",
+     "Christopher R. Newman",
+     "Antonio Facchetti",
+     "Tobin J. Marks",
+     "Bruno Pignataro"
+    ],
+    "n_authors": 6,
+    "score": 27.493443
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 6,
+  "ref": [
+   "M. C. Scharber, D. Mühlbacher, M. Koppe, P. Denk, C. Waldauf, A. J. Heeger, C. J. Brabec",
+   "Adv. Mater.",
+   "2006",
+   "18",
+   "789–794"
+  ],
+  "hits": [
+   {
+    "doi": "10.1002/adma.200501717",
+    "title": "Design Rules for Donors in Bulk‐Heterojunction Solar Cells—Towards 10 % Energy‐Conversion Efficiency",
+    "journal": "Advanced Materials",
+    "short": [
+     "Advanced Materials"
+    ],
+    "year": 2006,
+    "volume": "18",
+    "issue": "6",
+    "page": "789-794",
+    "article": null,
+    "authors": [
+     "M. C. Scharber",
+     "D. Mühlbacher",
+     "M. Koppe",
+     "P. Denk",
+     "C. Waldauf",
+     "A. J. Heeger",
+     "C. J. Brabec"
+    ],
+    "n_authors": 7,
+    "score": 96.68578
+   },
+   {
+    "doi": "10.1002/adfm.200700124",
+    "title": "Organic Field‐Effect Devices as Tool to Characterize the Bipolar Transport in Polymer‐Fullerene Blends: The Case of P3HT‐PCBM",
+    "journal": "Advanced Functional Materials",
+    "short": [
+     "Adv Funct Materials"
+    ],
+    "year": 2007,
+    "volume": "17",
+    "issue": "16",
+    "page": "3274-3283",
+    "article": null,
+    "authors": [
+     "M. Morana",
+     "P. Koers",
+     "C. Waldauf",
+     "M. Koppe",
+     "D. Muehlbacher",
+     "P. Denk",
+     "M. Scharber",
+     "D. Waller",
+     "C. Brabec"
+    ],
+    "n_authors": 9,
+    "score": 51.6865
+   },
+   {
+    "doi": "10.1007/978-3-540-79359-5_13",
+    "title": "Design Rules for Efficient Organic Solar Cells",
+    "journal": "Springer Series in Optical Sciences",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": "195-222",
+    "article": null,
+    "authors": [
+     "Z. Zhu",
+     "D. Mühlbacher",
+     "M. Morana",
+     "M. Koppe",
+     "M. C. Scharber",
+     "D. Waller",
+     "G. Dennler",
+     "C. J. Brabec"
+    ],
+    "n_authors": 8,
+    "score": 44.414005
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 7,
+  "ref": [
+   "J. Roncali",
+   "Chem. Rev.",
+   "1997",
+   "97",
+   "173–206"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/cr950257t",
+    "title": "Synthetic Principles for Bandgap Control in Linear π-Conjugated Systems",
+    "journal": "Chemical Reviews",
+    "short": [
+     "Chem. Rev."
+    ],
+    "year": 1997,
+    "volume": "97",
+    "issue": "1",
+    "page": "173-206",
+    "article": null,
+    "authors": [
+     "Jean Roncali"
+    ],
+    "n_authors": 1,
+    "score": 49.050552
+   },
+   {
+    "doi": "10.1039/a607574f",
+    "title": "Extensively π-conjugated soluble oligothienylenevinylenes",
+    "journal": "Chemical Communications",
+    "short": [
+     "Chem. Commun."
+    ],
+    "year": 1997,
+    "volume": null,
+    "issue": "3",
+    "page": "301-302",
+    "article": null,
+    "authors": [
+     "El Hadj Elandaloussi",
+     "Pierre Frère",
+     "Jean Roncali"
+    ],
+    "n_authors": 3,
+    "score": 24.640493
+   },
+   {
+    "doi": "10.1021/cr960003n",
+    "title": "Electrochemical Carbon",
+    "journal": "Chemical Reviews",
+    "short": [
+     "Chem. Rev."
+    ],
+    "year": 1997,
+    "volume": "97",
+    "issue": "8",
+    "page": "3061-3082",
+    "article": null,
+    "authors": [
+     "Ladislav Kavan"
+    ],
+    "n_authors": 1,
+    "score": 24.269524
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 8,
+  "ref": [
+   "Y. Gao, M. Liu, Y. Zhang, Z. Liu, Y. Yang, L. Zhao",
+   "Polymers",
+   "2017",
+   "9",
+   "39"
+  ],
+  "hits": [
+   {
+    "doi": "10.3390/polym9020039",
+    "title": "Recent Development on Narrow Bandgap Conjugated Polymers for Polymer Solar Cells",
+    "journal": "Polymers",
+    "short": [
+     "Polymers"
+    ],
+    "year": 2017,
+    "volume": "9",
+    "issue": "2",
+    "page": "39",
+    "article": null,
+    "authors": [
+     "Yueyue Gao",
+     "Ming Liu",
+     "Yong Zhang",
+     "Zhitian Liu",
+     "Yulin Yang",
+     "Liancheng Zhao"
+    ],
+    "n_authors": 6,
+    "score": 46.300423
+   },
+   {
+    "doi": "10.1016/j.carbpol.2017.06.059",
+    "title": "Vapor sensing with color-tunable multilayered coatings of cellulose nanocrystals",
+    "journal": "Carbohydrate Polymers",
+    "short": [
+     "Carbohydrate Polymers"
+    ],
+    "year": 2017,
+    "volume": "174",
+    "issue": null,
+    "page": "39-47",
+    "article": null,
+    "authors": [
+     "Yu Zhao",
+     "Guizhi Gao",
+     "Dagang Liu",
+     "Donglin Tian",
+     "Yinyan Zhu",
+     "Yu Chang"
+    ],
+    "n_authors": 6,
+    "score": 35.02164
+   },
+   {
+    "doi": "10.1039/c7py00850c",
+    "title": "Quinoxaline-based conjugated polymers for polymer solar cells",
+    "journal": "Polymer Chemistry",
+    "short": [
+     "Polym. Chem."
+    ],
+    "year": 2017,
+    "volume": "8",
+    "issue": "32",
+    "page": "4613-4636",
+    "article": null,
+    "authors": [
+     "Ming Liu",
+     "Yueyue Gao",
+     "Yong Zhang",
+     "Zhitian Liu",
+     "Liancheng Zhao"
+    ],
+    "n_authors": 5,
+    "score": 33.828537
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 9,
+  "ref": [
+   "H. Kayi",
+   "J. Mol. Model.",
+   "2014",
+   "20",
+   "2269"
+  ],
+  "hits": [
+   {
+    "doi": "10.1007/s00894-014-2269-6",
+    "title": "A computational study on 4,7-di(furan-2-yl)benzo[c][1,2,5]thiadiazole monomer and its oligomers",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2014,
+    "volume": "20",
+    "issue": "6",
+    "page": null,
+    "article": "2269",
+    "authors": [
+     "Hakan Kayi"
+    ],
+    "n_authors": 1,
+    "score": 32.02462
+   },
+   {
+    "doi": "10.1007/s00894-014-2249-x",
+    "title": "Conformational behaviors of trans-2,3- and trans-2,5-dihalo-1,4-diselenanes. A complete basis set, hybrid-density functional theory study and natural bond orbit",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2014,
+    "volume": "20",
+    "issue": "5",
+    "page": null,
+    "article": "2249",
+    "authors": [
+     "Davood Nori-Shargh",
+     "Seiedeh Negar Mousavi",
+     "Hakan Kayi"
+    ],
+    "n_authors": 3,
+    "score": 27.89722
+   },
+   {
+    "doi": "10.1007/s00894-009-0613-z",
+    "title": "AM1* parameters for gold",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2009,
+    "volume": "16",
+    "issue": "5",
+    "page": "1029-1038",
+    "article": null,
+    "authors": [
+     "Hakan Kayi"
+    ],
+    "n_authors": 1,
+    "score": 26.423199
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 10,
+  "ref": [
+   "H. Kayi, A. Elkamel",
+   "Comput. Theor. Chem.",
+   "2015",
+   "1054",
+   "38–45"
+  ],
+  "hits": [
+   {
+    "doi": "10.1016/j.comptc.2014.12.011",
+    "title": "A theoretical investigation of 4,7-di(furan-2-yl)benzo[c][1,2,5]selenadiazole-based donor–acceptor type conjugated polymer",
+    "journal": "Computational and Theoretical Chemistry",
+    "short": [
+     "Computational and Theoretical Chemistry"
+    ],
+    "year": 2015,
+    "volume": "1054",
+    "issue": null,
+    "page": "38-45",
+    "article": null,
+    "authors": [
+     "Hakan Kayi",
+     "Ali Elkamel"
+    ],
+    "n_authors": 2,
+    "score": 44.44859
+   },
+   {
+    "doi": "10.1142/s0219633615990011",
+    "title": "Author Index Volume 14 (2015)",
+    "journal": "Journal of Theoretical and Computational Chemistry",
+    "short": [
+     "J. Theor. Comput. Chem."
+    ],
+    "year": 2015,
+    "volume": "14",
+    "issue": "08",
+    "page": "1599001",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 25.38795
+   },
+   {
+    "doi": "10.1145/2809957.2809969",
+    "title": "Ushahidi",
+    "journal": "ACM SIGCAS Computers and Society",
+    "short": [
+     "SIGCAS Comput. Soc."
+    ],
+    "year": 2015,
+    "volume": "45",
+    "issue": "2",
+    "page": "38-38",
+    "article": null,
+    "authors": [
+     "Cam Macdonell"
+    ],
+    "n_authors": 1,
+    "score": 24.648628
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 11,
+  "ref": [
+   "B. Kaya, H. Kayi",
+   "Comput. Theor. Chem.",
+   "2017",
+   "1099",
+   "45–54"
+  ],
+  "hits": [
+   {
+    "doi": "10.1016/j.comptc.2016.11.014",
+    "title": "Design of novel tellurium and selenium containing semiconducting polymers using quantum mechanical tools",
+    "journal": "Computational and Theoretical Chemistry",
+    "short": [
+     "Computational and Theoretical Chemistry"
+    ],
+    "year": 2017,
+    "volume": "1099",
+    "issue": null,
+    "page": "45-54",
+    "article": null,
+    "authors": [
+     "Birnur Kaya",
+     "Hakan Kayi"
+    ],
+    "n_authors": 2,
+    "score": 41.96122
+   },
+   {
+    "doi": "10.1142/s0219633617990012",
+    "title": "Author Index Volume 16 (2017)",
+    "journal": "Journal of Theoretical and Computational Chemistry",
+    "short": [
+     "J. Theor. Comput. Chem."
+    ],
+    "year": 2017,
+    "volume": "16",
+    "issue": "08",
+    "page": "1799001",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 25.16382
+   },
+   {
+    "doi": "10.4204/eptcs.225.7",
+    "title": "Token-passing Optimal Reduction with Embedded Read-back",
+    "journal": "Electronic Proceedings in Theoretical Computer Science",
+    "short": [
+     "Electron. Proc. Theor. Comput. Sci."
+    ],
+    "year": 2016,
+    "volume": "225",
+    "issue": null,
+    "page": "45-54",
+    "article": null,
+    "authors": [
+     "Anton Salikhmetov"
+    ],
+    "n_authors": 1,
+    "score": 24.631409
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 12,
+  "ref": [
+   "H. Kayi, O. Ozkilinc, B. Kaya",
+   "J. Turk. Chem. Soc. Sect. B",
+   "2017",
+   "1",
+   "127–134"
+  ],
+  "hits": [
+   {
+    "doi": "10.18596/jotcsa.04933",
+    "title": "A Useful Method for the Prediction of Molecular Electrophilicity and Nucleophilicity",
+    "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+    "short": [
+     "J. Turk. Chem. Soc., Sect. A: Chem."
+    ],
+    "year": 2016,
+    "volume": "3",
+    "issue": "2",
+    "page": null,
+    "article": null,
+    "authors": [
+     "Savaş Kaya",
+     "Cemal Kaya",
+     "İlkay Uğurlu",
+     "Nazmul Islam"
+    ],
+    "n_authors": 4,
+    "score": 34.22017
+   },
+   {
+    "doi": "10.18596/jotcsa.57549",
+    "title": "SYNTHESIS AND CHARACTERIZATION OF CELLULOSE BASED BIO-POLYMER AEROGEL ISOLATED FROM WASTE OF BLUEBERRY TREE (VACCINIUM MYRTILLUS)",
+    "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+    "short": [
+     "J. Turk. Chem. Soc., Sect. A: Chem."
+    ],
+    "year": 2016,
+    "volume": "3",
+    "issue": "3",
+    "page": null,
+    "article": null,
+    "authors": [
+     "Mehmet KAYA"
+    ],
+    "n_authors": 1,
+    "score": 31.231369
+   },
+   {
+    "doi": "10.18596/jotcsa.74979",
+    "title": "Characterization of Magnetic Polymeric Microparticles",
+    "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+    "short": [
+     "J. Turk. Chem. Soc., Sect. A: Chem."
+    ],
+    "year": 2016,
+    "volume": "3",
+    "issue": "3",
+    "page": null,
+    "article": null,
+    "authors": [
+     "Kazım Köse"
+    ],
+    "n_authors": 1,
+    "score": 27.091692
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 13,
+  "ref": [
+   "O. Ozkilinc, H. Kayi",
+   "J. Mol. Model.",
+   "2019",
+   "25",
+   "167"
+  ],
+  "hits": [
+   {
+    "doi": "10.1007/s00894-019-4043-2",
+    "title": "Effect of chalcogen atoms on the electronic band gaps of donor-acceptor-donor type semiconducting polymers: a systematic DFT investigation",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2019,
+    "volume": "25",
+    "issue": "6",
+    "page": null,
+    "article": "167",
+    "authors": [
+     "Ozge Ozkilinc",
+     "Hakan Kayi"
+    ],
+    "n_authors": 2,
+    "score": 44.075005
+   },
+   {
+    "doi": "10.1007/s00894-009-0613-z",
+    "title": "AM1* parameters for gold",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2009,
+    "volume": "16",
+    "issue": "5",
+    "page": "1029-1038",
+    "article": null,
+    "authors": [
+     "Hakan Kayi"
+    ],
+    "n_authors": 1,
+    "score": 26.43903
+   },
+   {
+    "doi": "10.1007/s00894-009-0614-y",
+    "title": "AM1* parameters for manganese and iron",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2009,
+    "volume": "16",
+    "issue": "6",
+    "page": "1109-1126",
+    "article": null,
+    "authors": [
+     "Hakan Kayi",
+     "Timothy Clark"
+    ],
+    "n_authors": 2,
+    "score": 25.916565
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 14,
+  "ref": [
+   "H. Kayi, E. Sen, O. Ozkilinc",
+   "J. Mol. Model.",
+   "2024",
+   "30",
+   "179"
+  ],
+  "hits": [
+   {
+    "doi": "10.1007/s00894-019-4043-2",
+    "title": "Effect of chalcogen atoms on the electronic band gaps of donor-acceptor-donor type semiconducting polymers: a systematic DFT investigation",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2019,
+    "volume": "25",
+    "issue": "6",
+    "page": null,
+    "article": "167",
+    "authors": [
+     "Ozge Ozkilinc",
+     "Hakan Kayi"
+    ],
+    "n_authors": 2,
+    "score": 35.829857
+   },
+   {
+    "doi": "10.1007/s00894-024-05985-2",
+    "title": "Effect of chalcogen atoms on the electronic band gaps of the quinoxaline containing donor–acceptor-donor type semiconducting polymers: a systematic DFT investig",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2024,
+    "volume": "30",
+    "issue": "6",
+    "page": null,
+    "article": "179",
+    "authors": [
+     "Hakan Kayi",
+     "Emire Şen",
+     "Özge Özkılınç"
+    ],
+    "n_authors": 3,
+    "score": 28.423094
+   },
+   {
+    "doi": "10.1007/s00894-009-0613-z",
+    "title": "AM1* parameters for gold",
+    "journal": "Journal of Molecular Modeling",
+    "short": [
+     "J Mol Model"
+    ],
+    "year": 2009,
+    "volume": "16",
+    "issue": "5",
+    "page": "1029-1038",
+    "article": null,
+    "authors": [
+     "Hakan Kayi"
+    ],
+    "n_authors": 1,
+    "score": 26.42321
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 15,
+  "ref": [
+   "M. D. Wilkinson et al.",
+   "Sci. Data",
+   "2016",
+   "3",
+   "160018"
+  ],
+  "hits": [
+   {
+    "doi": "10.1017/s0950268826101897.sm001",
+    "title": "Wilkinson et al. supplementary material",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 25.721546
+   },
+   {
+    "doi": "10.3233/ds-210047",
+    "title": "A formalization of one of the main claims of “The FAIR Guiding Principles for scientific data management and stewardship” by Wilkinson et al. 2016",
+    "journal": "Data Science",
+    "short": [
+     "Data Science"
+    ],
+    "year": 2022,
+    "volume": "5",
+    "issue": "1",
+    "page": "53-56",
+    "article": null,
+    "authors": [
+     "Michel Dumontier"
+    ],
+    "n_authors": 1,
+    "score": 25.012403
+   },
+   {
+    "doi": "10.1098/rsos.160018",
+    "title": "Young relicts and old relicts: a novel palaeoendemic vertebrate from the Australian Central Uplands",
+    "journal": "Royal Society Open Science",
+    "short": [
+     "R. Soc. open sci."
+    ],
+    "year": 2016,
+    "volume": "3",
+    "issue": "10",
+    "page": "160018",
+    "article": null,
+    "authors": [
+     "Paul M. Oliver",
+     "Peter J. McDonald"
+    ],
+    "n_authors": 2,
+    "score": 23.440836
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 16,
+  "ref": [
+   "I. Sushko et al.",
+   "J. Comput.-Aided Mol. Des.",
+   "2011",
+   "25",
+   "533–554"
+  ],
+  "hits": [
+   {
+    "doi": "10.1007/s10822-011-9452-y",
+    "title": "Remembrances of Corwin Hansch",
+    "journal": "Journal of Computer-Aided Molecular Design",
+    "short": [
+     "J Comput Aided Mol Des"
+    ],
+    "year": 2011,
+    "volume": "25",
+    "issue": "6",
+    "page": "519-523",
+    "article": null,
+    "authors": [
+     "Yvonne C. Martin"
+    ],
+    "n_authors": 1,
+    "score": 37.73244
+   },
+   {
+    "doi": "10.1007/s10822-011-9445-x",
+    "title": "Obituary: Corwin H. Hansch",
+    "journal": "Journal of Computer-Aided Molecular Design",
+    "short": [
+     "J Comput Aided Mol Des"
+    ],
+    "year": 2011,
+    "volume": "25",
+    "issue": "6",
+    "page": "493-494",
+    "article": null,
+    "authors": [
+     "Cynthia Rachel Selassie"
+    ],
+    "n_authors": 1,
+    "score": 37.703354
+   },
+   {
+    "doi": "10.1007/s10822-011-9422-4",
+    "title": "Understanding molecular structure from molecular mechanics",
+    "journal": "Journal of Computer-Aided Molecular Design",
+    "short": [
+     "J Comput Aided Mol Des"
+    ],
+    "year": 2011,
+    "volume": "25",
+    "issue": "4",
+    "page": "295-316",
+    "article": null,
+    "authors": [
+     "Norman L. Allinger"
+    ],
+    "n_authors": 1,
+    "score": 36.82468
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 17,
+  "ref": [
+   "T. W. H. Backman, Y. Cao, T. Girke",
+   "Nucleic Acids Res.",
+   "2011",
+   "39",
+   "W486–W491"
+  ],
+  "hits": [
+   {
+    "doi": "10.1093/nar/gkr320",
+    "title": "ChemMine tools: an online service for analyzing and clustering small molecules",
+    "journal": "Nucleic Acids Research",
+    "short": [
+     "Nucleic Acids Research"
+    ],
+    "year": 2011,
+    "volume": "39",
+    "issue": "suppl",
+    "page": "W486-W491",
+    "article": null,
+    "authors": [
+     "T. W. H. Backman",
+     "Y. Cao",
+     "T. Girke"
+    ],
+    "n_authors": 3,
+    "score": 83.92821
+   },
+   {
+    "doi": "10.1093/nar/gkt486",
+    "title": "RNAtips: analysis of temperature-induced changes of RNA secondary structure",
+    "journal": "Nucleic Acids Research",
+    "short": [
+     ""
+    ],
+    "year": 2013,
+    "volume": "41",
+    "issue": "W1",
+    "page": "W486-W491",
+    "article": null,
+    "authors": [
+     "Andrey Chursov",
+     "Sebastian J. Kopetzky",
+     "Gennady Bocharov",
+     "Dmitrij Frishman",
+     "Alexander Shneider"
+    ],
+    "n_authors": 5,
+    "score": 42.43352
+   },
+   {
+    "doi": "10.1093/nar/gkl197",
+    "title": "Next station in microarray data analysis: GEPAS",
+    "journal": "Nucleic Acids Research",
+    "short": [
+     "Nucleic Acids Research"
+    ],
+    "year": 2006,
+    "volume": "34",
+    "issue": "Web Server",
+    "page": "W486-W491",
+    "article": null,
+    "authors": [
+     "D. Montaner",
+     "J. Tarraga",
+     "J. Huerta-Cepas",
+     "J. Burguet",
+     "J. M. Vaquerizas",
+     "L. Conde",
+     "P. Minguez",
+     "J. Vera",
+     "S. Mukherjee",
+     "J. Valls"
+    ],
+    "n_authors": 15,
+    "score": 39.175114
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 18,
+  "ref": [
+   "J. J. Irwin, B. K. Shoichet",
+   "J. Chem. Inf. Model.",
+   "2005",
+   "45",
+   "177–182"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/ci049714+",
+    "title": "ZINC − A Free Database of Commercially Available Compounds for Virtual Screening",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2004,
+    "volume": "45",
+    "issue": "1",
+    "page": "177-182",
+    "article": null,
+    "authors": [
+     "John J. Irwin",
+     "Brian K. Shoichet"
+    ],
+    "n_authors": 2,
+    "score": 54.109238
+   },
+   {
+    "doi": "10.1021/ci050286x",
+    "title": "Software Review:  ChemOffice 2005 Pro by CambridgeSoft",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2005,
+    "volume": "45",
+    "issue": "5",
+    "page": "1468-1469",
+    "article": null,
+    "authors": [
+     "John J. Irwin"
+    ],
+    "n_authors": 1,
+    "score": 36.08505
+   },
+   {
+    "doi": "10.1021/ci8000259",
+    "title": "Quantifying the Relationships among Drug Classes",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2008,
+    "volume": "48",
+    "issue": "4",
+    "page": "755-765",
+    "article": null,
+    "authors": [
+     "Jérôme Hert",
+     "Michael J. Keiser",
+     "John J. Irwin",
+     "Tudor I. Oprea",
+     "Brian K. Shoichet"
+    ],
+    "n_authors": 5,
+    "score": 32.75578
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 19,
+  "ref": [
+   "S. Kim et al.",
+   "Nucleic Acids Res.",
+   "2023",
+   "51",
+   "D1373–D1380"
+  ],
+  "hits": [
+   {
+    "doi": "10.1093/nar/gkac956",
+    "title": "PubChem 2023 update",
+    "journal": "Nucleic Acids Research",
+    "short": [
+     ""
+    ],
+    "year": 2022,
+    "volume": "51",
+    "issue": "D1",
+    "page": "D1373-D1380",
+    "article": null,
+    "authors": [
+     "Sunghwan Kim",
+     "Jie Chen",
+     "Tiejun Cheng",
+     "Asta Gindulyte",
+     "Jia He",
+     "Siqian He",
+     "Qingliang Li",
+     "Benjamin A Shoemaker",
+     "Paul A Thiessen",
+     "Bo Yu"
+    ],
+    "n_authors": 13,
+    "score": 48.102142
+   },
+   {
+    "doi": "10.1093/nar/gkaa1061",
+    "title": "PROMISCUOUS 2.0: a resource for drug-repositioning",
+    "journal": "Nucleic Acids Research",
+    "short": [
+     ""
+    ],
+    "year": 2020,
+    "volume": "49",
+    "issue": "D1",
+    "page": "D1373-D1380",
+    "article": null,
+    "authors": [
+     "Kathleen Gallo",
+     "Andrean Goede",
+     "Andreas Eckert",
+     "Barbara Moahamed",
+     "Robert Preissner",
+     "Björn-Oliver Gohlke"
+    ],
+    "n_authors": 6,
+    "score": 43.91455
+   },
+   {
+    "doi": "10.1016/s0294-3506(98)80207-x",
+    "title": "Electrodes linked via conductive oligomers to nucleic acids (JF Kayyem et al, US)",
+    "journal": "Biofutur",
+    "short": [
+     "Biofutur"
+    ],
+    "year": 1998,
+    "volume": "1998",
+    "issue": "181",
+    "page": "51",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 31.479464
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 20,
+  "ref": [
+   "R. Ramakrishnan, P. O. Dral, M. Rupp, O. A. von Lilienfeld",
+   "Sci. Data",
+   "2014",
+   "1",
+   "140022"
+  ],
+  "hits": [
+   {
+    "doi": "10.1038/sdata.2014.22",
+    "title": "Quantum chemistry structures and properties of 134 kilo molecules",
+    "journal": "Scientific Data",
+    "short": [
+     "Sci Data"
+    ],
+    "year": 2014,
+    "volume": "1",
+    "issue": "1",
+    "page": null,
+    "article": "140022",
+    "authors": [
+     "Raghunathan Ramakrishnan",
+     "Pavlo O. Dral",
+     "Matthias Rupp",
+     "O. Anatole von Lilienfeld"
+    ],
+    "n_authors": 4,
+    "score": 63.641556
+   },
+   {
+    "doi": "10.1021/acs.jctc.5b00099",
+    "title": "Big Data Meets Quantum Chemistry Approximations: The Δ-Machine Learning Approach",
+    "journal": "Journal of Chemical Theory and Computation",
+    "short": [
+     "J. Chem. Theory Comput."
+    ],
+    "year": 2015,
+    "volume": "11",
+    "issue": "5",
+    "page": "2087-2096",
+    "article": null,
+    "authors": [
+     "Raghunathan Ramakrishnan",
+     "Pavlo O. Dral",
+     "Matthias Rupp",
+     "O. Anatole von Lilienfeld"
+    ],
+    "n_authors": 4,
+    "score": 46.746323
+   },
+   {
+    "doi": "10.1021/acs.jpclett.5b01456",
+    "title": "Machine Learning for Quantum Mechanical Properties of Atoms in Molecules",
+    "journal": "The Journal of Physical Chemistry Letters",
+    "short": [
+     "J. Phys. Chem. Lett."
+    ],
+    "year": 2015,
+    "volume": "6",
+    "issue": "16",
+    "page": "3309-3313",
+    "article": null,
+    "authors": [
+     "Matthias Rupp",
+     "Raghunathan Ramakrishnan",
+     "O. Anatole von Lilienfeld"
+    ],
+    "n_authors": 3,
+    "score": 32.760605
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 21,
+  "ref": [
+   "T.-S. Lin et al.",
+   "ACS Cent. Sci.",
+   "2019",
+   "5",
+   "1523–1531"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/acscentsci.9b00476",
+    "title": "BigSMILES: A Structurally-Based Line Notation for Describing Macromolecules",
+    "journal": "ACS Central Science",
+    "short": [
+     "ACS Cent. Sci."
+    ],
+    "year": 2019,
+    "volume": "5",
+    "issue": "9",
+    "page": "1523-1531",
+    "article": null,
+    "authors": [
+     "Tzyy-Shyang Lin",
+     "Connor W. Coley",
+     "Hidenobu Mochigase",
+     "Haley K. Beech",
+     "Wencong Wang",
+     "Zi Wang",
+     "Eliot Woods",
+     "Stephen L. Craig",
+     "Jeremiah A. Johnson",
+     "Julia A. Kalow"
+    ],
+    "n_authors": 12,
+    "score": 33.710262
+   },
+   {
+    "doi": "10.1021/ocv005i004_1275323",
+    "title": "Issue Editorial Masthead",
+    "journal": "ACS Central Science",
+    "short": [
+     "ACS Cent. Sci."
+    ],
+    "year": 2019,
+    "volume": "5",
+    "issue": "4",
+    "page": null,
+    "article": "ocv005i004_1275323",
+    "authors": [],
+    "n_authors": 0,
+    "score": 29.35698
+   },
+   {
+    "doi": "10.1021/ocv005i004_1275322",
+    "title": "Issue Publication Information",
+    "journal": "ACS Central Science",
+    "short": [
+     "ACS Cent. Sci."
+    ],
+    "year": 2019,
+    "volume": "5",
+    "issue": "4",
+    "page": null,
+    "article": "ocv005i004_1275322",
+    "authors": [],
+    "n_authors": 0,
+    "score": 29.344236
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 22,
+  "ref": [
+   "K.-i. Takahashi, H. Mamitsuka, M. Tosaka, N. Zhu, S. Yamago",
+   "Polym. Chem.",
+   "2024",
+   "15",
+   "965–971"
+  ],
+  "hits": [
+   {
+    "doi": "10.1039/d3py01372c",
+    "title": "CoPolDB: a copolymerization database for radical polymerization",
+    "journal": "Polymer Chemistry",
+    "short": [
+     "Polym. Chem."
+    ],
+    "year": 2024,
+    "volume": "15",
+    "issue": "10",
+    "page": "965-971",
+    "article": null,
+    "authors": [
+     "Kei-ichiro Takahashi",
+     "Hiroshi Mamitsuka",
+     "Masatoshi Tosaka",
+     "Nanyi Zhu",
+     "Shigeru Yamago"
+    ],
+    "n_authors": 5,
+    "score": 85.65253
+   },
+   {
+    "doi": "10.26434/chemrxiv-2023-t7v1b",
+    "title": "CoPolDB: A Copolymerization Database for Radical Polymerization",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2023,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Kei-ichiro Takahashi",
+     "Hiroshi Mamitsuka",
+     "Masatoshi Tosaka",
+     "Nanyi Zhu",
+     "Shigeru Yamago"
+    ],
+    "n_authors": 5,
+    "score": 60.14949
+   },
+   {
+    "doi": "10.26434/chemrxiv-2023-l55nn",
+    "title": "Stochastic Simulation of Controlled Radical Polymerization of Den-dritic Hyperbranched Polymers",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2023,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Masatoshi Tosaka",
+     "Hinako Takeuchi",
+     "Masato Kibune",
+     "Tianxiang Tong",
+     "Nanyi Zhu",
+     "Shigeru Yamago"
+    ],
+    "n_authors": 6,
+    "score": 33.054108
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 23,
+  "ref": [
+   "T. Yoshimura et al.",
+   "Digital Discovery",
+   "2025",
+   "4",
+   "195–203"
+  ],
+  "hits": [
+   {
+    "doi": "10.1039/d4dd00266k",
+    "title": "CopDDB: a descriptor database for copolymers and its applications to machine learning",
+    "journal": "Digital Discovery",
+    "short": [
+     "Digital Discovery"
+    ],
+    "year": 2025,
+    "volume": "4",
+    "issue": "1",
+    "page": "195-203",
+    "article": null,
+    "authors": [
+     "Takayoshi Yoshimura",
+     "Hiromoto Kato",
+     "Shunto Oikawa",
+     "Taichi Inagaki",
+     "Shigehito Asano",
+     "Tetsunori Sugawara",
+     "Tomoyuki Miyao",
+     "Takamitsu Matsubara",
+     "Hiroharu Ajiro",
+     "Mikiya Fujii"
+    ],
+    "n_authors": 12,
+    "score": 33.384865
+   },
+   {
+    "doi": "10.3917/herm.lacro.2025.01.0195",
+    "title": "Futurs de l'océan, des mers et des littoraux",
+    "journal": "Futurs de l'océan, des mers et des littoraux",
+    "short": [
+     ""
+    ],
+    "year": 2025,
+    "volume": null,
+    "issue": null,
+    "page": "195-203",
+    "article": null,
+    "authors": [
+     "Didier Gascuel"
+    ],
+    "n_authors": 1,
+    "score": 24.422237
+   },
+   {
+    "doi": "10.3917/rfp.891.0195",
+    "title": "Le détail et l’incarnation",
+    "journal": "Revue française de psychanalyse",
+    "short": [
+     ""
+    ],
+    "year": 2025,
+    "volume": "Vol. 89",
+    "issue": "1",
+    "page": "195-203",
+    "article": null,
+    "authors": [
+     "Laurence Kahn"
+    ],
+    "n_authors": 1,
+    "score": 24.181551
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 24,
+  "ref": [
+   "T. Yue, J. He, Y. Li",
+   "Digital Discovery",
+   "2024",
+   "3",
+   "2465–2478"
+  ],
+  "hits": [
+   {
+    "doi": "10.1039/d4dd00196f",
+    "title": "Polyuniverse: generation of a large-scale polymer library using rule-based polymerization reactions for polymer informatics",
+    "journal": "Digital Discovery",
+    "short": [
+     "Digital Discovery"
+    ],
+    "year": 2024,
+    "volume": "3",
+    "issue": "12",
+    "page": "2465-2478",
+    "article": null,
+    "authors": [
+     "Tianle Yue",
+     "Jianxin He",
+     "Ying Li"
+    ],
+    "n_authors": 3,
+    "score": 51.6399
+   },
+   {
+    "doi": "10.1039/d6dd00303f",
+    "title": "From first principles to machine learning: accelerating the design and discovery of hybrid organic–inorganic perovskites",
+    "journal": "Digital Discovery",
+    "short": [
+     "Digital Discovery"
+    ],
+    "year": 2026,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Yu Lim Kim",
+     "Tianle Yue",
+     "Ying Li"
+    ],
+    "n_authors": 3,
+    "score": 28.02435
+   },
+   {
+    "doi": "10.1039/d4dd00395k",
+    "title": "Benchmarking study of deep generative models for inverse polymer design",
+    "journal": "Digital Discovery",
+    "short": [
+     "Digital Discovery"
+    ],
+    "year": 2025,
+    "volume": "4",
+    "issue": "4",
+    "page": "910-926",
+    "article": null,
+    "authors": [
+     "Tianle Yue",
+     "Lei Tao",
+     "Vikas Varshney",
+     "Ying Li"
+    ],
+    "n_authors": 4,
+    "score": 27.16981
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 25,
+  "ref": [
+   "C. Kim, A. Chandrasekaran, T. D. Huan, D. Das, R. Ramprasad",
+   "J. Phys. Chem. C",
+   "2018",
+   "122",
+   "17575–17585"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/acs.jpcc.8b02913",
+    "title": "Polymer Genome: A Data-Powered Polymer Informatics Platform for Property Predictions",
+    "journal": "The Journal of Physical Chemistry C",
+    "short": [
+     "J. Phys. Chem. C"
+    ],
+    "year": 2018,
+    "volume": "122",
+    "issue": "31",
+    "page": "17575-17585",
+    "article": null,
+    "authors": [
+     "Chiho Kim",
+     "Anand Chandrasekaran",
+     "Tran Doan Huan",
+     "Deya Das",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 5,
+    "score": 77.77835
+   },
+   {
+    "doi": "10.1021/acs.jpcc.9b04207",
+    "title": "Iterative-Learning Strategy for the Development of Application-Specific Atomistic Force Fields",
+    "journal": "The Journal of Physical Chemistry C",
+    "short": [
+     "J. Phys. Chem. C"
+    ],
+    "year": 2019,
+    "volume": "123",
+    "issue": "34",
+    "page": "20715-20722",
+    "article": null,
+    "authors": [
+     "Tran Doan Huan",
+     "Rohit Batra",
+     "James Chapman",
+     "Chiho Kim",
+     "Anand Chandrasekaran",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 6,
+    "score": 38.373978
+   },
+   {
+    "doi": "10.1021/acs.jpcc.9b08832",
+    "title": "Correction to “Iterative-Learning Strategy for the Development of Application-Specific Atomistic Force Fields”",
+    "journal": "The Journal of Physical Chemistry C",
+    "short": [
+     "J. Phys. Chem. C"
+    ],
+    "year": 2019,
+    "volume": "123",
+    "issue": "40",
+    "page": "24994-24994",
+    "article": null,
+    "authors": [
+     "Tran Doan Huan",
+     "Rohit Batra",
+     "James Chapman",
+     "Chiho Kim",
+     "Anand Chandrasekaran",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 6,
+    "score": 37.403076
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 26,
+  "ref": [
+   "R. Ma, T. Luo",
+   "J. Chem. Inf. Model.",
+   "2020",
+   "60",
+   "4684–4690"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/acs.jcim.0c00726",
+    "title": "PI1M: A Benchmark Database for Polymer Informatics",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     ""
+    ],
+    "year": 2020,
+    "volume": "60",
+    "issue": "10",
+    "page": "4684-4690",
+    "article": null,
+    "authors": [
+     "Ruimin Ma",
+     "Tengfei Luo"
+    ],
+    "n_authors": 2,
+    "score": 42.088123
+   },
+   {
+    "doi": "10.1021/civ060i011_1430844",
+    "title": "Issue Editorial Masthead",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2020,
+    "volume": "60",
+    "issue": "11",
+    "page": null,
+    "article": "civ060i011_1430844",
+    "authors": [],
+    "n_authors": 0,
+    "score": 28.20762
+   },
+   {
+    "doi": "10.1021/civ060i011_1430843",
+    "title": "Issue Publication Information",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2020,
+    "volume": "60",
+    "issue": "11",
+    "page": null,
+    "article": "civ060i011_1430843",
+    "authors": [],
+    "n_authors": 0,
+    "score": 28.20424
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 27,
+  "ref": [
+   "R. Ramprasad, R. Batra, G. Pilania, A. Mannodi-Kanakkithodi, C. Kim",
+   "npj Comput. Mater.",
+   "2017",
+   "3",
+   "54"
+  ],
+  "hits": [
+   {
+    "doi": "10.1038/s41524-017-0056-5",
+    "title": "Machine learning in materials informatics: recent applications and prospects",
+    "journal": "npj Computational Materials",
+    "short": [
+     "npj Comput Mater"
+    ],
+    "year": 2017,
+    "volume": "3",
+    "issue": "1",
+    "page": null,
+    "article": "54",
+    "authors": [
+     "Rampi Ramprasad",
+     "Rohit Batra",
+     "Ghanshyam Pilania",
+     "Arun Mannodi-Kanakkithodi",
+     "Chiho Kim"
+    ],
+    "n_authors": 5,
+    "score": 92.70934
+   },
+   {
+    "doi": "10.1016/j.commatsci.2016.08.039",
+    "title": "Critical assessment of regression-based machine learning methods for polymer dielectrics",
+    "journal": "Computational Materials Science",
+    "short": [
+     "Computational Materials Science"
+    ],
+    "year": 2016,
+    "volume": "125",
+    "issue": null,
+    "page": "123-135",
+    "article": null,
+    "authors": [
+     "Arun Mannodi-Kanakkithodi",
+     "Ghanshyam Pilania",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 3,
+    "score": 56.466934
+   },
+   {
+    "doi": "10.1038/sdata.2016.12",
+    "title": "A polymer dataset for accelerated property prediction and design",
+    "journal": "Scientific Data",
+    "short": [
+     "Sci Data"
+    ],
+    "year": 2016,
+    "volume": "3",
+    "issue": "1",
+    "page": null,
+    "article": "160012",
+    "authors": [
+     "Tran Doan Huan",
+     "Arun Mannodi-Kanakkithodi",
+     "Chiho Kim",
+     "Vinit Sharma",
+     "Ghanshyam Pilania",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 6,
+    "score": 56.24614
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 28,
+  "ref": [
+   "C. Kuenneth, A. C. Rajan, H. Tran, L. Chen, C. Kim, R. Ramprasad",
+   "Patterns",
+   "2021",
+   "2",
+   "100238"
+  ],
+  "hits": [
+   {
+    "doi": "10.1016/j.patter.2021.100238",
+    "title": "Polymer informatics with multi-task learning",
+    "journal": "Patterns",
+    "short": [
+     "Patterns"
+    ],
+    "year": 2021,
+    "volume": "2",
+    "issue": "4",
+    "page": "100238",
+    "article": "100238",
+    "authors": [
+     "Christopher Kuenneth",
+     "Arunkumar Chitteth Rajan",
+     "Huan Tran",
+     "Lihua Chen",
+     "Chiho Kim",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 6,
+    "score": 78.22853
+   },
+   {
+    "doi": "10.1016/j.mser.2020.100595",
+    "title": "Polymer informatics: Current status and critical next steps",
+    "journal": "Materials Science and Engineering: R: Reports",
+    "short": [
+     "Materials Science and Engineering: R: Reports"
+    ],
+    "year": 2021,
+    "volume": "144",
+    "issue": null,
+    "page": "100595",
+    "article": "100595",
+    "authors": [
+     "Lihua Chen",
+     "Ghanshyam Pilania",
+     "Rohit Batra",
+     "Tran Doan Huan",
+     "Chiho Kim",
+     "Christopher Kuenneth",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 7,
+    "score": 34.315395
+   },
+   {
+    "doi": "10.1021/acs.macromol.1c00728",
+    "title": "Copolymer Informatics with Multitask Deep Neural Networks",
+    "journal": "Macromolecules",
+    "short": [
+     "Macromolecules"
+    ],
+    "year": 2021,
+    "volume": "54",
+    "issue": "13",
+    "page": "5957-5961",
+    "article": null,
+    "authors": [
+     "Christopher Kuenneth",
+     "William Schertzer",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 3,
+    "score": 33.248726
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 29,
+  "ref": [
+   "C. Kuenneth, R. Ramprasad",
+   "Nat. Commun.",
+   "2023",
+   "14",
+   "4099"
+  ],
+  "hits": [
+   {
+    "doi": "10.1038/s41467-023-39868-6",
+    "title": "polyBERT: a chemical language model to enable fully machine-driven ultrafast polymer informatics",
+    "journal": "Nature Communications",
+    "short": [
+     "Nat Commun"
+    ],
+    "year": 2023,
+    "volume": "14",
+    "issue": "1",
+    "page": null,
+    "article": "4099",
+    "authors": [
+     "Christopher Kuenneth",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 2,
+    "score": 47.9188
+   },
+   {
+    "doi": "10.1038/s43246-022-00319-2",
+    "title": "Bioplastic design using multitask deep neural networks",
+    "journal": "Communications Materials",
+    "short": [
+     "Commun Mater"
+    ],
+    "year": 2022,
+    "volume": "3",
+    "issue": "1",
+    "page": null,
+    "article": "96",
+    "authors": [
+     "Christopher Kuenneth",
+     "Jessica Lalonde",
+     "Babetta L. Marrone",
+     "Carl N. Iverson",
+     "Rampi Ramprasad",
+     "Ghanshyam Pilania"
+    ],
+    "n_authors": 6,
+    "score": 33.569233
+   },
+   {
+    "doi": "10.1557/s43577-023-00561-0",
+    "title": "Polymer informatics beyond homopolymers",
+    "journal": "MRS Bulletin",
+    "short": [
+     "MRS Bulletin"
+    ],
+    "year": 2023,
+    "volume": "49",
+    "issue": "1",
+    "page": "17-24",
+    "article": null,
+    "authors": [
+     "Shivank S. Shukla",
+     "Christopher Kuenneth",
+     "Rampi Ramprasad"
+    ],
+    "n_authors": 3,
+    "score": 32.331146
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 30,
+  "ref": [
+   "S. Kunchapu, K. M. Jablonka",
+   "npj Comput. Mater.",
+   "2025",
+   "11",
+   "312"
+  ],
+  "hits": [
+   {
+    "doi": "10.1038/s41524-025-01823-y",
+    "title": "PolyMetriX: an ecosystem for digital polymer chemistry",
+    "journal": "npj Computational Materials",
+    "short": [
+     "npj Comput Mater"
+    ],
+    "year": 2025,
+    "volume": "11",
+    "issue": "1",
+    "page": null,
+    "article": "312",
+    "authors": [
+     "Sreekanth Kunchapu",
+     "Kevin Maik Jablonka"
+    ],
+    "n_authors": 2,
+    "score": 61.99348
+   },
+   {
+    "doi": "10.26434/chemrxiv-2025-s2f2r",
+    "title": "PolyMetriX: An Ecosystem for Digital Polymer Chemistry",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2025,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Sreekanth Kunchapu",
+     "Kevin Maik Jablonka"
+    ],
+    "n_authors": 2,
+    "score": 39.12029
+   },
+   {
+    "doi": "10.26434/chemrxiv-2025-s2f2r-v2",
+    "title": "PolyMetriX: An Ecosystem for Digital Polymer Chemistry",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2025,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Sreekanth Kunchapu",
+     "Kevin Maik Jablonka"
+    ],
+    "n_authors": 2,
+    "score": 39.026928
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 31,
+  "ref": [
+   "T. Haciefendioglu, E. Yildirim",
+   "J. Chem. Inf. Model.",
+   "2025",
+   "65",
+   "5360–5369"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/acs.jcim.5c00345",
+    "title": "Band Gap and Reorganization Energy Prediction of Conducting Polymers by the Integration of Machine Learning and Density Functional Theory",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2025,
+    "volume": "65",
+    "issue": "11",
+    "page": "5360-5369",
+    "article": null,
+    "authors": [
+     "Tugba Haciefendioglu",
+     "Erol Yildirim"
+    ],
+    "n_authors": 2,
+    "score": 61.1315
+   },
+   {
+    "doi": "10.1002/cphc.202500185",
+    "title": "Templating Effect of Graphene/Graphene Oxide on the Self‐Organization of Conducting Polymers",
+    "journal": "ChemPhysChem",
+    "short": [
+     "ChemPhysChem"
+    ],
+    "year": 2025,
+    "volume": "26",
+    "issue": "23",
+    "page": null,
+    "article": "e202500185",
+    "authors": [
+     "Tugba Haciefendioglu",
+     "Erhan Özdemir",
+     "Erol Yildirim"
+    ],
+    "n_authors": 3,
+    "score": 29.356466
+   },
+   {
+    "doi": "10.2139/ssrn.4710654",
+    "title": "Graphene Induced Self-Alignment of Donor-Acceptor Copolymers",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2024,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Erol Yildirim",
+     "Muhammet  Enes Kubilay Aytemiz",
+     "Tugba Haciefendioglu",
+     "Hamza Korhan"
+    ],
+    "n_authors": 4,
+    "score": 28.588043
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 32,
+  "ref": [
+   "S. R. Heller, A. McNaught, I. Pletnev, S. Stein, D. Tchekhovskoi",
+   "J. Cheminf.",
+   "2015",
+   "7",
+   "23"
+  ],
+  "hits": [
+   {
+    "doi": "10.1186/s13321-015-0068-4",
+    "title": "InChI, the IUPAC International Chemical Identifier",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2015,
+    "volume": "7",
+    "issue": "1",
+    "page": null,
+    "article": "23",
+    "authors": [
+     "Stephen R Heller",
+     "Alan McNaught",
+     "Igor Pletnev",
+     "Stephen Stein",
+     "Dmitrii Tchekhovskoi"
+    ],
+    "n_authors": 5,
+    "score": 61.244404
+   },
+   {
+    "doi": "10.1186/1758-2946-5-7",
+    "title": "InChI - the worldwide chemical structure identifier standard",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2013,
+    "volume": "5",
+    "issue": "1",
+    "page": null,
+    "article": "7",
+    "authors": [
+     "Stephen Heller",
+     "Alan McNaught",
+     "Stephen Stein",
+     "Dmitrii Tchekhovskoi",
+     "Igor Pletnev"
+    ],
+    "n_authors": 5,
+    "score": 56.52951
+   },
+   {
+    "doi": "10.1186/1758-2946-4-39",
+    "title": "InChIKey collision resistance: an experimental testing",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2012,
+    "volume": "4",
+    "issue": "1",
+    "page": null,
+    "article": "39",
+    "authors": [
+     "Igor Pletnev",
+     "Andrey Erin",
+     "Alan McNaught",
+     "Kirill Blinov",
+     "Dmitrii Tchekhovskoi",
+     "Steve Heller"
+    ],
+    "n_authors": 6,
+    "score": 47.967197
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 33,
+  "ref": [
+   "G. Landrum et al., RDKit: Open-Source Cheminformatics Software, Zenodo, https://doi.org/10.5281/zenodo.591637."
+  ],
+  "hits": [
+   {
+    "doi": "10.7717/peerj-cs.2618/supp-2",
+    "title": "Supplemental Information 2: DOI (Zenodo).",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 55.436104
+   },
+   {
+    "doi": "10.20377/rpb-1993",
+    "title": "Wakefield, David (2024). Damit das Leben gelingt. Ermöglichung als allgemein-didaktisches Modell einer subjektorientierten Erwachsenenkatechese. Zenodo, 261 Sei",
+    "journal": "Religionspädagogische Beiträge",
+    "short": [
+     "RpB"
+    ],
+    "year": 2026,
+    "volume": "49",
+    "issue": "2",
+    "page": "1-3",
+    "article": null,
+    "authors": [
+     "Angela Kaupp"
+    ],
+    "n_authors": 1,
+    "score": 54.368233
+   },
+   {
+    "doi": "10.5194/essd-2024-363-ac1",
+    "title": "Correction to zenodo DOI",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2025,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Ruben Vescovo"
+    ],
+    "n_authors": 1,
+    "score": 50.98629
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 34,
+  "ref": [
+   "D. Rogers, M. Hahn",
+   "J. Chem. Inf. Model.",
+   "2010",
+   "50",
+   "742–754"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/ci100050t",
+    "title": "Extended-Connectivity Fingerprints",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2010,
+    "volume": "50",
+    "issue": "5",
+    "page": "742-754",
+    "article": null,
+    "authors": [
+     "David Rogers",
+     "Mathew Hahn"
+    ],
+    "n_authors": 2,
+    "score": 60.33825
+   },
+   {
+    "doi": "10.1021/ci100291b",
+    "title": "Corel WordPerfect X5",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2010,
+    "volume": "50",
+    "issue": "9",
+    "page": "1757-1757",
+    "article": null,
+    "authors": [
+     "Stephen R. Heller"
+    ],
+    "n_authors": 1,
+    "score": 27.16816
+   },
+   {
+    "doi": "10.1021/ci100202p",
+    "title": "Model-Free Drug-Likeness from Fragments",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2010,
+    "volume": "50",
+    "issue": "8",
+    "page": "1387-1394",
+    "article": null,
+    "authors": [
+     "Oleg Ursu",
+     "Tudor I. Oprea"
+    ],
+    "n_authors": 2,
+    "score": 27.069357
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 35,
+  "ref": [
+   "D. Bajusz, A. Rácz, K. Héberger",
+   "J. Cheminf.",
+   "2015",
+   "7",
+   "20"
+  ],
+  "hits": [
+   {
+    "doi": "10.7717/peerj-cs.2917/table-4",
+    "title": "Table 4: Example confusion matrix for a 2-class classification problem Rácz, Bajusz &amp; Héberger (2019).",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 47.39045
+   },
+   {
+    "doi": "10.26434/chemrxiv-2022-t61ls",
+    "title": "Molecular dynamics simulations and diversity selection by extended continuous similarity indices",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2022,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [
+     "Anita Rácz",
+     "Levente Mihalovits",
+     "Dávid Bajusz",
+     "Károly Héberger",
+     "Ramon Miranda-Quintana"
+    ],
+    "n_authors": 5,
+    "score": 43.37227
+   },
+   {
+    "doi": "10.1186/s13321-015-0069-3",
+    "title": "Why is Tanimoto index an appropriate choice for fingerprint-based similarity calculations?",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2015,
+    "volume": "7",
+    "issue": "1",
+    "page": null,
+    "article": "20",
+    "authors": [
+     "Dávid Bajusz",
+     "Anita Rácz",
+     "Károly Héberger"
+    ],
+    "n_authors": 3,
+    "score": 43.270367
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 36,
+  "ref": [
+   "L. Breiman",
+   "Mach. Learn.",
+   "2001",
+   "45",
+   "5–32"
+  ],
+  "hits": [
+   {
+    "doi": "10.1023/a:1010933404324",
+    "title": "Random Forests",
+    "journal": "Machine Learning",
+    "short": [
+     "Machine Learning"
+    ],
+    "year": 2001,
+    "volume": "45",
+    "issue": "1",
+    "page": "5-32",
+    "article": null,
+    "authors": [
+     "Leo Breiman"
+    ],
+    "n_authors": 1,
+    "score": 36.440357
+   },
+   {
+    "doi": "10.1007/bf00058655",
+    "title": "Bagging predictors",
+    "journal": "Machine Learning",
+    "short": [
+     "Mach Learn"
+    ],
+    "year": 1996,
+    "volume": "24",
+    "issue": "2",
+    "page": "123-140",
+    "article": null,
+    "authors": [
+     "Leo Breiman"
+    ],
+    "n_authors": 1,
+    "score": 33.50016
+   },
+   {
+    "doi": "10.1007/bf00117832",
+    "title": "Stacked regressions",
+    "journal": "Machine Learning",
+    "short": [
+     "Mach Learn"
+    ],
+    "year": 1996,
+    "volume": "24",
+    "issue": "1",
+    "page": "49-64",
+    "article": null,
+    "authors": [
+     "Leo Breiman"
+    ],
+    "n_authors": 1,
+    "score": 33.22775
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 37,
+  "ref": [
+   "C. Cortes, V. Vapnik",
+   "Mach. Learn.",
+   "1995",
+   "20",
+   "273–297"
+  ],
+  "hits": [
+   {
+    "doi": "10.1007/bf00994018",
+    "title": "Support-vector networks",
+    "journal": "Machine Learning",
+    "short": [
+     "Mach Learn"
+    ],
+    "year": 1995,
+    "volume": "20",
+    "issue": "3",
+    "page": "273-297",
+    "article": null,
+    "authors": [
+     "Corinna Cortes",
+     "Vladimir Vapnik"
+    ],
+    "n_authors": 2,
+    "score": 70.47685
+   },
+   {
+    "doi": "10.1023/a:1022627411411",
+    "title": "Support-Vector Networks",
+    "journal": "Machine Learning",
+    "short": [
+     "Machine Learning"
+    ],
+    "year": 1995,
+    "volume": "20",
+    "issue": "3",
+    "page": "273-297",
+    "article": null,
+    "authors": [
+     "Corinna Cortes",
+     "Vladimir Vapnik"
+    ],
+    "n_authors": 2,
+    "score": 51.844616
+   },
+   {
+    "doi": "10.1007/bf00993593",
+    "title": "Sample compression, learnability, and the Vapnik-Chervonenkis dimension",
+    "journal": "Machine Learning",
+    "short": [
+     "Mach Learn"
+    ],
+    "year": 1995,
+    "volume": "21",
+    "issue": "3",
+    "page": "269-304",
+    "article": null,
+    "authors": [
+     "Sally Floyd",
+     "Manfred Warmuth"
+    ],
+    "n_authors": 2,
+    "score": 37.562424
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 38,
+  "ref": [
+   "T. Chen, C. Guestrin, in *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, ACM, New York, **2016**, pp. 785–794."
+  ],
+  "hits": [
+   {
+    "doi": "10.1145/2939672.2939785",
+    "title": "XGBoost",
+    "journal": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "short": [
+     ""
+    ],
+    "year": 2016,
+    "volume": null,
+    "issue": null,
+    "page": "785-794",
+    "article": null,
+    "authors": [
+     "Tianqi Chen",
+     "Carlos Guestrin"
+    ],
+    "n_authors": 2,
+    "score": 101.47495
+   },
+   {
+    "doi": "10.1145/2939672",
+    "title": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": 2016,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 76.7555
+   },
+   {
+    "doi": "10.1145/2939672.2939778",
+    "title": "\"Why Should I Trust You?\"",
+    "journal": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "short": [
+     ""
+    ],
+    "year": 2016,
+    "volume": null,
+    "issue": null,
+    "page": "1135-1144",
+    "article": null,
+    "authors": [
+     "Marco Tulio Ribeiro",
+     "Sameer Singh",
+     "Carlos Guestrin"
+    ],
+    "n_authors": 3,
+    "score": 72.53698
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 39,
+  "ref": [
+   "F. Pedregosa et al.",
+   "J. Mach. Learn. Res.",
+   "2011",
+   "12",
+   "2825–2830"
+  ],
+  "hits": [
+   {
+    "doi": "10.7717/peerjcs.757/fig-2",
+    "title": "Figure 2: Density distortion of normalizing flows on the Moon dataset (Pedregosa et al., 2011).",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 32.675396
+   },
+   {
+    "doi": "10.1016/s0008-6215(11)00566-0",
+    "title": "Graphical contents list",
+    "journal": "Carbohydrate Research",
+    "short": [
+     "Carbohydrate Research"
+    ],
+    "year": 2011,
+    "volume": "346",
+    "issue": "18",
+    "page": "2825-2830",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 29.093563
+   },
+   {
+    "doi": "10.7717/peerjcs.757/fig-1",
+    "title": "Figure 1: NF bijection between tails of standard normal domain distribution (left) and 2D Moon dataset (Pedregosa et al., 2011) samples (right).",
+    "journal": "",
+    "short": [
+     ""
+    ],
+    "year": null,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 28.92843
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 40,
+  "ref": [
+   "I. Wallach, A. Heifets",
+   "J. Chem. Inf. Model.",
+   "2018",
+   "58",
+   "916–932"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/acs.jcim.7b00403",
+    "title": "Most Ligand-Based Classification Benchmarks Reward Memorization Rather than Generalization",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2018,
+    "volume": "58",
+    "issue": "5",
+    "page": "916-932",
+    "article": null,
+    "authors": [
+     "Izhar Wallach",
+     "Abraham Heifets"
+    ],
+    "n_authors": 2,
+    "score": 63.33662
+   },
+   {
+    "doi": "10.1021/civ058i011_1236533",
+    "title": "Issue Editorial Masthead",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2018,
+    "volume": "58",
+    "issue": "11",
+    "page": null,
+    "article": "civ058i011_1236533",
+    "authors": [],
+    "n_authors": 0,
+    "score": 28.623938
+   },
+   {
+    "doi": "10.1021/civ058i012_1243770",
+    "title": "Issue Editorial Masthead",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2018,
+    "volume": "58",
+    "issue": "12",
+    "page": null,
+    "article": "civ058i012_1243770",
+    "authors": [],
+    "n_authors": 0,
+    "score": 28.619274
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 41,
+  "ref": [
+   "R. P. Sheridan",
+   "J. Chem. Inf. Model.",
+   "2013",
+   "53",
+   "783–790"
+  ],
+  "hits": [
+   {
+    "doi": "10.1021/ci400084k",
+    "title": "Time-Split Cross-Validation as a Method for Estimating the Goodness of Prospective Prediction.",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2013,
+    "volume": "53",
+    "issue": "4",
+    "page": "783-790",
+    "article": null,
+    "authors": [
+     "Robert P. Sheridan"
+    ],
+    "n_authors": 1,
+    "score": 47.600147
+   },
+   {
+    "doi": "10.1021/ci400482e",
+    "title": "Using Random Forest To Model the Domain Applicability of Another Random Forest Model",
+    "journal": "Journal of Chemical Information and Modeling",
+    "short": [
+     "J. Chem. Inf. Model."
+    ],
+    "year": 2013,
+    "volume": "53",
+    "issue": "11",
+    "page": "2837-2850",
+    "article": null,
+    "authors": [
+     "Robert P. Sheridan"
+    ],
+    "n_authors": 1,
+    "score": 35.086548
+   },
+   {
+    "doi": "10.1007/s00117-012-2442-9",
+    "title": "Gefäßscreening zur Schlaganfallprävention",
+    "journal": "Der Radiologe",
+    "short": [
+     "Radiologe"
+    ],
+    "year": 2013,
+    "volume": "53",
+    "issue": "9",
+    "page": "783-790",
+    "article": null,
+    "authors": [
+     "C. Arning"
+    ],
+    "n_authors": 1,
+    "score": 31.49875
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 42,
+  "ref": [
+   "Z. Wu et al.",
+   "Chem. Sci.",
+   "2018",
+   "9",
+   "513–530"
+  ],
+  "hits": [
+   {
+    "doi": "10.4000/books.psorbonne.114739",
+    "title": "Z",
+    "journal": "Dictionnaire géographique de l’Afrique médiévale",
+    "short": [
+     ""
+    ],
+    "year": 2023,
+    "volume": null,
+    "issue": null,
+    "page": "513-530",
+    "article": null,
+    "authors": [
+     "Jean-Charles Ducène",
+     "Virginie Prevost"
+    ],
+    "n_authors": 2,
+    "score": 29.163431
+   },
+   {
+    "doi": "10.1039/c7sc02664a",
+    "title": "MoleculeNet: a benchmark for molecular machine learning",
+    "journal": "Chemical Science",
+    "short": [
+     "Chem. Sci."
+    ],
+    "year": 2018,
+    "volume": "9",
+    "issue": "2",
+    "page": "513-530",
+    "article": null,
+    "authors": [
+     "Zhenqin Wu",
+     "Bharath Ramsundar",
+     "Evan N. Feinberg",
+     "Joseph Gomes",
+     "Caleb Geniesse",
+     "Aneesh S. Pappu",
+     "Karl Leswing",
+     "Vijay Pande"
+    ],
+    "n_authors": 8,
+    "score": 28.99152
+   },
+   {
+    "doi": "10.1002/9781119303510.index",
+    "title": "Index",
+    "journal": "Steel Connection Analysis",
+    "short": [
+     ""
+    ],
+    "year": 2018,
+    "volume": null,
+    "issue": null,
+    "page": "513-530",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 26.181198
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 43,
+  "ref": [
+   "N. Rego, D. Koes",
+   "Bioinformatics",
+   "2015",
+   "31",
+   "1322–1324"
+  ],
+  "hits": [
+   {
+    "doi": "10.1093/bioinformatics/btu829",
+    "title": "3Dmol.js: molecular visualization with WebGL",
+    "journal": "Bioinformatics",
+    "short": [
+     ""
+    ],
+    "year": 2014,
+    "volume": "31",
+    "issue": "8",
+    "page": "1322-1324",
+    "article": null,
+    "authors": [
+     "Nicholas Rego",
+     "David Koes"
+    ],
+    "n_authors": 2,
+    "score": 63.04754
+   },
+   {
+    "doi": "10.1111/epi.13119",
+    "title": "Announcements",
+    "journal": "Epilepsia",
+    "short": [
+     "Epilepsia"
+    ],
+    "year": 2015,
+    "volume": "56",
+    "issue": "8",
+    "page": "1322-1324",
+    "article": null,
+    "authors": [],
+    "n_authors": 0,
+    "score": 27.65071
+   },
+   {
+    "doi": "10.1093/mind/fzv036",
+    "title": "<i>The Self and Its Emotions</i>, by Kristján Kristjánsson.",
+    "journal": "Mind",
+    "short": [
+     "Mind"
+    ],
+    "year": 2015,
+    "volume": "124",
+    "issue": "496",
+    "page": "1322-1324",
+    "article": null,
+    "authors": [
+     "Edoardo Zamuner"
+    ],
+    "n_authors": 1,
+    "score": 23.775757
+   }
+  ],
+  "error": null
+ },
+ {
+  "n": 44,
+  "ref": [
+   "B. Karulin, M. Kozhevnikov",
+   "J. Cheminform.",
+   "2011",
+   "3 (Suppl. 1)",
+   "P3"
+  ],
+  "hits": [
+   {
+    "doi": "10.1186/1758-2946-3-s1-p3",
+    "title": "Ketcher: web-based chemical structure editor",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2011,
+    "volume": "3",
+    "issue": "S1",
+    "page": null,
+    "article": "P3",
+    "authors": [
+     "B Karulin",
+     "M Kozhevnikov"
+    ],
+    "n_authors": 2,
+    "score": 41.584213
+   },
+   {
+    "doi": "10.1186/1758-2946-3-s1-p4",
+    "title": "Indigo: universal cheminformatics API",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2011,
+    "volume": "3",
+    "issue": "S1",
+    "page": null,
+    "article": "P4",
+    "authors": [
+     "D Pavlov",
+     "M Rybalkin",
+     "B Karulin",
+     "M Kozhevnikov",
+     "A Savelyev",
+     "A Churinov"
+    ],
+    "n_authors": 6,
+    "score": 38.524662
+   },
+   {
+    "doi": "10.1186/1758-2946-2-s1-f2",
+    "title": "Dingo: 2D molecule and reaction structural formula rendering library",
+    "journal": "Journal of Cheminformatics",
+    "short": [
+     "J Cheminform"
+    ],
+    "year": 2010,
+    "volume": "2",
+    "issue": "S1",
+    "page": null,
+    "article": "F2",
+    "authors": [
+     "Mikhail Kozhevnikov",
+     "Boris Karulin"
+    ],
+    "n_authors": 2,
+    "score": 35.94437
+   }
+  ],
+  "error": null
+ }
+]
