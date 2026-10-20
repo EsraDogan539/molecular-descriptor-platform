@@ -1,0 +1,416 @@
+{
+ "10.1038/sdata.2016.18": {
+  "doi": "10.1038/sdata.2016.18",
+  "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+  "journal": "Scientific Data",
+  "year": 2016,
+  "volume": "3",
+  "issue": "1",
+  "page": null,
+  "article": "160018",
+  "authors": [
+   "Mark D. Wilkinson",
+   "Michel Dumontier",
+   "IJsbrand Jan Aalbersberg",
+   "Gabrielle Appleton",
+   "Myles Axton",
+   "Arie Baak",
+   "Niklas Blomberg",
+   "Jan-Willem Boiten",
+   "Luiz Bonino da Silva Santos",
+   "Philip E. Bourne",
+   "Jildau Bouwman",
+   "Anthony J. Brookes"
+  ]
+ },
+ "10.1007/s10822-011-9440-2": {
+  "doi": "10.1007/s10822-011-9440-2",
+  "title": "Online chemical modeling environment (OCHEM): web platform for data storage, model development and publishing of chemical information",
+  "journal": "Journal of Computer-Aided Molecular Design",
+  "year": 2011,
+  "volume": "25",
+  "issue": "6",
+  "page": "533-554",
+  "article": null,
+  "authors": [
+   "Iurii Sushko",
+   "Sergii Novotarskyi",
+   "Robert Körner",
+   "Anil Kumar Pandey",
+   "Matthias Rupp",
+   "Wolfram Teetz",
+   "Stefan Brandmaier",
+   "Ahmed Abdelaziz",
+   "Volodymyr V. Prokopenko",
+   "Vsevolod Y. Tanchuk",
+   "Roberto Todeschini",
+   "Alexandre Varnek"
+  ]
+ },
+ "10.1186/s13321-015-0069-3": {
+  "doi": "10.1186/s13321-015-0069-3",
+  "title": "Why is Tanimoto index an appropriate choice for fingerprint-based similarity calculations?",
+  "journal": "Journal of Cheminformatics",
+  "year": 2015,
+  "volume": "7",
+  "issue": "1",
+  "page": null,
+  "article": "20",
+  "authors": [
+   "Dávid Bajusz",
+   "Anita Rácz",
+   "Károly Héberger"
+  ]
+ },
+ "10.1039/c7sc02664a": {
+  "doi": "10.1039/c7sc02664a",
+  "title": "MoleculeNet: a benchmark for molecular machine learning",
+  "journal": "Chemical Science",
+  "year": 2018,
+  "volume": "9",
+  "issue": "2",
+  "page": "513-530",
+  "article": null,
+  "authors": [
+   "Zhenqin Wu",
+   "Bharath Ramsundar",
+   "Evan N. Feinberg",
+   "Joseph Gomes",
+   "Caleb Geniesse",
+   "Aneesh S. Pappu",
+   "Karl Leswing",
+   "Vijay Pande"
+  ]
+ },
+ "ref12": [
+  {
+   "doi": "10.18596/jotcsa.370769",
+   "title": "Enhancement of Cerium exchange with Ultrasound",
+   "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+   "year": 2017,
+   "volume": "5",
+   "issue": "sp.is.1",
+   "page": "53-64",
+   "article": null,
+   "authors": [
+    "Fehime Çakıcıoğlu-Özkan",
+    "Yasemin Erten-Kaya"
+   ]
+  },
+  {
+   "doi": "10.18596/jotcsa.323798",
+   "title": "Preparation and Cytotoxicity of Coriandrum Sativum L. Oil Loaded Chitosan Nanoparticles",
+   "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+   "year": 2017,
+   "volume": null,
+   "issue": null,
+   "page": "179-190",
+   "article": null,
+   "authors": [
+    "Yasemin Budama Kilinc",
+    "Rabia Cakir Koc",
+    "Zeynep Kaya"
+   ]
+  },
+  {
+   "doi": "10.18596/jotcsa.288244",
+   "title": "Theoretical Investigation of Corrosion Inhibition of Iron Metal by Some Benzothiazole Derivatives: A Monte Carlo Study",
+   "journal": "Journal of the Turkish Chemical Society, Section A: Chemistry",
+   "year": 2017,
+   "volume": "4",
+   "issue": "2",
+   "page": "97-97",
+   "article": null,
+   "authors": [
+    "NAİL ALTUNAY",
+    "Savaş KAYA"
+   ]
+  },
+  {
+   "doi": "10.58692/jotcsb.1291544",
+   "title": "Metal-Free Coal Catalyst for Hydrogen Production: Synthesis and Performance Assessment",
+   "journal": "Journal of the Turkish Chemical Society Section B: Chemical Engineering",
+   "year": 2023,
+   "volume": "6",
+   "issue": "2",
+   "page": "63-72",
+   "article": null,
+   "authors": [
+    "Gurbet CANPOLAT",
+    "Mustafa KAYA"
+   ]
+  },
+  {
+   "doi": "10.18596/jotcsa.1232989",
+   "title": "Photoproduction of High Molecular Weight Poly (N-methylpyrrole) under Green Conditions",
+   "journal": "Journal of the Turkish Chemical Society Section A: Chemistry",
+   "year": 2023,
+   "volume": "10",
+   "issue": "2",
+   "page": "443-452",
+   "article": null,
+   "authors": [
+    "Kerem KAYA"
+   ]
+  }
+ ],
+ "ref14": [
+  {
+   "doi": "10.1007/s00894-019-4043-2",
+   "title": "Effect of chalcogen atoms on the electronic band gaps of donor-acceptor-donor type semiconducting polymers: a systematic DFT investigation",
+   "journal": "Journal of Molecular Modeling",
+   "year": 2019,
+   "volume": "25",
+   "issue": "6",
+   "page": null,
+   "article": "167",
+   "authors": [
+    "Ozge Ozkilinc",
+    "Hakan Kayi"
+   ]
+  },
+  {
+   "doi": "10.1007/s00894-024-05985-2",
+   "title": "Effect of chalcogen atoms on the electronic band gaps of the quinoxaline containing donor–acceptor-donor type semiconducting polymers: a systematic DFT investig",
+   "journal": "Journal of Molecular Modeling",
+   "year": 2024,
+   "volume": "30",
+   "issue": "6",
+   "page": null,
+   "article": "179",
+   "authors": [
+    "Hakan Kayi",
+    "Emire Şen",
+    "Özge Özkılınç"
+   ]
+  },
+  {
+   "doi": "10.1016/j.molstruc.2021.131928",
+   "title": "Anticancer investigation of platinum and copper-based complexes containing quinoxaline ligands",
+   "journal": "Journal of Molecular Structure",
+   "year": 2022,
+   "volume": "1250",
+   "issue": null,
+   "page": "131928",
+   "article": "131928",
+   "authors": [
+    "Hager Sadek El–Beshti",
+    "Yasemin Yildizhan",
+    "Hakan Kayi",
+    "Yuksel Cetin",
+    "Zelal Adigüzel",
+    "Gamze Gungor-Topcu",
+    "Zuhal Gercek",
+    "Şeniz Özalp-Yaman"
+   ]
+  },
+  {
+   "doi": "10.1007/s00894-009-0613-z",
+   "title": "AM1* parameters for gold",
+   "journal": "Journal of Molecular Modeling",
+   "year": 2009,
+   "volume": "16",
+   "issue": "5",
+   "page": "1029-1038",
+   "article": null,
+   "authors": [
+    "Hakan Kayi"
+   ]
+  },
+  {
+   "doi": "10.1007/s00894-009-0614-y",
+   "title": "AM1* parameters for manganese and iron",
+   "journal": "Journal of Molecular Modeling",
+   "year": 2009,
+   "volume": "16",
+   "issue": "6",
+   "page": "1109-1126",
+   "article": null,
+   "authors": [
+    "Hakan Kayi",
+    "Timothy Clark"
+   ]
+  }
+ ],
+ "ref16": [
+  {
+   "doi": "10.1186/1758-2946-3-s1-p20",
+   "title": "Online chemical modeling environment (OCHEM): web platform for data storage, model development and publishing of chemical information",
+   "journal": "Journal of Cheminformatics",
+   "year": 2011,
+   "volume": "3",
+   "issue": "S1",
+   "page": null,
+   "article": "P20",
+   "authors": [
+    "I Sushko",
+    "AK Pandey",
+    "S Novotarskyi",
+    "R Körner",
+    "M Rupp",
+    "W Teetz",
+    "S Brandmaier",
+    "A Abdelaziz",
+    "VV Prokopenko",
+    "VY Tanchuk",
+    "R Todeschini",
+    "A Varnek"
+   ]
+  },
+  {
+   "doi": "10.1007/s10822-011-9440-2",
+   "title": "Online chemical modeling environment (OCHEM): web platform for data storage, model development and publishing of chemical information",
+   "journal": "Journal of Computer-Aided Molecular Design",
+   "year": 2011,
+   "volume": "25",
+   "issue": "6",
+   "page": "533-554",
+   "article": null,
+   "authors": [
+    "Iurii Sushko",
+    "Sergii Novotarskyi",
+    "Robert Körner",
+    "Anil Kumar Pandey",
+    "Matthias Rupp",
+    "Wolfram Teetz",
+    "Stefan Brandmaier",
+    "Ahmed Abdelaziz",
+    "Volodymyr V. Prokopenko",
+    "Vsevolod Y. Tanchuk",
+    "Roberto Todeschini",
+    "Alexandre Varnek"
+   ]
+  },
+  {
+   "doi": "10.1186/1758-2946-2-s1-p5",
+   "title": "OCHEM - on-line CHEmical database &amp; modeling environment",
+   "journal": "Journal of Cheminformatics",
+   "year": 2010,
+   "volume": "2",
+   "issue": "S1",
+   "page": null,
+   "article": "P5",
+   "authors": [
+    "Sergii Novotarskyi",
+    "Iurii Sushko",
+    "R Körner",
+    "Anil Pandey Kumar",
+    "Matthias Rupp",
+    "VV Prokopenko",
+    "Igor Tetko"
+   ]
+  },
+  {
+   "doi": "10.1002/minf.201300030",
+   "title": "Modeling the Biodegradability of Chemical Compounds Using the Online CHEmical Modeling Environment (OCHEM)",
+   "journal": "Molecular Informatics",
+   "year": 2013,
+   "volume": "33",
+   "issue": "1",
+   "page": "73-85",
+   "article": null,
+   "authors": [
+    "Susann Vorberg",
+    "Igor V. Tetko"
+   ]
+  },
+  {
+   "doi": "10.1186/1752-153x-3-s1-p71",
+   "title": "Online chemical modeling environment",
+   "journal": "Chemistry Central Journal",
+   "year": 2009,
+   "volume": "3",
+   "issue": "S1",
+   "page": null,
+   "article": "P71",
+   "authors": [
+    "S Novotarskyi",
+    "I Sushko",
+    "I Tetko"
+   ]
+  }
+ ],
+ "ref39": [
+  {
+   "doi": "10.1002/9781119557500.ch5",
+   "title": "Getting Started with Scikit‐learn for Machine Learning",
+   "journal": "Python® Machine Learning",
+   "year": 2019,
+   "volume": null,
+   "issue": null,
+   "page": "93-117",
+   "article": null,
+   "authors": []
+  },
+  {
+   "doi": "10.1007/978-1-4842-7921-2_5",
+   "title": "Introduction to Machine Learning with Scikit-learn",
+   "journal": "Hands-on Machine Learning with Python",
+   "year": 2022,
+   "volume": null,
+   "issue": null,
+   "page": "65-77",
+   "article": null,
+   "authors": [
+    "Ashwin Pajankar",
+    "Aditya Joshi"
+   ]
+  },
+  {
+   "doi": "10.1007/978-1-4842-5373-1_1",
+   "title": "Introduction to Scikit-Learn",
+   "journal": "Hands-on Scikit-Learn for Machine Learning Applications",
+   "year": 2019,
+   "volume": null,
+   "issue": null,
+   "page": "1-35",
+   "article": null,
+   "authors": [
+    "David Paper"
+   ]
+  },
+  {
+   "doi": "10.1007/978-1-4842-5373-1_7",
+   "title": "Scikit-Learn Regression Tuning",
+   "journal": "Hands-on Scikit-Learn for Machine Learning Applications",
+   "year": 2019,
+   "volume": null,
+   "issue": null,
+   "page": "189-213",
+   "article": null,
+   "authors": [
+    "David Paper"
+   ]
+  },
+  {
+   "doi": "10.1007/978-1-4842-5373-1_5",
+   "title": "Scikit-Learn Classifier Tuning from Simple Training Sets",
+   "journal": "Hands-on Scikit-Learn for Machine Learning Applications",
+   "year": 2019,
+   "volume": null,
+   "issue": null,
+   "page": "137-163",
+   "article": null,
+   "authors": [
+    "David Paper"
+   ]
+  }
+ ],
+ "rdkit": {
+  "titles": [
+   {
+    "title": "rdkit/rdkit: 2026_09_1 (Q3 2026) Release"
+   }
+  ],
+  "creators": [
+   "Greg Landrum",
+   "Paolo Tosco",
+   "Ricardo Rodriguez",
+   "Brian Kelley",
+   "David Cosgrove"
+  ],
+  "publisher": "Zenodo",
+  "year": 2026,
+  "err": null
+ }
+}
