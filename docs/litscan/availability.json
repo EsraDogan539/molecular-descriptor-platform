@@ -1,0 +1,575 @@
+{
+ "nanoscale_liu2025": {
+  "doi": "10.1039/d4nr03702b",
+  "title": "Harnessing DFT and machine learning for accurate optical gap prediction in conjugated polymers.",
+  "pmcid": null,
+  "license": "cc by-nc",
+  "abstract": "Conjugated polymers (CPs), characterized by alternating <i>σ</i> and π bonds, have attracted significant attention for their diverse structures and adjustable electronic properties. However, predicting the optical band gap (<i>E</i>expgap) of CPs remains challenging. This study presents a rational model that integrates density functional theory (DFT) calculation with a data-driven machine learning (ML) approach to predict the experimentally measured <i>E</i>expgap of CPs, using 1096 data points. Through alkyl side chain truncation and conjugated backbone extension, the modified oligomers effectively capture the electronic properties of CPs, significantly improving the correlation between the DFT-calculated HOMO-LUMO gap (<i>E</i>oligomergap) and <i>E</i>expgap (<i>R</i><sup>2</sup> = 0.51) compared to the unmodified side-chain-containing monomers (<i>R</i><sup>2</sup> = 0.15). Moreover, we trained six ML models with two categories of features as input: <i>E</i>oligomergap to represent the extended backbone and molecular features of unmodified monomers to capture the alkyl-side-chain effect. The best model, XGBoost-2, achieved an <i>R</i><sup>2</sup> of 0.77 and an MAE of 0.065 eV for predicting <i>E</i>expgap, falling within the experimental error margin of ∼0.1 eV. We further validated XGBoost-2 on a dataset of 227 newly synthesized CPs collected from literature without further retraining. Notably, XGBoost-2 exhibits both excellent interpolation for BT-, BTA-, QA-, DPP-, and TPD-based CPs, and exceptional extrapolation for PDI-, NDI-, DTBT-, BBX-, and Y6-based CPs, which are attributed to the integration of DFT methods with rationally designed oligomer structures. For the first time, we demonstrated a novel and effective strategy combining quantum chemistry calculations with ML modeling for accurate and efficient prediction of experimentally measured fundamental properties of CPs. Our study paves the way for the accelerated design and development of high-performance CPs in photoelectronic applications.",
+  "oa_landing": "https://doi.org/10.1039/d4nr03702b",
+  "oa_pdf": "https://pubs.rsc.org/en/content/articlepdf/2025/nr/d4nr03702b",
+  "oa_license": "cc-by-nc",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "telluro_helicenes_jcc2025": {
+  "doi": "10.1002/jcc.70175",
+  "title": "Accurate Prediction of HOMO-LUMO Gap Using DFT Functional and Application to Next-Generation Organic Telluro[n]Helicenes Materials.",
+  "pmcid": "PMC12223471",
+  "license": "cc by",
+  "abstract": "The present work purposes and establishes an accurate prediction of HOMO-LUMO energies of thiophene-, selenophene-, and tellurophene-based helicenes using 15 different DFT methodologies. DFT functionals used in this work are PBE, PBE0, B3LYP, B3LYP-D, B3LYP-D3, M06, MN15, HSE06, LC-BLYP, CAM-B3LYP, LC-ωPBE, ωΒ97XD and B2PLYP. DFT HOMO-LUMO gaps are compared with the fundamental gaps calculated at the CCSD(T) level of theory. The LANL2DZ basis set is used for tellurium atoms, and the 6-311++G(d,p) basis set is used for other elements. Statistical error analysis suggests that the HOMO-LUMO energy gaps can be accurately obtained using ωB97XD functional, with geometry optimization performed at the same theoretical level. However, geometry optimization using the B3LYP functional, followed by single-point energy calculation with the ωB97XD functional, provides a more cost-effective method with similar accuracy for energy gap prediction. HOMO-LUMO gaps of telluro[n]helicenes ([n]TeH) are redshifted compared with their S- and Se-analogs. Tellurophene-based helicenes ([n]TeH) systems are easy to oxidize in contrast to their S- and Se-analogs. Dimerization studies have found that substituted [7]TeH<sup>•+</sup> is more stable in dichloromethane than its S- and Se-analogs. The CAM-B3LYP and ωΒ97XD functionals are used in conjunction with the TDDFT procedure to explore the excited states of [n]TeH radical cations. These radical cation systems showed better absorption in the infrared range than S- and Se-systems. Overall, our benchmarking studies lead to an accurate prediction of HOMO-LUMO gaps of [n]TeH. Further, this study demonstrates the potential of Te-based helical structures to create versatile next-generation organic materials.",
+  "availability_sections": [
+   [
+    "Supporting information",
+    "   \n DATA S1.  Supporting Information.        "
+   ],
+   [
+    "Data Availability Statement",
+    " The data that supports the findings of this study are available in the  Supporting Information  of this article. "
+   ],
+   [
+    "Associated Data",
+    "  Supplementary Materials    \n DATA S1.  Supporting Information.        "
+   ],
+   [
+    "Data Availability Statement",
+    " The data that supports the findings of this study are available in the  Supporting Information  of this article. "
+   ]
+  ],
+  "notes": [],
+  "table_captions": [
+   " Optimized structures of (a) telluro[3]helicene and (b) telluro[7]helicene Φ 1  = δ(Br1C2C3Br2) and Φ 2  = δ(Br2C3C2C4) computed using B3LYP‐D functional in DCM solvent. Basis set used: 6–311++G(d,p) for H, C, Si, Br atoms, and LANL2DZ for Te atoms. Selected bond distances and dihedral angles are la",
+   " Spin density map for the most stable structures of (a) [3]TeH •+  and (b) [7]TeH •+ . DFT functional used: B3LYP‐D (ROHF formalism); basis set used: 6–311++G(d,p) for H, C, Si, Br atoms, and LANL2DZ for Te atoms. Solvent used: DCM (SMD model). Iso‐value = 0.003 a.u. ",
+   " Most stable π‐dimeric structures of (a) unsub‐([7]TeH) 2 \n 2+ , (b) sub‐([7]TeH) 2 \n 2+ , and c) sub‐([7]TeH) 2 \n 2+  ∙ ((PF 6 ) 2 \n 2−  calculated using B3LYP‐D functional. Basis set used: LANL2DZ basis set for Te atoms and 6–311++G(d,p) basis set is for all other atoms. The solvent of DCM is inco",
+   " Error in HOMO–LUMO energy gap (in eV) calculated by different density functionals for Thia[n]helicene,  n  = 1–5, Seleno[n]helicene,  n  = 1–4 and Telluro[n]helicene,  n  = 1–4 systems compared with CCSD(T) results. Errors (mean signed error (MSE), mean absolute error (MAE), and maximum unsigned er",
+   " Statistical Errors (MSE, MAE, and MAX_UE) \n a \n  in eV for different density functionals for Thia[n]helicene,  n  = 1–5, Seleno[n]helicene,  n  = 1–4 and Telluro[n]helicene,  n  = 1–4 systems with respect to CCSD(T) results. ",
+   " Plot of HOMO–LUMO gaps versus the number of rings ( n ) in thia[n]helicenes, [n]TH,  n  = 5–10, and seleno[n]helicenes, [n]SH, and telluro[n]helicenes, [n]TeH,  n  = 5–10 in gas phase: DFT Method: B3LYP functional (most stable geometries) followed by single‐point energy calculations at ωB97XD funct",
+   " Calculated HOMO–LUMO gaps (E g ), for thia[n]helicenes, [n]TH,  n  = 5–10, and seleno[n]helicenes, [n]SH, and telluro[n]helicenes, [n]TeH,  n  = 5–10, in gas phase. ",
+   " Plot of HDOMO–LSOMO gaps versus the number of rings in thia[n]helicenes radical cations, [n]TH •+ ,  n  = 5–10, seleno[n]helicenes radical cations, [n]SH •+ , 5–10, and telluro[n]helicenes radical cations, [n]TeH •+ ,  n  = 5–10 in DCM solvent: DFT Method: B3LYP functional (most stable geometries) ",
+   " Calculated HDOMO–LSOMO energy gaps (in eV) for thia[n]helicenes radical cations, [n]TH •+ ,  n  = 5–10, seleno[n]helicenes radical cations, [n]SH •+ , 5–10, and telluro[n]helicenes radical cations, [n]TeH •+ ,  n  = 5–10 in DCM solvent. Values in the braces are HDOMO–LSUMO energy in the gas phase. ",
+   " Simulated electronic absorption spectra, (a) [7]TH •+ , [7]SH •+ , and [7]TeH •+  in DCM solvent. CAM‐B3LYP functional is used to calculate all the UV–Vis spectra applying TDDFT procedure. Frontier orbitals of [7]TeH •+  (b) H‐2 of [7]TeH •+ , (c) H‐1 of [7]TeH •+ , and (d) L of [7]TeH •+  calculat",
+   " \n DATA S1.  Supporting Information. ",
+   " \n DATA S1.  Supporting Information. "
+  ],
+  "mentions_Se": true,
+  "mentions_Te": true,
+  "data_sentences": [],
+  "repo_urls": []
+ },
+ "se_te_bicyclic_polymers_omega2026": {
+  "doi": "10.1021/acsomega.5c04257",
+  "title": "Low Band Gap Fused Bicyclic Polymers with Heteroatoms Se and Te: A DFT-PBC Study.",
+  "pmcid": "PMC13000587",
+  "license": "cc by",
+  "abstract": "Designing low band gap conjugated polymers is critical for the development of advanced materials in organic electronics. This study focuses on DFT-PBC analysis of a series of bicyclic fused polymers containing heteroatoms Se and Te, using the hybrid functional B3PW91. The polymer geometries defined by cells containing two monomers connected in different configurations were initially optimized with an assumption that all the atoms are on the same plane due to interchain interactions in the solid state. Subsequently, the structures were optimized without these restrictions, starting from the nearly planar geometry, as small deviations were anticipated due to insufficient interchain interactions required for planar geometry. According to the band structure calculations, the band gap value for the planar structure with 4-6 connection positions, where two Se atoms occupy both heteroatom positions, was found to be 0.779 eV, which is very close to the experimentally determined value of 0.76 eV (Patra 11). The finding indicates that polymerization primarily occurs through this connection within theoretical limits. The band gap values for other structures with the same connection positions but different heteroatom pairs (Se-Te, Te-Se, and Te-Te) were also low, at 0.905, 0.745, and 0.730 eV, respectively. Conducting properties of the title polymers were assessed by comparing band gaps, bandwidth, and effective mass values. In conclusion, the planar structures of the polymers with 4-6 and 2-4 connections exhibit bandwidths comparable to those of polypyrrole and polythiophene, with their effective masses that are either improved or comparable with these benchmark materials. Furthermore, atomic and subshell compositions of the frontier orbitals were analyzed to gain insight into the variation of the band gap as a function of the heteroatom.",
+  "availability_sections": [],
+  "notes": [
+   " The Supporting Information is\navailable free of charge at  https://pubs.acs.org/doi/10.1021/acsomega.5c04257 .   The sum of percent contributions\nof atomic p orbitals\nfor the frontier orbitals of the monomers and polymers (Table S1);\nsome properties of frontier orbitals of the polymers (Table S2); the\nband gap, HOCO, and LUCO values (in eV) calculated by B3PW91/SDD method\n(Table S3); the deviation energies ( E \n planar  –  E \n nr ) versus the\ndeviation angle (from 180°) (Figure S1); HOCOs of PSeSe for planar\ngeometry (Figure S2); LUCOs of PSeSe for planar geometry (Figure S3)\n( PDF )   \n "
+  ],
+  "table_captions": [
+   " General structure of the monomer with\ntwo positions, X and Y, defined\nfor heteroatoms and numbering of C positions, which are open to make\nbonds. (Te is in the X position, Se is in the Y position. Therefore,\nthis structure is abbreviated as TeSe). ",
+   " Mulliken Atomic Spin Densities of\nthe Monomer Cationic Radicals ",
+   " Spin density map of the TeTe cationic radical drawn by VMD based\non grid data generated by Multiwfn 3.8 (from two different directions). ",
+   " Molecular surface maps of average local ionization energy\nanalysis\n(ALIE) on the molecular surface of the monomer (plotted by VMD). ",
+   " HOMOs\nof the monomers. ",
+   " LUMOs of the monomers. ",
+   " Some Frontier Orbital Properties of\nthe Monomers (Energy Values in eV) ",
+   " Optimized geometries of PSeSe (all of the atoms\nare restricted\nto the same plane). ",
+   " Deviation angles\n(from 180°) and deviation energies ( E \n planar  –  E \n nr ) for each\nconnection of polymer compounds. ",
+   " Relative energies of\nthe isomers with respect to the isomer with\nthe smallest energy for each polymer compound. ",
+   " HOCOs of PTeTe for a\nplanar geometry. ",
+   " LUCOs of PTeTe for the\nplanar geometry. ",
+   " Orbital\nDelocalization Index (ODI) of frontier crystal orbitals\n(the suffix p indicates planar geometry). ",
+   " Change\nin the Orbital Delocalization Index (ODI) of frontier crystal\norbitals versus the deviation angle (from 180°). ",
+   " Absolute shift values (in eV) of the frontier\norbital energy levels\nand band gaps from monomer to polymer (planar). ",
+   " HOCO and LUCO energy levels and band gap values (the suffix p indicates\nplanar geometry). ",
+   " Reduction of the band\ngap as a function of the deviation angle. ",
+   " Translational\nvector lengths of the polymers. ",
+   " Band structure\nof planar PTeSe. ",
+   " Bandwidths\nof the polymers (p indicates planar structure). ",
+   " Absolute values of the effective mass of electrons\nin the valence\nband and positive holes in the conduction band (in the unit of rest\nelectron mass ( m \n 0 )). ",
+   " Reciprocal\nof effective mass (1/ m \n e )\nversus bandwidth (eV). "
+  ],
+  "mentions_Se": true,
+  "mentions_Te": true,
+  "data_sentences": [],
+  "repo_urls": []
+ },
+ "nablacolors3d_commchem2026": {
+  "doi": "10.1038/s42004-026-01944-5",
+  "title": "A conformational benchmark for optical property prediction with solvent-aware graph neural networks.",
+  "pmcid": "PMC13031295",
+  "license": "cc by",
+  "abstract": "Accurately predicting optical spectra of molecules is essential for creating better OLED emitters, solar-cell dyes, and fluorescent probes. Traditional methods, such as time-dependent density-functional theory, are computationally expensive and often inaccurate. Current Graph Neural Network (GNN) approaches for optical properties prediction are faster and offer better performance. Still, they operate on 2D graphs and ignore the 3D geometrical features that control excited-state behavior. We present nablaColors-3D, a rigorously curated dataset for the prediction of optical properties consisting of 26369 chromophore-solvent pairs with three conformations optimized at different levels of quantum theory. Based on this dataset, we establish a scaffold-split benchmark for 3D GNNs and systematically quantify how the fidelity of geometry optimization affects accuracy. Furthermore, we propose a solvent-aware modification for pretrained SE(3)-invariant architectures. Our best model, built on UniMol+, achieves MAE of 15.97 nm on a held-out test set, improving the previous state of the art by more than 30%.",
+  "availability_sections": [
+   [
+    "Data preparation",
+    " To obtain the proposed nablaColors and nablaColors-3D datasets, we extended the dataset integration strategy of Greenman et al.  30   by incorporating not only maximum absorption wavelengths, but also maximum fluorescence wavelengths and photoluminescence quantum yields (PLQYs). To construct a unified dataset, we combined data from Deep4Chem  73  , ChemFluor  25  , DyeAgg  76  , and DSSCDB  77  . Following Greenman et al.  30  , we excluded the CDEx dataset  97   due to concerns about data quality.  During the construction of the combined dataset, we encountered several data quality issues. These included invalid SMILES strings, redundant entries with multiple protonation states assigned to what was nominally the same molecule, and broken  π -conjugated systems—particularly in squaraine and cyanine dyes—where incorrect SMILES disrupted the conjugated backbone. A notable source of inconsistency came from entries in ref.   25  , where molecules were sourced from online databases in solvated, often charged forms (including counterions). These structures were included in the dataset with varying protonation states but were assigned identical optical property values, despite representing chemically distinct species. Further complications arose when handling metal-organic compounds. Their correct protonation was challenging to determine due to the limitations of the SMILES format, which cannot fully capture coordination environments. Conformer generation for metal-porphyrins also "
+   ]
+  ],
+  "notes": [
+   " Peer review   Peer review information   Communications Chemistry  thanks Kevin Greenman and the other, anonymous, reviewer(s) for their contribution to the peer review of this work. A peer review file is available.  ",
+   " Data availability  The dataset and model checkpoints supporting the findings of this study are openly available at  https://zenodo.org/records/18061300   111  . ",
+   " Code availability  The associated code, The code supporting the findings of this study is openly available on GitHub at  https://github.com/AI4DD/nablaColors   112  . "
+  ],
+  "table_captions": [
+   " Absorption MAE on the test split of our proposed nablaColors-3D benchmark for 2D and 3D GNNs.  For 2D GNNs we evaluate Chemprop variants  30  , SOG  32  , CGIB  31  , and Fluor-Predictor  106  . For the TD-DFT baseline, the MAE is 62 nm. All models except the UniProp use geometries optimized with D",
+   " Test MAE (nm) for five 3D GNN backbones across three conformer sources and two solvent regimes.  Colors encode conformer source: xTB, DFT in vacuum (DFT-vac), and DFT with implicit solvent via CPCM (DFT-imp). Hatching indicates models without a solvent embedding, whereas solid bars denote models wi",
+   " UniProp performance for different conformation-pair choices used during training ",
+   " Five-fold cross-validation MAE for UniProp and Chemprop ",
+   " Data processing pipeline.  First, the UV/Vis dataset of absorption spectra is curated to obtain the nablaColors dataset. Then we generate chromophore conformations for each unique chromophore in nablaColors. After that, the chromophore conformations are sequentially optimized with MMFF first, then ",
+   " Architecture of 3D GNNs for optical properties prediction.  The solvent is represented as SMILES and processed with a Chemprop model, and A) solvent embeddings are concatenated with final chromophore embeddings obtained for PaiNN, DimeNet++, GemNet, and eSCN, B) solvent embedding added to the virtu",
+   " Transparent Peer Review file ",
+   " Supplementary Information "
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "We present nablaColors-3D, a rigorously curated dataset for the prediction of optical properties consisting of 26369 chromophore-solvent pairs with three conformations optimized at different levels of quantum theory.",
+   "Based on this dataset, we establish a scaffold-split benchmark for 3D GNNs and systematically quantify how the fidelity of geometry optimization affects accuracy.",
+   "To aid in training these models, large and diverse quantum chemical (QC) databases have been collected  58 – 67  .",
+   "The abundance of high-quality data enables pretraining of NNPs that can be efficiently finetuned on more complicated datasets or different levels of theory  68 , 69  , and to solve downstream molecular property prediction tasks  70 – 72  .",
+   "First, absorption data is significantly more abundant and diverse across datasets  25 , 73  , providing a richer training signal.",
+   "Studies are based on disparate datasets: Lee et al.",
+   "32   utilizes five datasets for testing.",
+   "30   merge Deep4Chem, ChemFluor, CDEx, DyeAgg  76  , and DSSCDB  77   into one large dataset.",
+   "To address the methodological and benchmarking challenges outlined above, our work makes the following key contributions:   High-quality 3D dataset: We present nablaColors, a rigorously curated dataset of chromophore-solvent pairs with corrected SMILES and nablaColors-3D, a high-quality 3D conformations dataset optimized at multiple levels of theory (xTB, DFT in vacuum and implicit solvent).",
+   "ned 3D GNNs: We evaluate four equivariant GNNs (PaiNN  79  , DimeNet++  44  , GemNet  45  , eSCN)  48   and the molecular transformer UniMol+  80   and show that pretraining on large quantum-chemical datasets is critical for high performance.",
+   "ical property prediction with cross-validation: We extend the best-performing UniProp model to jointly predict absorption, emission, and PLQY in a multitarget setting using an expanded version of the dataset.",
+   "Results  In this section, we present benchmark results for 2D and 3D models trained on the curated nablaColors-3D dataset; full details of data preparation, model architectures, and training protocols are provided in the Methods section.",
+   "For each 3D model, we report the best result obtained through hyperparameter tuning on the validation dataset, using DFT-optimized conformers with implicit solvent and solvent embeddings introduced at the model regression head input.",
+   "This experiment was conducted on an extended dataset containing all three target properties.",
+   "When these measurements fall into the test split, a pronounced distribution shift emerges, since most of the corresponding solvents appear only once in the dataset."
+  ],
+  "repo_urls": [
+   "https://github.com/AI4DD/nablaColors",
+   "https://zenodo.org/records/18061300"
+  ]
+ },
+ "deepacceptor_npj2024": {
+  "doi": "10.1038/s41524-024-01367-7",
+  "title": "Accelerating the discovery of acceptor materials for organic solar cells by deep learning",
+  "oa_landing": "https://doi.org/10.1038/s41524-024-01367-7",
+  "oa_pdf": "https://www.nature.com/articles/s41524-024-01367-7.pdf",
+  "oa_license": "cc-by-nc-nd",
+  "landing_fetch": "ok",
+  "repo_urls": []
+ },
+ "hutchison_opv_jmca2024": {
+  "doi": "10.1039/d4ta01942c",
+  "title": "Beyond molecular structure: critically assessing machine learning for designing organic photovoltaic materials and devices",
+  "oa_landing": "https://doi.org/10.1039/d4ta01942c",
+  "oa_pdf": null,
+  "oa_license": "cc-by",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "zhang_nfa_advsci2024": {
+  "doi": "10.1002/advs.202308652",
+  "title": "Data Cleansing and Sub-Unit-Based Molecular Description Enable Accurate Prediction of The Energy Levels of Non-Fullerene Acceptors Used in Organic Solar Cells.",
+  "pmcid": "PMC11077656",
+  "license": "cc by",
+  "abstract": "Non-fullerene acceptors (NFAs) have recently emerged as pivotal materials for enhancing the efficiency of organic solar cells (OSCs). To further advance OSC efficiency, precise control over the energy levels of NFAs is imperative, necessitating the development of a robust computational method for accurate energy level predictions. Unfortunately, conventional computational techniques often yield relatively large errors, typically ranging from 0.2 to 0.5 electronvolts (eV), when predicting energy levels. In this study, the authors present a novel method that not only expedites energy level predictions but also significantly improves accuracy , reducing the error margin to 0.06 eV. The method comprises two essential components. The first component involves data cleansing, which systematically eliminates problematic experimental data and thereby minimizes input data errors. The second component introduces a molecular description method based on the electronic properties of the sub-units comprising NFAs. The approach simplifies the intricacies of molecular computation and demonstrates markedly enhanced prediction performance compared to the conventional density functional theory (DFT) method. Our methodology will expedite research in the field of NFAs, serving as a catalyst for the development of similar computational approaches to address challenges in other areas of material science and molecular research.",
+  "availability_sections": [
+   [
+    "Supporting information",
+    "   Supporting Information            "
+   ],
+   [
+    "Data Availability Statement",
+    " The data that support the findings of this study are available in the supplementary material of this article. "
+   ]
+  ],
+  "notes": [],
+  "table_captions": [
+   " Molecular structure of the famous non‐fullerene acceptor named Y6. The structure of Y6 is divided into several subunits including thiophene, pyrrole, and benzothiadiazole units with two end groups. ",
+   " Prediction performance of our methodology (based on the sub‐unit‐based molecular description and GBRT model) using four different datasets with gradually improved data quality. The parameters of prediction performance include MAE, RMSE, and r, which are widely used to indicate the accuracy and corr",
+   " Illustration of the distribution of ΔHOMO and ΔLUMO. The definition of ΔHOMO and ΔLUMO are the differences of HOMO and LUMO values measured by cyclic voltammetry or estimated by Voc and Eg, with ΔHOMO = HOMO CV  – HOMO Voc  and ΔLUMO = LUMO CV  – LUMO Voc . ",
+   " Results of AI model prediction using the optimized GBRT model and dataset #4. a,b), This shows the model predicted values versus the HOMO Voc  and LUMO Voc  data in dataset #4. The training set is shown as blue circles, while the test set is shown as red triangles. The insets of (a,b) show the MAE ",
+   " Prediction performance of different AI models (GBRT, RF, ERF, DT, ANN, SVM, and LSTM) with either SMILES or our subunit‐based molecular descriptions as model inputs. The parameters of prediction performance include MAE, RMSE, and r. ",
+   " Results of testing our prediction method and model using “use‐case” dataset. a) the distribution of prediction errors by DFT calculations versus experimental data; b) the distribution of prediction errors by our optimized model/data set versus experimental data; c) Illustration of predicted HOMO/LU",
+   " Comparison of the performance of our predictive model versus conventional DFT computation for molecules in the selective “use‐case” testing dataset. ",
+   " Supporting Information "
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "If the ΔHOMO or ΔLUMO of a certain NFA is larger than a certain threshold, we can disqualify the HOMO CV /LUMO CV  and HOMO Voc /LUMO Voc  and remove such problematic data from our database.",
+   "For the process of model training and evaluation, the entire dataset was subjected to random shuffling before being partitioned into two distinct segments – training and testing datasets.",
+   "In specific, we collected 20 commonly used NFAs and formed a “use‐case” dataset to test the performance of our model versus conventional DFT calculations.",
+   "It's noteworthy to mention that the experimental values within the “use‐case” dataset were exclusively procured by CV, the most common technique within the domain of organic electronics due to its relative simplicity and ease of execution.",
+   "Therefore, we focus on the GBRT model and use it on four different datasets without or with various data‐cleaning procedures.",
+   "Here we first show the prediction results based on the GBRT model on the different datasets.",
+   "Shown in  Table \n \n 1 \n  are the prediction performance using four different datasets in our study.",
+   "While dataset #1 includes HOMO CV  and LUMO CV , dataset #2 includes HOMO Voc /LUMO Voc .",
+   "To improve the quality of datasets #1 and #2, we use either ΔHOMO or ΔLUMO as the error indicator to identify problematic data in datasets #1 and #2.",
+   "Based on the ΔLUMO shown in Figure  2b , dataset #3 is formed after performing this data cleansing procedure on dataset #1, while dataset #4 is formed from dataset #2.",
+   "Table 1   Prediction performance of our methodology (based on the sub‐unit‐based molecular description and GBRT model) using four different datasets with gradually improved data quality.",
+   "991    Data set #3, data set #1 minus 30% less accurate data  0.",
+   "993    Data set #4, data set #2 minus 30% less accurate data  0.",
+   "These results clearly show two trends: 1) as datasets #3 and #4 outperform datasets #1 and #2, this means that our data cleansing procedure is indeed effective in reducing data error and improving the performance of prediction.",
+   "In addition, the fact that datasets #2 and #4 yield better results than datasets #1 and #3 shows HOMO Voc /LUMO Voc  data can achieve better performance than those based on CV measurement (dataset #1)."
+  ],
+  "repo_urls": []
+ },
+ "koskin_polymers2026": {
+  "doi": "10.3390/polym18070879",
+  "title": "Fine-Tuning Directional Message Passing Neural Networks: Predicting Properties of Conjugated Organic Polymers with High Accuracy.",
+  "pmcid": "PMC13075011",
+  "license": "cc by",
+  "abstract": "Conjugated organic polymers are the cornerstone of modern organic electronics, yet accurate prediction of their properties remains a challenging task due to their synthetic complexity and high computational cost of quantum-chemical methods. Here, we develop a graph neural network based on the DimeNet++ direct message passing architecture to predict HOMO, LUMO and energy gaps of conjugated polymers directly from their 3D monomer structure. The model was pre-trained on TD-DFT-extrapolated data and trained on a limited dataset of experimentally measured properties. As a result, pre-training had significantly improved model's accuracy compared to direct training (MAEs ~0.3 eV vs. 0.074 eV, 0.141 and 0.172 for HOMO/LUMO and energy gap, respectively). Pre-training on monomer DFT data did not provide comparable gains. The results demonstrate that polymer-relevant pre-training is critical for capturing structure-property relationships and enables accurate predictions without delta-learning or prior quantum-chemical calculations, facilitating efficient screening and rational design of conjugated polymers for organic optoelectronics.",
+  "availability_sections": [
+   [
+    "2.1. Dataset Preparation",
+    " Two datasets were adopted for the purpose of model training:  Dataset A  [ 53 ] and  Dataset B  [ 19 ].  Dataset A  contained ~60,000 datapoints: HOMO/LUMO and energy gap of monomers calculated at B3LYP/6-31G* level of theory ( Dataset A-DFT ) as well as HOMO/LUMO and energy gap energies extrapolated from a single monomer to a series of oligomers and then to a polymer limit utilizing the TD-DFT/B3LYP/6-31G* level of theory ( Dataset A-TD ).  Dataset B  contained ~1300 datapoints of experimentally measured HOMO/LUMO and energy gap of conjugated organic polymers.  Dataset A-TD  was truncated to ~54,000 datapoints, cutting out molecules with energy gaps lower than 1.0 eV and higher than 2.4 eV to ensure better overlap between  Dataset A-TD  and  Dataset B  (see  Table S2 in Supplementary Materials  for additional information). Additionally, duplicate datapoints were removed from  Dataset B . Box-Cox transformation was applied to every dataset in order to convert it from non-normal form into a normal distribution, which stabilizes variance and improves fitting for regression models. Each dataset was split into training, testing and validation subsets at an 8:1:1 ratio. A representative example of typical compounds found in  Dataset A  and  Dataset B , respectively, can be seen in  Figure 1 . "
+   ]
+  ],
+  "notes": [
+   " Data Availability Statement  All ML models’ weights presented in this work; the raw data regarding ML training can be found in an open GitHub repository:  https://github.com/Levitsiy/PolymersPropertiesPrediction , accessed on 30 March 2026. "
+  ],
+  "table_captions": [
+   " Representative examples of molecules and polymers found in ( a )  Dataset A ; ( b )  Dataset B . ",
+   " Schematic graphical representation of DimeNet++ architecture. RBF and SBF stand for radial basis functions and spherical basis functions, respectively. Violet, green and red rectangles denote embedding, interaction and output layers of the architecture, black arrows depict information and data pass",
+   " Datapoint value distributions depicted as column charts for: ( a )  Dataset A-DFT ; ( b )  Dataset A-TD ; ( c )  Dataset B . Green columns represent HOMO values, red columns—LUMO values, yellow—electron gap values. ",
+   " Mean absolute errors (MAE) on validation sets of HOMO (green column), LUMO (red column) and energy gap (yellow) energies for Model 1, Model 2a, Model 3a, Model 2 and Model 3—first, second, third, fourth and fifth sets of columns, respectively. ",
+   " Overall performance and data distribution of Model 3a (X-axis—values, predicted by the model, Y-axis—expected values) for ( a ) HOMO energy on training dataset; ( b ) HOMO energy on testing dataset, ( c ) LUMO on training dataset; ( d ) LUMO on testing dataset; ( e ) energy gap on training dataset;"
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "The model was pre-trained on TD-DFT-extrapolated data and trained on a limited dataset of experimentally measured properties.",
+   "07 eV, as was demonstrated for HOMO/LUMO energies and energy gap for a wide database of conjugated organic polymers.",
+   "To achieve this, we pre-trained our GNN model on the dataset containing the energy gap and HOMO/LUMO energies of monomers with structural characteristics similar to the studied conjugated polymers.",
+   "Dataset Preparation  Two datasets were adopted for the purpose of model training:  Dataset A  [ 53 ] and  Dataset B  [ 19 ].",
+   "Box-Cox transformation was applied to every dataset in order to convert it from non-normal form into a normal distribution, which stabilizes variance and improves fitting for regression models.",
+   "Each dataset was split into training, testing and validation subsets at an 8:1:1 ratio.",
+   "The value distribution for adopted datasets is shown in  Figure 3 .",
+   "These limitations are hard to overcome as acquiring new datapoints to widen the dataset in any significant way requires time-consuming synthetic procedures and measurements.",
+   "strategy to training the GNN model directly on experimentally measured HOMO/LUMO and energy gaps of conjugated organic polymers is the fine-tuning approach, which constitutes pre-training on a wider dataset and then the final training on a narrower dataset with or without freezing pre-trained model weights.",
+   "This approach not only allowed us to overcome the lack of datapoints in the dataset but also improved the overall accuracy of the model.",
+   "As a result of the training and validation process, the model was still indirectly influenced by these effects due to fitting output results on the dataset of experimentally measured data.",
+   "s of error, it is still indicative of the model’s overall performance and, hence, applicability of presented architecture to other classes and groups of polymers if provided pre-training and training datasets of acceptable quality.",
+   "While direct training of DimeNet++ model on a limited experimental dataset resulted in unsatisfactory predictive performance (MAEs &gt; 0.",
+   "Pre-training on TD-DFT extrapolated data followed by training on an experimental dataset was shown to be the most efficient approach resulting in mean absolute errors as low as 0.",
+   "Characteristics of datasets utilized in this work (points—the amount of datapoints in a dataset, min/max–lowest and highest value of said property in a dataset); Table S3."
+  ],
+  "repo_urls": [
+   "https://github.com/Levitsiy/PolymersPropertiesPrediction"
+  ]
+ },
+ "meng_jcp2026": {
+  "doi": "10.1063/5.0333521",
+  "title": "Physics-informed transfer learning via frontier orbital pretraining for prediction of polymer electronic properties.",
+  "pmcid": null,
+  "license": null,
+  "abstract": "Accurate prediction of electronic properties, including bandgap, ionization energy (IE), and electron affinity (EA), is central to the design of polymer electronic materials but is hindered by the vast chemical space and the high cost of reliable reference data. Here, a frontier orbital-guided learning framework is proposed that integrates low-cost quantum chemical pretraining with transfer learning to enable efficient and physically consistent prediction of polymer electronic properties. The model is pretrained on GFN2-xTB-derived frontier orbital properties of polymer trimers and subsequently fine-tuned using limited highfidelity data to predict chain bandgap (bandgap-chain), bulk bandgap (bandgap-bulk), IE, and EA. The resulting models exhibit consistently high predictive accuracy across all target properties, with test-set mean absolute errors of 0.246 eV for bandgap-chain, 0.269 eV for bandgap-bulk, 0.169 eV for IE, and 0.136 eV for EA, corresponding to RMSE values below 0.360 eV, while maintaining strong correlation with reference data (R2 > 0.90) and preserving key physical behaviors, including chain-length scaling and inter-property consistency. Leveraging this framework, electronic properties of ∼12 × 106 polymer repeat units are predicted, enabling statistically robust fragment-level analysis in which the observed trends remain consistent with established physical intuition and known structure-property relationships. This work provides a scalable and data-efficient framework for machine learning-assisted screening and design of polymer electronic materials.",
+  "oa_landing": null,
+  "oa_pdf": null,
+  "oa_license": null,
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "saeki_dd2025": {
+  "doi": "10.1039/d5dd00418g",
+  "title": "Design of simple-structured conjugated polymers for organic solar cells by machine learning-assisted structural modification and experimental validation",
+  "oa_landing": "https://doi.org/10.1039/d5dd00418g",
+  "oa_pdf": "https://pubs.rsc.org/en/content/articlepdf/2025/dd/d5dd00418g",
+  "oa_license": "cc-by",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "deng_msde2025": {
+  "doi": "10.1039/d4me00188e",
+  "title": "Transfer learning accelerated discovery of conjugated oligomers for advanced organic photovoltaics",
+  "oa_landing": "https://doi.org/10.1039/d4me00188e",
+  "oa_pdf": "https://pubs.rsc.org/en/content/articlepdf/2025/me/d4me00188e",
+  "oa_license": "cc-by-nc",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "peng_npj2024_fmo": {
+  "doi": "10.1038/s41524-024-01403-6",
+  "title": "Construction frontier molecular orbital prediction model with transfer learning for organic materials",
+  "oa_landing": "https://doi.org/10.1038/s41524-024-01403-6",
+  "oa_pdf": "https://www.nature.com/articles/s41524-024-01403-6.pdf",
+  "oa_license": "cc-by-nc-nd",
+  "landing_fetch": "ok",
+  "repo_urls": []
+ },
+ "ie_ea_aenm2025": {
+  "doi": "10.1002/aenm.202403707",
+  "title": "From Experimental Values to Predictive Models: Machine Learning‐Driven Energy Level Determination in Organic Semiconductors",
+  "oa_landing": "https://doi.org/10.1002/aenm.202403707",
+  "oa_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.202403707",
+  "oa_license": null,
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "sizeresgraph_omega2026": {
+  "doi": "10.1021/acsomega.6c08651",
+  "title": "SizeResGraph-Guided GFN2-xTB Screening of Low-Gap Thiophene-Containing Polymer Repeat Units",
+  "oa_landing": "https://doi.org/10.1021/acsomega.6c08651",
+  "oa_pdf": null,
+  "oa_license": "cc-by-nc-nd",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "liu_pufp_npj2025": {
+  "doi": "10.1038/s41524-025-01608-3",
+  "title": "Advancing organic photovoltaic materials by machine learning-driven design with polymer-unit fingerprints",
+  "oa_landing": "https://doi.org/10.1038/s41524-025-01608-3",
+  "oa_pdf": "https://www.nature.com/articles/s41524-025-01608-3.pdf",
+  "oa_license": "cc-by-nc-nd",
+  "landing_fetch": "ok",
+  "repo_urls": []
+ },
+ "ringvault_chemsci2025": {
+  "doi": "10.1039/d5sc04079e",
+  "title": "High-throughput electronic property prediction of cyclic molecules with 3D-enhanced machine learning.",
+  "pmcid": "PMC12502961",
+  "license": "cc by",
+  "abstract": "Complex organic molecules play a pivotal role in bioactive compounds and organic functional materials, yet existing molecular datasets lack structural diversity for such systems, limiting the generalizability of machine learning (ML) models. This study introduces a high-quality dataset, Ring Vault, comprising 201 546 cyclic molecules, including monocyclic, bicyclic, and tricyclic systems, spanning 11 non-metallic elements. This dataset covers a wide chemical space and provides a robust foundation for molecular property prediction. Leveraging quantum mechanical (QM) calculations on a subset (36 000 molecules), we trained three ML models (Graph Attention Network, Chemprop, and AIMNet2) to predict five key electronic properties: HOMO-LUMO gap, ionization potential (IP), electron affinity (EA), and redox potentials (<i>E</i> <sub>ox</sub>, <i>E</i> <sub>red</sub>). The fine-tuned AIMNet2 model, incorporating 3D conformational information, outperformed 2D-based models, achieving <i>R</i> <sup>2</sup> values exceeding 0.95 and reducing mean absolute errors (MAEs) by over 30%. Principal component analysis (PCA) of AIMNet2 embeddings revealed intrinsic correlations between electronic properties and structural features, such as conjugation extent and functional group effects. This work establishes a robust framework for high-throughput screening and rational design of cyclic molecules, with applications spanning drug discovery, organic electronics, and energy materials. The dataset and methodology provide a foundation for exploring complex structure-property relationships and accelerating functional molecule discovery.",
+  "availability_sections": [
+   [
+    "Dataset",
+    " We have constructed the Ring Vault database containing 201 546 cyclic molecules, including 15 347 monocyclic molecules, 79 777 bicyclic molecules, and 106 422 tricyclic molecules ( Fig. 1(d) ). Rings are connected through fused, bridged, spiro, and diaryl-like systems. The ring sizes range from 3 to 9. Ring systems were extracted from commercially available compounds (Sigma-Aldrich,  27   Enamine,  28   WuXi,  29   MolPort  30  ) and literature-reported building blocks and reagents (PubChem,  31   ChEMBL,  32   SureChEMBL  33  ). These rings represent the majority of known carbocycles and heterocycles, including an extended set of elements like S, Si, P, Se, B, and I.  Fig. 1(a) and (b)  presents statistical information on the distribution of atom counts and elements within the molecules in the dataset. The molecules in this dataset contain between 3 and 24 heavy atoms, with the largest molecule consisting of 59 atoms, covering a broad chemical space.   Fig. 1   Overview of the dataset. (a) Distribution of the number of atoms per molecule. (b) Distribution of element types. (c) Distribution of SCScore values. (d) Composition of molecules with one, two, and three rings.                      We additionally computed the Synthetic Complexity Score (SCScore)  34   for each molecule in the dataset to assess synthetic accessibility. The distribution is presented in  Fig. 1(c) . The SCScore values span a broad range, demonstrating that the dataset includes both synthetically access"
+   ],
+   [
+    "Predicting the full dataset with the AIMNet2 model",
+    " The above results have demonstrated that the AIMNet2 model, which incorporates 3D molecular structural information, outperforms the GAT and Chemprop models that rely solely on 2D molecular topology in predicting molecular properties. Therefore, we utilized AIMNet2 to predict the target properties for all molecules in the dataset and further analyzed the distribution characteristics and interrelationships of these properties.  \n Fig. 5(a)  illustrates the distribution of five molecular properties. The HOMO–LUMO gap ranges from 3.05 to 15.02 eV, IP spans from 3.79 to 13.78 eV, EA varies between −3.64 and 4.86 eV,  E  ox  ranges from −2.37 to 8.39 eV, and  E  red  spans from −5.80 to 1.89 eV. These distributions highlight the dataset's broad molecular diversity, covering systems with a wide range of redox characteristics, from strong oxidants to strong reductants.   Fig. 5   (a) Histogram of the distribution of five properties predicted by the AIMNet2 model on the entire dataset. (b) Correlation between IP and  E  ox . (c) Correlation between EA and  E  red .                      In  Fig. 5(b) and (c) , we analyzed the relationships between  E  ox  and IP, as well as  E  red  and EA, respectively. The results show that both property pairs exhibit  R  2  values exceeding 0.9, indicating a strong linear correlation. Since IP is commonly approximated by the HOMO energy, and EA can be derived from the LUMO energy, some approaches directly predict redox potentials based on molecular"
+   ],
+   [
+    "Data availability",
+    " The dataset and trained AIMNet2 model for ring systems are available at  https://github.com/pkzheng94/ring.git .  Supplementary information: details of model hyperparameters, parity plots of all property predictions, and prediction outliers. See DOI:  https://doi.org/10.1039/d5sc04079e . "
+   ]
+  ],
+  "notes": [],
+  "table_captions": [
+   " Overview of the dataset. (a) Distribution of the number of atoms per molecule. (b) Distribution of element types. (c) Distribution of SCScore values. (d) Composition of molecules with one, two, and three rings. ",
+   " Workflow of data preparation and model training. ",
+   " The performance of the GAT model on the test data set by using different training set sizes. The units of Gap, IP, and EA are in eV, and  E  red  and  E  ox  are in V. ",
+   " The performance of different models on the test set. The units of Gap, IP, and EA are in eV, and  E  ox  and  E  red  are in V ",
+   " Performance of GAT (a), Chemprop (b), and AIMNet2 (c) model for the HOMO–LUMO gap on the test data set. ",
+   " (a) Histogram of the distribution of five properties predicted by the AIMNet2 model on the entire dataset. (b) Correlation between IP and  E  ox . (c) Correlation between EA and  E  red . ",
+   " PCA projection of the AIMNet2 molecular embeddings. (a) Points color-coded by HOMO–LUMO gap (eV). (b) Points color-coded by  E  ox  (V). (c) Points color-coded by  E  red  (V). The three molecules with the highest, lowest, and closest-to-average values for each property are highlighted on the right",
+   " Effect of molecular structural modifications on (a)  E  red  (V) and (b) the HOMO–LUMO gap (eV). Black values correspond to DFT calculations, while blue values represent AIMNet2 predictions. "
+  ],
+  "mentions_Se": true,
+  "mentions_Te": false,
+  "data_sentences": [
+   "Complex organic molecules play a pivotal role in bioactive compounds and organic functional materials, yet existing molecular datasets lack structural diversity for such systems, limiting the generalizability of machine learning (ML) models.",
+   "This study introduces a high-quality dataset, Ring Vault, comprising 201 546 cyclic molecules, including monocyclic, bicyclic, and tricyclic systems, spanning 11 non-metallic elements.",
+   "This dataset covers a wide chemical space and provides a robust foundation for molecular property prediction.",
+   "The dataset and methodology provide a foundation for exploring complex structure–property relationships and accelerating functional molecule discovery.",
+   "8    Recent advances in computational databases and machine learning (ML) frameworks have significantly expanded the tools available for molecular property prediction and accelerated the exploration of ring systems.",
+   "Large-scale quantum chemical databases like QM9 (ref.",
+   "The VERDE Materials Database curates over 1500 π-conjugated organic molecules with ground- and excited-state geometries and photophysical properties,  11   while the Harvard Organic Photovoltaic dataset (HOPV15) compiles experimental photovoltaic measurements and corresponding QM calculations for organic solar-cell molecules.",
+   "12   Furthermore, a study on photocatalytic hydrogen evolution used a 572-molecule experimental library combined with QM calculations and ML to predict activity,  13   and a curated 25-k-molecule dataset combining DFT and TDDFT properties demonstrated the power of graph neural networks in electronic-property prediction.",
+   "4 million medicinally relevant ring systems was generated based on bioactive-derived rules;  17   the VEHICLe library catalogs 24 847 aromatic heterocycles;  18   and a 600 k heteroaromatic scaffold database characterized by calculated structural and quantum properties supports scaffold hopping and virtual screening.",
+   "23   These datasets have significantly expanded computational data for cyclic molecular systems, providing a robust foundation for data-driven molecular property predictions.",
+   "This study presents Ring Vault, a high-quality dataset comprising over 200 000 cyclic molecules, encompassing monocyclic, bicyclic, and tricyclic structures, and incorporating 11 non-metallic elements.",
+   "This dataset expands the chemical space available for molecular property prediction, enhancing both the diversity and applicability of ML models.",
+   "Using this dataset, we systematically evaluated the performance of three ML models: Graph Attention Network (GAT),  24   Chemprop,  25   and AIMNet2.",
+   "26   Furthermore, we employed AIMNet2 to predict the target properties of all molecules in the dataset and conducted principal component analysis (PCA) to explore the intrinsic relationship between molecular embeddings and properties.",
+   "Method   Dataset  We have constructed the Ring Vault database containing 201 546 cyclic molecules, including 15 347 monocyclic molecules, 79 777 bicyclic molecules, and 106 422 tricyclic molecules ( Fig."
+  ],
+  "repo_urls": [
+   "https://github.com/pkzheng94/ring.git"
+  ]
+ },
+ "ofetnow_jacs2026": {
+  "doi": "10.1021/jacs.6c11486",
+  "title": "Machine-Learning Prediction of Carrier Mobility and Polarity Type of Polymer Semiconductors: from High-Fidelity Data to Experimental Realization",
+  "oa_landing": null,
+  "oa_pdf": null,
+  "oa_license": null,
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "cemp_jcheminf2026": {
+  "doi": "10.1186/s13321-026-01295-2",
+  "title": "CEMP: an online cheminformatics platform for clean energy materials",
+  "oa_landing": "https://doi.org/10.1186/s13321-026-01295-2",
+  "oa_pdf": null,
+  "oa_license": "cc-by-nc-nd",
+  "landing_fetch": "ok",
+  "repo_urls": []
+ },
+ "solarrrl_544pairs_2025": {
+  "doi": "10.1002/solr.202400846",
+  "title": "Designing Donors and Nonfullerene Acceptors for Organic Solar Cells Assisted by Machine Learning and Fragment‐Based Molecular Fingerprints",
+  "oa_landing": null,
+  "oa_pdf": null,
+  "oa_license": null,
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "cnn_absorption_jcim2024": {
+  "doi": "10.1021/acs.jcim.3c01792",
+  "title": "Automatic Prediction of Peak Optical Absorption Wavelengths in Molecules Using Convolutional Neural Networks.",
+  "pmcid": "PMC10934802",
+  "license": "cc by",
+  "abstract": "Molecular design depends heavily on optical properties for applications such as solar cells and polymer-based batteries. Accurate prediction of these properties is essential, and multiple predictive methods exist, from <i>ab initio</i> to data-driven techniques. Although theoretical methods, such as time-dependent density functional theory (TD-DFT) calculations, have well-established physical relevance and are among the most popular methods in computational physics and chemistry, they exhibit errors that are inherent in their approximate nature. These high-throughput electronic structure calculations also incur a substantial computational cost. With the emergence of big-data initiatives, cost-effective, data-driven methods have gained traction, although their usability is highly contingent on the degree of data quality and sparsity. In this study, we present a workflow that employs deep residual convolutional neural networks (DR-CNN) and gradient boosting feature selection to predict peak optical absorption wavelengths (λ<sub>max</sub>) exclusively from SMILES representations of dye molecules and solvents; one would normally measure λ<sub>max</sub> using UV-vis absorption spectroscopy. We use a multifidelity modeling approach, integrating 34,893 DFT calculations and 26,395 experimentally derived λ<sub>max</sub> data, to deliver more accurate predictions via a Bayesian-optimized gradient boosting machine. Our approach is benchmarked against the state of the art that is reported in the scientific literature; results demonstrate that learnt representations via a DR-CNN workflow that is integrated with other machine learning methods can accelerate the design of molecules for specific optical characteristics.",
+  "availability_sections": [],
+  "notes": [
+   " Data Availability Statement  We have made\nthe code scripts used in this study available at  https://github.com/Songyosk/UVVIS  and  https://github.com/Songyosk/GBFS4MPPML . ",
+   " Supporting Information Available  The Supporting Information is\navailable free of charge at  https://pubs.acs.org/doi/10.1021/acs.jcim.3c01792 .   Bayesian optimization and the acquisition schemes used\nin this study, pseudocode for Bayesian optimization, regression analysis\nof the ML-based prediction of the vertical excitation energies against\nthe DFT-based calculations, regression analysis of the ML-based prediction\nof the experimental optical absorption peak of unseen chemical dyes\nagainst their experimental measurements, and distributions of the\nabsolute errors of the ML-based prediction of optical absorption peak\nagainst the experimental measurements, partitioned by solvent types\n( PDF )    "
+  ],
+  "table_captions": [
+   " Overview of our operational workflow compartmentalized\ninto two\ndistinct subworkflows. The subworkflow compartmentalization in blue\nindicates the GBFS framework that has been designed to identify a\nsubset of features which affords minimal feature redundancy and maximal\nrelevance to the target varia",
+   " Diagram depicting the process of feature matrix generation\nfrom\na SMILES string of a chemical molecule. (a) SMILES string is broken\nup into a sequence of strings using a rule-based tokenizer. (b) Individual\nsymbols, elements, and ions of the chemical molecule form the columns\nof the feature matrix.",
+   " List of Data Sources and the Corresponding\nNumber of Experimental Measurement of Peak Optical Absorption Wavelengths a  ",
+   " List of Features Used to Generate\nthe Feature Matrix, as Shown in  Figure  2   a  ",
+   " (a) Schematic\nof the DR-CNN model architecture. As an input, the\nnetwork takes in a feature matrix, as defined in  Figure  2  , whose features are listed\nin  Table  2  . The first\nconvolutional layer consists of ZeroPadding, Conv2D with 64 filters\n(i.e., f:64), BatchNorm, ReLU, and MaxPooling opera",
+   " Regression analysis of the ML-based prediction of vertical\nexcitation\nenergies, and their corresponding peak wavelengths (λ max ), against the DFT-based calculations. The two separate predictions\nwere made by two Bayesian-optimized gradient boosting models that\nwere trained on (a) DFR from the DR-C",
+   " Regression analysis of the multifidelity ML model prediction\nof\nthe optical absorption peak wavelength (λ max ) values\nof unseen chemical dyes against their experimental measurements. The\ntwo separate predictions were made by two Bayesian-optimized gradient\nboosting models with a training set that ",
+   " Distributions of the absolute errors of the ML-based prediction\nof the optical absorption peak wavelength (λ max )\nagainst the experimental measurements. (a) Error distribution obtained\nusing the random splitting strategy and (b) error distribution obtained\nusing the scaffold splitting approach. Th",
+   " Summary of the Model Performance Categorized\nby the Choice of Workflow, Data Type, Splitting Strategy, and the\nStatistical figures of Merit, which Includes MAE, MSE, and the Coefficient\nof Determinant ( R  2 ) ",
+   " List of Features Identified to Have\nthe Most Relevance in the Prediction of λ max  Values\nagainst Their Experimental Measurements of Optical Absorption Peak\nWavelength a  ",
+   " Bar chart depicting the total loss reduction realized\nby the top\n10 features that were identified to have the most relevance to the\nexperimental measurements of the optical absorption peak wavelength,\nusing the (a) random and (b) scaffold splitting strategies. The corresponding\nfeature descriptions",
+   " Examples\nof input molecules and the corresponding prediction of\nλ max  values against their experimental measurements.\nThe input to the prediction is exclusively the SMILES string of the\nsubject molecule, unless the user wishes to include solvent information\nfor which its SMILES string will then be",
+   " ci3c01792_si_001.pdf "
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "These efforts within computational materials science\nhave led to\nthe creation of repositories with extensive data sets of chemical\nstructures and properties.",
+   "ggregated chemical\ninformation, together with the emergence of big-data initiatives,\nhas led to data-driven approaches surging in interest due to their\nability to process and analyze high-dimensional data sets from which\npreviously unseen patterns and relations can be deduced.",
+   "The scarcity\nof large UV–vis data sets often limits research efforts to\ntypically focus on a subset of the chemical space, such as a single\nfamily of dye molecules, and models commonly disregard the solvent\nenvironment of the molecules.",
+   "Recently published open-source data\nsets of experimental UV–vis spectroscopic properties and computed\ndata sets of excitation energies have helped tackle the data sparsity\nand chemical diversity issues to a certain extent.",
+   "There are notable studies that apply ML techniques, using relatively\nlarge training data sets, to predict the peak optical absorption and\nemission wavelengths or the electronic transition energy of chemical\nmolecules.",
+   "They utilized a subset of approximately half a million\nmolecules from the PubChemQC database, which contains TD-DFT calculations\nof approximately 4 million molecules in PubChem.",
+   "This was achieved using an experimental database of 30,094 chromophore–solvent\ncombinations, of which there were 11,392 organic chromophores in 369\ndifferent solvents or in the solid state.",
+   "re reported\nin the scientific literature, and we demonstrate the efficacy and\ngeneralizability of the aforementioned methods by applying them on\nseveral of the most extensive open-source experimental data sets using\ntwo splitting strategies.",
+   "28   These data sets were chosen\ndue to their size and formatting style.",
+   "The data set was manipulated\nvia the filtration of valid dye and solvent SMILES strings using RDKit,  44   in addition to the elimination of entries with\nmultiple dye molecules or molecular clusters.",
+   "The ChemDataExtractor-generated data set\nwas put aside from the combined experimental data set.",
+   ", as they did not\nuse the ChemDataExtractor-generated data set.",
+   "48   The data set provided by Beard et al.",
+   "The computational data set provided\nby Greenman et al.",
+   "Thereby,\na Bemis–Murcko scaffold was employed using a constraint that\nany dye molecules with an identical scaffold are present only in one\nof the data sets."
+  ],
+  "repo_urls": [
+   "https://github.com/Songyosk/GBFS4MPPML",
+   "https://github.com/Songyosk/UVVIS"
+  ]
+ },
+ "mapping_scp_mh2025": {
+  "doi": "10.1039/d5mh00485c",
+  "title": "Mapping the structure-function landscape of semiconducting polymers.",
+  "pmcid": "PMC12089976",
+  "license": "cc by-nc",
+  "abstract": "The molecular design of semiconducting polymers (SCPs) has been largely guided by varying monomer combinations and sequences by leveraging a robust understanding of charge transport mechanisms. However, the connection between controllable structural features and resulting electronic disorder remains elusive, leaving design rules for next-generation SCPs undefined. Using high-throughput computational methods, we analyse 100+ state-of-the-art p- and n-type polymer models. This exhaustive dataset allows for deriving statistically significant design rules. Our analysis disentangles the impact of key structural features, examining existing hypotheses, and identifying new structure-property relationships. For instance, we show that polymer rigidity has minimal impact on charge transport, while the planarity persistence length, introduced here, is a superior structural characteristic. Additionally, the predictive power of machine learning models trained on our dataset highlights the potential of data-driven approaches to SCP design, laying the groundwork for accelerated discovery of materials with tailored electronic properties.",
+  "availability_sections": [
+   [
+    "Data availability",
+    " Simulation files, including structure and force field for all 105 SCPs, simulation files of initial and equilibrated “soup” models for 5 SCPs, MD parameter files, and a CSV spreadsheet with all the plotted quantities for each SCP in the paper are available at  https://github.com/HMakkiMD/SCP_HT . A README file is also provided, detailing a simple guide to navigate through the steps.  All scripts necessary to reproduce the data presented in the paper, including those for density of states (DOS), localization lengths (LL), descriptors (such as tail and band (half) widths (WT and WB), LL(E), persistence length ( L  p ), planarity persistence length ( L  pp ), dipole moments ( μ  GAS )), reduced tight-binding models, and machine learning analysis based on random forest, are available at  https://github.com/HMakkiMD/SCP_HT . The codes for QC/MD calculations encompassing force field development and model construction, input generation for QC calculations, and codes for density of states and localisation length calculations are available at  https://github.com/HMakkiMD/GAMMPS . "
+   ],
+   [
+    "Associated Data",
+    "  Supplementary Materials    MH-012-D5MH00485C-s001       "
+   ],
+   [
+    "Data Availability Statement",
+    " Simulation files, including structure and force field for all 105 SCPs, simulation files of initial and equilibrated “soup” models for 5 SCPs, MD parameter files, and a CSV spreadsheet with all the plotted quantities for each SCP in the paper are available at  https://github.com/HMakkiMD/SCP_HT . A README file is also provided, detailing a simple guide to navigate through the steps.  All scripts necessary to reproduce the data presented in the paper, including those for density of states (DOS), localization lengths (LL), descriptors (such as tail and band (half) widths (WT and WB), LL(E), persistence length ( L  p ), planarity persistence length ( L  pp ), dipole moments ( μ  GAS )), reduced tight-binding models, and machine learning analysis based on random forest, are available at  https://github.com/HMakkiMD/SCP_HT . The codes for QC/MD calculations encompassing force field development and model construction, input generation for QC calculations, and codes for density of states and localisation length calculations are available at  https://github.com/HMakkiMD/GAMMPS . "
+   ]
+  ],
+  "notes": [],
+  "table_captions": [
+   " (a) Structures and acronyms of monomers used in this study. CH 3  groups are used to indicate the connection with the alkyl side chain. (b) Schematic representation of the Embedded Chain (“embd”) model used for DOS and LL calculations, as described in ref.  32 . (c) Example results for a p-type pol",
+   " (a) Correlation graph between persistence length,  L  p , and localisation length for “iso” models, LL(iso) ( S  = 0.49). (b) Illustrative side views of polymer chains with relatively large and small planarity persistence length ( L  pp ). Rectangles represent monomers, with arrows indicating the n",
+   " (a) Schematic representation of the reduced model used to quantify electrostatic and coupling disorder, along with an example of the fitting process applied to “iso” and “embd” models. (b) Correlation between the ratio of coupling ( β ) to the diagonal disorder ( σ ( α )), and the localisation leng",
+   " (left) Comparison of predicted localisation length from the machine learning model, LL(ML), with the calculated localisation length from the QM/MM method, LL(embd), for a test set comprising one-third of the dataset. The upper half of each circle represents LL(embd), while the lower half shows the "
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "This exhaustive dataset allows for deriving statistically significant design rules.",
+   "Additionally, the predictive power of machine learning models trained on our dataset highlights the potential of data-driven approaches to SCP design, laying the groundwork for accelerated discovery of materials with tailored electronic properties.",
+   "The availability of a homogenous (and expandable) dataset also enables the derivation of statistically significant design rules, gradually replacing the traditional approach of formulating research hypotheses tested on a limited number of cases.",
+   "Because of the sizeable dataset, we can derive a machine learning (ML) method to predict LL from easy-to-compute quantities, enabling an ultra-rapid screening of potentially interesting polymers.",
+   "We used the Random Forest algorithm  45   to predict LL(embd) from these descriptors, selecting one-third of the dataset as a test set to validate the model (see details in Method).",
+   "Furthermore, the present ML model is developed for undoped linear SCPs and different classes require dedicated alternative data sets.",
+   "omparison of predicted localisation length from the machine learning model, LL(ML), with the calculated localisation length from the QM/MM method, LL(embd), for a test set comprising one-third of the dataset.",
+   "For machine learning (ML) study, we employed a Random forest regressor to predict the LL(embd) of SCPs using a dataset containing three molecular descriptors:  β  (coupling, calculated by method explained ESI, †  Section S5),  L  pp  (obtained from small MD simulation of dimers explained in ESI, †  Section S4."
+  ],
+  "repo_urls": [
+   "https://github.com/HMakkiMD/GAMMPS",
+   "https://github.com/HMakkiMD/SCP_HT"
+  ]
+ },
+ "polytellurophene_review_2025": {
+  "doi": "10.1039/d5py00439j",
+  "title": "Developments in polytellurophenes and tellurophene-containing polymers: from synthesis to applications",
+  "oa_landing": "https://doi.org/10.1039/d5py00439j",
+  "oa_pdf": "https://pubs.rsc.org/en/content/articlepdf/2025/py/d5py00439j",
+  "oa_license": "cc-by-nc",
+  "landing_fetch": "__ERR__ HTTP Error 403: Forbidden",
+  "repo_urls": []
+ },
+ "kyhoiesh_jmgm2025": {
+  "doi": "10.1016/j.jmgm.2025.109154",
+  "title": "A machine learning-gaussian process screening of carbazole based donors to design efficient organic polymers for photovoltaic applications.",
+  "pmcid": null,
+  "license": null,
+  "abstract": "Rapid industrialization is creating a serious threat to natural resources due to the overuse of fossil fuels. This is not only destroying the environment, but their extinction is also expected soon. Such a situation has increased the interest of scientists in designing new photovoltaic (PV) materials with tailored applications. In this study, a machine learning (ML)-assisted approach was proposed for the identification of optimal carbazole-based donor materials aimed at increasing the efficiency of organic PVs (OPVs). An extensive dataset comprising 592 carbazole-derived organic compounds was curated from existing literature, and their open circuit voltage (V<sub>oc</sub>), is calculated. Through a targeted analysis, the top-performing donors exhibiting the highest V<sub>oc</sub> values are identified. These selected donors are subsequently employed to design new TIC-based polymers to contribute a notable enhancement of the V<sub>oc</sub> in the resulting PV devices. Results demonstrate ML potential to accelerate the discovery and optimization of organic solar materials, paving the way for the development of more sustainable and effective PV technologies.",
+  "oa_landing": null,
+  "oa_pdf": null,
+  "oa_license": null,
+  "landing_fetch": "ok",
+  "repo_urls": []
+ },
+ "zindo_dml_jctc2026": {
+  "doi": "10.1021/acs.jctc.5c01587",
+  "title": "Predicting S&lt;sub&gt;1&lt;/sub&gt; TDDFT Energies from ZINDO Calculations Using Message-Passing ΔML with Electronically Informed Descriptors.",
+  "pmcid": "PMC12895415",
+  "license": "cc by",
+  "abstract": "We present a machine learning approach (ΔML) capable of enhancing the accuracy of semiempirical excited-state energy calculations to a level close to that of Time-Dependent Density Functional Theory (TDDFT). Using a data set of 7600 organic π-conjugated molecules calculated at the ZINDO and M06-2X/3-21G* TDDFT computational levels, we trained a set of models to learn the systematic errors of the low-level method and correct it toward higher-level accuracy values. The best performing model improved the correlation of ZINDO S<sub>1</sub> energy predictions from 0.77 to 0.96 on a 9500 molecule test set of TDDFT target energies. Our ΔML-ZINDO model presents a negligible additional cost (∼2 ms per molecule) to a standard ZINDO calculation (∼2 s per molecule), enabling the computational screening of large data sets of molecules. Critical to the performance of the model is the AttentiveFP Message-Passing Neural Network with added electronic information derived from ZINDO calculations such as particle-hole densities. We also investigate the utility of the Morgan fingerprint and a novel descriptor designed to capture the electronic structure of molecules: a molecular orbital-weighted radial distribution function. The ΔML framework is retrainable to other low- and high-level calculation pairs, achieving an improvement in correlation from 0.88 to 0.99 on a test set of 24,000 molecules from the QCDGE data set, when mapping ZINDO to ωB97X-D/6-31G* energies. We also adapt ΔML-ZINDO for S<sub>1</sub> oscillator strength prediction, improving ZINDO predictions from a correlation of 0.524 to 0.839 on our M06-2X/3-21G* target test set, thus enabling the identification of emissive molecules.",
+  "availability_sections": [
+   [
+    "Associated Data",
+    "  Supplementary Materials        "
+   ],
+   [
+    "Data Availability Statement",
+    " We provide the\ndata set, pretrained models, and PyTorch-based training tutorials\nto reproduce the work in a public GitHub repository.\n "
+   ]
+  ],
+  "notes": [],
+  "table_captions": [
+   " True distribution of the ZINDO and TDDFT first\nexcited-state energies\n(a) and their differences (b). In (a), we see training data points\nin blue and a random sample of 500 test points in red, for which the\nlinear model obtained  r \n train  = 0.778 and  r \n test  = 0.769. ",
+   " (a) MO-weighted radial\ndistribution functions (RDFs) of two molecules\nwhose chemical structures are almost identical, but their HOMOs differ\nsignificantly. (b) MO-weighted RDFs of two molecules whose chemical\nstructures differ significantly, but their HOMOs are almost identical. ",
+   " Block diagrams of layers within the ML models:\n(a) the flow of\ndata through the AttentiveFP model to create a neural fingerprint\n(i.e., the linear output layer); (b) the layers of components within\nthe AttentiveFP algorithm, the initial, atomic, and molecular embedding\nblock; and (c) a 2-layer dens",
+   " Illustrations of three main model types. (a) The stand-alone AttentiveFP\nmodel with both default atom (DA) and additional electronic atom (EA)\ndescriptors. (b) An MPNN-based model variant that operates on the\nZINDO energy, MO-RDF, and AttentiveFP neural fingerprint, which are\nconcatenated and passe",
+   " Metrics  for All of the Main Variants, with the Best\nPerforming Model in\nBold ",
+   " Point density plots showing the distribution\nof TDDFT values against\n(a) the ZINDO linear model predictions and (b) the ΔML-ZINDO\ncorrections from the best performing model: Dense­(MPNN­(DA, EA),  E \n ZINDO , and MO-RDF). Extrapolative validation\ndata is shown as a 2D histogram density heatmap with",
+   " Analysis of\nΔML and linear fit prediction errors: Δ E \n pred  =  E \n pred  –  E \n TDDFT . (a) The 9500 test data distribution of\nabsolute errors between predicted and true TDDFT values, where 95%\nof ML predictions have an error of less than 0.32 eV. (b) Median error\nfor different intervals of TDDFT",
+   " S 1  energies\nfor a 500-HAC sample comparing M06-2X/3-21G*\n(a) and ΔML-ZINDO (b) to the more accurate def2-TZVP basis set. ",
+   " Results from retraining Dense­(MPNN­(DA, EA),  E \n ZINDO , MO-RDF) on the 48k filtered subset of the QCDGE data\nset. This shows predictions on the 24k test set, for (a) ZINDO and\n(b) ΔML-ZINDO against the ωB97X-D/6-31G* TDDFT target. ",
+   " Classification\nand regression performance of ΔML-ZINDO for\nS 1  oscillator strengths ( f ) on the test\nset. (a) Confusion matrix using a threshold of  f  &gt; 0.4\nto classify molecules as potentially emissive. (b) ΔML-ZINDO\npredictions against the TDDFT oscillator strengths. The plot is divided\nint"
+  ],
+  "mentions_Se": false,
+  "mentions_Te": false,
+  "data_sentences": [
+   "99 on\na test set of 24,000 molecules from the QCDGE data set, when mapping\nZINDO to ωB97X-D/6-31G* energies.",
+   "ML methods work well in high-throughput\nvirtual screening (HTVS) \n,\n  and particularly excel\nwhen trained on large and representative data sets, which can be built\nfrom open-source chemical databases, such as PubChem and ZINC.",
+   "Despite the versatility of the approach, many ΔML\nefforts have only trained on small molecule data sets, like QM9, that have limited diversity and do not exhibit the phenomena found in larger systems,\nsuch as extended π-conjugation and nonlocality.",
+   "hermore,\nwhile there are studies that focus on excited-state modeling, \n,,−\n\n  they do not\nconsider how to specifically optimize the diversity of the electronic\nstructure when sampling their training data sets.",
+   "However, many databases contain hundreds of\nmillions of molecules for which TDDFT screening methods are intractable.",
+   "While ΔML frameworks are already well established, the three\nnovel contributions of this work are as follows: (1) The formation\nof a unique-core ZINC-derived data set optimized for electronic structural\ndiversity, as described in  Section \n .",
+   ",,\n  To further illustrate the generalizability\nof our framework, in  Section \n  we apply it to the QCDGE data set and adapt our model to predict S 1  oscillator\nstrengths.",
+   "We provide the train-test data set, pretrained models,\nand training tutorials to reproduce the work in a public GitHub repository.",
+   "Data Set  The availability\nof high-quality excited-states data sets is limited;\nthere are only 3 notable examples:    1  The high-volume PubChemQC database has a subset of 2 million molecules for which\ndata on the first 10 low-lying excited states are available, with\nboth geometries and single points at the B3LYP/6-31+G* TDDFT level.",
+   "2  The QM-symex data set contains 173k molecules of up to 60 heavy atoms,\ncomprised\nof H, B, C, N, O, F, Cl, and Br, with geometries and TDDFT single\npoints for the first 10 states calculated at the B3LYP/6-31G* level.",
+   "3  The QCDGE data set aggregates molecules from the QM9, GDB-11, and PubChemQC databases to form a data set of 443k small organic\nmolecules\nwith up to 10 CNOF heavy atoms.",
+   "(PC9 data set), QM9/GDB-derived data sets can exhibit limited diversity due to enumeration-based\ngeneration; additional constraints such as low heavy-atom counts or\napplication-specific filtering (e.",
+   "Much larger\ndata sets do exist, but they often provide excited-state information\nat more approximate levels of theory, such as the ORNL-AISD data set of 10.",
+   "It matches contemporary data sets in the level of theory while substantially\nincreasing data set volume and  electronic  diversity.",
+   "We started with 12 M commercially available molecules from the (2015)\nZINC database and applied a common-core\nclustering approach to obtain a subset of 150,000 molecules each with\na unique conjugated core, i."
+  ],
+  "repo_urls": []
+ },
+ "saeki_zenodo_17430843": {
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "raw": "__ERR__ HTTP Error 404: NOT FOUND"
+ }
+}
