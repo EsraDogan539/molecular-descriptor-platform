@@ -19,5 +19,5 @@ def test_headline_metrics_match_database():
     assert _shown("Unique structures") == {DB.InChIKey.nunique()}
     assert _shown("S/Se/Te records") == {int((DB.Scope_Flag == "Core_SSeTe").sum())}
     assert _shown("Core S/Se/Te") == {int((DB.Scope_Flag == "Core_SSeTe").sum())}
-    assert _shown("External records") == {int(DB.Record_ID.str.startswith("HAKAN_").sum())}
+    assert _shown("Experimental gaps") == {int(DB.Experimental_Eg_eV.notna().sum())}
     assert _shown("Eg values") == {int(DB.Eg_eV.notna().sum())}

@@ -61,7 +61,8 @@ def test_b_system_removed_without_renumbering(db):
     v1 = pd.read_csv("data/releases/chalcogen_database_v1.csv.gz", low_memory=False)
     kept = v1[~v1.Family.astype(str).str.startswith("B_system")]
     assert list(kept.Record_ID) == list(db.Record_ID[: len(kept)])
-    assert list(db.Record_ID[len(kept):]) == [f"HAKAN_{i:04d}" for i in range(273, 273 + 240)]
+    v11_ids = db.Record_ID[~db.Record_ID.str.startswith("POL_")]
+    assert list(v11_ids[len(kept):]) == [f"HAKAN_{i:04d}" for i in range(273, 273 + 240)]
     merged = kept.merge(db, on="Record_ID", suffixes=("_v1", "_v11"))
     for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
         a, b = merged[f"{col}_v1"], merged[f"{col}_v11"]
@@ -76,7 +77,7 @@ def test_source_annotations(db):
     assert not db.Notes.astype(str).str.contains("Hakan|Erol").any()
     assert set(ext.Solvent_or_Conditions) == {"gas phase", "PCM (acetonitrile)"}
     assert (ext.Solvent_or_Conditions == "PCM (acetonitrile)").sum() == 16 + 94
-    exp = db[db.Experimental_Eg_eV.notna()]
+    exp = ext[ext.Experimental_Eg_eV.notna()]
     assert len(exp) == 21 + 27
     assert exp.Experimental_Eg_Min_eV.notna().all() and exp.Experimental_Eg_Source.notna().all()
     assert (exp.Experimental_Eg_Min_eV <= exp.Experimental_Eg_Max_eV).all()
