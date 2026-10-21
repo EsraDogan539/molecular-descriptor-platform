@@ -1,0 +1,312 @@
+{
+ "LIU": [
+  {
+   "doi": "10.1039/d4nr03702b",
+   "title": "Harnessing DFT and machine learning for accurate optical gap prediction in conjugated polymers",
+   "journal": "Nanoscale",
+   "short": "Nanoscale",
+   "issued": [
+    2025
+   ],
+   "print": [
+    null
+   ],
+   "volume": "17",
+   "issue": "13",
+   "page": "7865-7876",
+   "article": null,
+   "authors": [
+    [
+     "Bin",
+     "Liu",
+     ""
+    ],
+    [
+     "Yunrui",
+     "Yan",
+     ""
+    ],
+    [
+     "Mingjie",
+     "Liu",
+     ""
+    ]
+   ]
+  }
+ ],
+ "SAEKI": [
+  {
+   "doi": "10.1021/acs.jpclett.8b00635",
+   "title": "Computer-Aided Screening of Conjugated Polymers for Organic Solar Cell: Classification by Random Forest",
+   "journal": "The Journal of Physical Chemistry Letters",
+   "short": "J. Phys. Chem. Lett.",
+   "issued": [
+    2018,
+    5,
+    7
+   ],
+   "print": [
+    2018,
+    5,
+    17
+   ],
+   "volume": "9",
+   "issue": "10",
+   "page": "2639-2646",
+   "article": null,
+   "authors": [
+    [
+     "Shinji",
+     "Nagasawa",
+     ""
+    ],
+    [
+     "Eman",
+     "Al-Naamani",
+     ""
+    ],
+    [
+     "Akinori",
+     "Saeki",
+     ""
+    ]
+   ]
+  }
+ ],
+ "KUMAR": [
+  {
+   "doi": "10.1002/jcc.70175",
+   "title": "Accurate Prediction of <scp>HOMO</scp>–<scp>LUMO</scp> Gap Using <scp>DFT</scp> Functional and Application to Next‐Generation Organic Telluro[n]Helicenes Materials",
+   "journal": "Journal of Computational Chemistry",
+   "short": "J Comput Chem",
+   "issued": [
+    2025,
+    7,
+    2
+   ],
+   "print": [
+    2025,
+    7,
+    5
+   ],
+   "volume": "46",
+   "issue": "18",
+   "page": null,
+   "article": "e70175",
+   "authors": [
+    [
+     "Rahul",
+     "Kumar",
+     ""
+    ],
+    [
+     "Rahul",
+     "Kar",
+     ""
+    ],
+    [
+     "Dilip K.",
+     "Maity",
+     ""
+    ]
+   ]
+  }
+ ],
+ "BUYUK": [
+  {
+   "doi": "10.1021/acsomega.5c04257",
+   "title": "Low Band Gap Fused Bicyclic Polymers with Heteroatoms Se and Te: A DFT-PBC Study",
+   "journal": "ACS Omega",
+   "short": "ACS Omega",
+   "issued": [
+    2026,
+    3,
+    2
+   ],
+   "print": [
+    2026,
+    3,
+    17
+   ],
+   "volume": "11",
+   "issue": "10",
+   "page": "15694-15709",
+   "article": null,
+   "authors": [
+    [
+     "Zeki",
+     "Büyükmumcu",
+     ""
+    ],
+    [
+     "Fatma",
+     "Selampinar",
+     ""
+    ]
+   ]
+  }
+ ],
+ "CEMP": [
+  {
+   "doi": "10.1186/s13321-026-01295-2",
+   "title": "CEMP: an online cheminformatics platform for clean energy materials",
+   "journal": "Journal of Cheminformatics",
+   "short": "J Cheminform",
+   "issued": [
+    2026,
+    9,
+    1
+   ],
+   "print": [
+    null
+   ],
+   "volume": null,
+   "issue": null,
+   "page": null,
+   "article": null,
+   "authors": [
+    [
+     "Jifeng",
+     "Wang",
+     ""
+    ],
+    [
+     "Jiazhe",
+     "Ju",
+     ""
+    ],
+    [
+     "Ying",
+     "Wang",
+     ""
+    ]
+   ]
+  }
+ ],
+ "OFET": [
+  {
+   "doi": "10.1021/jacs.6c11486",
+   "title": "Machine-Learning Prediction\nof Carrier Mobility and\nPolarity Type of Polymer Semiconductors: from High-Fidelity Data to\nExperimental Realization",
+   "journal": "Journal of the American\nChemical Society",
+   "short": "",
+   "issued": [
+    2026,
+    9,
+    18
+   ],
+   "print": [
+    null
+   ],
+   "volume": null,
+   "issue": null,
+   "page": null,
+   "article": null,
+   "authors": [
+    [
+     "Yuan-Kai",
+     "Li",
+     ""
+    ],
+    [
+     "Si-Lu",
+     "Li",
+     ""
+    ],
+    [
+     "Yi",
+     "Liu",
+     ""
+    ],
+    [
+     "Hao-Tian",
+     "Wu",
+     ""
+    ],
+    [
+     "Tian-Yu",
+     "Zhang",
+     ""
+    ],
+    [
+     "Jie-Yu",
+     "Wang",
+     ""
+    ],
+    [
+     "Ze-Fan",
+     "Yao",
+     ""
+    ],
+    [
+     "Jian",
+     "Pei",
+     ""
+    ]
+   ]
+  }
+ ],
+ "STJOHN": [
+  {
+   "doi": "10.1063/1.5099132",
+   "title": "Message-passing neural networks for high-throughput polymer screening",
+   "journal": "The Journal of Chemical Physics",
+   "short": "",
+   "issued": [
+    2019,
+    6,
+    19
+   ],
+   "print": [
+    2019,
+    6,
+    21
+   ],
+   "volume": "150",
+   "issue": "23",
+   "page": null,
+   "article": "234111",
+   "authors": [
+    [
+     "Peter C.",
+     "St. John",
+     ""
+    ],
+    [
+     "Caleb",
+     "Phillips",
+     ""
+    ],
+    [
+     "Travis W.",
+     "Kemper",
+     ""
+    ],
+    [
+     "A. Nolan",
+     "Wilson",
+     ""
+    ],
+    [
+     "Yanfei",
+     "Guan",
+     ""
+    ],
+    [
+     "Michael F.",
+     "Crowley",
+     ""
+    ],
+    [
+     "Mark R.",
+     "Nimlos",
+     ""
+    ],
+    [
+     "Ross E.",
+     "Larsen",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,1 +1,1 @@
-ok
+{'LIU': 'Harnessing DFT and machine learning for accurate optical gap', 'SAEKI': 'Computer-Aided Screening of Conjugated Polymers for Organic ', 'KUMAR': 'Accurate Prediction of <scp>HOMO</scp>–<scp>LUMO</scp> Gap U', 'BUYUK': 'Low Band Gap Fused Bicyclic Polymers with Heteroatoms Se and', 'CEMP': 'CEMP: an online cheminformatics platform for clean energy ma', 'OFET': 'Machine-Learning Prediction\nof Carrier Mobility and\nPolarity', 'STJOHN': 'Message-passing neural networks for high-throughput polymer '}
