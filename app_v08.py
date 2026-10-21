@@ -1217,7 +1217,7 @@ to compute the same descriptors; your data are not added to the database.
         f"Database v{DATABASE_VERSION} contains four curated collections: development records (donor–acceptor "
         "molecules), external records (chalcogen oligomer series), polymer records (conjugated polymers with "
         "experimental optical gaps and DFT values of their oligomers) and literature records (S/Se/Te series "
-        "computed with several functionals, including CCSD(T) reference gaps)." Exact standardized structures are displayed "
+        "computed with several functionals, including CCSD(T) reference gaps). Exact standardized structures are displayed "
         "only where the source supports structure-level identity. For polymer records the structure is the "
         "methyl-truncated oligomer that was computed; the experimental values refer to the polymer."
     )
