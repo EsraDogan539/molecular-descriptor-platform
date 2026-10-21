@@ -27,6 +27,8 @@ def public_collection_label(split_role=None, dataset_owner=None):
         return "External literature collection"
     if role == "Experimental Benchmark":
         return "Polymer literature collection"
+    if role == "Literature Benchmark":
+        return "Literature series collection"
 
     owner = "" if dataset_owner is None or pd.isna(dataset_owner) else str(dataset_owner).strip()
     lowered = owner.lower()
@@ -36,6 +38,8 @@ def public_collection_label(split_role=None, dataset_owner=None):
         return "External literature collection"
     if "polymer" in lowered:
         return "Polymer literature collection"
+    if "literature" in lowered:
+        return "Literature series collection"
     return "Curated collection" if owner else "—"
 
 
