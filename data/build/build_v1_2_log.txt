@@ -1,6 +1,7 @@
 {
  "structure_parse_failed": [],
- "records_total": 4811,
+ "literature_records": 218,
+ "records_total": 5029,
  "polymer_records": 1323,
  "polymer_3d": 1064,
  "polymer_chalcogen_type": {
@@ -18,11 +19,11 @@
  "polymer_duplicate_records": 440,
  "overlap_with_v1_1_inchikeys": 0,
  "experimental_eg_total": 1365,
- "unique_inchikeys_total": 4210,
+ "unique_inchikeys_total": 4229,
  "records_with_S_Se_Te": {
-  "S": 4237,
-  "Se": 751,
-  "Te": 126
+  "S": 4316,
+  "Se": 819,
+  "Te": 199
  }
 }
 geometry rejected: 32
