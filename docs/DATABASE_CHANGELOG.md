@@ -3,7 +3,7 @@
 ## Database v1.2 (in preparation)
 
 Built from the Database v1.1 table (`data/releases/chalcogen_database_v1_1.csv.gz`) by
-`scripts/build_database_v1_2.py`. 4,811 records (3,088 development, 400 external, 1,323 polymer). All v1.1 records are
+`scripts/build_database_v1_2.py`. 5,029 records (3,088 development, 400 external, 1,323 polymer, 218 literature). All v1.1 records are
 unchanged (checked cell by cell in `tests/test_database_v1_2.py`).
 
 **Added: polymer collection (1,323 records, POL_0001–POL_1323)**
@@ -23,16 +23,27 @@ unchanged (checked cell by cell in `tests/test_database_v1_2.py`).
 - 154 InChIKey groups (440 records) share an oligomer structure, mostly polymers that differ only in their side
   chains, which are truncated for the calculation; they are flagged by `Duplicate_Flag`, not removed.
 
+**Added: literature collection (218 records, LIT_0001–LIT_0218)**
+- 214 records of thia-, seleno- and telluro[n]helicenes from R. Kumar, R. Kar, D. K. Maity, *J. Comput. Chem.* 2025,
+  46, e70175 (CC BY 4.0), transcribed from the Supporting Information (`data/sources/kumar_2025_helicenes/`):
+  HOMO/LUMO for 13 functional settings (thia n = 1–5, seleno and telluro n = 1–4; 169 records), HSE06 (12),
+  B2PLYP-D3(BJ) and ωB97XD gaps (20) and CCSD(T) fundamental gaps IP − EA (13), the reference of the source
+  benchmark. The records are the unsubstituted helicenes (the CCSD(T) total energies correspond to the bare ring
+  systems); the ring-fusion pattern is taken from the source geometries of the telluro[n]helicenes.
+- 4 Se/Te fused bicyclic monomers (SeSe, SeTe, TeSe, TeTe; B3PW91) from Table 2 of Z. Büyükmumcu, F. Selampinar,
+  *ACS Omega* 2026, 11, 15694 (CC BY 4.0). The polymer band gaps of that article are given only in figures and are
+  not transcribed.
+
 **New fields:** `Experimental_HOMO_eV`, `Experimental_LUMO_eV`, `TDDFT_S1_eV`, `Source_Monomer_SMILES`.
 
 **Summary statistics (v1.1 → v1.2)**
 
 | | v1.1 | v1.2 |
 |---|---|---|
-| Records | 3,488 | 4,811 |
-| Unique InChIKeys | 3,173 | 4,210 |
-| S/Se/Te core scope | 3,262 | 4,563 |
-| Records containing S / Se / Te | 2,969 / 706 / 154 | 4,265 / 779 / 154 |
+| Records | 3,488 | 5,029 |
+| Unique InChIKeys | 3,173 | 4,229 |
+| S/Se/Te core scope | 3,262 | 4,781 |
+| Records containing S / Se / Te | 2,969 / 706 / 154 | 4,344 / 847 / 227 |
 | Records with 3D coordinates | 3,147 | 4,211 |
 | Experimental optical gaps | 48 | 1,371 |
 | Experimental HOMO/LUMO | 0 | 1,096 |

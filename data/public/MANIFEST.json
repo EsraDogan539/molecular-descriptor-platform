@@ -2,7 +2,7 @@
   "name": "ChalMolDB",
   "database_version": "1.2",
   "scientific_core_version": "0.11.0",
-  "records": 4811,
+  "records": 5029,
   "fields": [
     "Record_ID",
     "Dataset_Owner",
@@ -71,8 +71,8 @@
   ],
   "files": {
     "data/public/chalmoldb_records.csv": {
-      "sha256": "02289d01ed8e83ee1a0696c9169afcc948a4a7772b8b5ef93650bf108ea13d08",
-      "bytes": 6129340
+      "sha256": "9dccb9be285ea829fde6bcb956ccda73d4d7d58ef8b0fca718b90236b42a1cad",
+      "bytes": 6412606
     },
     "data/structures_3d_v1.sdf.gz": {
       "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",

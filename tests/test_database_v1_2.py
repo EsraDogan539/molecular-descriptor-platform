@@ -70,3 +70,44 @@ def test_polymer_collection_has_no_tellurium_and_marks_controls(pol):
     assert pd.to_numeric(pol.Te_Count).fillna(0).eq(0).all()
     no_chalcogen = pd.to_numeric(pol.S_Count).eq(0) & pd.to_numeric(pol.Se_Count).eq(0)
     assert (pol.loc[no_chalcogen, "Scope_Flag"] != "Core_SSeTe").all()
+
+
+@pytest.fixture(scope="module")
+def lit(db):
+    return db[db.Record_ID.str.startswith("LIT_")].copy()
+
+
+def test_literature_collection_counts(lit):
+    assert lit.Record_ID.tolist() == [f"LIT_{i:04d}" for i in range(1, 219)]
+    assert set(lit.Split_Role) == {"Literature Benchmark"}
+    hel = lit[lit.Source_URL.eq("https://doi.org/10.1002/jcc.70175")]
+    assert len(hel) == 169 + 12 + 20 + 13
+    assert hel.InChIKey.nunique() == 15  # thia/seleno/telluro [n]helicenes, n = 1-5
+    assert pd.to_numeric(hel.Te_Count).gt(0).sum() == 70
+    bic = lit[lit.Source_URL.eq("https://doi.org/10.1021/acsomega.5c04257")]
+    assert sorted(bic.System_Code) == ["SeSe", "SeTe", "TeSe", "TeTe"]
+
+
+def test_helicene_values_match_source(lit):
+    src = pd.read_csv("data/sources/kumar_2025_helicenes/helicene_orbital_energies_13_functionals.csv")
+    rec = lit[lit.Source_File.eq("helicene_orbital_energies_13_functionals.csv")]
+    assert len(rec) == len(src) == 169
+    assert (abs(pd.to_numeric(rec.HOMO_eV).values - src.HOMO_eV.values) < 1e-9).all()
+    assert (abs(pd.to_numeric(rec.LUMO_eV).values - src.LUMO_eV.values) < 1e-9).all()
+    eg = pd.to_numeric(rec.Eg_eV) - (pd.to_numeric(rec.LUMO_eV) - pd.to_numeric(rec.HOMO_eV))
+    assert eg.abs().max() < 1e-4
+    cc = pd.read_csv("data/sources/kumar_2025_helicenes/helicene_ccsdt_tables_s5_s8_s11.csv")
+    assert ((cc.IP_eV - cc.EA_eV - cc.IP_minus_EA_eV).abs() < 1e-3).all()
+
+
+def test_helicene_structures_are_unsubstituted_fused_rings(lit):
+    from rdkit import Chem
+    from rdkit.Chem.rdMolDescriptors import CalcMolFormula
+
+    hel = lit[lit.System_Code.str.contains("]")].drop_duplicates("System_Code")
+    for _, r in hel.iterrows():
+        n = int(r.Oligomer_n)
+        el = r.System_Code.split("]")[1].replace("H", "")
+        el = {"T": "S", "S": "Se", "Te": "Te"}[el]
+        formula = CalcMolFormula(Chem.AddHs(Chem.MolFromSmiles(r.Canonical_SMILES)))
+        assert formula == f"C{2 * n + 2}H4{el}{n if n > 1 else ''}", (r.System_Code, formula)

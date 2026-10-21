@@ -74,7 +74,7 @@ def test_use_case_presets_load_results():
         at.run()
         assert not at.exception, (name, at.exception)
         count = _result_count(at)
-        assert count is not None and 0 < count < 4811, (name, count)
+        assert count is not None and 0 < count < 5029, (name, count)
 
 
 def test_home_shows_use_cases():
@@ -86,4 +86,5 @@ def test_home_shows_use_cases():
     assert "What you can do with ChalMolDB" in html and "preset=te_low_gap" in html
     assert "Development collection · 3,088 records" in html and "External collection · 400 records" in html
     assert "Polymer collection · 1,323 records" in html
+    assert "Literature collection · 218 records" in html
     assert "What ChalMolDB provides" not in html and "Who is it for?" not in html

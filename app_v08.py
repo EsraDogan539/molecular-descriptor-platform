@@ -1104,9 +1104,9 @@ if page == "home":
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
-          <div class="metric-item"><span class="metric-number">4,811</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">4,210</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">4,563</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">S/Se/Te records</span></div>
           <div class="metric-item"><span class="metric-number">1,371</span><span class="metric-label">Experimental gaps</span></div>
         </div>
         <div class="source-strip">
@@ -1119,6 +1119,10 @@ if page == "home":
           HOMO/LUMO for 1,096), with B3LYP-D3/6-31G* values of their oligomers; B. Liu, Y. Yan, M. Liu, Nanoscale
           2025, 17, 7865, experimental data compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett.
           2018, 9, 2639.</div>
+          <div><b>Literature collection · 218 records</b>S/Se/Te series from recent articles: thia-, seleno- and
+          telluro[n]helicenes with 13 DFT functionals and CCSD(T) reference gaps (R. Kumar, R. Kar, D. K. Maity,
+          J. Comput. Chem. 2025, 46, e70175) and Se/Te fused bicyclic monomers (Z. Büyükmumcu, F. Selampinar,
+          ACS Omega 2026, 11, 15694).</div>
         </div>
         <div class="quiet-note">
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structures standardized with RDKit
@@ -1199,10 +1203,10 @@ to compute the same descriptors; your data are not added to the database.
     st.markdown(
         """
         <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
-          <div class="metric-item" style="padding-left:0;"><span class="metric-number">4,811</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">4,563</span><span class="metric-label">Core S/Se/Te</span></div>
-          <div class="metric-item"><span class="metric-number">4,210</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">4,804</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">5,022</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1210,9 +1214,10 @@ to compute the same descriptors; your data are not added to the database.
 
     st.markdown('<div class="section-rule-title">Database scope</div>', unsafe_allow_html=True)
     st.write(
-        f"Database v{DATABASE_VERSION} contains three curated collections: development records (donor–acceptor "
-        "molecules), external records (chalcogen oligomer series) and polymer records (conjugated polymers with "
-        "experimental optical gaps and DFT values of their oligomers). Exact standardized structures are displayed "
+        f"Database v{DATABASE_VERSION} contains four curated collections: development records (donor–acceptor "
+        "molecules), external records (chalcogen oligomer series), polymer records (conjugated polymers with "
+        "experimental optical gaps and DFT values of their oligomers) and literature records (S/Se/Te series "
+        "computed with several functionals, including CCSD(T) reference gaps)." Exact standardized structures are displayed "
         "only where the source supports structure-level identity. For polymer records the structure is the "
         "methyl-truncated oligomer that was computed; the experimental values refer to the polymer."
     )
@@ -1432,7 +1437,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>4,811 records · 4,210 unique standardized structures · 1,371 experimental optical gaps</span>
+          <span>5,029 records · 4,229 unique standardized structures · 1,371 experimental optical gaps</span>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1483,7 +1488,9 @@ if page == "about":
         "H. Kayı group. Polymer collection: B. Liu, Y. Yan, M. Liu, Nanoscale 2025, 17, 7865 (data and geometries "
         "from the authors' GitHub repository, MIT License), with experimental values compiled by S. Nagasawa, "
         "E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett. 2018, 9, 2639. Database content is released under CC BY 4.0 "
-        "(the polymer-collection source files keep their MIT licence notice) and the software under the MIT licence."
+        "(the polymer-collection source files keep their MIT licence notice) and the software under the MIT licence. "
+        "Literature collection: R. Kumar, R. Kar, D. K. Maity, J. Comput. Chem. 2025, 46, e70175 and Z. Büyükmumcu, "
+        "F. Selampinar, ACS Omega 2026, 11, 15694 (both CC BY 4.0)."
     )
     render_credit_footer()
     st.stop()
