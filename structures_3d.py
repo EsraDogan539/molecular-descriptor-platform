@@ -9,6 +9,10 @@ record identifier, InChIKey, source and licence fields to each SDF entry.
 External collection (data/structures_3d_external.sdf.gz): B3LYP/LANL2DZ geometries supplied by the
 H. Kayı group (Ankara University) for the records whose geometry file passes the identity, formula and
 bond-length checks of scripts/build_external_structures.py.
+
+Polymer collection (data/structures_3d_polymer.sdf.gz): B3LYP-D3/6-31G* oligomer geometries published by
+Liu, Yan & Liu, Nanoscale 2025, 17, 7865 (MIT License), attached when the geometry has the same InChIKey as
+the oligomer SMILES (scripts/build_database_v1_2.py).
 """
 
 import gzip
@@ -20,7 +24,8 @@ from public_labels import public_record_id
 
 STRUCTURES_3D_PATH = Path("data/structures_3d_v1.sdf.gz")
 EXTERNAL_STRUCTURES_3D_PATH = Path("data/structures_3d_external.sdf.gz")
-STRUCTURE_BUNDLES = (STRUCTURES_3D_PATH, EXTERNAL_STRUCTURES_3D_PATH)
+POLYMER_STRUCTURES_3D_PATH = Path("data/structures_3d_polymer.sdf.gz")
+STRUCTURE_BUNDLES = (STRUCTURES_3D_PATH, EXTERNAL_STRUCTURES_3D_PATH, POLYMER_STRUCTURES_3D_PATH)
 RECORD_ID_FIELD = "ChalMolDB_Record_ID"
 COORDINATE_ATTRIBUTION = (
     "3D coordinates: Haciefendioglu & Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 "
