@@ -1,7 +1,0 @@
-home_top
-database_top
-statistics_top
-analyze_top
-about_top
-documentation_top
-canvas {'x': 601.515625, 'y': 486.328125, 'width': 640, 'height': 360}

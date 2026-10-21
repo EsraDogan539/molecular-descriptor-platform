@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install playwright > /dev/null && python -m playwright install --with-deps chromium > /dev/null
-      - run: python scripts/demo_capture.py > demo.txt 2>&1 || true; mkdir -p docs/demo; cp demo.txt docs/demo/
+      - run: mkdir -p docs/litscan && python litscan/scan.py > docs/litscan/log.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A docs; git commit -m "Demo capture [skip ci]" || true; git push
+          git add -A docs; git commit -m "Lit scan [skip ci]" || true; git push
