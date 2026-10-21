@@ -1,0 +1,73 @@
+{
+ "nrel_links": [],
+ "nrel_license_text": "__ERR__ ",
+ "nablacolors_zenodo": {
+  "title": "Dataset for the Article: nablaColors: A 3D Benchmark for Optical Property Prediction with Solvent-aware Graph Neural Networks",
+  "license": {
+   "id": "cc-by-4.0"
+  },
+  "files": [
+   [
+    "uniprop_rdkit_to_xtb.pt",
+    459450224
+   ],
+   [
+    "uniprop_xtb_to_dft_vacuum.pt",
+    459450288
+   ],
+   [
+    "absorption_pairs_all.csv",
+    2148685
+   ],
+   [
+    "absorption_test.csv",
+    227392
+   ],
+   [
+    "uniprop_rdkit_to_dft_implicit.pt",
+    459450352
+   ],
+   [
+    "absorption_val.csv",
+    224802
+   ],
+   [
+    "absorption_train.csv",
+    1696555
+   ],
+   [
+    "multitarget_crossval.zip",
+    550571171
+   ],
+   [
+    "smiles_to_replace.csv",
+    13148
+   ],
+   [
+    "smiles_to_remove.csv",
+    99737
+   ],
+   [
+    "absorption_conformations.zip",
+    226410103
+   ],
+   [
+    "absorption_crossval.zip",
+    475481571
+   ],
+   [
+    "uniprop_xtb_to_dft_implicit.pt",
+    459450415
+   ]
+  ]
+ },
+ "se_te_bicyclic_tables": [
+  " | 1 | | | Mulliken Atomic Spin Densities of the Monomer Cationic Radicals | | | | | | | | | | | | | | | | | 1 | | 2 | | 3 | | 4 | | 5 | | 6 | | | | | | SeSe | | 0.341 | | 0.020 | | 0.195 | | 0.398 | | \u20130.078 | | 0.336 | | | | SeTe | | 0.476 | | \u20130.023 | | 0.189 | | 0.335 | | \u20130.068 | | 0.301 | | | | TeSe | | 0.336 | | 0.032 | | 0.184 | | 0.395 | | \u20130.083 | | 0.341 | | | | TeTe | | 0.468 | | \u20130.011 | | 0.180 | | 0.338 | | \u20130.076 | | 0.306 | | | | ",
+  " | 2 | | | Some Frontier Orbital Properties of the Monomers (Energy Values in eV) | | | | | | | | | | | | | | | | | | | | Molecule | | | | | E | | | | E | | g | | | s % | | p % | | d % | | ODI | | Atomic Compositions | | | | | | SeSe | | HOMO | | \u20135.62 | | | | 0.00 | | 99.21 | | 0.80 | | 23.95 | | 11(Se) | | 0.09 | | 12(Se) | | 37.13 | | | | SeSe | | LUMO | | \u20131.12 | | 4.50 | | 0.00 | | 98.71 | | 1.30 | | 18.85 | | 11(Se) | | 12.68 | | 12(Se) | | 0.85 | | | | SeTe | | HOMO | | \u20135.43 | | | | 0.00 | | 99.37 | | 0.63 | | 31.99 | | 5(Te) | | 50.52 | | 12(Se) | | 0.00 | | | | SeTe | | LUMO | | \u20131.13 | | 4.30 | | 8.80 | | 90.65 | | 0.55 | | 48.60 | | 5(Te) | | 67.43 | | 12(Se) | | 3.88 | | | | TeSe | | HOMO | | \u20135.52 | | | | 0.00 | | 99.21 | | 0.79 | | 23.95 | | 11(Se) | | 37.52 | | 12(Te) | | 0.18 | | | | TeSe | | LUMO | | \u20131.18 | | 4.34 | | 0.00 | | 98.72 | | 1.28 | | 18.95 | | 11(Se) | | 0.57 | | 12(Te) | | 12.19 | | | | TeTe | | HOMO | | \u20135.34 | | | | 0.00 | | 99.37 | | 0.63 | | 32.15 | | 5(Te) | | 0.01 | | 6(Te) | | 50.85 | | | | TeTe | | LUMO | | \u20131.27 | | 4.07 | | 7.99 | | 91.56 | | 0.45 | | 29.51 | | 5(Te) | | 38.00 | | 6(Te) | | 36.72 | | | | "
+ ],
+ "telluro_helicenes_tables": [
+  " | | TABLE 1 | | | Statistical Errors (MSE, MAE, and MAX_UE) | | a | | in eV for different density functionals for Thia[n]helicene, | n | = 1\u20135, Seleno[n]helicene, | n | = 1\u20134 and Telluro[n]helicene, | n | = 1\u20134 systems with respect to CCSD(T) results. | | | | | | | | | | Functional | | MSE | | MAE | | MAX_UE | | | | | | BLYP (set1) | | \u22125.076 | | 5.076 | | 5.472 | | | | B3LYP (set1) | | \u22123.631 | | 3.631 | | 3.926 | | | | B3LYP\u2010D (set1) | | \u22123.638 | | 3.638 | | 3.929 | | | | B3LYP\u2010D3 (set1) | | \u22123.637 | | 3.637 | | 3.931 | | | | PBE0 (set1) | | \u22121.394 | | 1.394 | | 1.378 | | | | LC\u2010BLYP (set1) | | 1.003 | | 1.003 | | 1.245 | | | | MN15 (set1) | | 2.073 | | 2.073 | | 2.421 | | | | \u03c9B97X\u2010D (set1) | | 0.137 | | 0.189 | | 0.464 | | | | M06 (set2) | | \u22123.405 | | 3.405 | | 3.722 | | | | CAM\u2010B3LYP (set2) | | \u22121.125 | | 1.125 | | 1.463 | | | | \u03c9B97XD (set2) | | 0.091 | | 0.172 | | 0.435 | | | | LC\u2010\u03c9PBE (set2) | | 1.002 | | 1.002 | | 1.345 | | | | LC\u2010BLYP (set2) | | 0.965 | | 0.965 | | 1.255 | | | | | | | | a | | | MSE, MAE, and MAX_UE refer to mean signed error, mean absolute error, and maximum unsigned error, respectively. | | | ",
+  " | | TABLE 2 | | | Calculated HOMO\u2013LUMO gaps (E | g | ), for thia[n]helicenes, [n]TH, | n | = 5\u201310, and seleno[n]helicenes, [n]SH, and telluro[n]helicenes, [n]TeH, | n | = 5\u201310, in gas phase. | | | | | | | | | | Number of rings ( | n | ) | | | E | | g | for [n]TH (in eV) | | | E | | g | for [n]SH (in eV) | | | E | | g | for [n]TeH (in eV) | | | | | | 5 | | 8.26 | | 7.85 | | 6.79 | | | | 6 | | 8.31 | | 7.83 | | 6.77 | | | | 7 | | 8.25 | | 7.65 | | 6.72 | | | | 8 | | 8.10 | | 7.58 | | 6.66 | | | | 9 | | 7.97 | | 7.51 | | 6.65 | | | | 10 | | 7.95 | | 7.46 | | 6.79 | | | | | | | | Note: | Method: B3LYP functional (most stable geometries) followed by single\u2010point energy calculations at \u03c9B97XD functional. Basis set used: 6\u2013311++G(d,p) for H, C, Si, S, Se, Br atoms, and LANL2DZ basis set for Te atoms. | | | ",
+  " | | TABLE 3 | | | Calculated HDOMO\u2013LSOMO energy gaps (in eV) for thia[n]helicenes radical cations, [n]TH | \u2022+ | , | n | = 5\u201310, seleno[n]helicenes radical cations, [n]SH | \u2022+ | , 5\u201310, and telluro[n]helicenes radical cations, [n]TeH | \u2022+ | , | n | = 5\u201310 in DCM solvent. Values in the braces are HDOMO\u2013LSUMO energy in the gas phase. HDOMO and LSOMO stand for the highest doubly occupied molecular orbital and the lowest singly occupied molecular orbital, respectively. | | | | | | | | | | Number of rings ( | n | ) | | HDOMO\u2013LSOMO energy gaps (in eV) | | | | [n]TH | \u2022+ | | | [n]SH | \u2022+ | | | [n]TeH | \u2022+ | | | | | | | 5 | | 4.40, ( | 5.13 | ) | | 4.00, ( | 4.91 | ) | | 3.92, ( | 4.80 | ) | | | | 6 | | 4.06, ( | 4.71 | ) | | 3.75, ( | 4.50 | ) | | 3.60, ( | 4.42 | ) | | | | 7 | | 4.02, ( | 4.71 | ) | | 3.55, ( | 4.25 | ) | | 3.37, ( | 4.16 | ) | | | | 8 | | 3.81, ( | 4.48 | ) | | 3.52, ( | 4.26 | ) | | 3.36, ( | 4.22 | ) | | | | 9 | | 3.82, ( | 4.49 | ) | | 3.52, ( | 4.29 | ) | | 3.30, ( | 4.13 | ) | | | | 10 | | 3.76, ( | 4.28 | ) | | 3.46, ( | 3.33 | ) | | 3.37, ( | 4.19 | ) | | | | | | | | Note: | Method: B3LYP functional (most stable geometries) and then single\u2010point energy calculations at \u03c9B97XD functional, Basis set used: 6\u2013311++G(d,p) for H, C, Si, S, Se, Br atoms and LANL2DZ basis set for Te atoms. Solvation of DCM is accounted for by using the SMD model. | | | "
+ ]
+}
