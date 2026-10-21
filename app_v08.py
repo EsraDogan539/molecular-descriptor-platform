@@ -1107,7 +1107,7 @@ if page == "home":
           <div class="metric-item"><span class="metric-number">4,811</span><span class="metric-label">Records</span></div>
           <div class="metric-item"><span class="metric-number">4,210</span><span class="metric-label">Unique structures</span></div>
           <div class="metric-item"><span class="metric-number">4,563</span><span class="metric-label">S/Se/Te records</span></div>
-          <div class="metric-item"><span class="metric-number">1,365</span><span class="metric-label">Experimental gaps</span></div>
+          <div class="metric-item"><span class="metric-number">1,371</span><span class="metric-label">Experimental gaps</span></div>
         </div>
         <div class="source-strip">
           <div><b>Development collection · 3,088 records</b>Donor–acceptor molecules with exact structures and 3D
@@ -1432,7 +1432,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>4,811 records · 4,210 unique standardized structures · 1,365 experimental optical gaps</span>
+          <span>4,811 records · 4,210 unique standardized structures · 1,371 experimental optical gaps</span>
         </div>
         """,
         unsafe_allow_html=True,

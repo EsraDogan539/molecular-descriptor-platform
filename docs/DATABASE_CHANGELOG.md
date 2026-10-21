@@ -34,7 +34,7 @@ unchanged (checked cell by cell in `tests/test_database_v1_2.py`).
 | S/Se/Te core scope | 3,262 | 4,563 |
 | Records containing S / Se / Te | 2,969 / 706 / 154 | 4,265 / 779 / 154 |
 | Records with 3D coordinates | 3,147 | 4,211 |
-| Experimental optical gaps | 48 | 1,365 |
+| Experimental optical gaps | 48 | 1,371 |
 | Experimental HOMO/LUMO | 0 | 1,096 |
 
 ## Database v1.1 (2026-10-08, tag `db-v1.1`, DOI 10.5281/zenodo.23238884)
