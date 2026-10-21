@@ -113,7 +113,7 @@ def read_sources():
     parts = []
     for f in sorted((SRC / "new_227").glob("new-polymer-*.csv")):
         group = f.name.split("-")[2]
-        p = pd.read_csv(f)
+        p = pd.read_csv(f).rename(columns={"reference": "Reference"})
         d = pd.read_csv(next((SRC / "new_227").glob(f"oligomer-DFT-{group}-*.csv")))
         assert len(p) == len(d) and p.idx.tolist() == d.idx.tolist(), f.name
         m = p.merge(d, on="idx", validate="1:1")
