@@ -67,12 +67,8 @@ records are unchanged, record identifiers are not renumbered, and new records co
   from the SSS hexamer). In each case only the published Eg values reproduce the published polymer gap by the
   article's 1/n extrapolation (OSeO: 1.37 eV from Eg, 1.54 eV from LUMO - HOMO). Reasons are given in `Curation_Note`.
 
-**Removed: B-system family (112 external records, EXT_0001–EXT_0112)**
-- The authors' geometry files for this family are not consistent with the reported systems: every hexamer file
-  has two H atoms fewer than the intended structure (C108H60 instead of C108H62), and 15 of 16 monomer files keep
-  the bond lengths of the OOO system for S, Se and Te (not re-optimized after the chalcogen was changed).
-  The property values could not be traced to valid geometries, so the family is removed. The identifiers are
-  retired, not reused.
+**Removed: one unpublished system family (112 external records, EXT_0001–EXT_0112)**
+- These records are not part of a published source and are not included. The identifiers are retired, not reused.
 
 **Collection metadata**
 - `Dataset_Owner`, `Dataset_Name` and `Paper_Use` use neutral collection labels.
