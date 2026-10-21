@@ -1,0 +1,1466 @@
+{
+ "records": 1323,
+ "dft_gap_vs_exp_optical_gap": {
+  "n": 1323,
+  "pearson_r": 0.74,
+  "slope": 0.56,
+  "intercept": 0.464,
+  "mae_after_linear_fit": 0.114,
+  "mean_offset_dft_minus_exp": 0.522
+ },
+ "tddft_s1_vs_exp_optical_gap": {
+  "n": 1096,
+  "pearson_r": 0.669,
+  "slope": 0.534,
+  "intercept": 0.675,
+  "mae_after_linear_fit": 0.12,
+  "mean_offset_dft_minus_exp": 0.233
+ },
+ "dft_homo_vs_exp_homo": {
+  "n": 1096,
+  "pearson_r": 0.461,
+  "slope": 0.552,
+  "intercept": -2.663,
+  "mae_after_linear_fit": 0.151,
+  "mean_offset_dft_minus_exp": 0.498
+ },
+ "dft_lumo_vs_exp_lumo": {
+  "n": 1096,
+  "pearson_r": 0.571,
+  "slope": 0.566,
+  "intercept": -2.144,
+  "mae_after_linear_fit": 0.158,
+  "mean_offset_dft_minus_exp": 1.014
+ },
+ "by_chalcogen": {
+  "S only": {
+   "n": 1228,
+   "mean_exp_gap": 1.716,
+   "mean_dft_gap": 2.239,
+   "dft_gap_vs_exp": {
+    "n": 1228,
+    "pearson_r": 0.736,
+    "slope": 0.543,
+    "intercept": 0.5,
+    "mae_after_linear_fit": 0.111,
+    "mean_offset_dft_minus_exp": 0.524
+   }
+  },
+  "Se-containing": {
+   "n": 73,
+   "mean_exp_gap": 1.635,
+   "mean_dft_gap": 2.148,
+   "dft_gap_vs_exp": {
+    "n": 73,
+    "pearson_r": 0.687,
+    "slope": 0.514,
+    "intercept": 0.53,
+    "mae_after_linear_fit": 0.108,
+    "mean_offset_dft_minus_exp": 0.513
+   }
+  }
+ },
+ "se_s_swap_pairs": {
+  "n_pairs": 139,
+  "n_se_records_with_partner": 57,
+  "mean_dEg_exp": -0.053,
+  "median_dEg_exp": -0.05,
+  "share_exp_gap_smaller_with_Se": 0.842,
+  "mean_dEg_dft": -0.055,
+  "share_dft_gap_smaller_with_Se": 0.899,
+  "mean_dHOMO_exp": 0.02,
+  "mean_dLUMO_exp": -0.033,
+  "pairs": [
+   {
+    "Se_record": "POL_0079",
+    "S_record": "POL_0080",
+    "Se_name": "PCzDBSe",
+    "S_name": "PCDTBT",
+    "dEg_exp": -0.15,
+    "dEg_dft": -0.2,
+    "dHOMO_exp": 0.22,
+    "dLUMO_exp": 0.07
+   },
+   {
+    "Se_record": "POL_0079",
+    "S_record": "POL_0184",
+    "Se_name": "PCzDBSe",
+    "S_name": "PC-DTBT",
+    "dEg_exp": 0.01,
+    "dEg_dft": -0.19,
+    "dHOMO_exp": 0.2,
+    "dLUMO_exp": 0.21
+   },
+   {
+    "Se_record": "POL_0094",
+    "S_record": "POL_0089",
+    "Se_name": "PSBTSPD-C8 (P9)",
+    "S_name": "PDTSTPD",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.101,
+    "dHOMO_exp": 0.02,
+    "dLUMO_exp": 0.01
+   },
+   {
+    "Se_record": "POL_0094",
+    "S_record": "POL_0095",
+    "Se_name": "PSBTSPD-C8 (P9)",
+    "S_name": "PTPDSi-C8",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.097,
+    "dHOMO_exp": -0.03,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0094",
+    "S_record": "POL_0098",
+    "Se_name": "PSBTSPD-C8 (P9)",
+    "S_name": "P-Si",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.101,
+    "dHOMO_exp": 0.1,
+    "dLUMO_exp": 0.05
+   },
+   {
+    "Se_record": "POL_0133",
+    "S_record": "POL_0130",
+    "Se_name": "H11",
+    "S_name": "H7",
+    "dEg_exp": -0.18,
+    "dEg_dft": -0.427,
+    "dHOMO_exp": 0.22,
+    "dLUMO_exp": 0.04
+   },
+   {
+    "Se_record": "POL_0133",
+    "S_record": "POL_0280",
+    "Se_name": "H11",
+    "S_name": "PBDTBT",
+    "dEg_exp": -0.15,
+    "dEg_dft": -0.203,
+    "dHOMO_exp": 0.34,
+    "dLUMO_exp": 0.19
+   },
+   {
+    "Se_record": "POL_0139",
+    "S_record": "POL_0145",
+    "Se_name": "PSeB2",
+    "S_name": "PTB2",
+    "dEg_exp": 0.01,
+    "dEg_dft": 0.036,
+    "dHOMO_exp": -0.1,
+    "dLUMO_exp": -0.09
+   },
+   {
+    "Se_record": "POL_0150",
+    "S_record": "POL_0145",
+    "Se_name": "PSeB1",
+    "S_name": "PTB2",
+    "dEg_exp": 0.01,
+    "dEg_dft": -0.009,
+    "dHOMO_exp": -0.11,
+    "dLUMO_exp": -0.1
+   },
+   {
+    "Se_record": "POL_0153",
+    "S_record": "POL_0145",
+    "Se_name": "PSeB3",
+    "S_name": "PTB2",
+    "dEg_exp": 0.01,
+    "dEg_dft": 0.032,
+    "dHOMO_exp": -0.11,
+    "dLUMO_exp": -0.1
+   },
+   {
+    "Se_record": "POL_0201",
+    "S_record": "POL_0200",
+    "Se_name": "P2",
+    "S_name": "PBDT(T)TPD",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": -0.72,
+    "dLUMO_exp": -0.75
+   },
+   {
+    "Se_record": "POL_0201",
+    "S_record": "POL_0203",
+    "Se_name": "P2",
+    "S_name": "TPD(2EH/C8)",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": -0.44,
+    "dLUMO_exp": -0.47
+   },
+   {
+    "Se_record": "POL_0201",
+    "S_record": "POL_0279",
+    "Se_name": "P2",
+    "S_name": "PBDT-T10-TPD",
+    "dEg_exp": 0.05,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": -0.26,
+    "dLUMO_exp": -0.21
+   },
+   {
+    "Se_record": "POL_0201",
+    "S_record": "POL_0369",
+    "Se_name": "P2",
+    "S_name": "PBDT-T12-TPD",
+    "dEg_exp": 0.03,
+    "dEg_dft": -0.001,
+    "dHOMO_exp": -0.17,
+    "dLUMO_exp": -0.14
+   },
+   {
+    "Se_record": "POL_0201",
+    "S_record": "POL_0755",
+    "Se_name": "P2",
+    "S_name": "PBDTTPD (P2)",
+    "dEg_exp": 0.15,
+    "dEg_dft": -0.004,
+    "dHOMO_exp": -0.21,
+    "dLUMO_exp": -0.06
+   },
+   {
+    "Se_record": "POL_0209",
+    "S_record": "POL_0200",
+    "Se_name": "PBDT(S)TPD",
+    "S_name": "PBDT(T)TPD",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": 0.03,
+    "dLUMO_exp": 0.0
+   },
+   {
+    "Se_record": "POL_0209",
+    "S_record": "POL_0203",
+    "Se_name": "PBDT(S)TPD",
+    "S_name": "TPD(2EH/C8)",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": 0.31,
+    "dLUMO_exp": 0.28
+   },
+   {
+    "Se_record": "POL_0209",
+    "S_record": "POL_0279",
+    "Se_name": "PBDT(S)TPD",
+    "S_name": "PBDT-T10-TPD",
+    "dEg_exp": 0.05,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": 0.49,
+    "dLUMO_exp": 0.54
+   },
+   {
+    "Se_record": "POL_0209",
+    "S_record": "POL_0369",
+    "Se_name": "PBDT(S)TPD",
+    "S_name": "PBDT-T12-TPD",
+    "dEg_exp": 0.03,
+    "dEg_dft": -0.001,
+    "dHOMO_exp": 0.58,
+    "dLUMO_exp": 0.61
+   },
+   {
+    "Se_record": "POL_0209",
+    "S_record": "POL_0755",
+    "Se_name": "PBDT(S)TPD",
+    "S_name": "PBDTTPD (P2)",
+    "dEg_exp": 0.15,
+    "dEg_dft": -0.004,
+    "dHOMO_exp": 0.54,
+    "dLUMO_exp": 0.69
+   },
+   {
+    "Se_record": "POL_0218",
+    "S_record": "POL_0227",
+    "Se_name": "PBDTTT-EFS",
+    "S_name": "PBDTTT-EFT",
+    "dEg_exp": 0.0,
+    "dEg_dft": -0.039,
+    "dHOMO_exp": -0.05,
+    "dLUMO_exp": -0.05
+   },
+   {
+    "Se_record": "POL_0218",
+    "S_record": "POL_0389",
+    "Se_name": "PBDTTT-EFS",
+    "S_name": "PBT-TVT",
+    "dEg_exp": 0.05,
+    "dEg_dft": -0.051,
+    "dHOMO_exp": 0.0,
+    "dLUMO_exp": 0.05
+   },
+   {
+    "Se_record": "POL_0291",
+    "S_record": "POL_0295",
+    "Se_name": "P9",
+    "S_name": "P8",
+    "dEg_exp": 0.06,
+    "dEg_dft": -0.034,
+    "dHOMO_exp": -0.14,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0318",
+    "S_record": "POL_0320",
+    "Se_name": "PSeTD2",
+    "S_name": "PThTD2",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.038,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0318",
+    "S_record": "POL_0511",
+    "Se_name": "PSeTD2",
+    "S_name": "PThTD1",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.038,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": -0.02
+   },
+   {
+    "Se_record": "POL_0319",
+    "S_record": "POL_0317",
+    "Se_name": "PSeTPTI",
+    "S_name": "PThTPTI",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.041,
+    "dHOMO_exp": 0.01,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0447",
+    "S_record": "POL_0450",
+    "Se_name": "PIDSBT-C6",
+    "S_name": "a-PTPTBT-SA",
+    "dEg_exp": -0.15,
+    "dEg_dft": -0.086,
+    "dHOMO_exp": 0.08,
+    "dLUMO_exp": -0.07
+   },
+   {
+    "Se_record": "POL_0448",
+    "S_record": "POL_0449",
+    "Se_name": "PIDSe-DFBTH",
+    "S_name": "PIDT-DFBT",
+    "dEg_exp": -0.11,
+    "dEg_dft": -0.122,
+    "dHOMO_exp": 0.02,
+    "dLUMO_exp": -0.09
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0409",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDTS-DTFBT",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.058,
+    "dHOMO_exp": 0.17,
+    "dLUMO_exp": 0.14
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0463",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT_TEH-DT_H-BTff",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.06,
+    "dHOMO_exp": 0.03,
+    "dLUMO_exp": -0.03
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0470",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT_TEH-DT_EH-BTff",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.058,
+    "dHOMO_exp": 0.04,
+    "dLUMO_exp": -0.06
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0700",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.058,
+    "dHOMO_exp": 0.25,
+    "dLUMO_exp": 0.16
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0702",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T1",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.054,
+    "dHOMO_exp": 0.17,
+    "dLUMO_exp": 0.08
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0740",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T-O",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.055,
+    "dHOMO_exp": 0.11,
+    "dLUMO_exp": 0.05
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0741",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-O",
+    "dEg_exp": -0.13,
+    "dEg_dft": -0.058,
+    "dHOMO_exp": 0.18,
+    "dLUMO_exp": 0.05
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0757",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.058,
+    "dHOMO_exp": 0.3,
+    "dLUMO_exp": 0.2
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0833",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T2",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.056,
+    "dHOMO_exp": 0.07,
+    "dLUMO_exp": 0.0
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0899",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T3",
+    "dEg_exp": -0.04,
+    "dEg_dft": -0.057,
+    "dHOMO_exp": 0.01,
+    "dLUMO_exp": -0.03
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_0952",
+    "Se_name": "PBDTBSe",
+    "S_name": "PBDT2FBT-T4",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.057,
+    "dHOMO_exp": 0.0,
+    "dLUMO_exp": -0.02
+   },
+   {
+    "Se_record": "POL_0469",
+    "S_record": "POL_1057",
+    "Se_name": "PBDTBSe",
+    "S_name": "PQ4",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.059,
+    "dHOMO_exp": 0.29,
+    "dLUMO_exp": 0.22
+   },
+   {
+    "Se_record": "POL_0482",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTTTBS",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.084,
+    "dHOMO_exp": -0.02,
+    "dLUMO_exp": -0.12
+   },
+   {
+    "Se_record": "POL_0482",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTTTBS",
+    "S_name": "P2",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.078,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": 0.0
+   },
+   {
+    "Se_record": "POL_0483",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTSSBS",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.23,
+    "dEg_dft": -0.189,
+    "dHOMO_exp": -0.02,
+    "dLUMO_exp": -0.25
+   },
+   {
+    "Se_record": "POL_0483",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTSSBS",
+    "S_name": "P2",
+    "dEg_exp": -0.18,
+    "dEg_dft": -0.183,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": -0.13
+   },
+   {
+    "Se_record": "POL_0485",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTSTBS",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.101,
+    "dHOMO_exp": -0.02,
+    "dLUMO_exp": -0.12
+   },
+   {
+    "Se_record": "POL_0485",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTSTBS",
+    "S_name": "P2",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.096,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": 0.0
+   },
+   {
+    "Se_record": "POL_0491",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTSTBO",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": -0.19,
+    "dLUMO_exp": -0.2
+   },
+   {
+    "Se_record": "POL_0491",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTSTBO",
+    "S_name": "P2",
+    "dEg_exp": 0.04,
+    "dEg_dft": -0.011,
+    "dHOMO_exp": -0.12,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0492",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTTTBO",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.071,
+    "dHOMO_exp": -0.13,
+    "dLUMO_exp": -0.23
+   },
+   {
+    "Se_record": "POL_0492",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTTTBO",
+    "S_name": "P2",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.065,
+    "dHOMO_exp": -0.06,
+    "dLUMO_exp": -0.11
+   },
+   {
+    "Se_record": "POL_0493",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTSSBO",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.096,
+    "dHOMO_exp": -0.13,
+    "dLUMO_exp": -0.23
+   },
+   {
+    "Se_record": "POL_0493",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTSSBO",
+    "S_name": "P2",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.09,
+    "dHOMO_exp": -0.06,
+    "dLUMO_exp": -0.11
+   },
+   {
+    "Se_record": "POL_0498",
+    "S_record": "POL_0490",
+    "Se_name": "PBDTTSBS",
+    "S_name": "PBDT?TBT",
+    "dEg_exp": -0.23,
+    "dEg_dft": -0.151,
+    "dHOMO_exp": -0.02,
+    "dLUMO_exp": -0.25
+   },
+   {
+    "Se_record": "POL_0498",
+    "S_record": "POL_0704",
+    "Se_name": "PBDTTSBS",
+    "S_name": "P2",
+    "dEg_exp": -0.18,
+    "dEg_dft": -0.145,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": -0.13
+   },
+   {
+    "Se_record": "POL_0507",
+    "S_record": "POL_0289",
+    "Se_name": "PTTSPD-C8C8 (P4)",
+    "S_name": "PTTTPD-C8 (P2)",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.028,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.09
+   },
+   {
+    "Se_record": "POL_0507",
+    "S_record": "POL_0510",
+    "Se_name": "PTTSPD-C8C8 (P4)",
+    "S_name": "PTTTPD",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.025,
+    "dHOMO_exp": 0.09,
+    "dLUMO_exp": 0.08
+   },
+   {
+    "Se_record": "POL_0509",
+    "S_record": "POL_0289",
+    "Se_name": "PTSTPD-C8C8 (P7)",
+    "S_name": "PTTTPD-C8 (P2)",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.041,
+    "dHOMO_exp": 0.07,
+    "dLUMO_exp": -0.02
+   },
+   {
+    "Se_record": "POL_0509",
+    "S_record": "POL_0510",
+    "Se_name": "PTSTPD-C8C8 (P7)",
+    "S_name": "PTTTPD",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.039,
+    "dHOMO_exp": 0.17,
+    "dLUMO_exp": 0.15
+   },
+   {
+    "Se_record": "POL_0512",
+    "S_record": "POL_0520",
+    "Se_name": "P3SDTDPP",
+    "S_name": "P3TDTDPP",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.101,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": 0.03
+   },
+   {
+    "Se_record": "POL_0514",
+    "S_record": "POL_0320",
+    "Se_name": "PSeTD1",
+    "S_name": "PThTD2",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.066,
+    "dHOMO_exp": -0.04,
+    "dLUMO_exp": -0.11
+   },
+   {
+    "Se_record": "POL_0514",
+    "S_record": "POL_0511",
+    "Se_name": "PSeTD1",
+    "S_name": "PThTD1",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.066,
+    "dHOMO_exp": 0.02,
+    "dLUMO_exp": -0.05
+   },
+   {
+    "Se_record": "POL_0519",
+    "S_record": "POL_0289",
+    "Se_name": "PTSTPD-C8C8 (P8)",
+    "S_name": "PTTTPD-C8 (P2)",
+    "dEg_exp": -0.11,
+    "dEg_dft": 0.099,
+    "dHOMO_exp": 0.08,
+    "dLUMO_exp": -0.03
+   },
+   {
+    "Se_record": "POL_0519",
+    "S_record": "POL_0510",
+    "Se_name": "PTSTPD-C8C8 (P8)",
+    "S_name": "PTTTPD",
+    "dEg_exp": -0.04,
+    "dEg_dft": 0.102,
+    "dHOMO_exp": 0.18,
+    "dLUMO_exp": 0.14
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0530",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBDT-ST1",
+    "dEg_exp": -0.01,
+    "dEg_dft": 0.006,
+    "dHOMO_exp": 0.07,
+    "dLUMO_exp": 0.06
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0533",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBDB-TT0",
+    "dEg_exp": 0.02,
+    "dEg_dft": 0.006,
+    "dHOMO_exp": 0.01,
+    "dLUMO_exp": 0.03
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0553",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBDT(S)-T1",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.023,
+    "dHOMO_exp": 0.06,
+    "dLUMO_exp": 0.05
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0630",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PMOT5",
+    "dEg_exp": -0.03,
+    "dEg_dft": 0.013,
+    "dHOMO_exp": -0.18,
+    "dLUMO_exp": -0.21
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0645",
+    "Se_name": "PBDT-Se1",
+    "S_name": "POBDT(S)-T1",
+    "dEg_exp": -0.01,
+    "dEg_dft": 0.001,
+    "dHOMO_exp": 0.19,
+    "dLUMO_exp": 0.18
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0687",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PDST-BDD",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.001,
+    "dHOMO_exp": 0.06,
+    "dLUMO_exp": 0.03
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0764",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBT1-MP",
+    "dEg_exp": -0.06,
+    "dEg_dft": 0.01,
+    "dHOMO_exp": 0.03,
+    "dLUMO_exp": -0.03
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0765",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBT1-BO",
+    "dEg_exp": -0.01,
+    "dEg_dft": 0.009,
+    "dHOMO_exp": -0.06,
+    "dLUMO_exp": -0.07
+   },
+   {
+    "Se_record": "POL_0535",
+    "S_record": "POL_0770",
+    "Se_name": "PBDT-Se1",
+    "S_name": "PBT1-EH",
+    "dEg_exp": -0.04,
+    "dEg_dft": 0.011,
+    "dHOMO_exp": -0.03,
+    "dLUMO_exp": -0.07
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0530",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBDT-ST1",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.013,
+    "dHOMO_exp": 0.0,
+    "dLUMO_exp": -0.01
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0533",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBDB-TT0",
+    "dEg_exp": 0.02,
+    "dEg_dft": -0.013,
+    "dHOMO_exp": -0.06,
+    "dLUMO_exp": -0.04
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0553",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBDT(S)-T1",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.043,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.02
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0630",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PMOT5",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.007,
+    "dHOMO_exp": -0.25,
+    "dLUMO_exp": -0.28
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0645",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "POBDT(S)-T1",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.019,
+    "dHOMO_exp": 0.12,
+    "dLUMO_exp": 0.11
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0687",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PDST-BDD",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.02,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.04
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0764",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBT1-MP",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.009,
+    "dHOMO_exp": -0.04,
+    "dLUMO_exp": -0.1
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0765",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBT1-BO",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.01,
+    "dHOMO_exp": -0.13,
+    "dLUMO_exp": -0.14
+   },
+   {
+    "Se_record": "POL_0550",
+    "S_record": "POL_0770",
+    "Se_name": "PBDT(Se)-T1",
+    "S_name": "PBT1-EH",
+    "dEg_exp": -0.04,
+    "dEg_dft": -0.009,
+    "dHOMO_exp": -0.1,
+    "dLUMO_exp": -0.14
+   },
+   {
+    "Se_record": "POL_0570",
+    "S_record": "POL_0563",
+    "Se_name": "PS-BDTP (P2)",
+    "S_name": "PThBDTP",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.01,
+    "dHOMO_exp": 0.01,
+    "dLUMO_exp": -0.05
+   },
+   {
+    "Se_record": "POL_0583",
+    "S_record": "POL_0586",
+    "Se_name": "PSezTITI",
+    "S_name": "PThzTITI",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.033,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.09
+   },
+   {
+    "Se_record": "POL_0585",
+    "S_record": "POL_0590",
+    "Se_name": "PSeTITI",
+    "S_name": "PThTITI",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.052,
+    "dHOMO_exp": 0.03,
+    "dLUMO_exp": -0.04
+   },
+   {
+    "Se_record": "POL_0610",
+    "S_record": "POL_0616",
+    "Se_name": "PBDT?DTBSe",
+    "S_name": "PBDT?DTBT",
+    "dEg_exp": -0.17,
+    "dEg_dft": -0.134,
+    "dHOMO_exp": 0.08,
+    "dLUMO_exp": -0.09
+   },
+   {
+    "Se_record": "POL_0629",
+    "S_record": "POL_0602",
+    "Se_name": "PBPD-Se",
+    "S_name": "PBDT-T1",
+    "dEg_exp": -0.04,
+    "dEg_dft": 0.043,
+    "dHOMO_exp": -0.55,
+    "dLUMO_exp": -0.59
+   },
+   {
+    "Se_record": "POL_0629",
+    "S_record": "POL_0620",
+    "Se_name": "PBPD-Se",
+    "S_name": "PBPD-Th",
+    "dEg_exp": -0.13,
+    "dEg_dft": 0.073,
+    "dHOMO_exp": 0.07,
+    "dLUMO_exp": -0.06
+   },
+   {
+    "Se_record": "POL_0675",
+    "S_record": "POL_0566",
+    "Se_name": "C3-DPPTTSe",
+    "S_name": "PTT-DPP (P1)",
+    "dEg_exp": -0.19,
+    "dEg_dft": -0.012,
+    "dHOMO_exp": -0.01,
+    "dLUMO_exp": -0.2
+   },
+   {
+    "Se_record": "POL_0675",
+    "S_record": "POL_0681",
+    "Se_name": "C3-DPPTTSe",
+    "S_name": "C3-DPPTTT",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.023,
+    "dHOMO_exp": 0.01,
+    "dLUMO_exp": -0.01
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0505",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PBDTS-DPP",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.168,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": -0.02
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0658",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PBDTOT-DPP",
+    "dEg_exp": 0.05,
+    "dEg_dft": -0.158,
+    "dHOMO_exp": -0.05,
+    "dLUMO_exp": 0.0
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0723",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PBDTT-DPP",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.124,
+    "dHOMO_exp": 0.05,
+    "dLUMO_exp": -0.01
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0888",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PBDPP-2",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.056,
+    "dHOMO_exp": 0.04,
+    "dLUMO_exp": -0.03
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0948",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PDST-DPP",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.069,
+    "dHOMO_exp": 0.22,
+    "dLUMO_exp": 0.14
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_0980",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PBDPP-OD",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.045,
+    "dHOMO_exp": 0.02,
+    "dLUMO_exp": -0.01
+   },
+   {
+    "Se_record": "POL_0715",
+    "S_record": "POL_1069",
+    "Se_name": "PBDTT-SeDPP",
+    "S_name": "PQ3",
+    "dEg_exp": 0.09,
+    "dEg_dft": -0.051,
+    "dHOMO_exp": 0.06,
+    "dLUMO_exp": 0.15
+   },
+   {
+    "Se_record": "POL_0736",
+    "S_record": "POL_0450",
+    "Se_name": "PIDSBT-OCH8",
+    "S_name": "a-PTPTBT-SA",
+    "dEg_exp": -0.15,
+    "dEg_dft": -0.086,
+    "dHOMO_exp": 0.08,
+    "dLUMO_exp": -0.07
+   },
+   {
+    "Se_record": "POL_0742",
+    "S_record": "POL_0449",
+    "Se_name": "PIDSFBT-OCH8",
+    "S_name": "PIDT-DFBT",
+    "dEg_exp": -0.11,
+    "dEg_dft": -0.084,
+    "dHOMO_exp": 0.03,
+    "dLUMO_exp": -0.08
+   },
+   {
+    "Se_record": "POL_0790",
+    "S_record": "POL_0798",
+    "Se_name": "PDPP-SS",
+    "S_name": "DT-PDPP4T",
+    "dEg_exp": -0.15,
+    "dEg_dft": 0.074,
+    "dHOMO_exp": -0.16,
+    "dLUMO_exp": -0.31
+   },
+   {
+    "Se_record": "POL_0847",
+    "S_record": "POL_0850",
+    "Se_name": "P3SDTQ",
+    "S_name": "P3TDTQ",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.251,
+    "dHOMO_exp": 0.02,
+    "dLUMO_exp": -0.05
+   },
+   {
+    "Se_record": "POL_0887",
+    "S_record": "POL_0117",
+    "Se_name": "PQS",
+    "S_name": "PQT-12",
+    "dEg_exp": -0.2,
+    "dEg_dft": -0.322,
+    "dHOMO_exp": -0.1,
+    "dLUMO_exp": -0.3
+   },
+   {
+    "Se_record": "POL_0894",
+    "S_record": "POL_0117",
+    "Se_name": "PQSQT",
+    "S_name": "PQT-12",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.167,
+    "dHOMO_exp": -0.07,
+    "dLUMO_exp": -0.14
+   },
+   {
+    "Se_record": "POL_1126",
+    "S_record": "POL_0390",
+    "Se_name": "P67",
+    "S_name": "PBDTT-BT",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.05,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1126",
+    "S_record": "POL_0930",
+    "Se_name": "P67",
+    "S_name": "PBDT-DTBT",
+    "dEg_exp": -0.11,
+    "dEg_dft": -0.034,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1127",
+    "S_record": "POL_0707",
+    "Se_name": "P68",
+    "S_name": "PBDT-FBT",
+    "dEg_exp": 0.02,
+    "dEg_dft": -0.016,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1127",
+    "S_record": "POL_1012",
+    "Se_name": "P68",
+    "S_name": "P2",
+    "dEg_exp": 0.05,
+    "dEg_dft": -0.022,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0409",
+    "Se_name": "P69",
+    "S_name": "PBDTS-DTFBT",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0463",
+    "Se_name": "P69",
+    "S_name": "PBDT_TEH-DT_H-BTff",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.019,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0470",
+    "Se_name": "P69",
+    "S_name": "PBDT_TEH-DT_EH-BTff",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0700",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0702",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T1",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.013,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0740",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T-O",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.014,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0741",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-O",
+    "dEg_exp": -0.12,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0757",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0833",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T2",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.015,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0899",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T3",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_0952",
+    "Se_name": "P69",
+    "S_name": "PBDT2FBT-T4",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.017,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1128",
+    "S_record": "POL_1057",
+    "Se_name": "P69",
+    "S_name": "PQ4",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.018,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1139",
+    "S_record": "POL_0732",
+    "Se_name": "P65",
+    "S_name": "PBDT-HBTA",
+    "dEg_exp": -0.16,
+    "dEg_dft": -0.027,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1142",
+    "S_record": "POL_1143",
+    "Se_name": "P129",
+    "S_name": "P130",
+    "dEg_exp": -0.1,
+    "dEg_dft": -0.055,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1169",
+    "S_record": "POL_0166",
+    "Se_name": "PFDPPS-Si",
+    "S_name": "PDPP2FT-C12",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.093,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1169",
+    "S_record": "POL_0239",
+    "Se_name": "PFDPPS-Si",
+    "S_name": "PDPP2FT-C14",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.093,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1169",
+    "S_record": "POL_0302",
+    "Se_name": "PFDPPS-Si",
+    "S_name": "PDPP2FT-C16",
+    "dEg_exp": -0.02,
+    "dEg_dft": -0.13,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1169",
+    "S_record": "POL_1168",
+    "Se_name": "PFDPPS-Si",
+    "S_name": "PFDPPT-Si",
+    "dEg_exp": -0.01,
+    "dEg_dft": -0.074,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1186",
+    "S_record": "POL_1178",
+    "Se_name": "PSe-BO",
+    "S_name": "D18",
+    "dEg_exp": -0.06,
+    "dEg_dft": -0.072,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1186",
+    "S_record": "POL_1193",
+    "Se_name": "PSe-BO",
+    "S_name": "JD40-F",
+    "dEg_exp": 0.0,
+    "dEg_dft": -0.076,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1186",
+    "S_record": "POL_1195",
+    "Se_name": "PSe-BO",
+    "S_name": "D18-B",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.075,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1187",
+    "S_record": "POL_1178",
+    "Se_name": "PSe-HD",
+    "S_name": "D18",
+    "dEg_exp": -0.09,
+    "dEg_dft": -0.075,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1187",
+    "S_record": "POL_1193",
+    "Se_name": "PSe-HD",
+    "S_name": "JD40-F",
+    "dEg_exp": -0.03,
+    "dEg_dft": -0.08,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1187",
+    "S_record": "POL_1195",
+    "Se_name": "PSe-HD",
+    "S_name": "D18-B",
+    "dEg_exp": -0.08,
+    "dEg_dft": -0.078,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1201",
+    "S_record": "POL_1200",
+    "Se_name": "PNDIBS",
+    "S_name": "NDI100",
+    "dEg_exp": -0.05,
+    "dEg_dft": -0.105,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1201",
+    "S_record": "POL_1202",
+    "Se_name": "PNDIBS",
+    "S_name": "PNDI-Si50",
+    "dEg_exp": 0.04,
+    "dEg_dft": -0.12,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1253",
+    "S_record": "POL_1252",
+    "Se_name": "P10",
+    "S_name": "P1",
+    "dEg_exp": -0.12,
+    "dEg_dft": -0.284,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1292",
+    "S_record": "POL_1135",
+    "Se_name": "P118",
+    "S_name": "P117",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.056,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1292",
+    "S_record": "POL_1291",
+    "Se_name": "P118",
+    "S_name": "P117",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.056,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1296",
+    "S_record": "POL_1298",
+    "Se_name": "PN-Se",
+    "S_name": "PZT",
+    "dEg_exp": -0.015,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1297",
+    "S_record": "POL_1295",
+    "Se_name": "PS-Se",
+    "S_name": "PY-HD",
+    "dEg_exp": -0.07,
+    "dEg_dft": -0.002,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1299",
+    "S_record": "POL_1295",
+    "Se_name": "PYT-1S1Se",
+    "S_name": "PY-HD",
+    "dEg_exp": -0.088,
+    "dEg_dft": -0.026,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   },
+   {
+    "Se_record": "POL_1300",
+    "S_record": "POL_1295",
+    "Se_name": "PYT-2Se",
+    "S_name": "PY-HD",
+    "dEg_exp": -0.106,
+    "dEg_dft": -0.033,
+    "dHOMO_exp": null,
+    "dLUMO_exp": null
+   }
+  ]
+ }
+}

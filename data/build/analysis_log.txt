@@ -1,0 +1,64 @@
+{
+ "records": 1323,
+ "dft_gap_vs_exp_optical_gap": {
+  "n": 1323,
+  "pearson_r": 0.74,
+  "slope": 0.56,
+  "intercept": 0.464,
+  "mae_after_linear_fit": 0.114,
+  "mean_offset_dft_minus_exp": 0.522
+ },
+ "tddft_s1_vs_exp_optical_gap": {
+  "n": 1096,
+  "pearson_r": 0.669,
+  "slope": 0.534,
+  "intercept": 0.675,
+  "mae_after_linear_fit": 0.12,
+  "mean_offset_dft_minus_exp": 0.233
+ },
+ "dft_homo_vs_exp_homo": {
+  "n": 1096,
+  "pearson_r": 0.461,
+  "slope": 0.552,
+  "intercept": -2.663,
+  "mae_after_linear_fit": 0.151,
+  "mean_offset_dft_minus_exp": 0.498
+ },
+ "dft_lumo_vs_exp_lumo": {
+  "n": 1096,
+  "pearson_r": 0.571,
+  "slope": 0.566,
+  "intercept": -2.144,
+  "mae_after_linear_fit": 0.158,
+  "mean_offset_dft_minus_exp": 1.014
+ },
+ "by_chalcogen": {
+  "S only": {
+   "n": 1228,
+   "mean_exp_gap": 1.716,
+   "mean_dft_gap": 2.239,
+   "dft_gap_vs_exp": {
+    "n": 1228,
+    "pearson_r": 0.736,
+    "slope": 0.543,
+    "intercept": 0.5,
+    "mae_after_linear_fit": 0.111,
+    "mean_offset_dft_minus_exp": 0.524
+   }
+  },
+  "Se-containing": {
+   "n": 73,
+   "mean_exp_gap": 1.635,
+   "mean_dft_gap": 2.148,
+   "dft_gap_vs_exp": {
+    "n": 73,
+    "pearson_r": 0.687,
+    "slope": 0.514,
+    "intercept": 0.53,
+    "mae_after_linear_fit": 0.108,
+    "mean_offset_dft_minus_exp": 0.513
+   }
+  }
+ }
+}
+{'n_pairs': 139, 'n_se_records_with_partner': 57, 'mean_dEg_exp': -0.053, 'median_dEg_exp': -0.05, 'share_exp_gap_smaller_with_Se': 0.842, 'mean_dEg_dft': -0.055, 'share_dft_gap_smaller_with_Se': 0.899, 'mean_dHOMO_exp': 0.02, 'mean_dLUMO_exp': -0.033}
