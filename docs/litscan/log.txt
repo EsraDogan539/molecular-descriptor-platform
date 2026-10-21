@@ -1,0 +1,1 @@
+{'nanoscale': 26, 'erol_jcim': 12, 'saeki_jpcl': 200}
