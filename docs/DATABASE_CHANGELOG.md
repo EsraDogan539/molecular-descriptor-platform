@@ -1,5 +1,42 @@
 # ChalMolDB database changelog
 
+## Database v1.2 (in preparation)
+
+Built from the Database v1.1 table (`data/releases/chalcogen_database_v1_1.csv.gz`) by
+`scripts/build_database_v1_2.py`. 4,811 records (3,088 development, 400 external, 1,323 polymer). All v1.1 records are
+unchanged (checked cell by cell in `tests/test_database_v1_2.py`).
+
+**Added: polymer collection (1,323 records, POL_0001–POL_1323)**
+- Source: B. Liu, Y. Yan, M. Liu, *Nanoscale* 2025, 17, 7865 (doi:10.1039/d4nr03702b), data and geometries from the
+  authors' GitHub repository (MIT License; copied unmodified to `data/sources/liu_2025_nanoscale/`).
+- POL_0001–POL_1096: 1,096 conjugated polymers for organic solar cells with experimental HOMO, LUMO (cyclic
+  voltammetry) and optical gap, compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, *J. Phys. Chem. Lett.* 2018, 9, 2639.
+  POL_1097–POL_1323: 227 polymers reported 2011–2024 with experimental optical gap and the DOI of the source article.
+- For every polymer: B3LYP-D3/6-31G* (Gaussian 16) HOMO, LUMO and HOMO–LUMO gap of the oligomer built from the
+  methyl-truncated repeat unit (`HOMO_eV`, `LUMO_eV`, `Eg_eV`); TD-B3LYP lowest singlet excitation (`TDDFT_S1_eV`)
+  for the 1,096 set. The record structure (`Canonical_SMILES`, InChI, InChIKey) is the computed oligomer; the
+  source monomer with full side chains is kept in `Source_Monomer_SMILES`.
+- 3D coordinates for 1,064 oligomers (`data/structures_3d_polymer.sdf.gz`). The geometry file is attached only when its
+  InChIKey equals that of the oligomer SMILES; 32 files are not attached (formula or connectivity differs from
+  the SMILES; reason in `Curation_Note`).
+- Chalcogen content: 1,296 records contain S and 73 contain Se; no Te (the source excluded its single Te polymer).
+- 154 InChIKey groups (440 records) share an oligomer structure, mostly polymers that differ only in their side
+  chains, which are truncated for the calculation; they are flagged by `Duplicate_Flag`, not removed.
+
+**New fields:** `Experimental_HOMO_eV`, `Experimental_LUMO_eV`, `TDDFT_S1_eV`, `Source_Monomer_SMILES`.
+
+**Summary statistics (v1.1 → v1.2)**
+
+| | v1.1 | v1.2 |
+|---|---|---|
+| Records | 3,488 | 4,811 |
+| Unique InChIKeys | 3,173 | 4,210 |
+| S/Se/Te core scope | 3,262 | 4,563 |
+| Records containing S / Se / Te | 2,969 / 706 / 154 | 4,265 / 779 / 154 |
+| Records with 3D coordinates | 3,147 | 4,211 |
+| Experimental optical gaps | 48 | 1,365 |
+| Experimental HOMO/LUMO | 0 | 1,096 |
+
 ## Database v1.1 (2026-10-08, tag `db-v1.1`, DOI 10.5281/zenodo.23238884)
 
 Built from the archived Database v1 table (`data/releases/chalcogen_database_v1.csv.gz`) by

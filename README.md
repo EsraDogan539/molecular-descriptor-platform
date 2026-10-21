@@ -21,12 +21,14 @@ The concept DOI (10.5281/zenodo.22903549) covers all versions; cite the version 
 
 ## What ChalMolDB offers
 
-**Curated database (Database v1.1)**
-- 3,488 records: 3,088 donor–acceptor molecules with DFT-optimized structures and 400 oligomer and polymer
-  records of two chalcogen-substituted donor–acceptor–donor families
+**Curated database (Database v1.2)**
+- 4,811 records in three collections: 3,088 donor–acceptor molecules with DFT-optimized structures; 400 oligomer
+  and polymer records of two chalcogen-substituted donor–acceptor–donor families; and 1,323 conjugated polymers
+  with experimental optical gaps (experimental HOMO/LUMO for 1,096) and DFT values of their oligomers
+  (Liu, Yan & Liu, Nanoscale 2025, 17, 7865)
 - Standardized identity (RDKit canonical SMILES, InChI, InChIKey); repeated structures flagged, not removed
 - Record-level provenance: source, level of theory, solvation, curation notes
-- 3D structures for 3,147 records, with an interactive in-browser viewer and SDF download
+- 3D structures for 4,211 records, with an interactive in-browser viewer and SDF download
 
 **Web platform** (https://chalmoldb.streamlit.app)
 - Text, metadata and S/Se/Te-content filters; HOMO/LUMO/Eg ranges

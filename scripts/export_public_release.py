@@ -1,7 +1,7 @@
 """Write the public, programmatic-access copy of the current database release to data/public/.
 
 Outputs (stable paths; versioned through Git tags and Zenodo):
-  data/public/chalmoldb_records.csv       all records, public DEV_/EXT_ identifiers
+  data/public/chalmoldb_records.csv       all records, public DEV_/EXT_/POL_ identifiers
   data/public/MANIFEST.json               release version, row/column counts, SHA-256 of every distributed file
 """
 
@@ -23,6 +23,7 @@ DISTRIBUTED = [
     "data/public/chalmoldb_records.csv",
     "data/structures_3d_v1.sdf.gz",
     "data/structures_3d_external.sdf.gz",
+    "data/structures_3d_polymer.sdf.gz",
     "docs/chalcogen_descriptor_dictionary_v1.csv",
 ]
 

@@ -10,9 +10,10 @@ def db():
 
 
 def test_record_counts_unchanged(db):
-    assert len(db) == 3488
+    assert len(db) == 3488 + 1323
     assert db.Record_ID.str.startswith("EROL_").sum() == 3088
     assert db.Record_ID.str.startswith("HAKAN_").sum() == 400
+    assert db.Record_ID.str.startswith("POL_").sum() == 1323
     assert db.Record_ID.is_unique
 
 

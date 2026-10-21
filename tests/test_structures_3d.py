@@ -79,9 +79,10 @@ def test_geometry_descriptors_reproduce_database_values():
     cols = ["Planarity_Proxy_Z_Range", "Radius_of_Gyration", "Max_Interatomic_Distance",
             "Mean_Interatomic_Distance", "Std_Interatomic_Distance"]
     with_3d = db[db.Record_ID.map(lambda rid: structure_block_for(rid, blocks) is not None)]
-    assert len(with_3d) == 3088 + 59
+    assert len(with_3d) == 3088 + 59 + 1064
     sample = pd.concat([with_3d[with_3d.Record_ID.str.startswith("EROL_")].iloc[::300],
-                        with_3d[with_3d.Record_ID.str.startswith("HAKAN_")]])
+                        with_3d[with_3d.Record_ID.str.startswith("HAKAN_")],
+                        with_3d[with_3d.Record_ID.str.startswith("POL_")].iloc[::50]])
     for _, row in sample.iterrows():
         got = geometry_descriptors(molblock_atoms(structure_block_for(row.Record_ID, blocks)))
         for col in cols:
