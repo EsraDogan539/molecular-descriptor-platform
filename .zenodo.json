@@ -1,0 +1,17 @@
+{
+  "title": "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database",
+  "upload_type": "software",
+  "version": "db-v1.2",
+  "publication_date": "2026-10-22",
+  "description": "<p>ChalMolDB (Chalcogen Molecular Database) is a provenance-aware database and web platform for the electronic properties of chalcogen-based (S, Se, Te) donor–acceptor type semiconducting polymers and related conjugated systems. Database v1.2 contains 5,029 curated records in four collections: 3,088 development (donor–acceptor molecules), 400 external (chalcogen oligomer series), 1,323 polymer (conjugated polymers with experimental optical gaps and oligomer DFT values) and 218 literature records (S/Se/Te helicene series with CCSD(T) reference gaps and Se/Te bicyclic monomers). Every value keeps its source and level of theory. Web platform: https://chalmoldb.streamlit.app</p><p>Code: MIT License. Curated data: CC BY 4.0; third-party source data keep their original licences (listed in data/sources/).</p>",
+  "creators": [
+    {"name": "Doğan, Esra Nur", "affiliation": "Ankara University", "orcid": "0000-0001-5755-7596"},
+    {"name": "Kayı, Hakan", "affiliation": "Ankara University", "orcid": "0000-0001-7300-0325"}
+  ],
+  "license": "MIT",
+  "keywords": ["chalcogen", "selenium", "tellurium", "semiconducting polymers", "donor–acceptor", "HOMO–LUMO gap", "band gap", "chemical database", "cheminformatics", "RDKit"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/EsraDogan539/molecular-descriptor-platform", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "https://chalmoldb.streamlit.app", "relation": "isDocumentedBy", "scheme": "url"}
+  ]
+}
