@@ -1,0 +1,4 @@
+home: 5,029=False 3,488=True 4,229=False 1,371=False Polymer=False Literature=False Nanoscale=False Database v1.2=False Database v1.1=True
+about: 5,029=False 3,488=True 4,229=False 1,371=False Polymer=False Literature=False Nanoscale=False Database v1.2=False Database v1.1=True
+database: 5,029=False 3,488=True 4,229=False 1,371=False Polymer=True Literature=False Nanoscale=False Database v1.2=False Database v1.1=True
+record POL_0001: False exp=False
