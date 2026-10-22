@@ -5,9 +5,10 @@ straight from the GitHub repository or from the Zenodo archive.
 
 | File | Content |
 |---|---|
-| `data/public/chalmoldb_records.csv` | All records of the current release, with public `DEV_`/`EXT_` identifiers (UTF-8 CSV) |
+| `data/public/chalmoldb_records.csv` | All records of the current release, with public `DEV_`/`EXT_`/`POL_` identifiers (UTF-8 CSV) |
 | `data/structures_3d_v1.sdf.gz` | 3D structures of the development collection (B3LYP/6-311+G(d); CC BY 4.0, ref. Haciefendioglu & Yildirim 2025) |
 | `data/structures_3d_external.sdf.gz` | 3D structures of the external oligomers (B3LYP/LANL2DZ; CC BY 4.0, H. Kayı group) |
+| `data/structures_3d_polymer.sdf.gz` | Oligomer geometries of the polymer collection (B3LYP-D3/6-31G*; MIT License, Liu, Yan & Liu 2025) |
 | `docs/chalcogen_descriptor_dictionary_v1.csv` | Definitions of the chalcogen-aware descriptors |
 | `data/public/MANIFEST.json` | Release version, field list and SHA-256 checksum of every file above |
 

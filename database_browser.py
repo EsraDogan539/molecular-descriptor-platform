@@ -118,6 +118,10 @@ def _display_role(value):
         return "Development"
     if text == "External Validation":
         return "External"
+    if text == "Experimental Benchmark":
+        return "Polymer"
+    if text == "Literature Benchmark":
+        return "Literature"
     return text
 
 
@@ -136,6 +140,10 @@ def _display_collection(row):
         return "Development collection"
     if role == "External":
         return "External collection"
+    if role == "Polymer":
+        return "Polymer collection"
+    if role == "Literature":
+        return "Literature collection"
     return role
 
 
@@ -152,12 +160,12 @@ PUBLIC_APP_URL = "https://chalmoldb.streamlit.app"
 
 
 def _linked_record_id():
-    """Public record ID from a ?record=DEV_0001 / EXT_0148 deep link, or None."""
+    """Public record ID from a ?record=DEV_0001 / EXT_0148 / POL_0001 / LIT_0001 deep link, or None."""
     value = st.query_params.get("record")
     if not value:
         return None
     value = str(value).strip().upper()
-    return value if re.fullmatch(r"(DEV|EXT)_\d{4}", value) else None
+    return value if re.fullmatch(r"(DEV|EXT|POL|LIT)_\d{4}", value) else None
 
 
 def record_link(public_id):
@@ -199,6 +207,12 @@ def eg_definition(row):
     """What the Eg value of a record means, in one sentence."""
     if pd.isna(pd.to_numeric(row.get("Eg_eV"), errors="coerce")):
         return "no value in the source (see the curation note)"
+    if str(row.get("Method", "")).startswith("CCSD(T)"):
+        return ("fundamental gap from CCSD(T) ionization potential and electron affinity (IP − EA), "
+                "as reported in the source; no orbital energies")
+    if str(row.get("Record_ID", "")).startswith("POL_"):
+        return ("HOMO–LUMO gap of the methyl-truncated oligomer computed for this polymer, as reported in the "
+                "source; Exp. Eg is the experimental optical gap of the polymer")
     if str(row.get("Oligomer_n")).strip().lower() == "polymer":
         return ("polymer band gap extrapolated from the oligomer series to infinite chain length, "
                 "as reported in the source; no HOMO/LUMO values")
@@ -280,6 +294,12 @@ def _render_record_detail(row):
             e2.metric("LUMO (eV)", _display_value(row.get("LUMO_eV"), 3))
             e3.metric("Eg (eV)", _display_value(row.get("Eg_eV"), 3))
             e4.metric("Exp. Eg (eV)", _display_value(row.get("Experimental_Eg_eV"), 3))
+            extra = [(label, row.get(col)) for label, col in (
+                ("Exp. HOMO (eV)", "Experimental_HOMO_eV"), ("Exp. LUMO (eV)", "Experimental_LUMO_eV"),
+                ("TD-DFT S1 (eV)", "TDDFT_S1_eV")) if pd.notna(pd.to_numeric(row.get(col), errors="coerce"))]
+            if extra:
+                for col, (label, value) in zip(st.columns(4), extra):
+                    col.metric(label, _display_value(value, 3))
             st.markdown(eg_context_html(row), unsafe_allow_html=True)
 
             donor_acceptor = " / ".join(
@@ -338,6 +358,8 @@ def _render_record_detail(row):
                     "Curation status": row.get("Curation_Status"),
                     "Curation note": row.get("Curation_Note"),
                     "Repeat unit SMILES": row.get("Repeat_Unit_SMILES"),
+                    "Source monomer SMILES": row.get("Source_Monomer_SMILES"),
+                    "Experimental Eg source": row.get("Experimental_Eg_Source"),
                     "Repeated structure": row.get("Duplicate_Flag"),
                     "Source method description": row.get("Method"),
                     "Reference / DOI": row.get(reference_column) if reference_column else None,
@@ -655,7 +677,7 @@ def _render_statistics(df):
                 fig, ax = plt.subplots(figsize=(5.2, 2.55))
                 fig.patch.set_facecolor("#FFFFFF")
                 x = list(range(len(role)))
-                role_colors = ["#1F4E79", "#5DA9E9"]
+                role_colors = ["#1F4E79", "#5DA9E9", "#8FB8DE", "#B7D3EA"]
                 bars = ax.bar(
                     x,
                     role.values,
@@ -1452,8 +1474,11 @@ def display_database_statistics():
     repeated_groups = int((structure_ids.value_counts() > 1).sum())
     repeated_by_collection = {}
     if "Split_Role" in df.columns and "InChIKey" in df.columns:
-        is_dev = df["Split_Role"].astype(str).eq("Development/Training")
-        for label, mask in (("development", is_dev), ("external", ~is_dev)):
+        role = df["Split_Role"].astype(str)
+        for label, mask in (("development", role.eq("Development/Training")),
+                            ("external", role.eq("External Validation")),
+                            ("polymer", role.eq("Experimental Benchmark")),
+                            ("literature", role.eq("Literature Benchmark"))):
             keys = df.loc[mask, "InChIKey"].dropna().astype(str).replace("", pd.NA).dropna()
             repeated_by_collection[label] = int((keys.value_counts() > 1).sum())
 
@@ -1490,11 +1515,22 @@ def display_database_statistics():
     if repeated_by_collection:
         dev_groups = repeated_by_collection["development"]
         ext_groups = repeated_by_collection["external"]
+        pol_groups = repeated_by_collection["polymer"]
+        lit_groups = repeated_by_collection["literature"]
+        polymer_part = (
+            f" and {pol_groups:,} in the polymer collection (polymers whose truncated oligomers coincide)"
+            if pol_groups else ""
+        )
+        if lit_groups:
+            polymer_part += (f", {lit_groups:,} in the literature collection (the same molecule computed with "
+                             "several functionals)")
+        cross = repeated_groups - dev_groups - ext_groups - pol_groups - lit_groups
+        cross_part = f"; {cross:,} span more than one collection" if cross > 0 else ""
         repeated_note = (
             f" Of the {repeated_groups:,} repeated-structure groups, {dev_groups:,} are in the development "
-            "collection (records that share a standardized structure in the source library) and "
+            "collection (records that share a standardized structure in the source library), "
             f"{ext_groups:,} in the external collection, where the same oligomer is reported at more than one "
-            "level of theory or set of conditions."
+            f"level of theory or set of conditions{polymer_part}{cross_part}."
         )
     st.caption(
         "Unique-structure and repeated-group counts use standardized InChIKey identity where an exact "

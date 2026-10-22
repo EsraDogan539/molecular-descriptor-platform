@@ -1,8 +1,8 @@
 {
   "name": "ChalMolDB",
-  "database_version": "1.1",
+  "database_version": "1.2",
   "scientific_core_version": "0.11.0",
-  "records": 3488,
+  "records": 5029,
   "fields": [
     "Record_ID",
     "Dataset_Owner",
@@ -63,12 +63,16 @@
     "Curation_Status",
     "Duplicate_Flag",
     "Notes",
-    "Curation_Note"
+    "Curation_Note",
+    "Experimental_HOMO_eV",
+    "Experimental_LUMO_eV",
+    "TDDFT_S1_eV",
+    "Source_Monomer_SMILES"
   ],
   "files": {
     "data/public/chalmoldb_records.csv": {
-      "sha256": "eaa237be3faf7ea0b6c184b79d3a9d9986cbf954f9250e0f0d38849ed940cf8f",
-      "bytes": 4055242
+      "sha256": "9dccb9be285ea829fde6bcb956ccda73d4d7d58ef8b0fca718b90236b42a1cad",
+      "bytes": 6412606
     },
     "data/structures_3d_v1.sdf.gz": {
       "sha256": "05782438761e749874c34b0517bf570adf3c93b6816ec06df4377079e121c819",
@@ -77,6 +81,10 @@
     "data/structures_3d_external.sdf.gz": {
       "sha256": "8af75a20b55c8efbc8212fbc84e35cda9b1e4aea37b0b745698bcfce40823610",
       "bytes": 64734
+    },
+    "data/structures_3d_polymer.sdf.gz": {
+      "sha256": "24b45ae36dd2bb6014c4aab1014056d7e5618758dac2b2ee10119a6ce1d0ca67",
+      "bytes": 1938534
     },
     "docs/chalcogen_descriptor_dictionary_v1.csv": {
       "sha256": "edd9ba6c5f8fc93413cd659b51ba2b4947d09f333643205b5eadfcb0cd8f050b",

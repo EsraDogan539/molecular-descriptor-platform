@@ -1,14 +1,11 @@
 cff-version: 1.2.0
 message: "If you use ChalMolDB in your research, please cite this software release."
-title: "ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
+title: "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
 type: software
-version: "db-v1.1"
-date-released: "2026-10-08"
+version: "db-v1.2"
+date-released: "2026-10-22"
 doi: "10.5281/zenodo.22903549"
 identifiers:
-  - type: doi
-    value: "10.5281/zenodo.23238884"
-    description: "Version DOI of Database v1.1 (db-v1.1)"
   - type: doi
     value: "10.5281/zenodo.22903549"
     description: "Concept DOI (all versions)"
@@ -28,7 +25,7 @@ authors:
     affiliation: "Ankara University"
 preferred-citation:
   type: software
-  title: "ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
+  title: "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
   authors:
     - family-names: "Doğan"
       given-names: "Esra Nur"
@@ -37,5 +34,5 @@ preferred-citation:
       given-names: "Hakan"
       orcid: "https://orcid.org/0000-0001-7300-0325"
   year: 2026
-  version: "db-v1.1"
-  doi: "10.5281/zenodo.23238884"
+  version: "db-v1.2"
+  doi: "10.5281/zenodo.22903549"

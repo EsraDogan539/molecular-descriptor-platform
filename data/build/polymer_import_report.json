@@ -1,0 +1,62 @@
+{
+ "structure_parse_failed": [],
+ "geometry_rejected": {
+  "POL_0046": "formula C45H32O8S6 != C46H34O8S6",
+  "POL_0056": "formula C79H58N6O6S3 != C80H60N6O6S3",
+  "POL_0266": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_0376": "formula C101H66N6O4S11 != C62H42N4O4S10",
+  "POL_0411": "formula C58H40N4O8S10 != C58H42N4O8S10",
+  "POL_0428": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_0458": "bond assignment failed (ValueError)",
+  "POL_0555": "formula C79H48N8O4S10Se4 != C80H50N8O4S10Se4",
+  "POL_0572": "formula C69H36O4S16 != C70H38O4S16",
+  "POL_0618": "formula C58H42N4O8 != C58H38N4O8",
+  "POL_0622": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_0685": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_0689": "formula C88H58N6S4 != C88H60N6S4",
+  "POL_0720": "formula C81H50N4O4S8 != C82H54N4O4S8",
+  "POL_0724": "formula C98H60N4O4S12 != C98H62N4O4S12",
+  "POL_0828": "formula C54H26N4O8S12 != C54H30N4O8S12",
+  "POL_0838": "formula C54H26N8O8S12 != C54H30N8O8S12",
+  "POL_0839": "formula C58H32F4N8S12 != C58H30F4N8S12",
+  "POL_0856": "formula C58H30N4O8S12 != C58H34N4O8S12",
+  "POL_0898": "formula C54H42N2S2 != C54H44N2S2",
+  "POL_0907": "bond assignment failed (ValueError)",
+  "POL_0910": "bond assignment failed (ValueError)",
+  "POL_0923": "formula C82H46N2O2S2 != C84H48N2O2S2",
+  "POL_0939": "bond assignment failed (AtomValenceException)",
+  "POL_0949": "formula C62H38N4O8S12 != C62H42N4O8S12",
+  "POL_0950": "bond assignment failed (ValueError)",
+  "POL_0991": "formula C93H48F4N4O4S8 != C94H50F4N4O4S8",
+  "POL_1013": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_1042": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_1054": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_1074": "InChIKey of geometry differs from oligomer SMILES",
+  "POL_1090": "formula C98H62N4S6 != C96H60N4S6"
+ },
+ "literature_records": 218,
+ "records_total": 5029,
+ "polymer_records": 1323,
+ "polymer_3d": 1064,
+ "polymer_chalcogen_type": {
+  "S": 1228,
+  "Mixed": 68,
+  "None (control)": 22,
+  "Se": 5
+ },
+ "polymer_scope": {
+  "Core_SSeTe": 1301,
+  "O_Control": 21,
+  "Control_NonSSeTe": 1
+ },
+ "polymer_unique_inchikeys": 1037,
+ "polymer_duplicate_records": 440,
+ "overlap_with_v1_1_inchikeys": 0,
+ "experimental_eg_total": 1365,
+ "unique_inchikeys_total": 4229,
+ "records_with_S_Se_Te": {
+  "S": 4316,
+  "Se": 819,
+  "Te": 199
+ }
+}
