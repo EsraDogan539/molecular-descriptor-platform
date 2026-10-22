@@ -50,7 +50,7 @@ CHALMOLDB_ICON_SVG = """
 CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
 CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
 CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
-VERSION_DOI_URL = ""  # Database v1.2: set to the version DOI once the Zenodo record is published
+VERSION_DOI_URL = "https://doi.org/10.5281/zenodo.23558298"  # Database v1.2
 PREVIOUS_VERSION_DOI = "10.5281/zenodo.23238884"  # Database v1.1
 TEAM = [
     {
@@ -1131,7 +1131,7 @@ if page == "home":
         <div class="citation-box">
           <strong>How to cite ChalMolDB</strong><br>
           Current release: Database v{DATABASE_VERSION} · Scientific Core v0.11.0<br>
-          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1.1: 10.5281/zenodo.23238884
+          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1.2: 10.5281/zenodo.23558298
         </div>
         """,
         unsafe_allow_html=True,
@@ -1398,11 +1398,12 @@ to compute the same descriptors; your data are not added to the database.
     st.write(
         f"The current release is ChalMolDB Database v{DATABASE_VERSION} · Scientific Core v0.11.0. All releases are "
         "archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest "
-        "version; Database v1.1 has the version DOI 10.5281/zenodo.23238884 and Database v1 the version DOI "
-        "10.5281/zenodo.22903550. The changes between releases are listed in "
+        "version; Database v1.2 has the version DOI 10.5281/zenodo.23558298, Database v1.1 the version DOI "
+        "10.5281/zenodo.23238884 and Database v1 the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
         "docs/DATABASE_CHANGELOG.md of the repository."
     )
     st.markdown(
+        "[Database v1.2 release](https://doi.org/10.5281/zenodo.23558298) · "
         "[Database v1.1 release](https://doi.org/10.5281/zenodo.23238884) · "
         "[Database v1 release](https://doi.org/10.5281/zenodo.22903550) · "
         "[All archived versions](https://doi.org/10.5281/zenodo.22903549)"
