@@ -1,0 +1,133 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED RECORDS
+Database
+Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
+
+5,029 records · 4,781 core S/Se/Te · 4,229 unique standardized structures · 5,022 Eg values
+
+keyboard_arrow_right
+
+Replay saved query
+
+keyboard_arrow_right
+
+Structure search
+
+Search
+
+Collection
+
+Scope
+
+Chalcogen
+
+Eg
+
+Reference / DOI
+
+keyboard_arrow_right
+
+Advanced filters
+
+keyboard_arrow_right
+
+Query reproducibility
+
+1 matching record
+INSPECT A RECORD
+POL_0001
+Polymer collection · S
+Canonical SMILES
+Cc1cc(C)c(-c2cc(C)c(-c3cc(C)c(-c4cc(C)c(-c5cc(C)c(-c6cc(C)c(C)s6)s5)s4)s3)s2)s1
+Identity
+Database ID
+POL_0001
+Molecule / system
+P3HT
+InChIKey
+IXQIBMHVJPTGIQ-UHFFFAOYSA-N
+Electronic properties
+
+HOMO (eV)
+
+-4.586
+
+LUMO (eV)
+
+-1.799
+
+Eg (eV)
+
+2.787
+
+Exp. Eg (eV)
+
+1.930
+
+Exp. HOMO (eV)
+
+-5.200
+
+Exp. LUMO (eV)
+
+-3.270
+
+TD-DFT S1 (eV)
+
+2.495
+
+Eg: HOMO–LUMO gap of the methyl-truncated oligomer computed for this polymer, as reported in the source; Exp. Eg is the experimental optical gap of the polymer.
+Level of theory: B3LYP-D3 (Gaussian 16)/6-31G*, solvation not stated in source. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Chalcogen environment
+S count
+6
+Se count
+0
+Te count
+0
+Type
+S
+Provenance
+Collection source
+Polymer literature collection
+Donor / Acceptor
+—
+Method
+B3LYP-D3 (Gaussian 16)
+Basis set
+6-31G*
+Reference / DOI
+Liu, Yan & Liu, Nanoscale 2025, 17, 7865
+keyboard_arrow_right
+
+Additional record metadata
+
+Permanent link to this record
+
+https://chalmoldb.streamlit.app/?page=database&record=POL_0001
+
+Download citation-ready record CSV
+
+Show interactive 3D structure
+
+Download 3D structure (SDF)
+
+3D coordinates: Liu, Yan & Liu, Nanoscale 2025, 17, 7865 (doi:10.1039/d4nr03702b): B3LYP-D3/6-31G* oligomer geometry donor-1_opt.xyz from the authors' GitHub repository; MIT License (Liu Group, University of Florida); see data/sources/liu_2025_nanoscale/LICENSE.
+
+Download filtered records
+
+keyboard_arrow_right
+
+Curation notes
+
+ChalMolDB · Database v1.2 · Scientific Core v0.11.0 · Curated records are read-only in the public browser.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

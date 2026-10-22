@@ -1,0 +1,115 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED RECORDS
+Database
+Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
+
+5,029 records · 4,781 core S/Se/Te · 4,229 unique standardized structures · 5,022 Eg values
+
+keyboard_arrow_right
+
+Replay saved query
+
+keyboard_arrow_right
+
+Structure search
+
+Search
+
+Collection
+
+Scope
+
+Chalcogen
+
+Eg
+
+Reference / DOI
+
+keyboard_arrow_right
+
+Advanced filters
+
+keyboard_arrow_right
+
+Query reproducibility
+
+1 matching record
+INSPECT A RECORD
+POL_1200
+Polymer collection · S
+Canonical SMILES
+Cc1ccc(-c2ccc(-c3cc4c5c(c(-c6ccc(-c7ccc(-c8cc9c%10c(c(C)cc%11c%10c8C(=O)N(C)C%11=O)C(=O)N(C)C9=O)s7)s6)cc6c5c3C(=O)N(C)C6=O)C(=O)N(C)C4=O)s2)s1
+Identity
+Database ID
+POL_1200
+Molecule / system
+NDI100
+InChIKey
+UMURBOFDWSUHNB-UHFFFAOYSA-N
+Electronic properties
+
+HOMO (eV)
+
+-5.412
+
+LUMO (eV)
+
+-3.368
+
+Eg (eV)
+
+2.044
+
+Exp. Eg (eV)
+
+1.450
+
+Eg: HOMO–LUMO gap of the methyl-truncated oligomer computed for this polymer, as reported in the source; Exp. Eg is the experimental optical gap of the polymer.
+Level of theory: B3LYP-D3 (Gaussian 16)/6-31G*, solvation not stated in source. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Chalcogen environment
+S count
+4
+Se count
+0
+Te count
+0
+Type
+S
+Provenance
+Collection source
+Polymer literature collection
+Donor / Acceptor
+—
+Method
+B3LYP-D3 (Gaussian 16)
+Basis set
+6-31G*
+Reference / DOI
+Liu, Yan & Liu, Nanoscale 2025, 17, 7865
+keyboard_arrow_right
+
+Additional record metadata
+
+Permanent link to this record
+
+https://chalmoldb.streamlit.app/?page=database&record=POL_1200
+
+Download citation-ready record CSV
+
+Download filtered records
+
+keyboard_arrow_right
+
+Curation notes
+
+ChalMolDB · Database v1.2 · Scientific Core v0.11.0 · Curated records are read-only in the public browser.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

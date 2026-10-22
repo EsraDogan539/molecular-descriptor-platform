@@ -1,0 +1,115 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED RECORDS
+Database
+Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
+
+5,029 records · 4,781 core S/Se/Te · 4,229 unique standardized structures · 5,022 Eg values
+
+keyboard_arrow_right
+
+Replay saved query
+
+keyboard_arrow_right
+
+Structure search
+
+Search
+
+Collection
+
+Scope
+
+Chalcogen
+
+Eg
+
+Reference / DOI
+
+keyboard_arrow_right
+
+Advanced filters
+
+keyboard_arrow_right
+
+Query reproducibility
+
+1 matching record
+INSPECT A RECORD
+EXT_0300
+External collection · S
+Canonical SMILES
+c1coc(-c2ccc(-c3ccc(-c4ccc(-c5ccc(-c6ccc(-c7ccc(-c8ccc(-c9ccc(-c%10ccc(-c%11ccc(-c%12ccco%12)c%12nsnc%11%12)o%10)o9)c9nsnc89)o7)o6)c6nsnc56)o4)o3)c3nsnc23)c1
+Identity
+Database ID
+EXT_0300
+Molecule / system
+OSO
+InChIKey
+DTKIKZWSJZSINM-UHFFFAOYSA-N
+Electronic properties
+
+HOMO (eV)
+
+-4.660
+
+LUMO (eV)
+
+-2.830
+
+Eg (eV)
+
+1.830
+
+Exp. Eg (eV)
+
+—
+
+Eg: HOMO–LUMO gap (LUMO − HOMO) of the calculated structure, as reported in the source.
+Level of theory: B3LYP/6-31G(d), gas phase. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Chalcogen environment
+S count
+4
+Se count
+0
+Te count
+0
+Type
+S
+Provenance
+Collection source
+External literature collection
+Donor / Acceptor
+—
+Method
+B3LYP
+Basis set
+6-31G(d)
+Reference / DOI
+Ozkilinc & Kayi, Journal of Molecular Modeling 2019, Table 4
+keyboard_arrow_right
+
+Additional record metadata
+
+Permanent link to this record
+
+https://chalmoldb.streamlit.app/?page=database&record=EXT_0300
+
+Download citation-ready record CSV
+
+Download filtered records
+
+keyboard_arrow_right
+
+Curation notes
+
+ChalMolDB · Database v1.2 · Scientific Core v0.11.0 · Curated records are read-only in the public browser.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

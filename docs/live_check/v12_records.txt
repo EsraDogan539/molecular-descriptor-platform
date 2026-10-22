@@ -1,0 +1,5 @@
+POL_0001: POL_0001=True Experimental=False TD-DFT=True CCSD=False Nanoscale=True Kumar=False Traceback=False Error=False
+POL_1200: POL_1200=True Experimental=False TD-DFT=False CCSD=False Nanoscale=True Kumar=False Traceback=False Error=False
+LIT_0001: LIT_0001=True Experimental=False TD-DFT=False CCSD=False Nanoscale=False Kumar=True Traceback=False Error=False
+DEV_0001: DEV_0001=True Experimental=False TD-DFT=False CCSD=False Nanoscale=False Kumar=False Traceback=False Error=False
+EXT_0300: EXT_0300=True Experimental=False TD-DFT=False CCSD=False Nanoscale=False Kumar=False Traceback=False Error=False
