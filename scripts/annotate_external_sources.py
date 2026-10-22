@@ -128,8 +128,12 @@ def annotate(df):
         "Experimental_Eg_Max_eV": values.map(lambda v: max(v) if v else pd.NA),
         "Experimental_Eg_Source": pd.Series(pd.NA, index=df.index, dtype="object"),
     }
+    # Records added after v1.1 (polymer collection, POL_) carry their own experimental fields; keep them.
+    later = df.Record_ID.astype(str).str.startswith("POL_")
     for name in reversed(list(new_cols)):
         if name in df.columns:
+            new_cols[name] = new_cols[name].astype("object")
+            new_cols[name][later] = df.loc[later, name]
             df = df.drop(columns=name)
         df.insert(df.columns.get_loc("Experimental_Eg_eV") + 1, name, new_cols[name])
     for col in ("Experimental_Eg_Min_eV", "Experimental_Eg_Max_eV"):

@@ -10,9 +10,11 @@ def db():
 
 
 def test_record_counts_unchanged(db):
-    assert len(db) == 3488
+    assert len(db) == 3488 + 1323 + 218
     assert db.Record_ID.str.startswith("EROL_").sum() == 3088
     assert db.Record_ID.str.startswith("HAKAN_").sum() == 400
+    assert db.Record_ID.str.startswith("POL_").sum() == 1323
+    assert db.Record_ID.str.startswith("LIT_").sum() == 218
     assert db.Record_ID.is_unique
 
 
@@ -60,7 +62,8 @@ def test_b_system_removed_without_renumbering(db):
     v1 = pd.read_csv("data/releases/chalcogen_database_v1.csv.gz", low_memory=False)
     kept = v1[~v1.Family.astype(str).str.startswith("B_system")]
     assert list(kept.Record_ID) == list(db.Record_ID[: len(kept)])
-    assert list(db.Record_ID[len(kept):]) == [f"HAKAN_{i:04d}" for i in range(273, 273 + 240)]
+    v11_ids = db.Record_ID[~db.Record_ID.str.startswith(("POL_", "LIT_"))]
+    assert list(v11_ids[len(kept):]) == [f"HAKAN_{i:04d}" for i in range(273, 273 + 240)]
     merged = kept.merge(db, on="Record_ID", suffixes=("_v1", "_v11"))
     for col in ("Eg_eV", "HOMO_eV", "LUMO_eV", "Experimental_Eg_eV"):
         a, b = merged[f"{col}_v1"], merged[f"{col}_v11"]
@@ -75,7 +78,7 @@ def test_source_annotations(db):
     assert not db.Notes.astype(str).str.contains("Hakan|Erol").any()
     assert set(ext.Solvent_or_Conditions) == {"gas phase", "PCM (acetonitrile)"}
     assert (ext.Solvent_or_Conditions == "PCM (acetonitrile)").sum() == 16 + 94
-    exp = db[db.Experimental_Eg_eV.notna()]
+    exp = ext[ext.Experimental_Eg_eV.notna()]
     assert len(exp) == 21 + 27
     assert exp.Experimental_Eg_Min_eV.notna().all() and exp.Experimental_Eg_Source.notna().all()
     assert (exp.Experimental_Eg_Min_eV <= exp.Experimental_Eg_Max_eV).all()
@@ -112,7 +115,8 @@ def test_a_family_oligomers_match_source_table(db):
 
 
 def test_homo_lumo_corrections(db):
-    withheld = db[db.HOMO_eV.isna() & db.Eg_eV.notna() & db.Oligomer_n.ne("polymer")]
+    ext = db.Record_ID.str.startswith("HAKAN_")
+    withheld = db[ext & db.HOMO_eV.isna() & db.Eg_eV.notna() & db.Oligomer_n.ne("polymer")]
     assert len(withheld) == 7
     assert withheld.LUMO_eV.isna().all()
     assert withheld.Curation_Note.str.contains("HOMO and LUMO withheld").all()

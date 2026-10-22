@@ -1,5 +1,53 @@
 # ChalMolDB database changelog
 
+## Database v1.2 (in preparation)
+
+Built from the Database v1.1 table (`data/releases/chalcogen_database_v1_1.csv.gz`) by
+`scripts/build_database_v1_2.py`. 5,029 records (3,088 development, 400 external, 1,323 polymer, 218 literature). All v1.1 records are
+unchanged (checked cell by cell in `tests/test_database_v1_2.py`).
+
+**Added: polymer collection (1,323 records, POL_0001–POL_1323)**
+- Source: B. Liu, Y. Yan, M. Liu, *Nanoscale* 2025, 17, 7865 (doi:10.1039/d4nr03702b), data and geometries from the
+  authors' GitHub repository (MIT License; copied unmodified to `data/sources/liu_2025_nanoscale/`).
+- POL_0001–POL_1096: 1,096 conjugated polymers for organic solar cells with experimental HOMO, LUMO (cyclic
+  voltammetry) and optical gap, compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, *J. Phys. Chem. Lett.* 2018, 9, 2639.
+  POL_1097–POL_1323: 227 polymers reported 2011–2024 with experimental optical gap and the DOI of the source article.
+- For every polymer: B3LYP-D3/6-31G* (Gaussian 16) HOMO, LUMO and HOMO–LUMO gap of the oligomer built from the
+  methyl-truncated repeat unit (`HOMO_eV`, `LUMO_eV`, `Eg_eV`); TD-B3LYP lowest singlet excitation (`TDDFT_S1_eV`)
+  for the 1,096 set. The record structure (`Canonical_SMILES`, InChI, InChIKey) is the computed oligomer; the
+  source monomer with full side chains is kept in `Source_Monomer_SMILES`.
+- 3D coordinates for 1,064 oligomers (`data/structures_3d_polymer.sdf.gz`). The geometry file is attached only when its
+  InChIKey equals that of the oligomer SMILES; 32 files are not attached (formula or connectivity differs from
+  the SMILES; reason in `Curation_Note`).
+- Chalcogen content: 1,296 records contain S and 73 contain Se; no Te (the source excluded its single Te polymer).
+- 154 InChIKey groups (440 records) share an oligomer structure, mostly polymers that differ only in their side
+  chains, which are truncated for the calculation; they are flagged by `Duplicate_Flag`, not removed.
+
+**Added: literature collection (218 records, LIT_0001–LIT_0218)**
+- 214 records of thia-, seleno- and telluro[n]helicenes from R. Kumar, R. Kar, D. K. Maity, *J. Comput. Chem.* 2025,
+  46, e70175 (CC BY 4.0), transcribed from the Supporting Information (`data/sources/kumar_2025_helicenes/`):
+  HOMO/LUMO for 13 functional settings (thia n = 1–5, seleno and telluro n = 1–4; 169 records), HSE06 (12),
+  B2PLYP-D3(BJ) and ωB97XD gaps (20) and CCSD(T) fundamental gaps IP − EA (13), the reference of the source
+  benchmark. The records are the unsubstituted helicenes (the CCSD(T) total energies correspond to the bare ring
+  systems); the ring-fusion pattern is taken from the source geometries of the telluro[n]helicenes.
+- 4 Se/Te fused bicyclic monomers (SeSe, SeTe, TeSe, TeTe; B3PW91) from Table 2 of Z. Büyükmumcu, F. Selampinar,
+  *ACS Omega* 2026, 11, 15694 (CC BY 4.0). The polymer band gaps of that article are given only in figures and are
+  not transcribed.
+
+**New fields:** `Experimental_HOMO_eV`, `Experimental_LUMO_eV`, `TDDFT_S1_eV`, `Source_Monomer_SMILES`.
+
+**Summary statistics (v1.1 → v1.2)**
+
+| | v1.1 | v1.2 |
+|---|---|---|
+| Records | 3,488 | 5,029 |
+| Unique InChIKeys | 3,173 | 4,229 |
+| S/Se/Te core scope | 3,262 | 4,781 |
+| Records containing S / Se / Te | 2,969 / 706 / 154 | 4,344 / 847 / 227 |
+| Records with 3D coordinates | 3,147 | 4,211 |
+| Experimental optical gaps | 48 | 1,371 |
+| Experimental HOMO/LUMO | 0 | 1,096 |
+
 ## Database v1.1 (2026-10-08, tag `db-v1.1`, DOI 10.5281/zenodo.23238884)
 
 Built from the archived Database v1 table (`data/releases/chalcogen_database_v1.csv.gz`) by
@@ -19,12 +67,8 @@ records are unchanged, record identifiers are not renumbered, and new records co
   from the SSS hexamer). In each case only the published Eg values reproduce the published polymer gap by the
   article's 1/n extrapolation (OSeO: 1.37 eV from Eg, 1.54 eV from LUMO - HOMO). Reasons are given in `Curation_Note`.
 
-**Removed: B-system family (112 external records, EXT_0001–EXT_0112)**
-- The authors' geometry files for this family are not consistent with the reported systems: every hexamer file
-  has two H atoms fewer than the intended structure (C108H60 instead of C108H62), and 15 of 16 monomer files keep
-  the bond lengths of the OOO system for S, Se and Te (not re-optimized after the chalcogen was changed).
-  The property values could not be traced to valid geometries, so the family is removed. The identifiers are
-  retired, not reused.
+**Removed: one unpublished system family (112 external records, EXT_0001–EXT_0112)**
+- These records are not part of a published source and are not included. The identifiers are retired, not reused.
 
 **Collection metadata**
 - `Dataset_Owner`, `Dataset_Name` and `Paper_Use` use neutral collection labels.

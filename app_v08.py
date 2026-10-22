@@ -50,7 +50,8 @@ CHALMOLDB_ICON_SVG = """
 CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
 CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
 CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
-VERSION_DOI_URL = "https://doi.org/10.5281/zenodo.23238884"  # Database v1.1
+VERSION_DOI_URL = ""  # Database v1.2: set to the version DOI once the Zenodo record is published
+PREVIOUS_VERSION_DOI = "10.5281/zenodo.23238884"  # Database v1.1
 TEAM = [
     {
         "name": "Esra Nur Doğan",
@@ -1103,10 +1104,10 @@ if page == "home":
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
-          <div class="metric-item"><span class="metric-number">3,488</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,173</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,262</span><span class="metric-label">S/Se/Te records</span></div>
-          <div class="metric-item"><span class="metric-number">400</span><span class="metric-label">External records</span></div>
+          <div class="metric-item"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">1,371</span><span class="metric-label">Experimental gaps</span></div>
         </div>
         <div class="source-strip">
           <div><b>Development collection · 3,088 records</b>Donor–acceptor molecules with exact structures and 3D
@@ -1114,6 +1115,14 @@ if page == "home":
           <div><b>External collection · 400 records</b>Benzochalcogenadiazole and chalcogendiazoloquinoxaline
           oligomers and polymers, B3LYP and LC-BLYP; O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167 and
           H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179.</div>
+          <div><b>Polymer collection · 1,323 records</b>Conjugated polymers with experimental optical gaps (and
+          HOMO/LUMO for 1,096), with B3LYP-D3/6-31G* values of their oligomers; B. Liu, Y. Yan, M. Liu, Nanoscale
+          2025, 17, 7865, experimental data compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett.
+          2018, 9, 2639.</div>
+          <div><b>Literature collection · 218 records</b>S/Se/Te series from recent articles: thia-, seleno- and
+          telluro[n]helicenes with 13 DFT functionals and CCSD(T) reference gaps (R. Kumar, R. Kar, D. K. Maity,
+          J. Comput. Chem. 2025, 46, e70175) and Se/Te fused bicyclic monomers (Z. Büyükmumcu, F. Selampinar,
+          ACS Omega 2026, 11, 15694).</div>
         </div>
         <div class="quiet-note">
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structures standardized with RDKit
@@ -1121,8 +1130,8 @@ if page == "home":
         </div>
         <div class="citation-box">
           <strong>How to cite ChalMolDB</strong><br>
-          Current release: Database v1.1 · Scientific Core v0.11.0<br>
-          Database v1.1: 10.5281/zenodo.23238884 · Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549
+          Current release: Database v{DATABASE_VERSION} · Scientific Core v0.11.0<br>
+          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1.1: 10.5281/zenodo.23238884
         </div>
         """,
         unsafe_allow_html=True,
@@ -1194,10 +1203,10 @@ to compute the same descriptors; your data are not added to the database.
     st.markdown(
         """
         <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
-          <div class="metric-item" style="padding-left:0;"><span class="metric-number">3,488</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">3,262</span><span class="metric-label">Core S/Se/Te</span></div>
-          <div class="metric-item"><span class="metric-number">3,173</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">3,481</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">5,022</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1205,8 +1214,12 @@ to compute the same descriptors; your data are not added to the database.
 
     st.markdown('<div class="section-rule-title">Database scope</div>', unsafe_allow_html=True)
     st.write(
-        f"Database v{DATABASE_VERSION} contains curated development and external records. Exact standardized "
-        "structures are displayed only where the source supports structure-level identity."
+        f"Database v{DATABASE_VERSION} contains four curated collections: development records (donor–acceptor "
+        "molecules), external records (chalcogen oligomer series), polymer records (conjugated polymers with "
+        "experimental optical gaps and DFT values of their oligomers) and literature records (S/Se/Te series "
+        "computed with several functionals, including CCSD(T) reference gaps). Exact standardized structures are displayed "
+        "only where the source supports structure-level identity. For polymer records the structure is the "
+        "methyl-truncated oligomer that was computed; the experimental values refer to the polymer."
     )
 
     st.markdown('<div class="section-rule-title">Molecular identity</div>', unsafe_allow_html=True)
@@ -1356,6 +1369,7 @@ to compute the same descriptors; your data are not added to the database.
         ("Records (CSV)", "data/public/chalmoldb_records.csv", "text/csv"),
         ("3D, development (SDF)", "data/structures_3d_v1.sdf.gz", "application/gzip"),
         ("3D, external (SDF)", "data/structures_3d_external.sdf.gz", "application/gzip"),
+        ("3D, polymer (SDF)", "data/structures_3d_polymer.sdf.gz", "application/gzip"),
         ("Descriptors (CSV)", "docs/chalcogen_descriptor_dictionary_v1.csv", "text/csv"),
         ("Manifest (JSON)", "data/public/MANIFEST.json", "application/json"),
     ]
@@ -1384,11 +1398,13 @@ to compute the same descriptors; your data are not added to the database.
     st.write(
         f"The current release is ChalMolDB Database v{DATABASE_VERSION} · Scientific Core v0.11.0. All releases are "
         "archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest "
-        "version; Database v1.1 has the version DOI 10.5281/zenodo.23238884 and Database v1 the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
+        "version; Database v1.1 has the version DOI 10.5281/zenodo.23238884 and Database v1 the version DOI "
+        "10.5281/zenodo.22903550. The changes between releases are listed in "
         "docs/DATABASE_CHANGELOG.md of the repository."
     )
     st.markdown(
         "[Database v1.1 release](https://doi.org/10.5281/zenodo.23238884) · "
+        "[Database v1 release](https://doi.org/10.5281/zenodo.22903550) · "
         "[All archived versions](https://doi.org/10.5281/zenodo.22903549)"
     )
     render_credit_footer()
@@ -1421,7 +1437,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>3,488 records · 3,173 unique standardized structures</span>
+          <span>5,029 records · 4,229 unique standardized structures · 1,371 experimental optical gaps</span>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1453,20 +1469,28 @@ if page == "about":
     st.write("If you use ChalMolDB, please cite the database release:")
     st.code(
         f"Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v{DATABASE_VERSION}. "
-        f"Zenodo, 2026. {VERSION_DOI_URL}",
+        f"Zenodo, 2026. {VERSION_DOI_URL or CONCEPT_DOI_URL}",
         language=None,
     )
-    st.caption(
-        f"This is the version DOI of Database v{DATABASE_VERSION}. The concept DOI {CONCEPT_DOI_URL} covers all "
-        "versions and always resolves to the latest one. A journal article describing ChalMolDB is in preparation."
-    )
+    if VERSION_DOI_URL:
+        doi_note = (f"This is the version DOI of Database v{DATABASE_VERSION}. The concept DOI {CONCEPT_DOI_URL} "
+                    "covers all versions and always resolves to the latest one.")
+    else:
+        doi_note = (f"The concept DOI covers all versions and resolves to the latest one; when reporting results, "
+                    f"cite the version DOI of the release you used (Database v1.1: {PREVIOUS_VERSION_DOI}).")
+    st.caption(doi_note + " A journal article describing ChalMolDB is in preparation.")
 
     st.markdown('<div class="section-rule-title">Data sources and acknowledgements</div>', unsafe_allow_html=True)
     st.write(
         "Development collection: T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 "
         "(Supporting Information, CC BY 4.0). External collection: O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, "
         "167; H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179, with geometry files supplied by the "
-        "H. Kayı group. Database content is released under CC BY 4.0 and the software under the MIT licence."
+        "H. Kayı group. Polymer collection: B. Liu, Y. Yan, M. Liu, Nanoscale 2025, 17, 7865 (data and geometries "
+        "from the authors' GitHub repository, MIT License), with experimental values compiled by S. Nagasawa, "
+        "E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett. 2018, 9, 2639. Database content is released under CC BY 4.0 "
+        "(the polymer-collection source files keep their MIT licence notice) and the software under the MIT licence. "
+        "Literature collection: R. Kumar, R. Kar, D. K. Maity, J. Comput. Chem. 2025, 46, e70175 and Z. Büyükmumcu, "
+        "F. Selampinar, ACS Omega 2026, 11, 15694 (both CC BY 4.0)."
     )
     render_credit_footer()
     st.stop()
