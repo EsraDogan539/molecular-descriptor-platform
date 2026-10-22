@@ -1,0 +1,18 @@
+[
+ {
+  "id": 23238884,
+  "doi": "10.5281/zenodo.23238884",
+  "title": "ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database",
+  "version": "db-v1.1",
+  "date": "2026-10-08",
+  "created": "2026-10-08T13:05:41.852280+00:00"
+ },
+ {
+  "id": 22903550,
+  "doi": "10.5281/zenodo.22903550",
+  "title": "ChalMolDB v0.11.0 — Chalcogen Molecular Database",
+  "version": "0.11.0",
+  "date": "2026-09-22",
+  "created": "2026-09-22T18:50:58.706267+00:00"
+ }
+]
