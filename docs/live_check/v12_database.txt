@@ -9,7 +9,7 @@ CURATED RECORDS
 Database
 Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
 
-3,488 records · 3,262 core S/Se/Te · 3,173 unique standardized structures · 3,481 Eg values
+5,029 records · 4,781 core S/Se/Te · 4,229 unique standardized structures · 5,022 Eg values
 
 keyboard_arrow_right
 
@@ -39,7 +39,7 @@ keyboard_arrow_right
 
 Query reproducibility
 
-3,488 matching records
+5,029 matching records
 keyboard_arrow_right
 
 Compare records

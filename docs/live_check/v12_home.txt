@@ -41,22 +41,26 @@ Start from a curated, provenance-tagged training set with standardized structure
 Teaching and learning
 Explore real donor–acceptor examples of how S, Se and Te change electronic properties, with 2D and 3D structures.
 DATABASE AT A GLANCE
-3,488
+5,029
 Records
-3,173
+4,229
 Unique structures
-3,262
+4,781
 S/Se/Te records
-400
-External records
+1,371
+Experimental gaps
 Development collection · 3,088 records
 Donor–acceptor molecules with exact structures and 3D coordinates, B3LYP/6-311+G(d); T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369.
 External collection · 400 records
 Benzochalcogenadiazole and chalcogendiazoloquinoxaline oligomers and polymers, B3LYP and LC-BLYP; O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167 and H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179.
+Polymer collection · 1,323 records
+Conjugated polymers with experimental optical gaps (and HOMO/LUMO for 1,096), with B3LYP-D3/6-31G* values of their oligomers; B. Liu, Y. Yan, M. Liu, Nanoscale 2025, 17, 7865, experimental data compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett. 2018, 9, 2639.
+Literature collection · 218 records
+S/Se/Te series from recent articles: thia-, seleno- and telluro[n]helicenes with 13 DFT functionals and CCSD(T) reference gaps (R. Kumar, R. Kar, D. K. Maity, J. Comput. Chem. 2025, 46, e70175) and Se/Te fused bicyclic monomers (Z. Büyükmumcu, F. Selampinar, ACS Omega 2026, 11, 15694).
 Database v1.1  ·  Structures standardized with RDKit  ·  S/Se/Te-aware descriptors  ·  Source and level of theory kept for every value
 How to cite ChalMolDB
 Current release: Database v1.1 · Scientific Core v0.11.0
-Database v1.1: 10.5281/zenodo.23238884 · Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549
+Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1.1: 10.5281/zenodo.23238884
 ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
 Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
 Team & contact How to cite GitHub

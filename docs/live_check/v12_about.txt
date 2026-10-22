@@ -15,7 +15,7 @@ Each record keeps its standardized structure (canonical SMILES, InChI and InChIK
 
 CURRENT RELEASE
 Database v1.1 · Scientific Core v0.11.0
-3,488 records · 3,173 unique standardized structures
+5,029 records · 4,229 unique standardized structures · 1,371 experimental optical gaps
 RESOURCES
 Documentation GitHub repository Zenodo (all versions)
 TEAM
@@ -34,13 +34,13 @@ HOW TO CITE
 
 If you use ChalMolDB, please cite the database release:
 
-Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v1.1. Zenodo, 2026. https://doi.org/10.5281/zenodo.23238884
+Doğan, E. N.; Kayı, H. ChalMolDB: Chalcogen Molecular Database, Database v1.1. Zenodo, 2026. https://doi.org/10.5281/zenodo.22903549
 
-This is the version DOI of Database v1.1. The concept DOI https://doi.org/10.5281/zenodo.22903549 covers all versions and always resolves to the latest one. A journal article describing ChalMolDB is in preparation.
+The concept DOI covers all versions and resolves to the latest one; when reporting results, cite the version DOI of the release you used (Database v1.1: 10.5281/zenodo.23238884). A journal article describing ChalMolDB is in preparation.
 
 DATA SOURCES AND ACKNOWLEDGEMENTS
 
-Development collection: T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 (Supporting Information, CC BY 4.0). External collection: O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167; H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179, with geometry files supplied by the H. Kayı group. Database content is released under CC BY 4.0 and the software under the MIT licence.
+Development collection: T. Haciefendioglu, E. Yildirim, J. Chem. Inf. Model. 2025, 65, 5360–5369 (Supporting Information, CC BY 4.0). External collection: O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167; H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179, with geometry files supplied by the H. Kayı group. Polymer collection: B. Liu, Y. Yan, M. Liu, Nanoscale 2025, 17, 7865 (data and geometries from the authors' GitHub repository, MIT License), with experimental values compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett. 2018, 9, 2639. Database content is released under CC BY 4.0 (the polymer-collection source files keep their MIT licence notice) and the software under the MIT licence. Literature collection: R. Kumar, R. Kar, D. K. Maity, J. Comput. Chem. 2025, 46, e70175 and Z. Büyükmumcu, F. Selampinar, ACS Omega 2026, 11, 15694 (both CC BY 4.0).
 
 ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
 Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
