@@ -1,6 +1,6 @@
 # ChalMolDB database changelog
 
-## Database v1.2 (2026-10-22)
+## Database v1.2 (2026-10-22, tag `db-v1.2`, DOI 10.5281/zenodo.23558298)
 
 Built from the Database v1.1 table (`data/releases/chalcogen_database_v1_1.csv.gz`) by
 `scripts/build_database_v1_2.py`. 5,029 records (3,088 development, 400 external, 1,323 polymer, 218 literature). All v1.1 records are
