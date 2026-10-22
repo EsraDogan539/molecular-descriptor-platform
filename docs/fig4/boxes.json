@@ -1,0 +1,39 @@
+{
+ "db_a_caption": {
+  "x": 180,
+  "y": 368.625,
+  "width": 1080,
+  "height": 22.390625
+ },
+ "db_a_matching": {
+  "x": 180,
+  "y": 809.40625,
+  "width": 1080,
+  "height": 22.515625
+ },
+ "db_a_replay": {
+  "x": 218,
+  "y": 416.8125,
+  "width": 119,
+  "height": 22.390625
+ },
+ "st_snapshot": {
+  "x": 180,
+  "y": 377.421875,
+  "width": 1080,
+  "height": 19.96875
+ },
+ "st_distribution": {
+  "x": 180,
+  "y": 738.140625,
+  "width": 1080,
+  "height": 19.96875
+ },
+ "st_composition": "TimeoutError('Locator.bounding_box: Timeout 30000ms exceeded.\\nCall log:\\n  - waiting for get_by_text(\"Collection composition\").first\\n')",
+ "st_coverage": {
+  "x": 208.1875,
+  "y": 252.703125,
+  "width": 790,
+  "height": 48.53125
+ }
+}
