@@ -4,7 +4,11 @@ title: "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecul
 type: software
 version: "db-v1.2"
 date-released: "2026-10-22"
+doi: "10.5281/zenodo.23558298"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23558298"
+    description: "Version DOI of Database v1.2 (db-v1.2)"
   - type: doi
     value: "10.5281/zenodo.22903549"
     description: "Concept DOI (all versions)"

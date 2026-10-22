@@ -3,7 +3,8 @@
 
 A curated chalcogen-focused molecular database and Streamlit research interface for standardized molecular identity, electronic-property data, interpretable S/Se/Te descriptors, structure-first exploration, provenance-aware inspection, and reproducible query workflows.
 
-**Current release:** Database v1.1 · Scientific Core v0.11.0 (tag `db-v1.1`): 3,488 records, 3,173 unique standardized structures  
+**Current release:** Database v1.2 · Scientific Core v0.11.0 (tag `db-v1.2`): 5,029 records in four collections, 4,229 unique standardized structures  
+**Database v1.2 version DOI:** https://doi.org/10.5281/zenodo.23558298  
 **Database v1.1 version DOI:** https://doi.org/10.5281/zenodo.23238884  
 **Concept DOI (all versions, resolves to the latest):** https://doi.org/10.5281/zenodo.22903549  
 **Database v1 (v0.11.0) version DOI:** https://doi.org/10.5281/zenodo.22903550  
@@ -15,7 +16,7 @@ Embedding the platform in another website: [`docs/EMBEDDING.md`](docs/EMBEDDING.
 
 ## Citation
 
-Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.1 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23238884
+Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23558298
 
 The concept DOI (10.5281/zenodo.22903549) covers all versions; cite the version DOI of the release you used.
 
@@ -64,7 +65,7 @@ Department of Chemical Engineering, Faculty of Engineering, Ankara University, A
 
 ## Scientific Core terminology
 
-The publication-oriented scientific core uses a fixed S/Se/Te-focused descriptor vocabulary. The current release is Database v1.1 with Scientific Core v0.11.0.
+The publication-oriented scientific core uses a fixed S/Se/Te-focused descriptor vocabulary. The current release is Database v1.2 with Scientific Core v0.11.0.
 
 - **Target Chalcogen Count** = `Sulfur Count + Selenium Count + Tellurium Count`
 - **Target Chalcogen Fraction** = `Target Chalcogen Count / Heavy Atom Count`
