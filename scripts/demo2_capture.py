@@ -23,14 +23,17 @@ def shot(page, name):
     log.append(f"shot {name}")
 
 def go(page, q, wait=40000):
-    page.goto(BASE + q, timeout=180000)
-    w = page.get_by_text("Yes, get this app back up")
-    if w.count(): w.first.click()
-    page.wait_for_timeout(wait)
+    for attempt in range(4):
+        page.goto(BASE + q, timeout=180000)
+        w = page.get_by_text("Yes, get this app back up")
+        if w.count(): w.first.click()
+        page.wait_for_timeout(wait)
+        body = page.locator("body").inner_text()
+        if "supposed to happen" not in body:
+            break
+        log.append(f"ERROR PAGE at {q} (attempt {attempt + 1})")
+        page.wait_for_timeout(60000)
     page.add_style_tag(content=HIDE); page.wait_for_timeout(600)
-    body = page.locator("body").inner_text()
-    if "supposed to happen" in body:
-        log.append("ERROR PAGE at " + q)
 
 with sync_playwright() as p:
     br = p.chromium.launch()
