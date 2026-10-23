@@ -1,0 +1,22 @@
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (4)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (5)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (7)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (9)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (4)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (5)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (7)
+[08:41:54] UFFTYPER: Unrecognized atom type: Se2+2 (9)
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 4
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 5
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 7
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 9
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 4
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 5
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 7
+[08:41:54] UFFTYPER: Warning: hybridization set to SP3 for atom 9
+LIT_0206 ok c1cc2c(s1)sc1sc3sc4sccc4c3c12
+LIT_0210 ok c1cc2c([se]1)[se]c1[se]c3[se]ccc3c12
+LIT_0214 ok c1cc2c([te]1)[te]c1[te]c3[te]ccc3c12
+LIT_0205 ok c1cc2c(s1)sc1sc3sccc3c12
+POL_0079 ok 104
+POL_0080 ok 104

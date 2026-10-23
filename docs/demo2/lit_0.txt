@@ -1,0 +1,115 @@
+ChalMolDB
+Chalcogen Molecular Database
+Database
+Statistics
+Analyze
+Documentation
+About
+CURATED RECORDS
+Database
+Browse curated records and inspect molecular identity, electronic properties, chalcogen context and record-level provenance.
+
+5,029 records · 4,781 core S/Se/Te · 4,229 unique standardized structures · 5,022 Eg values
+
+keyboard_arrow_right
+
+Replay saved query
+
+keyboard_arrow_right
+
+Structure search
+
+Search
+
+Collection
+
+Scope
+
+Chalcogen
+
+Eg
+
+Reference / DOI
+
+keyboard_arrow_right
+
+Advanced filters
+
+keyboard_arrow_right
+
+Query reproducibility
+
+1 matching record
+INSPECT A RECORD
+LIT_0214
+Literature collection · Te
+Canonical SMILES
+c1cc2c([te]1)[te]c1[te]c3[te]ccc3c12
+Identity
+Database ID
+LIT_0214
+Molecule / system
+telluro[4]helicene
+InChIKey
+KESLTDLFWXJDBA-UHFFFAOYSA-N
+Electronic properties
+
+HOMO (eV)
+
+—
+
+LUMO (eV)
+
+—
+
+Eg (eV)
+
+7.398
+
+Exp. Eg (eV)
+
+—
+
+Eg: fundamental gap from CCSD(T) ionization potential and electron affinity (IP − EA), as reported in the source; no orbital energies.
+Level of theory: CCSD(T)//CCSD (fundamental gap, IP - EA)/6-311++G(d,p), gas phase. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
+Chalcogen environment
+S count
+0
+Se count
+0
+Te count
+4
+Type
+Te
+Provenance
+Collection source
+Literature series collection
+Donor / Acceptor
+—
+Method
+CCSD(T)//CCSD (fundamental gap, IP - EA)
+Basis set
+6-311++G(d,p)
+Reference / DOI
+Kumar, Kar & Maity, J. Comput. Chem. 2025, 46, e70175
+keyboard_arrow_right
+
+Additional record metadata
+
+Permanent link to this record
+
+https://chalmoldb.streamlit.app/?page=database&record=LIT_0214
+
+Download citation-ready record CSV
+
+Download filtered records
+
+keyboard_arrow_right
+
+Curation notes
+
+ChalMolDB · Database v1.2 · Scientific Core v0.11.0 · Curated records are read-only in the public browser.
+
+ChalMolDB · Developed by Esra Nur Doğan and Hakan Kayı · Ankara University
+Department of Chemical Engineering, Faculty of Engineering, Ankara University, Ankara, Türkiye
+Team & contact How to cite GitHub

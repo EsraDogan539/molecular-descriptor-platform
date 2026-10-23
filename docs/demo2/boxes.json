@@ -1,0 +1,118 @@
+{
+ "home_explore": {
+  "x": 400.890625,
+  "y": 573.546875,
+  "width": 105,
+  "height": 19
+ },
+ "home_glance": {
+  "x": 180,
+  "y": 984.84375,
+  "width": 1080,
+  "height": 21
+ },
+ "home_polymer_card": {
+  "x": 195.390625,
+  "y": 1233.546875,
+  "width": 501.21875,
+  "height": 19.953125
+ },
+ "db_search": {
+  "x": 181,
+  "y": 552.21875,
+  "width": 1078,
+  "height": 37.59375
+ },
+ "db_collection": {
+  "x": 198,
+  "y": 683.28125,
+  "width": 514,
+  "height": 66.875
+ },
+ "db_chalcogen": {
+  "x": 399.1875,
+  "y": 607.015625,
+  "width": 203.203125,
+  "height": 68
+ },
+ "db_count": {
+  "x": 180,
+  "y": 809.40625,
+  "width": 1080,
+  "height": 22.515625
+ },
+ "db_table": {
+  "x": 180,
+  "y": 839.109375,
+  "width": 1082,
+  "height": 420
+ },
+ "pol_exp": {
+  "x": 1088.765625,
+  "y": 1681,
+  "width": 68,
+  "height": 19
+ },
+ "pol_homo": null,
+ "pol_eg": null,
+ "pol_lot": {
+  "x": 528.515625,
+  "y": 1908.90625,
+  "width": 95,
+  "height": 17
+ },
+ "pol_prov": {
+  "x": 864.21875,
+  "y": 1995.75,
+  "width": 364.390625,
+  "height": 23.546875
+ },
+ "pol_id": null,
+ "pol_toggle": {
+  "x": 553.515625,
+  "y": 2497.75,
+  "width": 178,
+  "height": 19
+ },
+ "pol_viewer": {
+  "x": 513.515625,
+  "y": 478.25,
+  "width": 730.484375,
+  "height": 380
+ },
+ "lit_exp": {
+  "x": 1088.765625,
+  "y": 1681,
+  "width": 68,
+  "height": 19
+ },
+ "lit_homo": null,
+ "lit_eg": null,
+ "lit_lot": {
+  "x": 528.515625,
+  "y": 1808.90625,
+  "width": 95,
+  "height": 17
+ },
+ "lit_prov": {
+  "x": 864.21875,
+  "y": 1895.75,
+  "width": 364.390625,
+  "height": 23.546875
+ },
+ "lit_id": null,
+ "st_snapshot": {
+  "x": 180,
+  "y": 377.421875,
+  "width": 1080,
+  "height": 19.96875
+ },
+ "st_dist": {
+  "x": 180,
+  "y": 738.140625,
+  "width": 1080,
+  "height": 19.96875
+ },
+ "docs_data": null,
+ "about_cite": null
+}
