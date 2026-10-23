@@ -1,0 +1,125 @@
+ERROR PAGE at ?page=about
+shot about
+box about_cite: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("How to cite").first
+
+ok about
+ERROR PAGE at ?page=documentation
+shot docs
+ok docs
+ERROR PAGE at ?page=home
+shot home
+box home_explore: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Explore database", exact=True).first
+
+box home_glance: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Database at a glance").first
+
+box home_polymer_card: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Polymer collection · 1,323 records").first
+
+box home_cite: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("How to cite ChalMolDB").first
+
+ok home
+ERROR PAGE at ?page=database
+shot db_0
+box db_search: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_placeholder("ID, molecule/system, structure, method, source or reference").first
+box db_collection: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("[data-testid='stSelectbox']").filter(has_text="Collection").locator("[data-bas
+box db_count: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("matching records").first
+
+box db_table: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_test_id("stDataFrame").first
+
+FAIL database: 3.12/site-packages/playwright/_impl/_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-testid='stSelectbox']").filter(has_text="Collection").locator("[data-baseweb='select']").first
+
+
+shot database_fail
+ERROR PAGE at ?page=database&record=POL_0079
+shot pol_0
+box pol_exp: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Exp. Eg (eV)", exact=True).first
+
+box pol_homo: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("HOMO (eV)", exact=True).first
+
+box pol_eg: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Eg (eV)", exact=True).first
+
+box pol_lot: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Level of theory").first
+
+box pol_prov: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Provenance", exact=True).first
+
+box pol_id: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("POL_0079", exact=True).first
+
+box pol_ident: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Identity", exact=True).first
+
+box pol_props: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Electronic properties", exact=True).first
+
+box pol_toggle: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Show interactive 3D structure").first
+
+FAIL pol: 
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Show interactive 3D structure").first
+
+
+shot pol_fail
+shot lit_0
+box lit_exp: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Exp. Eg (eV)", exact=True).first
+
+box lit_homo: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("HOMO (eV)", exact=True).first
+
+box lit_eg: Locator.bounding_box: Timeout 8000ms exceeded.
+Call log:
+  - waiting for get_by_text("Eg (eV)", exact=True).first
+
+ok lit
+shot stats
+ok stats
+shot k_0
+shot ketcher
+ok ketcher
