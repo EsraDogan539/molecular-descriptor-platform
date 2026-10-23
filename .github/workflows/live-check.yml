@@ -7,15 +7,15 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with: {ref: main, path: mainsrc}
-      - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
-      - run: pip install playwright > /dev/null && python -m playwright install --with-deps chromium > /dev/null
-      - run: python scripts/demo2_capture.py database,lit > docs/demo2/capture_stdout.txt 2>&1 || true
+      - run: |
+          mkdir -p docs/domain
+          for d in chalmoldb.org chalmoldb.com chalmoldb.net; do
+            code=$(curl -s -o docs/domain/$d.json -w "%{http_code}" "https://rdap.org/domain/$d" -L)
+            echo "$d $code" >> docs/domain/result.txt
+          done
+          cat docs/domain/result.txt
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A docs; git commit -m "Demo2 capture [skip ci]" || true; git push
+          git add -A docs; git commit -m "Domain check [skip ci]" || true; git push
