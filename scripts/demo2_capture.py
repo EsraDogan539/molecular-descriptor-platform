@@ -73,15 +73,20 @@ with sync_playwright() as p:
         go(page, "?page=database"); shot(page, "db_0")
         search = page.get_by_placeholder("ID, molecule/system, structure, method, source or reference")
         bb(page, "db_search", search)
-        coll = page.locator("[data-testid='stSelectbox']").filter(has_text="Collection").locator("[data-baseweb='select']")
-        bb(page, "db_collection", coll)
         bb(page, "db_count", page.get_by_text("matching records"))
         bb(page, "db_table", page.get_by_test_id("stDataFrame"))
-        coll.first.click(); page.wait_for_timeout(1500)
+        info = page.evaluate("""() => [...document.querySelectorAll('[data-testid=stSelectbox]')].map(e => {const r=e.getBoundingClientRect(); return {t:e.innerText.slice(0,40), x:r.x,y:r.y,w:r.width,h:r.height, html:e.outerHTML.slice(0,600)}})""")
+        (OUT / "selects.json").write_text(json.dumps(info, indent=1))
+        sel = [i for i in info if i["t"].startswith("Collection") and i["w"] > 0][0]
+        boxes["db_collection"] = {"x": sel["x"], "y": sel["y"], "width": sel["w"], "height": sel["h"]}
+        cx, cy = sel["x"] + sel["w"] / 2, sel["y"] + sel["h"] - 20
+        page.mouse.click(cx, cy); page.wait_for_timeout(1800)
         shot(page, "db_1_open")
-        opt = page.get_by_role("option").filter(has_text="Polymer")
-        bb(page, "db_opt_polymer", opt)
-        opt.first.click(); page.wait_for_timeout(9000)
+        opts = page.evaluate("""() => [...document.querySelectorAll('[role=option], li')].filter(e=>e.offsetParent).map(e => {const r=e.getBoundingClientRect(); return {t:e.innerText.slice(0,40), x:r.x,y:r.y,w:r.width,h:r.height}})""")
+        (OUT / "options.json").write_text(json.dumps(opts, indent=1))
+        pol = [o for o in opts if o["t"].strip().startswith("Polymer")][0]
+        boxes["db_opt_polymer"] = {"x": pol["x"], "y": pol["y"], "width": pol["w"], "height": pol["h"]}
+        page.mouse.click(pol["x"] + pol["w"] / 2, pol["y"] + pol["h"] / 2); page.wait_for_timeout(9000)
         shot(page, "db_2_polymer")
         bb(page, "db_count2", page.get_by_text("matching records"))
         bb(page, "db_table2", page.get_by_test_id("stDataFrame"))
