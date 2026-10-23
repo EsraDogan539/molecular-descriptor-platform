@@ -19,7 +19,7 @@ keyboard_arrow_right
 
 Structure search
 
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/TextInput.DZMdozJH.js
+Search
 
 Collection
 
@@ -40,7 +40,6 @@ keyboard_arrow_right
 Query reproducibility
 
 1 matching record
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/DataFrame.CZ6u6FRw.js
 INSPECT A RECORD
 LIT_0214
 Literature collection · Te
@@ -54,10 +53,23 @@ telluro[4]helicene
 InChIKey
 KESLTDLFWXJDBA-UHFFFAOYSA-N
 Electronic properties
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/Metric.B02FwwbX.js
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/Metric.B02FwwbX.js
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/Metric.B02FwwbX.js
-TypeError: Failed to fetch dynamically imported module: https://chalmoldb.streamlit.app/~/+/static/js/Metric.B02FwwbX.js
+
+HOMO (eV)
+
+—
+
+LUMO (eV)
+
+—
+
+Eg (eV)
+
+7.398
+
+Exp. Eg (eV)
+
+—
+
 Eg: fundamental gap from CCSD(T) ionization potential and electron affinity (IP − EA), as reported in the source; no orbital energies.
 Level of theory: CCSD(T)//CCSD (fundamental gap, IP - EA)/6-311++G(d,p), gas phase. Compare Eg values within one level of theory and set of conditions; values from different levels are not directly comparable.
 Chalcogen environment

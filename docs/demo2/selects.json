@@ -1,0 +1,98 @@
+[
+ {
+  "t": "",
+  "x": 198,
+  "y": 683.28125,
+  "w": 514,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Search mode</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Search mode\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an"
+ },
+ {
+  "t": "Collection",
+  "x": 180,
+  "y": 607.015625,
+  "w": 203.1875,
+  "h": 68,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Collection</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Collection\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an o"
+ },
+ {
+  "t": "Scope",
+  "x": 399.1875,
+  "y": 607.015625,
+  "w": 203.203125,
+  "h": 68,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Scope</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Scope\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an option\" aut"
+ },
+ {
+  "t": "Chalcogen",
+  "x": 618.390625,
+  "y": 607.015625,
+  "w": 203.203125,
+  "h": 68,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Chalcogen</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Chalcogen\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an opt"
+ },
+ {
+  "t": "Eg",
+  "x": 837.59375,
+  "y": 607.015625,
+  "w": 203.203125,
+  "h": 68,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Eg</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Eg\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an option\" autocorre"
+ },
+ {
+  "t": "Reference / DOI",
+  "x": 1056.796875,
+  "y": 607.015625,
+  "w": 203.203125,
+  "h": 68,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Reference / DOI</p></div></span><div class=\"st-emotion-cache-7e7wz2 e1kt9bl71\"><span class=\"stTooltipIcon st-emotion-cache-saipki e1o1x6gp1\" data-testid=\"stTooltipIcon\"><span data-testid=\"stTooltipHoverTarget\" class=\"stTooltipHoverTarget\" style=\"display: flex; flex-direction: row; justify-content: flex-end; width: auto;\"><button type=\"button\" aria-label=\"Help "
+ },
+ {
+  "t": "",
+  "x": 198,
+  "y": 1573.546875,
+  "w": 514,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Method</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Method\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an option\" a"
+ },
+ {
+  "t": "",
+  "x": 728,
+  "y": 1573.546875,
+  "w": 514,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Basis set</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Basis set\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an opt"
+ },
+ {
+  "t": "",
+  "x": 728,
+  "y": 1656.421875,
+  "w": 514,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Curation status</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Curation status\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"C"
+ },
+ {
+  "t": "",
+  "x": 214,
+  "y": 1386.5,
+  "w": 498,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Reference record</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Reference record\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder="
+ },
+ {
+  "t": "",
+  "x": 728,
+  "y": 1386.5,
+  "w": 498,
+  "h": 66.875,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1rocbuj e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Candidate record</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Candidate record\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder="
+ },
+ {
+  "t": "",
+  "x": 180,
+  "y": 1453.265625,
+  "w": 1080,
+  "h": 40,
+  "html": "<div class=\"stSelectbox\" data-testid=\"stSelectbox\"><label data-testid=\"stWidgetLabel\" class=\"st-emotion-cache-1bi5dy7 e1kt9bl70\"><span aria-hidden=\"true\"><div data-testid=\"stMarkdownContainer\" class=\"st-emotion-cache-1cwtxlw ewutnf10\"><p>Record</p></div></span></label><template><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"></div></template><div class=\"react-aria-ComboBox\" data-rac=\"\"><div class=\"st-emotion-cache-ur7596 e1fp86qc0\" data-rac=\"\" role=\"group\"><input aria-label=\"Record\" type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" placeholder=\"Choose an option\" a"
+ }
+]
