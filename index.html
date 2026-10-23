@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ChalMolDB · Chalcogen Molecular Database</title>
+<meta name="description" content="ChalMolDB: 5,029 curated records on how sulfur, selenium and tellurium tune the band gap of donor–acceptor semiconducting materials, with the source and level of theory kept for every value.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ChalMolDB · Chalcogen Molecular Database">
+<meta property="og:description" content="5,029 curated S/Se/Te records with computed and experimental band gaps, standardized structures and full provenance. Open data, Database v1.2.">
+<meta property="og:image" content="https://esradogan539.github.io/molecular-descriptor-platform/assets/og_image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/chalmoldb_icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one dark project site, a quiet column of sections under a full-width hero; the app lives behind one button. */
+:root{
+  --bg:#ffffff; --bg2:#f7fbfe; --panel:#f8fafc; --line:#e5e7eb;
+  --ink:#111827; --mute:#4b5565; --dim:#667085; --acc:#1F4E79; --acc-ink:#ffffff; --acc2:#5DA9E9;
+  --S:#c99a12; --Se:#16867b; --Te:#7a5aa6; --blue:#1F4E79;
+  --display:'Poppins','Source Sans 3',system-ui,sans-serif; --body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55}img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--acc)}
+.num{font-variant-numeric:tabular-nums}
+
+/* preview note (for Esra) */
+.note{background:#eaf6ee;border-bottom:1px solid #bfe0c9;color:#1f4d2e;font-size:15px}
+.note .wrap{padding-block:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.note b{color:#0f3a1f}
+
+/* fake address bar so the preview shows the real address */
+.addr{background:#eef1f5;border-bottom:1px solid var(--line)}
+.addr .wrap{padding-block:10px;display:flex;align-items:center;gap:12px}
+.dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;display:block}
+.urlbar{flex:1;max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:9px;padding:5px 12px;font-family:var(--mono);font-size:13px;color:#4d5e70;text-align:center}
+
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:30px}
+.brand span{font-family:var(--display);font-weight:600;font-size:20px}
+.links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;font-size:16px;color:var(--mute)}
+.links a{text-decoration:none}.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:12px;font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;white-space:nowrap}
+.btn.primary{background:var(--acc);color:var(--acc-ink)}
+.btn.primary:hover{background:#163A5B}
+.btn.ghost{border-color:#d0d7e0;color:var(--ink);background:#fff}
+.btn.ghost:hover{border-color:var(--acc)}
+.btn:focus-visible,.links a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#F7FBFE 0%,#FFFFFF 62%)}
+.hero .art{position:absolute;top:0;bottom:0;right:0;width:46%;background:linear-gradient(145deg,#E6F1F8 0%,#F6FAFD 100%)}.hero .art:after{content:'';position:absolute;inset:6% 4%;background:url(assets/hero_molecule.svg) center/contain no-repeat}
+.hero .wrap{position:relative;padding-block:72px 84px}
+@media (min-width:861px){.hero .wrap>*{max-width:50%}}
+.hero h1{font-size:clamp(46px,7vw,84px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.hero .sub{font-family:var(--display);font-size:clamp(18px,2.2vw,24px);color:#475467;margin-top:10px;font-weight:500}
+.hero p.lead{max-width:34em;color:var(--mute);font-size:20px;margin:26px 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.els{display:flex;gap:8px;margin-bottom:22px}
+.el{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:12px;color:#0b1824}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.stats div{padding:28px 24px;border-left:1px solid var(--line)}
+.stats div:first-child{border-left:0}
+.stats{background:#fff}.stats b{color:var(--acc);display:block;font-family:var(--display);font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.stats span{color:var(--mute);font-size:16px}
+
+section{padding-block:76px;border-bottom:1px solid var(--line)}section:nth-of-type(even){background:var(--bg2)}
+section h2{font-size:clamp(30px,3.6vw,42px);font-weight:600;letter-spacing:-.02em;margin:10px 0 14px}
+section .intro{color:var(--mute);max-width:40em;margin:0 0 34px}
+
+.film{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center}
+.poster{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;max-width:100%;background:#000}
+.poster video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
+.play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:rgba(31,78,121,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.play:after{content:"";border-left:24px solid var(--acc-ink);border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.dur{position:absolute;right:14px;bottom:12px;font-family:var(--mono);font-size:13px;color:#fff;background:rgba(0,0,0,.6);padding:3px 8px;border-radius:6px}
+.film ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;color:var(--mute)}
+.film li b{color:var(--ink);font-weight:600}
+
+.colls{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.coll{background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:22px 20px;min-width:0}
+.coll .n{font-family:var(--display);font-size:34px;font-weight:600;color:var(--c)}
+.coll h3{font-size:18px;margin:2px 0 8px}
+.coll p{font-size:15.5px;color:var(--mute);margin:0 0 10px}
+.coll small{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.tag{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;background:var(--acc);color:var(--acc-ink);padding:2px 7px;border-radius:6px;margin-left:8px;vertical-align:3px}
+
+.shot{margin-top:34px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.shot .bar{background:#e4e8ee;padding:8px 12px;display:flex;align-items:center;gap:10px;color:#4d5e70;font-family:var(--mono);font-size:12px}
+.shot img{display:block;width:100%}
+
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.find{background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04);border:1px solid var(--line);border-radius:16px;padding:26px;min-width:0}
+.find .big{font-family:var(--display);font-size:56px;font-weight:600;letter-spacing:-.02em;color:var(--Se);line-height:1}
+.find h3{font-size:21px;margin:10px 0 8px}
+.find p{color:var(--mute);font-size:16px;margin:0 0 16px}
+.find svg{width:100%;height:auto;display:block}
+.find .src{font-size:13px;color:var(--dim)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.code{background:#0b1724;border:1px solid var(--line);border-radius:14px;overflow-x:auto;min-width:0}
+.code pre{margin:0;padding:20px 22px;font-family:var(--mono);font-size:13.5px;line-height:1.7;color:#d6e2ee}
+.k{color:#c792ea}.s{color:#9be3a4}.c{color:#6b7f93}.f{color:#82aaff}
+.rows{display:grid;gap:12px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;flex-wrap:wrap}
+.row span:first-child{font-weight:600}
+.row span:last-child{color:var(--mute);font-family:var(--mono);font-size:14px}
+
+.cite{background:var(--bg2);border-left:3px solid var(--acc)!important;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.cite p{margin:0 0 12px}
+.cite code{font-family:var(--mono);font-size:14px;color:var(--acc);word-break:break-all}
+
+.team{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.person{border:1px solid var(--line);border-radius:14px;padding:22px 24px;background:#fff}
+.person h3{font-size:21px}
+.person .role{color:var(--acc);font-size:15px;margin:2px 0 8px;font-weight:600}
+.person p{color:var(--mute);font-size:15.5px;margin:0}
+.person small{display:block;margin-top:10px;font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+
+footer{padding-block:34px;color:#b8c6d6;font-size:14px;background:#13253a}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero .art{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)} .stats div:nth-child(3){border-left:0} .stats div{border-top:1px solid var(--line)}
+  .film,.finds,.two,.team{grid-template-columns:1fr}
+  .colls{grid-template-columns:1fr 1fr}
+  .hero .art{opacity:.35;mask-image:none;-webkit-mask-image:none;background-position:center}
+  .links a:not(.btn){display:none}
+}
+@media (max-width:520px){.colls{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background .15s,border-color .15s}}
+</style>
+</head>
+<body>
+
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><img alt="" src="assets/chalmoldb_icon.svg"><span>ChalMolDB</span></a>
+  <div class="links"><a href="#data">Data</a><a href="#findings">Findings</a><a href="#access">Access</a><a href="#cite">Cite</a><a href="#team">Team</a>
+  <a class="btn primary" href="https://chalmoldb.streamlit.app" target="_blank" rel="noopener">Open the database ↗</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="art" aria-hidden="true"></div><div class="wrap">
+  <div class="els"><span class="el" style="background:var(--S)">S</span><span class="el" style="background:var(--Se)">Se</span><span class="el" style="background:var(--Te)">Te</span></div>
+  <h1>ChalMolDB</h1>
+  <div class="sub">Chalcogen Molecular Database</div>
+  <p class="lead">Curated electronic-property data on how sulfur, selenium and tellurium tune the band gap of donor–acceptor semiconducting materials. Every value keeps its source and level of theory.</p>
+  <div class="ctas">
+    <a class="btn primary" href="https://chalmoldb.streamlit.app" target="_blank" rel="noopener">Open the database ↗</a>
+    <a class="btn ghost" href="#film">Watch the 75-second tour</a>
+    <a class="btn ghost" href="https://doi.org/10.5281/zenodo.23558298" target="_blank" rel="noopener">DOI 10.5281/zenodo.23558298</a>
+  </div>
+</div></header>
+
+<div class="stats num"><div><b>5,029</b><span>curated records</span></div><div><b>4,229</b><span>unique structures</span></div><div><b>1,371</b><span>experimental band gaps</span></div><div><b>4,211</b><span>3D structures</span></div></div>
+
+<section id="film"><div class="wrap film">
+  <div class="poster"><video controls preload="none" playsinline poster="assets/tour_poster.jpg" aria-label="ChalMolDB product tour, 75 seconds"><source src="assets/chalmoldb_tour.mp4" type="video/mp4"></video></div>
+  <div>
+    <div class="eyebrow">Product tour</div>
+    <h2>See it in 75 seconds</h2>
+    <ul>
+      <li><b>Filter and search</b> 5,029 records by collection, chalcogen, gap or source</li>
+      <li><b>Inspect a record:</b> computed and measured gaps side by side, with method and 3D geometry</li>
+      <li><b>Draw a structure</b> and search by exact match, substructure or similarity</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="data"><div class="wrap">
+  <div class="eyebrow">Database v1.2</div>
+  <h2>Four collections, one identity layer</h2>
+  <p class="intro">Source records and standardized structures are kept apart, so the same molecule reported in several studies stays traceable to each of them. Values from different levels of theory are never pooled.</p>
+  <div class="colls num">
+    <div class="coll" style="--c:var(--blue)"><div class="n">3,088</div><h3>Development</h3><p>Donor–acceptor molecules with exact structures and 3D coordinates.</p><small>B3LYP/6-311+G(d)</small></div>
+    <div class="coll" style="--c:var(--acc)"><div class="n">400</div><h3>External</h3><p>Chalcogen oligomer series from monomer to extrapolated polymer.</p><small>B3LYP · LC-BLYP · PCM</small></div>
+    <div class="coll" style="--c:var(--S)"><div class="n">1,323</div><h3>Polymer<span class="tag">NEW</span></h3><p>Conjugated polymers with experimental optical gaps and oligomer DFT values.</p><small>Experiment · B3LYP-D3/6-31G*</small></div>
+    <div class="coll" style="--c:var(--Te)"><div class="n">218</div><h3>Literature<span class="tag">NEW</span></h3><p>Thia-, seleno- and telluro[n]helicenes against CCSD(T), plus Se/Te monomers.</p><small>CCSD(T) · 13 functionals</small></div>
+  </div>
+  <div class="shot"><div class="bar">chalmoldb.streamlit.app/?page=database</div><img alt="Database workspace filtered to the 1,323 polymer records" src="assets/app_database.jpg"></div>
+</div></section>
+
+<section id="findings"><div class="wrap">
+  <div class="eyebrow">What the combined data shows</div>
+  <h2>Comparisons no single source supports</h2>
+  <p class="intro">Bringing the collections together makes it possible to test chalcogen effects against experiment and against high-level reference gaps.</p>
+  <div class="finds">
+    <div class="find">
+      <div class="big num">84%</div>
+      <h3>Selenium lowers the measured gap</h3>
+      <p>In 139 polymer pairs that differ only by S→Se substitution, the experimental optical gap dropped in 84% of cases (mean −0.05 eV). Oligomer DFT shows the same direction in 90%.</p>
+      <svg viewBox="0 0 460 120" role="img" aria-label="Share of pairs with a lower experimental gap with Se: 84 percent">
+        <rect x="0" y="40" width="460" height="22" rx="11" fill="#e9eef3"/>
+        <rect x="0" y="40" width="386" height="22" rx="11" fill="#16867b"/>
+        <text x="0" y="28" fill="#667085" font-size="14" font-family="Source Sans 3, sans-serif">Experimental gap lower with Se</text>
+        <text x="460" y="28" fill="#111827" font-size="14" text-anchor="end" font-family="Source Sans 3, sans-serif">117 of 139 pairs</text>
+        <rect x="0" y="88" width="460" height="22" rx="11" fill="#e9eef3"/>
+        <rect x="0" y="88" width="414" height="22" rx="11" fill="#5DA9E9"/>
+        <text x="0" y="82" fill="#667085" font-size="14" font-family="Source Sans 3, sans-serif">DFT gap lower with Se</text>
+        <text x="460" y="82" fill="#111827" font-size="14" text-anchor="end" font-family="Source Sans 3, sans-serif">90%</text>
+      </svg>
+      <div class="src">Experimental data: Nagasawa et al. 2018 · oligomer DFT: Liu et al. 2025</div>
+    </div>
+    <div class="find">
+      <div class="big num" style="color:var(--Te)">S → Te</div>
+      <h3>Functional errors grow with the chalcogen</h3>
+      <p>Mean absolute error of the DFT HOMO–LUMO gap against the CCSD(T) fundamental gap, chalcogen [n]helicenes.</p>
+      <svg viewBox="0 0 460 150" role="img" aria-label="Mean absolute error in eV for S, Se and Te helicenes by functional">
+        <g font-family="Source Sans 3, sans-serif" font-size="13" fill="#667085">
+          <text x="0" y="22">B3LYP</text><text x="0" y="62">PBE0</text><text x="0" y="102">CAM-B3LYP</text>
+        </g>
+        <g>
+          <rect x="92" y="10" width="113" height="8" rx="4" fill="#d9a514"/><rect x="92" y="20" width="121" height="8" rx="4" fill="#16867b"/><rect x="92" y="30" width="125" height="8" rx="4" fill="#7a5aa6"/>
+          <rect x="92" y="50" width="41" height="8" rx="4" fill="#d9a514"/><rect x="92" y="60" width="51" height="8" rx="4" fill="#16867b"/><rect x="92" y="70" width="56" height="8" rx="4" fill="#7a5aa6"/>
+          <rect x="92" y="90" width="29" height="8" rx="4" fill="#d9a514"/><rect x="92" y="100" width="38" height="8" rx="4" fill="#16867b"/><rect x="92" y="110" width="45" height="8" rx="4" fill="#7a5aa6"/>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="12" fill="#111827">
+          <text x="226" y="30">3.43 · 3.66 · 3.80 eV</text><text x="157" y="70">1.25 · 1.54 · 1.69</text><text x="146" y="110">0.88 · 1.15 · 1.35</text>
+        </g>
+        <g font-family="Source Sans 3, sans-serif" font-size="13" fill="#667085">
+          <circle cx="96" cy="140" r="5" fill="#d9a514"/><text x="106" y="144">S</text><circle cx="136" cy="140" r="5" fill="#16867b"/><text x="146" y="144">Se</text><circle cx="182" cy="140" r="5" fill="#7a5aa6"/><text x="192" y="144">Te</text>
+        </g>
+      </svg>
+      <div class="src">Data: Kumar, Kar &amp; Maity, J. Comput. Chem. 2025</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="access"><div class="wrap two">
+  <div>
+    <div class="eyebrow">Open data</div>
+    <h2>Use it in your own work</h2>
+    <p class="intro">The full release is distributed as versioned files with SHA-256 checksums. No account or API key is needed.</p>
+    <div class="rows">
+      <div class="row"><span>Records</span><span>CSV · 5,029 rows</span></div>
+      <div class="row"><span>3D structures</span><span>SDF · 4,211 geometries</span></div>
+      <div class="row"><span>Licences</span><span>Data CC BY 4.0 · code MIT</span></div>
+      <div class="row"><span>Source code</span><span>GitHub</span></div>
+    </div>
+  </div>
+  <div class="code"><pre><span class="k">import</span> pandas <span class="k">as</span> pd
+
+BASE = (<span class="s">"https://raw.githubusercontent.com/"</span>
+        <span class="s">"EsraDogan539/molecular-descriptor-platform/main/"</span>)
+records = pd.<span class="f">read_csv</span>(BASE + <span class="s">"data/public/chalmoldb_records.csv"</span>)
+
+<span class="c"># tellurium systems with an exact structure</span>
+te = records[(records.Te_Count &gt; 0) &amp; records.InChIKey.notna()]</pre></div>
+</div></section>
+
+<section id="cite"><div class="wrap">
+  <div class="eyebrow">How to cite</div>
+  <h2>Cite the release you used</h2>
+  <div class="cite">
+    <p>Doğan, E. N.; Kayı, H. <i>ChalMolDB: Chalcogen Molecular Database</i>, Database v1.2. Zenodo, 2026.</p>
+    <p><code>https://doi.org/10.5281/zenodo.23558298</code></p>
+    <p style="color:var(--mute);font-size:15.5px;margin:0">The concept DOI 10.5281/zenodo.22903549 covers all versions. A journal article describing ChalMolDB is under review.</p>
+  </div>
+</div></section>
+
+<section id="team"><div class="wrap">
+  <div class="eyebrow">Team</div>
+  <h2>Department of Chemical Engineering, Ankara University</h2>
+  <div class="team" style="margin-top:26px">
+    <div class="person"><h3>Esra Nur Doğan</h3><div class="role">PhD researcher</div><p>Database design, data curation and software development.</p><small>ORCID 0000-0001-5755-7596</small></div>
+    <div class="person"><h3>Prof. Dr. Hakan Kayı</h3><div class="role">Supervisor · corresponding author</div><p>Scientific supervision; computational chalcogen studies behind the external collection.</p><small>ORCID 0000-0001-7300-0325 · hkayi@ankara.edu.tr</small></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 ChalMolDB · Ankara University</span><span>Data CC BY 4.0 · Code MIT · Database v1.2</span></div></footer>
+</body>
+</html>
