@@ -1,11 +1,15 @@
-Traceback (most recent call last):
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/phase2_transfer.py", line 56, in <module>
-    Xdev, _ = featurize(dev.Canonical_SMILES); ydev = dev.Eg_eV.to_numpy()
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/molecular-descriptor-platform/molecular-descriptor-platform/scripts/phase2_transfer.py", line 51, in featurize
-    return np.hstack([D.to_numpy(float), np.array([list(f) for f in fps], float)]), fps
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/numpy/_core/shape_base.py", line 365, in hstack
-    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+sizes dev/ext/pol 3088 336 1323
+butina clusters 279 largest 108
+corr(DEV-style gap, exp gap) = 0.39  corr(oligomer DFT gap, exp gap) = 0.74
+struct_only|base {'MAE_mean': 0.0992, 'MAE_sd': 0.0012, 'R2': 0.602}
+struct_only|feat {'MAE_mean': 0.1006, 'MAE_sd': 0.0008, 'R2': 0.597}
+struct_only|stack {'MAE_mean': 0.0996, 'MAE_sd': 0.0011, 'R2': 0.595}
+struct_only|finetune {'MAE_mean': 0.1101, 'MAE_sd': 0.0017, 'R2': 0.52}
+struct+DFT|base {'MAE_mean': 0.0821, 'MAE_sd': 0.0009, 'R2': 0.729}
+struct+DFT|feat {'MAE_mean': 0.0812, 'MAE_sd': 0.0011, 'R2': 0.734}
+struct+DFT|stack {'MAE_mean': 0.0823, 'MAE_sd': 0.0005, 'R2': 0.728}
+struct+DFT|finetune {'MAE_mean': 0.0997, 'MAE_sd': 0.0016, 'R2': 0.618}
+learning curve 0.1 {'base': 0.1432, 'feat': 0.1386}
+learning curve 0.25 {'base': 0.1296, 'feat': 0.1293}
+learning curve 0.5 {'base': 0.1115, 'feat': 0.1117}
+learning curve 1.0 {'base': 0.0992, 'feat': 0.1006}
