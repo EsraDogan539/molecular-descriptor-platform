@@ -28,7 +28,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55}img{max-width:100%}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
 .eyebrow{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--acc)}
 .num{font-variant-numeric:tabular-nums}
@@ -60,10 +60,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px
 .hero{background:#fff}
 
 .hero .wrap{padding-block:40px 56px}
-.herocard{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#F7FBFE 0%,#FFFFFF 70%)}
-.herocard .copy{padding:56px 48px 60px;min-width:0}
-.herocard .art{background:linear-gradient(145deg,#E6F1F8 0%,#F6FAFD 100%);display:flex;align-items:center;justify-content:center;padding:32px;min-width:0}
-.herocard .art img{width:100%;max-width:520px;height:auto;transform:scale(1.25)}
+.herocard{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,1fr);min-height:440px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#F7FBFE 0%,#FFFFFF 70%)}
+.herocard .copy{padding:64px 56px 64px;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.herocard .art{position:relative;overflow:hidden;background:radial-gradient(circle at 45% 55%,#F6FAFD 0%,#E9F2F8 70%);display:flex;align-items:center;justify-content:center;padding:32px;min-width:0}
+.herocard .art img{width:100%;max-width:470px;height:auto;transform:scale(1.15)}
 .hero h1{font-size:clamp(46px,7vw,84px);font-weight:600;letter-spacing:-.03em;line-height:1}
 .hero .sub{font-family:var(--display);font-size:clamp(18px,2.2vw,24px);color:#475467;margin-top:10px;font-weight:500}
 .hero p.lead{max-width:34em;color:var(--mute);font-size:20px;margin:26px 0 30px}
@@ -165,7 +165,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="btn ghost" href="#film">Watch the 75-second tour</a>
     <a class="btn ghost" href="https://doi.org/10.5281/zenodo.23558298" target="_blank" rel="noopener">DOI 10.5281/zenodo.23558298</a>
   </div>
-</div><div class="art" aria-hidden="true"><img src="assets/hero_molecule.svg" alt=""></div></div></div></header>
+</div><div class="art" aria-hidden="true"><svg class="hx" aria-hidden="true" viewBox="0 0 200 230" style="position:absolute;right:-20px;top:14%;width:190px"><polygon points="100,5 195,60 195,170 100,225 5,170 5,60" fill="none" stroke="#d6e2ec" stroke-width="2"/></svg><svg class="hx" aria-hidden="true" viewBox="0 0 200 230" style="position:absolute;right:4%;bottom:6%;width:96px"><polygon points="100,5 195,60 195,170 100,225 5,170 5,60" fill="none" stroke="#d6e2ec" stroke-width="2"/></svg><img style="position:relative" src="assets/hero_molecule.svg" alt=""></div></div></div></header>
 
 <div class="wrap statwrap"><div class="stats num"><div><b>5,029</b><span>curated records</span></div><div><b>4,229</b><span>unique structures</span></div><div><b>1,371</b><span>experimental band gaps</span></div><div><b>4,211</b><span>3D structures</span></div></div></div>
 
