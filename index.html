@@ -57,13 +57,13 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px
 .btn.ghost:hover{border-color:var(--acc)}
 .btn:focus-visible,.links a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 
-.hero{border-bottom:1px solid var(--line);background:#fff}
+.hero{background:#fff}
 
 .hero .wrap{padding-block:40px 56px}
-.herocard{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#F7FBFE 0%,#FFFFFF 70%)}
+.herocard{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#F7FBFE 0%,#FFFFFF 70%)}
 .herocard .copy{padding:56px 48px 60px;min-width:0}
 .herocard .art{background:linear-gradient(145deg,#E6F1F8 0%,#F6FAFD 100%);display:flex;align-items:center;justify-content:center;padding:32px;min-width:0}
-.herocard .art img{width:100%;max-width:420px;height:auto}
+.herocard .art img{width:100%;max-width:520px;height:auto;transform:scale(1.25)}
 .hero h1{font-size:clamp(46px,7vw,84px);font-weight:600;letter-spacing:-.03em;line-height:1}
 .hero .sub{font-family:var(--display);font-size:clamp(18px,2.2vw,24px);color:#475467;margin-top:10px;font-weight:500}
 .hero p.lead{max-width:34em;color:var(--mute);font-size:20px;margin:26px 0 30px}
@@ -71,7 +71,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px
 .els{display:flex;gap:8px;margin-bottom:22px}
 .el{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:12px;color:#0b1824}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.statwrap{padding-block:28px 8px}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .stats div{padding:28px 24px;border-left:1px solid var(--line)}
 .stats div:first-child{border-left:0}
 .stats{background:#fff}.stats b{color:var(--acc);display:block;font-family:var(--display);font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
@@ -134,7 +134,7 @@ footer{padding-block:34px;color:#b8c6d6;font-size:14px;background:#13253a}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 @media (max-width:860px){
-  .herocard{grid-template-columns:1fr}.herocard .art{order:-1;padding:20px}.herocard .art img{max-width:300px}.herocard .copy{padding:32px 24px 36px}
+  .herocard{grid-template-columns:1fr}.herocard .art{order:-1;padding:20px}.herocard .art img{max-width:300px;transform:none}.herocard .copy{padding:32px 24px 36px}
   
   .stats{grid-template-columns:repeat(2,1fr)} .stats div:nth-child(3){border-left:0} .stats div{border-top:1px solid var(--line)}
   .film,.finds,.two,.team{grid-template-columns:1fr}
@@ -167,7 +167,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </div><div class="art" aria-hidden="true"><img src="assets/hero_molecule.svg" alt=""></div></div></div></header>
 
-<div class="stats num"><div><b>5,029</b><span>curated records</span></div><div><b>4,229</b><span>unique structures</span></div><div><b>1,371</b><span>experimental band gaps</span></div><div><b>4,211</b><span>3D structures</span></div></div>
+<div class="wrap statwrap"><div class="stats num"><div><b>5,029</b><span>curated records</span></div><div><b>4,229</b><span>unique structures</span></div><div><b>1,371</b><span>experimental band gaps</span></div><div><b>4,211</b><span>3D structures</span></div></div></div>
 
 <section id="film"><div class="wrap film">
   <div class="poster"><video controls preload="none" playsinline poster="assets/tour_poster.jpg" aria-label="ChalMolDB product tour, 75 seconds"><source src="assets/chalmoldb_tour.mp4" type="video/mp4"></video></div>
