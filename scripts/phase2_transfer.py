@@ -50,8 +50,8 @@ def featurize(smiles):
     D = pd.DataFrame(rows).fillna(0.0)
     return np.hstack([D.to_numpy(float), np.array([list(f) for f in fps], float)]), fps
 
-dev = df[df.Record_ID.str.startswith("DEV_") & df.Canonical_SMILES.notna() & df.Eg_eV.notna()]
-ext = df[df.Record_ID.str.startswith("EXT_") & df.Canonical_SMILES.notna() & df.Eg_eV.notna() & (df.Unit_Type.astype(str) != "Polymer")]
+dev = df[df.Record_ID.str.startswith(("DEV_", "EROL_")) & df.Canonical_SMILES.notna() & df.Eg_eV.notna()]
+ext = df[df.Record_ID.str.startswith(("EXT_", "HAKAN_")) & df.Canonical_SMILES.notna() & df.Eg_eV.notna() & (df.Unit_Type.astype(str) != "Polymer")]
 pol = df[df.Record_ID.str.startswith("POL_") & df.Canonical_SMILES.notna() & df.Eg_eV.notna() & df.Experimental_Eg_eV.notna()].reset_index(drop=True)
 Xdev, _ = featurize(dev.Canonical_SMILES); ydev = dev.Eg_eV.to_numpy()
 Xext, _ = featurize(ext.Canonical_SMILES); yext = ext.Eg_eV.to_numpy()
