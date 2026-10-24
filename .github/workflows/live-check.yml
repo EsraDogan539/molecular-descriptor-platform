@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -q rdkit==2025.3.6 pandas numpy scikit-learn xgboost
-      - run: mkdir -p docs/phase2; python scripts/phase2_feasibility.py --root mainsrc --out docs/phase2 > docs/phase2/log.txt 2>&1 || true
+      - run: mkdir -p docs/phase2; python scripts/phase2_pairs.py --root mainsrc --out docs/phase2 > docs/phase2/pairs_log.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add -A docs; git commit -m "Phase 2 feasibility [skip ci]" || true; git push
