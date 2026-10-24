@@ -1,0 +1,56 @@
+{
+ "all_1323": {
+  "n": 1323,
+  "random|dft_linear": {
+   "MAE": 0.1138,
+   "R2": 0.545
+  },
+  "random|struct+dft_xgb": {
+   "MAE": 0.0658,
+   "R2": 0.808
+  },
+  "random|delta": {
+   "MAE": 0.0654,
+   "R2": 0.808
+  },
+  "cluster|dft_linear": {
+   "MAE": 0.1161,
+   "R2": 0.53
+  },
+  "cluster|struct+dft_xgb": {
+   "MAE": 0.082,
+   "R2": 0.731
+  },
+  "cluster|delta": {
+   "MAE": 0.0795,
+   "R2": 0.74
+  }
+ },
+ "nagasawa_1096": {
+  "n": 1096,
+  "random|dft_linear": {
+   "MAE": 0.1109,
+   "R2": 0.509
+  },
+  "random|struct+dft_xgb": {
+   "MAE": 0.066,
+   "R2": 0.775
+  },
+  "random|delta": {
+   "MAE": 0.066,
+   "R2": 0.775
+  },
+  "cluster|dft_linear": {
+   "MAE": 0.1129,
+   "R2": 0.499
+  },
+  "cluster|struct+dft_xgb": {
+   "MAE": 0.0801,
+   "R2": 0.707
+  },
+  "cluster|delta": {
+   "MAE": 0.0787,
+   "R2": 0.714
+  }
+ }
+}
