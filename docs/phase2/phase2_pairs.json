@@ -1,0 +1,60 @@
+{
+ "zero": {
+  "MAE": 0.0668,
+  "sign_agreement": null,
+  "pearson": null
+ },
+ "mean_shift": {
+  "MAE": 0.0506,
+  "sign_agreement": 0.842,
+  "pearson": -0.375
+ },
+ "raw_dft": {
+  "MAE": 0.054,
+  "sign_agreement": 0.784,
+  "pearson": 0.402
+ },
+ "cal_dft": {
+  "MAE": 0.0469,
+  "sign_agreement": 0.842,
+  "pearson": 0.295
+ },
+ "P1_ridge_pairs": {
+  "MAE": 0.0477,
+  "sign_agreement": 0.784,
+  "pearson": 0.318
+ },
+ "P2_xgb_pairs": {
+  "MAE": 0.0516,
+  "sign_agreement": 0.712,
+  "pearson": 0.247
+ },
+ "P3_xgb_general+pairs": {
+  "MAE": 0.0481,
+  "sign_agreement": 0.82,
+  "pearson": 0.414
+ },
+ "P4_delta_general+pairs": {
+  "MAE": 0.0499,
+  "sign_agreement": 0.806,
+  "pearson": 0.371
+ },
+ "by_position": {
+  "donor_selenophene": {
+   "n": 106,
+   "MAE_best": 0.0485,
+   "MAE_raw_dft": 0.0578,
+   "mean_d_exp": -0.0409
+  },
+  "acceptor_selenadiazole": {
+   "n": 33,
+   "MAE_best": 0.0451,
+   "MAE_raw_dft": 0.0418,
+   "mean_d_exp": -0.093
+  }
+ },
+ "best": "P1_ridge_pairs",
+ "n_pairs": 139,
+ "n_general_pairs": 37633,
+ "n_groups": 37
+}
