@@ -7,15 +7,15 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          mkdir -p docs/domain
-          for d in chalmoldb.org chalmoldb.com chalmoldb.net; do
-            code=$(curl -s -o docs/domain/$d.json -w "%{http_code}" "https://rdap.org/domain/$d" -L)
-            echo "$d $code" >> docs/domain/result.txt
-          done
-          cat docs/domain/result.txt
+      - uses: actions/checkout@v4
+        with: {ref: main, path: mainsrc}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q rdkit==2025.3.6 pandas numpy scikit-learn xgboost
+      - run: mkdir -p docs/phase2; python scripts/phase2_feasibility.py --root mainsrc --out docs/phase2 > docs/phase2/log.txt 2>&1 || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A docs; git commit -m "Domain check [skip ci]" || true; git push
+          git add -A docs; git commit -m "Phase 2 feasibility [skip ci]" || true; git push
