@@ -1,0 +1,140 @@
+Se_record,S_record,Se_name,S_name,dEg_exp,dEg_dft,dHOMO_exp,dLUMO_exp,position,n_Se_added
+POL_0079,POL_0080,PCzDBSe,PCDTBT,-0.15,-0.2,0.22,0.07,acceptor (selenadiazole),2
+POL_0079,POL_0184,PCzDBSe,PC-DTBT,0.01,-0.19,0.2,0.21,acceptor (selenadiazole),2
+POL_0094,POL_0089,PSBTSPD-C8 (P9),PDTSTPD,-0.01,-0.101,0.02,0.01,donor (selenophene),2
+POL_0094,POL_0095,PSBTSPD-C8 (P9),PTPDSi-C8,-0.05,-0.097,-0.03,-0.08,donor (selenophene),2
+POL_0094,POL_0098,PSBTSPD-C8 (P9),P-Si,-0.05,-0.101,0.1,0.05,donor (selenophene),2
+POL_0133,POL_0130,H11,H7,-0.18,-0.427,0.22,0.04,acceptor (selenadiazole),2
+POL_0133,POL_0280,H11,PBDTBT,-0.15,-0.203,0.34,0.19,acceptor (selenadiazole),2
+POL_0139,POL_0145,PSeB2,PTB2,0.01,0.036,-0.1,-0.09,donor (selenophene),8
+POL_0150,POL_0145,PSeB1,PTB2,0.01,-0.009,-0.11,-0.1,donor (selenophene),4
+POL_0153,POL_0145,PSeB3,PTB2,0.01,0.032,-0.11,-0.1,donor (selenophene),4
+POL_0201,POL_0200,P2,PBDT(T)TPD,-0.03,-0.002,-0.72,-0.75,donor (selenophene),4
+POL_0201,POL_0203,P2,TPD(2EH/C8),-0.03,-0.002,-0.44,-0.47,donor (selenophene),4
+POL_0201,POL_0279,P2,PBDT-T10-TPD,0.05,-0.002,-0.26,-0.21,donor (selenophene),4
+POL_0201,POL_0369,P2,PBDT-T12-TPD,0.03,-0.001,-0.17,-0.14,donor (selenophene),4
+POL_0201,POL_0755,P2,PBDTTPD (P2),0.15,-0.004,-0.21,-0.06,donor (selenophene),4
+POL_0209,POL_0200,PBDT(S)TPD,PBDT(T)TPD,-0.03,-0.002,0.03,0.0,donor (selenophene),4
+POL_0209,POL_0203,PBDT(S)TPD,TPD(2EH/C8),-0.03,-0.002,0.31,0.28,donor (selenophene),4
+POL_0209,POL_0279,PBDT(S)TPD,PBDT-T10-TPD,0.05,-0.002,0.49,0.54,donor (selenophene),4
+POL_0209,POL_0369,PBDT(S)TPD,PBDT-T12-TPD,0.03,-0.001,0.58,0.61,donor (selenophene),4
+POL_0209,POL_0755,PBDT(S)TPD,PBDTTPD (P2),0.15,-0.004,0.54,0.69,donor (selenophene),4
+POL_0218,POL_0227,PBDTTT-EFS,PBDTTT-EFT,0.0,-0.039,-0.05,-0.05,donor (selenophene),4
+POL_0218,POL_0389,PBDTTT-EFS,PBT-TVT,0.05,-0.051,0.0,0.05,donor (selenophene),4
+POL_0291,POL_0295,P9,P8,0.06,-0.034,-0.14,-0.08,donor (selenophene),2
+POL_0318,POL_0320,PSeTD2,PThTD2,-0.07,-0.038,-0.01,-0.08,donor (selenophene),2
+POL_0318,POL_0511,PSeTD2,PThTD1,-0.07,-0.038,0.05,-0.02,donor (selenophene),2
+POL_0319,POL_0317,PSeTPTI,PThTPTI,-0.09,-0.041,0.01,-0.08,donor (selenophene),2
+POL_0447,POL_0450,PIDSBT-C6,a-PTPTBT-SA,-0.15,-0.086,0.08,-0.07,donor (selenophene),4
+POL_0448,POL_0449,PIDSe-DFBTH,PIDT-DFBT,-0.11,-0.122,0.02,-0.09,donor (selenophene),4
+POL_0469,POL_0409,PBDTBSe,PBDTS-DTFBT,-0.03,-0.058,0.17,0.14,acceptor (selenadiazole),2
+POL_0469,POL_0463,PBDTBSe,PBDT_TEH-DT_H-BTff,-0.06,-0.06,0.03,-0.03,acceptor (selenadiazole),2
+POL_0469,POL_0470,PBDTBSe,PBDT_TEH-DT_EH-BTff,-0.1,-0.058,0.04,-0.06,acceptor (selenadiazole),2
+POL_0469,POL_0700,PBDTBSe,PBDT2FBT-T,-0.09,-0.058,0.25,0.16,acceptor (selenadiazole),2
+POL_0469,POL_0702,PBDTBSe,PBDT2FBT-T1,-0.09,-0.054,0.17,0.08,acceptor (selenadiazole),2
+POL_0469,POL_0740,PBDTBSe,PBDT2FBT-T-O,-0.06,-0.055,0.11,0.05,acceptor (selenadiazole),2
+POL_0469,POL_0741,PBDTBSe,PBDT2FBT-O,-0.13,-0.058,0.18,0.05,acceptor (selenadiazole),2
+POL_0469,POL_0757,PBDTBSe,PBDT2FBT,-0.1,-0.058,0.3,0.2,acceptor (selenadiazole),2
+POL_0469,POL_0833,PBDTBSe,PBDT2FBT-T2,-0.07,-0.056,0.07,0.0,acceptor (selenadiazole),2
+POL_0469,POL_0899,PBDTBSe,PBDT2FBT-T3,-0.04,-0.057,0.01,-0.03,acceptor (selenadiazole),2
+POL_0469,POL_0952,PBDTBSe,PBDT2FBT-T4,-0.02,-0.057,0.0,-0.02,acceptor (selenadiazole),2
+POL_0469,POL_1057,PBDTBSe,PQ4,-0.07,-0.059,0.29,0.22,acceptor (selenadiazole),2
+POL_0482,POL_0490,PBDTTTBS,PBDT?TBT,-0.1,-0.084,-0.02,-0.12,acceptor (selenadiazole),2
+POL_0482,POL_0704,PBDTTTBS,P2,-0.05,-0.078,0.05,0.0,acceptor (selenadiazole),2
+POL_0483,POL_0490,PBDTSSBS,PBDT?TBT,-0.23,-0.189,-0.02,-0.25,both/other,8
+POL_0483,POL_0704,PBDTSSBS,P2,-0.18,-0.183,0.05,-0.13,both/other,8
+POL_0485,POL_0490,PBDTSTBS,PBDT?TBT,-0.1,-0.101,-0.02,-0.12,both/other,4
+POL_0485,POL_0704,PBDTSTBS,P2,-0.05,-0.096,0.05,0.0,both/other,4
+POL_0491,POL_0490,PBDTSTBO,PBDT?TBT,-0.01,-0.017,-0.19,-0.2,donor (selenophene),4
+POL_0491,POL_0704,PBDTSTBO,P2,0.04,-0.011,-0.12,-0.08,donor (selenophene),4
+POL_0492,POL_0490,PBDTTTBO,PBDT?TBT,-0.1,-0.071,-0.13,-0.23,donor (selenophene),4
+POL_0492,POL_0704,PBDTTTBO,P2,-0.05,-0.065,-0.06,-0.11,donor (selenophene),4
+POL_0493,POL_0490,PBDTSSBO,PBDT?TBT,-0.1,-0.096,-0.13,-0.23,donor (selenophene),8
+POL_0493,POL_0704,PBDTSSBO,P2,-0.05,-0.09,-0.06,-0.11,donor (selenophene),8
+POL_0498,POL_0490,PBDTTSBS,PBDT?TBT,-0.23,-0.151,-0.02,-0.25,both/other,4
+POL_0498,POL_0704,PBDTTSBS,P2,-0.18,-0.145,0.05,-0.13,both/other,4
+POL_0507,POL_0289,PTTSPD-C8C8 (P4),PTTTPD-C8 (P2),-0.08,-0.028,-0.01,-0.09,donor (selenophene),2
+POL_0507,POL_0510,PTTSPD-C8C8 (P4),PTTTPD,-0.01,-0.025,0.09,0.08,donor (selenophene),2
+POL_0509,POL_0289,PTSTPD-C8C8 (P7),PTTTPD-C8 (P2),-0.09,-0.041,0.07,-0.02,donor (selenophene),2
+POL_0509,POL_0510,PTSTPD-C8C8 (P7),PTTTPD,-0.02,-0.039,0.17,0.15,donor (selenophene),2
+POL_0512,POL_0520,P3SDTDPP,P3TDTDPP,-0.02,-0.101,0.05,0.03,donor (selenophene),6
+POL_0514,POL_0320,PSeTD1,PThTD2,-0.07,-0.066,-0.04,-0.11,donor (selenophene),2
+POL_0514,POL_0511,PSeTD1,PThTD1,-0.07,-0.066,0.02,-0.05,donor (selenophene),2
+POL_0519,POL_0289,PTSTPD-C8C8 (P8),PTTTPD-C8 (P2),-0.11,0.099,0.08,-0.03,donor (selenophene),4
+POL_0519,POL_0510,PTSTPD-C8C8 (P8),PTTTPD,-0.04,0.102,0.18,0.14,donor (selenophene),4
+POL_0535,POL_0530,PBDT-Se1,PBDT-ST1,-0.01,0.006,0.07,0.06,donor (selenophene),2
+POL_0535,POL_0533,PBDT-Se1,PBDB-TT0,0.02,0.006,0.01,0.03,donor (selenophene),2
+POL_0535,POL_0553,PBDT-Se1,PBDT(S)-T1,-0.01,-0.023,0.06,0.05,donor (selenophene),2
+POL_0535,POL_0630,PBDT-Se1,PMOT5,-0.03,0.013,-0.18,-0.21,donor (selenophene),2
+POL_0535,POL_0645,PBDT-Se1,POBDT(S)-T1,-0.01,0.001,0.19,0.18,donor (selenophene),2
+POL_0535,POL_0687,PBDT-Se1,PDST-BDD,-0.03,-0.001,0.06,0.03,donor (selenophene),2
+POL_0535,POL_0764,PBDT-Se1,PBT1-MP,-0.06,0.01,0.03,-0.03,donor (selenophene),2
+POL_0535,POL_0765,PBDT-Se1,PBT1-BO,-0.01,0.009,-0.06,-0.07,donor (selenophene),2
+POL_0535,POL_0770,PBDT-Se1,PBT1-EH,-0.04,0.011,-0.03,-0.07,donor (selenophene),2
+POL_0550,POL_0530,PBDT(Se)-T1,PBDT-ST1,-0.01,-0.013,0.0,-0.01,donor (selenophene),4
+POL_0550,POL_0533,PBDT(Se)-T1,PBDB-TT0,0.02,-0.013,-0.06,-0.04,donor (selenophene),4
+POL_0550,POL_0553,PBDT(Se)-T1,PBDT(S)-T1,-0.01,-0.043,-0.01,-0.02,donor (selenophene),4
+POL_0550,POL_0630,PBDT(Se)-T1,PMOT5,-0.03,-0.007,-0.25,-0.28,donor (selenophene),4
+POL_0550,POL_0645,PBDT(Se)-T1,POBDT(S)-T1,-0.01,-0.019,0.12,0.11,donor (selenophene),4
+POL_0550,POL_0687,PBDT(Se)-T1,PDST-BDD,-0.03,-0.02,-0.01,-0.04,donor (selenophene),4
+POL_0550,POL_0764,PBDT(Se)-T1,PBT1-MP,-0.06,-0.009,-0.04,-0.1,donor (selenophene),4
+POL_0550,POL_0765,PBDT(Se)-T1,PBT1-BO,-0.01,-0.01,-0.13,-0.14,donor (selenophene),4
+POL_0550,POL_0770,PBDT(Se)-T1,PBT1-EH,-0.04,-0.009,-0.1,-0.14,donor (selenophene),4
+POL_0570,POL_0563,PS-BDTP (P2),PThBDTP,-0.06,-0.01,0.01,-0.05,donor (selenophene),2
+POL_0583,POL_0586,PSezTITI,PThzTITI,-0.08,-0.033,-0.01,-0.09,donor (selenophene),2
+POL_0585,POL_0590,PSeTITI,PThTITI,-0.07,-0.052,0.03,-0.04,donor (selenophene),2
+POL_0610,POL_0616,PBDT?DTBSe,PBDT?DTBT,-0.17,-0.134,0.08,-0.09,acceptor (selenadiazole),2
+POL_0629,POL_0602,PBPD-Se,PBDT-T1,-0.04,0.043,-0.55,-0.59,donor (selenophene),4
+POL_0629,POL_0620,PBPD-Se,PBPD-Th,-0.13,0.073,0.07,-0.06,donor (selenophene),4
+POL_0675,POL_0566,C3-DPPTTSe,PTT-DPP (P1),-0.19,-0.012,-0.01,-0.2,donor (selenophene),2
+POL_0675,POL_0681,C3-DPPTTSe,C3-DPPTTT,-0.02,-0.023,0.01,-0.01,donor (selenophene),2
+POL_0715,POL_0505,PBDTT-SeDPP,PBDTS-DPP,-0.07,-0.168,0.05,-0.02,donor (selenophene),4
+POL_0715,POL_0658,PBDTT-SeDPP,PBDTOT-DPP,0.05,-0.158,-0.05,0.0,donor (selenophene),4
+POL_0715,POL_0723,PBDTT-SeDPP,PBDTT-DPP,-0.06,-0.124,0.05,-0.01,donor (selenophene),4
+POL_0715,POL_0888,PBDTT-SeDPP,PBDPP-2,-0.07,-0.056,0.04,-0.03,donor (selenophene),4
+POL_0715,POL_0948,PBDTT-SeDPP,PDST-DPP,-0.08,-0.069,0.22,0.14,donor (selenophene),4
+POL_0715,POL_0980,PBDTT-SeDPP,PBDPP-OD,-0.03,-0.045,0.02,-0.01,donor (selenophene),4
+POL_0715,POL_1069,PBDTT-SeDPP,PQ3,0.09,-0.051,0.06,0.15,donor (selenophene),4
+POL_0736,POL_0450,PIDSBT-OCH8,a-PTPTBT-SA,-0.15,-0.086,0.08,-0.07,donor (selenophene),4
+POL_0742,POL_0449,PIDSFBT-OCH8,PIDT-DFBT,-0.11,-0.084,0.03,-0.08,donor (selenophene),4
+POL_0790,POL_0798,PDPP-SS,DT-PDPP4T,-0.15,0.074,-0.16,-0.31,donor (selenophene),4
+POL_0847,POL_0850,P3SDTQ,P3TDTQ,-0.07,-0.251,0.02,-0.05,donor (selenophene),6
+POL_0887,POL_0117,PQS,PQT-12,-0.2,-0.322,-0.1,-0.3,donor (selenophene),8
+POL_0894,POL_0117,PQSQT,PQT-12,-0.07,-0.167,-0.07,-0.14,donor (selenophene),4
+POL_1126,POL_0390,P67,PBDTT-BT,-0.05,-0.05,,,donor (selenophene),4
+POL_1126,POL_0930,P67,PBDT-DTBT,-0.11,-0.034,,,donor (selenophene),4
+POL_1127,POL_0707,P68,PBDT-FBT,0.02,-0.016,,,donor (selenophene),4
+POL_1127,POL_1012,P68,P2,0.05,-0.022,,,donor (selenophene),4
+POL_1128,POL_0409,P69,PBDTS-DTFBT,-0.02,-0.017,,,donor (selenophene),4
+POL_1128,POL_0463,P69,PBDT_TEH-DT_H-BTff,-0.05,-0.019,,,donor (selenophene),4
+POL_1128,POL_0470,P69,PBDT_TEH-DT_EH-BTff,-0.09,-0.017,,,donor (selenophene),4
+POL_1128,POL_0700,P69,PBDT2FBT-T,-0.08,-0.017,,,donor (selenophene),4
+POL_1128,POL_0702,P69,PBDT2FBT-T1,-0.08,-0.013,,,donor (selenophene),4
+POL_1128,POL_0740,P69,PBDT2FBT-T-O,-0.05,-0.014,,,donor (selenophene),4
+POL_1128,POL_0741,P69,PBDT2FBT-O,-0.12,-0.017,,,donor (selenophene),4
+POL_1128,POL_0757,P69,PBDT2FBT,-0.09,-0.017,,,donor (selenophene),4
+POL_1128,POL_0833,P69,PBDT2FBT-T2,-0.06,-0.015,,,donor (selenophene),4
+POL_1128,POL_0899,P69,PBDT2FBT-T3,-0.03,-0.017,,,donor (selenophene),4
+POL_1128,POL_0952,P69,PBDT2FBT-T4,-0.01,-0.017,,,donor (selenophene),4
+POL_1128,POL_1057,P69,PQ4,-0.06,-0.018,,,donor (selenophene),4
+POL_1139,POL_0732,P65,PBDT-HBTA,-0.16,-0.027,,,donor (selenophene),4
+POL_1142,POL_1143,P129,P130,-0.1,-0.055,,,donor (selenophene),2
+POL_1169,POL_0166,PFDPPS-Si,PDPP2FT-C12,-0.02,-0.093,,,donor (selenophene),2
+POL_1169,POL_0239,PFDPPS-Si,PDPP2FT-C14,-0.02,-0.093,,,donor (selenophene),2
+POL_1169,POL_0302,PFDPPS-Si,PDPP2FT-C16,-0.02,-0.13,,,donor (selenophene),2
+POL_1169,POL_1168,PFDPPS-Si,PFDPPT-Si,-0.01,-0.074,,,donor (selenophene),2
+POL_1186,POL_1178,PSe-BO,D18,-0.06,-0.072,,,acceptor (selenadiazole),1
+POL_1186,POL_1193,PSe-BO,JD40-F,0.0,-0.076,,,acceptor (selenadiazole),1
+POL_1186,POL_1195,PSe-BO,D18-B,-0.05,-0.075,,,acceptor (selenadiazole),1
+POL_1187,POL_1178,PSe-HD,D18,-0.09,-0.075,,,acceptor (selenadiazole),1
+POL_1187,POL_1193,PSe-HD,JD40-F,-0.03,-0.08,,,acceptor (selenadiazole),1
+POL_1187,POL_1195,PSe-HD,D18-B,-0.08,-0.078,,,acceptor (selenadiazole),1
+POL_1201,POL_1200,PNDIBS,NDI100,-0.05,-0.105,,,donor (selenophene),4
+POL_1201,POL_1202,PNDIBS,PNDI-Si50,0.04,-0.12,,,donor (selenophene),4
+POL_1253,POL_1252,P10,P1,-0.12,-0.284,,,donor (selenophene),4
+POL_1292,POL_1135,P118,P117,-0.07,-0.056,,,acceptor (selenadiazole),1
+POL_1292,POL_1291,P118,P117,-0.07,-0.056,,,acceptor (selenadiazole),1
+POL_1296,POL_1298,PN-Se,PZT,-0.015,-0.002,,,donor (selenophene),1
+POL_1297,POL_1295,PS-Se,PY-HD,-0.07,-0.002,,,donor (selenophene),1
+POL_1299,POL_1295,PYT-1S1Se,PY-HD,-0.088,-0.026,,,donor (selenophene),1
+POL_1300,POL_1295,PYT-2Se,PY-HD,-0.106,-0.033,,,donor (selenophene),2
