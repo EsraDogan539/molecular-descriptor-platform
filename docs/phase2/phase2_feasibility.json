@@ -1,0 +1,97 @@
+{
+ "log": {
+  "n_records": 1323,
+  "n_descriptors": 28,
+  "groups_tanimoto07": 284,
+  "largest_group": 727,
+  "groups_inchikey": 1037,
+  "per_chalcogen_MAE": {
+   "S-only": 0.0819,
+   "Se": 0.0757,
+   "n_Se": 73
+  }
+ },
+ "Q1": {
+  "tanimoto07|mean": {
+   "MAE": 0.1676,
+   "R2": -0.001
+  },
+  "tanimoto07|dft_gap_linear": {
+   "MAE": 0.1139,
+   "R2": 0.544
+  },
+  "tanimoto07|dft_hlg_linear": {
+   "MAE": 0.1144,
+   "R2": 0.537
+  },
+  "tanimoto07|struct_xgb": {
+   "MAE": 0.108,
+   "R2": 0.558
+  },
+  "tanimoto07|struct+dft_xgb": {
+   "MAE": 0.085,
+   "R2": 0.722
+  },
+  "tanimoto07|struct+dft_rf": {
+   "MAE": 0.089,
+   "R2": 0.703
+  },
+  "tanimoto07|delta_struct+dft_xgb": {
+   "MAE": 0.0816,
+   "R2": 0.734
+  },
+  "inchikey|mean": {
+   "MAE": 0.1674,
+   "R2": -0.0
+  },
+  "inchikey|dft_gap_linear": {
+   "MAE": 0.114,
+   "R2": 0.543
+  },
+  "inchikey|dft_hlg_linear": {
+   "MAE": 0.1134,
+   "R2": 0.543
+  },
+  "inchikey|struct_xgb": {
+   "MAE": 0.0838,
+   "R2": 0.707
+  },
+  "inchikey|struct+dft_xgb": {
+   "MAE": 0.0708,
+   "R2": 0.787
+  },
+  "inchikey|struct+dft_rf": {
+   "MAE": 0.0757,
+   "R2": 0.757
+  },
+  "inchikey|delta_struct+dft_xgb": {
+   "MAE": 0.0697,
+   "R2": 0.792
+  }
+ },
+ "Q2": {
+  "tanimoto07|struct+dft_xgb": {
+   "pairs": 139,
+   "MAE_delta": 0.0557,
+   "sign_agreement": 0.712,
+   "pearson_delta": 0.306
+  },
+  "tanimoto07|delta_struct+dft_xgb": {
+   "pairs": 139,
+   "MAE_delta": 0.0589,
+   "sign_agreement": 0.799,
+   "pearson_delta": 0.264
+  },
+  "tanimoto07|dft_gap_linear": {
+   "pairs": 139,
+   "MAE_delta": 0.0493,
+   "sign_agreement": 0.784,
+   "pearson_delta": 0.412
+  },
+  "raw_dft_difference": {
+   "MAE_delta": 0.054,
+   "sign_agreement": 0.784,
+   "pearson_delta": 0.402
+  }
+ }
+}
