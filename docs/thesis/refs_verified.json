@@ -1,0 +1,8921 @@
+{
+ "A": {
+  "10.1002/adfm.201601745": {
+   "n_polymers": 2,
+   "names": [
+    "PIIG-PDI(EH)",
+    "PIIG-PDI(OD)"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "High‐Performance All‐Polymer Photoresponse Devices Based on Acceptor–Acceptor Conjugated Polymers",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2016,
+   "volume": "26",
+   "issue": "34",
+   "page": "6306-6315",
+   "article_number": null,
+   "authors": [
+    [
+     "Wang",
+     "Xiaofen"
+    ],
+    [
+     "Lv",
+     "Lei"
+    ],
+    [
+     "Li",
+     "Lingliang"
+    ],
+    [
+     "Chen",
+     "Yusheng"
+    ],
+    [
+     "Zhang",
+     "Kai"
+    ],
+    [
+     "Chen",
+     "Haoran"
+    ],
+    [
+     "Dong",
+     "Huanli"
+    ],
+    [
+     "Huang",
+     "Jinsong"
+    ],
+    [
+     "Shen",
+     "Guozhen"
+    ],
+    [
+     "Yang",
+     "Zhou"
+    ],
+    [
+     "Huang",
+     "Hui"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.201801097": {
+   "n_polymers": 1,
+   "names": [
+    "PPyDPP1-4FBT"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Diketopyrrolopyrrole‐Based Conjugated Polymers Synthesized via Direct Arylation Polycondensation for High Mobility Pure n‐Channel Organic Field‐Effect Transistors",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2018,
+   "volume": "28",
+   "issue": "31",
+   "page": null,
+   "article_number": "1801097",
+   "authors": [
+    [
+     "Guo",
+     "Kai"
+    ],
+    [
+     "Bai",
+     "Junhua"
+    ],
+    [
+     "Jiang",
+     "Yu"
+    ],
+    [
+     "Wang",
+     "Zhongli"
+    ],
+    [
+     "Sui",
+     "Ying"
+    ],
+    [
+     "Deng",
+     "Yunfeng"
+    ],
+    [
+     "Han",
+     "Yang"
+    ],
+    [
+     "Tian",
+     "Hongkun"
+    ],
+    [
+     "Geng",
+     "Yanhou"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.201803613": {
+   "n_polymers": 1,
+   "names": [
+    "P(NDI3-T)"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Shift of the Branching Point of the Side‐Chain in Naphthalenediimide (NDI)‐Based Polymer for Enhanced Electron Mobility and All‐Polymer Solar Cell Performance",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2018,
+   "volume": "28",
+   "issue": "39",
+   "page": null,
+   "article_number": "1803613",
+   "authors": [
+    [
+     "You",
+     "Hoseon"
+    ],
+    [
+     "Kim",
+     "Donguk"
+    ],
+    [
+     "Cho",
+     "Han‐Hee"
+    ],
+    [
+     "Lee",
+     "Changyeon"
+    ],
+    [
+     "Chong",
+     "Sanggyu"
+    ],
+    [
+     "Ahn",
+     "Nam Young"
+    ],
+    [
+     "Seo",
+     "Myungeun"
+    ],
+    [
+     "Kim",
+     "Jihan"
+    ],
+    [
+     "Kim",
+     "Felix Sunjoo"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.201808828": {
+   "n_polymers": 3,
+   "names": [
+    "P229",
+    "P230",
+    "P231"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Fluorobenzotriazole (FTAZ)‐Based Polymer Donor Enables Organic Solar Cells Exceeding 12% Efficiency",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2019,
+   "volume": "29",
+   "issue": "10",
+   "page": null,
+   "article_number": "1808828",
+   "authors": [
+    [
+     "Liao",
+     "Zhihui"
+    ],
+    [
+     "Xie",
+     "Yuanpeng"
+    ],
+    [
+     "Chen",
+     "Lie"
+    ],
+    [
+     "Tan",
+     "Yun"
+    ],
+    [
+     "Huang",
+     "Shaorong"
+    ],
+    [
+     "An",
+     "Yongkang"
+    ],
+    [
+     "Ryu",
+     "Hwa Sook"
+    ],
+    [
+     "Meng",
+     "Xiangchuan"
+    ],
+    [
+     "Liao",
+     "Xunfan"
+    ],
+    [
+     "Huang",
+     "Bin"
+    ],
+    [
+     "Xie",
+     "Qian"
+    ],
+    [
+     "Woo",
+     "Han Young"
+    ],
+    [
+     "Sun",
+     "Yanming"
+    ],
+    [
+     "Chen",
+     "Yiwang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.201907452": {
+   "n_polymers": 2,
+   "names": [
+    "pDPF-DTF2",
+    "pDPSe-DTF2"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Tuning the Charge Carrier Polarity of Organic Transistors by Varying the Electron Affinity of the Flanked Units in Diketopyrrolopyrrole‐Based Copolymers",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2019,
+   "volume": "30",
+   "issue": "7",
+   "page": null,
+   "article_number": "1907452",
+   "authors": [
+    [
+     "Liu",
+     "Qian"
+    ],
+    [
+     "Wang",
+     "Yang"
+    ],
+    [
+     "Kohara",
+     "Akihiro"
+    ],
+    [
+     "Matsumoto",
+     "Hidetoshi"
+    ],
+    [
+     "Manzhos",
+     "Sergei"
+    ],
+    [
+     "Feron",
+     "Krishna"
+    ],
+    [
+     "Bottle",
+     "Steven E."
+    ],
+    [
+     "Bell",
+     "John"
+    ],
+    [
+     "Michinobu",
+     "Tsuyoshi"
+    ],
+    [
+     "Sonar",
+     "Prashant"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.202005787": {
+   "n_polymers": 3,
+   "names": [
+    "PBDT-H",
+    "PBDT-F",
+    "PBDT-Cl"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Importance of Optimal Crystallinity and Hole Mobility of BDT‐Based Polymer Donor for Simultaneous Enhancements of <i>V</i><sub>oc</sub>, <i>J</i><sub>sc</sub>, and FF in Efficient Nonfullerene Organic Solar Cells",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2020,
+   "volume": "30",
+   "issue": "51",
+   "page": null,
+   "article_number": "2005787",
+   "authors": [
+    [
+     "Park",
+     "Jin Su"
+    ],
+    [
+     "Kim",
+     "Geon‐U"
+    ],
+    [
+     "Lee",
+     "Dongchan"
+    ],
+    [
+     "Lee",
+     "Seungjin"
+    ],
+    [
+     "Ma",
+     "Biwu"
+    ],
+    [
+     "Cho",
+     "Shinuk"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.202100791": {
+   "n_polymers": 1,
+   "names": [
+    "PY2F-T"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "A Difluoro‐Monobromo End Group Enables High‐Performance Polymer Acceptor and Efficient All‐Polymer Solar Cells Processable with Green Solvent under Ambient Condition",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2021,
+   "volume": "31",
+   "issue": "25",
+   "page": null,
+   "article_number": "2100791",
+   "authors": [
+    [
+     "Yu",
+     "Han"
+    ],
+    [
+     "Luo",
+     "Siwei"
+    ],
+    [
+     "Sun",
+     "Rui"
+    ],
+    [
+     "Angunawela",
+     "Indunil"
+    ],
+    [
+     "Qi",
+     "Zhenyu"
+    ],
+    [
+     "Peng",
+     "Zhengxing"
+    ],
+    [
+     "Zhou",
+     "Wentao"
+    ],
+    [
+     "Han",
+     "Han"
+    ],
+    [
+     "Wei",
+     "Rong"
+    ],
+    [
+     "Pan",
+     "Mingao"
+    ],
+    [
+     "Cheung",
+     "Andy Man Hong"
+    ],
+    [
+     "Zhao",
+     "Dahui"
+    ],
+    [
+     "Zhang",
+     "Jianquan"
+    ],
+    [
+     "Ade",
+     "Harald"
+    ],
+    [
+     "Min",
+     "Jie"
+    ],
+    [
+     "Yan",
+     "He"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.202100877": {
+   "n_polymers": 1,
+   "names": [
+    "PBTIC-y-2F2T"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Configurational Isomers Induced Significant Difference in All‐Polymer Solar Cells",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2021,
+   "volume": "31",
+   "issue": "26",
+   "page": null,
+   "article_number": "2100877",
+   "authors": [
+    [
+     "Wang",
+     "Hengtao"
+    ],
+    [
+     "Chen",
+     "Hui"
+    ],
+    [
+     "Xie",
+     "Weicheng"
+    ],
+    [
+     "Lai",
+     "Hanjian"
+    ],
+    [
+     "Zhao",
+     "Tingxing"
+    ],
+    [
+     "Zhu",
+     "Yulin"
+    ],
+    [
+     "Chen",
+     "Lin"
+    ],
+    [
+     "Ke",
+     "Chunxian"
+    ],
+    [
+     "Zheng",
+     "Nan"
+    ],
+    [
+     "He",
+     "Feng"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.202203193": {
+   "n_polymers": 1,
+   "names": [
+    "PL2"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Random Terpolymer Enabling High‐Efficiency Organic Solar Cells Processed by Nonhalogenated Solvent with a Low Nonradiative Energy Loss",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2022,
+   "volume": "32",
+   "issue": "34",
+   "page": null,
+   "article_number": "2203193",
+   "authors": [
+    [
+     "Lu",
+     "Hao"
+    ],
+    [
+     "Wang",
+     "Hang"
+    ],
+    [
+     "Ran",
+     "Guangliu"
+    ],
+    [
+     "Li",
+     "Song"
+    ],
+    [
+     "Zhang",
+     "Jianqi"
+    ],
+    [
+     "Liu",
+     "Yahui"
+    ],
+    [
+     "Zhang",
+     "Wenkai"
+    ],
+    [
+     "Xu",
+     "Xinjun"
+    ],
+    [
+     "Bo",
+     "Zhishan"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adfm.202314696": {
+   "n_polymers": 2,
+   "names": [
+    "P1-T",
+    "P2-Tz"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Design Principles of Diketopyrrolopyrrole‐Thienopyrrolodione Acceptor\n                    <sub>1</sub>\n                    –Acceptor\n                    <sub>2</sub>\n                    Copolymers",
+   "journal": "Advanced Functional Materials",
+   "short_journal": "Adv Funct Materials",
+   "year": 2024,
+   "volume": "34",
+   "issue": "32",
+   "page": null,
+   "article_number": "2314696",
+   "authors": [
+    [
+     "Erhardt",
+     "Andreas"
+    ],
+    [
+     "Hungenberg",
+     "Julian"
+    ],
+    [
+     "Chantler",
+     "Paul"
+    ],
+    [
+     "Kuhn",
+     "Meike"
+    ],
+    [
+     "Huynh",
+     "Thanh Tung"
+    ],
+    [
+     "Hochgesang",
+     "Adrian"
+    ],
+    [
+     "Goel",
+     "Mahima"
+    ],
+    [
+     "Müller",
+     "Christian J."
+    ],
+    [
+     "Roychoudhury",
+     "Subhayan"
+    ],
+    [
+     "Thomsen",
+     "Lars"
+    ],
+    [
+     "Medhekar",
+     "Nikhil V."
+    ],
+    [
+     "Herzig",
+     "Eva M."
+    ],
+    [
+     "Prendergast",
+     "David"
+    ],
+    [
+     "Thelakkat",
+     "Mukundan"
+    ],
+    [
+     "McNeill",
+     "Christopher R."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adma.201405226": {
+   "n_polymers": 1,
+   "names": [
+    "PNDIT-OD"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "High‐Performance All‐Polymer Solar Cells Via Side‐Chain Engineering of the Polymer Acceptor: The Importance of the Polymer Packing Structure and the Nanoscale Blend Morphology",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2015,
+   "volume": "27",
+   "issue": "15",
+   "page": "2466-2471",
+   "article_number": null,
+   "authors": [
+    [
+     "Lee",
+     "Changyeon"
+    ],
+    [
+     "Kang",
+     "Hyunbum"
+    ],
+    [
+     "Lee",
+     "Wonho"
+    ],
+    [
+     "Kim",
+     "Taesu"
+    ],
+    [
+     "Kim",
+     "Ki‐Hyun"
+    ],
+    [
+     "Woo",
+     "Han Young"
+    ],
+    [
+     "Wang",
+     "Cheng"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adma.201501214": {
+   "n_polymers": 1,
+   "names": [
+    "P(NDI2OD-FT2)"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Fluoro‐Substituted n‐Type Conjugated Polymers for Additive‐Free All‐Polymer Bulk Heterojunction Solar Cells with High Power Conversion Efficiency of 6.71%",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2015,
+   "volume": "27",
+   "issue": "21",
+   "page": "3310-3317",
+   "article_number": null,
+   "authors": [
+    [
+     "Jung",
+     "Jae Woong"
+    ],
+    [
+     "Jo",
+     "Jea Woong"
+    ],
+    [
+     "Chueh",
+     "Chu‐Chen"
+    ],
+    [
+     "Liu",
+     "Feng"
+    ],
+    [
+     "Jo",
+     "Won Ho"
+    ],
+    [
+     "Russell",
+     "Thomas P."
+    ],
+    [
+     "Jen",
+     "Alex K.‐Y."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adma.201802850": {
+   "n_polymers": 2,
+   "names": [
+    "PDPH",
+    "PDPF"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhancing the n‐Type Conductivity and Thermoelectric Performance of Donor–Acceptor Copolymers through Donor Engineering",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2018,
+   "volume": "30",
+   "issue": "43",
+   "page": null,
+   "article_number": "1802850",
+   "authors": [
+    [
+     "Yang",
+     "Chi‐Yuan"
+    ],
+    [
+     "Jin",
+     "Wen‐Long"
+    ],
+    [
+     "Wang",
+     "Jue"
+    ],
+    [
+     "Ding",
+     "Yi‐Fan"
+    ],
+    [
+     "Nong",
+     "Shuying"
+    ],
+    [
+     "Shi",
+     "Ke"
+    ],
+    [
+     "Lu",
+     "Yang"
+    ],
+    [
+     "Dai",
+     "Ya‐Zhong"
+    ],
+    [
+     "Zhuang",
+     "Fang‐Dong"
+    ],
+    [
+     "Lei",
+     "Ting"
+    ],
+    [
+     "Di",
+     "Chong‐An"
+    ],
+    [
+     "Zhu",
+     "Daoben"
+    ],
+    [
+     "Wang",
+     "Jie‐Yu"
+    ],
+    [
+     "Pei",
+     "Jian"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adma.202102635": {
+   "n_polymers": 1,
+   "names": [
+    "L15"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Regioregular Narrow‐Bandgap n‐Type Polymers with High Electron Mobility Enabling Highly Efficient All‐Polymer Solar Cells",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2021,
+   "volume": "33",
+   "issue": "37",
+   "page": null,
+   "article_number": "2102635",
+   "authors": [
+    [
+     "Sun",
+     "Huiliang"
+    ],
+    [
+     "Liu",
+     "Bin"
+    ],
+    [
+     "Ma",
+     "Yunlong"
+    ],
+    [
+     "Lee",
+     "Jin‐Woo"
+    ],
+    [
+     "Yang",
+     "Jie"
+    ],
+    [
+     "Wang",
+     "Junwei"
+    ],
+    [
+     "Li",
+     "Yongchun"
+    ],
+    [
+     "Li",
+     "Bangbang"
+    ],
+    [
+     "Feng",
+     "Kui"
+    ],
+    [
+     "Shi",
+     "Yongqiang"
+    ],
+    [
+     "Zhang",
+     "Baohua"
+    ],
+    [
+     "Han",
+     "Dongxue"
+    ],
+    [
+     "Meng",
+     "Hong"
+    ],
+    [
+     "Niu",
+     "Li"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ],
+    [
+     "Zheng",
+     "Qingdong"
+    ],
+    [
+     "Guo",
+     "Xugang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/adma.202110155": {
+   "n_polymers": 1,
+   "names": [
+    "PY-HD"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Polymerized Small Molecular Acceptor with Branched Side Chains for All Polymer Solar Cells with Efficiency over 16.7%",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2022,
+   "volume": "34",
+   "issue": "14",
+   "page": null,
+   "article_number": "2110155",
+   "authors": [
+    [
+     "Li",
+     "Yun"
+    ],
+    [
+     "Song",
+     "Jiali"
+    ],
+    [
+     "Dong",
+     "Yicai"
+    ],
+    [
+     "Jin",
+     "Hui"
+    ],
+    [
+     "Xin",
+     "Jingming"
+    ],
+    [
+     "Wang",
+     "Shijie"
+    ],
+    [
+     "Cai",
+     "Yunhao"
+    ],
+    [
+     "Jiang",
+     "Lang"
+    ],
+    [
+     "Ma",
+     "Wei"
+    ],
+    [
+     "Tang",
+     "Zheng"
+    ],
+    [
+     "Sun",
+     "Yanming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/advs.202105430": {
+   "n_polymers": 1,
+   "names": [
+    "MePBDFClH"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Conjugated Mesopolymer Achieving 15% Efficiency Single‐Junction Organic Solar Cells",
+   "journal": "Advanced Science",
+   "short_journal": "Advanced Science",
+   "year": 2022,
+   "volume": "9",
+   "issue": "8",
+   "page": null,
+   "article_number": "2105430",
+   "authors": [
+    [
+     "Zheng",
+     "Bing"
+    ],
+    [
+     "Ni",
+     "Jianling"
+    ],
+    [
+     "Li",
+     "Shaman"
+    ],
+    [
+     "Yue",
+     "Yuchen"
+    ],
+    [
+     "Wang",
+     "Jingxia"
+    ],
+    [
+     "Zhang",
+     "Jianqi"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ],
+    [
+     "Huo",
+     "Lijun"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/aenm.201100601": {
+   "n_polymers": 1,
+   "names": [
+    "PNDI-TCPDTT"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Influence of Aggregation on the Performance of All‐Polymer Solar Cells Containing Low‐Bandgap Naphthalenediimide Copolymers",
+   "journal": "Advanced Energy Materials",
+   "short_journal": "Advanced Energy Materials",
+   "year": 2012,
+   "volume": "2",
+   "issue": "3",
+   "page": "369-380",
+   "article_number": null,
+   "authors": [
+    [
+     "Schubert",
+     "Marcel"
+    ],
+    [
+     "Dolfen",
+     "Daniel"
+    ],
+    [
+     "Frisch",
+     "Johannes"
+    ],
+    [
+     "Roland",
+     "Steffen"
+    ],
+    [
+     "Steyrleuthner",
+     "Robert"
+    ],
+    [
+     "Stiller",
+     "Burkhard"
+    ],
+    [
+     "Chen",
+     "Zhihua"
+    ],
+    [
+     "Scherf",
+     "Ullrich"
+    ],
+    [
+     "Koch",
+     "Norbert"
+    ],
+    [
+     "Facchetti",
+     "Antonio"
+    ],
+    [
+     "Neher",
+     "Dieter"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/aenm.202003367": {
+   "n_polymers": 3,
+   "names": [
+    "PBDT2BOY5-H",
+    "PBDT2BOY5-F",
+    "PBDT2BOY5-Cl"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Efficient, Thermally Stable, and Mechanically Robust All‐Polymer Solar Cells Consisting of the Same Benzodithiophene Unit‐Based Polymer Acceptor and Donor with High Molecular Compatibility",
+   "journal": "Advanced Energy Materials",
+   "short_journal": "Advanced Energy Materials",
+   "year": 2020,
+   "volume": "11",
+   "issue": "5",
+   "page": null,
+   "article_number": "2003367",
+   "authors": [
+    [
+     "Lee",
+     "Jin‐Woo"
+    ],
+    [
+     "Sun",
+     "Cheng"
+    ],
+    [
+     "Ma",
+     "Boo Soo"
+    ],
+    [
+     "Kim",
+     "Hyeong Jun"
+    ],
+    [
+     "Wang",
+     "Cheng"
+    ],
+    [
+     "Ryu",
+     "Jong Min"
+    ],
+    [
+     "Lim",
+     "Chulhee"
+    ],
+    [
+     "Kim",
+     "Taek‐Soo"
+    ],
+    [
+     "Kim",
+     "Yun‐Hi"
+    ],
+    [
+     "Kwon",
+     "Soon‐Ki"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/aenm.202102559": {
+   "n_polymers": 1,
+   "names": [
+    "JD40"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "π‐Extended Conjugated Polymer Acceptor Containing Thienylene–Vinylene–Thienylene Unit for High‐Performance Thick‐Film All‐Polymer Solar Cells with Superior Long‐Term Stability",
+   "journal": "Advanced Energy Materials",
+   "short_journal": "Advanced Energy Materials",
+   "year": 2021,
+   "volume": "11",
+   "issue": "48",
+   "page": null,
+   "article_number": "2102559",
+   "authors": [
+    [
+     "Zhang",
+     "Jiabin"
+    ],
+    [
+     "Tan",
+     "Ching‐Hong"
+    ],
+    [
+     "Zhang",
+     "Kai"
+    ],
+    [
+     "Jia",
+     "Tao"
+    ],
+    [
+     "Cui",
+     "Yongjie"
+    ],
+    [
+     "Deng",
+     "Wanyuan"
+    ],
+    [
+     "Liao",
+     "Xunfan"
+    ],
+    [
+     "Wu",
+     "Hongbin"
+    ],
+    [
+     "Xu",
+     "Qinghua"
+    ],
+    [
+     "Huang",
+     "Fei"
+    ],
+    [
+     "Cao",
+     "Yong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/anie.201005408": {
+   "n_polymers": 1,
+   "names": [
+    "PX-PDIs"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "All‐Polymer Solar Cells from Perylene Diimide Based Copolymers: Material Design and Phase Separation Control",
+   "journal": "Angewandte Chemie International Edition",
+   "short_journal": "Angew Chem Int Ed",
+   "year": 2011,
+   "volume": "50",
+   "issue": "12",
+   "page": "2799-2803",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhou",
+     "Erjun"
+    ],
+    [
+     "Cong",
+     "Junzi"
+    ],
+    [
+     "Wei",
+     "Qingshuo"
+    ],
+    [
+     "Tajima",
+     "Keisuke"
+    ],
+    [
+     "Yang",
+     "Chunhe"
+    ],
+    [
+     "Hashimoto",
+     "Kazuhito"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/asia.201600450": {
+   "n_polymers": 2,
+   "names": [
+    "PNDI-TT",
+    "PNDI-TDT"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Naphthalenediimide‐<i>alt</i>‐Fused Thiophene D–A Copolymers for the Application as Acceptor in All‐Polymer Solar Cells",
+   "journal": "Chemistry – An Asian Journal",
+   "short_journal": "Chemistry  An Asian Journal",
+   "year": 2016,
+   "volume": "11",
+   "issue": "19",
+   "page": "2785-2791",
+   "article_number": null,
+   "authors": [
+    [
+     "Xue",
+     "Lingwei"
+    ],
+    [
+     "Yang",
+     "Yankang"
+    ],
+    [
+     "Zhang",
+     "Zhi‐Guo"
+    ],
+    [
+     "Zhang",
+     "Jing"
+    ],
+    [
+     "Gao",
+     "Liang"
+    ],
+    [
+     "Bin",
+     "Haijun"
+    ],
+    [
+     "Yang",
+     "YunXu"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/macp.201800297": {
+   "n_polymers": 2,
+   "names": [
+    "P5",
+    "P6"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Thieno[3,2‐<i>b</i>]thiophene‐Bridged Conjugated Polymers Based on Dithieno[3,2‐<i>b</i>:2′,3′‐<i>d</i>]silole and Thieno[3,4‐<i>c</i>]pyrrole‐4,6‐dione for Polymer Solar Cells: Influence of Side Chains on Optoelectronic Properties",
+   "journal": "Macromolecular Chemistry and Physics",
+   "short_journal": "Macro Chemistry &amp; Physics",
+   "year": 2018,
+   "volume": "219",
+   "issue": "24",
+   "page": null,
+   "article_number": "1800297",
+   "authors": [
+    [
+     "Zhao",
+     "Yuan"
+    ],
+    [
+     "Zhang",
+     "Li"
+    ],
+    [
+     "Liu",
+     "Shu"
+    ],
+    [
+     "Yang",
+     "Changan"
+    ],
+    [
+     "Yi",
+     "Jianming"
+    ],
+    [
+     "Yang",
+     "Chuluo"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pol.20200513": {
+   "n_polymers": 4,
+   "names": [
+    "P116",
+    "P117",
+    "P118",
+    "P119"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A comprehensive study: Theoretical and experimental investigation of heteroatom and substituent effects on frontier orbitals and polymer solar cell performances",
+   "journal": "Journal of Polymer Science",
+   "short_journal": "Journal of Polymer Science",
+   "year": 2020,
+   "volume": "58",
+   "issue": "19",
+   "page": "2792-2806",
+   "article_number": null,
+   "authors": [
+    [
+     "Cevher",
+     "Sevki Can"
+    ],
+    [
+     "Hizalan",
+     "Gonul"
+    ],
+    [
+     "Alemdar Yilmaz",
+     "Eda"
+    ],
+    [
+     "Cevher",
+     "Duygu"
+    ],
+    [
+     "Udum Arslan",
+     "Yasemin"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Yıldırım",
+     "Erol"
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pol.20200514": {
+   "n_polymers": 1,
+   "names": [
+    "P117"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "not_found"
+  },
+  "10.1002/pola.26233": {
+   "n_polymers": 1,
+   "names": [
+    "P(PDI-F)"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "An acceptor‐acceptor conjugated copolymer based on perylene diimide for high mobility <i>n</i>‐channel transistor in air",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. A Polym. Chem.",
+   "year": 2012,
+   "volume": "50",
+   "issue": "20",
+   "page": "4266-4271",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhao",
+     "Xingang"
+    ],
+    [
+     "Wen",
+     "Yugeng"
+    ],
+    [
+     "Ren",
+     "Longbin"
+    ],
+    [
+     "Ma",
+     "Lanchao"
+    ],
+    [
+     "Liu",
+     "Yunqi"
+    ],
+    [
+     "Zhan",
+     "Xiaowei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pola.26812": {
+   "n_polymers": 1,
+   "names": [
+    "PNDI-4fTh"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and characterization of fused-thiophene containing naphthalene diimide <i>n</i>\n-type copolymers for organic thin film transistor and all-polymer solar cell applications",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. Part A: Polym. Chem.",
+   "year": 2013,
+   "volume": "51",
+   "issue": "19",
+   "page": "4061-4069",
+   "article_number": null,
+   "authors": [
+    [
+     "Yuan",
+     "Mingjian"
+    ],
+    [
+     "Durban",
+     "Matthew M."
+    ],
+    [
+     "Kazarinoff",
+     "Peter D."
+    ],
+    [
+     "Zeigler",
+     "David F."
+    ],
+    [
+     "Rice",
+     "Andrew H."
+    ],
+    [
+     "Segawa",
+     "Yukari"
+    ],
+    [
+     "Luscombe",
+     "Christine K."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pola.27108": {
+   "n_polymers": 3,
+   "names": [
+    "P1-C24",
+    "P1-C12",
+    "P1-C20"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Acceptor–acceptor conjugated copolymers based on perylenediimide and benzothiadiazole for all‐polymer solar cells",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. Part A: Polym. Chem.",
+   "year": 2014,
+   "volume": "52",
+   "issue": "8",
+   "page": "1200-1215",
+   "article_number": null,
+   "authors": [
+    [
+     "Ge",
+     "Cong‐Wu"
+    ],
+    [
+     "Mei",
+     "Chong‐Yu"
+    ],
+    [
+     "Ling",
+     "Jun"
+    ],
+    [
+     "Wang",
+     "Jin‐Tu"
+    ],
+    [
+     "Zhao",
+     "Fu‐Gang"
+    ],
+    [
+     "Liang",
+     "Long"
+    ],
+    [
+     "Li",
+     "Hong‐Jiao"
+    ],
+    [
+     "Xie",
+     "Yong‐Shu"
+    ],
+    [
+     "Li",
+     "Wei‐Shi"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pola.27395": {
+   "n_polymers": 1,
+   "names": [
+    "PC-NDI100"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "One donor–two acceptor (D–A<sub>1</sub>)‐(D–A<sub>2</sub>) random terpolymers containing perylene diimide, naphthalene diimide, and carbazole units",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. Part A: Polym. Chem.",
+   "year": 2014,
+   "volume": "52",
+   "issue": "23",
+   "page": "3337-3345",
+   "article_number": null,
+   "authors": [
+    [
+     "Kozycz",
+     "Lisa M."
+    ],
+    [
+     "Gao",
+     "Dong"
+    ],
+    [
+     "Tilley",
+     "Andrew J."
+    ],
+    [
+     "Seferos",
+     "Dwight S."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pola.27603": {
+   "n_polymers": 1,
+   "names": [
+    "P2"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis, characterization, and photovoltaic properties of dithienylbenzobisazole‐dithienylsilole copolymers",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. Part A: Polym. Chem.",
+   "year": 2015,
+   "volume": "53",
+   "issue": "13",
+   "page": "1533-1540",
+   "article_number": null,
+   "authors": [
+    [
+     "Bhuwalka",
+     "Achala"
+    ],
+    [
+     "Ewan",
+     "Monique D."
+    ],
+    [
+     "Mike",
+     "Jared F."
+    ],
+    [
+     "Elshobaki",
+     "Moneim"
+    ],
+    [
+     "Kobilka",
+     "Brandon"
+    ],
+    [
+     "Chaudhary",
+     "Sumit"
+    ],
+    [
+     "Jeffries‐EL",
+     "Malika"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/pola.28392": {
+   "n_polymers": 1,
+   "names": [
+    "NDI100"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Perylene and naphthalene diimide copolymers for all‐polymer solar cells: Effect of perylene/naphthalene ratio",
+   "journal": "Journal of Polymer Science Part A: Polymer Chemistry",
+   "short_journal": "J. Polym. Sci. Part A: Polym. Chem.",
+   "year": 2016,
+   "volume": "55",
+   "issue": "4",
+   "page": "682-689",
+   "article_number": null,
+   "authors": [
+    [
+     "Dai",
+     "Shuixing"
+    ],
+    [
+     "Huang",
+     "Shuai"
+    ],
+    [
+     "Yu",
+     "Haifeng"
+    ],
+    [
+     "Ling",
+     "Qidan"
+    ],
+    [
+     "Zhan",
+     "Xiaowei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1002/solr.201700230": {
+   "n_polymers": 2,
+   "names": [
+    "PNDI-T-PT",
+    "PNDI-T-B-Th"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Modulating the Symmetry of Benzodithiophene by Molecular Tailoring for the Application in Naphthalene Diimide‐Based N‐Type Photovoltaic Polymers",
+   "journal": "Solar RRL",
+   "short_journal": "Solar RRL",
+   "year": 2018,
+   "volume": "2",
+   "issue": "4",
+   "page": null,
+   "article_number": "1700230",
+   "authors": [
+    [
+     "Yang",
+     "Jing"
+    ],
+    [
+     "Chen",
+     "Fan"
+    ],
+    [
+     "Xiao",
+     "Bo"
+    ],
+    [
+     "Sun",
+     "Su"
+    ],
+    [
+     "Sun",
+     "Xiangnan"
+    ],
+    [
+     "Tajima",
+     "Keisuke"
+    ],
+    [
+     "Tang",
+     "Ailing"
+    ],
+    [
+     "Zhou",
+     "Erjun"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1007/s10118-017-1870-4": {
+   "n_polymers": 1,
+   "names": [
+    "PPBI2T"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Bisperylene bisimide based conjugated polymer as electron acceptor for polymer-polymer solar cells",
+   "journal": "Chinese Journal of Polymer Science",
+   "short_journal": "Chin J Polym Sci",
+   "year": 2016,
+   "volume": "35",
+   "issue": "2",
+   "page": "239-248",
+   "article_number": null,
+   "authors": [
+    [
+     "Yang",
+     "Fan"
+    ],
+    [
+     "Li",
+     "Cheng"
+    ],
+    [
+     "Feng",
+     "Gui-tao"
+    ],
+    [
+     "Jiang",
+     "Xu-dong"
+    ],
+    [
+     "Zhang",
+     "An-dong"
+    ],
+    [
+     "Li",
+     "Wei-wei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1007/s10118-017-1893-x": {
+   "n_polymers": 3,
+   "names": [
+    "PDI-Se",
+    "PDI-diTh",
+    "PDI-TT"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "All-polymer solar cells with perylenediimide polymer acceptors",
+   "journal": "Chinese Journal of Polymer Science",
+   "short_journal": "Chin J Polym Sci",
+   "year": 2016,
+   "volume": "35",
+   "issue": "2",
+   "page": "293-301",
+   "article_number": null,
+   "authors": [
+    [
+     "Guo",
+     "Yi-kun"
+    ],
+    [
+     "Li",
+     "Yun-ke"
+    ],
+    [
+     "Han",
+     "Han"
+    ],
+    [
+     "Yan",
+     "He"
+    ],
+    [
+     "Zhao",
+     "Dahui"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1007/s11426-021-1020-7": {
+   "n_polymers": 1,
+   "names": [
+    "PFY-DTC"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "High-performance all-polymer solar cells enabled by a novel low bandgap non-fully conjugated polymer acceptor",
+   "journal": "Science China Chemistry",
+   "short_journal": "Sci. China Chem.",
+   "year": 2021,
+   "volume": "64",
+   "issue": "8",
+   "page": "1380-1388",
+   "article_number": null,
+   "authors": [
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "Ma",
+     "Ruijie"
+    ],
+    [
+     "Liu",
+     "Tao"
+    ],
+    [
+     "Yu",
+     "Jianwei"
+    ],
+    [
+     "Xiao",
+     "Yiqun"
+    ],
+    [
+     "Su",
+     "Wenyan"
+    ],
+    [
+     "Cai",
+     "Guilong"
+    ],
+    [
+     "Li",
+     "Yuxiang"
+    ],
+    [
+     "Peng",
+     "Wenhong"
+    ],
+    [
+     "Guo",
+     "Tao"
+    ],
+    [
+     "Luo",
+     "Zhenghui"
+    ],
+    [
+     "Sun",
+     "Huiliang"
+    ],
+    [
+     "Hou",
+     "Lintao"
+    ],
+    [
+     "Zhu",
+     "Weiguo"
+    ],
+    [
+     "Lu",
+     "Xinhui"
+    ],
+    [
+     "Gao",
+     "Feng"
+    ],
+    [
+     "Moons",
+     "Ellen"
+    ],
+    [
+     "Yu",
+     "Donghong"
+    ],
+    [
+     "Yan",
+     "He"
+    ],
+    [
+     "Wang",
+     "Ergang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1007/s11426-021-1140-x": {
+   "n_polymers": 2,
+   "names": [
+    "PYT-1S1Se",
+    "PYT-2Se"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "16.3% Efficiency binary all-polymer solar cells enabled by a novel polymer acceptor with an asymmetrical selenophene-fused backbone",
+   "journal": "Science China Chemistry",
+   "short_journal": "Sci. China Chem.",
+   "year": 2021,
+   "volume": "65",
+   "issue": "2",
+   "page": "309-317",
+   "article_number": null,
+   "authors": [
+    [
+     "Fu",
+     "Huiting"
+    ],
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "Gao",
+     "Wei"
+    ],
+    [
+     "Oh",
+     "Jiyeon"
+    ],
+    [
+     "Li",
+     "Yuxiang"
+    ],
+    [
+     "Lin",
+     "Francis"
+    ],
+    [
+     "Qi",
+     "Feng"
+    ],
+    [
+     "Yang",
+     "Changduk"
+    ],
+    [
+     "Marks",
+     "Tobin J."
+    ],
+    [
+     "Jen",
+     "Alex K.-Y."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1016/j.cclet.2019.04.029": {
+   "n_polymers": 1,
+   "names": [
+    "P204"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Additive-free non-fullerene organic solar cells with random copolymers as donors over 9% power conversion efficiency",
+   "journal": "Chinese Chemical Letters",
+   "short_journal": "Chinese Chemical Letters",
+   "year": 2019,
+   "volume": "30",
+   "issue": "6",
+   "page": "1161-1167",
+   "article_number": null,
+   "authors": [
+    [
+     "Wu",
+     "Meimei"
+    ],
+    [
+     "Shi",
+     "Laitao"
+    ],
+    [
+     "Hu",
+     "Yu"
+    ],
+    [
+     "Chen",
+     "Lie"
+    ],
+    [
+     "Hu",
+     "Ting"
+    ],
+    [
+     "Zhang",
+     "Youdi"
+    ],
+    [
+     "Yuan",
+     "Zhongyi"
+    ],
+    [
+     "Chen",
+     "Yiwang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.cej.2021.131232": {
+   "n_polymers": 2,
+   "names": [
+    "PY2T",
+    "PY2T2CL"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Fine-tuned crystallinity of polymerized non-fullerene acceptor via molecular engineering towards efficient all-polymer solar cell",
+   "journal": "Chemical Engineering Journal",
+   "short_journal": "Chemical Engineering Journal",
+   "year": 2022,
+   "volume": "428",
+   "issue": null,
+   "page": "131232",
+   "article_number": "131232",
+   "authors": [
+    [
+     "Li",
+     "Yuxiang"
+    ],
+    [
+     "Wang",
+     "Mei"
+    ],
+    [
+     "Zhang",
+     "Qilin"
+    ],
+    [
+     "Wu",
+     "Ziang"
+    ],
+    [
+     "Lim",
+     "Hyojin"
+    ],
+    [
+     "Wang",
+     "Yingying"
+    ],
+    [
+     "Qin",
+     "Hongmei"
+    ],
+    [
+     "Yang",
+     "Jianye"
+    ],
+    [
+     "Gao",
+     "Chao"
+    ],
+    [
+     "Young Woo",
+     "Han"
+    ],
+    [
+     "Yuan",
+     "Jianyu"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.cplett.2019.06.017": {
+   "n_polymers": 1,
+   "names": [
+    "P186"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and photovoltaic properties of alkylthiothiophene modified benzodithiophene polymer",
+   "journal": "Chemical Physics Letters",
+   "short_journal": "Chemical Physics Letters",
+   "year": 2019,
+   "volume": "730",
+   "issue": null,
+   "page": "271-276",
+   "article_number": null,
+   "authors": [
+    [
+     "Cai",
+     "Fangfang"
+    ],
+    [
+     "Li",
+     "Ling"
+    ],
+    [
+     "Zhu",
+     "Can"
+    ],
+    [
+     "Li",
+     "Jing"
+    ],
+    [
+     "Peng",
+     "Hongjian"
+    ],
+    [
+     "Zou",
+     "Yingping"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2018.08.022": {
+   "n_polymers": 2,
+   "names": [
+    "P51",
+    "P52"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and characterization of the fluorinated thieno[3,4-c]pyrrole-4,6-dione-based donor-acceptor polymers for organic solar cells",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2019,
+   "volume": "160",
+   "issue": null,
+   "page": "403-409",
+   "article_number": null,
+   "authors": [
+    [
+     "Kim",
+     "Jiyoung"
+    ],
+    [
+     "Lee",
+     "Woo-Hyung"
+    ],
+    [
+     "Park",
+     "Jong Baek"
+    ],
+    [
+     "Hwang",
+     "Do-Hoon"
+    ],
+    [
+     "Kang",
+     "In-Nam"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2018.09.032": {
+   "n_polymers": 1,
+   "names": [
+    "P43"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Effects of solvent vapour annealing on the performances of benzo[1,2-b:4,5-b′]dithiophene and 4,7-di(4-hexyl-thiophen-2-yl)-5,6-difluorine-2,1,3-benzothiadiazole-based alternating polymer solar cells with different configurations",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2019,
+   "volume": "161",
+   "issue": null,
+   "page": "58-65",
+   "article_number": null,
+   "authors": [
+    [
+     "Chen",
+     "Mingyao"
+    ],
+    [
+     "Zhao",
+     "Baofeng"
+    ],
+    [
+     "Xin",
+     "Jinming"
+    ],
+    [
+     "Cong",
+     "Zhiyuan"
+    ],
+    [
+     "Li",
+     "Xiaoyu"
+    ],
+    [
+     "Yang",
+     "Langlei"
+    ],
+    [
+     "Ma",
+     "Wei"
+    ],
+    [
+     "Wei",
+     "Wei"
+    ],
+    [
+     "Gao",
+     "Chao"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2018.12.058": {
+   "n_polymers": 2,
+   "names": [
+    "P173",
+    "P174"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Effect of mono alkoxy-carboxylate-functionalized benzothiadiazole-based donor polymers for non-fullerene solar cells",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2019,
+   "volume": "164",
+   "issue": null,
+   "page": "62-71",
+   "article_number": null,
+   "authors": [
+    [
+     "Kini",
+     "Gururaj P."
+    ],
+    [
+     "Choi",
+     "Jun Young"
+    ],
+    [
+     "Jeon",
+     "Sung Jae"
+    ],
+    [
+     "Suh",
+     "Il Soon"
+    ],
+    [
+     "Moon",
+     "Doo Kyung"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2019.107548": {
+   "n_polymers": 1,
+   "names": [
+    "P104"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Carbazole side-chained benzodithiophene based two-dimensional D-A conjugated photovoltaic polymers",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2019,
+   "volume": "170",
+   "issue": null,
+   "page": "107548",
+   "article_number": "107548",
+   "authors": [
+    [
+     "Li",
+     "Feng"
+    ],
+    [
+     "Song",
+     "Xin"
+    ],
+    [
+     "Zhang",
+     "Kaili"
+    ],
+    [
+     "Shahid",
+     "Bilal"
+    ],
+    [
+     "Wang",
+     "Quanliang"
+    ],
+    [
+     "Yu",
+     "Liangmin"
+    ],
+    [
+     "Zhu",
+     "Dangqiang"
+    ],
+    [
+     "Sun",
+     "Mingliang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2020.108479": {
+   "n_polymers": 3,
+   "names": [
+    "P62",
+    "P63",
+    "P64"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Narrow band gap benzodithiophene and quinoxaline bearing conjugated polymers for organic photovoltaic applications",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2020,
+   "volume": "180",
+   "issue": null,
+   "page": "108479",
+   "article_number": "108479",
+   "authors": [
+    [
+     "Caliskan",
+     "Meric"
+    ],
+    [
+     "Erer",
+     "Mert Can"
+    ],
+    [
+     "Aslan",
+     "Sultan Taskaya"
+    ],
+    [
+     "Udum",
+     "Yasemin Arslan"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2021.109680": {
+   "n_polymers": 2,
+   "names": [
+    "P213",
+    "P215"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Random terpolymers for high-performance semitransparent polymer solar cells",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2021,
+   "volume": "195",
+   "issue": null,
+   "page": "109680",
+   "article_number": "109680",
+   "authors": [
+    [
+     "Zhai",
+     "Xiaohua"
+    ],
+    [
+     "Wang",
+     "Xiangkun"
+    ],
+    [
+     "Zhu",
+     "Kun"
+    ],
+    [
+     "Gao",
+     "Caiyun"
+    ],
+    [
+     "He",
+     "Yan"
+    ],
+    [
+     "Yu",
+     "Liangmin"
+    ],
+    [
+     "Sun",
+     "Mingliang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.dyepig.2022.110180": {
+   "n_polymers": 1,
+   "names": [
+    "PAL-2"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Effects of fluorination position on all-polymer organic solar cells",
+   "journal": "Dyes and Pigments",
+   "short_journal": "Dyes and Pigments",
+   "year": 2022,
+   "volume": "200",
+   "issue": null,
+   "page": "110180",
+   "article_number": "110180",
+   "authors": [
+    [
+     "Yang",
+     "Qianguang"
+    ],
+    [
+     "Yu",
+     "Weiyang"
+    ],
+    [
+     "Lv",
+     "Jie"
+    ],
+    [
+     "Huang",
+     "Peihao"
+    ],
+    [
+     "He",
+     "Guotian"
+    ],
+    [
+     "Xiao",
+     "Zeyun"
+    ],
+    [
+     "Kan",
+     "Zhipeng"
+    ],
+    [
+     "Lu",
+     "Shirong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.electacta.2021.139298": {
+   "n_polymers": 3,
+   "names": [
+    "P67",
+    "P68",
+    "P69"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis of selenophene substituted benzodithiophene and fluorinated benzothiadiazole based conjugated polymers for organic solar cell applications",
+   "journal": "Electrochimica Acta",
+   "short_journal": "Electrochimica Acta",
+   "year": 2021,
+   "volume": "398",
+   "issue": null,
+   "page": "139298",
+   "article_number": "139298",
+   "authors": [
+    [
+     "Aslan",
+     "Sultan Taskaya"
+    ],
+    [
+     "Cevher",
+     "Duygu"
+    ],
+    [
+     "Bolayır",
+     "Eda"
+    ],
+    [
+     "Hizalan Ozsoy",
+     "Gonul"
+    ],
+    [
+     "Arslan Udum",
+     "Yasemin"
+    ],
+    [
+     "Yıldırım",
+     "Erol"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.eurpolymj.2022.111141": {
+   "n_polymers": 4,
+   "names": [
+    "P1",
+    "P10",
+    "P60",
+    "P61"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Investigation the effect of π bridge and side chain on photovoltaic properties of benzodithiophene and quinoxaline based conjugated polymers",
+   "journal": "European Polymer Journal",
+   "short_journal": "European Polymer Journal",
+   "year": 2022,
+   "volume": "169",
+   "issue": null,
+   "page": "111141",
+   "article_number": "111141",
+   "authors": [
+    [
+     "Taskaya Aslan",
+     "Sultan"
+    ],
+    [
+     "Alemdar Yılmaz",
+     "Eda"
+    ],
+    [
+     "Hacıefendioğlu",
+     "Tuğba"
+    ],
+    [
+     "Arslan Udum",
+     "Yasemin"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Yıldırım",
+     "Erol"
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.jelechem.2020.114014": {
+   "n_polymers": 1,
+   "names": [
+    "P65"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and characterization of optical, electrochemical and photovoltaic properties of selenophene bearing benzodithiophene based alternating polymers",
+   "journal": "Journal of Electroanalytical Chemistry",
+   "short_journal": "Journal of Electroanalytical Chemistry",
+   "year": 2020,
+   "volume": "862",
+   "issue": null,
+   "page": "114014",
+   "article_number": "114014",
+   "authors": [
+    [
+     "Atlı",
+     "Gülten Özkul"
+    ],
+    [
+     "Yılmaz",
+     "Eda Alemdar"
+    ],
+    [
+     "Aslan",
+     "Sultan Taşkaya"
+    ],
+    [
+     "Udum",
+     "Yasemin Arslan"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Çırpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.jpowsour.2021.229588": {
+   "n_polymers": 3,
+   "names": [
+    "P259",
+    "P260",
+    "P261"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhanced photovoltaic performance of quinoxaline-based donor-acceptor type polymers with monocyano substituent",
+   "journal": "Journal of Power Sources",
+   "short_journal": "Journal of Power Sources",
+   "year": 2021,
+   "volume": "491",
+   "issue": null,
+   "page": "229588",
+   "article_number": "229588",
+   "authors": [
+    [
+     "Sagita",
+     "Christyowati Primi"
+    ],
+    [
+     "Lee",
+     "Jun Ho"
+    ],
+    [
+     "Lee",
+     "Seok Woo"
+    ],
+    [
+     "Whang",
+     "Dong Ryeol"
+    ],
+    [
+     "Kim",
+     "Joo Hyun"
+    ],
+    [
+     "Chang",
+     "Dong Wook"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.mencom.2021.11.010": {
+   "n_polymers": 2,
+   "names": [
+    "P131",
+    "P133"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "New benzodithiophene-pyrrolopyrroledione-thienopyrazine random terpolymers for organic photovoltaics",
+   "journal": "Mendeleev Communications",
+   "short_journal": "Mendeleev Communications",
+   "year": 2021,
+   "volume": "31",
+   "issue": "6",
+   "page": "800-803",
+   "article_number": null,
+   "authors": [
+    [
+     "Keshtov",
+     "Mukhamed L."
+    ],
+    [
+     "Kuklin",
+     "Sergei A."
+    ],
+    [
+     "Konstantinov",
+     "Igor O."
+    ],
+    [
+     "Zou",
+     "Yingping"
+    ],
+    [
+     "Sharma",
+     "Ganesh D."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "OOO Zhurnal &quot;Mendeleevskie Soobshcheniya&quot;"
+  },
+  "10.1016/j.mtener.2023.101368": {
+   "n_polymers": 3,
+   "names": [
+    "P262",
+    "P263",
+    "P264"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Controlling photovoltaic performances of trifluoromethylated quinoxaline-based polymers via fluorine substitution",
+   "journal": "Materials Today Energy",
+   "short_journal": "Materials Today Energy",
+   "year": 2023,
+   "volume": "36",
+   "issue": null,
+   "page": "101368",
+   "article_number": "101368",
+   "authors": [
+    [
+     "Lee",
+     "Yu Kyung"
+    ],
+    [
+     "Son",
+     "Dong Hwan"
+    ],
+    [
+     "Lee",
+     "Seok Woo"
+    ],
+    [
+     "Nugraha",
+     "Dinda Fariesta"
+    ],
+    [
+     "Whang",
+     "Dong Ryeol"
+    ],
+    [
+     "Kim",
+     "Joo Hyun"
+    ],
+    [
+     "Chang",
+     "Dong Wook"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.nanoen.2021.106718": {
+   "n_polymers": 2,
+   "names": [
+    "PY2Se-F",
+    "PY2Se-Cl"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Near-infrared absorbing polymer acceptors enabled by selenophene-fused core and halogenated end-group for binary all-polymer solar cells with efficiency over 16%",
+   "journal": "Nano Energy",
+   "short_journal": "Nano Energy",
+   "year": 2022,
+   "volume": "92",
+   "issue": null,
+   "page": "106718",
+   "article_number": "106718",
+   "authors": [
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "Fu",
+     "Huiting"
+    ],
+    [
+     "Luo",
+     "Zhenghui"
+    ],
+    [
+     "Oh",
+     "Jiyeon"
+    ],
+    [
+     "Fan",
+     "Baobing"
+    ],
+    [
+     "Lin",
+     "Francis"
+    ],
+    [
+     "Yang",
+     "Changduk"
+    ],
+    [
+     "Jen",
+     "Alex K.-Y."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.nanoen.2024.109648": {
+   "n_polymers": 1,
+   "names": [
+    "PBBO"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "A benzobisoxazole-based polymer assisting high efficiency polymer solar cells",
+   "journal": "Nano Energy",
+   "short_journal": "Nano Energy",
+   "year": 2024,
+   "volume": "126",
+   "issue": null,
+   "page": "109648",
+   "article_number": "109648",
+   "authors": [
+    [
+     "Sheng",
+     "Hui"
+    ],
+    [
+     "Liu",
+     "Shizhao"
+    ],
+    [
+     "Kang",
+     "Xiao"
+    ],
+    [
+     "Niu",
+     "Jianan"
+    ],
+    [
+     "Adewale",
+     "Adeoba Abdullah"
+    ],
+    [
+     "Wen",
+     "Shuguang"
+    ],
+    [
+     "Yang",
+     "Chunming"
+    ],
+    [
+     "Bao",
+     "Xichang"
+    ],
+    [
+     "Sun",
+     "Mingliang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2016.11.038": {
+   "n_polymers": 2,
+   "names": [
+    "P(PDI-BDT-Th)",
+    "P(PDI-BDT-Ph)"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Perylene diimide-benzodithiophene D-A copolymers as acceptor in all-polymer solar cells",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2017,
+   "volume": "41",
+   "issue": null,
+   "page": "49-55",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhang",
+     "Youdi"
+    ],
+    [
+     "Guo",
+     "Xia"
+    ],
+    [
+     "Su",
+     "Wenyan"
+    ],
+    [
+     "Guo",
+     "Bing"
+    ],
+    [
+     "Xu",
+     "Zhuo"
+    ],
+    [
+     "Zhang",
+     "Maojie"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2017.08.005": {
+   "n_polymers": 2,
+   "names": [
+    "PBDT-PDI-2",
+    "PF-PDI"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Rational design of perylenediimide-based polymer acceptor for efficient all-polymer solar cells",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2017,
+   "volume": "50",
+   "issue": null,
+   "page": "376-383",
+   "article_number": null,
+   "authors": [
+    [
+     "Xiong",
+     "Wentao"
+    ],
+    [
+     "Meng",
+     "Xiangyi"
+    ],
+    [
+     "Liu",
+     "Tao"
+    ],
+    [
+     "Cai",
+     "Yunhao"
+    ],
+    [
+     "Xue",
+     "Xiaonan"
+    ],
+    [
+     "Li",
+     "Zongbo"
+    ],
+    [
+     "Sun",
+     "Xiaobo"
+    ],
+    [
+     "Huo",
+     "Lijun"
+    ],
+    [
+     "Ma",
+     "Wei"
+    ],
+    [
+     "Sun",
+     "Yanming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2018.02.015": {
+   "n_polymers": 3,
+   "names": [
+    "PTTPDI",
+    "PBDTPDI",
+    "PNDTPDI"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Molecular engineering of perylene-diimide-based polymer acceptors containing heteroacene units for all-polymer solar cells",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2018,
+   "volume": "58",
+   "issue": null,
+   "page": "222-230",
+   "article_number": null,
+   "authors": [
+    [
+     "Suranagi",
+     "Sanjaykumar R."
+    ],
+    [
+     "Singh",
+     "Ranbir"
+    ],
+    [
+     "Kim",
+     "Joo-Hyun"
+    ],
+    [
+     "Kim",
+     "Min"
+    ],
+    [
+     "Ade",
+     "Harald"
+    ],
+    [
+     "Cho",
+     "Kilwon"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2018.11.022": {
+   "n_polymers": 3,
+   "names": [
+    "P57",
+    "P58",
+    "P59"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhanced open-circuit voltages of trifluoromethylated quinoxaline-based polymer solar cells",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2019,
+   "volume": "65",
+   "issue": null,
+   "page": "363-369",
+   "article_number": null,
+   "authors": [
+    [
+     "Putri",
+     "Sella Kurnia"
+    ],
+    [
+     "Jin",
+     "Ho Cheol"
+    ],
+    [
+     "Whang",
+     "Dong Ryeol"
+    ],
+    [
+     "Kim",
+     "Joo Hyun"
+    ],
+    [
+     "Chang",
+     "Dong Wook"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2019.105603": {
+   "n_polymers": 1,
+   "names": [
+    "P191"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Side-chain engineering of medium bandgap polymer donors for efficient polymer solar cells",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2020,
+   "volume": "78",
+   "issue": null,
+   "page": "105603",
+   "article_number": "105603",
+   "authors": [
+    [
+     "Pan",
+     "Fei"
+    ],
+    [
+     "Sun",
+     "Chenkai"
+    ],
+    [
+     "Bin",
+     "Haijun"
+    ],
+    [
+     "Angunawela",
+     "Indunil"
+    ],
+    [
+     "Lai",
+     "Wenbin"
+    ],
+    [
+     "Meng",
+     "Lei"
+    ],
+    [
+     "Ade",
+     "Harald"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2019.105604": {
+   "n_polymers": 1,
+   "names": [
+    "P192"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Rational molecular design of deep blue thermally activated delayed fluorescent emitters for high efficiency fluorescent and hyperfluorescent devices",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2020,
+   "volume": "78",
+   "issue": null,
+   "page": "105604",
+   "article_number": "105604",
+   "authors": [
+    [
+     "Kang",
+     "Yu Jin"
+    ],
+    [
+     "Yun",
+     "Ju Hui"
+    ],
+    [
+     "Lee",
+     "Jun Yeob"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2019.105605": {
+   "n_polymers": 1,
+   "names": [
+    "P193"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Investigation of charge transport properties of [1]Benzothieno[3,2-b][1]-benzothiophene single-crystals in field-effect transistor configuration",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2020,
+   "volume": "78",
+   "issue": null,
+   "page": "105605",
+   "article_number": "105605",
+   "authors": [
+    [
+     "Liu",
+     "Xiao"
+    ],
+    [
+     "Su",
+     "Xiaolu"
+    ],
+    [
+     "Livache",
+     "Clément"
+    ],
+    [
+     "Chamoreau",
+     "Lise-Marie"
+    ],
+    [
+     "Sanaur",
+     "Sébastien"
+    ],
+    [
+     "Sosa-Vargas",
+     "Lydia"
+    ],
+    [
+     "Ribierre",
+     "Jean-Charles"
+    ],
+    [
+     "Kreher",
+     "David"
+    ],
+    [
+     "Lhuillier",
+     "Emmanuel"
+    ],
+    [
+     "Lacaze",
+     "Emmanuelle"
+    ],
+    [
+     "Mathevet",
+     "Fabrice"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2022.106611": {
+   "n_polymers": 1,
+   "names": [
+    "P189"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhanced efficiency of polymer solar cells via simple fluorination on the π-bridge of polymer donors",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2022,
+   "volume": "108",
+   "issue": null,
+   "page": "106611",
+   "article_number": "106611",
+   "authors": [
+    [
+     "Liao",
+     "Junxu"
+    ],
+    [
+     "Weng",
+     "Fubiao"
+    ],
+    [
+     "Zheng",
+     "Peijin"
+    ],
+    [
+     "Xu",
+     "Gengbiao"
+    ],
+    [
+     "Zeng",
+     "Langxian"
+    ],
+    [
+     "Huang",
+     "Zhangen"
+    ],
+    [
+     "Deng",
+     "Tianjiao"
+    ],
+    [
+     "Pang",
+     "Yiqi"
+    ],
+    [
+     "Wu",
+     "Siyang"
+    ],
+    [
+     "Chen",
+     "Jianhao"
+    ],
+    [
+     "Zhao",
+     "Hongbin"
+    ],
+    [
+     "Xu",
+     "Yongjun"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.orgel.2022.106612": {
+   "n_polymers": 1,
+   "names": [
+    "P190"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Organic thin-film transistors with inkjet-printed electrodes on hydrophobic Teflon-AF gate dielectric with reversible surface properties",
+   "journal": "Organic Electronics",
+   "short_journal": "Organic Electronics",
+   "year": 2022,
+   "volume": "108",
+   "issue": null,
+   "page": "106612",
+   "article_number": "106612",
+   "authors": [
+    [
+     "Naderi",
+     "Paria"
+    ],
+    [
+     "Grau",
+     "Gerd"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.polymer.2019.04.011": {
+   "n_polymers": 3,
+   "names": [
+    "P177",
+    "P178",
+    "P179"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Side-chain influences on the properties of benzodithiophene-alt-di(thiophen-2-yl)quinoxaline polymers for fullerene-free organic solar cells",
+   "journal": "Polymer",
+   "short_journal": "Polymer",
+   "year": 2019,
+   "volume": "172",
+   "issue": null,
+   "page": "305-311",
+   "article_number": null,
+   "authors": [
+    [
+     "Tamilavan",
+     "Vellaiappillai"
+    ],
+    [
+     "Lee",
+     "Jihoon"
+    ],
+    [
+     "Kwon",
+     "Ji Hyeon"
+    ],
+    [
+     "Jang",
+     "Soyeong"
+    ],
+    [
+     "Shin",
+     "Insoo"
+    ],
+    [
+     "Agneeswari",
+     "Rajalingam"
+    ],
+    [
+     "Jung",
+     "Jung Hyun"
+    ],
+    [
+     "Jin",
+     "Youngeup"
+    ],
+    [
+     "Park",
+     "Sung Heum"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.polymer.2020.122408": {
+   "n_polymers": 3,
+   "names": [
+    "P180",
+    "P181",
+    "P182"
+   ],
+   "groups": [
+    "new-polymer-QA-23dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhanced photovoltaic performance of benzodithiophene-alt-bis(thiophen-2-yl)quinoxaline polymers via π–bridge engineering for non-fullerene organic solar cells",
+   "journal": "Polymer",
+   "short_journal": "Polymer",
+   "year": 2020,
+   "volume": "194",
+   "issue": null,
+   "page": "122408",
+   "article_number": "122408",
+   "authors": [
+    [
+     "Tamilavan",
+     "Vellaiappillai"
+    ],
+    [
+     "Jang",
+     "Soyeong"
+    ],
+    [
+     "Lee",
+     "Jihoon"
+    ],
+    [
+     "Agneeswari",
+     "Rajalingam"
+    ],
+    [
+     "Kwon",
+     "Ji Hyeon"
+    ],
+    [
+     "Kim",
+     "Joo Hyun"
+    ],
+    [
+     "Jin",
+     "Youngeup"
+    ],
+    [
+     "Park",
+     "Sung Heum"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.renene.2019.03.018": {
+   "n_polymers": 1,
+   "names": [
+    "P127"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Conjugated polymers with benzothiadiazole and benzotriazole moieties for polymer solar cells",
+   "journal": "Renewable Energy",
+   "short_journal": "Renewable Energy",
+   "year": 2019,
+   "volume": "139",
+   "issue": null,
+   "page": "1184-1193",
+   "article_number": null,
+   "authors": [
+    [
+     "Keles",
+     "Duygu"
+    ],
+    [
+     "Erer",
+     "Mert Can"
+    ],
+    [
+     "Bolayir",
+     "Eda"
+    ],
+    [
+     "Cevher",
+     "Sevki Can"
+    ],
+    [
+     "Hizalan",
+     "Gonul"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.renene.2019.03.019": {
+   "n_polymers": 1,
+   "names": [
+    "P128"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A new model-based technique for fast and accurate tracking of global maximum power point in photovoltaic arrays under partial shading conditions",
+   "journal": "Renewable Energy",
+   "short_journal": "Renewable Energy",
+   "year": 2019,
+   "volume": "139",
+   "issue": null,
+   "page": "1061-1076",
+   "article_number": null,
+   "authors": [
+    [
+     "Hashemzadeh",
+     "Seyed Majid"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.renene.2019.03.020": {
+   "n_polymers": 1,
+   "names": [
+    "P129"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A SARIMA-RVFL hybrid model assisted by wavelet decomposition for very short-term solar PV power generation forecast",
+   "journal": "Renewable Energy",
+   "short_journal": "Renewable Energy",
+   "year": 2019,
+   "volume": "140",
+   "issue": null,
+   "page": "124-139",
+   "article_number": null,
+   "authors": [
+    [
+     "Kushwaha",
+     "Vishal"
+    ],
+    [
+     "Pindoriya",
+     "Naran M."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.renene.2019.03.021": {
+   "n_polymers": 1,
+   "names": [
+    "P130"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A review of recent advances in solar cooking technology",
+   "journal": "Renewable Energy",
+   "short_journal": "Renewable Energy",
+   "year": 2019,
+   "volume": "140",
+   "issue": null,
+   "page": "419-435",
+   "article_number": null,
+   "authors": [
+    [
+     "Aramesh",
+     "Mohamad"
+    ],
+    [
+     "Ghalebani",
+     "Mehdi"
+    ],
+    [
+     "Kasaeian",
+     "Alibakhsh"
+    ],
+    [
+     "Zamani",
+     "Hosein"
+    ],
+    [
+     "Lorenzini",
+     "Giulio"
+    ],
+    [
+     "Mahian",
+     "Omid"
+    ],
+    [
+     "Wongwises",
+     "Somchai"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.renene.2021.06.087": {
+   "n_polymers": 1,
+   "names": [
+    "P211"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Non-fullerene organic photovoltaics based on thienopyrroledione comprising random copolymers; effect of alkyl chains",
+   "journal": "Renewable Energy",
+   "short_journal": "Renewable Energy",
+   "year": 2021,
+   "volume": "178",
+   "issue": null,
+   "page": "202-211",
+   "article_number": null,
+   "authors": [
+    [
+     "Yasa",
+     "Mustafa"
+    ],
+    [
+     "Depci",
+     "Tolga"
+    ],
+    [
+     "Alemdar",
+     "Eda"
+    ],
+    [
+     "Hacioglu",
+     "Serife O."
+    ],
+    [
+     "Cirpan",
+     "Ali"
+    ],
+    [
+     "Toppare",
+     "Levent"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.scib.2020.01.001": {
+   "n_polymers": 1,
+   "names": [
+    "D18"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "18% Efficiency organic solar cells",
+   "journal": "Science Bulletin",
+   "short_journal": "Science Bulletin",
+   "year": 2020,
+   "volume": "65",
+   "issue": "4",
+   "page": "272-275",
+   "article_number": null,
+   "authors": [
+    [
+     "Liu",
+     "Qishi"
+    ],
+    [
+     "Jiang",
+     "Yufan"
+    ],
+    [
+     "Jin",
+     "Ke"
+    ],
+    [
+     "Qin",
+     "Jianqiang"
+    ],
+    [
+     "Xu",
+     "Jingui"
+    ],
+    [
+     "Li",
+     "Wenting"
+    ],
+    [
+     "Xiong",
+     "Ji"
+    ],
+    [
+     "Liu",
+     "Jinfeng"
+    ],
+    [
+     "Xiao",
+     "Zuo"
+    ],
+    [
+     "Sun",
+     "Kuan"
+    ],
+    [
+     "Yang",
+     "Shangfeng"
+    ],
+    [
+     "Zhang",
+     "Xiaotao"
+    ],
+    [
+     "Ding",
+     "Liming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.solener.2021.03.032": {
+   "n_polymers": 1,
+   "names": [
+    "P12"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Photovoltaic modules transient response analysis and correction under a fast characterization system",
+   "journal": "Solar Energy",
+   "short_journal": "Solar Energy",
+   "year": 2021,
+   "volume": "221",
+   "issue": null,
+   "page": "232-242",
+   "article_number": null,
+   "authors": [
+    [
+     "Ortega",
+     "Eneko"
+    ],
+    [
+     "Aranguren",
+     "Gerardo"
+    ],
+    [
+     "Jimeno",
+     "Juan Carlos"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.solener.2021.03.033": {
+   "n_polymers": 1,
+   "names": [
+    "P13"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhancing the performance of Cu2ZnSnS4 solar cell fabricated via successive ionic layer adsorption and reaction method by optimizing the annealing process",
+   "journal": "Solar Energy",
+   "short_journal": "Solar Energy",
+   "year": 2021,
+   "volume": "220",
+   "issue": null,
+   "page": "204-210",
+   "article_number": null,
+   "authors": [
+    [
+     "Sun",
+     "Kaiwen"
+    ],
+    [
+     "Wang",
+     "Ao"
+    ],
+    [
+     "Su",
+     "Zhenghua"
+    ],
+    [
+     "Liu",
+     "Fangyang"
+    ],
+    [
+     "Hao",
+     "Xiaojing"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.solmat.2013.06.035": {
+   "n_polymers": 1,
+   "names": [
+    "P(PDI-DTT)"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "All-polymer solar cells based on side-chain-isolated polythiophenes and poly(perylene diimide-alt-dithienothiophene)",
+   "journal": "Solar Energy Materials and Solar Cells",
+   "short_journal": "Solar Energy Materials and Solar Cells",
+   "year": 2013,
+   "volume": "117",
+   "issue": null,
+   "page": "336-342",
+   "article_number": null,
+   "authors": [
+    [
+     "Liao",
+     "Xia-Xia"
+    ],
+    [
+     "Zhao",
+     "Xingang"
+    ],
+    [
+     "Zhang",
+     "Zhi-Guo"
+    ],
+    [
+     "Wang",
+     "Hui-Qiong"
+    ],
+    [
+     "Zhan",
+     "Xiaowei"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ],
+    [
+     "Wang",
+     "Jizheng"
+    ],
+    [
+     "Zheng",
+     "Jin-Cheng"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.synthmet.2018.01.002": {
+   "n_polymers": 2,
+   "names": [
+    "P144",
+    "P145"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "New conjugated regular terpolymers based on diketopyrrolopyrrole-benzodithiophene and their application to thin film transistors and polymer solar cells",
+   "journal": "Synthetic Metals",
+   "short_journal": "Synthetic Metals",
+   "year": 2018,
+   "volume": "236",
+   "issue": null,
+   "page": "36-43",
+   "article_number": null,
+   "authors": [
+    [
+     "Kim",
+     "Aesun"
+    ],
+    [
+     "Lee",
+     "Ji Hyung"
+    ],
+    [
+     "Kim",
+     "Hyung Jong"
+    ],
+    [
+     "Choi",
+     "Suna"
+    ],
+    [
+     "Kim",
+     "Young Un"
+    ],
+    [
+     "Park",
+     "Chang Geun"
+    ],
+    [
+     "Jeong",
+     "Choel Hun"
+    ],
+    [
+     "Cho",
+     "Min Ju"
+    ],
+    [
+     "Choi",
+     "Dong Hoon"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.synthmet.2019.116182": {
+   "n_polymers": 1,
+   "names": [
+    "P197"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "1 V high open-circuit voltage fluorinated alkoxybiphenyl side-chained benzodithiophene based photovoltaic polymers",
+   "journal": "Synthetic Metals",
+   "short_journal": "Synthetic Metals",
+   "year": 2019,
+   "volume": "257",
+   "issue": null,
+   "page": "116182",
+   "article_number": "116182",
+   "authors": [
+    [
+     "Cui",
+     "Wen"
+    ],
+    [
+     "Li",
+     "Feng"
+    ],
+    [
+     "Zhu",
+     "TingTing"
+    ],
+    [
+     "Li",
+     "Yonghai"
+    ],
+    [
+     "Yu",
+     "Liangmin"
+    ],
+    [
+     "Yang",
+     "Renqiang"
+    ],
+    [
+     "Sun",
+     "Mingliang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1016/j.synthmet.2021.116756": {
+   "n_polymers": 3,
+   "names": [
+    "P87",
+    "P88",
+    "P89"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Effect of alkylthiolated hetero-aromatic rings on the photovoltaic performance of benzodithiophene-based polymer/fullerene solar cells",
+   "journal": "Synthetic Metals",
+   "short_journal": "Synthetic Metals",
+   "year": 2021,
+   "volume": "276",
+   "issue": null,
+   "page": "116756",
+   "article_number": "116756",
+   "authors": [
+    [
+     "Du",
+     "Zhengkun"
+    ],
+    [
+     "Cai",
+     "Mian"
+    ],
+    [
+     "Du",
+     "Li"
+    ],
+    [
+     "Huang",
+     "Baojin"
+    ],
+    [
+     "Cao",
+     "Zhong"
+    ],
+    [
+     "Yu",
+     "Donghong"
+    ],
+    [
+     "Lin",
+     "Meng-Chang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1021/acs.chemmater.0c04253": {
+   "n_polymers": 3,
+   "names": [
+    "PYTT1",
+    "PYTT2",
+    "PYTT3"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Highly Efficient and Stable All-Polymer Solar Cells Enabled by Near-Infrared Isomerized Polymer Acceptors",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2021,
+   "volume": "33",
+   "issue": "2",
+   "page": "761-773",
+   "article_number": null,
+   "authors": [
+    [
+     "Wang",
+     "Tao"
+    ],
+    [
+     "Sun",
+     "Rui"
+    ],
+    [
+     "Wang",
+     "Wei"
+    ],
+    [
+     "Li",
+     "Hongneng"
+    ],
+    [
+     "Wu",
+     "Yao"
+    ],
+    [
+     "Min",
+     "Jie"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.1c00478": {
+   "n_polymers": 2,
+   "names": [
+    "PThDPPThF4",
+    "PTzDPPTzF4"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Hydrogen Bonds Control Single-Chain Conformation, Crystallinity, and Electron Transport in Isoelectronic Diketopyrrolopyrrole Copolymers",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2021,
+   "volume": "33",
+   "issue": "7",
+   "page": "2635-2645",
+   "article_number": null,
+   "authors": [
+    [
+     "Wang",
+     "Qian"
+    ],
+    [
+     "Böckmann",
+     "Steffen"
+    ],
+    [
+     "Günther",
+     "Florian"
+    ],
+    [
+     "Streiter",
+     "Martin"
+    ],
+    [
+     "Zerson",
+     "Mario"
+    ],
+    [
+     "Scaccabarozzi",
+     "Alberto D."
+    ],
+    [
+     "Tan",
+     "Wen Liang"
+    ],
+    [
+     "Komber",
+     "Hartmut"
+    ],
+    [
+     "Deibel",
+     "Carsten"
+    ],
+    [
+     "Magerle",
+     "Robert"
+    ],
+    [
+     "Gemming",
+     "Sibylle"
+    ],
+    [
+     "McNeill",
+     "Christopher R."
+    ],
+    [
+     "Caironi",
+     "Mario"
+    ],
+    [
+     "Hansen",
+     "Michael Ryan"
+    ],
+    [
+     "Sommer",
+     "Michael"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.1c02302": {
+   "n_polymers": 3,
+   "names": [
+    "PY5-BTZ",
+    "PY5-PZ",
+    "PY5-BT"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Introducing Electron-Withdrawing Linking Units and Thiophene π-Bridges into Polymerized Small Molecule Acceptors for High-Efficiency All-Polymer Solar Cells",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2021,
+   "volume": "33",
+   "issue": "21",
+   "page": "8212-8222",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhou",
+     "Liuyang"
+    ],
+    [
+     "Xia",
+     "Xinxin"
+    ],
+    [
+     "Meng",
+     "Lei"
+    ],
+    [
+     "Zhang",
+     "Jinyuan"
+    ],
+    [
+     "Lu",
+     "Xinhui"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.5b01274": {
+   "n_polymers": 1,
+   "names": [
+    "P(NDI2OD-T2)"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Importance of Electron Transport Ability in Naphthalene Diimide-Based Polymer Acceptors for High-Performance, Additive-Free, All-Polymer Solar Cells",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2015,
+   "volume": "27",
+   "issue": "15",
+   "page": "5230-5237",
+   "article_number": null,
+   "authors": [
+    [
+     "Choi",
+     "Joonhyeong"
+    ],
+    [
+     "Kim",
+     "Ki-Hyun"
+    ],
+    [
+     "Yu",
+     "Hojeong"
+    ],
+    [
+     "Lee",
+     "Changyeon"
+    ],
+    [
+     "Kang",
+     "Hyunbum"
+    ],
+    [
+     "Song",
+     "Inho"
+    ],
+    [
+     "Kim",
+     "Youngwoong"
+    ],
+    [
+     "Oh",
+     "Joon Hak"
+    ],
+    [
+     "Kim",
+     "Bumjoon J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.5b01928": {
+   "n_polymers": 2,
+   "names": [
+    "PQP",
+    "PFP"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Development and Structure/Property Relationship of New Electron Accepting Polymers Based on Thieno[2′,3′:4,5]pyrido[2,3-<i>g</i>]thieno[3,2-<i>c</i>]quinoline-4,10-dione for All-Polymer Solar Cells",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2015,
+   "volume": "27",
+   "issue": "17",
+   "page": "5941-5948",
+   "article_number": null,
+   "authors": [
+    [
+     "Jung",
+     "In Hwan"
+    ],
+    [
+     "Zhao",
+     "Donglin"
+    ],
+    [
+     "Jang",
+     "Jaeyoung"
+    ],
+    [
+     "Chen",
+     "Wei"
+    ],
+    [
+     "Landry",
+     "Erik S."
+    ],
+    [
+     "Lu",
+     "Luyao"
+    ],
+    [
+     "Talapin",
+     "Dmitri V."
+    ],
+    [
+     "Yu",
+     "Luping"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.8b03229": {
+   "n_polymers": 1,
+   "names": [
+    "PNDIBS"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "All-Polymer Solar Cells with 9.4% Efficiency from Naphthalene Diimide-Biselenophene Copolymer Acceptor",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2018,
+   "volume": "30",
+   "issue": "18",
+   "page": "6540-6548",
+   "article_number": null,
+   "authors": [
+    [
+     "Kolhe",
+     "Nagesh B."
+    ],
+    [
+     "Lee",
+     "Hyunjong"
+    ],
+    [
+     "Kuzuhara",
+     "Daiki"
+    ],
+    [
+     "Yoshimoto",
+     "Noriyuki"
+    ],
+    [
+     "Koganezawa",
+     "Tomoyuki"
+    ],
+    [
+     "Jenekhe",
+     "Samson A."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.chemmater.9b00926": {
+   "n_polymers": 2,
+   "names": [
+    "PMTT56",
+    "PEHTT"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Methyl Thioether Functionalization of a Polymeric Donor for Efficient Solar Cells Processed from Non-Halogenated Solvents",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2019,
+   "volume": "31",
+   "issue": "8",
+   "page": "3025-3033",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhang",
+     "Chun-Hui"
+    ],
+    [
+     "Wang",
+     "Wei"
+    ],
+    [
+     "Huang",
+     "Wei"
+    ],
+    [
+     "Wang",
+     "Jiang"
+    ],
+    [
+     "Hu",
+     "Zhubin"
+    ],
+    [
+     "Lin",
+     "Zhichao"
+    ],
+    [
+     "Yang",
+     "Tingbin"
+    ],
+    [
+     "Lin",
+     "Fengyuan"
+    ],
+    [
+     "Xing",
+     "Yun"
+    ],
+    [
+     "Bai",
+     "Junxian"
+    ],
+    [
+     "Sun",
+     "Haitao"
+    ],
+    [
+     "Liang",
+     "Yongye"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.energyfuels.3c00526": {
+   "n_polymers": 2,
+   "names": [
+    "Z3",
+    "Z4"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Side Chain Engineering of Two-Dimensional Polymeric Donors for High-Efficiency Organic Solar Cells",
+   "journal": "Energy &amp; Fuels",
+   "short_journal": "Energy Fuels",
+   "year": 2023,
+   "volume": "37",
+   "issue": "8",
+   "page": "6122-6128",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhang",
+     "Min"
+    ],
+    [
+     "Liu",
+     "Hailu"
+    ],
+    [
+     "Liu",
+     "Yafeng"
+    ],
+    [
+     "Zeng",
+     "Min"
+    ],
+    [
+     "Zhao",
+     "Bin"
+    ],
+    [
+     "Tan",
+     "Songting"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.jpcc.5b11213": {
+   "n_polymers": 1,
+   "names": [
+    "pDTfBT-4T"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Temperature-Driven Phase Transition of a Fused Dithienobenzothiadiazole–Tetrathiophene Based Semiconducting Copolymer",
+   "journal": "The Journal of Physical Chemistry C",
+   "short_journal": "J. Phys. Chem. C",
+   "year": 2016,
+   "volume": "120",
+   "issue": "2",
+   "page": "903-910",
+   "article_number": null,
+   "authors": [
+    [
+     "Pei",
+     "Mingyuan"
+    ],
+    [
+     "Huang",
+     "Jun"
+    ],
+    [
+     "Jang",
+     "Mi"
+    ],
+    [
+     "Kim",
+     "Ji-Hoon"
+    ],
+    [
+     "Lee",
+     "Minjung"
+    ],
+    [
+     "Chen",
+     "Junwu"
+    ],
+    [
+     "Hwang",
+     "Do Hoon"
+    ],
+    [
+     "Yang",
+     "Hoichang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.macromol.2c00515": {
+   "n_polymers": 2,
+   "names": [
+    "PY5-TTZCT",
+    "PY5-TTZFT"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Effect of Isomerization of Linking Units on the Photovoltaic Performance of PSMA-Type Polymer Acceptors in All-Polymer Solar Cells",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2022,
+   "volume": "55",
+   "issue": "11",
+   "page": "4420-4428",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhou",
+     "Liuyang"
+    ],
+    [
+     "Meng",
+     "Lei"
+    ],
+    [
+     "Zhang",
+     "Jinyuan"
+    ],
+    [
+     "Qin",
+     "Shucheng"
+    ],
+    [
+     "Guo",
+     "Jing"
+    ],
+    [
+     "Li",
+     "Xiaojun"
+    ],
+    [
+     "Xia",
+     "Xinxin"
+    ],
+    [
+     "Lu",
+     "Xinhui"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.macromol.5b01537": {
+   "n_polymers": 1,
+   "names": [
+    "P(BDTNDI-T)"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "2D-Conjugated Benzodithiophene-Based Polymer Acceptor: Design, Synthesis, Nanomorphology, and Photovoltaic Performance",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2015,
+   "volume": "48",
+   "issue": "19",
+   "page": "7156-7163",
+   "article_number": null,
+   "authors": [
+    [
+     "Ye",
+     "Long"
+    ],
+    [
+     "Jiao",
+     "Xuechen"
+    ],
+    [
+     "Zhang",
+     "Hao"
+    ],
+    [
+     "Li",
+     "Sunsun"
+    ],
+    [
+     "Yao",
+     "Huifeng"
+    ],
+    [
+     "Ade",
+     "Harald"
+    ],
+    [
+     "Hou",
+     "Jianhui"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.macromol.5b02658": {
+   "n_polymers": 3,
+   "names": [
+    "PNDTI-T",
+    "PNDTI-TT",
+    "PNDTI-DTT"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Naphthodithiophene Diimide-Based Copolymers: Ambipolar Semiconductors in Field-Effect Transistors and Electron Acceptors with Near-Infrared Response in Polymer Blend Solar Cells",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2016,
+   "volume": "49",
+   "issue": "5",
+   "page": "1752-1760",
+   "article_number": null,
+   "authors": [
+    [
+     "Nakano",
+     "Kyohei"
+    ],
+    [
+     "Nakano",
+     "Masahiro"
+    ],
+    [
+     "Xiao",
+     "Bo"
+    ],
+    [
+     "Zhou",
+     "Erjun"
+    ],
+    [
+     "Suzuki",
+     "Kaori"
+    ],
+    [
+     "Osaka",
+     "Itaru"
+    ],
+    [
+     "Takimiya",
+     "Kazuo"
+    ],
+    [
+     "Tajima",
+     "Keisuke"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.macromol.8b01112": {
+   "n_polymers": 2,
+   "names": [
+    "P4F2T-C40",
+    "P4FTVT-C40"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "High Mobility Ambipolar Diketopyrrolopyrrole-Based Conjugated Polymers Synthesized via Direct Arylation Polycondensation: Influence of Thiophene Moieties and Side Chains",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2018,
+   "volume": "51",
+   "issue": "21",
+   "page": "8752-8760",
+   "article_number": null,
+   "authors": [
+    [
+     "Gao",
+     "Yao"
+    ],
+    [
+     "Bai",
+     "Junhua"
+    ],
+    [
+     "Sui",
+     "Ying"
+    ],
+    [
+     "Han",
+     "Yang"
+    ],
+    [
+     "Deng",
+     "Yunfeng"
+    ],
+    [
+     "Tian",
+     "Hongkun"
+    ],
+    [
+     "Geng",
+     "Yanhou"
+    ],
+    [
+     "Wang",
+     "Fosong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsaem.3c00392": {
+   "n_polymers": 2,
+   "names": [
+    "PSe-BO",
+    "PSe-HD"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Dithienobenzoselenadiazole-Based Polymer Donors with Tuned Side Chains for Efficient Polymer Solar Cells",
+   "journal": "ACS Applied Energy Materials",
+   "short_journal": "ACS Appl. Energy Mater.",
+   "year": 2023,
+   "volume": "6",
+   "issue": "7",
+   "page": "4079-4088",
+   "article_number": null,
+   "authors": [
+    [
+     "Tang",
+     "Honglin"
+    ],
+    [
+     "Ning",
+     "Junhua"
+    ],
+    [
+     "Wang",
+     "Ke"
+    ],
+    [
+     "Liu",
+     "Heng"
+    ],
+    [
+     "Lu",
+     "Xinhui"
+    ],
+    [
+     "Tan",
+     "Songting"
+    ],
+    [
+     "Huang",
+     "Meihua"
+    ],
+    [
+     "Zhao",
+     "Bin"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsami.2c14280": {
+   "n_polymers": 2,
+   "names": [
+    "PE55",
+    "PE56"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Improving the Photovoltaic Performance of Dithienobenzodithiophene-Based Polymers via Addition of an Additional Eluent in the Soxhlet Extraction Process",
+   "journal": "ACS Applied Materials &amp; Interfaces",
+   "short_journal": "ACS Appl. Mater. Interfaces",
+   "year": 2022,
+   "volume": "14",
+   "issue": "46",
+   "page": "52244-52252",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhou",
+     "Jialing"
+    ],
+    [
+     "Guo",
+     "Qing"
+    ],
+    [
+     "Zhang",
+     "Bao"
+    ],
+    [
+     "Cheng",
+     "Si-Xuan"
+    ],
+    [
+     "Hao",
+     "Xiao-Tao"
+    ],
+    [
+     "Zhong",
+     "Yufei"
+    ],
+    [
+     "Tang",
+     "Ailing"
+    ],
+    [
+     "Sun",
+     "Xiangnan"
+    ],
+    [
+     "Zhou",
+     "Erjun"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsami.7b14582": {
+   "n_polymers": 2,
+   "names": [
+    "PNDITF2T",
+    "PNDITF4T"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Impact of Acceptor Fluorination on the Performance of All-Polymer Solar Cells",
+   "journal": "ACS Applied Materials &amp; Interfaces",
+   "short_journal": "ACS Appl. Mater. Interfaces",
+   "year": 2017,
+   "volume": "10",
+   "issue": "1",
+   "page": "955-969",
+   "article_number": null,
+   "authors": [
+    [
+     "Deshmukh",
+     "Kedar D."
+    ],
+    [
+     "Matsidik",
+     "Rukiya"
+    ],
+    [
+     "Prasad",
+     "Shyamal K. K."
+    ],
+    [
+     "Chandrasekaran",
+     "Naresh"
+    ],
+    [
+     "Welford",
+     "Adam"
+    ],
+    [
+     "Connal",
+     "Luke A."
+    ],
+    [
+     "Liu",
+     "Amelia C. Y."
+    ],
+    [
+     "Gann",
+     "Eliot"
+    ],
+    [
+     "Thomsen",
+     "Lars"
+    ],
+    [
+     "Kabra",
+     "Dinesh"
+    ],
+    [
+     "Hodgkiss",
+     "Justin M."
+    ],
+    [
+     "Sommer",
+     "Michael"
+    ],
+    [
+     "McNeill",
+     "Christopher R."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsami.8b06306": {
+   "n_polymers": 1,
+   "names": [
+    "PPDI-BDT"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Comparison of Three n-Type Copolymers Based on Benzodithiophene and Naphthalene Diimide/Perylene Diimide/Fused Perylene Diimides for All-Polymer Solar Cells Application",
+   "journal": "ACS Applied Materials &amp; Interfaces",
+   "short_journal": "ACS Appl. Mater. Interfaces",
+   "year": 2018,
+   "volume": "10",
+   "issue": "27",
+   "page": "23263-23269",
+   "article_number": null,
+   "authors": [
+    [
+     "Yang",
+     "Jing"
+    ],
+    [
+     "Yin",
+     "Yuli"
+    ],
+    [
+     "Chen",
+     "Fan"
+    ],
+    [
+     "Zhang",
+     "Yong"
+    ],
+    [
+     "Xiao",
+     "Bo"
+    ],
+    [
+     "Zhao",
+     "Liancheng"
+    ],
+    [
+     "Zhou",
+     "Erjun"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsami.8b13292": {
+   "n_polymers": 1,
+   "names": [
+    "P(DDE5-DPPBT)"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Influence of Branched Alkyl Ester-Labeled Side Chains on Specific Chain Arrangement and Charge-Transport Properties of Diketopyrrolopyrrole-Based Conjugated Polymers",
+   "journal": "ACS Applied Materials &amp; Interfaces",
+   "short_journal": "ACS Appl. Mater. Interfaces",
+   "year": 2018,
+   "volume": "10",
+   "issue": "47",
+   "page": "40681-40691",
+   "article_number": null,
+   "authors": [
+    [
+     "Kim",
+     "Hyung Jong"
+    ],
+    [
+     "Pei",
+     "Mingyuan"
+    ],
+    [
+     "Ko",
+     "Joong Se"
+    ],
+    [
+     "Ma",
+     "Min Hee"
+    ],
+    [
+     "Park",
+     "Gi Eun"
+    ],
+    [
+     "Baek",
+     "Jimin"
+    ],
+    [
+     "Yang",
+     "Hoichang"
+    ],
+    [
+     "Cho",
+     "Min Ju"
+    ],
+    [
+     "Choi",
+     "Dong Hoon"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsami.9b07112": {
+   "n_polymers": 2,
+   "names": [
+    "P194",
+    "P195"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Revealing the Position Effect of an Alkylthio Side Chain in Phenyl-Substituted Benzodithiophene-Based Donor Polymers on the Photovoltaic Performance of Non-Fullerene Organic Solar Cells",
+   "journal": "ACS Applied Materials &amp; Interfaces",
+   "short_journal": "ACS Appl. Mater. Interfaces",
+   "year": 2019,
+   "volume": "11",
+   "issue": "36",
+   "page": "33173-33178",
+   "article_number": null,
+   "authors": [
+    [
+     "Chen",
+     "Weichao"
+    ],
+    [
+     "Huang",
+     "Gongyue"
+    ],
+    [
+     "Li",
+     "Xiaoming"
+    ],
+    [
+     "Li",
+     "Yonghai"
+    ],
+    [
+     "Wang",
+     "Huan"
+    ],
+    [
+     "Jiang",
+     "Huanxiang"
+    ],
+    [
+     "Zhao",
+     "Zhihui"
+    ],
+    [
+     "Yu",
+     "Donghong"
+    ],
+    [
+     "Wang",
+     "Ergang"
+    ],
+    [
+     "Yang",
+     "Renqiang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsenergylett.8b01824": {
+   "n_polymers": 1,
+   "names": [
+    "PMOT40"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "High-Performance Fullerene-Free Polymer Solar Cells Featuring Efficient Photocurrent Generation from Dual Pathways and Low Nonradiative Recombination Loss",
+   "journal": "ACS Energy Letters",
+   "short_journal": "ACS Energy Lett.",
+   "year": 2018,
+   "volume": "4",
+   "issue": "1",
+   "page": "8-16",
+   "article_number": null,
+   "authors": [
+    [
+     "Xie",
+     "Yuan"
+    ],
+    [
+     "Huang",
+     "Wei"
+    ],
+    [
+     "Liang",
+     "Quanbin"
+    ],
+    [
+     "Zhu",
+     "Jingshuai"
+    ],
+    [
+     "Cong",
+     "Zhiyuan"
+    ],
+    [
+     "Lin",
+     "Fengyuan"
+    ],
+    [
+     "Yi",
+     "Shuwang"
+    ],
+    [
+     "Luo",
+     "Guoping"
+    ],
+    [
+     "Yang",
+     "Tingbin"
+    ],
+    [
+     "Liu",
+     "Sha"
+    ],
+    [
+     "He",
+     "Zhicai"
+    ],
+    [
+     "Liang",
+     "Yongye"
+    ],
+    [
+     "Zhan",
+     "Xiaowei"
+    ],
+    [
+     "Gao",
+     "Chao"
+    ],
+    [
+     "Wu",
+     "Hongbin"
+    ],
+    [
+     "Cao",
+     "Yong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acsmacrolett.7b00738": {
+   "n_polymers": 1,
+   "names": [
+    "PNDI-Si50"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Siloxane-Terminated Side Chain Engineering of Acceptor Polymers Leading to Over 7% Power Conversion Efficiencies in All-Polymer Solar Cells",
+   "journal": "ACS Macro Letters",
+   "short_journal": "ACS Macro Lett.",
+   "year": 2017,
+   "volume": "6",
+   "issue": "11",
+   "page": "1310-1314",
+   "article_number": null,
+   "authors": [
+    [
+     "Feng",
+     "Shizhen"
+    ],
+    [
+     "Liu",
+     "Chang"
+    ],
+    [
+     "Xu",
+     "Xiaofeng"
+    ],
+    [
+     "Liu",
+     "Xuncheng"
+    ],
+    [
+     "Zhang",
+     "Lianjie"
+    ],
+    [
+     "Nian",
+     "Yaowen"
+    ],
+    [
+     "Cao",
+     "Yong"
+    ],
+    [
+     "Chen",
+     "Junwu"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/cm500832h": {
+   "n_polymers": 1,
+   "names": [
+    "PNPDI"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and Search for Design Principles of New Electron Accepting Polymers for All-Polymer Solar Cells",
+   "journal": "Chemistry of Materials",
+   "short_journal": "Chem. Mater.",
+   "year": 2014,
+   "volume": "26",
+   "issue": "11",
+   "page": "3450-3459",
+   "article_number": null,
+   "authors": [
+    [
+     "Jung",
+     "In Hwan"
+    ],
+    [
+     "Lo",
+     "Wai-Yip"
+    ],
+    [
+     "Jang",
+     "Jaeyoung"
+    ],
+    [
+     "Chen",
+     "Wei"
+    ],
+    [
+     "Zhao",
+     "Donglin"
+    ],
+    [
+     "Landry",
+     "Erik S."
+    ],
+    [
+     "Lu",
+     "Luyao"
+    ],
+    [
+     "Talapin",
+     "Dmitri V."
+    ],
+    [
+     "Yu",
+     "Luping"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/jacs.0c12527": {
+   "n_polymers": 1,
+   "names": [
+    "PZT"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "High Efficiency (15.8%) All-Polymer Solar Cells Enabled by a Regioregular Narrow Bandgap Polymer Acceptor",
+   "journal": "Journal of the American Chemical Society",
+   "short_journal": "J. Am. Chem. Soc.",
+   "year": 2021,
+   "volume": "143",
+   "issue": "7",
+   "page": "2665-2670",
+   "article_number": null,
+   "authors": [
+    [
+     "Fu",
+     "Huiting"
+    ],
+    [
+     "Li",
+     "Yuxiang"
+    ],
+    [
+     "Yu",
+     "Jianwei"
+    ],
+    [
+     "Wu",
+     "Ziang"
+    ],
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "Lin",
+     "Francis"
+    ],
+    [
+     "Woo",
+     "Han Young"
+    ],
+    [
+     "Gao",
+     "Feng"
+    ],
+    [
+     "Zhu",
+     "Zonglong"
+    ],
+    [
+     "Jen",
+     "Alex K.-Y."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/ma102010s": {
+   "n_polymers": 2,
+   "names": [
+    "P53a",
+    "P53b"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and Characterization of Poly(9,9-dialkylfluorenevinylene benzobisoxazoles): New Solution-Processable Electron-Accepting Conjugated Polymers.",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2010,
+   "volume": "44",
+   "issue": "2",
+   "page": "248-255",
+   "article_number": null,
+   "authors": [
+    [
+     "Intemann",
+     "Jeremy J."
+    ],
+    [
+     "Mike",
+     "Jared F."
+    ],
+    [
+     "Cai",
+     "Min"
+    ],
+    [
+     "Bose",
+     "Sayantan"
+    ],
+    [
+     "Xiao",
+     "Teng"
+    ],
+    [
+     "Mauldin",
+     "Timothy C."
+    ],
+    [
+     "Roggers",
+     "Robert A."
+    ],
+    [
+     "Shinar",
+     "Joseph"
+    ],
+    [
+     "Shinar",
+     "Ruth"
+    ],
+    [
+     "Jeffries-EL",
+     "Malika"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/ma300821m": {
+   "n_polymers": 6,
+   "names": [
+    "PBOCz-O",
+    "PBECz-EH",
+    "PBOF-O",
+    "PBOF-DMO",
+    "PBOP-D",
+    "PBOP-MEH"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Altering the Conjugation Pathway for Improved Performance of Benzobisoxazole-Based Polymer Guest Emitters in Polymer Light-Emitting Diodes",
+   "journal": "Macromolecules",
+   "short_journal": "Macromolecules",
+   "year": 2012,
+   "volume": "45",
+   "issue": "17",
+   "page": "6888-6897",
+   "article_number": null,
+   "authors": [
+    [
+     "Intemann",
+     "Jeremy J."
+    ],
+    [
+     "Hellerich",
+     "Emily S."
+    ],
+    [
+     "Tlach",
+     "Brian C."
+    ],
+    [
+     "Ewan",
+     "Monique D."
+    ],
+    [
+     "Barnes",
+     "Charles A."
+    ],
+    [
+     "Bhuwalka",
+     "Achala"
+    ],
+    [
+     "Cai",
+     "Min"
+    ],
+    [
+     "Shinar",
+     "Joseph"
+    ],
+    [
+     "Shinar",
+     "Ruth"
+    ],
+    [
+     "Jeffries-EL",
+     "Malika"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1038/s41467-021-25638-9": {
+   "n_polymers": 2,
+   "names": [
+    "PN-Se",
+    "PS-Se"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Polymerized small molecular acceptor based all-polymer solar cells with an efficiency of 16.16% via tuning polymer blend morphology by molecular design",
+   "journal": "Nature Communications",
+   "short_journal": "Nat Commun",
+   "year": 2021,
+   "volume": "12",
+   "issue": "1",
+   "page": null,
+   "article_number": "5264",
+   "authors": [
+    [
+     "Du",
+     "Jiaqi"
+    ],
+    [
+     "Hu",
+     "Ke"
+    ],
+    [
+     "Zhang",
+     "Jinyuan"
+    ],
+    [
+     "Meng",
+     "Lei"
+    ],
+    [
+     "Yue",
+     "Jiling"
+    ],
+    [
+     "Angunawela",
+     "Indunil"
+    ],
+    [
+     "Yan",
+     "Hongping"
+    ],
+    [
+     "Qin",
+     "Shucheng"
+    ],
+    [
+     "Kong",
+     "Xiaolei"
+    ],
+    [
+     "Zhang",
+     "Zhanjun"
+    ],
+    [
+     "Guan",
+     "Bo"
+    ],
+    [
+     "Ade",
+     "Harald"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1039/C2CC31752D": {
+   "n_polymers": 1,
+   "names": [
+    "PF-NDI"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and application of poly(fluorene-alt-naphthalene diimide) as an n-type polymer for all-polymer solar cells",
+   "journal": "Chemical Communications",
+   "short_journal": "Chem. Commun.",
+   "year": 2012,
+   "volume": "48",
+   "issue": "43",
+   "page": "5283",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhou",
+     "Erjun"
+    ],
+    [
+     "Cong",
+     "Junzi"
+    ],
+    [
+     "Zhao",
+     "Mingxiu"
+    ],
+    [
+     "Zhang",
+     "Luozheng"
+    ],
+    [
+     "Hashimoto",
+     "Kazuhito"
+    ],
+    [
+     "Tajima",
+     "Keisuke"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C5PY00665A\n": {
+   "n_polymers": 1,
+   "names": [
+    "PPDI100"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Perylene and naphthalene diimide polymers for all-polymer solar cells: a comparative study of chemical copolymerization and physical blend",
+   "journal": "Polymer Chemistry",
+   "short_journal": "Polym. Chem.",
+   "year": 2015,
+   "volume": "6",
+   "issue": "29",
+   "page": "5254-5263",
+   "article_number": null,
+   "authors": [
+    [
+     "Dai",
+     "Shuixing"
+    ],
+    [
+     "Cheng",
+     "Pei"
+    ],
+    [
+     "Lin",
+     "Yuze"
+    ],
+    [
+     "Wang",
+     "Yifan"
+    ],
+    [
+     "Ma",
+     "Lanchao"
+    ],
+    [
+     "Ling",
+     "Qidan"
+    ],
+    [
+     "Zhan",
+     "Xiaowei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C5RA14887A": {
+   "n_polymers": 2,
+   "names": [
+    "PNDIBTH",
+    "PNDIBTOC8"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Naphthalene diimide and benzothiadiazole copolymer acceptor for all-polymer solar cells with improved open-circuit voltage and morphology",
+   "journal": "RSC Advances",
+   "short_journal": "RSC Adv.",
+   "year": 2015,
+   "volume": "5",
+   "issue": "112",
+   "page": "92151-92158",
+   "article_number": null,
+   "authors": [
+    [
+     "Liu",
+     "Fangbin"
+    ],
+    [
+     "Li",
+     "Hui"
+    ],
+    [
+     "Wu",
+     "Yishi"
+    ],
+    [
+     "Gu",
+     "Chunling"
+    ],
+    [
+     "Fu",
+     "Hongbing"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C5TA05014F": {
+   "n_polymers": 2,
+   "names": [
+    "P(PDI-BDT-O)",
+    "P(PDI-BDT-T)"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and photovoltaic properties of an n-type two-dimension-conjugated polymer based on perylene diimide and benzodithiophene with thiophene conjugated side chains",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2015,
+   "volume": "3",
+   "issue": "36",
+   "page": "18442-18449",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhang",
+     "Youdi"
+    ],
+    [
+     "Wan",
+     "Qun"
+    ],
+    [
+     "Guo",
+     "Xia"
+    ],
+    [
+     "Li",
+     "Wanbin"
+    ],
+    [
+     "Guo",
+     "Bing"
+    ],
+    [
+     "Zhang",
+     "Maojie"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C5TC02615F": {
+   "n_polymers": 2,
+   "names": [
+    "P(DPP-PDI)",
+    "P(DPP-NDI)"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv",
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "New π-conjugated polymers as acceptors designed for all polymer solar cells based on imide/amide-derivatives",
+   "journal": "Journal of Materials Chemistry C",
+   "short_journal": "J. Mater. Chem. C",
+   "year": 2016,
+   "volume": "4",
+   "issue": "1",
+   "page": "185-192",
+   "article_number": null,
+   "authors": [
+    [
+     "Li",
+     "Yonghai"
+    ],
+    [
+     "Yang",
+     "Yang"
+    ],
+    [
+     "Bao",
+     "Xichang"
+    ],
+    [
+     "Qiu",
+     "Meng"
+    ],
+    [
+     "Liu",
+     "Zitong"
+    ],
+    [
+     "Wang",
+     "Ning"
+    ],
+    [
+     "Zhang",
+     "Guanxin"
+    ],
+    [
+     "Yang",
+     "Renqiang"
+    ],
+    [
+     "Zhang",
+     "Deqing"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C6TA01933A": {
+   "n_polymers": 1,
+   "names": [
+    "PIDT-NDI"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Indacenodithienothiophene–naphthalene diimide copolymer as an acceptor for all-polymer solar cells",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2016,
+   "volume": "4",
+   "issue": "16",
+   "page": "5810-5816",
+   "article_number": null,
+   "authors": [
+    [
+     "Xue",
+     "Lingwei"
+    ],
+    [
+     "Yang",
+     "Yankang"
+    ],
+    [
+     "Zhang",
+     "Zhi-Guo"
+    ],
+    [
+     "Dong",
+     "Xinning"
+    ],
+    [
+     "Gao",
+     "Liang"
+    ],
+    [
+     "Bin",
+     "Haijun"
+    ],
+    [
+     "Zhang",
+     "Jing"
+    ],
+    [
+     "Yang",
+     "YunXu"
+    ],
+    [
+     "Li",
+     "Yongfang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C7TA09930D": {
+   "n_polymers": 1,
+   "names": [
+    "PPDI-DTBT"
+   ],
+   "groups": [
+    "new-polymer-PDI-28dp.csv"
+   ],
+   "status": "ok",
+   "title": "Novel perylene diimide-based polymers with electron-deficient segments as the comonomer for efficient all-polymer solar cells",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2018,
+   "volume": "6",
+   "issue": "2",
+   "page": "414-422",
+   "article_number": null,
+   "authors": [
+    [
+     "Liu",
+     "Ming"
+    ],
+    [
+     "Yang",
+     "Jing"
+    ],
+    [
+     "Yin",
+     "Yuli"
+    ],
+    [
+     "Zhang",
+     "Yong"
+    ],
+    [
+     "Zhou",
+     "Erjun"
+    ],
+    [
+     "Guo",
+     "Fengyun"
+    ],
+    [
+     "Zhao",
+     "Liancheng"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C7TC04458E": {
+   "n_polymers": 6,
+   "names": [
+    "2,6-PB0TF",
+    "4,8-PBOTF",
+    "2,6-PBOQT",
+    "4,8-PBOQT",
+    "2,6-PBODTS",
+    "4,8-PBODTS"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Investigating the impact of conjugation pathway on the physical and electronic properties of benzobisoxazole-containing polymers",
+   "journal": "Journal of Materials Chemistry C",
+   "short_journal": "J. Mater. Chem. C",
+   "year": 2017,
+   "volume": "5",
+   "issue": "48",
+   "page": "12839-12847",
+   "article_number": null,
+   "authors": [
+    [
+     "Intemann",
+     "Jeremy J."
+    ],
+    [
+     "Hellerich",
+     "Emily S."
+    ],
+    [
+     "Ewan",
+     "Monique D."
+    ],
+    [
+     "Tlach",
+     "Brian C."
+    ],
+    [
+     "Speetzen",
+     "Erin D."
+    ],
+    [
+     "Shinar",
+     "Ruth"
+    ],
+    [
+     "Shinar",
+     "Joseph"
+    ],
+    [
+     "Jeffries-EL",
+     "Malika"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/C9PY00448C": {
+   "n_polymers": 3,
+   "names": [
+    "PFDPPF-Si",
+    "PFDPPT-Si",
+    "PFDPPS-Si"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Furan-flanked diketopyrrolopyrrole-based chalcogenophene copolymers with siloxane hybrid side chains for organic field-effect transistors",
+   "journal": "Polymer Chemistry",
+   "short_journal": "Polym. Chem.",
+   "year": 2019,
+   "volume": "10",
+   "issue": "22",
+   "page": "2854-2862",
+   "article_number": null,
+   "authors": [
+    [
+     "Lee",
+     "Sang Myeon"
+    ],
+    [
+     "Lee",
+     "Hae Rang"
+    ],
+    [
+     "Dutta",
+     "Gitish K."
+    ],
+    [
+     "Lee",
+     "Junghoon"
+    ],
+    [
+     "Oh",
+     "Joon Hak"
+    ],
+    [
+     "Yang",
+     "Changduk"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D0EE01828G": {
+   "n_polymers": 1,
+   "names": [
+    "PF5-Y5"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Over 14% efficiency all-polymer solar cells enabled by a low bandgap polymer acceptor with low energy loss and efficient charge separation",
+   "journal": "Energy &amp; Environmental Science",
+   "short_journal": "Energy Environ. Sci.",
+   "year": 2020,
+   "volume": "13",
+   "issue": "12",
+   "page": "5017-5027",
+   "article_number": null,
+   "authors": [
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "An",
+     "Qiaoshi"
+    ],
+    [
+     "Lin",
+     "Yuanbao"
+    ],
+    [
+     "Xia",
+     "Yuxin"
+    ],
+    [
+     "Li",
+     "Qian"
+    ],
+    [
+     "Zhang",
+     "Ming"
+    ],
+    [
+     "Su",
+     "Wenyan"
+    ],
+    [
+     "Peng",
+     "Wenhong"
+    ],
+    [
+     "Zhang",
+     "Chunfeng"
+    ],
+    [
+     "Liu",
+     "Feng"
+    ],
+    [
+     "Hou",
+     "Lintao"
+    ],
+    [
+     "Zhu",
+     "Weiguo"
+    ],
+    [
+     "Yu",
+     "Donghong"
+    ],
+    [
+     "Xiao",
+     "Min"
+    ],
+    [
+     "Moons",
+     "Ellen"
+    ],
+    [
+     "Zhang",
+     "Fujun"
+    ],
+    [
+     "Anthopoulos",
+     "Thomas D."
+    ],
+    [
+     "Inganäs",
+     "Olle"
+    ],
+    [
+     "Wang",
+     "Ergang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D1TA00838B": {
+   "n_polymers": 3,
+   "names": [
+    "JD40-S",
+    "JD40-F",
+    "JD40-S-F"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "All-polymer solar cells with efficiency approaching 16% enabled using a dithieno[3′,2′:3,4;2′′,3′′:5,6]benzo[1,2-\n                    <i>c</i>\n                    ][1,2,5]thiadiazole (fDTBT)-based polymer donor",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2021,
+   "volume": "9",
+   "issue": "14",
+   "page": "8975-8983",
+   "article_number": null,
+   "authors": [
+    [
+     "Jia",
+     "Tao"
+    ],
+    [
+     "Zhang",
+     "Jiabin"
+    ],
+    [
+     "Zhang",
+     "Kai"
+    ],
+    [
+     "Tang",
+     "Haoran"
+    ],
+    [
+     "Dong",
+     "Sheng"
+    ],
+    [
+     "Tan",
+     "Ching-Hong"
+    ],
+    [
+     "Wang",
+     "Xiaohui"
+    ],
+    [
+     "Huang",
+     "Fei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D1TA06041D": {
+   "n_polymers": 1,
+   "names": [
+    "PBN25-CC"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "A polymer acceptor containing the B←N unitfor all-polymer solar cells with 14% efficiency",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2021,
+   "volume": "9",
+   "issue": "37",
+   "page": "21071-21077",
+   "article_number": null,
+   "authors": [
+    [
+     "Wang",
+     "Yinghui"
+    ],
+    [
+     "Wang",
+     "Ning"
+    ],
+    [
+     "Yang",
+     "Qingqing"
+    ],
+    [
+     "Zhang",
+     "Jidong"
+    ],
+    [
+     "Liu",
+     "Jun"
+    ],
+    [
+     "Wang",
+     "Lixiang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D1TA10644A": {
+   "n_polymers": 1,
+   "names": [
+    "OPZ14"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "18.42% efficiency polymer solar cells enabled by terpolymer donors with optimal miscibility and energy levels",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2022,
+   "volume": "10",
+   "issue": "14",
+   "page": "7878-7887",
+   "article_number": null,
+   "authors": [
+    [
+     "Liao",
+     "Zhihui"
+    ],
+    [
+     "Hu",
+     "Dingqin"
+    ],
+    [
+     "Tang",
+     "Hua"
+    ],
+    [
+     "Huang",
+     "Peihao"
+    ],
+    [
+     "Singh",
+     "Ranbir"
+    ],
+    [
+     "Chung",
+     "Sein"
+    ],
+    [
+     "Cho",
+     "Kilwon"
+    ],
+    [
+     "Kumar",
+     "Manish"
+    ],
+    [
+     "Hou",
+     "Licheng"
+    ],
+    [
+     "Chen",
+     "Qianqian"
+    ],
+    [
+     "Yu",
+     "Weiyang"
+    ],
+    [
+     "Chen",
+     "Haiyan"
+    ],
+    [
+     "Yang",
+     "Ke"
+    ],
+    [
+     "Kan",
+     "Zhipeng"
+    ],
+    [
+     "Liu",
+     "Feng"
+    ],
+    [
+     "Xiao",
+     "Zeyun"
+    ],
+    [
+     "Li",
+     "Gang"
+    ],
+    [
+     "Lu",
+     "Shirong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D3GC04350A": {
+   "n_polymers": 3,
+   "names": [
+    "TPD2T",
+    "TPDTT",
+    "TPDBDT"
+   ],
+   "groups": [
+    "new-polymer-TPD-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Green and sustainable synthesis of TPD-based donor–acceptor-type conjugated polymer photocatalysts for hydrogen production under visible light",
+   "journal": "Green Chemistry",
+   "short_journal": "Green Chem.",
+   "year": 2024,
+   "volume": "26",
+   "issue": "1",
+   "page": "466-476",
+   "article_number": null,
+   "authors": [
+    [
+     "Chang",
+     "Menghan"
+    ],
+    [
+     "Zhang",
+     "Xinjuan"
+    ],
+    [
+     "Wang",
+     "Lin"
+    ],
+    [
+     "Wang",
+     "Di"
+    ],
+    [
+     "Zhang",
+     "Qiang"
+    ],
+    [
+     "Lu",
+     "Yan"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/D3TC02109B": {
+   "n_polymers": 1,
+   "names": [
+    "PNDI-TT-OMe"
+   ],
+   "groups": [
+    "new-polymer-NDI-26dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synthesis and characterization of naphthalenediimide-thienothiophene-conjugated polymers for OFET and OPT applications",
+   "journal": "Journal of Materials Chemistry C",
+   "short_journal": "J. Mater. Chem. C",
+   "year": 2023,
+   "volume": "11",
+   "issue": "38",
+   "page": "13129-13141",
+   "article_number": null,
+   "authors": [
+    [
+     "Gunturkun",
+     "Dilara"
+    ],
+    [
+     "Isci",
+     "Recep"
+    ],
+    [
+     "Faraji",
+     "Sheida"
+    ],
+    [
+     "Sütay",
+     "Berkay"
+    ],
+    [
+     "Majewski",
+     "Leszek A."
+    ],
+    [
+     "Ozturk",
+     "Turan"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/c5py01985k": {
+   "n_polymers": 1,
+   "names": [
+    "P137"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Enhancing the photovoltaic properties of low bandgap terpolymers based on benzodithiophene and phenanthrophenazine by introducing different second acceptor units",
+   "journal": "Polymer Chemistry",
+   "short_journal": "Polym. Chem.",
+   "year": 2016,
+   "volume": "7",
+   "issue": "9",
+   "page": "1747-1755",
+   "article_number": null,
+   "authors": [
+    [
+     "Fan",
+     "Qunping"
+    ],
+    [
+     "Xu",
+     "Xiaopeng"
+    ],
+    [
+     "Liu",
+     "Yu"
+    ],
+    [
+     "Su",
+     "Wenyan"
+    ],
+    [
+     "He",
+     "Xunming"
+    ],
+    [
+     "Zhang",
+     "Youming"
+    ],
+    [
+     "Tan",
+     "Hua"
+    ],
+    [
+     "Wang",
+     "Yafei"
+    ],
+    [
+     "Peng",
+     "Qiang"
+    ],
+    [
+     "Zhu",
+     "Weiguo"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/c7py01792h": {
+   "n_polymers": 1,
+   "names": [
+    "P44"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "The integrated adjustment of chlorine substitution and two-dimensional side chain of low band gap polymers in organic solar cells",
+   "journal": "Polymer Chemistry",
+   "short_journal": "Polym. Chem.",
+   "year": 2018,
+   "volume": "9",
+   "issue": "8",
+   "page": "940-947",
+   "article_number": null,
+   "authors": [
+    [
+     "Yang",
+     "Zhen"
+    ],
+    [
+     "Chen",
+     "Hui"
+    ],
+    [
+     "Wang",
+     "Huan"
+    ],
+    [
+     "Mo",
+     "Daize"
+    ],
+    [
+     "Liu",
+     "Longzhu"
+    ],
+    [
+     "Chao",
+     "Pengjie"
+    ],
+    [
+     "Zhu",
+     "Yulin"
+    ],
+    [
+     "Liu",
+     "Chuanjun"
+    ],
+    [
+     "Chen",
+     "Wei"
+    ],
+    [
+     "He",
+     "Feng"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/c7py01793h": {
+   "n_polymers": 1,
+   "names": [
+    "P45"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "not_found"
+  },
+  "10.1039/c7py01794h": {
+   "n_polymers": 1,
+   "names": [
+    "P46"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "not_found"
+  },
+  "10.1039/c7py01795h": {
+   "n_polymers": 1,
+   "names": [
+    "P47"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "not_found"
+  },
+  "10.1039/c7py01796h": {
+   "n_polymers": 1,
+   "names": [
+    "P48"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "not_found"
+  },
+  "10.1039/c7ta09736k": {
+   "n_polymers": 1,
+   "names": [
+    "P107"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Rational design of asymmetric benzodithiophene based photovoltaic polymers for efficient solar cells",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2018,
+   "volume": "6",
+   "issue": "3",
+   "page": "948-956",
+   "article_number": null,
+   "authors": [
+    [
+     "Zhu",
+     "Tingting"
+    ],
+    [
+     "Liu",
+     "Deyu"
+    ],
+    [
+     "Zhang",
+     "Kaili"
+    ],
+    [
+     "Li",
+     "Yonghai"
+    ],
+    [
+     "Liu",
+     "Zhe"
+    ],
+    [
+     "Gao",
+     "Xudong"
+    ],
+    [
+     "Bao",
+     "Xichang"
+    ],
+    [
+     "Sun",
+     "Mingliang"
+    ],
+    [
+     "Yang",
+     "Renqiang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1039/c7ta10247j": {
+   "n_polymers": 1,
+   "names": [
+    "P111"
+   ],
+   "groups": [
+    "new-polymer-BT-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Alkylthienyl substituted asymmetric 2D BDT and DTBT-based polymer solar cells with a power conversion efficiency of 9.2%",
+   "journal": "Journal of Materials Chemistry A",
+   "short_journal": "J. Mater. Chem. A",
+   "year": 2018,
+   "volume": "6",
+   "issue": "5",
+   "page": "2371-2378",
+   "article_number": null,
+   "authors": [
+    [
+     "Gu",
+     "Chuantao"
+    ],
+    [
+     "Liu",
+     "Deyu"
+    ],
+    [
+     "Wang",
+     "Junyi"
+    ],
+    [
+     "Niu",
+     "Qingfen"
+    ],
+    [
+     "Gu",
+     "Chunyang"
+    ],
+    [
+     "Shahid",
+     "Bilal"
+    ],
+    [
+     "Yu",
+     "Bing"
+    ],
+    [
+     "Cong",
+     "Hailin"
+    ],
+    [
+     "Yang",
+     "Renqiang"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1088/1674-4926/42/1/010501": {
+   "n_polymers": 1,
+   "names": [
+    "D18-Cl"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A chlorinated copolymer donor demonstrates a 18.13% power conversion efficiency",
+   "journal": "Journal of Semiconductors",
+   "short_journal": "J. Semicond.",
+   "year": 2021,
+   "volume": "42",
+   "issue": "1",
+   "page": "010501",
+   "article_number": null,
+   "authors": [
+    [
+     "Qin",
+     "Jianqiang"
+    ],
+    [
+     "Zhang",
+     "Lixiu"
+    ],
+    [
+     "Zuo",
+     "Chuantian"
+    ],
+    [
+     "Xiao",
+     "Zuo"
+    ],
+    [
+     "Yuan",
+     "Yongbo"
+    ],
+    [
+     "Yang",
+     "Shangfeng"
+    ],
+    [
+     "Hao",
+     "Feng"
+    ],
+    [
+     "Cheng",
+     "Ming"
+    ],
+    [
+     "Sun",
+     "Kuan"
+    ],
+    [
+     "Bao",
+     "Qinye"
+    ],
+    [
+     "Bin",
+     "Zhengyang"
+    ],
+    [
+     "Jin",
+     "Zhiwen"
+    ],
+    [
+     "Ding",
+     "Liming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "IOP Publishing"
+  },
+  "10.1088/1674-4926/42/10/100501": {
+   "n_polymers": 2,
+   "names": [
+    "D18-B",
+    "D18-Cl-B"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Side chain engineering on D18 polymers yields 18.74% power conversion efficiency",
+   "journal": "Journal of Semiconductors",
+   "short_journal": "J. Semicond.",
+   "year": 2021,
+   "volume": "42",
+   "issue": "10",
+   "page": "100501",
+   "article_number": null,
+   "authors": [
+    [
+     "Meng",
+     "Xianyi"
+    ],
+    [
+     "Jin",
+     "Ke"
+    ],
+    [
+     "Xiao",
+     "Zuo"
+    ],
+    [
+     "Ding",
+     "Liming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "IOP Publishing"
+  },
+  "10.1088/1674-4926/42/10/100502": {
+   "n_polymers": 1,
+   "names": [
+    "P1"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "A wide-bandgap copolymer donor with a 5-methyl-4H-dithieno[3,2-e:2',3'-g]isoindole-4,6(5H)-dione unit",
+   "journal": "Journal of Semiconductors",
+   "short_journal": "J. Semicond.",
+   "year": 2021,
+   "volume": "42",
+   "issue": "10",
+   "page": "100502",
+   "article_number": null,
+   "authors": [
+    [
+     "Sun",
+     "Anxin"
+    ],
+    [
+     "Xu",
+     "Jingui"
+    ],
+    [
+     "Zong",
+     "Guanhua"
+    ],
+    [
+     "Xiao",
+     "Zuo"
+    ],
+    [
+     "Hua",
+     "Yong"
+    ],
+    [
+     "Zhang",
+     "Bin"
+    ],
+    [
+     "Ding",
+     "Liming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "IOP Publishing"
+  },
+  "10.1088/1674-4926/42/6/060501": {
+   "n_polymers": 1,
+   "names": [
+    "P2"
+   ],
+   "groups": [
+    "new-polymer-DTBT-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Dithieno[3',2':3,4;2'',3'':5,6]benzo[1,2-c][1,2,5]oxadiazole-based polymer donors with deep HOMO levels",
+   "journal": "Journal of Semiconductors",
+   "short_journal": "J. Semicond.",
+   "year": 2021,
+   "volume": "42",
+   "issue": "6",
+   "page": "060501",
+   "article_number": null,
+   "authors": [
+    [
+     "Li",
+     "Xiongfeng"
+    ],
+    [
+     "Xu",
+     "Jingui"
+    ],
+    [
+     "Xiao",
+     "Zuo"
+    ],
+    [
+     "Wang",
+     "Xingzhu"
+    ],
+    [
+     "Zhang",
+     "Bin"
+    ],
+    [
+     "Ding",
+     "Liming"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "IOP Publishing"
+  },
+  "10.1093/nsr/nwab151": {
+   "n_polymers": 1,
+   "names": [
+    "PY-O"
+   ],
+   "groups": [
+    "new-polymer-Y6-29dp.csv"
+   ],
+   "status": "ok",
+   "title": "Tailoring polymer acceptors by electron linkers for achieving efficient and stable all-polymer solar cells",
+   "journal": "National Science Review",
+   "short_journal": "",
+   "year": 2021,
+   "volume": "9",
+   "issue": "2",
+   "page": null,
+   "article_number": "nwab151",
+   "authors": [
+    [
+     "Wu",
+     "Qiang"
+    ],
+    [
+     "Wang",
+     "Wei"
+    ],
+    [
+     "Wu",
+     "Yao"
+    ],
+    [
+     "Sun",
+     "Rui"
+    ],
+    [
+     "Guo",
+     "Jing"
+    ],
+    [
+     "Shi",
+     "Mumin"
+    ],
+    [
+     "Min",
+     "Jie"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Oxford University Press (OUP)"
+  },
+  "10.3390/polym12081673": {
+   "n_polymers": 2,
+   "names": [
+    "P198",
+    "P199"
+   ],
+   "groups": [
+    "new-polymer-BTA-20dp.csv"
+   ],
+   "status": "ok",
+   "title": "Comparing Benzodithiophene Unit with Alkylthionaphthyl and Alkylthiobiphenyl Side-Chains in Constructing High-Performance Nonfullerene Solar Cells",
+   "journal": "Polymers",
+   "short_journal": "Polymers",
+   "year": 2020,
+   "volume": "12",
+   "issue": "8",
+   "page": "1673",
+   "article_number": null,
+   "authors": [
+    [
+     "Xie",
+     "Ruyi"
+    ],
+    [
+     "Song",
+     "Li"
+    ],
+    [
+     "Zhao",
+     "Zhihui"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "MDPI AG"
+  },
+  "10.3390/polym15051156": {
+   "n_polymers": 3,
+   "names": [
+    "PBC1",
+    "PBC2",
+    "PBC3"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "ok",
+   "title": "Development of Benzobisoxazole-Based Novel Conjugated Polymers for Organic Thin-Film Transistors",
+   "journal": "Polymers",
+   "short_journal": "Polymers",
+   "year": 2023,
+   "volume": "15",
+   "issue": "5",
+   "page": "1156",
+   "article_number": null,
+   "authors": [
+    [
+     "Jeong",
+     "WonJo"
+    ],
+    [
+     "Lee",
+     "Kyumin"
+    ],
+    [
+     "Jang",
+     "Jaeyoung"
+    ],
+    [
+     "Jung",
+     "In Hwan"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "MDPI AG"
+  },
+  "10.3390/polym15163392": {
+   "n_polymers": 1,
+   "names": [
+    "PDPPTT-2Tz"
+   ],
+   "groups": [
+    "new-polymer-DPP-19dp.csv"
+   ],
+   "status": "ok",
+   "title": "Synergistic Use of All-Acceptor Strategies for the Preparation of an Organic Semiconductor and the Realization of High Electron Transport Properties in Organic Field-Effect Transistors",
+   "journal": "Polymers",
+   "short_journal": "Polymers",
+   "year": 2023,
+   "volume": "15",
+   "issue": "16",
+   "page": "3392",
+   "article_number": null,
+   "authors": [
+    [
+     "Ren",
+     "Shiwei"
+    ],
+    [
+     "Zhang",
+     "Wenqing"
+    ],
+    [
+     "Wang",
+     "Zhuoer"
+    ],
+    [
+     "Yassar",
+     "Abderrahim"
+    ],
+    [
+     "Liao",
+     "Zhiting"
+    ],
+    [
+     "Yi",
+     "Zhengran"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "MDPI AG"
+  },
+  "https://hdl.handle.net/2144/39872": {
+   "n_polymers": 2,
+   "names": [
+    "P1",
+    "P2"
+   ],
+   "groups": [
+    "new-polymer-BBX-21dp.csv"
+   ],
+   "status": "no_doi"
+  }
+ },
+ "B": {
+  "10.1021/acs.jcim.5c00345": {
+   "status": "ok",
+   "title": "Band Gap and Reorganization Energy Prediction of Conducting Polymers by the Integration of Machine Learning and Density Functional Theory",
+   "journal": "Journal of Chemical Information and Modeling",
+   "short_journal": "J. Chem. Inf. Model.",
+   "year": 2025,
+   "volume": "65",
+   "issue": "11",
+   "page": "5360-5369",
+   "article_number": null,
+   "authors": [
+    [
+     "Haciefendioglu",
+     "Tugba"
+    ],
+    [
+     "Yildirim",
+     "Erol"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.jpcb.0c08674": {
+   "status": "ok",
+   "title": "Machine Learning Aided Design of Polymer with Targeted Band Gap Based on DFT Computation",
+   "journal": "The Journal of Physical Chemistry B",
+   "short_journal": "J. Phys. Chem. B",
+   "year": 2021,
+   "volume": "125",
+   "issue": "2",
+   "page": "601-611",
+   "article_number": null,
+   "authors": [
+    [
+     "Xu",
+     "Pengcheng"
+    ],
+    [
+     "Lu",
+     "Tian"
+    ],
+    [
+     "Ju",
+     "Lifei"
+    ],
+    [
+     "Tian",
+     "Lumin"
+    ],
+    [
+     "Li",
+     "Minjie"
+    ],
+    [
+     "Lu",
+     "Wencong"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1039/D4NR03702B": {
+   "status": "ok",
+   "title": "Harnessing DFT and machine learning for accurate optical gap prediction in conjugated polymers",
+   "journal": "Nanoscale",
+   "short_journal": "Nanoscale",
+   "year": 2025,
+   "volume": "17",
+   "issue": "13",
+   "page": "7865-7876",
+   "article_number": null,
+   "authors": [
+    [
+     "Liu",
+     "Bin"
+    ],
+    [
+     "Yan",
+     "Yunrui"
+    ],
+    [
+     "Liu",
+     "Mingjie"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.2477/jccj.2019-0033": {
+   "status": "ok",
+   "title": "Construction of Band Gap Prediction Model for π-conjugated Polymers Using Aromatic/Quinoid and Donor/Acceptor Properties",
+   "journal": "Journal of Computer Chemistry, Japan",
+   "short_journal": "J. Comput. Chem. Jpn.",
+   "year": 2019,
+   "volume": "18",
+   "issue": "5",
+   "page": "224-226",
+   "article_number": null,
+   "authors": [
+    [
+     "HAYASHI",
+     "Yoshihiro"
+    ],
+    [
+     "KAWAUCHI",
+     "Susumu"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Society of Computer Chemistry Japan"
+  },
+  "10.1021/acsomega.2c04713": {
+   "status": "ok",
+   "title": "Design Principles\nfor the Acceptor Units in Donor–Acceptor\nConjugated Polymers",
+   "journal": "ACS Omega",
+   "short_journal": "",
+   "year": 2022,
+   "volume": "7",
+   "issue": "43",
+   "page": "38969-38978",
+   "article_number": null,
+   "authors": [
+    [
+     "Hacıefendioǧlu",
+     "Tuǧba"
+    ],
+    [
+     "Yildirim",
+     "Erol"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1007/s00894-019-4043-2": {
+   "status": "ok",
+   "title": "Effect of chalcogen atoms on the electronic band gaps of donor-acceptor-donor type semiconducting polymers: a systematic DFT investigation",
+   "journal": "Journal of Molecular Modeling",
+   "short_journal": "J Mol Model",
+   "year": 2019,
+   "volume": "25",
+   "issue": "6",
+   "page": null,
+   "article_number": "167",
+   "authors": [
+    [
+     "Ozkilinc",
+     "Ozge"
+    ],
+    [
+     "Kayi",
+     "Hakan"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1007/s00894-024-05985-2": {
+   "status": "ok",
+   "title": "Effect of chalcogen atoms on the electronic band gaps of the quinoxaline containing donor–acceptor-donor type semiconducting polymers: a systematic DFT investigation",
+   "journal": "Journal of Molecular Modeling",
+   "short_journal": "J Mol Model",
+   "year": 2024,
+   "volume": "30",
+   "issue": "6",
+   "page": null,
+   "article_number": "179",
+   "authors": [
+    [
+     "Kayi",
+     "Hakan"
+    ],
+    [
+     "Şen",
+     "Emire"
+    ],
+    [
+     "Özkılınç",
+     "Özge"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1039/D6DD00206D": {
+   "status": "ok",
+   "title": "ADEPT-PolyGraphMT: automated molecular simulation and multi-task multi-fidelity machine learning for polymer property generation and prediction",
+   "journal": "Digital Discovery",
+   "short_journal": "Digital Discovery",
+   "year": 2026,
+   "volume": "5",
+   "issue": "7",
+   "page": "3021-3043",
+   "article_number": null,
+   "authors": [
+    [
+     "Alosious",
+     "Sobin"
+    ],
+    [
+     "Liu",
+     "Yuhan"
+    ],
+    [
+     "Xu",
+     "Jiaxin"
+    ],
+    [
+     "Liu",
+     "Gang"
+    ],
+    [
+     "Zhang",
+     "Renzheng"
+    ],
+    [
+     "Jiang",
+     "Meng"
+    ],
+    [
+     "Luo",
+     "Tengfei"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1016/j.ces.2026.123732": {
+   "status": "ok",
+   "title": "Machine learning with physically grounded, interpretable descriptors for polymer property prediction and monomer design",
+   "journal": "Chemical Engineering Science",
+   "short_journal": "Chemical Engineering Science",
+   "year": 2026,
+   "volume": "328",
+   "issue": null,
+   "page": "123732",
+   "article_number": "123732",
+   "authors": [
+    [
+     "Averochkin",
+     "Gleb"
+    ],
+    [
+     "Zlobin",
+     "Ivan"
+    ],
+    [
+     "Bespalov",
+     "Ivan"
+    ],
+    [
+     "Alexandrov",
+     "Eugeny"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1002/adts.202100511": {
+   "status": "ok",
+   "title": "Deep Transfer Learning: A Fast and Accurate Tool to Predict the Energy Levels of Donor Molecules for Organic Photovoltaics",
+   "journal": "Advanced Theory and Simulations",
+   "short_journal": "Advcd Theory and Sims",
+   "year": 2022,
+   "volume": "5",
+   "issue": "5",
+   "page": null,
+   "article_number": "2100511",
+   "authors": [
+    [
+     "Moore",
+     "Gareth John"
+    ],
+    [
+     "Bardagot",
+     "Olivier"
+    ],
+    [
+     "Banerji",
+     "Natalie"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1039/D0RA07496A": {
+   "status": "ok",
+   "title": "What's the gap? A possible strategy for advancing theory, and an appeal for experimental structure data to drive that advance",
+   "journal": "RSC Advances",
+   "short_journal": "RSC Adv.",
+   "year": 2020,
+   "volume": "10",
+   "issue": "60",
+   "page": "36887-36896",
+   "article_number": null,
+   "authors": [
+    [
+     "Sohlberg",
+     "Karl"
+    ],
+    [
+     "Foster",
+     "Michael E."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.5281/zenodo.23558298": {
+   "status": "not_found"
+  },
+  "10.1021/acs.jpclett.8b00635": {
+   "status": "ok",
+   "title": "Computer-Aided Screening of Conjugated Polymers for Organic Solar Cell: Classification by Random Forest",
+   "journal": "The Journal of Physical Chemistry Letters",
+   "short_journal": "J. Phys. Chem. Lett.",
+   "year": 2018,
+   "volume": "9",
+   "issue": "10",
+   "page": "2639-2646",
+   "article_number": null,
+   "authors": [
+    [
+     "Nagasawa",
+     "Shinji"
+    ],
+    [
+     "Al-Naamani",
+     "Eman"
+    ],
+    [
+     "Saeki",
+     "Akinori"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1002/jcc.70175": {
+   "status": "ok",
+   "title": "Accurate Prediction of <scp>HOMO</scp>–<scp>LUMO</scp> Gap Using <scp>DFT</scp> Functional and Application to Next‐Generation Organic Telluro[n]Helicenes Materials",
+   "journal": "Journal of Computational Chemistry",
+   "short_journal": "J Comput Chem",
+   "year": 2025,
+   "volume": "46",
+   "issue": "18",
+   "page": null,
+   "article_number": "e70175",
+   "authors": [
+    [
+     "Kumar",
+     "Rahul"
+    ],
+    [
+     "Kar",
+     "Rahul"
+    ],
+    [
+     "Maity",
+     "Dilip K."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1021/ci400084k": {
+   "status": "ok",
+   "title": "Time-Split Cross-Validation as a Method for Estimating the Goodness of Prospective Prediction.",
+   "journal": "Journal of Chemical Information and Modeling",
+   "short_journal": "J. Chem. Inf. Model.",
+   "year": 2013,
+   "volume": "53",
+   "issue": "4",
+   "page": "783-790",
+   "article_number": null,
+   "authors": [
+    [
+     "Sheridan",
+     "Robert P."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/ci9803381": {
+   "status": "ok",
+   "title": "Unsupervised Data Base Clustering Based on Daylight's Fingerprint and Tanimoto Similarity: A Fast and Automated Way To Cluster Small and Large Data Sets",
+   "journal": "Journal of Chemical Information and Computer Sciences",
+   "short_journal": "J. Chem. Inf. Comput. Sci.",
+   "year": 1999,
+   "volume": "39",
+   "issue": "4",
+   "page": "747-750",
+   "article_number": null,
+   "authors": [
+    [
+     "Butina",
+     "Darko"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/acs.jctc.5b00099": {
+   "status": "ok",
+   "title": "Big Data Meets Quantum Chemistry Approximations: The Δ-Machine Learning Approach",
+   "journal": "Journal of Chemical Theory and Computation",
+   "short_journal": "J. Chem. Theory Comput.",
+   "year": 2015,
+   "volume": "11",
+   "issue": "5",
+   "page": "2087-2096",
+   "article_number": null,
+   "authors": [
+    [
+     "Ramakrishnan",
+     "Raghunathan"
+    ],
+    [
+     "Dral",
+     "Pavlo O."
+    ],
+    [
+     "Rupp",
+     "Matthias"
+    ],
+    [
+     "von Lilienfeld",
+     "O. Anatole"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1080/01621459.2017.1307116": {
+   "status": "ok",
+   "title": "Distribution-Free Predictive Inference for Regression",
+   "journal": "Journal of the American Statistical Association",
+   "short_journal": "Journal of the American Statistical Association",
+   "year": 2018,
+   "volume": "113",
+   "issue": "523",
+   "page": "1094-1111",
+   "article_number": null,
+   "authors": [
+    [
+     "Lei",
+     "Jing"
+    ],
+    [
+     "G’Sell",
+     "Max"
+    ],
+    [
+     "Rinaldo",
+     "Alessandro"
+    ],
+    [
+     "Tibshirani",
+     "Ryan J."
+    ],
+    [
+     "Wasserman",
+     "Larry"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Informa UK Limited"
+  },
+  "10.1021/ci100001z": {
+   "status": "not_found"
+  },
+  "10.1145/2939672.2939785": {
+   "status": "ok",
+   "title": "XGBoost",
+   "journal": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+   "short_journal": "",
+   "year": 2016,
+   "volume": null,
+   "issue": null,
+   "page": "785-794",
+   "article_number": null,
+   "authors": [
+    [
+     "Chen",
+     "Tianqi"
+    ],
+    [
+     "Guestrin",
+     "Carlos"
+    ]
+   ],
+   "type": "proceedings-article",
+   "publisher": "ACM"
+  },
+  "10.1103/PhysRevB.87.184115": {
+   "status": "ok",
+   "title": "On representing chemical environments",
+   "journal": "Physical Review B",
+   "short_journal": "Phys. Rev. B",
+   "year": 2013,
+   "volume": "87",
+   "issue": "18",
+   "page": null,
+   "article_number": "184115",
+   "authors": [
+    [
+     "Bartók",
+     "Albert P."
+    ],
+    [
+     "Kondor",
+     "Risi"
+    ],
+    [
+     "Csányi",
+     "Gábor"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Physical Society (APS)"
+  },
+  "10.1016/j.cpc.2019.106949": {
+   "status": "ok",
+   "title": "DScribe: Library of descriptors for machine learning in materials science",
+   "journal": "Computer Physics Communications",
+   "short_journal": "Computer Physics Communications",
+   "year": 2020,
+   "volume": "247",
+   "issue": null,
+   "page": "106949",
+   "article_number": "106949",
+   "authors": [
+    [
+     "Himanen",
+     "Lauri"
+    ],
+    [
+     "Jäger",
+     "Marc O.J."
+    ],
+    [
+     "Morooka",
+     "Eiaki V."
+    ],
+    [
+     "Federici Canova",
+     "Filippo"
+    ],
+    [
+     "Ranawat",
+     "Yashasvi S."
+    ],
+    [
+     "Gao",
+     "David Z."
+    ],
+    [
+     "Rinke",
+     "Patrick"
+    ],
+    [
+     "Foster",
+     "Adam S."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Elsevier BV"
+  },
+  "10.1021/accountsmr.1c00244": {
+   "status": "ok",
+   "title": "Interpretable and Explainable Machine Learning for Materials Science and Chemistry",
+   "journal": "Accounts of Materials Research",
+   "short_journal": "Acc. Mater. Res.",
+   "year": 2022,
+   "volume": "3",
+   "issue": "6",
+   "page": "597-607",
+   "article_number": null,
+   "authors": [
+    [
+     "Oviedo",
+     "Felipe"
+    ],
+    [
+     "Ferres",
+     "Juan Lavista"
+    ],
+    [
+     "Buonassisi",
+     "Tonio"
+    ],
+    [
+     "Butler",
+     "Keith T."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  }
+ },
+ "C": {
+  "10.1038/s42256-019-0138-9": {
+   "status": "ok",
+   "title": "From local explanations to global understanding with explainable AI for trees",
+   "journal": "Nature Machine Intelligence",
+   "short_journal": "Nat Mach Intell",
+   "year": 2020,
+   "volume": "2",
+   "issue": "1",
+   "page": "56-67",
+   "article_number": null,
+   "authors": [
+    [
+     "Lundberg",
+     "Scott M."
+    ],
+    [
+     "Erion",
+     "Gabriel"
+    ],
+    [
+     "Chen",
+     "Hugh"
+    ],
+    [
+     "DeGrave",
+     "Alex"
+    ],
+    [
+     "Prutkin",
+     "Jordan M."
+    ],
+    [
+     "Nair",
+     "Bala"
+    ],
+    [
+     "Katz",
+     "Ronit"
+    ],
+    [
+     "Himmelfarb",
+     "Jonathan"
+    ],
+    [
+     "Bansal",
+     "Nisha"
+    ],
+    [
+     "Lee",
+     "Su-In"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1021/acs.jpcc.8b02913": {
+   "status": "ok",
+   "title": "Polymer Genome: A Data-Powered Polymer Informatics Platform for Property Predictions",
+   "journal": "The Journal of Physical Chemistry C",
+   "short_journal": "J. Phys. Chem. C",
+   "year": 2018,
+   "volume": "122",
+   "issue": "31",
+   "page": "17575-17585",
+   "article_number": null,
+   "authors": [
+    [
+     "Kim",
+     "Chiho"
+    ],
+    [
+     "Chandrasekaran",
+     "Anand"
+    ],
+    [
+     "Huan",
+     "Tran Doan"
+    ],
+    [
+     "Das",
+     "Deya"
+    ],
+    [
+     "Ramprasad",
+     "Rampi"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1038/s41524-017-0056-5": {
+   "status": "ok",
+   "title": "Machine learning in materials informatics: recent applications and prospects",
+   "journal": "npj Computational Materials",
+   "short_journal": "npj Comput Mater",
+   "year": 2017,
+   "volume": "3",
+   "issue": "1",
+   "page": null,
+   "article_number": "54",
+   "authors": [
+    [
+     "Ramprasad",
+     "Rampi"
+    ],
+    [
+     "Batra",
+     "Rohit"
+    ],
+    [
+     "Pilania",
+     "Ghanshyam"
+    ],
+    [
+     "Mannodi-Kanakkithodi",
+     "Arun"
+    ],
+    [
+     "Kim",
+     "Chiho"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1038/s41586-018-0337-2": {
+   "status": "ok",
+   "title": "Machine learning for molecular and materials science",
+   "journal": "Nature",
+   "short_journal": "Nature",
+   "year": 2018,
+   "volume": "559",
+   "issue": "7715",
+   "page": "547-555",
+   "article_number": null,
+   "authors": [
+    [
+     "Butler",
+     "Keith T."
+    ],
+    [
+     "Davies",
+     "Daniel W."
+    ],
+    [
+     "Cartwright",
+     "Hugh"
+    ],
+    [
+     "Isayev",
+     "Olexandr"
+    ],
+    [
+     "Walsh",
+     "Aron"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1039/C7SC02664A": {
+   "status": "ok",
+   "title": "MoleculeNet: a benchmark for molecular machine learning",
+   "journal": "Chemical Science",
+   "short_journal": "Chem. Sci.",
+   "year": 2018,
+   "volume": "9",
+   "issue": "2",
+   "page": "513-530",
+   "article_number": null,
+   "authors": [
+    [
+     "Wu",
+     "Zhenqin"
+    ],
+    [
+     "Ramsundar",
+     "Bharath"
+    ],
+    [
+     "Feinberg",
+     "Evan N."
+    ],
+    [
+     "Gomes",
+     "Joseph"
+    ],
+    [
+     "Geniesse",
+     "Caleb"
+    ],
+    [
+     "Pappu",
+     "Aneesh S."
+    ],
+    [
+     "Leswing",
+     "Karl"
+    ],
+    [
+     "Pande",
+     "Vijay"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1021/jm9602928": {
+   "status": "ok",
+   "title": "The Properties of Known Drugs. 1. Molecular Frameworks",
+   "journal": "Journal of Medicinal Chemistry",
+   "short_journal": "J. Med. Chem.",
+   "year": 1996,
+   "volume": "39",
+   "issue": "15",
+   "page": "2887-2893",
+   "article_number": null,
+   "authors": [
+    [
+     "Bemis",
+     "Guy W."
+    ],
+    [
+     "Murcko",
+     "Mark A."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1021/jz200866s": {
+   "status": "ok",
+   "title": "The Harvard Clean Energy Project: Large-Scale Computational Screening and Design of Organic Photovoltaics on the World Community Grid",
+   "journal": "The Journal of Physical Chemistry Letters",
+   "short_journal": "J. Phys. Chem. Lett.",
+   "year": 2011,
+   "volume": "2",
+   "issue": "17",
+   "page": "2241-2251",
+   "article_number": null,
+   "authors": [
+    [
+     "Hachmann",
+     "Johannes"
+    ],
+    [
+     "Olivares-Amaya",
+     "Roberto"
+    ],
+    [
+     "Atahan-Evrenk",
+     "Sule"
+    ],
+    [
+     "Amador-Bedolla",
+     "Carlos"
+    ],
+    [
+     "Sánchez-Carrera",
+     "Roel S."
+    ],
+    [
+     "Gold-Parker",
+     "Aryeh"
+    ],
+    [
+     "Vogt",
+     "Leslie"
+    ],
+    [
+     "Brockway",
+     "Anna M."
+    ],
+    [
+     "Aspuru-Guzik",
+     "Alán"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1038/sdata.2016.86": {
+   "status": "ok",
+   "title": "The Harvard organic photovoltaic dataset",
+   "journal": "Scientific Data",
+   "short_journal": "Sci Data",
+   "year": 2016,
+   "volume": "3",
+   "issue": "1",
+   "page": null,
+   "article_number": "160086",
+   "authors": [
+    [
+     "Lopez",
+     "Steven A."
+    ],
+    [
+     "Pyzer-Knapp",
+     "Edward O."
+    ],
+    [
+     "Simm",
+     "Gregor N."
+    ],
+    [
+     "Lutzow",
+     "Trevor"
+    ],
+    [
+     "Li",
+     "Kewei"
+    ],
+    [
+     "Seress",
+     "Laszlo R."
+    ],
+    [
+     "Hachmann",
+     "Johannes"
+    ],
+    [
+     "Aspuru-Guzik",
+     "Alán"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1002/adma.200501717": {
+   "status": "ok",
+   "title": "Design Rules for Donors in Bulk‐Heterojunction Solar Cells—Towards 10 % Energy‐Conversion Efficiency",
+   "journal": "Advanced Materials",
+   "short_journal": "Advanced Materials",
+   "year": 2006,
+   "volume": "18",
+   "issue": "6",
+   "page": "789-794",
+   "article_number": null,
+   "authors": [
+    [
+     "Scharber",
+     "M. C."
+    ],
+    [
+     "Mühlbacher",
+     "D."
+    ],
+    [
+     "Koppe",
+     "M."
+    ],
+    [
+     "Denk",
+     "P."
+    ],
+    [
+     "Waldauf",
+     "C."
+    ],
+    [
+     "Heeger",
+     "A. J."
+    ],
+    [
+     "Brabec",
+     "C. J."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Wiley"
+  },
+  "10.1007/BF00558045": {
+   "status": "ok",
+   "title": "A new class of small band gap organic polymer conductors",
+   "journal": "Polymer Bulletin",
+   "short_journal": "Polymer Bulletin",
+   "year": 1992,
+   "volume": "29",
+   "issue": "1-2",
+   "page": "119-126",
+   "article_number": null,
+   "authors": [
+    [
+     "Havinga",
+     "E. E."
+    ],
+    [
+     "ten Hoeve",
+     "W."
+    ],
+    [
+     "Wynberg",
+     "H."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1021/cr950257t": {
+   "status": "ok",
+   "title": "Synthetic Principles for Bandgap Control in Linear π-Conjugated Systems",
+   "journal": "Chemical Reviews",
+   "short_journal": "Chem. Rev.",
+   "year": 1997,
+   "volume": "97",
+   "issue": "1",
+   "page": "173-206",
+   "article_number": null,
+   "authors": [
+    [
+     "Roncali",
+     "Jean"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Chemical Society (ACS)"
+  },
+  "10.1561/2200000101": {
+   "status": "ok",
+   "title": "Conformal Prediction: A Gentle Introduction",
+   "journal": "Foundations and Trends® in Machine Learning",
+   "short_journal": "",
+   "year": 2023,
+   "volume": "16",
+   "issue": "4",
+   "page": "494-591",
+   "article_number": null,
+   "authors": [
+    [
+     "Angelopoulos",
+     "Anastasios N."
+    ],
+    [
+     "Bates",
+     "Stephen"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Emerald"
+  },
+  "10.1023/A:1010933404324": {
+   "status": "ok",
+   "title": "Random Forests",
+   "journal": "Machine Learning",
+   "short_journal": "Machine Learning",
+   "year": 2001,
+   "volume": "45",
+   "issue": "1",
+   "page": "5-32",
+   "article_number": null,
+   "authors": [
+    [
+     "Breiman",
+     "Leo"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1007/s10994-006-6226-1": {
+   "status": "ok",
+   "title": "Extremely randomized trees",
+   "journal": "Machine Learning",
+   "short_journal": "Mach Learn",
+   "year": 2006,
+   "volume": "63",
+   "issue": "1",
+   "page": "3-42",
+   "article_number": null,
+   "authors": [
+    [
+     "Geurts",
+     "Pierre"
+    ],
+    [
+     "Ernst",
+     "Damien"
+    ],
+    [
+     "Wehenkel",
+     "Louis"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1023/B:STCO.0000035301.49549.88": {
+   "status": "ok",
+   "title": "A tutorial on support vector regression",
+   "journal": "Statistics and Computing",
+   "short_journal": "Statistics and Computing",
+   "year": 2004,
+   "volume": "14",
+   "issue": "3",
+   "page": "199-222",
+   "article_number": null,
+   "authors": [
+    [
+     "Smola",
+     "Alex J."
+    ],
+    [
+     "Schölkopf",
+     "Bernhard"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC"
+  },
+  "10.1063/1.464913": {
+   "status": "ok",
+   "title": "Density-functional thermochemistry. III. The role of exact exchange",
+   "journal": "The Journal of Chemical Physics",
+   "short_journal": "",
+   "year": 1993,
+   "volume": "98",
+   "issue": "7",
+   "page": "5648-5652",
+   "article_number": null,
+   "authors": [
+    [
+     "Becke",
+     "Axel D."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "AIP Publishing"
+  },
+  "10.1103/PhysRevB.37.785": {
+   "status": "ok",
+   "title": "Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density",
+   "journal": "Physical Review B",
+   "short_journal": "Phys. Rev. B",
+   "year": 1988,
+   "volume": "37",
+   "issue": "2",
+   "page": "785-789",
+   "article_number": null,
+   "authors": [
+    [
+     "Lee",
+     "Chengteh"
+    ],
+    [
+     "Yang",
+     "Weitao"
+    ],
+    [
+     "Parr",
+     "Robert G."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "American Physical Society (APS)"
+  },
+  "10.1063/1.3382344": {
+   "status": "ok",
+   "title": "A consistent and accurate\n                    <i>ab initio</i>\n                    parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu",
+   "journal": "The Journal of Chemical Physics",
+   "short_journal": "",
+   "year": 2010,
+   "volume": "132",
+   "issue": "15",
+   "page": null,
+   "article_number": "154104",
+   "authors": [
+    [
+     "Grimme",
+     "Stefan"
+    ],
+    [
+     "Antony",
+     "Jens"
+    ],
+    [
+     "Ehrlich",
+     "Stephan"
+    ],
+    [
+     "Krieg",
+     "Helge"
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "AIP Publishing"
+  },
+  "10.1039/C8SC05710A": {
+   "status": "ok",
+   "title": "Mapping binary copolymer property space with neural networks",
+   "journal": "Chemical Science",
+   "short_journal": "Chem. Sci.",
+   "year": 2019,
+   "volume": "10",
+   "issue": "19",
+   "page": "4973-4984",
+   "article_number": null,
+   "authors": [
+    [
+     "Wilbraham",
+     "Liam"
+    ],
+    [
+     "Sprick",
+     "Reiner Sebastian"
+    ],
+    [
+     "Jelfs",
+     "Kim E."
+    ],
+    [
+     "Zwijnenburg",
+     "Martijn A."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "Royal Society of Chemistry (RSC)"
+  },
+  "10.1063/1.5099132": {
+   "status": "ok",
+   "title": "Message-passing neural networks for high-throughput polymer screening",
+   "journal": "The Journal of Chemical Physics",
+   "short_journal": "",
+   "year": 2019,
+   "volume": "150",
+   "issue": "23",
+   "page": null,
+   "article_number": "234111",
+   "authors": [
+    [
+     "St. John",
+     "Peter C."
+    ],
+    [
+     "Phillips",
+     "Caleb"
+    ],
+    [
+     "Kemper",
+     "Travis W."
+    ],
+    [
+     "Wilson",
+     "A. Nolan"
+    ],
+    [
+     "Guan",
+     "Yanfei"
+    ],
+    [
+     "Crowley",
+     "Michael F."
+    ],
+    [
+     "Nimlos",
+     "Mark R."
+    ],
+    [
+     "Larsen",
+     "Ross E."
+    ]
+   ],
+   "type": "journal-article",
+   "publisher": "AIP Publishing"
+  }
+ },
+ "D": {
+  "polyselenophenes review conjugated polymers selenium": [
+   {
+    "doi": "10.1201/b22235-7",
+    "title": "Controlled Synthesis of Polyfurans, Polyselenophenes, and Polytellurophenes",
+    "journal": "Conjugated Polymers",
+    "year": 2019,
+    "cites": 0,
+    "first_author": "Ye"
+   },
+   {
+    "doi": "10.1021/acs.macromol.1c00193.s001",
+    "title": "Anion-Radical Polymerization of Sulfur- and Selenium-Substituted NType Conjugated Polymers",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1055/s-0042-1753086",
+    "title": "Polyselenophenes from Elemental Selenium",
+    "journal": "Synfacts",
+    "year": 2022,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.macromol.3c00169.s001",
+    "title": "Efficient Purely Organic Room-Temperature Phosphorescence from Selenium-Containing Conjugated Polymers for Signal-Amplified Oxygen Detection",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1002/9780470682531.pat0561",
+    "title": "Selenium‐ and Tellurium‐Containing Organic π‐Conjugated Oligomers and Polymers",
+    "journal": "PATAI'S Chemistry of Functional Groups",
+    "year": 2011,
+    "cites": 0,
+    "first_author": "Patra"
+   }
+  ],
+  "tellurophene conjugated polymers review heavy chalcogen": [
+   {
+    "doi": "10.31274/etd-180810-544",
+    "title": "Evaluating chalcogen heteroatoms in conjugated polymers for organic electronics",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": "Kobilka"
+   },
+   {
+    "doi": "10.1021/acs.macromol.6b01569.s001",
+    "title": "Medium-Bandgap Conjugated Polymers Containing Fused Dithienobenzochalcogenadiazoles: Chalcogen Atom Effects on Organic Photovoltaics",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsmaterialslett.4c01899.s001",
+    "title": "Energy Level Tuning in Conjugated Donor Polymers by Chalcogen Exchange for Low Dark Current Organic Photodetectors",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.macromol.4c01942.s001",
+    "title": "Quinoidal-Diketopyrrolopyrrole-Based Low-Bandgap n-Type Conjugated Polymers via Direct Arylation Polycondensation: Chalcogen Effects on Structures and Properties",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.macromol.4c01942.s002",
+    "title": "Quinoidal-Diketopyrrolopyrrole-Based Low-Bandgap n-Type Conjugated Polymers via Direct Arylation Polycondensation: Chalcogen Effects on Structures and Properties",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   }
+  ],
+  "benzoselenadiazole donor acceptor polymer low band gap selenium substitution": [
+   {
+    "doi": "10.1021/ma061760i.s001",
+    "title": "Low Band Gap Donor-Acceptor Conjugated Polymers toward Organic Solar Cells Applications",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1139/cjc-2015-0542",
+    "title": "Synthesis and characterization of acceptor–donor–acceptor-based low band gap small molecules containing benzoselenadiazole",
+    "journal": "Canadian Journal of Chemistry",
+    "year": 2016,
+    "cites": 2,
+    "first_author": "Shaik"
+   },
+   {
+    "doi": "10.1021/acsami.8b16202.s001",
+    "title": "High-Efficiency Nonfullerene Polymer Solar Cells with Band gap and Absorption Tunable Donor/Acceptor Random Copolymers",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.joc.1c01416.s001",
+    "title": "Band Gap Engineering in Acceptor-Donor-Acceptor Boron Difluoride Formazanates",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.5353/th_b4775300",
+    "title": "Low band-gap donor-acceptor polymers and heterolyptic ruthenium complex containing polymers for photovoltaic applications",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": "Cheung"
+   }
+  ],
+  "selenophene versus thiophene donor acceptor polymer band gap comparison solar cells": [
+   {
+    "doi": "10.1021/acsami.8b16202.s001",
+    "title": "High-Efficiency Nonfullerene Polymer Solar Cells with Band gap and Absorption Tunable Donor/Acceptor Random Copolymers",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsami.2c21776.s001",
+    "title": "Selenophene-Containing Small-Molecule Donor with a Medium Band Gap Enables High-Efficiency Ternary Organic Solar Cells",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/ma061760i.s001",
+    "title": "Low Band Gap Donor-Acceptor Conjugated Polymers toward Organic Solar Cells Applications",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.chemmater.2c00929.s001",
+    "title": "Alkyloxime-Substituted Thiophene-Based Wide-Band-Gap Polymer Donor Achieving a High Short Circuit Current Density of 30 mA cm2 in Organic Solar Cells",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1039/c2jm33735e",
+    "title": "Comparison of thiophene- and selenophene-bridged donor–acceptor low band-gap copolymers used in bulk-heterojunction organic photovoltaics",
+    "journal": "Journal of Materials Chemistry",
+    "year": 2012,
+    "cites": 98,
+    "first_author": "Chen"
+   }
+  ],
+  "benzotelluradiazole conjugated polymer near infrared": [
+   {
+    "doi": "10.1021/acsnano.1c01257.s001",
+    "title": "Theranostic Near-Infrared-Active Conjugated Polymer Nanoparticles",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsanm.8b01014.s001",
+    "title": "Low-Bandgap Conjugated Polymer Dots for Near-Infrared Fluorescence Imaging",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsbiomaterials.7b00344.s001",
+    "title": "Amphiphilic Near-Infrared Conjugated Polymer for Photothermal and Chemo Combination Therapy",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsami.4c09281.s001",
+    "title": "UltravioletVisible-Near-Infrared Broadband Photodetector Enabled by Cs2AgBiBr6: Sn/Conjugated Polymer Heterojunction",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acsaelm.1c00810.s001",
+    "title": "Organic Light-Dependent Resistors with Near Infrared Light-Absorbing Conjugated Polymer Films",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   }
+  ],
+  "polytellurophene synthesis optical band gap": [
+   {
+    "doi": "10.1021/acs.chemmater.8b04610.s001",
+    "title": "Synthesis and Size-Dependent Optical Properties of Intermediate Band Gap Cu3VS4 Nanocrystals",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.inorgchem.3c04413.s001",
+    "title": "Chiral Viologen-Derived Water-Stable Small Band Gap Lead Halides: Synthesis, Characterization, and Optical Properties",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.inorgchem.2c04149.s001",
+    "title": "Lead-Free Solid State Mechanochemical Synthesis of Cs2NaBi1xFexCl6 Double Perovskite: Reduces Band Gap and Enhances Optical Properties",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.25135/acg.oc.51.18.10.886",
+    "title": "Synthesis and optical properties of some isoindoline-1,3-dione compounds: Optical band gap, refractive index and absorbance band edge",
+    "journal": "Organic Communications",
+    "year": 2018,
+    "cites": 5,
+    "first_author": "Tan"
+   },
+   {
+    "doi": "10.5353/th_b4501533",
+    "title": "Optical functions of wide band gap semiconductors",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": "Chan"
+   }
+  ],
+  "machine learning band gap conjugated polymers donor acceptor": [
+   {
+    "doi": "10.1021/ma061760i.s001",
+    "title": "Low Band Gap Donor-Acceptor Conjugated Polymers toward Organic Solar Cells Applications",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/jacs.7b03327.s001",
+    "title": "Synthesis and Exciton Dynamics of Donor-Orthogonal Acceptor Conjugated Polymers: Reducing the SingletTriplet Energy Gap",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/ja048637w.s001",
+    "title": "Donor-Mediated Band Gap Reduction in a Homologous Series of Conjugated Polymers",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/ja048637w.s002",
+    "title": "Donor-Mediated Band Gap Reduction in a Homologous Series of Conjugated Polymers",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1515/epoly.2010.10.1.774",
+    "title": "Novel low-band-gap conjugated polymers using an alternating donor/acceptor repeat unit",
+    "journal": "e-Polymers",
+    "year": 2010,
+    "cites": 1,
+    "first_author": "Piyakulawat"
+   }
+  ],
+  "cross-validation leakage similar molecules overoptimistic performance cheminformatics": [
+   {
+    "doi": "10.1186/1758-2946-2-s1-o5",
+    "title": "Cross-validation is dead. Long live cross-validation! Model validation based on resampling",
+    "journal": "Journal of Cheminformatics",
+    "year": 2010,
+    "cites": 7,
+    "first_author": "Baumann"
+   },
+   {
+    "doi": "10.1186/s13321-026-01186-6",
+    "title": "ANNalog: generation of MedChem-similar molecules",
+    "journal": "Journal of Cheminformatics",
+    "year": 2026,
+    "cites": 0,
+    "first_author": "Dai"
+   },
+   {
+    "doi": "10.2139/ssrn.7299986",
+    "title": "Does Naive Cross-Validation Inflate Software Energy-Regression Prediction? A Leakage-Aware, Statistically-Gated, Cross-Project Empirical Study",
+    "journal": "",
+    "year": 2026,
+    "cites": 0,
+    "first_author": "Jobu"
+   },
+   {
+    "doi": "10.59350/jcabj-axn42",
+    "title": "Scalemic molecules: a cheminformatics challenge!",
+    "journal": "",
+    "year": 2011,
+    "cites": 0,
+    "first_author": "Rzepa"
+   },
+   {
+    "doi": "10.7717/peerj-cs.3541/fig-11",
+    "title": "Figure 11: Cross-entropy validation performance.",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   }
+  ],
+  "delta machine learning DFT experimental correction band gap": [
+   {
+    "doi": "10.1021/acs.jpcb.0c08674.s001",
+    "title": "Machine Learning Aided Design of Polymer with Targeted Band Gap Based on DFT Computation",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.26434/chemrxiv.7236029.v1",
+    "title": "Extracting Knowledge from DFT: Experimental Band Gap Predictions Through Ensemble Learning",
+    "journal": "",
+    "year": 2018,
+    "cites": 5,
+    "first_author": "Sparks"
+   },
+   {
+    "doi": "10.2139/ssrn.5740995",
+    "title": "Prediction of band gap and color of cobalt-doped gahnite ceramic pigment by combining machine learning, DFT, and experimental methods",
+    "journal": "",
+    "year": 2025,
+    "cites": 0,
+    "first_author": "Vaselnia"
+   },
+   {
+    "doi": "10.2139/ssrn.6174391",
+    "title": "Prediction of band gap and color of cobalt-doped gahnite ceramic pigment by combining machine learning, DFT, and experimental methods",
+    "journal": "",
+    "year": 2026,
+    "cites": 0,
+    "first_author": "Vaselnia"
+   },
+   {
+    "doi": "10.1016/j.commatsci.2024.113153",
+    "title": "DFT-PBE band gap correction using machine learning with a reduced set of features",
+    "journal": "Computational Materials Science",
+    "year": 2024,
+    "cites": 36,
+    "first_author": "Jihad"
+   }
+  ],
+  "optical gap conjugated polymer prediction oligomer extrapolation DFT": [
+   {
+    "doi": "10.26434/chemrxiv-2024-34n5h",
+    "title": "Harnessing DFT and Machine Learning for Accurate Optical Gap Prediction in Conjugated Polymers",
+    "journal": "",
+    "year": 2024,
+    "cites": 0,
+    "first_author": "Liu"
+   },
+   {
+    "doi": "10.1039/d4nr03702b",
+    "title": "Harnessing DFT and machine learning for accurate optical gap prediction in conjugated polymers",
+    "journal": "Nanoscale",
+    "year": 2025,
+    "cites": 29,
+    "first_author": "Liu"
+   },
+   {
+    "doi": "10.1016/s0032-3861(00)00178-6",
+    "title": "Furfuryl alcohol conjugated oligomer pellicle formation",
+    "journal": "Polymer",
+    "year": 2000,
+    "cites": 16,
+    "first_author": "Batista"
+   },
+   {
+    "doi": "10.1021/acsami.5b09041.s001",
+    "title": "Conjugated Organometallic Isoindigo Oligomer and Polymer Chromophores: Singlet and Triplet Excited State Dynamics and Application in Polymer Solar Cells",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   },
+   {
+    "doi": "10.1021/acs.langmuir.4c00884.s002",
+    "title": "Solubilization and Photostabilization in a Sodium Deoxycholate Hydrogel of a Neutral Conjugated Thiophene Oligomer and Polymer",
+    "journal": "",
+    "year": null,
+    "cites": 0,
+    "first_author": null
+   }
+  ]
+ }
+}
