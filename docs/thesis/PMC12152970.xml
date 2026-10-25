@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?><article xml:lang="en" article-type="research-article"><front><journal-meta><journal-id journal-id-type="pmc-domain-id">822</journal-id><journal-id journal-id-type="pmc-domain">acssd</journal-id><journal-title-group><journal-title>Journal of Chemical Information and Modeling</journal-title><abbrev-journal-title>J Chem Inf Model</abbrev-journal-title></journal-title-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12152970</article-id><article-id pub-id-type="pmcaid">12152970</article-id><article-id pub-id-type="pmcaiid">12152970</article-id><article-id pub-id-type="pmid">40432297</article-id><article-id pub-id-type="doi">10.1021/acs.jcim.5c00345</article-id><title-group><article-title>Band Gap and Reorganization
+Energy Prediction of Conducting
+Polymers by the Integration of Machine Learning and Density Functional
+Theory</article-title></title-group><contrib-group content-type="author"><contrib><name name-style="western"><surname>Haciefendioglu</surname><given-names initials="T">Tugba</given-names></name><xref ref-type="aff" rid="aff1">α</xref></contrib><contrib><name name-style="western"><surname>Yildirim</surname><given-names initials="E">Erol</given-names></name><xref ref-type="aff" rid="aff1">α</xref><xref ref-type="aff" rid="aff2">β</xref><xref ref-type="aff" rid="aff3">γ</xref><xref rid="cor1" ref-type="author-notes">*</xref></contrib></contrib-group><aff id="aff1">
+<label>α</label>
+Department
+of Chemistry, Middle East Technical University, 06800
+Ankara, Turkey
+</aff><aff id="aff2">
+<label>β</label>
+Department
+of Polymer Science and Technology, Middle
+East Technical University, 06800
+Ankara, Turkey
+</aff><aff id="aff3">
+<label>γ</label>
+Department
+of Micro- and Nanotechnology, Middle East
+Technical University, 06800
+Ankara, Turkey
+</aff><author-notes><fn id="cor1"><label>*</label><p>
+Email: <email>eyildir@metu.edu.tr</email>.</p></fn></author-notes><pub-date><day>28</day><month>5</month><year>2025</year></pub-date><volume>65</volume><issue>11</issue><fpage>5360</fpage><page-range>5360–5369</page-range><pub-history><event event-type="pmc-release"><date><day>12</day><month>6</month><year>2025</year></date></event></pub-history><permissions><copyright-statement>© 2025 The Authors. Published by American Chemical Society</copyright-statement><license><license-p>This article is licensed under CC-BY 4.0</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345.pdf" content-type="pmc-pdf"><?cloudpmc-path fb3a/12152970/6b98d63e90b1/ci5c00345.pdf?><?cloudpmc-bucket app?><?size 3261299?></self-uri><abstract id="abstract1"><title>Abstract</title><p>The performance and
+reliability of machine learning (ML)-quantitative
+structure–property relationship (QSPR) models depend on the
+quality, size, and diversity of the data set used for model training.
+In this study, we manually curated a large-scale data set containing
+3120 donor–acceptor (D–A) conjugated polymers (CPs)
+by selecting the most utilized 60 donors and 52 acceptors. This data
+set serves as a valuable resource for ML-based prediction of key electronic
+properties such as band gap energy (<italic>E</italic>
+<sub>g</sub>) and hole reorganization energy (λ<sub>h</sub>), calculated
+using density functional theory (DFT) to advance organic photovoltaics
+(OPV). Beyond data set construction, we systematically investigated
+how different descriptor and fingerprint types impact performance
+of the ML model. Recognizing that not all features contributed equally
+to the model performance, we conducted an in-depth analysis to identify
+the most informative descriptors for the fundamental optoelectronic
+properties. Our findings show that kernel partial least-squares (KPLS)
+regression utilizing radial and molprint2D fingerprints achieved the
+highest accuracy in predicting <italic>E</italic>
+<sub>g</sub>, with <italic>R</italic>
+<sup>2</sup> values of 0.899 and 0.897, respectively. For
+λ<sub>h</sub> prediction, models integrating electronic descriptors
+such as frontier orbital energy levels significantly improved performance,
+achieving an <italic>R</italic>
+<sup>2</sup> value of 0.830. This study
+provides a comprehensive investigation of how different descriptors
+influence model performance in OPV research. By analyzing why certain
+models succeed while others fail, our findings offer insight into
+feature selection and data set optimization for accurate target property
+prediction in organic electronics. The developed ML models provide
+a predictive framework for high-performance OPV materials design,
+significantly reducing the reliance on labor-intensive experimental
+procedures and computationally expensive first-principle calculations.</p></abstract><abstract id="abstract2" abstract-type="graphical"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="ci5c00345_0008.jpg"><?cloudpmc-path blobs/fb3a/12152970/c76a276a1c7c/ci5c00345_0008.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 558?><?original-width 912?><?scaled-height 372?><?scaled-width 608?></graphic></abstract><abstract id="abstract3" abstract-type="toc-graphic"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="tgr1" xlink:href="ci5c00345_0006.jpg"><?cloudpmc-path blobs/fb3a/12152970/c76a276a1c7c/ci5c00345_0006.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 558?><?original-width 912?><?scaled-height 372?><?scaled-width 608?></graphic></abstract><custom-meta-group><custom-meta><meta-name>status</meta-name><meta-value>released</meta-value></custom-meta><custom-meta><meta-name>display-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-in-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-journal-matter</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-scanned</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-retracted</meta-name><meta-value>no</meta-value></custom-meta></custom-meta-group></article-meta><notes notes-type="article-notes"><sec id="historyarticle-meta1" sec-type="history" disp-level="2"><p>Received 2025 Feb 25; Accepted 2025 May 19; Revised 2025 May 16; Collection date 2025 Jun 9.</p></sec></notes></front><body><sec id="sec1" disp-level="1"><title>Introduction</title><p>Recently, the power
+conversion efficiency (PCE) of organic photovoltaics
+(OPV), particularly those employing bulk heterojunction (BHJ) architecture,
+has surpassed 20%. The BHJ morphology
+consists of a blend of donor (D) and acceptor (A) moieties, which
+facilitates the generation of renewable solar energy. Characteristics
+such as lightweight, low cost, ease of processing, and flexibility
+render these conjugated polymers (CPs) effective and popular candidates
+for OPV applications compared with traditional solar cells.<italic>
+−
+
+</italic>
+</p><p>Donor units play a major role in determining the highest occupied
+molecular orbital (HOMO) while acceptor units exert a stronger influence
+on the lowest unoccupied molecular orbital (LUMO) energy level. This understanding is fundamental in the rational
+design of D–A CPs which typically involves a combination of
+an electron donor with a strong electron-withdrawing unit within a
+polymer chain. D–A copolymers,
+where both units are covalently linked in a single chain, are widely
+utilized in OPV systems.<italic>
+,
+</italic> This design improves
+charge transfer and allows fine-tuning of HOMO–LUMO energy
+levels, aiming to achieve higher open-circuit voltage (<italic>V</italic>
+<sub>oc</sub>) and short-circuit current density (<italic>J</italic>
+<sub>sc</sub>), both critical parameters for enhancing PCE. However,
+optimizing PCE requires a careful balance between the gains and losses
+in <italic>V</italic>
+<sub>oc</sub> and <italic>J</italic>
+<sub>sc</sub> that require screening hundreds of combinations of donor and acceptor
+moieties. In addition to <italic>V</italic>
+<sub>oc</sub> and <italic>J</italic>
+<sub>sc</sub>, several electronic properties such as energy
+levels, charge carrier mobility, and optical absorption characteristics
+are crucial in influencing the performance of the solar cells.<italic>
+,
+</italic> These properties need careful optimization to ensure high efficiency.</p><p>Among the key factors influencing OPV efficiency, the band gap
+(<italic>E</italic>
+<sub>g</sub>), which is defined as the energy difference
+between the HOMO and LUMO energy levels, is particularly critical
+in the engineering of OPVs. Despite the
+availability of computational techniques, obtaining and screening
+the <italic>E</italic>
+<sub>g</sub> of donor–acceptor CPs in
+a convenient and efficient manner remains a significant challenge.<italic>
+−
+
+</italic> Although an approximation would suggest <italic>E</italic>
+<sub>g</sub> ≈ LUMO­(A)–HOMO­(D), orbital hybridization and conjugation
+effects in real D–A structures cause significant deviations
+from this simple model. Therefore, a full quantum mechanical evaluation
+of the combined system is necessary to capture these perturbative
+effects, which cannot be predicted from the isolated fragment properties
+alone. Furthermore, the band gap should extend into long wavelength
+regions such as red and even infrared regions of the solar spectrum
+to obtain higher flux, resulting in a smaller energy gap of around
+1.1–1.4 eV. This broadening of
+the solar spectrum enhances light-harvesting efficiency; however,
+it may lead to a reduction in <italic>V</italic>
+<sub>oc</sub>, thereby
+decreasing the overall PCE for the lower values of <italic>E</italic>
+<sub>g</sub>. In addition, charge carrier mobility is another parameter
+showing the movement of the electrons and holes under an electrical
+field. Higher mobility leads to more
+efficient charge transport, which is essential for maximizing the <italic>J</italic>
+<sub>sc</sub> in solar cell applications. According to
+the Marcus theory of electron transfer, the charge transfer rate is
+influenced by charge reorganization energy which reflects the geometric
+and electronic changes occurring during the charge transfer process. A lower reorganization energy is one of the
+most important factors for higher charge mobility. Therefore, positive
+and negative effects that enhance and reduce efficiency should be
+thoroughly evaluated, and the optimal parameters should be determined
+to aim the highest efficiency for organic electronic applications.</p><p>The traditional approach to characterizing and screening these
+electronic and photovoltaic properties involves several steps, starting
+with material design, followed by chemical synthesis and extensive
+purification processes. The next step
+is the material characterization which is categorized as chromatographic,
+rheometric, thermal, spectroscopic, or microscopic that can be laborious
+and expensive due to practically inefficient trial-and-error examinations. This time-consuming cycle can take hours to
+days, and even after completion, the desired molecule with the target
+properties may not be obtained. Alternatively, computational methods,
+such as density functional theory (DFT), can provide high-accuracy
+predictions for the characterization of materials.<italic>
+−
+
+
+</italic> While DFT offers a faster approach
+to understanding the properties of donor–acceptor CPs, it still
+requires substantial computational resources and advanced computing
+platforms. Therefore, a new approach
+to materials discovery is crucial for identifying effective donor–acceptor
+pairs in next-generation OPV applications. Here, we propose a machine
+learning (ML) approach which offers a cost-effective and fast alternative
+allowing the prediction of characteristics of CPs such as electronic <italic>E</italic>
+<sub>g</sub>, and hole and electron reorganization energies
+(λ<sub>h</sub> and λ<sub>e</sub>). The determination of <italic>E</italic>
+<sub>g</sub> through ML model trained on structural descriptors
+significantly advances material design.<italic>
+,−
+
+
+</italic> In addition, the reorganization energy represents the total energy
+required for a neutral molecule to relax from the ionic geometry to
+its optimized neutral geometry and vice versa. It is a critical parameter
+for CPs, as it directly impacts charge carrier mobility in organic
+electronic applications.
+</p><p>Quantitative
+structure–activity relationship (QSAR) and
+quantitative structure–property relationship (QSPR) analyses
+develop an algorithm that estimates and predicts physical or chemical
+characteristics of a new compound, knowing only the values of that
+property for pre-studied compounds. QSPR
+method is an ML method that uses 2D or 3D structural information (descriptors)
+which determines the success of target property prediction. However, material descriptors including constitutional,
+topological, geometric, atomic, and molecular properties, as well
+as polymer fingerprints, vary widely. Identifying the most relevant descriptors for accurate property
+prediction is crucial for experimental design in the next step. Each
+type of descriptor may not cover all properties of materials; for
+instance, polymer fingerprints account only for the composition of
+the polymer, ignoring the other structural details.</p><p>While many
+prior studies have applied machine learning to predict
+the electronic properties of organic materials, our aim in this work
+is not to propose a new ML method but to deliver a property-specific
+benchmarking of diverse descriptor families on a manually curated
+and physically realistic data set. By exploring how descriptor types
+perform across structurally similar and dissimilar molecules, we provide
+critical insight into the model generalizability and the suitability
+of different feature sets for predicting distinct electronic properties.
+In this study, a combination of DFT computations and ML algorithms,
+including linear and nonlinear regression methods, was utilized to
+predict <italic>E</italic>
+<sub>g</sub> and λ values using the
+largest CP database in the literature. Initially, the results of the
+DFT method were employed to calculate <italic>E</italic>
+<sub>g</sub> and λ values of the training set for ML. Then, ML models were
+constructed to predict these target parameters based on the descriptors
+generated using DFT calculations. Therefore, ML models enable the
+rapid prediction of <italic>E</italic>
+<sub>g</sub> and λ values
+of all D–A-type CPs, eliminating the need for labor-intensive
+experiments or high-cost DFT calculations.</p></sec><sec id="sec2" disp-level="1"><title>Computational Methods</title><sec id="sec2.1" disp-level="2"><title>Data Set
+Preparation</title><p>The first step involved collecting
+data on D–A-type CPs from the literature. A total of 52 commonly
+used acceptor units from our previous study and 60 donor units were
+selected, as illustrated in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figures S1 and S2</ext-link>.<italic>
+,
+</italic> These structures are successfully synthesized
+and characterized, focusing on D and A units commonly studied in organic
+electronic applications. The point where D and A units are connected
+to each other and the construction of the data set containing D–A
+monomers are demonstrated in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S3</ext-link>.
+Each D and A unit was included only once in the data set, regardless
+of the presence of two attachment sites. In cases where the D or A
+core was asymmetric, only one possible D–A combination was
+considered to maintain consistency. To generate the data set, 3120
+D–A structures were constructed through R-group enumeration
+using a genetic algorithm in the Schrödinger, Materials Science
+Suite, ensuring a 1:1 donor-to-acceptor formation ratio. Several preprocessing steps such as cleaning
+and validating the structures were performed, ensuring structural
+accuracy before further optimization calculations.</p></sec><sec id="sec2.2" disp-level="2"><title>Molecular Descriptor
+Extraction</title><p>The band gap of the
+data set was calculated using optimization calculation with B3LYP
+functional and 6–311+G­(d) basis set in Jaguar Software.<italic>
+,
+</italic> These DFT-calculated band gap values served as a reference for evaluating
+the accuracy of ML-based predictions. Similarly, hole (λ<sub>h</sub>) and electron (λ<sub>e</sub>) reorganization energies
+were determined using an optoelectronic calculation algorithm using
+the same software. These parameters were
+selected as the target properties for the ML model construction.</p><p>Unlike popular open-source descriptors such as Morgan, Mordred, and
+GNN-based representations, we employed feature sets natively supported
+by the Schrödinger AutoQSAR platform. These include various
+cheminformatic descriptors and 2D fingerprints, which have been optimized
+and extracted for regression performance within this environment,
+including polymer characteristics, properties calculated by semiempirical
+methods (PM3), cheminformatic descriptors, functional group counts,
+and atomic and molecular descriptors. These descriptors were generated
+for the entire data set. Additionally, the automated QSAR (AutoQSAR)
+was used to compute four different types of binary fingerprints (dendritic,
+linear, radial, and MOLPRINT2D) retaining the 10,000 most informative
+bits for each fingerprint type and several hundred numerical 2D descriptors
+(molecular, topological, and feature counts). Periodicity was explicitly
+considered during the generation of polymer-specific descriptors and
+polymer fingerprints by constructing representative oligomeric fragments
+that reflect the repeating nature of donor–acceptor polymer
+chains. These fragments were used to encode structural features, such
+as backbone connectivity and extended conjugation. In contrast, cheminformatic
+descriptors and general binary molecular fingerprints were computed
+from monomeric D–A structures since they focus on local molecular
+environments and do not require periodic representation. A list of
+descriptors is given as <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_002.zip" ext-link-type="uri">Supporting Information</ext-link>. Since many of these descriptors exhibit strong correlations, a
+feature selection process was applied to identify the most informative
+subset, ensuring that all correlation coefficients remained below
+a defined specified threshold. Descriptors with identical values in
+more than 90% of the data set were excluded since they provided minimal
+variability for property prediction.</p></sec><sec id="sec2.3" disp-level="2"><title>Model Construction</title><p>The QSAR models were built using
+AutoQSAR, an automated ML tool integrated into Maestro, Schrödinger,
+following previously established methodologies.<italic>
+,
+</italic> The data set was randomly split into 80% training and 20% test set
+for model development and validation. To construct predictive models,
+various regression techniques were applied, including kernel-based
+partial least-squares regression (KPLS) and multiple linear regression
+(MLR) were adopted to build the set of models. Initially, the training and test sets were automatically
+determined, and at least 100 ML models were built, enforcing a maximum
+allowed correlation of 0.99 between any pair of independent variables.
+The best-performing model was then determined based on the predefined
+evaluation criteria and was used to predict the target properties
+of 10 unseen molecules (unseen by the algorithm). Finally, model prediction
+was assessed using prediction evaluation criteria to determine their
+reliability.</p></sec><sec id="sec2.4" disp-level="2"><title>Validation and Evaluation</title><p>The best
+ML model was selected
+based on internal and external validation parameters, ensuring both
+robustness and generalizability. The evaluation criteria included
+internal validation of the regression coefficient (<italic>R</italic>
+<sup>2</sup>) and the standard deviation (SD) for the training set
+and external validation parameters such as the predicted regression
+coefficient (<italic>Q</italic>
+<sup>2</sup>) and the root-mean-square
+error (RMSE) for the test set compounds. To improve prediction accuracy,
+a consensus model was also implemented combining predictions from
+multiple top-performing models. The performance of individual and
+consensus models was assessed using key statistical metrics including <italic>R</italic>
+<sup>2</sup>, SD, RMSE, and mean average deviation (MAD).
+These evaluation parameters provided a comprehensive assessment of
+the accuracy and reliability of the ML models, ensuring their applicability
+for predicting the <italic>E</italic>
+<sub>g</sub> and λ<sub>h</sub> values in donor–acceptor CPs.</p></sec></sec><sec id="sec3" disp-level="1"><title>Results and Discussion</title><p>For ML-based QSPR/QSAR applications,
+data set plays a crucial role
+in determining the performance and reliability of models. The size
+and diversity of the data set significantly impact the generalizability
+and accuracy of the constructed ML model. A sufficiently large data
+set ensures adequate training without underfitting, which occurs when
+the model fails to capture underlying trends. In this study, data
+sets were constructed by selecting the most used D and A units from
+organic electronic applications of these CPs. A key feature of this
+study is the construction of a manually curated data set containing
+3120 unique D–A CPs. These structures are assembled from experimentally
+reported donor and acceptor units and optimized using B3LYP/6–311+G­(d)
+level DFT calculations. To our knowledge, this constitutes one of
+the largest and most chemically relevant DFT-optimized data sets available
+for organic polymer electronics and it is made publicly available
+to the research community (see the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_003.zip" ext-link-type="uri">Supporting Information</ext-link>). The distribution of <italic>E</italic>
+<sub>g</sub>, λ<sub>h</sub>, and λ<sub>e</sub> is determined by DFT
+calculations for all 3120 structures demonstrated in <xref rid="fig1" ref-type="fig">Figure 
+</xref>. This distribution highlights
+the diversity of the data set for <italic>E</italic>
+<sub>g</sub>,
+enabling ML models to learn and generalize across a wide range of
+chemical structures and properties, thereby enhancing the applicability
+for predicting new materials. Since the distribution is wider than
+λ<sub>e</sub> and its stronger relevance to hole transport in
+OPVs, ML-based prediction of only λ<sub>h</sub> was performed
+using DFT-calculated values.</p><fig id="fig1" position="float"><?disp-level 2?><label>1</label><caption><p>Histogram showing the distribution of (a) band
+gap, (b) hole reorganization
+energy, and (c) electron reorganization energy of the data set. Count
+shows the number of D–A molecules.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr1" xlink:href="ci5c00345_0001.jpg"><?cloudpmc-path blobs/fb3a/12152970/51d7192aca3c/ci5c00345_0001.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 220?><?original-width 826?><?scaled-height 917?><?scaled-width 3438?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ci5c00345_0001.gif"><?cloudpmc-path blobs/fb3a/12152970/1941e1eaaa8b/ci5c00345_0001.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>The chemical composition of materials defines their
+functionality
+and suitability for various applications. The properties of organic
+materials can be represented using molecular descriptors, which can
+be computed quickly and efficiently, or using quantum chemical descriptors,
+which require more computational effort. Molecular descriptors provide
+a numerical representation of molecular characteristics and their
+collection serves as a valuable tool for predicting a wide range of
+properties. However, the importance of each component is crucial,
+as some descriptors play a more significant role in prediction than
+others.</p><sec id="sec3.1" disp-level="2"><title>QSPR on Band Gap Prediction</title><p>The type of ML models and
+descriptors used significantly affect the performance of machine analysis.
+In this study, different descriptor types were employed to predict
+the band gap of the data set using the QSPR method. Among the DFT-calculated
+nonzero band gaps in the database we created for this study, 80% (2496
+D-A) were randomly selected as a training set, while 20% (624 D-A)
+were used as the test set to assess the accuracy of ML models in predicting
+of unknown molecules. The ML routine was utilized for the random allocation
+of molecules into training and test sets. The statistical performance
+of QSPR models based on different types of descriptors and fingerprints
+is summarized in <xref rid="tbl1" ref-type="table">Table 
+</xref> and scatter plots for ML models are shown in <xref rid="fig3" ref-type="fig">Figure 
+</xref>. Additionally, identities and feature selection
+details for these ML models are given in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Table S1</ext-link>.</p><table-wrap id="tbl1" position="float"><?disp-level 3?><label>1</label><caption><title>Performance of ML Models in Band Gap
+Prediction</title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/></colgroup><thead><tr><th align="center" colspan="1" rowspan="1">
+<bold>ML
+model</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>model
+score</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>RMSE</bold>
+<sub>
+<bold>train</bold>
+</sub>
+</th><th align="center" colspan="1" rowspan="1">
+<italic>
+<bold>R</bold>
+</italic>
+<sup>
+<bold>2</bold>
+</sup>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>RMSE</bold>
+<sub>
+<bold>test</bold>
+</sub>
+</th><th align="center" colspan="1" rowspan="1">
+<italic>
+<bold>Q</bold>
+</italic>
+<sup>
+<bold>2</bold>
+</sup>
+</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_33</bold>
+</td><td align="center" colspan="1" rowspan="1">0.897</td><td align="center" colspan="1" rowspan="1">0.193</td><td align="center" colspan="1" rowspan="1">0.898</td><td align="center" colspan="1" rowspan="1">0.194</td><td align="center" colspan="1" rowspan="1">0.898</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_11</bold>
+</td><td align="center" colspan="1" rowspan="1">0.115</td><td align="center" colspan="1" rowspan="1">0.506</td><td align="center" colspan="1" rowspan="1">0.073</td><td align="center" colspan="1" rowspan="1">0.493</td><td align="center" colspan="1" rowspan="1">0.118</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>mlr_53</bold>
+</td><td align="center" colspan="1" rowspan="1">0.493</td><td align="center" colspan="1" rowspan="1">0.385</td><td align="center" colspan="1" rowspan="1">0.465</td><td align="center" colspan="1" rowspan="1">0.363</td><td align="center" colspan="1" rowspan="1">0.522</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>mlr_72</bold>
+</td><td align="center" colspan="1" rowspan="1">0.562</td><td align="center" colspan="1" rowspan="1">0.356</td><td align="center" colspan="1" rowspan="1">0.542</td><td align="center" colspan="1" rowspan="1">0.337</td><td align="center" colspan="1" rowspan="1">0.589</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>mlr_31</bold>
+</td><td align="center" colspan="1" rowspan="1">0.686</td><td align="center" colspan="1" rowspan="1">0.290</td><td align="center" colspan="1" rowspan="1">0.686</td><td align="center" colspan="1" rowspan="1">0.600</td><td align="center" colspan="1" rowspan="1">0.686</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_radial_35</bold>
+</td><td align="center" colspan="1" rowspan="1">0.899</td><td align="center" colspan="1" rowspan="1">0.192</td><td align="center" colspan="1" rowspan="1">0.899</td><td align="center" colspan="1" rowspan="1">0.190</td><td align="center" colspan="1" rowspan="1">0.900</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_molprint2D_11</bold>
+</td><td align="center" colspan="1" rowspan="1">0.897</td><td align="center" colspan="1" rowspan="1">0.200</td><td align="center" colspan="1" rowspan="1">0.895</td><td align="center" colspan="1" rowspan="1">0.177</td><td align="center" colspan="1" rowspan="1">0.914</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_dendritic_26</bold>
+</td><td align="center" colspan="1" rowspan="1">0.826</td><td align="center" colspan="1" rowspan="1">0.192</td><td align="center" colspan="1" rowspan="1">0.855</td><td align="center" colspan="1" rowspan="1">0.227</td><td align="center" colspan="1" rowspan="1">0.839</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_linear_81</bold>
+</td><td align="center" colspan="1" rowspan="1">0.719</td><td align="center" colspan="1" rowspan="1">0.173</td><td align="center" colspan="1" rowspan="1">0.891</td><td align="center" colspan="1" rowspan="1">0.237</td><td align="center" colspan="1" rowspan="1">0.796</td></tr></tbody></table></table-wrap><fig id="fig3" position="float"><?disp-level 3?><label>3</label><caption><p>Test set of D–A structures, which are
+unknown by the ML
+models.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr3" xlink:href="ci5c00345_0003.jpg"><?cloudpmc-path blobs/fb3a/12152970/acafec8c25e5/ci5c00345_0003.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 312?><?original-width 1000?><?scaled-height 1300?><?scaled-width 4162?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ci5c00345_0003.gif"><?cloudpmc-path blobs/fb3a/12152970/a1a2e53b09ba/ci5c00345_0003.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Numerical descriptors
+of the data set including molecular, topological
+indices, and physiochemical properties excluding the molecular orbital
+energy values were used for band gap prediction, resulted in the best
+performance <bold>kpls_desc_33</bold> which achieved an <italic>R</italic>
+<sup>2</sup> of 0.898, a low RMSE of 0.194 for the training set,
+and <italic>Q</italic>
+<sup>2</sup> of 0.898 for test set as shown
+in <xref rid="tbl1" ref-type="table">Table 
+</xref> and <xref rid="fig2" ref-type="fig">Figure 
+</xref>. High predictive performance of this KPLS regression-based
+model shows that these numerical properties such as graph-based connectivity
+indices, electronegativity, and dipole moment are associated with
+band gap prediction as they influence electron delocalization and
+band structure. Rapid and computationally inexpensive calculation
+of molecular descriptors enables their use in molecular engineering
+for D–A CPs, thus facilitating the design of materials with
+tailored electronic properties.</p><fig id="fig2" position="float"><?disp-level 3?><label>2</label><caption><p>Comparison of predicted and DFT-calculated
+band gaps for training
+(blue) and test (orange) sets using <bold>kpls_desc_33</bold>, <bold>kpls_desc_11</bold>, <bold>mlr_53</bold>, <bold>mlr_72</bold>, and <bold>mlr_31</bold>. The black line corresponds to the linear fitting line
+for the training set. The lower graphs depict predictions for unseen
+molecules. The red dashed line shows the linear fitting of the prediction
+for the unknown structures.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr2" xlink:href="ci5c00345_0002.jpg"><?cloudpmc-path blobs/fb3a/12152970/b84161664a81/ci5c00345_0002.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 491?><?original-width 960?><?scaled-height 2042?><?scaled-width 3996?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ci5c00345_0002.gif"><?cloudpmc-path blobs/fb3a/12152970/7e8be26e8a7f/ci5c00345_0002.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Another ML model was constructed using polymer
+descriptors derived
+from the molecular structures. For this purpose, the head and tail
+atoms of D–A monomers are assigned to identify the reactive
+site where polymerization occurs. Polymer descriptors containing ring
+atoms fraction, double ring atoms fraction, triple ring atoms fraction,
+backbone atoms fraction, rotatable bonds fraction, and sp<sup>3</sup> atoms fraction were calculated for the data set and used for training
+ML models. <xref rid="tbl1" ref-type="table">Table 
+</xref> shows
+the performance of the constructed ML model using polymer descriptors, <bold>kpls_desc_11.</bold> This method showed a poor performance, achieving
+an <italic>R</italic>
+<sup>2</sup> of 0.493 and a <italic>Q</italic>
+<sup>2</sup> value of 0.118 as shown in <xref rid="fig2" ref-type="fig">Figure 
+</xref>. For this method, the optimum number of
+factors was found to be one, which was not sufficient for the prediction
+of band gap values. To improve performance, polymer fingerprints were
+combined with polymer descriptors for the <bold>mlr_53</bold> ML model.
+This model resulted in a moderate performance with an <italic>R</italic>
+<sup>2</sup> of 0.465 and a <italic>Q</italic>
+<sup>2</sup> value
+of 0.522. The ML model included 15 independent variables, selected
+based on their correlation with band gap. While backbone atoms fraction,
+ring atom fraction, and rotatable bonds fraction made a slight contribution,
+17 different polymer fingerprints have stronger influence, both positive
+and negative impacts on band gap prediction as shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S4</ext-link>. The coefficient in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Table S2</ext-link> represents the contribution of variables to the band
+gap prediction; the standard error indicates the variability of the
+mean estimate and reflects how much the sample mean would vary if
+the analysis was repeated. and the T value is the representation of
+the statistical significance of the variable in variation for band
+gap. Overall, <bold>mlr_53</bold> showed moderate predictive power
+with relatively low <italic>R</italic>
+<sup>2</sup> and strong polymer
+fingerprint dependency, meaning that additional descriptors are required
+for further improvement on band gap prediction.</p><p>Next, descriptors
+based on functional group counts, such as heteroatomic
+rings, rotatable bonds, aliphatic rings, and aromatic rings, were
+used in <bold>mlr_72</bold> yielding moderate accuracy with an <italic>R</italic>
+<sup>2</sup> of 0.542 and a <italic>Q</italic>
+<sup>2</sup> value of 0.589, as demonstrated in <xref rid="fig2" ref-type="fig">Figure 
+</xref>. This model contained 12 independent variables,
+and the ensemble of the <bold>mlr_72</bold> model is given in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Table S3 and Figure S4</ext-link>. Results showed that the
+number of electron-withdrawing functional groups in the D–A
+molecules has the highest negative impact on the band gap with a coefficient
+of −0.00166. Conversely, the number of carbonyl units in D–A
+molecules has the highest positive contribution, increasing the band
+gap with a coefficient of 0.00208. Even though the knowledge of variable
+coefficient is advantageous and the ML model demonstrates a moderate
+predictive power capturing some key trends, functional group counts
+do not have sufficient information to enhance the performance of the
+ML model.</p><p>Cheminformatic descriptors including molecular weight,
+chirality,
+and polarity were used in <bold>mlr_31</bold>, achieving an <italic>R</italic>
+<sup>2</sup> of 0.686 and a <italic>Q</italic>
+<sup>2</sup> value of 0.686. The variables influencing the model and their respective
+contributions are detailed in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Table S4</ext-link>.
+Variables such as hydrogen bond donor and acceptor units, number of
+fluorine atoms, polarity, and sum of carbon atoms in aromatic systems
+have high T-statistics (above 20), indicating they play a crucial
+role in determining the prediction as depicted in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S4</ext-link>. The lowest contribution belongs to variables such
+as number of oxygen atoms and average number of methyl groups in the
+molecule, suggesting they are less influential on the band gap given
+in the <bold>mlr_31</bold> model.</p><p>To evaluate the generalizability
+of ML models across different
+fingerprint types, 10 specific D–A-type monomers that are unknown
+by our algorithms were prepared and examined at the same levels of
+theory using the B3LYP functional (<xref rid="fig3" ref-type="fig">Figure 
+</xref>). Only 10 of the
+possible 36 D–A combinations from the selected donor and acceptor
+units were included in the unseen test set. These were chosen to cover
+a representative random chemical space. Although a full combination
+space could enhance completeness, a focused random subset is opted
+to maintain computational efficiency and a balanced scope for this
+study. The band gaps of these unknown test structures cover a broad
+energy range (1.75–3.75 eV) and include widely used D–A
+units in the organic electronic applications.<italic>
+,−
+
+
+</italic> Although the <bold>kpls_desc_33</bold> resulted in high <italic>R</italic>
+<sup>2</sup> values, the predictive power for the unseen
+molecules was significantly low, indicating the presence of overfitting
+where the model performs well on the training data but fails to generalize
+effectively to unseen test molecules as shown in <xref rid="fig2" ref-type="fig">Figure 
+</xref>. This suggests that the selected
+descriptors are data set-specific and do not capture the fundamental
+relationships governing band gap prediction. The rest of the models
+(<bold>kpls_desc_11</bold>, <bold>mlr_53</bold>, <bold>mlr_72</bold>, and <bold>mlr_31</bold>) also failed to accurately predict the
+band gap of unseen test molecules resulting in predictive power lower
+than 0.418. These models were not successful in training and testing
+the dataset, even though the data set is considerably large and contains
+a large number of D–A monomers, suggesting a high redundancy
+of descriptors, which highlights the importance of feature selection
+for accurate predictions.</p><p>Four types of binary fingerprints
+(dendritic, linear, molprint2D,
+and radial) were generated to characterize the molecular structures
+and separately employed to analyze their influence on band gap prediction.
+Results indicated that the KPLS regression model has higher predictive
+performance compared to other models for binary fingerprints of D–A
+units as shown in <xref rid="fig4" ref-type="fig">Figure 
+</xref>. Among the models, <bold>kpls_radial_35</bold>, the radial
+fingerprints-based model, achieved the highest performance with an <italic>R</italic>
+<sup>2</sup> of 0.899 and a standard deviation of 0.007
+for the training set. For the test set, the model achieved an exceptionally
+high <italic>Q</italic>
+<sup>2</sup> of 0.900 and an RMSE of 0.007,
+demonstrating its robustness. This ML method relied on radial fingerprints
+and identified seven optimal factors that influence the band gap prediction.
+The second-best ML model was molprint2D fingerprints dependent, <bold>kpls_molprint2D_11</bold>, which achieved an <italic>R</italic>
+<sup>2</sup> of 0.895 and a standard deviation of 0.007 for the training
+set. It demonstrated a <italic>Q</italic>
+<sup>2</sup> of 0.914 and
+an RMSE of 0.007 for the test set, which is the lowest error in this
+series indicating consistency in performance across the data set.
+This is the highest <italic>Q</italic>
+<sup>2</sup> in this comparison,
+suggesting that the model has the potential to generalize well to
+unseen data, making this model a strong candidate for real-world applications
+in material design. Dendritic fingerprints-dependent ML model <bold>kpls_dendritic_26</bold> exhibited lower performance with an <italic>R</italic>
+<sup>2</sup> of 0.855 and an ML model score of 0.826. It
+demonstrated a <italic>Q</italic>
+<sup>2</sup> of 0.839 and an RMSE
+of 0.009 for the test set, based on four optimum number of factors,
+resulting in the lowest model score among the types of binary fingerprints.
+In addition, linear fingerprints-dependent ML model <bold>kpls_linear_81</bold> resulted in a high <italic>R</italic>
+<sup>2</sup> of 0.891, a <italic>Q</italic>
+<sup>2</sup> of 0.796 and an RMSE of 0.0087 relying on
+only three optimum factors for the prediction of the band gap.</p><fig id="fig4" position="float"><?disp-level 3?><label>4</label><caption><p>Comparison
+of predicted and DFT-calculated band gaps for training
+(blue) and test (orange) sets using <bold>kpls_radial_35</bold>, <bold>kpls_molprint2D_11</bold>, <bold>kpls_dendritic_26</bold>, and <bold>kpls_linear_81</bold>. The black line corresponds to the linear fitting
+line for the train set. The lower graphs depict predictions for unseen
+molecules. The lower graphs depict predictions for unseen molecules
+using <bold>kpls_radial_35</bold>, <bold>kpls_molprint2D_11</bold>, <bold>kpls_dendritic_26, kpls_linear_81</bold>, and <bold>kpls_consensus</bold> where the best 40 models with <italic>R</italic>
+<sup>2</sup> &gt;
+0.82
+were employed for prediction. The red dashed line shows the linear
+fitting of prediction for the unknown structures.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr4" xlink:href="ci5c00345_0004.jpg"><?cloudpmc-path blobs/fb3a/12152970/0deeeb3dae03/ci5c00345_0004.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 546?><?original-width 994?><?scaled-height 2275?><?scaled-width 4142?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ci5c00345_0004.gif"><?cloudpmc-path blobs/fb3a/12152970/56fd6037dceb/ci5c00345_0004.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>The performance of binary fingerprint type-based
+ML models for
+the prediction of band gaps for unknown molecules is shown in <xref rid="fig4" ref-type="fig">Figure 
+</xref>. The predicted band
+gap for <bold>kpls_molprint2D_11</bold> ML model showed superior performance
+with an <italic>R</italic>
+<sup>2</sup> of 0.919, a standard deviation
+of 0.418, and an RMSE of 0.141. Molprint2D fingerprints represent
+the radial-like fingerprint that captures environments of atoms by
+encoding lists of atom types positioned at varying topological distances. In other words, each heavy atom in the structure
+is defined by an environment that includes all other heavy atoms within
+a two-bond distance. During the band gap prediction from structural
+properties, this information gains importance since it enables the
+ML models to better understand the local atomic interactions and their
+influence on electronic properties. Compared with other fingerprint
+types, such as dendritic which counts the linear and branched fragments
+in the molecule or linear fingerprints which are also referred to
+as extended connectivity fingerprints, the Molprint2D fingerprints
+provide a more comprehensive representation of molecular topology.<italic>
+,
+</italic> The ability to incorporate detailed topological features contributes
+to the reduction of prediction errors, resulting in the lowest RMSE
+in this comparison (RMSE of 0.152). To improve generalizability, we
+constructed a consensus model averaging predictions from top-performing
+models (<italic>R</italic>
+<sup>2</sup> &gt; 0.82), yielding robust
+performance
+for unseen test cases. This ML model, <bold>kpls_consensus</bold> where
+the top 40 ML models with R2 &gt; 0.820 were combined and taken an
+average
+value for the predicted band gap, resulting in an R2 of 0.898. The <bold>kpls_radial_35</bold> ML model, which performed best in model construction,
+showed a significant drop in prediction performance for unseen molecules
+(an <italic>R</italic>
+<sup>2</sup> of 0.774). The reason for this
+is that radial fingerprints define molecular structures based on circular
+atom neighborhoods which did not capture relevant features for predicting
+the band gap of unseen molecules. The <bold>kpls_dendritic_26</bold> ML model which encodes both linear and branched
+fragment properties as well as linear paths with a maximum of five
+bonds per path exhibited a moderate success with an <italic>R</italic>
+<sup>2</sup> of 0.627 due to the insufficient ability to capture
+ring structures, which are prevalent in the unseen test set. Similarly,
+the <bold>kpls_linear_81</bold> ML model also demonstrated moderate
+predictive performance because linear-type fingerprints capture only
+linear paths and fail to account for the more complex, nonlinear environments
+of atoms within the molecule, which are critical for accurately predicting
+the band gap. It is also possible to combine numerical descriptors
+and binary fingerprints in a single ML model. However, KPLS models
+that integrate fingerprints with descriptors have shown, on average,
+no improvement in predictive performance for the target property compared
+with models that rely only on fingerprints. The combined analysis of numerical descriptors and binary fingerprints
+resulted in the best performance with the <bold>kpls_desc_radial</bold> ML model achieving an <italic>R</italic>
+<sup>2</sup> of 0.774, matching
+the performance of <bold>kpls_radial_35</bold>. This indicates that
+numerical descriptors have no significant impact on band gap prediction
+for unseen molecules in the KPLS method.</p></sec><sec id="sec3.2" disp-level="2"><title>QSPR on Reorganization
+Energy Prediction</title><p>According
+to the semiclassical Marcus equation, the pre-exponential factor for
+the hole hopping rates between two adjacent materials is inversely
+proportional to λ<sub>h</sub>, which is associated with the
+charge transport. Given this relationship,
+accurately predicting λ<sub>h</sub> requires selecting descriptors
+that effectively capture the key molecular and electronic factors
+influencing the charge transport. As in the previous section, different
+descriptor types were separately assigned to the ML models to determine
+the most effective type for predicting λ<sub>h</sub>, using
+the same train-to-test split. The results are summarized in <xref rid="tbl2" ref-type="table">Table 
+</xref> and visualized in <xref rid="fig5" ref-type="fig">Figure 
+</xref>. Analysis based
+on 2D-binary fingerprints resulted in the <bold>kpls_radial_27</bold> ML model achieving an <italic>R</italic>
+<sup>2</sup> of 0.748 and
+an RMSE of 0.077 for the training set. For the test set, the model
+achieved a <italic>Q</italic>
+<sup>2</sup> of 0.753 and an RMSE of
+0.771, with seven optimal factors contributing to the prediction.
+The second ML model, based on numerical descriptors, performed similarly,
+with <bold>kpls_desc_39</bold> achieving an <italic>R</italic>
+<sup>2</sup> of 0.751 and an RMSE of 0.077 for the training set and a <italic>Q</italic>
+<sup>2</sup> of 0.747 and an RMSE of 0.772 for the test
+set, relying on 23 optimal factors. When binary fingerprints were
+combined with numerical descriptors, the best-performing model remained
+as <bold>kpls_radial_27</bold>, indicating the advantages of binary
+fingerprints over numerical descriptors.</p><table-wrap id="tbl2" position="float"><?disp-level 3?><label>2</label><caption><title>Performance of ML Models Trained and
+Tested for Reorganization Energy</title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/></colgroup><thead><tr><th align="center" colspan="1" rowspan="1">
+<bold>ML
+model</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>model
+score</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>RMSE</bold>
+<sub>
+<bold>train</bold>
+</sub>
+</th><th align="center" colspan="1" rowspan="1">
+<italic>
+<bold>R</bold>
+</italic>
+<sup>
+<bold>2</bold>
+</sup>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>RMSE</bold>
+<sub>
+<bold>test</bold>
+</sub>
+</th><th align="center" colspan="1" rowspan="1">
+<italic>
+<bold>Q</bold>
+</italic>
+<sup>
+<bold>2</bold>
+</sup>
+</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_radial_27</bold>
+</td><td align="center" colspan="1" rowspan="1">0.748</td><td align="center" colspan="1" rowspan="1">0.077</td><td align="center" colspan="1" rowspan="1">0.748</td><td align="center" colspan="1" rowspan="1">0.771</td><td align="center" colspan="1" rowspan="1">0.753</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_39</bold>
+</td><td align="center" colspan="1" rowspan="1">0.748</td><td align="center" colspan="1" rowspan="1">0.077</td><td align="center" colspan="1" rowspan="1">0.751</td><td align="center" colspan="1" rowspan="1">0.772</td><td align="center" colspan="1" rowspan="1">0.747</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_4</bold>
+</td><td align="center" colspan="1" rowspan="1">0.245</td><td align="center" colspan="1" rowspan="1">0.142</td><td align="center" colspan="1" rowspan="1">0.158</td><td align="center" colspan="1" rowspan="1">0.131</td><td align="center" colspan="1" rowspan="1">0.236</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>mlr_70</bold>
+</td><td align="center" colspan="1" rowspan="1">0.443</td><td align="center" colspan="1" rowspan="1">0.121</td><td align="center" colspan="1" rowspan="1">0.383</td><td align="center" colspan="1" rowspan="1">0.109</td><td align="center" colspan="1" rowspan="1">0.505</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_61</bold>
+</td><td align="center" colspan="1" rowspan="1">0.419</td><td align="center" colspan="1" rowspan="1">0.121</td><td align="center" colspan="1" rowspan="1">0.355</td><td align="center" colspan="1" rowspan="1">0.115</td><td align="center" colspan="1" rowspan="1">0.422</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_45</bold>
+</td><td align="center" colspan="1" rowspan="1">0.535</td><td align="center" colspan="1" rowspan="1">0.109</td><td align="center" colspan="1" rowspan="1">0.508</td><td align="center" colspan="1" rowspan="1">0.101</td><td align="center" colspan="1" rowspan="1">0.554</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_34</bold>
+</td><td align="center" colspan="1" rowspan="1">0.775</td><td align="center" colspan="1" rowspan="1">0.069</td><td align="center" colspan="1" rowspan="1">0.800</td><td align="center" colspan="1" rowspan="1">0.071</td><td align="center" colspan="1" rowspan="1">0.783</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<bold>kpls_desc_35</bold>
+</td><td align="center" colspan="1" rowspan="1">0.812</td><td align="center" colspan="1" rowspan="1">0.064</td><td align="center" colspan="1" rowspan="1">0.829</td><td align="center" colspan="1" rowspan="1">0.066</td><td align="center" colspan="1" rowspan="1">0.817</td></tr></tbody></table></table-wrap><fig id="fig5" position="float"><?disp-level 3?><label>5</label><caption><p>Comparison of predicted
+and DFT-calculated hole reorganization
+energy for training (blue) and test (orange) sets using <bold>kpls_radial_27</bold>, <bold>kpls_desc_39</bold>, <bold>kpls_desc_45</bold>, <bold>kpls_desc_34</bold>, and <bold>kpls_desc_35</bold>. The black line corresponds to the
+linear fitting line for the training set. The lower graphs depict
+a prediction for unknown molecules. The red dashed line shows the
+linear fitting of prediction for the unknown structures.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr5" xlink:href="ci5c00345_0005.jpg"><?cloudpmc-path blobs/fb3a/12152970/a4100fce99cf/ci5c00345_0005.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 496?><?original-width 1002?><?scaled-height 2065?><?scaled-width 4175?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ci5c00345_0005.gif"><?cloudpmc-path blobs/fb3a/12152970/37caf895b1d1/ci5c00345_0005.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>In contrast, polymer descriptor-based analysis failed
+to train
+an effective model. The best polymer descriptor-dependent model, <bold>kpls_desc_4</bold>, achieved an <italic>R</italic>
+<sup>2</sup> of
+only 0.158 with an RMSE of 0.142 for the training set and a <italic>Q</italic>
+<sup>2</sup> of 0.236 and an RMSE of 0.131 for the test
+set, as illustrated in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S5.</ext-link> These
+results demonstrate the inability of polymer descriptors to predict
+λ<sub>h</sub>, unlike band gap energy which strongly depends
+on electron delocalization and conjugation and can be effectively
+described by topological descriptors. Reorganization energy is a dynamic
+property influenced by structural relaxation, bond length changes,
+and nuclear reorganization where none of these factors can be captured
+by static structure-based descriptors.</p><p>When polymer descriptors
+were combined with the polymer fingerprints,
+the best-performing model, <bold>mlr_70</bold>, achieved an <italic>R</italic>
+<sup>2</sup> of 0.383 with an RMSE of 0.121 for the training
+set and a <italic>Q</italic>
+<sup>2</sup> of 0.505 with an RMSE of
+0.109 (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S5</ext-link>). This suggests that incorporating
+polymer descriptors alongside polymer fingerprints enhances prediction
+compared to that with polymer descriptors alone (<bold>kpls_desc_4)</bold>. However, high RMSE indicates data set inhomogeneity, making it
+challenging for the ML model to fit all of the data effectively. The
+diverse D–A units included in our data set contribute to this
+variation and the high RMSE suggests that the training and test distributions
+do not fully overlap, leading to poor test performance. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S6</ext-link> highlights the 20 most influential
+variables in <bold>mlr_70</bold>, revealing that the highest contributions
+come from D–A unit-dependent fingerprints rather than generalized
+polymer features.</p><p>Another approach involved training models
+based on counts of specific
+functional groups in the D–A molecules. This yielded the <bold>kpls_desc_61</bold> model with an <italic>R</italic>
+<sup>2</sup> of
+0.355 for the training set and a <italic>Q</italic>
+<sup>2</sup> value
+of 0.422 for the test set, with an RMSE of 0.115. A moderate performance
+demonstrates that functional group counts are insufficient for accurately
+predicting hole reorganization energy, as demonstrated in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">Figure S5.</ext-link> The cheminformatic descriptor-based
+ML model, <bold>kpls_desc_45</bold>, performed slightly better, achieving
+an <italic>R</italic>
+<sup>2</sup> of 0.508 for the training set and
+a <italic>Q</italic>
+<sup>2</sup> of 0.554 for the test set, using
+12 optimal factors. However, RMSE values for the training and test
+sets (0.109 and 0.101, respectively) were high, suggesting that cheminformatic
+descriptors and functional group counts fail to capture charge transfer
+behavior or establish a meaningful correlation with reorganization
+energy. As these RMSE values are lower than those for other models,
+they are still considered high relative to the expected accuracy for
+predicting reorganization energy. While functional groups influence
+electronic properties, their contribution to the reorganization energy
+prediction is minimal.</p><p>The performance of ML models was also
+evaluated using unseen molecules,
+as shown in <xref rid="fig5" ref-type="fig">Figure 
+</xref>. Although model score values for <bold>kpls_radial_27</bold> and <bold>kpls_desc_39</bold> exceeded 0.70, their predictions of hole reorganization
+energy in unseen molecules were unsuccessful, yielding <italic>R</italic>
+<sup>2</sup> values of 0.068 and 0.169, respectively. Additional
+methods (<bold>kpls_desc_4</bold>, <bold>mlr_70, kpls_desc_61</bold>, and <bold>kpls_desc_45</bold>) also demonstrated weak generalization
+performance with <italic>R</italic>
+<sup>2</sup> values of 0.150, 0.204,
+0.206, and 0.048, respectively. These results indicate a common limitation
+among the tested models: the selected descriptors did not adequately
+represent the fundamental physicochemical and electronic factors that
+govern reorganization energy, even though they proved effective in
+predicting band gap.</p><p>To address these limitations, the best-performed
+model (<bold>kpls_desc_39</bold>) was retested with the band gap energy
+included as an additional
+descriptor during training and testing. <xref rid="fig5" ref-type="fig">Figure 
+</xref> shows the improved performance for the <bold>kpls_desc_34</bold> ML model, which was generated with band gap energy
+information. This suggests that incorporating band gap values as descriptors
+offers limited compensation for the shortcomings of the original descriptor
+sets. Band gap is an electronic property that reflects the energy
+difference between the highest occupied and lowest unoccupied molecular
+orbitals. While it has relevance to charge transport, it does not
+directly account for the specific structural reorganization processes
+involved in hole reorganization energy. As a result, the prediction
+performance for hole reorganization energy on unseen molecules improved
+to a moderate level.</p><p>To further improve the performance, frontier
+molecular orbital
+energy levels, which were calculated by DFT calculations, were combined
+with numerical descriptors; the performance of the <bold>kpls_desc_35</bold> ML model resulted in an <italic>R</italic>
+<sup>2</sup> of 0.829
+and <italic>Q</italic>
+<sup>2</sup> of 0.817 which represents one of
+the best-performing models for the prediction of hole reorganization
+energy. Since reorganization energy is affected by the changes in
+molecular geometry and electron distribution between the neutral and
+charged states, especially the HOMO and LUMO energy levels play a
+dominant role in its prediction. Molecules with rigid, planar structures
+and delocalized orbitals undergo minimal geometric relaxation, resulting
+in lower reorganization energy. In contrast, flexible structures with
+localized orbitals tend to experience greater relaxation and therefore
+higher reorganization energy. While band gap prediction performed
+best with binary fingerprints, reorganization energy prediction was
+improved when by integrating improved when quantum descriptors such
+as HOMO–LUMO energy levels were included -since reorganization
+energy reflects intramolecular relaxation dynamics, requiring deeper
+electronic structure information. <bold>kpls_desc_34</bold> and <bold>kpls_desc_35</bold> showed successful predictive power for hole reorganization
+energy, achieving an <italic>R</italic>
+<sup>2</sup> of 0.820 for unseen
+test molecules, demonstrating the potential of HOMO–LUMO energy
+levels as key features for improving model accuracy. Since the HOMO
+and LUMO energies provide insight into molecular polarization, charge
+localization, and the relative stability of charged species, they
+are critical for understanding how a molecule responds to gaining
+or losing an electron. By incorporating this information into the
+ML model, it becomes possible to capture both the electronic and the
+geometric aspects that are essential for accurate calculation of reorganization
+energy.</p></sec></sec><sec id="sec4" disp-level="1"><title>Conclusions</title><p>We developed and evaluated
+ML-driven models for predicting band
+gap and charge carrier reorganization energy in donor–acceptor
+conjugated polymers, which is a key class of materials for organic
+photovoltaics. By curating a large data set of 3120 CPs consisting
+of 60 donor and 52 acceptor units, we ensured a diverse and representative
+selection of materials, laying the groundwork for accurate and generalizable
+ML predictions. Our analysis demonstrated that the choice of molecular
+descriptors and fingerprints significantly impacts the ML model performance.
+KPLS regression with radial and molprint2D fingerprints provided the
+highest accuracy for band gap prediction, while frontier orbital energy
+levels played a crucial role in improving the reorganization energy
+predictions. In contrast, polymer descriptors alone showed limited
+predictive capability, highlighting the importance of selecting the
+most relevant structural and electronic descriptors for reliable property
+predictions. Beyond performance evaluation, this study provided insights
+into why certain descriptors show a higher success rate, especially
+for reorganization energy predictions, which remain challenging due
+to the dynamic nature of charge mobility. Combinatorial quantum mechanical
+and ML techniques can significantly improve predictive accuracy, providing
+a cost-effective alternative to traditional experimental and computational
+approaches for organic electronics. Beyond raw predictive accuracy,
+our results emphasize the physical relevance and model interpretability
+of different descriptor types, illustrating how the molecular structure
+and electronic property interplay vary across prediction targets.
+The insights presented here contribute to a more informed and systematic
+approach to feature selection in ML-guided materials design, while
+the accompanying data set serves as a valuable benchmark for future
+developments in the field.</p></sec><sec id="sec11" disp-level="1"><title>Supplementary Material</title><supplementary-material id="sifile1" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path fb3a/12152970/c1aa11044027/ci5c00345_si_001.pdf?><?cloudpmc-bucket app?><?size 879775?></media></supplementary-material><supplementary-material id="sifile2" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_002.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path fb3a/12152970/fe75efe375a8/ci5c00345_si_002.zip?><?cloudpmc-bucket app?><?size 3784430?></media></supplementary-material><supplementary-material id="sifile3" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_003.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path fb3a/12152970/173e6e7f1315/ci5c00345_si_003.zip?><?cloudpmc-bucket app?><?size 38699422?></media></supplementary-material></sec><sec id="ACK-d14e1299-autogenerated" sec-type="ack" disp-level="1"><title>Acknowledgments</title><p>We gratefully acknowledge the support from
+the ADEP-103-2024-11510.
+The calculations reported in this work were partially performed at
+TUBITAK ULAKBIM, High Performance and Grid Computing Center (TRUBA).</p></sec><sec id="notes-3" disp-level="1"><p>The Supporting Information
+is available free of charge at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/10.1021/acs.jcim.5c00345?goto=supporting-info" ext-link-type="uri">https://pubs.acs.org/doi/10.1021/acs.jcim.5c00345</ext-link>.</p><list list-type="simple" id="silist"><list-item><p>Donor and acceptor units
+used to construct the D-A data
+set, data set construction scheme, details of ML models for the prediction
+of band gap and hole reorganization energy, variables and contribution
+coefficient for ML models, and predictive power graphs of additional
+ML models for reorganization energy prediction (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_001.pdf" ext-link-type="uri">PDF</ext-link>)</p></list-item><list-item><p>Optimized structures of
+3120 D–A (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_002.zip" ext-link-type="uri">ZIP</ext-link>)</p></list-item><list-item><p>Reports for ML models, calculated and predicted values
+of target properties, list of all descriptors, fingerprints, band
+gaps, and hole and electron reorganization energies for the data set
+(<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.5c00345/suppl_file/ci5c00345_si_003.zip" ext-link-type="uri">ZIP</ext-link>)</p></list-item></list></sec><sec id="notes-1" disp-level="1"><p>T.H. contributed
+to methodology, investigation, data curation, formal analysis, visualization,
+writing-original draft. E.Y. contributed to conceptualization, supervision,
+funding acquisition, project administration, writing-review and editing.</p></sec><sec id="notes-2" disp-level="1"><p>The
+authors
+declare no competing financial interest.</p></sec><sec id="ref-list1" sec-type="ref-list" disp-level="1"><title>References</title><sec id="ref-list1_sec2" disp-level="2"><ref-list><ref id="ref1"><mixed-citation id="cit1"><named-content content-type="citation-string">Chen H., Huang Y., Zhang R., Mou H., Ding J., Zhou J., Wang Z., Li H., Chen W., Zhu J., Cheng Q., Gu H., Wu X., Zhang T., Wang Y., Zhu H., Xie Z., Gao F., Li Y., Li Y.. Organic Solar Cells with 20.82% Efficiency and High
+Tolerance of Active Layer Thickness through Crystallization Sequence
+Manipulation. Nat. Mater. 2025;24:444. doi: 10.1038/s41563-024-02062-0.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/s41563-024-02062-0"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="39824965"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nat. Mater.&amp;title=Organic Solar Cells with 20.82% Efficiency and High Tolerance of Active Layer Thickness through Crystallization Sequence Manipulation&amp;author=H. Chen&amp;author=Y. Huang&amp;author=R. Zhang&amp;author=H. Mou&amp;author=J. Ding&amp;volume=24&amp;publication_year=2025&amp;pages=444&amp;pmid=39824965&amp;doi=10.1038/s41563-024-02062-0&amp;"/></mixed-citation></ref><ref id="ref2"><mixed-citation id="cit2"><named-content content-type="citation-string">Søndergaard R. R., Hösel M., Krebs F. C.. Roll-to-Roll Fabrication
+of Large
+Area Functional Organic Materials. J. Polym.
+Sci., Part B: Polym. Phys. 2013;51(1):16–34. doi: 10.1002/polb.23192.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/polb.23192"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci., Part B: Polym. Phys.&amp;title=Roll-to-Roll Fabrication of Large Area Functional Organic Materials&amp;author=R. R. Søndergaard&amp;author=M. Hösel&amp;author=F. C. Krebs&amp;volume=51&amp;issue=1&amp;publication_year=2013&amp;pages=16-34&amp;doi=10.1002/polb.23192&amp;"/></mixed-citation></ref><ref id="ref3"><mixed-citation id="cit3"><named-content content-type="citation-string">Brabec C. J., Cravino A., Meissner D., Serdar Sariciftci N., Fromherz T., Rispens M. T., Sanchez L., Hummelen J. C.. Origin
+of the Open Circuit Voltage of Plastic Solar Cells. Adv. Funct. Mater. 2001;11(5):374–380. doi: 10.1002/1616-3028(200110)11:5&lt;374:AID-ADFM374&gt;3.0.CO;2-W.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/1616-3028(200110)11:5&lt;374:AID-ADFM374&gt;3.0.CO;2-W"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Funct. Mater.&amp;title=Origin of the Open Circuit Voltage of Plastic Solar Cells&amp;author=C. J. Brabec&amp;author=A. Cravino&amp;author=D. Meissner&amp;author=N. Serdar Sariciftci&amp;author=T. Fromherz&amp;volume=11&amp;issue=5&amp;publication_year=2001&amp;pages=374-380&amp;doi=10.1002/1616-3028(200110)11:5&lt;374:AID-ADFM374&gt;3.0.CO;2-W&amp;"/></mixed-citation></ref><ref id="ref4"><mixed-citation id="cit4"><named-content content-type="citation-string">Brabec C. J., Sariciftci N. S., Hummelen J. C.. Plastic Solar Cells. Adv. Funct.
+Mater. 2001;11(1):15–26. doi: 10.1002/1616-3028(200102)11:1&lt;15:AID-ADFM15&gt;3.0.CO;2-A.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/1616-3028(200102)11:1&lt;15:AID-ADFM15&gt;3.0.CO;2-A"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Funct. Mater.&amp;title=Plastic Solar Cells&amp;author=C. J. Brabec&amp;author=N. S. Sariciftci&amp;author=J. C. Hummelen&amp;volume=11&amp;issue=1&amp;publication_year=2001&amp;pages=15-26&amp;doi=10.1002/1616-3028(200102)11:1&lt;15:AID-ADFM15&gt;3.0.CO;2-A&amp;"/></mixed-citation></ref><ref id="ref5"><mixed-citation id="cit5"><named-content content-type="citation-string">Holliday S., Li Y., Luscombe C. K.. Recent
+Advances in High Performance Donor-Acceptor
+Polymers for Organic Photovoltaics. Prog. Polym.
+Sci. 2017;70:34–51. doi: 10.1016/j.progpolymsci.2017.03.003.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.progpolymsci.2017.03.003"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Prog. Polym. Sci.&amp;title=Recent Advances in High Performance Donor-Acceptor Polymers for Organic Photovoltaics&amp;author=S. Holliday&amp;author=Y. Li&amp;author=C. K. Luscombe&amp;volume=70&amp;publication_year=2017&amp;pages=34-51&amp;doi=10.1016/j.progpolymsci.2017.03.003&amp;"/></mixed-citation></ref><ref id="ref6"><mixed-citation id="cit6"><named-content content-type="citation-string">Sun W., Adachi Y., Ohshita J.. Preparation
+of D-A Copolymers Based
+on Dithiazologermole and Germaindacenodithiazole as Weak Electron
+Donor Units. Polym. J. 2023;55(7):797–805. doi: 10.1038/s41428-023-00771-y.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/s41428-023-00771-y"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Polym. J.&amp;title=Preparation of D-A Copolymers Based on Dithiazologermole and Germaindacenodithiazole as Weak Electron Donor Units&amp;author=W. Sun&amp;author=Y. Adachi&amp;author=J. Ohshita&amp;volume=55&amp;issue=7&amp;publication_year=2023&amp;pages=797-805&amp;doi=10.1038/s41428-023-00771-y&amp;"/></mixed-citation></ref><ref id="ref7"><mixed-citation id="cit7"><named-content content-type="citation-string">Holliday S., Li Y., Luscombe C. K.. Recent
+Advances in High Performance Donor-Acceptor
+Polymers for Organic Photovoltaics. Prog. Polym.
+Sci. 2017;70:34–51. doi: 10.1016/j.progpolymsci.2017.03.003.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.progpolymsci.2017.03.003"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Prog. Polym. Sci.&amp;title=Recent Advances in High Performance Donor-Acceptor Polymers for Organic Photovoltaics&amp;author=S. Holliday&amp;author=Y. Li&amp;author=C. K. Luscombe&amp;volume=70&amp;publication_year=2017&amp;pages=34-51&amp;doi=10.1016/j.progpolymsci.2017.03.003&amp;"/></mixed-citation></ref><ref id="ref8"><mixed-citation id="cit8"><named-content content-type="citation-string">Sun J., Yang J., Ding J.. Controlled Synthesis of Polymers†. Chin. J. Chem. 2023;41(10):1235–1248. doi: 10.1002/cjoc.202200850.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/cjoc.202200850"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chin. J. Chem.&amp;title=Controlled Synthesis of Polymers†&amp;author=J. Sun&amp;author=J. Yang&amp;author=J. Ding&amp;volume=41&amp;issue=10&amp;publication_year=2023&amp;pages=1235-1248&amp;doi=10.1002/cjoc.202200850&amp;"/></mixed-citation></ref><ref id="ref9"><mixed-citation id="cit9"><named-content content-type="citation-string">Ren Y., Li M. Y., Sui M. Y., Sun G. Y., Su Z. M.. Energy
+Differences as Descriptors for the Correlation between JSC and VOC
+in Nonfullerene Organic Photovoltaics. Chem.
+Commun. 2023;59:7212–7215. doi: 10.1039/D3CC01904G.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/D3CC01904G"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="37219366"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Commun.&amp;title=Energy Differences as Descriptors for the Correlation between JSC and VOC in Nonfullerene Organic Photovoltaics&amp;author=Y. Ren&amp;author=M. Y. Li&amp;author=M. Y. Sui&amp;author=G. Y. Sun&amp;author=Z. M. Su&amp;volume=59&amp;publication_year=2023&amp;pages=7212-7215&amp;pmid=37219366&amp;doi=10.1039/D3CC01904G&amp;"/></mixed-citation></ref><ref id="ref10"><mixed-citation id="cit10"><named-content content-type="citation-string">Tsuneda T., Song J. W., Suzuki S., Hirao K.. On Koopmans’
+Theorem in Density Functional Theory. J. Chem.
+Phys. 2010;133(17):174101.  doi: 10.1063/1.3491272.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1063/1.3491272"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="21054000"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Phys.&amp;title=On Koopmans’ Theorem in Density Functional Theory&amp;author=T. Tsuneda&amp;author=J. W. Song&amp;author=S. Suzuki&amp;author=K. Hirao&amp;volume=133&amp;issue=17&amp;publication_year=2010&amp;pages=174101&amp;pmid=21054000&amp;doi=10.1063/1.3491272&amp;"/></mixed-citation></ref><ref id="ref11"><mixed-citation id="cit11"><named-content content-type="citation-string">Xu P., Lu T., Ju L., Tian L., Li M., Lu W.. Machine Learning
+Aided Design of Polymer with Targeted Band Gap Based on DFT Computation. J. Phys. Chem. B. 2021;125(2):601–611. doi: 10.1021/acs.jpcb.0c08674.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jpcb.0c08674"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33411516"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Phys. Chem. B&amp;title=Machine Learning Aided Design of Polymer with Targeted Band Gap Based on DFT Computation&amp;author=P. Xu&amp;author=T. Lu&amp;author=L. Ju&amp;author=L. Tian&amp;author=M. Li&amp;volume=125&amp;issue=2&amp;publication_year=2021&amp;pages=601-611&amp;pmid=33411516&amp;doi=10.1021/acs.jpcb.0c08674&amp;"/></mixed-citation></ref><ref id="ref12"><mixed-citation id="cit12"><named-content content-type="citation-string">Khlaifia D., Massuyeau F., Ewels C. P., Duvail J. L., Faulques E., Alimi K.. DFT Modeling
+of Novel Donor-Acceptor (D-A) Molecules Incorporating
+3-Hexylthiophene (3HT) for Bulk Heterojunction Solar Cells. ChemistrySelect. 2017;2(31):10082–10090. doi: 10.1002/slct.201701481.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/slct.201701481"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ChemistrySelect&amp;title=DFT Modeling of Novel Donor-Acceptor (D-A) Molecules Incorporating 3-Hexylthiophene (3HT) for Bulk Heterojunction Solar Cells&amp;author=D. Khlaifia&amp;author=F. Massuyeau&amp;author=C. P. Ewels&amp;author=J. L. Duvail&amp;author=E. Faulques&amp;volume=2&amp;issue=31&amp;publication_year=2017&amp;pages=10082-10090&amp;doi=10.1002/slct.201701481&amp;"/></mixed-citation></ref><ref id="ref13"><mixed-citation id="cit13"><named-content content-type="citation-string">Liu B., Yan Y., Liu M.. Harnessing
+DFT and Machine Learning for Accurate Optical
+Gap Prediction in Conjugated Polymers. Nanoscale. 2025;17:7865–7876. doi: 10.1039/D4NR03702B.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/D4NR03702B"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="40059626"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nanoscale&amp;title=Harnessing DFT and Machine Learning for Accurate Optical Gap Prediction in Conjugated Polymers&amp;author=B. Liu&amp;author=Y. Yan&amp;author=M. Liu&amp;volume=17&amp;publication_year=2025&amp;pages=7865-7876&amp;pmid=40059626&amp;doi=10.1039/D4NR03702B&amp;"/></mixed-citation></ref><ref id="ref14"><mixed-citation id="cit14"><named-content content-type="citation-string">Lee Y., Russell T. P., Jo W. H.. Synthesis and Photovoltaic Properties
+of Low-Bandgap Alternating Copolymers Consisting of 3-Hexylthiophene
+and [1,2,5]­Thiadiazolo­[3,4-g]­Quinoxaline Derivatives. Org. Electron. 2010;11(5):846–853. doi: 10.1016/j.orgel.2010.01.027.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.orgel.2010.01.027"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Org. Electron.&amp;title=Synthesis and Photovoltaic Properties of Low-Bandgap Alternating Copolymers Consisting of 3-Hexylthiophene and [1,2,5]­Thiadiazolo­[3,4-g]­Quinoxaline Derivatives&amp;author=Y. Lee&amp;author=T. P. Russell&amp;author=W. H. Jo&amp;volume=11&amp;issue=5&amp;publication_year=2010&amp;pages=846-853&amp;doi=10.1016/j.orgel.2010.01.027&amp;"/></mixed-citation></ref><ref id="ref15"><mixed-citation id="cit15"><named-content content-type="citation-string">Zade S. S., Zamoshchik N., Bendikov M.. From Short Conjugated Oligomers to
+Conjugated Polymers. Lessons from Studies on Long Conjugated Oligomers. Acc. Chem. Res. 2011;44(1):14–24. doi: 10.1021/ar1000555.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ar1000555"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="20942477"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Acc. Chem. Res.&amp;title=From Short Conjugated Oligomers to Conjugated Polymers. Lessons from Studies on Long Conjugated Oligomers&amp;author=S. S. Zade&amp;author=N. Zamoshchik&amp;author=M. Bendikov&amp;volume=44&amp;issue=1&amp;publication_year=2011&amp;pages=14-24&amp;pmid=20942477&amp;doi=10.1021/ar1000555&amp;"/></mixed-citation></ref><ref id="ref16"><mixed-citation id="cit16"><named-content content-type="citation-string">Marcus R. A.. Electron
+Transfer Reactions in Chemistry. Theory and Experiment. Rev. Mod. Phys. 1993;65(3):599. doi: 10.1103/RevModPhys.65.599.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1103/RevModPhys.65.599"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Rev. Mod. Phys.&amp;title=Electron Transfer Reactions in Chemistry. Theory and Experiment&amp;author=R. A. Marcus&amp;volume=65&amp;issue=3&amp;publication_year=1993&amp;pages=599&amp;doi=10.1103/RevModPhys.65.599&amp;"/></mixed-citation></ref><ref id="ref17"><mixed-citation id="cit17"><named-content content-type="citation-string">Sha W., Guo Y., Yuan Q., Tang S., Zhang X., Lu S., Guo X., Cao Y.-C., Cheng S.. Artificial Intelligence
+to Power
+the Future of Materials Science and Engineering. Adv. Intell. Syst. 2020;2(4):1900143.  doi: 10.1002/aisy.202070042.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/aisy.202070042"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Intell. Syst.&amp;title=Artificial Intelligence to Power the Future of Materials Science and Engineering&amp;author=W. Sha&amp;author=Y. Guo&amp;author=Q. Yuan&amp;author=S. Tang&amp;author=X. Zhang&amp;volume=2&amp;issue=4&amp;publication_year=2020&amp;pages=1900143&amp;doi=10.1002/aisy.202070042&amp;"/></mixed-citation></ref><ref id="ref18"><mixed-citation id="cit18"><named-content content-type="citation-string">Namsheer K., Rout C. S.. Conducting Polymers: A Comprehensive Review on Recent
+Advances in Synthesis, Properties and Applications. RSC Adv. 2021;11(10):5659–5697. doi: 10.1039/D0RA07800J.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/D0RA07800J"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC9133880"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="35686160"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=RSC Adv.&amp;title=Conducting Polymers: A Comprehensive Review on Recent Advances in Synthesis, Properties and Applications&amp;author=K. Namsheer&amp;author=C. S. Rout&amp;volume=11&amp;issue=10&amp;publication_year=2021&amp;pages=5659-5697&amp;pmid=35686160&amp;doi=10.1039/D0RA07800J&amp;"/></mixed-citation></ref><ref id="ref19"><mixed-citation id="cit19"><named-content content-type="citation-string">Hacıefendioğlu T., Yildirim E.. Design Principles for the Acceptor Units in Donor-Acceptor
+Conjugated Polymers. ACS Omega. 2022;7(43):38969–38978. doi: 10.1021/acsomega.2c04713.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsomega.2c04713"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC9631416"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="36340112"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ACS Omega&amp;title=Design Principles for the Acceptor Units in Donor-Acceptor Conjugated Polymers&amp;author=T. Hacıefendioğlu&amp;author=E. Yildirim&amp;volume=7&amp;issue=43&amp;publication_year=2022&amp;pages=38969-38978&amp;pmid=36340112&amp;doi=10.1021/acsomega.2c04713&amp;"/></mixed-citation></ref><ref id="ref20"><mixed-citation id="cit20"><named-content content-type="citation-string">Turan H. T., Kucur O. O., Kahraman B., Salman S., Aviyente V.. Design of
+Donor–Acceptor Copolymers for Organic Photovoltaic Materials:
+A Computational Study. Phys. Chem. Chem. Phys. 2018;20(5):3581–3591. doi: 10.1039/C7CP08176F.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C7CP08176F"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29337325"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Phys. Chem. Chem. Phys.&amp;title=Design of Donor–Acceptor Copolymers for Organic Photovoltaic Materials: A Computational Study&amp;author=H. T. Turan&amp;author=O. O. Kucur&amp;author=B. Kahraman&amp;author=S. Salman&amp;author=V. Aviyente&amp;volume=20&amp;issue=5&amp;publication_year=2018&amp;pages=3581-3591&amp;pmid=29337325&amp;doi=10.1039/C7CP08176F&amp;"/></mixed-citation></ref><ref id="ref21"><mixed-citation id="cit21"><named-content content-type="citation-string">Köse M. E.. Theoretical
+Estimation of Donor Strength of Common Conjugated Units for Organic
+Electronics. J. Phys. Chem. A. 2019;123(26):5566–5573. doi: 10.1021/acs.jpca.9b03604.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jpca.9b03604"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31180664"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Phys. Chem. A&amp;title=Theoretical Estimation of Donor Strength of Common Conjugated Units for Organic Electronics&amp;author=M. E. Köse&amp;volume=123&amp;issue=26&amp;publication_year=2019&amp;pages=5566-5573&amp;pmid=31180664&amp;doi=10.1021/acs.jpca.9b03604&amp;"/></mixed-citation></ref><ref id="ref22"><mixed-citation id="cit22"><named-content content-type="citation-string">Haciefendioglu T., Yildirim E.. The Role of Donor Units in Band Gap Engineering of
+Donor–Acceptor Conjugated Polymers. J.
+Mol. Graphics Modell. 2025;138(March):109033.  doi: 10.1016/j.jmgm.2025.109033.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmgm.2025.109033"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="40158487"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Graphics Modell.&amp;title=The Role of Donor Units in Band Gap Engineering of Donor–Acceptor Conjugated Polymers&amp;author=T. Haciefendioglu&amp;author=E. Yildirim&amp;volume=138&amp;issue=March&amp;publication_year=2025&amp;pages=109033&amp;pmid=40158487&amp;doi=10.1016/j.jmgm.2025.109033&amp;"/></mixed-citation></ref><ref id="ref23"><mixed-citation id="cit23"><named-content content-type="citation-string">Arı H., Büyükmumcu Z.. Comparison
+of DFT Functionals for
+Prediction of Band Gap of Conjugated Polymers and Effect of HF Exchange
+Term Percentage and Basis Set on the Performance. Comput. Mater. Sci. 2017;138:70–76. doi: 10.1016/j.commatsci.2017.06.012.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.commatsci.2017.06.012"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Comput. Mater. Sci.&amp;title=Comparison of DFT Functionals for Prediction of Band Gap of Conjugated Polymers and Effect of HF Exchange Term Percentage and Basis Set on the Performance&amp;author=H. Arı&amp;author=Z. Büyükmumcu&amp;volume=138&amp;publication_year=2017&amp;pages=70-76&amp;doi=10.1016/j.commatsci.2017.06.012&amp;"/></mixed-citation></ref><ref id="ref24"><mixed-citation id="cit24"><named-content content-type="citation-string">Rajan A. C., Mishra A., Satsangi S., Vaish R., Mizuseki H., Lee K. R., Singh A. K.. Machine-Learning-Assisted
+Accurate
+Band Gap Predictions of Functionalized Mxene. Chem. Mater. 2018;30(12):4031–4038. doi: 10.1021/acs.chemmater.8b00686.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.chemmater.8b00686"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=Machine-Learning-Assisted Accurate Band Gap Predictions of Functionalized Mxene&amp;author=A. C. Rajan&amp;author=A. Mishra&amp;author=S. Satsangi&amp;author=R. Vaish&amp;author=H. Mizuseki&amp;volume=30&amp;issue=12&amp;publication_year=2018&amp;pages=4031-4038&amp;doi=10.1021/acs.chemmater.8b00686&amp;"/></mixed-citation></ref><ref id="ref25"><mixed-citation id="cit25"><named-content content-type="citation-string">Wan Z., Wang Q. De., Liu D., Liang J.. Machine Learning Prediction
+of Stability, Topological Properties and Band Gap of Topological Insulators
+in Tetradymites. Phys. Lett. A. 2021;409:127508.  doi: 10.1016/j.physleta.2021.127508.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.physleta.2021.127508"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Phys. Lett. A&amp;title=Machine Learning Prediction of Stability, Topological Properties and Band Gap of Topological Insulators in Tetradymites&amp;author=Z. Wan&amp;author=Q. De. Wang&amp;author=D. Liu&amp;author=J. Liang&amp;volume=409&amp;publication_year=2021&amp;pages=127508&amp;doi=10.1016/j.physleta.2021.127508&amp;"/></mixed-citation></ref><ref id="ref26"><mixed-citation id="cit26"><named-content content-type="citation-string">Alzahrani F. M. A., Sagir M., Saqib M., Bashir S., Sarwar T., Hussain S., Murtaza S., Mushtaq A., Razzaq R., Alrowaili Z. A., Al-Buriahi M. S.. Machine Learning Assisted Prediction
+of Band Gaps and Designing of New Polymers for Photodetectors: A Complete
+Pipeline. Comput. Mater. Sci. 2024;239(February):112961.  doi: 10.1016/j.commatsci.2024.112961.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.commatsci.2024.112961"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Comput. Mater. Sci.&amp;title=Machine Learning Assisted Prediction of Band Gaps and Designing of New Polymers for Photodetectors: A Complete Pipeline&amp;author=F. M. A. Alzahrani&amp;author=M. Sagir&amp;author=M. Saqib&amp;author=S. Bashir&amp;author=T. Sarwar&amp;volume=239&amp;issue=February&amp;publication_year=2024&amp;pages=112961&amp;doi=10.1016/j.commatsci.2024.112961&amp;"/></mixed-citation></ref><ref id="ref27"><mixed-citation id="cit27"><named-content content-type="citation-string">Zhuo Y., Mansouri Tehrani A., Brgoch J.. Predicting the Band Gaps of Inorganic
+Solids by Machine Learning. J. Phys. Chem. Lett. 2018;9(7):1668–1673. doi: 10.1021/acs.jpclett.8b00124.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jpclett.8b00124"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29532658"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Phys. Chem. Lett.&amp;title=Predicting the Band Gaps of Inorganic Solids by Machine Learning&amp;author=Y. Zhuo&amp;author=A. Mansouri Tehrani&amp;author=J. Brgoch&amp;volume=9&amp;issue=7&amp;publication_year=2018&amp;pages=1668-1673&amp;pmid=29532658&amp;doi=10.1021/acs.jpclett.8b00124&amp;"/></mixed-citation></ref><ref id="ref28"><mixed-citation id="cit28"><named-content content-type="citation-string">Katubi K. M., Saqib M., Maryam M., Mubashir T., Tahir M. H., Sulaman M., Alrowaili Z. A., Al-Buriahi M. S.. Machine
+Learning Assisted Designing of Organic Semiconductors for Organic
+Solar Cells: High-Throughput Screening and Reorganization Energy Prediction. Inorg. Chem. Commun. 2023;151(January):110610.  doi: 10.1016/j.inoche.2023.110610.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.inoche.2023.110610"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Inorg. Chem. Commun.&amp;title=Machine Learning Assisted Designing of Organic Semiconductors for Organic Solar Cells: High-Throughput Screening and Reorganization Energy Prediction&amp;author=K. M. Katubi&amp;author=M. Saqib&amp;author=M. Maryam&amp;author=T. Mubashir&amp;author=M. H. Tahir&amp;volume=151&amp;issue=January&amp;publication_year=2023&amp;pages=110610&amp;doi=10.1016/j.inoche.2023.110610&amp;"/></mixed-citation></ref><ref id="ref29"><mixed-citation id="cit29"><named-content content-type="citation-string">Boczar D., Michalska K.. A Review of Machine Learning and
+QSAR/QSPR Predictions
+for Complexes of Organic Molecules with Cyclodextrins. Molecules. 2024;29(13):3159.  doi: 10.3390/molecules29133159.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3390/molecules29133159"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC11243237"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="38999108"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Molecules&amp;title=A Review of Machine Learning and QSAR/QSPR Predictions for Complexes of Organic Molecules with Cyclodextrins&amp;author=D. Boczar&amp;author=K. Michalska&amp;volume=29&amp;issue=13&amp;publication_year=2024&amp;pages=3159&amp;pmid=38999108&amp;doi=10.3390/molecules29133159&amp;"/></mixed-citation></ref><ref id="ref30"><mixed-citation id="cit30"><named-content content-type="citation-string">Nguyen T. H., Nguyen L. H., Truong T. N.. Application of Machine
+Learning in
+Developing Quantitative Structure-Property Relationship for Electronic
+Properties of Polyaromatic Compounds. ACS Omega. 2022;7(26):22879–22888. doi: 10.1021/acsomega.2c02650.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsomega.2c02650"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC9261278"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="35811887"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ACS Omega&amp;title=Application of Machine Learning in Developing Quantitative Structure-Property Relationship for Electronic Properties of Polyaromatic Compounds&amp;author=T. H. Nguyen&amp;author=L. H. Nguyen&amp;author=T. N. Truong&amp;volume=7&amp;issue=26&amp;publication_year=2022&amp;pages=22879-22888&amp;pmid=35811887&amp;doi=10.1021/acsomega.2c02650&amp;"/></mixed-citation></ref><ref id="ref31"><mixed-citation id="cit31"><named-content content-type="citation-string">
+Maestro. In Schrödinger; Schrödinger
+LLC: New York,
+NY, 2018.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="title=Schrödinger&amp;publication_year=2018&amp;"/></mixed-citation></ref><ref id="ref32"><mixed-citation id="cit32"><named-content content-type="citation-string">
+Jaguar
+for Life ScienceSchrödinger. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.schrodinger.com/platform/products/jaguar/" ext-link-type="uri">https://www.schrodinger.com/platform/products/jaguar/</ext-link>.</named-content></mixed-citation></ref><ref id="ref33"><mixed-citation id="cit33"><named-content content-type="citation-string">Bochevarov A. D., Harder E., Hughes T. F., Greenwood J. R., Braden D. A., Philipp D. M., Rinaldo D., Halls M. D., Zhang J., Friesner R. A.. Jaguar: A High-Performance
+Quantum
+Chemistry Software Program with Strengths in Life and Materials Sciences. Int. J. Quantum Chem. 2013;113(18):2110–2142. doi: 10.1002/qua.24481.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/qua.24481"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Int. J. Quantum Chem.&amp;title=Jaguar: A High-Performance Quantum Chemistry Software Program with Strengths in Life and Materials Sciences&amp;author=A. D. Bochevarov&amp;author=E. Harder&amp;author=T. F. Hughes&amp;author=J. R. Greenwood&amp;author=D. A. Braden&amp;volume=113&amp;issue=18&amp;publication_year=2013&amp;pages=2110-2142&amp;doi=10.1002/qua.24481&amp;"/></mixed-citation></ref><ref id="ref34"><mixed-citation id="cit34"><named-content content-type="citation-string">Dixon S. L., Duan J., Smith E., Von Bargen C. D., Sherman W., Repasky M. P.. AutoQSAR: An Automated
+Machine Learning
+Tool for Best-Practice Quantitative Structure-Activity Relationship
+Modeling. Future Med. Chem. 2016;8(15):1825–1839. doi: 10.4155/fmc-2016-0093.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.4155/fmc-2016-0093"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="27643715"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Future Med. Chem.&amp;title=AutoQSAR: An Automated Machine Learning Tool for Best-Practice Quantitative Structure-Activity Relationship Modeling&amp;author=S. L. Dixon&amp;author=J. Duan&amp;author=E. Smith&amp;author=C. D. Von Bargen&amp;author=W. Sherman&amp;volume=8&amp;issue=15&amp;publication_year=2016&amp;pages=1825-1839&amp;pmid=27643715&amp;doi=10.4155/fmc-2016-0093&amp;"/></mixed-citation></ref><ref id="ref35"><mixed-citation id="cit35"><named-content content-type="citation-string">Medeiros A. R., Ferreira L. L. G., de
+Souza M. L., Rezende Junior C. de
+O., Espinoza-Chávez R. M., Dias L. C., Andricopulo A. D.. Chemoinformatics
+Studies on a Series of Imidazoles as Cruzain Inhibitors. Biomolecules. 2021;11(4):579.  doi: 10.3390/biom11040579.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3390/biom11040579"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC8071344"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33920961"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biomolecules&amp;title=Chemoinformatics Studies on a Series of Imidazoles as Cruzain Inhibitors&amp;author=A. R. Medeiros&amp;author=L. L. G. Ferreira&amp;author=M. L. de Souza&amp;author=C. de O. Rezende Junior&amp;author=R. M. Espinoza-Chávez&amp;volume=11&amp;issue=4&amp;publication_year=2021&amp;pages=579&amp;pmid=33920961&amp;doi=10.3390/biom11040579&amp;"/></mixed-citation></ref><ref id="ref36"><mixed-citation id="cit36"><named-content content-type="citation-string">An Y., Sherman W., Dixon S. L.. Kernel-Based
+Partial Least Squares:
+Application to Fingerprint-Based QSAR with Model Visualization. J. Chem. Inf. Model. 2013;53(9):2312–2321. doi: 10.1021/ci400250c.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ci400250c"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="23901898"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Inf. Model.&amp;title=Kernel-Based Partial Least Squares: Application to Fingerprint-Based QSAR with Model Visualization&amp;author=Y. An&amp;author=W. Sherman&amp;author=S. L. Dixon&amp;volume=53&amp;issue=9&amp;publication_year=2013&amp;pages=2312-2321&amp;pmid=23901898&amp;doi=10.1021/ci400250c&amp;"/></mixed-citation></ref><ref id="ref37"><mixed-citation id="cit37"><named-content content-type="citation-string">Zhou X., Gu C., Zheng C., Liu B., Tian Y., Yang H., Ma J., Bao X.. Cost-Effective
+Polymer Donors with Simple Structure
+for Organic Solar Cells. J. Mater. Chem. A. 2024;12(31):19839–19860. doi: 10.1039/D4TA03254C.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/D4TA03254C"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mater. Chem. A&amp;title=Cost-Effective Polymer Donors with Simple Structure for Organic Solar Cells&amp;author=X. Zhou&amp;author=C. Gu&amp;author=C. Zheng&amp;author=B. Liu&amp;author=Y. Tian&amp;volume=12&amp;issue=31&amp;publication_year=2024&amp;pages=19839-19860&amp;doi=10.1039/D4TA03254C&amp;"/></mixed-citation></ref><ref id="ref38"><mixed-citation id="cit38"><named-content content-type="citation-string">Mathur C., Gupta R., Bansal R. K.. Organic
+Donor-Acceptor Complexes
+As Potential Semiconducting Materials. Chem.
+- Eur. J. 2024;30(23):e202304139.  doi: 10.1002/chem.202304139.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/chem.202304139"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="38265160"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. - Eur. J.&amp;title=Organic Donor-Acceptor Complexes As Potential Semiconducting Materials&amp;author=C. Mathur&amp;author=R. Gupta&amp;author=R. K. Bansal&amp;volume=30&amp;issue=23&amp;publication_year=2024&amp;pages=e202304139&amp;pmid=38265160&amp;doi=10.1002/chem.202304139&amp;"/></mixed-citation></ref><ref id="ref39"><mixed-citation id="cit39"><named-content content-type="citation-string">Brymora K., Ducasse L., Delaure A., Hirsch L., Jarrosson T., Niebel C., Serein-Spirau F., Peresutti R., Dautel O., Castet F.. Computational Design of Quadrupolar
+Donor-Acceptor-Donor Molecules with near-Infrared Light-Harvesting
+Capabilities. Dyes Pigm. 2018;149(October 2017):882–892. doi: 10.1016/j.dyepig.2017.12.003.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.dyepig.2017.12.003"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Dyes Pigm.&amp;title=Computational Design of Quadrupolar Donor-Acceptor-Donor Molecules with near-Infrared Light-Harvesting Capabilities&amp;author=K. Brymora&amp;author=L. Ducasse&amp;author=A. Delaure&amp;author=L. Hirsch&amp;author=T. Jarrosson&amp;volume=149&amp;issue=October 2017&amp;publication_year=2018&amp;pages=882-892&amp;doi=10.1016/j.dyepig.2017.12.003&amp;"/></mixed-citation></ref><ref id="ref40"><mixed-citation id="cit40"><named-content content-type="citation-string">Mathur C., Gupta R., Bansal R. K., Salunke D. B., Gohad S. W.. A Cascade
+Reaction of Imidazo­[1,2-a]­Pyridines with Maleic Anhydride: Formation
+of Cross-Conjugated Mesomeric Betaines. Arkivoc. 2023;2022(3):162–185. doi: 10.24820/ark.5550190.p011.839.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.24820/ark.5550190.p011.839"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Arkivoc&amp;title=A Cascade Reaction of Imidazo­[1,2-a]­Pyridines with Maleic Anhydride: Formation of Cross-Conjugated Mesomeric Betaines&amp;author=C. Mathur&amp;author=R. Gupta&amp;author=R. K. Bansal&amp;author=D. B. Salunke&amp;author=S. W. Gohad&amp;volume=2022&amp;issue=3&amp;publication_year=2023&amp;pages=162-185&amp;doi=10.24820/ark.5550190.p011.839&amp;"/></mixed-citation></ref><ref id="ref41"><mixed-citation id="cit41"><named-content content-type="citation-string">Bender A., Mussa H. Y., Glen R. C., Reiling S.. Molecular Similarity
+Searching Using Atom Environments, Information-based Feature Selection,
+and a Naıve Bayesian Classifier. J. Chem.
+Inf. Comput. Sci. 2004;44(1):170–178. doi: 10.1021/ci034207y.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ci034207y"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="14741025"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Inf. Comput. Sci.&amp;title=Molecular Similarity Searching Using Atom Environments, Information-based Feature Selection, and a Naıve Bayesian Classifier&amp;author=A. Bender&amp;author=H. Y. Mussa&amp;author=R. C. Glen&amp;author=S. Reiling&amp;volume=44&amp;issue=1&amp;publication_year=2004&amp;pages=170-178&amp;pmid=14741025&amp;doi=10.1021/ci034207y&amp;"/></mixed-citation></ref><ref id="ref42"><mixed-citation id="cit42"><named-content content-type="citation-string">Rogers D., Brown R. D., Hahn M.. Using Extended-Connectivity Fingerprints
+with Laplacian-Modified Bayesian Analysis in High-Throughput Screening
+Follow-Up. J. Biomol. Screening. 2005;10(7):682–686. doi: 10.1177/1087057105281365.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1177/1087057105281365"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="16170046"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Biomol. Screening&amp;title=Using Extended-Connectivity Fingerprints with Laplacian-Modified Bayesian Analysis in High-Throughput Screening Follow-Up&amp;author=D. Rogers&amp;author=R. D. Brown&amp;author=M. Hahn&amp;volume=10&amp;issue=7&amp;publication_year=2005&amp;pages=682-686&amp;pmid=16170046&amp;doi=10.1177/1087057105281365&amp;"/></mixed-citation></ref><ref id="ref43"><mixed-citation id="cit43"><named-content content-type="citation-string">Duan J., Dixon S. L., Lowrie J. F., Sherman W.. Analysis and Comparison
+of 2D Fingerprints: Insights into Database Screening Performance Using
+Eight Fingerprint Methods. J. Mol. Graphics
+Modell. 2010;29(2):157–170. doi: 10.1016/j.jmgm.2010.05.008.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmgm.2010.05.008"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="20579912"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Graphics Modell.&amp;title=Analysis and Comparison of 2D Fingerprints: Insights into Database Screening Performance Using Eight Fingerprint Methods&amp;author=J. Duan&amp;author=S. L. Dixon&amp;author=J. F. Lowrie&amp;author=W. Sherman&amp;volume=29&amp;issue=2&amp;publication_year=2010&amp;pages=157-170&amp;pmid=20579912&amp;doi=10.1016/j.jmgm.2010.05.008&amp;"/></mixed-citation></ref><ref id="ref44"><mixed-citation id="cit44"><named-content content-type="citation-string">Rogers D., Hahn M.. Extended-Connectivity Fingerprints. J. Chem.
+Inf. Model. 2010;50(5):742–754. doi: 10.1021/ci100050t.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ci100050t"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="20426451"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Inf. Model.&amp;title=Extended-Connectivity Fingerprints&amp;author=D. Rogers&amp;author=M. Hahn&amp;volume=50&amp;issue=5&amp;publication_year=2010&amp;pages=742-754&amp;pmid=20426451&amp;doi=10.1021/ci100050t&amp;"/></mixed-citation></ref></ref-list></sec></sec><sec id="_ad93_" xml:lang="en" sec-type="associated-data" disp-level="1"><title>Associated Data</title><sec id="_adsm93_" xml:lang="en" sec-type="supplementary-materials" disp-level="2"><title>Supplementary Materials</title><supplementary-material id="db_ds_supplementary-material1_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path fb3a/12152970/c1aa11044027/ci5c00345_si_001.pdf?><?cloudpmc-bucket app?><?size 879775?></media></supplementary-material><supplementary-material id="db_ds_supplementary-material2_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_002.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path fb3a/12152970/fe75efe375a8/ci5c00345_si_002.zip?><?cloudpmc-bucket app?><?size 3784430?></media></supplementary-material><supplementary-material id="db_ds_supplementary-material3_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ci5c00345_si_003.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path fb3a/12152970/173e6e7f1315/ci5c00345_si_003.zip?><?cloudpmc-bucket app?><?size 38699422?></media></supplementary-material></sec></sec></body></article>

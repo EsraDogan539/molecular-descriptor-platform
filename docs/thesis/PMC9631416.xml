@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?><article xml:lang="en" article-type="research-article"><front><journal-meta><journal-id journal-id-type="pmc-domain-id">3686</journal-id><journal-id journal-id-type="pmc-domain">acsomega</journal-id><journal-title-group><journal-title>ACS Omega</journal-title><abbrev-journal-title>ACS Omega</abbrev-journal-title></journal-title-group><publisher><publisher-name>American Chemical Society</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC9631416</article-id><article-id pub-id-type="pmcaid">9631416</article-id><article-id pub-id-type="pmcaiid">9631416</article-id><article-id pub-id-type="pmid">36340112</article-id><article-id pub-id-type="doi">10.1021/acsomega.2c04713</article-id><title-group><article-title>Design Principles
+for the Acceptor Units in Donor–Acceptor
+Conjugated Polymers</article-title></title-group><contrib-group content-type="author"><contrib><name name-style="western"><surname>Hacıefendioǧlu</surname><given-names initials="T">Tuǧba</given-names></name><xref ref-type="aff" rid="aff1">†</xref></contrib><contrib><name name-style="western"><surname>Yildirim</surname><given-names initials="E">Erol</given-names></name><xref ref-type="aff" rid="aff1">†</xref><xref ref-type="aff" rid="aff2">‡</xref><xref ref-type="aff" rid="aff3">§</xref><xref rid="cor1" ref-type="author-notes">*</xref></contrib></contrib-group><aff id="aff1"><label>†</label>Department
+of Chemistry, Middle East Technical University, 06800 Ankara, Turkey</aff><aff id="aff2"><label>‡</label>Department
+of Polymer Science and Technology, Middle
+East Technical University, 06800 Ankara, Turkey</aff><aff id="aff3"><label>§</label>Department
+of Micro- and Nanotechnology, Middle East
+Technical University, 06800 Ankara, Turkey</aff><author-notes><fn id="cor1"><label>*</label><p>Email: <email>erolyil@metu.edu.tr</email>.</p></fn></author-notes><pub-date><day>18</day><month>10</month><year>2022</year></pub-date><volume>7</volume><issue>43</issue><fpage>38969</fpage><page-range>38969–38978</page-range><pub-history><event event-type="pmc-release"><date><day>4</day><month>11</month><year>2022</year></date></event></pub-history><permissions><copyright-statement>© 2022 The Authors. Published by American Chemical Society</copyright-statement><license><license-p>Permits the broadest form of re-use including for commercial purposes, provided that author attribution and integrity are maintained (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://creativecommons.org/licenses/by/4.0/" ext-link-type="uri">https://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao2c04713.pdf" content-type="pmc-pdf"><?cloudpmc-path 288c/9631416/a4d81d211e7f/ao2c04713.pdf?><?cloudpmc-bucket app?><?size 7171405?></self-uri><abstract id="abstract1"><title>Abstract</title><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="ab-tgr1" xlink:href="ao2c04713_0006.jpg"><?cloudpmc-path blobs/288c/9631416/7e6dd985c49b/ao2c04713_0006.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 562?><?original-width 962?><?scaled-height 374?><?scaled-width 641?></graphic><p>More than 50 different
+acceptor units from the experimental literature
+have been modeled, analyzed, and compared by using the computationally
+extracted data from the density functional theory (DFT) perspective
+for tetramer structures in the form of (D–B–A–B)<sub>4</sub> (D, donor; A, acceptor; B, bridge) with fixed donor and bridge
+units. Comparison of dihedral angle between acceptor, donor, and bridge
+units, bond order, and hyperpolarizability reveals that these three
+structural properties have a dominant effect on the frontier electronic
+energy levels of the acceptor units. Systematic investigation of the
+structural properties has demonstrated the band gap energy dependency
+of the acceptor units on the planarity, conjugation, and the electron
+delocalization. Substitution effect, morphological alternation, and
+insertion of π-electron deficient atoms in A unit have also
+an important role to determine physical properties of the donor–acceptor
+conjugated polymers. This benchmark study will be beneficial for the
+band gap engineering and molecular design of the donor–acceptor
+copolymers using different acceptor units for the organic electronic
+applications.</p></abstract><custom-meta-group><custom-meta><meta-name>status</meta-name><meta-value>released</meta-value></custom-meta><custom-meta><meta-name>display-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-journal-matter</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-scanned</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-retracted</meta-name><meta-value>no</meta-value></custom-meta></custom-meta-group></article-meta><notes notes-type="article-notes"><sec id="historyarticle-meta1" sec-type="history" disp-level="2"><p>Received 2022 Jul 26; Accepted 2022 Oct 6; Collection date 2022 Nov 1.</p></sec></notes></front><body><sec id="sec1" disp-level="1"><title>Introduction</title><p>Over the past decades, research in π-conjugated
+systems,
+especially donor–acceptor conjugated copolymers (CPs), has
+yielded significant advances in the creation of organic functional
+materials for electronic applications, especially for organic photovoltaics.<sup><xref rid="ref1" ref-type="bibr">1</xref></sup> CPs have an extensive network of overlapping
+π-orbitals throughout the whole polymeric backbone and, consequently,
+display distinctive optical and electronic properties.<sup><xref rid="ref2" ref-type="bibr">2</xref></sup> In addition, CPs possess important advantages toward inorganic
+semiconductors and small molecules such as low cost, ease at processing,
+lightweight, and flexibility.<sup><xref rid="ref3" ref-type="bibr">3</xref></sup> These properties
+make CPs particularly intriguing candidates for a wide range of optoelectronic
+applications such as organic light-emitting diodes (OLEDs), organic
+electrochromic (OECs), organic field effect transistors (OFETs), and
+organic photovoltaics (OPVs).<sup><xref rid="ref4" ref-type="bibr">4</xref>−<xref rid="ref12" ref-type="bibr">12</xref></sup></p><p>Engineering of materials for organic electronics requires
+that
+they be designed for enhanced optical and electronic properties of
+CPs which can be effectively tuned by tailoring the proper electron-donating
+(donor, D) and electron-withdrawing (acceptor, A) building block units
+of resulting CPs. Especially, selection of D–A moieties enables
+control of the highest occupied molecular orbital (HOMO) energy and
+lowest unoccupied molecular orbital (LUMO) energy and thus the band
+gap energy (difference between HOMO and LUMO). Determination of the
+HOMO–LUMO energy level has an importance in terms of the optimized
+charge injection into and charge extraction out of the conducting
+polymer layer.<sup><xref rid="ref5" ref-type="bibr">5</xref>,<xref rid="ref13" ref-type="bibr">13</xref></sup> Moreover, band gap energy shows
+the absorption edge which is an important parameter for the optoelectronic
+application of conducting polymers.</p><p>Compounds are identified
+as follows: <bold>A1</bold>, 1,3,4-oxadiazole;<sup><xref rid="ref14" ref-type="bibr">14</xref></sup><bold>A2</bold>, 1,3,4-thiadiazole;<sup><xref rid="ref15" ref-type="bibr">15</xref></sup><bold>A3</bold>, 3,6-dihydro-1,2,4,5-tetrazine;<sup><xref rid="ref15" ref-type="bibr">15</xref></sup><bold>A4</bold>, thiazolo[5,4-<italic>d</italic>]thiazole;<sup><xref rid="ref16" ref-type="bibr">16</xref></sup><bold>A5</bold>, 2,2′-bithiazole;<sup><xref rid="ref17" ref-type="bibr">17</xref></sup><bold>A6</bold>, benzo[<italic>c</italic>][1,2,5]thiadiazole;<sup><xref rid="ref18" ref-type="bibr">18</xref></sup><bold>A7</bold>, [1,2,5]thiadiazolo[3,4-<italic>c</italic>]pyridine;<sup><xref rid="ref19" ref-type="bibr">19</xref></sup><bold>A8</bold>, 5-fluorobenzo[<italic>c</italic>][1,2,5]thiadiazole;<sup><xref rid="ref20" ref-type="bibr">20</xref></sup><bold>A9</bold>, 5,6-difluorobenzo[<italic>c</italic>][1,2,5]thiadiazole;<sup><xref rid="ref21" ref-type="bibr">21</xref></sup><bold>A10</bold>, 5-ethoxybenzo[<italic>c</italic>][1,2,5]thiadiazole,<sup><xref rid="ref22" ref-type="bibr">22</xref></sup><bold>A11</bold>, 5,6-diethoxybenzo[<italic>c</italic>][1,2,5]thiadiazole;<sup><xref rid="ref22" ref-type="bibr">22</xref></sup><bold>A12</bold>, naphtho[1,2-<italic>c</italic>:5,6-<italic>c</italic>′]bis([1,2,5]thiadiazole);<sup><xref rid="ref23" ref-type="bibr">23</xref></sup><bold>A13</bold>, benzo[<italic>c</italic>][1,2,5]selenadiazole;<sup><xref rid="ref24" ref-type="bibr">24</xref></sup><bold>A14</bold>, benzo[<italic>c</italic>][1,2,5]oxadiazole;<sup><xref rid="ref25" ref-type="bibr">25</xref></sup><bold>A15</bold>, 2,2-dimethyl-2<italic>H</italic>-benzo[<italic>d</italic>]imidazole;<sup><xref rid="ref26" ref-type="bibr">26</xref></sup><bold>A16</bold>, 2<italic>H</italic>-benzo[<italic>d</italic>][1,2,3]triazole;<sup><xref rid="ref27" ref-type="bibr">27</xref></sup><bold>A17</bold>, 2-methyl-2<italic>H</italic>-benzo[<italic>d</italic>][1,2,3]triazole;<sup><xref rid="ref28" ref-type="bibr">28</xref></sup><bold>A18</bold>, 2-ethyl-2<italic>H</italic>-benzo[<italic>d</italic>][1,2,3]triazole;<sup><xref rid="ref28" ref-type="bibr">28</xref></sup><bold>A19</bold>,
+2-propyl-2<italic>H</italic>-benzo[<italic>d</italic>][1,2,3]triazole;<sup><xref rid="ref28" ref-type="bibr">28</xref></sup><bold>A20</bold>, 5,6-difluoro-2-methyl-2<italic>H</italic>-benzo[<italic>d</italic>][1,2,3]triazole;<sup><xref rid="ref28" ref-type="bibr">28</xref></sup><bold>A21</bold>, 2,7-dimethyl-2,7-dihydronaphtho[1,2-<italic>d</italic>:5,6-<italic>d</italic>′]bis([1,2,3]triazole); <bold>A22</bold>, quinoxaline;<sup><xref rid="ref29" ref-type="bibr">29</xref>,<xref rid="ref30" ref-type="bibr">30</xref></sup><bold>A23</bold>, pyrido[3,4-<italic>b</italic>]pyrazine;<sup><xref rid="ref31" ref-type="bibr">31</xref></sup><bold>A24</bold>, 2,3-dimethylpyrido[3,4-<italic>b</italic>]pyrazine;<sup><xref rid="ref31" ref-type="bibr">31</xref></sup><bold>A25</bold>, 2,3-difluoroquinoxaline;<sup><xref rid="ref32" ref-type="bibr">32</xref></sup><bold>A26</bold>, pyrazino[2,3-<italic>g</italic>]quinoxaline;<sup><xref rid="ref33" ref-type="bibr">33</xref></sup><bold>A27</bold>, 3<italic>a</italic>,4-dihydrothieno[3,4-<italic>b</italic>]thiophene; <bold>A28</bold>, 5,7-dihydrothieno[3,4-<italic>b</italic>]pyrazine;<sup><xref rid="ref34" ref-type="bibr">34</xref></sup><bold>A29</bold>, 5,5-dimethyl-4<italic>H</italic>-cyclopenta[<italic>c</italic>]thiophene-4,6(5<italic>H</italic>)-dione;<sup><xref rid="ref35" ref-type="bibr">35</xref></sup><bold>A30</bold>, 5-methyl-4<italic>H</italic>-thieno[3,4-<italic>c</italic>]pyrrole-4,6(5<italic>H</italic>)-dione;<sup><xref rid="ref36" ref-type="bibr">36</xref>,<xref rid="ref37" ref-type="bibr">37</xref></sup><bold>A31</bold>, 5-methyl-4<italic>H</italic>-thieno[3,4-<italic>c</italic>]pyrrole-4,6(5<italic>H</italic>)-dione;<sup><xref rid="ref35" ref-type="bibr">35</xref></sup><bold>A32</bold>, naphtho[2,3-<italic>c</italic>]thiophene-4,9-dione;<sup><xref rid="ref35" ref-type="bibr">35</xref></sup><bold>A33</bold>, 2,5-dimethylpyrrolo[3,4-<italic>c</italic>]pyrrole-1,4(2<italic>H</italic>,5<italic>H</italic>)-dione;<sup><xref rid="ref38" ref-type="bibr">38</xref></sup><bold>A34</bold>, (<italic>E</italic>)-1,1′-dimethyl-[3,3′-biindolinylidene]-2,2′-dione;<sup><xref rid="ref39" ref-type="bibr">39</xref></sup><bold>A35</bold>, 2-methylisoindoline-1,3-dione;<sup><xref rid="ref40" ref-type="bibr">40</xref></sup><bold>A36</bold>, 3<italic>a</italic>,7<italic>a</italic>-dihydrobenzo[1,2-<italic>d</italic>:4,5-<italic>d</italic>′]bis(thiazole);<sup><xref rid="ref40" ref-type="bibr">40</xref></sup><bold>A37</bold>, 3<italic>a</italic>,7<italic>a</italic>-dihydrobenzo[1,2-<italic>d</italic>:4,5-<italic>d</italic>′]bis(thiazole);<sup><xref rid="ref41" ref-type="bibr">41</xref>,<xref rid="ref42" ref-type="bibr">42</xref></sup><bold>A38</bold>, 6-methyl-6,8-dihydro-4<italic>H</italic>-[1,2,3]triazolo[4′,5′:4,5]benzo[1,2-<italic>c</italic>][1,2,5]oxadiazole; <bold>A39</bold>, 2,6-dimethyl-2,4,6,8-tetrahydrobenzo[1,2-<italic>d</italic>:4,5-<italic>d</italic>′]bis([1,2,3]triazole),<sup><xref rid="ref43" ref-type="bibr">43</xref></sup><bold>A40</bold>, 6,7-dimethyl[1,2,5]thiadiazolo[3,4-<italic>g</italic>]quinoxaline;<sup><xref rid="ref44" ref-type="bibr">44</xref></sup><bold>A41</bold>, 6-methyl-6,8-dihydro-4<italic>H</italic>-[1,2,3]triazolo[4′,5′:4,5]benzo[1,2-<italic>c</italic>][1,2,5]thiadiazole; <bold>A42</bold>, 6-methyl-6,8-dihydro-4<italic>H</italic>-[1,2,3]triazolo[4′,5′:4,5]benzo[1,2-<italic>c</italic>][1,2,5]selenadiazole; <bold>A43</bold>, 4<italic>H</italic>,8<italic>H</italic>-benzo[1,2-<italic>c</italic>:4,5-<italic>c</italic>′]bis([1,2,5]thiadiazole);<sup><xref rid="ref45" ref-type="bibr">45</xref></sup><bold>A44</bold>, 2,7-dimethylbenzo[<italic>lmn</italic>][3,8]phenanthroline-1,3,6,8(2<italic>H</italic>,7<italic>H</italic>)-tetraone;<sup><xref rid="ref46" ref-type="bibr">46</xref></sup><bold>A45</bold>, 5-methyl-6<italic>a</italic>,9<italic>a</italic>-dihydro-4<italic>H</italic>-thiazolo[4,5-<italic>c</italic>]thieno[2,3-<italic>e</italic>]azepine-4,6(5<italic>H</italic>)-dione; <bold>A46</bold>, 2,6-dimethyl[1,2,3]triazolo[4,5-<italic>f</italic>]isoindole-5,7(2<italic>H</italic>,6<italic>H</italic>)-dione; <bold>A47</bold>, dithieno[3′,2′:3,4;2″,3″:5,6]benzo[1,2-<italic>c</italic>][1,2,5]oxadiazole;<sup><xref rid="ref47" ref-type="bibr">47</xref></sup><bold>A48</bold>, dithieno[3′,2′:3,4;2″,3″:5,6]benzo[1,2-<italic>c</italic>][1,2,5]thiadiazole;<sup><xref rid="ref47" ref-type="bibr">47</xref></sup><bold>A49</bold>, 5-methyl-4<italic>H</italic>-dithieno[3,2-c:2′,3′-e]azepine-4,6(5<italic>H</italic>)-dione;<sup><xref rid="ref48" ref-type="bibr">48</xref></sup><bold>A50</bold>,
+5-methyl-6<italic>a</italic>,9<italic>a</italic>-dihydro-4<italic>H</italic>-thiazolo[4,5-<italic>c</italic>]thieno[2,3-<italic>e</italic>]azepine-4,6(5<italic>H</italic>)-dione;<sup><xref rid="ref49" ref-type="bibr">49</xref></sup><bold>A51</bold>, 5-methyl-4<italic>H</italic>-dithiazolo[4,5-<italic>c</italic>:5′,4′-<italic>e</italic>]azepine-4,6(5<italic>H</italic>)-dione; <bold>A52</bold>, benzo[<italic>lmn</italic>][3,8]phenanthroline-1,3,6,8(2<italic>H</italic>,7<italic>H</italic>)-tetraone<sup><xref rid="ref50" ref-type="bibr">50</xref></sup></p><p>Previous theoretical and experimental studies in the past
+decade
+presented the enhanced electronic properties of some of the most used
+D–A units.<sup><xref rid="ref2" ref-type="bibr">2</xref>,<xref rid="ref51" ref-type="bibr">51</xref>−<xref rid="ref56" ref-type="bibr">56</xref></sup> However, this is the first comprehensive computational study comparing
+and analyzing more than 50 acceptors, which have drawn most of the
+attention in both academic studies and industrial applications selected
+from the recent literature. Therefore, our study will give an insight
+into the relation of design principles and structural properties and
+help scientists find optimal performance conducting materials for
+the electronic applications. Systematic investigation of a series
+of acceptor moieties is achieved from geometrically optimized oligomers
+containing an alternating acceptor unit coupled with 4,8-bis(5-methylthiophen-2-yl)benzo[1,2-<italic>b</italic>:4,5-<italic>b</italic>′]dithiophene (PBDTT-BT)
+as a donor and thiophene as a bridge (B) unit, while maintaining the
+same tetramer conjugated chain oligomer structure. Determination of
+acceptor units, shown in <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>, is based on the most used structures in the OPV,
+OLED, OFET, and OEC applications in the literature. Electrical and
+optical band energy gaps, electrostatic potential surface (ESP), HOMO
+and LUMO energy levels, bond order calculated from Wiberg bond index
+(WBI), planarity, polarity, polarizability, and hyperpolarizability
+of the coupled conjugated system are predicted using data computationally
+extracted from the perspective of density functional theory (DFT).
+In addition, reorganization energies (λ<sub>reorg</sub>) and
+excited-state vertical and adiabatic transition of the oligomers were
+calculated to predict mobility of the model structures.</p><fig id="fig1" position="float"><?disp-level 2?><label>Figure 1</label><caption><p>Representative
+structures of conjugated acceptor units utilized
+in this study.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr1" xlink:href="ao2c04713_0001.jpg"><?cloudpmc-path blobs/288c/9631416/aeda826c7b0b/ao2c04713_0001.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 2837?><?original-width 3798?><?scaled-height 567?><?scaled-width 759?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ao2c04713_0001.gif"><?cloudpmc-path blobs/288c/9631416/905f05793bf9/ao2c04713_0001.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig></sec><sec id="sec2" disp-level="1"><title>Theoretical Calculations</title><p>Theoretical
+calculations were performed by using Gaussian09 (A02
+software package).<sup><xref rid="ref57" ref-type="bibr">57</xref></sup> Density functional
+theory (DFT) methods were applied for the tetramers, in the form of
+(D–B–A–B)<sub>4</sub> (D, donor; A, acceptor;
+B, bridge) at B3LYP hybrid functional with 6-311g(d) basis set with
+tight SCF convergence criteria which have presented successful results
+in previous studies.<sup><xref rid="ref58" ref-type="bibr">58</xref>−<xref rid="ref60" ref-type="bibr">60</xref></sup> Geometry optimizations were started from different
+initial conformations such as the relative conformation of donor and
+acceptor by controlling the torsional angle between connected donor,
+acceptor, and bridge units, as shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Figure S1</ext-link> systemically to determine the lowest energy geometries.
+Electrostatic potential surface (ESP), highest occupied molecular
+orbitals (HOMO), and lowest unoccupied molecular orbitals (LUMO) were
+calculated for the optimized geometries of tetramers. Dihedral angle
+(θ) between the bridge and donor and between donor and bridge
+were calculated for the corresponding bonds which are represented
+as number and shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Supporting Information</ext-link> Figure S1. Band gap was calculated by using two different methods
+that are the direct difference between the HOMO energy and the LUMO
+energy for the optimized ground state and the calculation vertical
+excitation energy of the lowest singlet excited state (S<sub>0</sub> → S<sub>1</sub>). The singlet excited states of the oligomers
+were calculated by using time-dependent density functional theory
+(TDDFT) at the same level of calculation quality. Vertical ionization
+potential (VIP) and adiabatic ionization potential (AIP) were calculated
+by the energy difference between the neutral tetramer and cation state
+of the optimized ground state geometry, followed by optimized cation
+geometry, respectively. Hole reorganization energies (λ<sub>reorg</sub>) were determined on the basis of the formulation by Marcus
+and by Bredas et al.<sup><xref rid="ref61" ref-type="bibr">61</xref>,<xref rid="ref62" ref-type="bibr">62</xref></sup> Charge transfer between acceptor
+and donor were calculated on the basis of the ESP fitting scheme of
+Merz–Singh–Kollman (MK) and natural population analysis
+(NPA) at the same level of theory. Wiberg bond indexes were calculated
+using NPA method for the for the corresponding bonds, which are represented
+as letters and shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Figure S1</ext-link>. Orbital
+composition analysis was performed by using Multiwfn wave function
+analysis program in three partition schemes, Mulliken, Stout–Politzer,
+and Ros–Schuit.<sup><xref rid="ref63" ref-type="bibr">63</xref></sup></p></sec><sec id="sec3" disp-level="1"><title>Results and Discussion</title><p>For comparison of the organoelectronic
+performances of acceptor
+units as shown in <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>, the donor (D) and bridging (B) units were kept the same
+for allof the tetramers. 4,8-Bis(5-methylthiophen-2-yl)benzo[1,2-<italic>b</italic>:4,5-<italic>b</italic>′]dithiophene (PBDTT-BT)
+is chosen as the donor unit for all of the tetramers, since benzo[1,2-<italic>b</italic>:4,5-<italic>b</italic>′]dithiophene (BDT) and its
+derivatives have been widely used among the electron donating monomers
+in the literature owing to its planar and symmetric structure and
+high charge transport ability.<sup><xref rid="ref64" ref-type="bibr">64</xref></sup> Next,
+thiophene is used as a π-bridge unit as it has a relatively
+small and electron rich structure that provides absorption of longer
+wavelengths in the spectrum with weaker steric hindrance.<sup><xref rid="ref65" ref-type="bibr">65</xref></sup></p><p>The control of the HOMO–LUMO levels
+and therefore the band
+gap engineering of the conjugated systems has the major importance
+in the design of the corresponding materials for the optoelectronic
+applications. In the literature, the major driving force on control
+of the band gap of extended π-conjugated systems have been studied
+for some donor–acceptor structures for years.<sup><xref rid="ref66" ref-type="bibr">66</xref></sup> For the comparison of the band gap and for elucidating
+the structural and electronic characteristics affecting the frontier
+orbital energy levels, two different methods were used. First, HOMO
+and LUMO energy levels were calculated, and taking that the difference
+between these energy levels on the optimized ground state gives the
+band gap, the second method is the calculation of the vertical excitation
+energy of the lowest singlet excited state (S<sub>0</sub> →
+S<sub>1</sub>).</p><p>Previous studies show that the planarity of
+the conjugated systems
+has a significant contribution to the band gap, since the dihedral
+angle between the units in the polymers limits the inter-ring rotations
+and the delocalization of the π-electron.<sup><xref rid="ref66" ref-type="bibr">66</xref></sup> Dihedral angles between the bridge and alternating acceptor
+units and between the bridge unit (thiophene) and fixed donor unit
+(4,8-bis(5-methylthiophen-2-yl)benzo[1,2-<italic>b</italic>:4,5-<italic>b</italic>′]dithiophene) were measured for optimized geometries
+and given in <xref rid="tbl1" ref-type="table">Table <xref rid="tbl1" ref-type="table">1</xref></xref> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S2</ext-link>. In a general trend, it
+can be deduced that the dihedral angle between bridge and the donor
+unit has more significant impact on the HOMO–LUMO band gap
+whereas covalent rigidification between the bridge units and the alternating
+acceptor unit does not have influence on the band gap. HOMO–LUMO
+band gaps of the molecules tend to decrease with improved planarity
+characteristics of π-conjugated path resulting in weak electron
+hopping across the backbone, as shown in <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>a. Although the same donor and bridge units
+were used for all tetramers, the dihedral angle between the donor
+and bridge units has changed with different acceptor units. This indicates
+that alternating acceptor type has an influence on the dihedral angle
+between the bridging unit and the donor; therefore it has a role on
+the control of band gap energy in the tetramers.</p><table-wrap id="tbl1" position="float"><?disp-level 2?><label>Table 1</label><caption><title>Structural and Electronic Properties
+of the Oligomers with 10 Selected Acceptors<xref rid="tbl1-fn1" ref-type="table-fn"><sup>a</sup></xref></title></caption><table frame="hsides" rules="groups" border="0"><colgroup span="1"><col align="left" span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/></colgroup><thead><tr><th style="border:none;" align="center" colspan="1" rowspan="1">acceptor</th><th style="border:none;" align="center" colspan="1" rowspan="1"><italic>E</italic><sub>band gap</sub> (eV)</th><th style="border:none;" align="center" colspan="1" rowspan="1">λ<sub>reorg</sub> (eV)</th><th style="border:none;" align="center" colspan="1" rowspan="1">μ (debye)</th><th style="border:none;" align="center" colspan="1" rowspan="1">θ<sub>(D–B)</sub></th><th style="border:none;" align="center" colspan="1" rowspan="1">θ<sub>(A–B)</sub></th></tr></thead><tbody><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A6</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.95</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.31</td><td style="border:none;" align="center" colspan="1" rowspan="1">13.47</td><td style="border:none;" align="center" colspan="1" rowspan="1">6.25</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A12</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.84</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.08</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.36</td><td style="border:none;" align="center" colspan="1" rowspan="1">14.51</td><td style="border:none;" align="center" colspan="1" rowspan="1">6.3</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A14</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.94</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.81</td><td style="border:none;" align="center" colspan="1" rowspan="1">13.43</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.96</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A16</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.87</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.62</td><td style="border:none;" align="center" colspan="1" rowspan="1">14.34</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.29</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A22</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.23</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.27</td><td style="border:none;" align="center" colspan="1" rowspan="1">16.4</td><td style="border:none;" align="center" colspan="1" rowspan="1">23.33</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A28</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.66</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.1</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.6</td><td style="border:none;" align="center" colspan="1" rowspan="1">12.66</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.71</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A30</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.28</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.68</td><td style="border:none;" align="center" colspan="1" rowspan="1">15.18</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.95</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A39</td><td style="border:none;" align="center" colspan="1" rowspan="1">1.6</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.9</td><td style="border:none;" align="center" colspan="1" rowspan="1">9.29</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.49</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A43</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.93</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.16</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.92</td><td style="border:none;" align="center" colspan="1" rowspan="1">4.91</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.33</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">A48</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.31</td><td style="border:none;" align="center" colspan="1" rowspan="1">0.09</td><td style="border:none;" align="center" colspan="1" rowspan="1">2.44</td><td style="border:none;" align="center" colspan="1" rowspan="1">17.68</td><td style="border:none;" align="center" colspan="1" rowspan="1">19.11</td></tr></tbody></table><table-wrap-foot><fn id="tbl1-fn1"><label>a</label><p>Parameters of the other acceptors
+are given in the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Supporting Information</ext-link>.</p></fn></table-wrap-foot></table-wrap><fig id="fig2" position="float"><?disp-level 2?><label>Figure 2</label><caption><p>Effects of structural
+properties on the band gap energy for 52
+tetramers with different acceptor units. (a) Dihedral angle, (b)
+Wiberg bond index, and (c) hyperpolarizability effect on the band
+gap energy.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr2" xlink:href="ao2c04713_0002.jpg"><?cloudpmc-path blobs/288c/9631416/b11ee1b64948/ao2c04713_0002.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1510?><?original-width 1000?><?scaled-height 1006?><?scaled-width 666?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ao2c04713_0002.gif"><?cloudpmc-path blobs/288c/9631416/6a92db913dec/ao2c04713_0002.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Next, the Wiberg bond indices
+(WBI) between the donor and bridge
+units and between the acceptor and bridge units were calculated by
+excluding the two end groups to prevent the end group effects. WBI
+have been used to measure the bond order, leading us to the information
+on the π-bond character and conjugation on the backbone.<sup><xref rid="ref67" ref-type="bibr">67</xref></sup> For the bond index higher than 1.0, it can be
+interpreted as there is more than one pair of electrons shared between
+them. WBIs of corresponding bonds for tetramers were found in the
+range changing from 1.13 to 1.17, resulting in all of the acceptor
+units contributing the π-conjugation property and increasing
+the strength of bonds and shortening the bond lengths. Moreover, results
+showed that WBI between the donor and bridge units decreases with
+increasing band gap energy since insertion of double bonds leads to
+a decrease of the overall aromaticity of the system and thus to a
+further reduction in band gap, as shown in <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>b. The highest WBI is 1.17 for a derivative
+of thiazole (<bold>A36</bold>) having 0.93 eV band gap energy. Like
+the dihedral angle between the bridge unit and acceptor units, the
+WBI index between them has also not changed as changing acceptor units.
+It can be concluded that the tailored acceptor units have a major
+role and control on the structure in a sense of the changing position
+and geometry of the donor units, resulting in the change in planarity
+and conjugation of the tetramers.</p><p>Another structural effect
+on the band gap is the first order hyperpolarizability
+of the polymers, which is given in <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>c. In the literature, it is directly proportional
+with the reduction of bond length alternation (BLA) in donor–acceptor
+conducting polymers.<sup><xref rid="ref68" ref-type="bibr">68</xref></sup> The dependence of
+hyperpolarizability on the bond length alternation has been shown
+with enhanced electron delocalization.<sup><xref rid="ref69" ref-type="bibr">69</xref></sup> Monomers of the acceptor units in the form of BDBAB were constructed,
+and optimized geometries were used for the calculation of the hyperpolarizability.
+Results demonstrate that there is a decreasing trend for the acceptor
+unit within an increased band gap energy, which is in parallel with
+preliminary studies for π-conjugated compounds.</p><p>Effect
+of the alkyl groups of the acceptor units on the band gap
+energy was locally observed among the tetramers. Benzotriazole derivatives
+were substituted with hydrogen, -methyl, -ethyl, and -propyl for <bold>A16</bold>, <bold>A17</bold>, <bold>A18</bold>, and <bold>A19</bold>, respectively. With increasing of the steric hindrance in the alkyl
+group, the band gap energies of the tetramers also increase with an
+almost the same dihedral angle between the acceptor and bridge units.
+Substitution of the longer alkyl chains has advantages for the dissolving
+of the polymer in organic solutions for the film preparation for organic
+electronic applications; however, it causes a slight increase in the
+band gap energy that may hinder the efficiency of the device. However,
+the type and number of the substituents have an effect on the dihedral
+angle between the bridge and acceptor units. An additional two -methyl
+substitutions on the derivative of pyrazine promote an increase in
+the dihedral angle between the acceptor and bridge units on the tetramer
+from 9.6 to 11.9°, as can be observed in comparison of <bold>A23</bold> and <bold>A24</bold>. The same trend was also observed
+for the -ethoxy substituent on the derivatives of the benzothiadiazole
+for <bold>A10</bold> and <bold>A11</bold>. As shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S2</ext-link>, two -ethoxy substitutions for <bold>A11</bold> cause a 12.76° torsion between the acceptor and bridge
+units, while the corresponding dihedral angle of <bold>A10</bold> is
+7.24° with more planar conformation for the tetramer. Also, the <bold>A10</bold> tetramer presents a helical structure, while the tetramer
+of <bold>A11</bold> substituted by two groups has a more planar structure
+due to the lower dihedral angle. In addition, doubling the substituent
+creates symmetry and planarity, leading to the dipole moment (μ)
+of <bold>A11</bold> being higher (2.02) than the dipole moment of <bold>A10</bold> (1.54). Branched alkyl substituents such as 2-ethylhexyl,
+which are also widely used in these systems to enhance organic solubility
+and film morphologies, can decrease the planarity and alter the band
+gap slightly that was calculated as a 0.02 eV decrease in the band
+gap and 5° increase in the dihedral angle for <bold>A17</bold> by 2-ethylhexyl substitution.</p><p>Comparison of ESPs for <bold>A11</bold> and <bold>A10</bold> shows
+single substitution of the -ethoxy group makes the donor unit less
+positive, which can be also observed from the natural population analysis
+(NPA) charges of the units, which are given in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S2</ext-link>. However, fluorine atom substitution creates a different
+pattern for the planarity of the tetramer. <bold>A8</bold> and <bold>A9</bold>, which are the derivatives of the benzothiadiazole with
+one and two fluorine atoms, have the dihedral angle between the acceptor
+and bridge unit 2.3 and 0.8°, respectively, while the dihedral
+angle between the donor and the bridge of them was almost the same.
+Substitution of the second fluorine substituent increases the band
+gap energy from 1.92 to 1.95 eV with no change in dipole moment for
+the tetramers. Investigation of <bold>A17</bold> and <bold>A20</bold> showed that the alternation of two hydrogen atoms on the derivative
+of benzotriazole with fluorine has almost no effect on the dihedral
+angle or band gap energy; however, the dipole moment of the molecule
+has changed from 2.5 to 4.3. In addition, the same trend was also
+observed in a different type of acceptor, <bold>A22</bold> and <bold>A25</bold> as shown in <xref rid="tbl1" ref-type="table">Table <xref rid="tbl1" ref-type="table">1</xref></xref> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S2</ext-link>. By this way, deviations
+in the electronic characteristics of tetramers via control of the
+substituent type on the acceptor units were elucidated.</p><p>The
+bonding point has a role on the electronic character of the
+tetramers also. To investigate this behavior, the same acceptor unit
+with two different attaching points between the acceptor and bridge
+units were compared with <bold>A36</bold> and <bold>A37.</bold> A
+benzobis(thiazole) derivative is attached to the bridging unit from
+the benzene ring for <bold>A36</bold>, whereas the thiazole part is
+used for the attachment for <bold>A37</bold>. This positional alteration
+creates a dramatic increase in the dihedral angle between the donor
+and bridging units, in addition to a slight increase in the angle
+between the acceptor and bridging unit. As a result of the lowered
+planarity and shorter conjugation length of the tetramer, an energetically
+more stable form of the tetramer was constructed with the band gap
+energy increased from 0.7 to 2.1 eV as the position changed from the
+vertical to horizantal. Besides, from the dramatic increase in the
+band gap, WBI between donor and bridge units and acceptor and bridge
+units decreases, leading to a reduction in the electron delocalization
+of the tetramer. In addition to the alternation of substitution atom
+on acceptor, the change of the position of the acceptor units in the
+same tetramer was also examined. <bold>A30</bold> and <bold>A31</bold> were prepared by taking into account the position of the sulfur
+atom in the acceptor unit with respect to the sulfur atom in the thiophene
+as bridging unit. The tetramer of <bold>A31</bold> is designed as
+the thiophene part of the acceptor unit and is in the same directional
+orientation with two bridging thiophenes; this brings three sulfur
+atoms in a close position with respect to <bold>A31</bold>. This orientational
+change also creates electrostatic and dipole–dipole interaction
+between the oxygen atom of the acceptor and the hydrogen atom of the
+thiophene on the neighboring acceptor in <bold>A31</bold>. For the <bold>A30</bold> tetramer, the carbonyl oxygen creates a repulsion with
+the sulfur of the bridge unit. That is the reason that the energetically
+more stable form, <bold>A31</bold>, shows a lower band gap energy
+(2.22 eV) and better planarity with lower hyperpolarizability. It
+can be concluded that, in addition to the electronic properties of
+the tetramers, the direction of the acceptor units has a significant
+role on the morphology of the donor–acceptor conducting polymers.</p><p>The importance of comparison for oxygen, sulfur, and selenium substitutions
+in different acceptor units which have the same molecular structure
+for the rest of the system have been underlined and studied in literature.<sup><xref rid="ref70" ref-type="bibr">70</xref>,<xref rid="ref71" ref-type="bibr">71</xref></sup> Here, the comparison of oxygen, sulfur, and selenium was shown using
+benzochalcogens shown with <bold>A14</bold>, <bold>A6</bold>, and <bold>A13</bold>, respectively. Contrary to the previous study, results
+show that selenium substitution instead of the oxygen has a significant
+role on the planarity of the tetramer.<sup><xref rid="ref71" ref-type="bibr">71</xref></sup> The dihedral angle between the acceptor and bridge unit is 11.1°
+for <bold>A13</bold> and 1.9° for <bold>A14</bold>, whereas <bold>A6</bold> has 6.25° as dihedral angle with sulfur substitution.
+Increasing the atomic size in the substituent atom leads to a higher
+deviation from the planarity of the tetramers affecting the intermolecular
+charge transfer between the acceptor and donor unit. NPA-based charge
+transfer for tetramers gave 0.16, 0.11, and 0.10 for <bold>A14</bold>, <bold>A6</bold>, and <bold>A13</bold>, respectively. As represented
+in <xref rid="tbl1" ref-type="table">Table <xref rid="tbl1" ref-type="table">1</xref></xref> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S3</ext-link>, reorganization energy of <bold>A14</bold>, which is an important parameter for the organic electronic device
+efficiency, is the lowest in this comparison, leading the higher efficiency
+potential for OPV application as a result of higher charge transfer
+and charge mobility. To set more general rules about oxygen, sulfur,
+and selenium containing units, larger and smaller acceptor units were
+investigated to exclude the acceptor unit size effect. The trend for
+the enhanced planarity for the smaller chalcogen substitution were
+validated for the second and third sets of acceptor units with different
+substitutions, <bold>A38</bold>, <bold>A41</bold>, and <bold>A42</bold> for oxadiazole, thiadiazole, or selenodiazole ring comparison in
+relatively larger structures, in addition to the <bold>A1</bold> and <bold>A2</bold> for oxadiazole and thiadiazole in relatively smaller acceptor
+unit structures. In addition, comparison of <bold>A47</bold> and <bold>A48</bold> showed that the increase in the number of aromatic rings
+does not have a significant role on the reorganization energy of the
+donor–acceptor polymers as shown in <xref rid="tbl1" ref-type="table">Table <xref rid="tbl1" ref-type="table">1</xref></xref> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S6</ext-link>.</p><p>The impact of the insertion of π-electron deficient atoms
+was investigated by replacement of sp<sup>2</sup> carbon atom by a
+more electronegative imine nitrogen atom in the aromatic ring of the
+acceptor units. <bold>A7</bold>, having the only structural difference
+from <bold>A6</bold> as the nitrogen atom on the pyridine ring, showed
+a higher vertical electron affinity (VEA), and the higher charge transfer
+between the acceptor and donor units. The higher electronegativity
+of nitrogen atom and its incorporation into the polymeric backbone
+provides a lower band gap energy, deeper-positioned HOMO–LUMO
+energy levels, resulting in a better, stronger acceptor unit for the
+organic electronic applications as reported previously.<sup><xref rid="ref49" ref-type="bibr">49</xref></sup> Besides, the pyridine ring fused to the thiadiazol
+ring; the same trends were also observed for the comparison of quinoxaline
+(<bold>A22</bold>) with <bold>A23</bold> with the replacement of a
+carbon atom by nitrogen atom. The comparison of the <bold>A49</bold>, <bold>A50</bold>, and <bold>A51</bold> showed that the second additional
+electron deficient atom elevates the acceptor strength of the units
+even for large fused systems. Tetramers containing imide-functionalized
+arene structures are affected from this replacement, keeping the band
+gap energy almost the same (∼2.22 eV), with an enhanced planarity
+of the backbone due to the decreasing dihedral angle between the bridge
+and acceptor unit (15.9°, 9.6°, and 1.2°, respectively).
+This observation can be explained by the stronger intramolecular noncovalent
+interactions between the sulfur atom in the bridge and the nitrogen
+atoms on both sides of the acceptor unit on <bold>A51</bold> that
+promotes a backbone planarity and transfer of electron density as
+shown in ESP images of the <bold>A49</bold>, <bold>A50</bold>, and <bold>A51</bold> in <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>a.</p><fig id="fig3" position="float"><?disp-level 2?><label>Figure 3</label><caption><p>(a) ESP surface of the A49, A50, and A51. (b) LUMO and HOMO distributions
+on the acceptor and donor of the A52. (c) Overlappings of the HOMO
+and LUMO frontier orbitals of A30 and A32.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr3" xlink:href="ao2c04713_0003.jpg"><?cloudpmc-path blobs/288c/9631416/563f4cd14e48/ao2c04713_0003.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1148?><?original-width 1500?><?scaled-height 574?><?scaled-width 750?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ao2c04713_0003.gif"><?cloudpmc-path blobs/288c/9631416/28e98dfa5bdf/ao2c04713_0003.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Fusion of heteroatomic aromatic rings with a higher
+resonance energy
+have been used in the literature to increase the quinoid character
+of the neutral state for the donor–acceptor conjugated polymers.<sup><xref rid="ref66" ref-type="bibr">66</xref></sup> To investigate the effect of the fused electron
+accepting units, tetramers containing acceptor units with fused rings, <bold>A12</bold> and <bold>A21</bold>, were compared with the tetramers
+which contain their nonfused counterparts, <bold>A6</bold> and <bold>A17</bold>, respectively. The presence of fused ring acceptor units
+from the benzene ring with thiazole and methyl triazole ring units
+in tetramers elevates the hyperpolarizability about two times, whereas
+the planarity of the tetramers slightly decreased for both <bold>A12</bold> and <bold>A21</bold>. Fusion of the rings decreased the molecular
+hole reorganization energy from 0.09 to 0.08 for both <bold>A6</bold> and <bold>A12</bold> and for <bold>A17</bold> and <bold>A21</bold>, resulting in the enhanced both intra- and intermolecular charge
+hopping, thereby the increasing charge carrier mobility as shown in <xref rid="tbl1" ref-type="table">Table <xref rid="tbl1" ref-type="table">1</xref></xref> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S6</ext-link>. Total atomic charge on the donor and acceptor units
+measured by the NPA analysis also presents that the intermolecular
+charge transfer between the donor and the acceptor units also increased
+with the insertion of the fused acceptor units into the donor–acceptor
+conjugated polymer systems as shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S2</ext-link>. The same enhancement for the two different sets for the acceptor
+units shows that increasing aromaticity of the system by fusing the
+aromatic structures is independent from the type of the acceptor units.
+Due to these improved electronic properties, the acceptor units with
+fused aromatic structures attracting more attention in the recent
+literature of organic solar cell applications. In addition to these, <bold>A4</bold> and <bold>A5</bold> that contain the derivative of the
+thiazolothiazole and bithiazole, respectively, reveal another perspective
+about the fusion of the units. <bold>A4</bold> has a fused ring, which
+has a rigid planar structure, and <bold>A5</bold> has two thiazole
+rings, which are bonded to each other with a single bond. Contrary
+to the previous fused systems, <bold>A5</bold> yields hyperpolarizability
+almost two times higher than <bold>A4</bold>, resulting in the higher
+band gap energy. The planarity of <bold>A5</bold> is lower than the
+planarity of <bold>A4</bold>, even though the dihedral angle between
+the thiazole rings in <bold>A5</bold> is close to 180°. Although
+it has decreased planarity and higher band gap, <bold>A5</bold> has
+a lower reorganization energy than that of <bold>A4</bold>, probably
+due to the extended interchain π-conjugation along the polymeric
+backbone.<sup><xref rid="ref17" ref-type="bibr">17</xref></sup> Another fused system is a derivative
+of an isoindigo unit, <bold>A34</bold>, which has been especially
+widely used in the electrochromism due to the huge π-system
+and yielded 1.99 eV band gap energy with a moderate planarity for
+the tetramer resulting in 13.84° as dihedral angle between the
+donor and the bridge unit. Among all teramers, polycyclic molecules
+such as <bold>A38</bold>, <bold>A36</bold>, and <bold>A43</bold> has
+the lowest band gap energies, lower than 1.0 eV, which can be potential
+candidates for the OPV applications. On the contrary, tetramers have
+acceptor units of <bold>A1</bold> and <bold>A35</bold>, having band
+gap energies higher than 2.5 eV and acting as potential acceptor units
+for the OLED applications.</p><p>Molecular orbital surfaces of HOMO
+and LUMO for the optimized geometries
+of tetramers of ten selected tetramers with different acceptor units
+were given in <xref rid="fig4" ref-type="fig">Figure <xref rid="fig4" ref-type="fig">4</xref></xref>. Frontier orbitals of 52 tetramers that are utilized in this study
+can be found in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Figure S2</ext-link>. As a general
+trend, HOMO orbitals were delocalized along the chain for tetramers
+instead for localizing on the donor–acceptor units. LUMO orbitals
+were also delocalized, however less than HOMO, where LUMO orbitals
+are still mostly placed on the acceptor units as expected. Comparison
+of <bold>A39</bold> and <bold>A43</bold> shows the LUMO orbitals localization
+on the acceptor units as the elements in acceptor units become more
+electronegative. The percentage distribution of LUMO on the acceptor
+was changed from 53 to 71% when a sulfur atom is replaced with the
+nitrogen atom in the acceptor unit with respect to the Mulliken orbital
+composition analysis results. As shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S4</ext-link>, the distribution of the molecular orbitals was calculated
+using three partition schemes, Mulliken, Stout–Politzer, and
+Ros–Schuit, and results of the three analysis methods are close
+to each other for almost all tetramers. Localization of LUMO on acceptor
+units by changing the electronegativity of the substituent atoms in
+the acceptor unit can also be observed for the comparison of <bold>A6</bold>, <bold>A8</bold>, and <bold>A9</bold>. For benzothiadiazole
+(<bold>A6</bold>) the distribution percentage of the LUMO on the acceptor
+unit is 60 by Mulliken orbital composition analysis, and it rises
+to 62 and 64 when hydrogen atom is changed with one and two fluorine
+atoms as substituent, respectively. One of the highest differences
+in the percentage distribution belongs to <bold>A52</bold> with the
+band gap energy as 1.70 eV and the HOMO composition is on donor units
+by 92.95, 91.71, and 91.13%, whereas the LUMO distribution is positioned
+on the acceptor units by 85.27, 85.54, and 82.79% for Mulliken, Stout–Politzer,
+and Ros–Schuit, respectively. The repetitive pattern in the
+distribution of HOMO and LUMO on the tetramer with a higher localization
+percentage of frontier orbitals on acceptor and donor units are given
+for <bold>A52</bold> in <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>b. This type of frontier orbital distribution provides an
+enhanced intramolecular charge transfer resulting in improved experimentally
+observed photovoltaic device performance for <bold>A52</bold>.<sup><xref rid="ref72" ref-type="bibr">72</xref></sup> In <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>c, the HOMO and LUMO frontier orbitals are changing
+with a change in the position of the substitutional group to the thiophene
+group as acceptor unit. <bold>A30</bold> and <bold>A32</bold> both
+lead to an interaction between the sulfur atom on the thiophene as
+bridging unit and carbonyl oxygen of the acceptor unit. The distances
+of thienyl sulfur to carbonyl oxygen were calculated as 2.99 and 2.66
+Å for <bold>A30</bold> and <bold>A32</bold>, respectively. The
+decrease in the distance between the thienyl sulfur and carbonyl oxygen
+provides an enhancement in the overlapping of the HOMO and LUMO orbitals
+on the conjugated backbone for <bold>A32</bold>. The dihedral angles
+between the acceptor and the bridge unit were calculated as 1.9 and
+20.8° for <bold>A30</bold> and <bold>A32</bold>, respectively.
+The lowered planarity indicates that the increasing interaction between
+thienyl sulfur and carbonyl oxygen as well as the overlapping of the
+orbitals on substitutional groups in the polymeric backbone as a result
+of the conformational change in the carbonyl oxygen in acceptor units.
+The same trend can also be observed for the comparison of <bold>A29</bold> and <bold>A44</bold>.</p><fig id="fig4" position="float"><?disp-level 2?><label>Figure 4</label><caption><p>HOMO and LUMO isosurfaces of 10 selected tetramers
+with different
+acceptor units.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr4" xlink:href="ao2c04713_0004.jpg"><?cloudpmc-path blobs/288c/9631416/2ff16291fc0e/ao2c04713_0004.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 982?><?original-width 1000?><?scaled-height 654?><?scaled-width 666?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ao2c04713_0004.gif"><?cloudpmc-path blobs/288c/9631416/d69782c70c25/ao2c04713_0004.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>ESP surfaces of the molecular
+orbitals were given in <xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>, showing well-ordered and
+sequential distribution of electron rich (red) donor and electron
+deficient (blue) acceptor sites given for the 10 selected tetramers
+out of 52. ESP surfaces for all of the tetramers modeled in this study
+can be found in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Figure S3</ext-link>. Localization
+of the electron deficient part on the acceptor units represented by
+the blue color in the electrostatic potential surface leads to the
+better acceptor properties. Thus, the enhancement of the charge transfer
+between the different acceptor units and the fixed donor unit has
+emerged as one of the methods for convenient HOMO–LUMO engineering
+for the donor–acceptor polymers. Higher localization of the
+electron deficient part on the acceptor units and electron rich part
+on the donor unit can be defined as an indication for the strength
+of the donor or acceptor units related to the excess of the intramolecular
+charge transfer between these units. The total average atomic charges
+by ESP and NPA charges on one acceptor unit and one donor unit in
+the middle of the tetramers were calculated by neglecting end group
+donor–acceptor units to avoid end group effect. Results showed
+that the NPA charges were more convenient for comparing the charge
+transfer between the donor and acceptor units, since almost all of
+the acceptor units in the tetramers showed electron deficient behavior,
+and most of the donor units have positive NPA charges, as expected.
+The reason for the NPA charges gives more convenient results than
+the NBO method, which is an orbital-dependent technique that is based
+on the method for optimally transforming a given wave function into
+localized form, corresponding to the center of the atom.<sup><xref rid="ref73" ref-type="bibr">73</xref></sup> Atomic charges based on ESP fitting, on the
+other hand, were not properly distributed atomic charges since it
+is based on the molecular electrostatic potential fitting with respect
+to the atom radius in a system with several neighboring electron rich
+and deficient sites around the molecule. Calculated grid points are
+located on some layers around the molecule, and these layers are constructed
+as an overlap of van der Waals spheres around each atom with different
+electronic characters.<sup><xref rid="ref74" ref-type="bibr">74</xref></sup> This shows ESP
+charges on the corresponding atoms can be affected by the other atoms
+on the tetramer and result in weaker charge distribution. In addition
+to that, the ESP method is highly functional and basis set dependent,
+leading to the deviation of results with different advanced functional
+and basis sets. To investigate the origin of this observation, the
+monomer of the acceptors with fixed donor and bridge units is also
+constructed in BABD structural form. ESP charge distribution for the
+monomers was given in the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">Table S3</ext-link>.</p><fig id="fig5" position="float"><?disp-level 2?><label>Figure 5</label><caption><p>ESP surface
+of 10 selected
+tetramers with different acceptor units.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr5" xlink:href="ao2c04713_0005.jpg"><?cloudpmc-path blobs/288c/9631416/e969962e0b43/ao2c04713_0005.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1647?><?original-width 835?><?scaled-height 1097?><?scaled-width 556?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="ao2c04713_0005.gif"><?cloudpmc-path blobs/288c/9631416/921a55261fbf/ao2c04713_0005.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig></sec><sec id="sec4" disp-level="1"><title>Conclusions</title><p>The most widely used 52 acceptor units
+in the donor–acceptor
+conjugated polymers systems were investigated to determine general
+rules for the electronic and structural properties using first principles
+calculations. The same functional and basis sets were used for structural
+optimization and further calculations for the first time on the many
+acceptors that were prepared by the same way to provide more comparable
+results between them. The generalization of the results of the different
+structures of the acceptors showed that the band gap energy has a
+direct relation with the planarity of the backbone, bond index between
+D–B–A and the hyperpolarizability of the chains among
+the alternating acceptor units with fixed donor and bridge units.
+The optimized structures, HOMO and LUMO frontier orbital levels, the
+distribution of these frontier orbitals, and reorganization energies
+of the tetramers can be tailored for the donor–acceptor conjugated
+polymers by the control of acceptor group for the engineering of structure
+and properties for the organic electronic applications.</p></sec><sec id="ack1" sec-type="ack" disp-level="1"><title>Acknowledgments</title><p>We gratefully acknowledge support from the
+2232
+International Fellowship for Outstanding Researchers Program of TÜBİTAK
+(Project No. 118C251). The calculations reported in this work were
+partially performed at TUBITAK ULAKBIM, High Performance and Grid
+Computing Center (TRUBA).</p></sec><sec id="notes1" disp-level="1"><title>Supporting Information Available</title><p>The Supporting Information is
+available free of charge at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/10.1021/acsomega.2c04713?goto=supporting-info" ext-link-type="uri">https://pubs.acs.org/doi/10.1021/acsomega.2c04713</ext-link>.</p><list list-type="simple" id="silist"><list-item><p>HOMO, HOMO–1, LUMO,
+and LUMO+1 frontier orbitals;
+ESP; dihedral angles; band gap energy; optical band gap energy; dipole
+moment; polarizability; anisotropic polarizability; hyperpolarizability;
+VIP; AIP; VEA; reorganization energies; NPA charges of units; HOMO
+and LUMO distribution percentages (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_001.pdf" ext-link-type="uri">PDF</ext-link>)</p></list-item><list-item><p>Geometry optimized structures for the (D–B–A–B)<sub>4</sub> (D, donor; A, acceptor; B, bridge) tetramers (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acsomega.2c04713/suppl_file/ao2c04713_si_002.zip" ext-link-type="uri">ZIP</ext-link>)</p></list-item></list></sec><sec id="notes3" disp-level="1"><p>The authors
+declare no competing financial interest.</p></sec><sec id="sec5" disp-level="1"><title>Supplementary Material</title><supplementary-material id="sifile1" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao2c04713_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 288c/9631416/9ad7b950d2d1/ao2c04713_si_001.pdf?><?cloudpmc-bucket app?><?size 4256555?><caption><p>ao2c04713_si_001.pdf</p></caption></media></supplementary-material><supplementary-material id="sifile2" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao2c04713_si_002.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path 288c/9631416/0ac9abfbe0ea/ao2c04713_si_002.zip?><?cloudpmc-bucket app?><?size 260531?><caption><p>ao2c04713_si_002.zip</p></caption></media></supplementary-material></sec><sec id="ref-list1" sec-type="ref-list" disp-level="1"><title>References</title><sec id="ref-list1_sec2" disp-level="2"><ref-list><ref id="ref1"><mixed-citation id="cit1"><named-content content-type="citation-string">Lee E. K.; Lee M. Y.; Park C. H.; Lee H. R.; Oh J. H.
+Toward
+Environmentally Robust Organic Electronics: Approaches and Applications. Adv. Mater.
+2017, 29 (44), 1703638. 10.1002/adma.201703638.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/adma.201703638"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28960531"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Mater.&amp;title=Toward Environmentally Robust Organic Electronics: Approaches and Applications&amp;author=E. K. Lee&amp;author=M. Y. Lee&amp;author=C. H. Park&amp;author=H. R. Lee&amp;author=J. H. Oh&amp;volume=29&amp;issue=44&amp;publication_year=2017&amp;pages=1703638&amp;pmid=28960531&amp;doi=10.1002/adma.201703638&amp;"/></mixed-citation></ref><ref id="ref2"><mixed-citation id="cit2"><named-content content-type="citation-string">Chua M. H.; Zhu Q.; Tang T.; Shah K. W.; Xu J.
+Diversity of Electron
+Acceptor Groups in Donor-Acceptor Type Electrochromic Conjugated Polymers. Sol. Energy Mater. Sol. Cells
+2019, 197, 32–75. 10.1016/j.solmat.2019.04.002.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.solmat.2019.04.002"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Sol. Energy Mater. Sol. Cells&amp;title=Diversity of Electron Acceptor Groups in Donor-Acceptor Type Electrochromic Conjugated Polymers&amp;author=M. H. Chua&amp;author=Q. Zhu&amp;author=T. Tang&amp;author=K. W. Shah&amp;author=J. Xu&amp;volume=197&amp;publication_year=2019&amp;pages=32-75&amp;doi=10.1016/j.solmat.2019.04.002&amp;"/></mixed-citation></ref><ref id="ref3"><mixed-citation id="cit3"><named-content content-type="citation-string">Peng H.; Sun X.; Weng W.; Fang X.. Synthesis and Design of Conjugated
+Polymers for Organic
+Electronics. InPolymer Materials for Energy
+and Electronic Applications; Elsevier, 2017; pp 9–61 10.1016/B978-0-12-811091-1.00002-1.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/B978-0-12-811091-1.00002-1"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="title=Polymer Materials for Energy and Electronic Applications&amp;publication_year=2017&amp;"/></mixed-citation></ref><ref id="ref4"><mixed-citation id="cit4"><named-content content-type="citation-string">Grimsdale A. C.; Chan K. L.; Martin R. E.; Jokisz P. G.; Holmes A. B.
+Synthesis
+of Light-Emitting Conjugated Polymers for Applications in Electroluminescent
+Devices. Chem. Rev.
+2009, 109, 897–1091. 10.1021/cr000013v.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cr000013v"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19228015"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Rev.&amp;title=Synthesis of Light-Emitting Conjugated Polymers for Applications in Electroluminescent Devices&amp;author=A. C. Grimsdale&amp;author=K. L. Chan&amp;author=R. E. Martin&amp;author=P. G. Jokisz&amp;author=A. B. Holmes&amp;volume=109&amp;publication_year=2009&amp;pages=897-1091&amp;pmid=19228015&amp;doi=10.1021/cr000013v&amp;"/></mixed-citation></ref><ref id="ref5"><mixed-citation id="cit5"><named-content content-type="citation-string">Deng X.-Y.
+Light-Emitting
+Devices with Conjugated Polymers. Int. J. Mol.
+Sci.
+2011, 12 (3), 1575–1594. 10.3390/ijms12031575.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3390/ijms12031575"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC3111619"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="21673908"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Int. J. Mol. Sci.&amp;title=Light-Emitting Devices with Conjugated Polymers&amp;author=X.-Y. Deng&amp;volume=12&amp;issue=3&amp;publication_year=2011&amp;pages=1575-1594&amp;pmid=21673908&amp;doi=10.3390/ijms12031575&amp;"/></mixed-citation></ref><ref id="ref6"><mixed-citation id="cit6"><named-content content-type="citation-string">Durmus A.; Gunbas G. E.; Toppare L.
+New, Highly Stable Electrochromic
+Polymers from 3,4-Ethylenedioxythiophene- Bis-Substituted Quinoxalines
+toward Green Polymeric Materials. Chem. Mater.
+2007, 19 (25), 6247–6251. 10.1021/cm702143c.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cm702143c"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=New, Highly Stable Electrochromic Polymers from 3,4-Ethylenedioxythiophene- Bis-Substituted Quinoxalines toward Green Polymeric Materials&amp;author=A. Durmus&amp;author=G. E. Gunbas&amp;author=L. Toppare&amp;volume=19&amp;issue=25&amp;publication_year=2007&amp;pages=6247-6251&amp;doi=10.1021/cm702143c&amp;"/></mixed-citation></ref><ref id="ref7"><mixed-citation id="cit7"><named-content content-type="citation-string">Wang C.; Dong H.; Hu W.; Liu Y.; Zhu D.
+Semiconducting
+π-Conjugated Systems in Field-Effect Transistors: A Material
+Odyssey of Organic Electronics. Chem. Rev.
+2012, 112, 2208–2267. 10.1021/cr100380z.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cr100380z"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="22111507"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Rev.&amp;title=Semiconducting π-Conjugated Systems in Field-Effect Transistors: A Material Odyssey of Organic Electronics&amp;author=C. Wang&amp;author=H. Dong&amp;author=W. Hu&amp;author=Y. Liu&amp;author=D. Zhu&amp;volume=112&amp;publication_year=2012&amp;pages=2208-2267&amp;pmid=22111507&amp;doi=10.1021/cr100380z&amp;"/></mixed-citation></ref><ref id="ref8"><mixed-citation id="cit8"><named-content content-type="citation-string">Shi L.; Guo Y.; Hu W.; Liu Y.
+Design and Effective Synthesis Methods
+for High-Performance Polymer Semiconductors in Organic Field-Effect
+Transistors. Mater. Chem. Front.
+2017, 1, 2423–2456. 10.1039/C7QM00169J.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C7QM00169J"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mater. Chem. Front.&amp;title=Design and Effective Synthesis Methods for High-Performance Polymer Semiconductors in Organic Field-Effect Transistors&amp;author=L. Shi&amp;author=Y. Guo&amp;author=W. Hu&amp;author=Y. Liu&amp;volume=1&amp;publication_year=2017&amp;pages=2423-2456&amp;doi=10.1039/C7QM00169J&amp;"/></mixed-citation></ref><ref id="ref9"><mixed-citation id="cit9"><named-content content-type="citation-string">Li Y.
+Molecular
+Design of Photovoltaic Materials for Polymer Solar Cells: Toward Suitable
+Electronic Energy Levels and Broad Absorption. Acc. Chem. Res.
+2012, 45 (5), 723–733. 10.1021/ar2002446.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ar2002446"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="22288572"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Acc. Chem. Res.&amp;title=Molecular Design of Photovoltaic Materials for Polymer Solar Cells: Toward Suitable Electronic Energy Levels and Broad Absorption&amp;author=Y. Li&amp;volume=45&amp;issue=5&amp;publication_year=2012&amp;pages=723-733&amp;pmid=22288572&amp;doi=10.1021/ar2002446&amp;"/></mixed-citation></ref><ref id="ref10"><mixed-citation id="cit10"><named-content content-type="citation-string">Wu J. S.; Cheng S. W.; Cheng Y. J.; Hsu C. S.
+Donor-Acceptor Conjugated
+Polymers Based on Multifused Ladder-Type Arenes for Organic Solar
+Cells. Chem. Soc. Rev.
+2015, 44 (5), 1113–1154. 10.1039/C4CS00250D.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C4CS00250D"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25322211"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Soc. Rev.&amp;title=Donor-Acceptor Conjugated Polymers Based on Multifused Ladder-Type Arenes for Organic Solar Cells&amp;author=J. S. Wu&amp;author=S. W. Cheng&amp;author=Y. J. Cheng&amp;author=C. S. Hsu&amp;volume=44&amp;issue=5&amp;publication_year=2015&amp;pages=1113-1154&amp;pmid=25322211&amp;doi=10.1039/C4CS00250D&amp;"/></mixed-citation></ref><ref id="ref11"><mixed-citation id="cit11"><named-content content-type="citation-string">Zhang J.; Jin J.; Xu H.; Zhang Q.; Huang W.
+Recent Progress on
+Organic Donor-Acceptor Complexes as Active Elements in Organic Field-Effect
+Transistors. J. Mater. Chem. C
+2018, 6, 3485. 10.1039/C7TC04389A.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C7TC04389A"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mater. Chem. C&amp;title=Recent Progress on Organic Donor-Acceptor Complexes as Active Elements in Organic Field-Effect Transistors&amp;author=J. Zhang&amp;author=J. Jin&amp;author=H. Xu&amp;author=Q. Zhang&amp;author=W. Huang&amp;volume=6&amp;publication_year=2018&amp;pages=3485&amp;doi=10.1039/C7TC04389A&amp;"/></mixed-citation></ref><ref id="ref12"><mixed-citation id="cit12"><named-content content-type="citation-string">Yu F.; Liu W.; Ke S.-W.; Kurmoo M.; Zuo J.-L.; Zhang Q.
+Electrochromic
+Two-Dimensional Covalent Organic Framework with a Reversible Dark-to-Transparent
+Switch. Nat. Commun.
+2020, 11, 5534. 10.1038/s41467-020-19315-6.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/s41467-020-19315-6"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7608553"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33139714"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nat. Commun.&amp;title=Electrochromic Two-Dimensional Covalent Organic Framework with a Reversible Dark-to-Transparent Switch&amp;author=F. Yu&amp;author=W. Liu&amp;author=S.-W. Ke&amp;author=M. Kurmoo&amp;author=J.-L. Zuo&amp;volume=11&amp;publication_year=2020&amp;pages=5534&amp;pmid=33139714&amp;doi=10.1038/s41467-020-19315-6&amp;"/></mixed-citation></ref><ref id="ref13"><mixed-citation id="cit13"><named-content content-type="citation-string">Lin L.; Morisaki Y.; Chujo Y.
+New Type of Donor-Acceptor through-Space
+Conjugated Polymer. Int. J. Polym. Sci.
+2010, 2010, 1. 10.1155/2010/908128.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1155/2010/908128"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Int. J. Polym. Sci.&amp;title=New Type of Donor-Acceptor through-Space Conjugated Polymer&amp;author=L. Lin&amp;author=Y. Morisaki&amp;author=Y. Chujo&amp;volume=2010&amp;publication_year=2010&amp;pages=1&amp;doi=10.1155/2010/908128&amp;"/></mixed-citation></ref><ref id="ref14"><mixed-citation id="cit14"><named-content content-type="citation-string">Li P.; Hu D.; Xie D.; Chen J.; Jin L.; Song B.
+Design, Synthesis,
+and Evaluation of New Sulfone Derivatives Containing a 1,3,4-Oxadiazole
+Moiety as Active Antibacterial Agents. J. Agric.
+Food Chem.
+2018, 66 (12), 3093–3100. 10.1021/acs.jafc.7b06061.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jafc.7b06061"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29502398"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Agric. Food Chem.&amp;title=Design, Synthesis, and Evaluation of New Sulfone Derivatives Containing a 1,3,4-Oxadiazole Moiety as Active Antibacterial Agents&amp;author=P. Li&amp;author=D. Hu&amp;author=D. Xie&amp;author=J. Chen&amp;author=L. Jin&amp;volume=66&amp;issue=12&amp;publication_year=2018&amp;pages=3093-3100&amp;pmid=29502398&amp;doi=10.1021/acs.jafc.7b06061&amp;"/></mixed-citation></ref><ref id="ref15"><mixed-citation id="cit15"><named-content content-type="citation-string">Xu X.; Yu T.; Bi Z.; Ma W.; Li Y.; Peng Q.
+Realizing
+Over 13% Efficiency in Green-Solvent-Processed Nonfullerene Organic
+Solar Cells Enabled by 1,3,4-Thiadiazole-Based Wide-Bandgap Copolymers. Adv. Mater.
+2018, 30 (3), 1703973. 10.1002/adma.201703973.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/adma.201703973"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29210113"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Mater.&amp;title=Realizing Over 13% Efficiency in Green-Solvent-Processed Nonfullerene Organic Solar Cells Enabled by 1,3,4-Thiadiazole-Based Wide-Bandgap Copolymers&amp;author=X. Xu&amp;author=T. Yu&amp;author=Z. Bi&amp;author=W. Ma&amp;author=Y. Li&amp;volume=30&amp;issue=3&amp;publication_year=2018&amp;pages=1703973&amp;pmid=29210113&amp;doi=10.1002/adma.201703973&amp;"/></mixed-citation></ref><ref id="ref16"><mixed-citation id="cit16"><named-content content-type="citation-string">Nazim M.; Ameen S.; Akhtar M. S.; Khaja Nazeeruddin M.; Shin H. S.
+Tuning Electronic Structures of Thiazolo[5,4-d]Thiazole-Based
+Hole-Transporting Materials for Efficient Perovskite Solar Cells. Sol. Energy Mater. Sol. Cells
+2018, 180, 334–342. 10.1016/j.solmat.2017.07.016.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.solmat.2017.07.016"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Sol. Energy Mater. Sol. Cells&amp;title=Tuning Electronic Structures of Thiazolo[5,4-d]Thiazole-Based Hole-Transporting Materials for Efficient Perovskite Solar Cells&amp;author=M. Nazim&amp;author=S. Ameen&amp;author=M. S. Akhtar&amp;author=M. Khaja Nazeeruddin&amp;author=H. S. Shin&amp;volume=180&amp;publication_year=2018&amp;pages=334-342&amp;doi=10.1016/j.solmat.2017.07.016&amp;"/></mixed-citation></ref><ref id="ref17"><mixed-citation id="cit17"><named-content content-type="citation-string">Fu B.; Wang C. Y.; Rose B. D.; Jiang Y.; Chang M.; Chu P. H.; Yuan Z.; Fuentes-Hernandez C.; Kippelen B.; Brédas J. L.; Collard D. M.; Reichmanis E.
+Molecular
+Engineering of Nonhalogenated Solution-Processable Bithiazole-Based
+Electron-Transport Polymeric Semiconductors. Chem. Mater.
+2015, 27 (8), 2928–2937. 10.1021/acs.chemmater.5b00173.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.chemmater.5b00173"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=Molecular Engineering of Nonhalogenated Solution-Processable Bithiazole-Based Electron-Transport Polymeric Semiconductors&amp;author=B. Fu&amp;author=C. Y. Wang&amp;author=B. D. Rose&amp;author=Y. Jiang&amp;author=M. Chang&amp;volume=27&amp;issue=8&amp;publication_year=2015&amp;pages=2928-2937&amp;doi=10.1021/acs.chemmater.5b00173&amp;"/></mixed-citation></ref><ref id="ref18"><mixed-citation id="cit18"><named-content content-type="citation-string">Cheng Y. J.; Yang S. H.; Hsu C. S.
+Synthesis of Conjugated
+Polymers
+for Organic Solar Cell Applications. Chem. Rev.
+2009, 109 (11), 5868–5923. 10.1021/cr900182s.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cr900182s"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19785455"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Rev.&amp;title=Synthesis of Conjugated Polymers for Organic Solar Cell Applications&amp;author=Y. J. Cheng&amp;author=S. H. Yang&amp;author=C. S. Hsu&amp;volume=109&amp;issue=11&amp;publication_year=2009&amp;pages=5868-5923&amp;pmid=19785455&amp;doi=10.1021/cr900182s&amp;"/></mixed-citation></ref><ref id="ref19"><mixed-citation id="cit19"><named-content content-type="citation-string">Ming S.; Zhen S.; Lin K.; Zhao L.; Xu J.; Lu B.
+Thiadiazolo[3,4- c]Pyridine
+as an Acceptor toward Fast-Switching
+Green Donor-Acceptor-Type Electrochromic Polymer with Low Bandgap. ACS Appl. Mater. Interfaces
+2015, 7 (21), 11089–11098. 10.1021/acsami.5b01188.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsami.5b01188"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25955881"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ACS Appl. Mater. Interfaces&amp;title=Thiadiazolo[3,4- c]Pyridine as an Acceptor toward Fast-Switching Green Donor-Acceptor-Type Electrochromic Polymer with Low Bandgap&amp;author=S. Ming&amp;author=S. Zhen&amp;author=K. Lin&amp;author=L. Zhao&amp;author=J. Xu&amp;volume=7&amp;issue=21&amp;publication_year=2015&amp;pages=11089-11098&amp;pmid=25955881&amp;doi=10.1021/acsami.5b01188&amp;"/></mixed-citation></ref><ref id="ref20"><mixed-citation id="cit20"><named-content content-type="citation-string">Zhou C.; Zhang G.; Zhong C.; Jia X.; Luo P.; Xu R.; Gao K.; Jiang X.; Liu F.; Russell T. P.; Huang F.; Cao Y.
+Toward High Efficiency
+Polymer Solar
+Cells: Influence of Local Chemical Environment and Morphology. Adv. Energy Mater.
+2017, 7 (1), 1601081. 10.1002/aenm.201601081.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/aenm.201601081"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Energy Mater.&amp;title=Toward High Efficiency Polymer Solar Cells: Influence of Local Chemical Environment and Morphology&amp;author=C. Zhou&amp;author=G. Zhang&amp;author=C. Zhong&amp;author=X. Jia&amp;author=P. Luo&amp;volume=7&amp;issue=1&amp;publication_year=2017&amp;pages=1601081&amp;doi=10.1002/aenm.201601081&amp;"/></mixed-citation></ref><ref id="ref21"><mixed-citation id="cit21"><named-content content-type="citation-string">Asanuma Y.; Mori H.; Nishihara Y.
+Transistor Properties of Semiconducting
+Polymers Based on Vinylene-Bridged Difluorobenzo[c][1,2,5]Thiadiazole
+(FBTzE). Chem. Lett.
+2019, 48 (9), 1029–1031. 10.1246/cl.190304.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1246/cl.190304"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Lett.&amp;title=Transistor Properties of Semiconducting Polymers Based on Vinylene-Bridged Difluorobenzo[c][1,2,5]Thiadiazole (FBTzE)&amp;author=Y. Asanuma&amp;author=H. Mori&amp;author=Y. Nishihara&amp;volume=48&amp;issue=9&amp;publication_year=2019&amp;pages=1029-1031&amp;doi=10.1246/cl.190304&amp;"/></mixed-citation></ref><ref id="ref22"><mixed-citation id="cit22"><named-content content-type="citation-string">Sendur M.; Balan A.; Baran D.; Karabay B.; Toppare L.
+Combination
+of Donor Characters in a Donor-Acceptor-Donor (DAD) Type Polymer Containing
+Benzothiadiazole as the Acceptor Unit. Org.
+Electron.
+2010, 11 (12), 1877–1885. 10.1016/j.orgel.2010.09.001.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.orgel.2010.09.001"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Org. Electron.&amp;title=Combination of Donor Characters in a Donor-Acceptor-Donor (DAD) Type Polymer Containing Benzothiadiazole as the Acceptor Unit&amp;author=M. Sendur&amp;author=A. Balan&amp;author=D. Baran&amp;author=B. Karabay&amp;author=L. Toppare&amp;volume=11&amp;issue=12&amp;publication_year=2010&amp;pages=1877-1885&amp;doi=10.1016/j.orgel.2010.09.001&amp;"/></mixed-citation></ref><ref id="ref23"><mixed-citation id="cit23"><named-content content-type="citation-string">Zhong Z.; Li K.; Zhang J.; Ying L.; Xie R.; Yu G.; Huang F.; Cao Y.
+High-Performance All-Polymer
+Photodetectors
+via a Thick Photoactive Layer Strategy. ACS
+Appl. Mater. Interfaces
+2019, 11 (15), 14208–14214. 10.1021/acsami.9b02092.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsami.9b02092"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30908001"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ACS Appl. Mater. Interfaces&amp;title=High-Performance All-Polymer Photodetectors via a Thick Photoactive Layer Strategy&amp;author=Z. Zhong&amp;author=K. Li&amp;author=J. Zhang&amp;author=L. Ying&amp;author=R. Xie&amp;volume=11&amp;issue=15&amp;publication_year=2019&amp;pages=14208-14214&amp;pmid=30908001&amp;doi=10.1021/acsami.9b02092&amp;"/></mixed-citation></ref><ref id="ref24"><mixed-citation id="cit24"><named-content content-type="citation-string">Yao S.; Kim B.; Yue X.; Colon Gomez M. Y.; Bondar M. V.; Belfield K. D.
+Synthesis
+of Near-Infrared Fluorescent Two-Photon-Absorbing Fluorenyl Benzothiadiazole
+and Benzoselenadiazole Derivatives. ACS Omega
+2016, 1 (6), 1149–1156. 10.1021/acsomega.6b00289.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsomega.6b00289"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6640770"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31457186"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=ACS Omega&amp;title=Synthesis of Near-Infrared Fluorescent Two-Photon-Absorbing Fluorenyl Benzothiadiazole and Benzoselenadiazole Derivatives&amp;author=S. Yao&amp;author=B. Kim&amp;author=X. Yue&amp;author=M. Y. Colon Gomez&amp;author=M. V. Bondar&amp;volume=1&amp;issue=6&amp;publication_year=2016&amp;pages=1149-1156&amp;pmid=31457186&amp;doi=10.1021/acsomega.6b00289&amp;"/></mixed-citation></ref><ref id="ref25"><mixed-citation id="cit25"><named-content content-type="citation-string">Jiang J. M.; Yang P. A.; Chen H. C.; Wei K. H.
+Synthesis, Characterization,
+and Photovoltaic Properties of a Low-Bandgap Copolymer Based on 2,1,3-Benzooxadiazole. Chem. Commun.
+2011, 47 (31), 8877–8879. 10.1039/c1cc12040a.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/c1cc12040a"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="21681294"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Commun.&amp;title=Synthesis, Characterization, and Photovoltaic Properties of a Low-Bandgap Copolymer Based on 2,1,3-Benzooxadiazole&amp;author=J. M. Jiang&amp;author=P. A. Yang&amp;author=H. C. Chen&amp;author=K. H. Wei&amp;volume=47&amp;issue=31&amp;publication_year=2011&amp;pages=8877-8879&amp;pmid=21681294&amp;doi=10.1039/c1cc12040a&amp;"/></mixed-citation></ref><ref id="ref26"><mixed-citation id="cit26"><named-content content-type="citation-string">Nurioglu A. G.; Akpinar H.; Sendur M.; Toppare L.
+Multichromic Benzimidazole-Containing
+Polymers: Comparison of Donor and Acceptor Unit Effects. J. Polym. Sci. Part A Polym. Chem.
+2012, 50 (17), 3499–3506. 10.1002/pola.26144.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/pola.26144"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci. Part A Polym. Chem.&amp;title=Multichromic Benzimidazole-Containing Polymers: Comparison of Donor and Acceptor Unit Effects&amp;author=A. G. Nurioglu&amp;author=H. Akpinar&amp;author=M. Sendur&amp;author=L. Toppare&amp;volume=50&amp;issue=17&amp;publication_year=2012&amp;pages=3499-3506&amp;doi=10.1002/pola.26144&amp;"/></mixed-citation></ref><ref id="ref27"><mixed-citation id="cit27"><named-content content-type="citation-string">Balan A.; Baran D.; Gunbas G.; Durmus A.; Ozyurt F.; Toppare L.
+One Polymer for All:
+Benzotriazole Containing Donor-Acceptor
+Type Polymer as a Multi-Purpose Material. Chem.
+Commun.
+2009, 6768–6770. 10.1039/b912482a.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/b912482a"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19885473"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Commun.&amp;title=One Polymer for All: Benzotriazole Containing Donor-Acceptor Type Polymer as a Multi-Purpose Material&amp;author=A. Balan&amp;author=D. Baran&amp;author=G. Gunbas&amp;author=A. Durmus&amp;author=F. Ozyurt&amp;publication_year=2009&amp;pages=6768-6770&amp;pmid=19885473&amp;doi=10.1039/b912482a&amp;"/></mixed-citation></ref><ref id="ref28"><mixed-citation id="cit28"><named-content content-type="citation-string">Balan A.; Baran D.; Toppare L.
+Processable
+Donor-Acceptor Type Electrochromes
+Switching between Multicolored and Highly Transmissive States towards
+Single Component RGB-Based Display Devices. J. Mater. Chem.
+2010, 20 (44), 9861–9866. 10.1039/c0jm01815e.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/c0jm01815e"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mater. Chem.&amp;title=Processable Donor-Acceptor Type Electrochromes Switching between Multicolored and Highly Transmissive States towards Single Component RGB-Based Display Devices&amp;author=A. Balan&amp;author=D. Baran&amp;author=L. Toppare&amp;volume=20&amp;issue=44&amp;publication_year=2010&amp;pages=9861-9866&amp;doi=10.1039/c0jm01815e&amp;"/></mixed-citation></ref><ref id="ref29"><mixed-citation id="cit29"><named-content content-type="citation-string">Yasa M.; Goker S.; Toppare L.
+Selenophene-Bearing
+Low-Band-Gap
+Conjugated Polymers: Tuning Optoelectronic Properties via Fluorene
+and Carbazole as Donor Moieties. Polym. Bull.
+2020, 77 (5), 2443–2459. 10.1007/s00289-019-02872-2.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1007/s00289-019-02872-2"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Polym. Bull.&amp;title=Selenophene-Bearing Low-Band-Gap Conjugated Polymers: Tuning Optoelectronic Properties via Fluorene and Carbazole as Donor Moieties&amp;author=M. Yasa&amp;author=S. Goker&amp;author=L. Toppare&amp;volume=77&amp;issue=5&amp;publication_year=2020&amp;pages=2443-2459&amp;doi=10.1007/s00289-019-02872-2&amp;"/></mixed-citation></ref><ref id="ref30"><mixed-citation id="cit30"><named-content content-type="citation-string">Yasa M.; Goker S.; Udum Y. A.; Toppare L.
+Tuning Molecular Energy
+Levels and Band Gap of Two-Dimensional Benzo[1,2-b:4,5-B′]
+Dithiophene and Quinoxaline Bearing Polymers. J. Electroanal. Chem.
+2019, 847, 113260. 10.1016/j.jelechem.2019.113260.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jelechem.2019.113260"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Electroanal. Chem.&amp;title=Tuning Molecular Energy Levels and Band Gap of Two-Dimensional Benzo[1,2-b:4,5-B′] Dithiophene and Quinoxaline Bearing Polymers&amp;author=M. Yasa&amp;author=S. Goker&amp;author=Y. A. Udum&amp;author=L. Toppare&amp;volume=847&amp;publication_year=2019&amp;pages=113260&amp;doi=10.1016/j.jelechem.2019.113260&amp;"/></mixed-citation></ref><ref id="ref31"><mixed-citation id="cit31"><named-content content-type="citation-string">Thompson B. C.; Madrigal L. G.; Pinto M. R.; Kang T. S.; Schanze K. S.; Reynolds J. R.
+Donor-Acceptor Copolymers for Red- And near-Infrared-Emitting
+Polymer Light-Emitting Diodes. J. Polym. Sci.
+Part A Polym. Chem.
+2005, 43 (7), 1417–1431. 10.1002/pola.20578.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/pola.20578"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci. Part A Polym. Chem.&amp;title=Donor-Acceptor Copolymers for Red- And near-Infrared-Emitting Polymer Light-Emitting Diodes&amp;author=B. C. Thompson&amp;author=L. G. Madrigal&amp;author=M. R. Pinto&amp;author=T. S. Kang&amp;author=K. S. Schanze&amp;volume=43&amp;issue=7&amp;publication_year=2005&amp;pages=1417-1431&amp;doi=10.1002/pola.20578&amp;"/></mixed-citation></ref><ref id="ref32"><mixed-citation id="cit32"><named-content content-type="citation-string">Chambers R. D.; Parsons M.; Sandford G.; Skinner C. J.; Atherton M. J.; Moilliet J. S.
+Elemental Fluorine.
+Part 10.1 Selective Fluorination
+of Pyridine, Quinoline and Quinoxaline Derivatives with Fluorine-Iodine
+Mixtures. J. Chem. Soc., Perkin Trans. 1
+1999, 7, 803–810. 10.1039/a809838g.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/a809838g"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Soc., Perkin Trans. 1&amp;title=Elemental Fluorine. Part 10.1 Selective Fluorination of Pyridine, Quinoline and Quinoxaline Derivatives with Fluorine-Iodine Mixtures&amp;author=R. D. Chambers&amp;author=M. Parsons&amp;author=G. Sandford&amp;author=C. J. Skinner&amp;author=M. J. Atherton&amp;volume=7&amp;publication_year=1999&amp;pages=803-810&amp;doi=10.1039/a809838g&amp;"/></mixed-citation></ref><ref id="ref33"><mixed-citation id="cit33"><named-content content-type="citation-string">Wang X.; Zhou Y.; Lei T.; Hu N.; Chen E. Q.; Pei J.
+Structural-Property Relationship
+in Pyrazino[2,3-g]Quinoxaline Derivatives:
+Morphology, Photophysical, and Waveguide Properties. Chem. Mater.
+2010, 22 (12), 3735–3745. 10.1021/cm100798q.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cm100798q"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=Structural-Property Relationship in Pyrazino[2,3-g]Quinoxaline Derivatives: Morphology, Photophysical, and Waveguide Properties&amp;author=X. Wang&amp;author=Y. Zhou&amp;author=T. Lei&amp;author=N. Hu&amp;author=E. Q. Chen&amp;volume=22&amp;issue=12&amp;publication_year=2010&amp;pages=3735-3745&amp;doi=10.1021/cm100798q&amp;"/></mixed-citation></ref><ref id="ref34"><mixed-citation id="cit34"><named-content content-type="citation-string">Ashraf R. S.; Shahid M.; Klemm E.; Al-Ibrahim M.; Sensfuss S.
+Thienopyrazine-Based Low-Bandgap
+Poly(Heteroaryleneethynylene)s
+for Photovoltaic Devices. Macromol. Rapid Commun.
+2006, 27 (17), 1454–1459. 10.1002/marc.200600314.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/marc.200600314"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Macromol. Rapid Commun.&amp;title=Thienopyrazine-Based Low-Bandgap Poly(Heteroaryleneethynylene)s for Photovoltaic Devices&amp;author=R. S. Ashraf&amp;author=M. Shahid&amp;author=E. Klemm&amp;author=M. Al-Ibrahim&amp;author=S. Sensfuss&amp;volume=27&amp;issue=17&amp;publication_year=2006&amp;pages=1454-1459&amp;doi=10.1002/marc.200600314&amp;"/></mixed-citation></ref><ref id="ref35"><mixed-citation id="cit35"><named-content content-type="citation-string">Ie Y.; Aso Y.
+Development
+of Donor-Acceptor Copolymers Based on Dioxocycloalkene-Annelated
+Thiophenes as Acceptor Units for Organic Photovoltaic Materials. Poly. J.
+2017, 49, 13–22. 10.1038/pj.2016.96.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/pj.2016.96"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Poly. J.&amp;title=Development of Donor-Acceptor Copolymers Based on Dioxocycloalkene-Annelated Thiophenes as Acceptor Units for Organic Photovoltaic Materials&amp;author=Y. Ie&amp;author=Y. Aso&amp;volume=49&amp;publication_year=2017&amp;pages=13-22&amp;doi=10.1038/pj.2016.96&amp;"/></mixed-citation></ref><ref id="ref36"><mixed-citation id="cit36"><named-content content-type="citation-string">Yasa M.; Depci T.; Alemdar E.; Hacioglu S. O.; Cirpan A.; Toppare L.
+Non-Fullerene Organic Photovoltaics Based on Thienopyrroledione
+Comprising Random Copolymers; Effect of Alkyl Chains. Renew. Energy
+2021, 178, 202–211. 10.1016/j.renene.2021.06.087.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.renene.2021.06.087"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Renew. Energy&amp;title=Non-Fullerene Organic Photovoltaics Based on Thienopyrroledione Comprising Random Copolymers; Effect of Alkyl Chains&amp;author=M. Yasa&amp;author=T. Depci&amp;author=E. Alemdar&amp;author=S. O. Hacioglu&amp;author=A. Cirpan&amp;volume=178&amp;publication_year=2021&amp;pages=202-211&amp;doi=10.1016/j.renene.2021.06.087&amp;"/></mixed-citation></ref><ref id="ref37"><mixed-citation id="cit37"><named-content content-type="citation-string">Yasa M.; Deniz A.; Forough M.; Yildirim E.; Persil Cetinkol O.; Udum Y. A.; Toppare L.
+Construction of Amperometric
+Biosensor
+Modified with Conducting Polymer/Carbon Dots for the Analysis of Catechol. J. Polym. Sci.
+2020, 58 (23), 3336–3348. 10.1002/pol.20200647.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/pol.20200647"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci.&amp;title=Construction of Amperometric Biosensor Modified with Conducting Polymer/Carbon Dots for the Analysis of Catechol&amp;author=M. Yasa&amp;author=A. Deniz&amp;author=M. Forough&amp;author=E. Yildirim&amp;author=O. Persil Cetinkol&amp;volume=58&amp;issue=23&amp;publication_year=2020&amp;pages=3336-3348&amp;doi=10.1002/pol.20200647&amp;"/></mixed-citation></ref><ref id="ref38"><mixed-citation id="cit38"><named-content content-type="citation-string">Low J. Z.; Neo W. T.; Ye Q.; Ong W. J.; Wong I. H. K.; Lin T. T.; Xu J.
+Low Band-Gap
+Diketopyrrolopyrrole-Containing
+Polymers for near Infrared Electrochromic and Photovoltaic Applications. J. Polym. Sci. Part A Polym. Chem.
+2015, 53 (10), 1287–1295. 10.1002/pola.27564.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/pola.27564"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci. Part A Polym. Chem.&amp;title=Low Band-Gap Diketopyrrolopyrrole-Containing Polymers for near Infrared Electrochromic and Photovoltaic Applications&amp;author=J. Z. Low&amp;author=W. T. Neo&amp;author=Q. Ye&amp;author=W. J. Ong&amp;author=I. H. K. Wong&amp;volume=53&amp;issue=10&amp;publication_year=2015&amp;pages=1287-1295&amp;doi=10.1002/pola.27564&amp;"/></mixed-citation></ref><ref id="ref39"><mixed-citation id="cit39"><named-content content-type="citation-string">Gu H.; Ming S.; Lin K.; Chen S.; Liu X.; Lu B.; Xu J.
+Isoindigo
+as an Electron-deficient Unit for High-performance
+Polymeric Electrochromics. Electrochim. Acta
+2018, 260, 772–782. 10.1016/j.electacta.2017.12.033.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.electacta.2017.12.033"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Electrochim. Acta&amp;title=Isoindigo as an Electron-deficient Unit for High-performance Polymeric Electrochromics&amp;author=H. Gu&amp;author=S. Ming&amp;author=K. Lin&amp;author=S. Chen&amp;author=X. Liu&amp;volume=260&amp;publication_year=2018&amp;pages=772-782&amp;doi=10.1016/j.electacta.2017.12.033&amp;"/></mixed-citation></ref><ref id="ref40"><mixed-citation id="cit40"><named-content content-type="citation-string">Osaka I.
+Semiconducting
+Polymers Based on Electron-Deficient π-Building Units. Poly. J.
+2015, 47, 18–25. 10.1038/pj.2014.90.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/pj.2014.90"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Poly. J.&amp;title=Semiconducting Polymers Based on Electron-Deficient π-Building Units&amp;author=I. Osaka&amp;volume=47&amp;publication_year=2015&amp;pages=18-25&amp;doi=10.1038/pj.2014.90&amp;"/></mixed-citation></ref><ref id="ref41"><mixed-citation id="cit41"><named-content content-type="citation-string">Wen S.; Li Y.; Rath T.; Li Y.; Wu Y.; Bao X.; Han L.; Ehmann H.; Trimmel G.; Zhang Y.; Yang R.
+A Benzobis(Thiazole)-Based
+Copolymer for Highly Efficient Non-Fullerene Polymer Solar Cells. Chem. Mater.
+2019, 31 (3), 919–926. 10.1021/acs.chemmater.8b04265.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.chemmater.8b04265"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=A Benzobis(Thiazole)-Based Copolymer for Highly Efficient Non-Fullerene Polymer Solar Cells&amp;author=S. Wen&amp;author=Y. Li&amp;author=T. Rath&amp;author=Y. Li&amp;author=Y. Wu&amp;volume=31&amp;issue=3&amp;publication_year=2019&amp;pages=919-926&amp;doi=10.1021/acs.chemmater.8b04265&amp;"/></mixed-citation></ref><ref id="ref42"><mixed-citation id="cit42"><named-content content-type="citation-string">Liu X.; Ma R.; Wang Y.; Du S.; Tong J.; Shi X.; Li J.; Bao X.; Xia Y.; Liu T.; Yan H.
+Significantly
+Boosting Efficiency of Polymer Solar Cells by Employing a Nontoxic
+Halogen-Free Additive. Cite This ACS Appl. Mater.
+Interfaces
+2021, 13, 11117–11124. 10.1021/acsami.0c22014.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acsami.0c22014"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33635064"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Cite This ACS Appl. Mater. Interfaces&amp;title=Significantly Boosting Efficiency of Polymer Solar Cells by Employing a Nontoxic Halogen-Free Additive&amp;author=X. Liu&amp;author=R. Ma&amp;author=Y. Wang&amp;author=S. Du&amp;author=J. Tong&amp;volume=13&amp;publication_year=2021&amp;pages=11117-11124&amp;pmid=33635064&amp;doi=10.1021/acsami.0c22014&amp;"/></mixed-citation></ref><ref id="ref43"><mixed-citation id="cit43"><named-content content-type="citation-string">Tam T. L. D.; Ng C. K.; Lim S. L.; Yildirim E.; Ko J.; Leong W. L.; Yang S.-W.; Xu J.
+Proquinoidal-Conjugated
+Polymer as an Effective Strategy for the Enhancement of Electrical
+Conductivity and Thermoelectric Properties. Chem. Mater.
+2019, 31, 8543–8550. 10.1021/acs.chemmater.9b03684.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.chemmater.9b03684"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Mater.&amp;title=Proquinoidal-Conjugated Polymer as an Effective Strategy for the Enhancement of Electrical Conductivity and Thermoelectric Properties&amp;author=T. L. D. Tam&amp;author=C. K. Ng&amp;author=S. L. Lim&amp;author=E. Yildirim&amp;author=J. Ko&amp;volume=31&amp;publication_year=2019&amp;pages=8543-8550&amp;doi=10.1021/acs.chemmater.9b03684&amp;"/></mixed-citation></ref><ref id="ref44"><mixed-citation id="cit44"><named-content content-type="citation-string">Susumu K.; Duncan T. V.; Therien M. J.
+Potentiometric, Electronic Structural,
+and Ground- and Excited-State Optical Properties of Conjugated Bis[(Porphinato)Zinc(II)]
+Compounds Featuring Proquinoidal Spacer Units. J. Am. Chem. Soc.
+2005, 127 (14), 5186–5195. 10.1021/ja040243h.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ja040243h"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="15810854"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Am. Chem. Soc.&amp;title=Potentiometric, Electronic Structural, and Ground- and Excited-State Optical Properties of Conjugated Bis[(Porphinato)Zinc(II)] Compounds Featuring Proquinoidal Spacer Units&amp;author=K. Susumu&amp;author=T. V. Duncan&amp;author=M. J. Therien&amp;volume=127&amp;issue=14&amp;publication_year=2005&amp;pages=5186-5195&amp;pmid=15810854&amp;doi=10.1021/ja040243h&amp;"/></mixed-citation></ref><ref id="ref45"><mixed-citation id="cit45"><named-content content-type="citation-string">Tam T. L.; Li H.; Wei F.; Tan K. J.; Kloc C.; Lam Y. M.; Mhaisalkar S. G.; Grimsdale A. C.
+One-Pot Synthesis of 4,8-Dibromobenzo[1,2-c;4,5-C′]Bis[1,2,5]Thiadiazole. Org. Lett.
+2010, 12 (15), 3340–3343. 10.1021/ol100989v.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ol100989v"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="20614912"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Org. Lett.&amp;title=One-Pot Synthesis of 4,8-Dibromobenzo[1,2-c;4,5-C′]Bis[1,2,5]Thiadiazole&amp;author=T. L. Tam&amp;author=H. Li&amp;author=F. Wei&amp;author=K. J. Tan&amp;author=C. Kloc&amp;volume=12&amp;issue=15&amp;publication_year=2010&amp;pages=3340-3343&amp;pmid=20614912&amp;doi=10.1021/ol100989v&amp;"/></mixed-citation></ref><ref id="ref46"><mixed-citation id="cit46"><named-content content-type="citation-string">Bohra H.; Chen H.; Peng Y.; Efrem A.; He F.; Wang M.
+Direct Arylation Polymerization
+toward Efficient Synthesis of Benzo[1,2-c:4,5-c’]
+Dithiophene-4,8-Dione Based Donor-Acceptor Alternating Copolymers
+for Organic Optoelectronic Applications. J.
+Polym. Sci. Part A Polym. Chem.
+2018, 56 (22), 2554–2564. 10.1002/pola.29235.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/pola.29235"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Polym. Sci. Part A Polym. Chem.&amp;title=Direct Arylation Polymerization toward Efficient Synthesis of Benzo[1,2-c:4,5-c’] Dithiophene-4,8-Dione Based Donor-Acceptor Alternating Copolymers for Organic Optoelectronic Applications&amp;author=H. Bohra&amp;author=H. Chen&amp;author=Y. Peng&amp;author=A. Efrem&amp;author=F. He&amp;volume=56&amp;issue=22&amp;publication_year=2018&amp;pages=2554-2564&amp;doi=10.1002/pola.29235&amp;"/></mixed-citation></ref><ref id="ref47"><mixed-citation id="cit47"><named-content content-type="citation-string">Li X.; Xu J.; Xiao Z.; Wang X.; Zhang B.; Ding L.
+Dithieno[3′,2’:3,4;2’’,3′’:5,6]Benzo[1,2-c][1,2,5]Oxadiazole-Based
+Polymer Donors with Deep HOMO Levels. J. Semicond.
+2021, 42 (6), 060501. 10.1088/1674-4926/42/6/060501.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1088/1674-4926/42/6/060501"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Semicond.&amp;title=Dithieno[3′,2’:3,4;2’’,3′’:5,6]Benzo[1,2-c][1,2,5]Oxadiazole-Based Polymer Donors with Deep HOMO Levels&amp;author=X. Li&amp;author=J. Xu&amp;author=Z. Xiao&amp;author=X. Wang&amp;author=B. Zhang&amp;volume=42&amp;issue=6&amp;publication_year=2021&amp;pages=060501&amp;doi=10.1088/1674-4926/42/6/060501&amp;"/></mixed-citation></ref><ref id="ref48"><mixed-citation id="cit48"><named-content content-type="citation-string">Shi Y.; Guo H.; Huang J.; Zhang X.; Wu Z.; Yang K.; Zhang Y.; Feng K.; Woo H. Y.; Ortiz R. P.; Zhou M.; Guo X.
+Distannylated Bithiophene Imide:
+Enabling High-Performance N-Type Polymer Semiconductors with an Acceptor-Acceptor
+Backbone. Angew. Chem.
+2020, 132 (34), 14557–14565. 10.1002/ange.202002292.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/ange.202002292"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="32472603"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Angew. Chem.&amp;title=Distannylated Bithiophene Imide: Enabling High-Performance N-Type Polymer Semiconductors with an Acceptor-Acceptor Backbone&amp;author=Y. Shi&amp;author=H. Guo&amp;author=J. Huang&amp;author=X. Zhang&amp;author=Z. Wu&amp;volume=132&amp;issue=34&amp;publication_year=2020&amp;pages=14557-14565&amp;pmid=32472603&amp;doi=10.1002/ange.202002292&amp;"/></mixed-citation></ref><ref id="ref49"><mixed-citation id="cit49"><named-content content-type="citation-string">Shi Y.; Tang Y.; Yang K.; Qin M.; Wang Y.; Sun H.; Su M.; Lu X.; Zhou M.; Guo X.
+Thiazolothienyl
+Imide-Based Wide Bandgap Copolymers for Efficient Polymer Solar Cells. J. Mater. Chem. C
+2019, 7 (36), 11142–11151. 10.1039/C9TC03301G.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C9TC03301G"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mater. Chem. C&amp;title=Thiazolothienyl Imide-Based Wide Bandgap Copolymers for Efficient Polymer Solar Cells&amp;author=Y. Shi&amp;author=Y. Tang&amp;author=K. Yang&amp;author=M. Qin&amp;author=Y. Wang&amp;volume=7&amp;issue=36&amp;publication_year=2019&amp;pages=11142-11151&amp;doi=10.1039/C9TC03301G&amp;"/></mixed-citation></ref><ref id="ref50"><mixed-citation id="cit50"><named-content content-type="citation-string">Yan H.; Chen Z.; Zheng Y.; Newman C.; Quinn J. R.; Dötz F.; Kastler M.; Facchetti A.
+A High-Mobility
+Electron-Transporting Polymer for Printed Transistors. Nature
+2009, 457 (7230), 679–686. 10.1038/nature07727.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/nature07727"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19158674"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nature&amp;title=A High-Mobility Electron-Transporting Polymer for Printed Transistors&amp;author=H. Yan&amp;author=Z. Chen&amp;author=Y. Zheng&amp;author=C. Newman&amp;author=J. R. Quinn&amp;volume=457&amp;issue=7230&amp;publication_year=2009&amp;pages=679-686&amp;pmid=19158674&amp;doi=10.1038/nature07727&amp;"/></mixed-citation></ref><ref id="ref51"><mixed-citation id="cit51"><named-content content-type="citation-string">Milián-Medina B.; Gierschner J.
+Computational
+Design of Low Singlet-Triplet Gap All-Organic
+Molecules for OLED Application. Org. Electron.
+2012, 13 (6), 985–991. 10.1016/j.orgel.2012.02.010.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.orgel.2012.02.010"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Org. Electron.&amp;title=Computational Design of Low Singlet-Triplet Gap All-Organic Molecules for OLED Application&amp;author=B. Milián-Medina&amp;author=J. Gierschner&amp;volume=13&amp;issue=6&amp;publication_year=2012&amp;pages=985-991&amp;doi=10.1016/j.orgel.2012.02.010&amp;"/></mixed-citation></ref><ref id="ref52"><mixed-citation id="cit52"><named-content content-type="citation-string">Risko C.; McGehee M. D.; Brédas J. L.
+A Quantum-Chemical Perspective into
+Low Optical-Gap Polymers for Highly-Efficient Organic Solar Cells. Chem. Sci.
+2011, 2 (7), 1200–1218. 10.1039/C0SC00642D.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C0SC00642D"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Sci.&amp;title=A Quantum-Chemical Perspective into Low Optical-Gap Polymers for Highly-Efficient Organic Solar Cells&amp;author=C. Risko&amp;author=M. D. McGehee&amp;author=J. L. Brédas&amp;volume=2&amp;issue=7&amp;publication_year=2011&amp;pages=1200-1218&amp;doi=10.1039/C0SC00642D&amp;"/></mixed-citation></ref><ref id="ref53"><mixed-citation id="cit53"><named-content content-type="citation-string">Sharma S.; Zamoshchik N.; Bendikov M.
+Polyfurans: A Computational Study. Isr. J. Chem.
+2014, 54 (5–6), 712–722. 10.1002/ijch.201400008.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/ijch.201400008"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Isr. J. Chem.&amp;title=Polyfurans: A Computational Study&amp;author=S. Sharma&amp;author=N. Zamoshchik&amp;author=M. Bendikov&amp;volume=54&amp;issue=5–6&amp;publication_year=2014&amp;pages=712-722&amp;doi=10.1002/ijch.201400008&amp;"/></mixed-citation></ref><ref id="ref54"><mixed-citation id="cit54"><named-content content-type="citation-string">Balanay M. P.; Kim D. H.
+Molecular Engineering
+of Donor-Acceptor Co-Polymers
+for Bulk Heterojunction Solar Cells. Comput.
+Theor. Chem.
+2015, 1055, 15–24. 10.1016/j.comptc.2014.12.016.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.comptc.2014.12.016"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Comput. Theor. Chem.&amp;title=Molecular Engineering of Donor-Acceptor Co-Polymers for Bulk Heterojunction Solar Cells&amp;author=M. P. Balanay&amp;author=D. H. Kim&amp;volume=1055&amp;publication_year=2015&amp;pages=15-24&amp;doi=10.1016/j.comptc.2014.12.016&amp;"/></mixed-citation></ref><ref id="ref55"><mixed-citation id="cit55"><named-content content-type="citation-string">Civcir P. Ü.
+Computational Modelling of Donor-Acceptor-Donor Conjugated
+Polymers
+Based on Benzothiadiazole. Comput. Theor. Chem.
+2018, 1128, 70–82. 10.1016/j.comptc.2018.02.013.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.comptc.2018.02.013"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Comput. Theor. Chem.&amp;title=Computational Modelling of Donor-Acceptor-Donor Conjugated Polymers Based on Benzothiadiazole&amp;author=P. Ü. Civcir&amp;volume=1128&amp;publication_year=2018&amp;pages=70-82&amp;doi=10.1016/j.comptc.2018.02.013&amp;"/></mixed-citation></ref><ref id="ref56"><mixed-citation id="cit56"><named-content content-type="citation-string">Köse M. E.
+Theoretical
+Estimation of Donor Strength of Common Conjugated Units for Organic
+Electronics. J. Phys. Chem. A
+2019, 123 (26), 5566–5573. 10.1021/acs.jpca.9b03604.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jpca.9b03604"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31180664"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Phys. Chem. A&amp;title=Theoretical Estimation of Donor Strength of Common Conjugated Units for Organic Electronics&amp;author=M. E. Köse&amp;volume=123&amp;issue=26&amp;publication_year=2019&amp;pages=5566-5573&amp;pmid=31180664&amp;doi=10.1021/acs.jpca.9b03604&amp;"/></mixed-citation></ref><ref id="ref57"><mixed-citation id="cit57"><named-content content-type="citation-string">Cheeseman J. R.; Scalmani G.; Barone V.; Petersson G. A.; Nakatsuji H.; Li X.; Caricato M.; Marenich A.; Bloino J.; Janesko B. G.; Gomperts R.; Mennucci B.; Hratchian H. P.; Ortiz J. V.; Izmaylov A. F.; Sonnenberg J. L.; Williams-Young D.; Ding F.; Lipparini F.; Egidi F.; Goings J.; Peng B.; Petrone A.; Henderson T.; Ranasinghe D.; Zakrzewski V. G.; Gao J.; Rega N.; Zheng G.; Liang W.; Hada M.; Ehara M.; Toyota K.; Fukuda R.; Hasegawa J.; Ishida M.; Nakajima T.; Honda Y.; Kitao O.; Nakai H.; Vreven T.; Throssell K.; Montgomery J. A. Jr.; Peralta J. E.; Ogliaro F.; Bearpark M.; Heyd J. J.; Brothers E.; Kudin K. N.; Staroverov V. N.; Keith T.; Kobayashi R.; Normand J.; Raghavachari K.; Rendell A.; Burant J. C.; Iyengar S. S.; Tomasi J.; Cossi M.; Millam J. M.; Klene M.; Adamo C.; Cammi R.; Ochterski J. W.; Martin R. L.; Morokuma K.; Farkas O.; Foresman J. B.; Fox D. J.. Gaussian 09; Gaussian: Wallingford, CT, USA, 2009.</named-content></mixed-citation></ref><ref id="ref58"><mixed-citation id="cit58"><named-content content-type="citation-string">Turan H. T.; Kucur O.; Kahraman B.; Salman S.; Aviyente V.
+Design of
+Donor-Acceptor Copolymers for Organic Photovoltaic Materials: A Computational
+Study. Phys. Chem. Chem. Phys.
+2018, 20 (5), 3581–3591. 10.1039/C7CP08176F.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C7CP08176F"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29337325"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Phys. Chem. Chem. Phys.&amp;title=Design of Donor-Acceptor Copolymers for Organic Photovoltaic Materials: A Computational Study&amp;author=H. T. Turan&amp;author=O. Kucur&amp;author=B. Kahraman&amp;author=S. Salman&amp;author=V. Aviyente&amp;volume=20&amp;issue=5&amp;publication_year=2018&amp;pages=3581-3591&amp;pmid=29337325&amp;doi=10.1039/C7CP08176F&amp;"/></mixed-citation></ref><ref id="ref59"><mixed-citation id="cit59"><named-content content-type="citation-string">Karaman C.
+Z.; Göker S.; Hacioǧlu S. O.; Hacıefendioǧlu T.; Yıldırım E.; Toppare L.
+Altering Electronic
+and Optical Properties of Novel Benzothiadiazole Comprising Homopolymers
+via π Bridges. J. Electrochem. Soc.
+2021, 168 (3), 036514. 10.1149/1945-7111/abedc5.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1149/1945-7111/abedc5"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Electrochem. Soc.&amp;title=Altering Electronic and Optical Properties of Novel Benzothiadiazole Comprising Homopolymers via π Bridges&amp;author=C. Z. Karaman&amp;author=S. Göker&amp;author=S. O. Hacioǧlu&amp;author=T. Hacıefendioǧlu&amp;author=E. Yıldırım&amp;volume=168&amp;issue=3&amp;publication_year=2021&amp;pages=036514&amp;doi=10.1149/1945-7111/abedc5&amp;"/></mixed-citation></ref><ref id="ref60"><mixed-citation id="cit60"><named-content content-type="citation-string">Karaman C. Z.; Göker S.; Şahin D. C.; Hacioglu S. O.; Aslan S. T.; Hacıefendioǧlu T.; Hizalan G.; Yıldırım E.; Çırpan A.; Toppare L.
+Effect of Thiophene, 3-Hexylthiophene,
+Selenophene, and Thieno[3,2-b]Thiophene Spacers on OPV Device Performance
+of Novel 2,1,3-Benzothiadiazole Based Alternating Copolymers. J. Electroanal. Chem.
+2021, 895, 115483. 10.1016/j.jelechem.2021.115483.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jelechem.2021.115483"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Electroanal. Chem.&amp;title=Effect of Thiophene, 3-Hexylthiophene, Selenophene, and Thieno[3,2-b]Thiophene Spacers on OPV Device Performance of Novel 2,1,3-Benzothiadiazole Based Alternating Copolymers&amp;author=C. Z. Karaman&amp;author=S. Göker&amp;author=D. C. Şahin&amp;author=S. O. Hacioglu&amp;author=S. T. Aslan&amp;volume=895&amp;publication_year=2021&amp;pages=115483&amp;doi=10.1016/j.jelechem.2021.115483&amp;"/></mixed-citation></ref><ref id="ref61"><mixed-citation id="cit61"><named-content content-type="citation-string">Marcus R. A.
+Electron
+Transfer Reactions in Chemistry. Theory and Experiment. Rev. Mod. Phys.
+1993, 65 (3), 599. 10.1103/RevModPhys.65.599.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1103/RevModPhys.65.599"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Rev. Mod. Phys.&amp;title=Electron Transfer Reactions in Chemistry. Theory and Experiment&amp;author=R. A. Marcus&amp;volume=65&amp;issue=3&amp;publication_year=1993&amp;pages=599&amp;doi=10.1103/RevModPhys.65.599&amp;"/></mixed-citation></ref><ref id="ref62"><mixed-citation id="cit62"><named-content content-type="citation-string">Brédas J. L.; Beljonne D.; Coropceanu V.; Cornil J.
+Charge-Transfer and
+Energy-Transfer Processes in π-Conjugated Oligomers and Polymers:
+A Molecular Picture. Chem. Rev.
+2004, 104 (11), 4971–5004. 10.1021/cr040084k.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/cr040084k"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="15535639"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Rev.&amp;title=Charge-Transfer and Energy-Transfer Processes in π-Conjugated Oligomers and Polymers: A Molecular Picture&amp;author=J. L. Brédas&amp;author=D. Beljonne&amp;author=V. Coropceanu&amp;author=J. Cornil&amp;volume=104&amp;issue=11&amp;publication_year=2004&amp;pages=4971-5004&amp;pmid=15535639&amp;doi=10.1021/cr040084k&amp;"/></mixed-citation></ref><ref id="ref63"><mixed-citation id="cit63"><named-content content-type="citation-string">Lu T.; Chen F.
+Multiwfn: A Multifunctional
+Wavefunction Analyzer. J. Comput. Chem.
+2012, 33 (5), 580–592. 10.1002/jcc.22885.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jcc.22885"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="22162017"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Comput. Chem.&amp;title=Multiwfn: A Multifunctional Wavefunction Analyzer&amp;author=T. Lu&amp;author=F. Chen&amp;volume=33&amp;issue=5&amp;publication_year=2012&amp;pages=580-592&amp;pmid=22162017&amp;doi=10.1002/jcc.22885&amp;"/></mixed-citation></ref><ref id="ref64"><mixed-citation id="cit64"><named-content content-type="citation-string">Gao C.; Wang L.; Li X.; Wang H.
+Rational Design on
+D-A Conjugated P(BDT-DTBT) Polymers for Polymer Solar Cells. Polym. Chem.
+2014, 5 (18), 5200–5210. 10.1039/C4PY00389F.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C4PY00389F"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Polym. Chem.&amp;title=Rational Design on D-A Conjugated P(BDT-DTBT) Polymers for Polymer Solar Cells&amp;author=C. Gao&amp;author=L. Wang&amp;author=X. Li&amp;author=H. Wang&amp;volume=5&amp;issue=18&amp;publication_year=2014&amp;pages=5200-5210&amp;doi=10.1039/C4PY00389F&amp;"/></mixed-citation></ref><ref id="ref65"><mixed-citation id="cit65"><named-content content-type="citation-string">Liu J.; Ren J.; Zhang S.; Hou J.
+Effects on the Photovoltaic Properties
+of Copolymers with Five-Membered Chalcogen-π-Heterocycle Bridges. Polym. Chem.
+2020, 11 (31), 5019–5028. 10.1039/D0PY00752H.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/D0PY00752H"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Polym. Chem.&amp;title=Effects on the Photovoltaic Properties of Copolymers with Five-Membered Chalcogen-π-Heterocycle Bridges&amp;author=J. Liu&amp;author=J. Ren&amp;author=S. Zhang&amp;author=J. Hou&amp;volume=11&amp;issue=31&amp;publication_year=2020&amp;pages=5019-5028&amp;doi=10.1039/D0PY00752H&amp;"/></mixed-citation></ref><ref id="ref66"><mixed-citation id="cit66"><named-content content-type="citation-string">Roncali J.
+Molecular
+Engineering of the Band Gap of π-Conjugated Systems: Facing
+Technological Applications. Macromol. Rapid
+Commun.
+2007, 28 (17), 1761–1775. 10.1002/marc.200700345.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/marc.200700345"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Macromol. Rapid Commun.&amp;title=Molecular Engineering of the Band Gap of π-Conjugated Systems: Facing Technological Applications&amp;author=J. Roncali&amp;volume=28&amp;issue=17&amp;publication_year=2007&amp;pages=1761-1775&amp;doi=10.1002/marc.200700345&amp;"/></mixed-citation></ref><ref id="ref67"><mixed-citation id="cit67"><named-content content-type="citation-string">Xie X.; Shen W.; Fu Y.; Li M.
+DFT Study of Conductive
+Properties of Three Polymers Formed by Bicyclic Furans. Mol. Simul.
+2010, 36 (11), 836–846. 10.1080/08927022.2010.482136.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1080/08927022.2010.482136"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mol. Simul.&amp;title=DFT Study of Conductive Properties of Three Polymers Formed by Bicyclic Furans&amp;author=X. Xie&amp;author=W. Shen&amp;author=Y. Fu&amp;author=M. Li&amp;volume=36&amp;issue=11&amp;publication_year=2010&amp;pages=836-846&amp;doi=10.1080/08927022.2010.482136&amp;"/></mixed-citation></ref><ref id="ref68"><mixed-citation id="cit68"><named-content content-type="citation-string">Marder S. R.; Perry J. W.; Tiemann B. G.; Gorman C. B.; Gilmour S.; Biddle S. L.; Bourhill G.
+Direct Observation
+of Reduced Bond
+Length Alternation in Donor/Acceptor Polyenes. J. Am. Chem. Soc.
+1993, 115 (6), 2524–2526. 10.1021/ja00059a067.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ja00059a067"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Am. Chem. Soc.&amp;title=Direct Observation of Reduced Bond Length Alternation in Donor/Acceptor Polyenes&amp;author=S. R. Marder&amp;author=J. W. Perry&amp;author=B. G. Tiemann&amp;author=C. B. Gorman&amp;author=S. Gilmour&amp;volume=115&amp;issue=6&amp;publication_year=1993&amp;pages=2524-2526&amp;doi=10.1021/ja00059a067&amp;"/></mixed-citation></ref><ref id="ref69"><mixed-citation id="cit69"><named-content content-type="citation-string">Baranowska-Łáczkowska A.; Bartkowiak W.; Góra R. W.; Pawłowski F.; Zaleśny R.
+On the Performance of Long-Range-Corrected Density
+Functional Theory and Reduced-Size Polarized LPol-n Basis Sets in
+Computations of Electric Dipole (Hyper)Polarizabilities of π-Conjugated
+Molecules. J. Comput. Chem.
+2013, 34 (10), 819–826. 10.1002/jcc.23197.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jcc.23197"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="23280818"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Comput. Chem.&amp;title=On the Performance of Long-Range-Corrected Density Functional Theory and Reduced-Size Polarized LPol-n Basis Sets in Computations of Electric Dipole (Hyper)Polarizabilities of π-Conjugated Molecules&amp;author=A. Baranowska-Łáczkowska&amp;author=W. Bartkowiak&amp;author=R. W. Góra&amp;author=F. Pawłowski&amp;author=R. Zaleśny&amp;volume=34&amp;issue=10&amp;publication_year=2013&amp;pages=819-826&amp;pmid=23280818&amp;doi=10.1002/jcc.23197&amp;"/></mixed-citation></ref><ref id="ref70"><mixed-citation id="cit70"><named-content content-type="citation-string">Turan H. T.; Kucur O.; Kahraman B.; Salman S.; Aviyente V.
+Design of
+Donor-Acceptor Copolymers for Organic Photovoltaic Materials: A Computational
+Study. Phys. Chem. Chem. Phys.
+2018, 20 (5), 3581–3591. 10.1039/C7CP08176F.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C7CP08176F"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29337325"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Phys. Chem. Chem. Phys.&amp;title=Design of Donor-Acceptor Copolymers for Organic Photovoltaic Materials: A Computational Study&amp;author=H. T. Turan&amp;author=O. Kucur&amp;author=B. Kahraman&amp;author=S. Salman&amp;author=V. Aviyente&amp;volume=20&amp;issue=5&amp;publication_year=2018&amp;pages=3581-3591&amp;pmid=29337325&amp;doi=10.1039/C7CP08176F&amp;"/></mixed-citation></ref><ref id="ref71"><mixed-citation id="cit71"><named-content content-type="citation-string">Hashemi D.; Ma X.; Ansari R.; Kim J.; Kieffer J.
+Design Principles for
+the Energy Level Tuning in Donor/Acceptor Conjugated Polymers. Phys. Chem. Chem. Phys.
+2019, 21 (2), 789–799. 10.1039/C8CP03341B.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C8CP03341B"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30556085"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Phys. Chem. Chem. Phys.&amp;title=Design Principles for the Energy Level Tuning in Donor/Acceptor Conjugated Polymers&amp;author=D. Hashemi&amp;author=X. Ma&amp;author=R. Ansari&amp;author=J. Kim&amp;author=J. Kieffer&amp;volume=21&amp;issue=2&amp;publication_year=2019&amp;pages=789-799&amp;pmid=30556085&amp;doi=10.1039/C8CP03341B&amp;"/></mixed-citation></ref><ref id="ref72"><mixed-citation id="cit72"><named-content content-type="citation-string">Liu Q.; Bao X.; Han L.; Gu C.; Qiu M.; Du Z.; Sheng R.; Sun M.; Yang R.
+Improved Open-Circuit
+Voltage of Benzodithiophene Based Polymer Solar Cells Using Bulky
+Terthiophene Side Group. Sol. Energy Mater.
+Sol. Cells
+2015, 138, 26–34. 10.1016/j.solmat.2015.02.022.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.solmat.2015.02.022"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Sol. Energy Mater. Sol. Cells&amp;title=Improved Open-Circuit Voltage of Benzodithiophene Based Polymer Solar Cells Using Bulky Terthiophene Side Group&amp;author=Q. Liu&amp;author=X. Bao&amp;author=L. Han&amp;author=C. Gu&amp;author=M. Qiu&amp;volume=138&amp;publication_year=2015&amp;pages=26-34&amp;doi=10.1016/j.solmat.2015.02.022&amp;"/></mixed-citation></ref><ref id="ref73"><mixed-citation id="cit73"><named-content content-type="citation-string">Martin F.; Zipse H.
+Charge Distribution in the Water Molecule-A Comparison of Methods. J. Comput. Chem.
+2005, 26 (1), 97–105. 10.1002/jcc.20157.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jcc.20157"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="15547940"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Comput. Chem.&amp;title=Charge Distribution in the Water Molecule-A Comparison of Methods&amp;author=F. Martin&amp;author=H. Zipse&amp;volume=26&amp;issue=1&amp;publication_year=2005&amp;pages=97-105&amp;pmid=15547940&amp;doi=10.1002/jcc.20157&amp;"/></mixed-citation></ref><ref id="ref74"><mixed-citation id="cit74"><named-content content-type="citation-string">Singh U. C.; Kollman P. A.
+An Approach to Computing
+Electrostatic Charges for
+Molecules. J. Comput. Chem.
+1984, 5 (2), 129–145. 10.1002/jcc.540050204.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jcc.540050204"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Comput. Chem.&amp;title=An Approach to Computing Electrostatic Charges for Molecules&amp;author=U. C. Singh&amp;author=P. A. Kollman&amp;volume=5&amp;issue=2&amp;publication_year=1984&amp;pages=129-145&amp;doi=10.1002/jcc.540050204&amp;"/></mixed-citation></ref></ref-list></sec></sec><sec id="_ad93_" xml:lang="en" sec-type="associated-data" disp-level="1"><title>Associated Data</title><sec id="_adsm93_" xml:lang="en" sec-type="supplementary-materials" disp-level="2"><title>Supplementary Materials</title><supplementary-material id="db_ds_supplementary-material1_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao2c04713_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 288c/9631416/9ad7b950d2d1/ao2c04713_si_001.pdf?><?cloudpmc-bucket app?><?size 4256555?><caption><p>ao2c04713_si_001.pdf</p></caption></media></supplementary-material><supplementary-material id="db_ds_supplementary-material2_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao2c04713_si_002.zip" mimetype="application" mime-subtype="zip"><?cloudpmc-path 288c/9631416/0ac9abfbe0ea/ao2c04713_si_002.zip?><?cloudpmc-bucket app?><?size 260531?><caption><p>ao2c04713_si_002.zip</p></caption></media></supplementary-material></sec></sec></body></article>

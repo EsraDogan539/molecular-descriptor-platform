@@ -1,0 +1,533 @@
+{
+ "10.1021/ci100050t": {
+  "status": "ok",
+  "title": "Extended-Connectivity Fingerprints",
+  "journal": "J. Chem. Inf. Model.",
+  "year": 2010,
+  "volume": "50",
+  "page": "742-754",
+  "authors": [
+   [
+    "Rogers",
+    "David"
+   ],
+   [
+    "Hahn",
+    "Mathew"
+   ]
+  ]
+ },
+ "10.1039/c2jm33735e": {
+  "status": "ok",
+  "title": "Comparison of thiophene- and selenophene-bridged donor–acceptor low band-gap copolymers used in bulk-heterojunction organic photovoltaics",
+  "journal": "J. Mater. Chem.",
+  "year": 2012,
+  "volume": "22",
+  "page": "21549",
+  "authors": [
+   [
+    "Chen",
+    "Hung-Yang"
+   ],
+   [
+    "Yeh",
+    "Shih-Chieh"
+   ],
+   [
+    "Chen",
+    "Chin-Ti"
+   ],
+   [
+    "Chen",
+    "Chao-Tsen"
+   ]
+  ]
+ },
+ "10.1039/B908983A": {
+  "status": "not_found"
+ },
+ "10.1021/ja309404j": {
+  "status": "ok",
+  "title": "Poly(3-alkyltellurophene)s Are Solution-Processable Polyheterocycles",
+  "journal": "J. Am. Chem. Soc.",
+  "year": 2013,
+  "volume": "135",
+  "page": "951-954",
+  "authors": [
+   [
+    "Jahnke",
+    "Ashlee A."
+   ],
+   [
+    "Djukic",
+    "Brandon"
+   ],
+   [
+    "McCormick",
+    "Theresa M."
+   ],
+   [
+    "Buchaca Domingo",
+    "Ester"
+   ],
+   [
+    "Hellmann",
+    "Christoph"
+   ],
+   [
+    "Lee",
+    "Yunjeong"
+   ],
+   [
+    "Seferos",
+    "Dwight S."
+   ]
+  ]
+ },
+ "10.1021/ja208917m": {
+  "status": "ok",
+  "title": "Atomistic Band Gap Engineering in Donor–Acceptor Polymers",
+  "journal": "J. Am. Chem. Soc.",
+  "year": 2011,
+  "volume": "134",
+  "page": "539-547",
+  "authors": [
+   [
+    "Gibson",
+    "Gregory L."
+   ],
+   [
+    "McCormick",
+    "Theresa M."
+   ],
+   [
+    "Seferos",
+    "Dwight S."
+   ]
+  ]
+ },
+ "10.1021/ja100322c": {
+  "status": "not_found"
+ },
+ "10.1021/ma5014308": {
+  "status": "ok",
+  "title": "Effect of Chalcogen Atom Substitution on the Optoelectronic\nProperties in Cyclopentadithiophene Polymers",
+  "journal": "Macromolecules",
+  "year": 2014,
+  "volume": "47",
+  "page": "5889-5894",
+  "authors": [
+   [
+    "Planells",
+    "Miquel"
+   ],
+   [
+    "Schroeder",
+    "Bob C."
+   ],
+   [
+    "McCulloch",
+    "Iain"
+   ]
+  ]
+ },
+ "10.1021/ja511984q": {
+  "status": "ok",
+  "title": "Chalcogenophene Comonomer Comparison in Small Band Gap Diketopyrrolopyrrole-Based Conjugated Polymers for High-Performing Field-Effect Transistors and Organic Solar Cells",
+  "journal": "J. Am. Chem. Soc.",
+  "year": 2015,
+  "volume": "137",
+  "page": "1314-1321",
+  "authors": [
+   [
+    "Ashraf",
+    "Raja Shahid"
+   ],
+   [
+    "Meager",
+    "Iain"
+   ],
+   [
+    "Nikolka",
+    "Mark"
+   ],
+   [
+    "Kirkus",
+    "Mindaugas"
+   ],
+   [
+    "Planells",
+    "Miquel"
+   ],
+   [
+    "Schroeder",
+    "Bob C."
+   ],
+   [
+    "Holliday",
+    "Sarah"
+   ],
+   [
+    "Hurhangee",
+    "Michael"
+   ],
+   [
+    "Nielsen",
+    "Christian B."
+   ],
+   [
+    "Sirringhaus",
+    "Henning"
+   ],
+   [
+    "McCulloch",
+    "Iain"
+   ]
+  ]
+ },
+ "10.1021/acs.jcim.7b00403": {
+  "status": "ok",
+  "title": "Most Ligand-Based Classification Benchmarks Reward Memorization Rather than Generalization",
+  "journal": "J. Chem. Inf. Model.",
+  "year": 2018,
+  "volume": "58",
+  "page": "916-932",
+  "authors": [
+   [
+    "Wallach",
+    "Izhar"
+   ],
+   [
+    "Heifets",
+    "Abraham"
+   ]
+  ]
+ },
+ "10.1016/j.patter.2023.100804": {
+  "status": "ok",
+  "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+  "journal": "Patterns",
+  "year": 2023,
+  "volume": "4",
+  "page": "100804",
+  "authors": [
+   [
+    "Kapoor",
+    "Sayash"
+   ],
+   [
+    "Narayanan",
+    "Arvind"
+   ]
+  ]
+ },
+ "10.1039/C8ME00012C": {
+  "status": "ok",
+  "title": "Can machine learning identify the next high-temperature superconductor? Examining extrapolation performance for materials discovery",
+  "journal": "Mol. Syst. Des. Eng.",
+  "year": 2018,
+  "volume": "3",
+  "page": "819-825",
+  "authors": [
+   [
+    "Meredig",
+    "Bryce"
+   ],
+   [
+    "Antono",
+    "Erin"
+   ],
+   [
+    "Church",
+    "Carena"
+   ],
+   [
+    "Hutchinson",
+    "Maxwell"
+   ],
+   [
+    "Ling",
+    "Julia"
+   ],
+   [
+    "Paradiso",
+    "Sean"
+   ],
+   [
+    "Blaiszik",
+    "Ben"
+   ],
+   [
+    "Foster",
+    "Ian"
+   ],
+   [
+    "Gibbons",
+    "Brenna"
+   ],
+   [
+    "Hattrick-Simpers",
+    "Jason"
+   ],
+   [
+    "Mehta",
+    "Apurva"
+   ],
+   [
+    "Ward",
+    "Logan"
+   ]
+  ]
+ },
+ "10.1038/s41524-018-0081-z": {
+  "status": "ok",
+  "title": "A strategy to apply machine learning to small datasets in materials science",
+  "journal": "npj Comput Mater",
+  "year": 2018,
+  "volume": "4",
+  "page": "25",
+  "authors": [
+   [
+    "Zhang",
+    "Ying"
+   ],
+   [
+    "Ling",
+    "Chen"
+   ]
+  ]
+ },
+ "10.1039/C3MH00098B": {
+  "status": "ok",
+  "title": "Mind the gap!",
+  "journal": "Mater. Horiz.",
+  "year": 2014,
+  "volume": "1",
+  "page": "17-19",
+  "authors": [
+   [
+    "Bredas",
+    "Jean-Luc"
+   ]
+  ]
+ },
+ "10.1103/PhysRevLett.108.058301": {
+  "status": "ok",
+  "title": "Fast and Accurate Modeling of Molecular Atomization Energies with Machine Learning",
+  "journal": "Phys. Rev. Lett.",
+  "year": 2012,
+  "volume": "108",
+  "page": "058301",
+  "authors": [
+   [
+    "Rupp",
+    "Matthias"
+   ],
+   [
+    "Tkatchenko",
+    "Alexandre"
+   ],
+   [
+    "Müller",
+    "Klaus-Robert"
+   ],
+   [
+    "von Lilienfeld",
+    "O. Anatole"
+   ]
+  ]
+ },
+ "10.1021/acs.chemrev.1c00021": {
+  "status": "ok",
+  "title": "Physics-Inspired Structural Representations for Molecules and Materials",
+  "journal": "Chem. Rev.",
+  "year": 2021,
+  "volume": "121",
+  "page": "9759-9815",
+  "authors": [
+   [
+    "Musil",
+    "Felix"
+   ],
+   [
+    "Grisafi",
+    "Andrea"
+   ],
+   [
+    "Bartók",
+    "Albert P."
+   ],
+   [
+    "Ortner",
+    "Christoph"
+   ],
+   [
+    "Csányi",
+    "Gábor"
+   ],
+   [
+    "Ceriotti",
+    "Michele"
+   ]
+  ]
+ },
+ "10.1038/srep20952": {
+  "status": "ok",
+  "title": "Machine Learning Strategy for Accelerated Design of Polymer Dielectrics",
+  "journal": "Sci Rep",
+  "year": 2016,
+  "volume": "6",
+  "page": "20952",
+  "authors": [
+   [
+    "Mannodi-Kanakkithodi",
+    "Arun"
+   ],
+   [
+    "Pilania",
+    "Ghanshyam"
+   ],
+   [
+    "Huan",
+    "Tran Doan"
+   ],
+   [
+    "Lookman",
+    "Turab"
+   ],
+   [
+    "Ramprasad",
+    "Rampi"
+   ]
+  ]
+ },
+ "10.1016/j.patter.2021.100238": {
+  "status": "ok",
+  "title": "Polymer informatics with multi-task learning",
+  "journal": "Patterns",
+  "year": 2021,
+  "volume": "2",
+  "page": "100238",
+  "authors": [
+   [
+    "Kuenneth",
+    "Christopher"
+   ],
+   [
+    "Rajan",
+    "Arunkumar Chitteth"
+   ],
+   [
+    "Tran",
+    "Huan"
+   ],
+   [
+    "Chen",
+    "Lihua"
+   ],
+   [
+    "Kim",
+    "Chiho"
+   ],
+   [
+    "Ramprasad",
+    "Rampi"
+   ]
+  ]
+ },
+ "10.1063/1.5023563": {
+  "status": "ok",
+  "title": "Machine learning-based screening of complex molecules for polymer solar cells",
+  "journal": "The Journal of Chemical Physics",
+  "year": 2018,
+  "volume": "148",
+  "page": "241735",
+  "authors": [
+   [
+    "Jørgensen",
+    "Peter Bjørn"
+   ],
+   [
+    "Mesta",
+    "Murat"
+   ],
+   [
+    "Shil",
+    "Suranjan"
+   ],
+   [
+    "García Lastra",
+    "Juan Maria"
+   ],
+   [
+    "Jacobsen",
+    "Karsten Wedel"
+   ],
+   [
+    "Thygesen",
+    "Kristian Sommer"
+   ],
+   [
+    "Schmidt",
+    "Mikkel N."
+   ]
+  ]
+ },
+ "10.1039/C8MH01135D": {
+  "status": "ok",
+  "title": "Combining electronic and structural features in machine learning models to predict organic solar cells properties",
+  "journal": "Mater. Horiz.",
+  "year": 2019,
+  "volume": "6",
+  "page": "343-349",
+  "authors": [
+   [
+    "Padula",
+    "Daniele"
+   ],
+   [
+    "Simpson",
+    "Jack D."
+   ],
+   [
+    "Troisi",
+    "Alessandro"
+   ]
+  ]
+ },
+ "10.1002/aenm.201801032": {
+  "status": "ok",
+  "title": "Toward Predicting Efficiency of Organic Solar Cells via Machine Learning and Improved Descriptors",
+  "journal": "Advanced Energy Materials",
+  "year": 2018,
+  "volume": "8",
+  "page": "1801032",
+  "authors": [
+   [
+    "Sahu",
+    "Harikrishna"
+   ],
+   [
+    "Rao",
+    "Weining"
+   ],
+   [
+    "Troisi",
+    "Alessandro"
+   ],
+   [
+    "Ma",
+    "Haibo"
+   ]
+  ]
+ },
+ "10.5281/zenodo.23558298": {
+  "status": "ok",
+  "title": "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database",
+  "creators": [
+   "Doğan, Esra Nur",
+   "Kayı, Hakan"
+  ],
+  "year": 2026
+ }
+}
