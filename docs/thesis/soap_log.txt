@@ -1,0 +1,7 @@
+species ['C', 'F', 'H', 'N', 'O', 'S', 'Se'] SOAP dim (3086, 4515) 3.2 s
+distances 236.9 s
+random {"SOAP|KRR-laplacian": {"MAE": 0.1602, "R2": 0.825}, "SOAP|KRR-gaussian": {"MAE": 0.1951, "R2": 0.735}, "SOAP|XGB(PCA100)": {"MAE": 0.2058, "R2": 0.734}, "3D descriptors|KRR-laplacian": {"MAE": 0.0939, "R2": 0.93}, "SOAP(PCA100)+3D|XGB": {"MAE": 0.1141, "R2": 0.908}} 350 s
+inchikey {"SOAP|KRR-laplacian": {"MAE": 0.1668, "R2": 0.817}, "SOAP|KRR-gaussian": {"MAE": 0.2025, "R2": 0.725}, "SOAP|XGB(PCA100)": {"MAE": 0.2108, "R2": 0.731}, "3D descriptors|KRR-laplacian": {"MAE": 0.0972, "R2": 0.929}, "SOAP(PCA100)+3D|XGB": {"MAE": 0.1178, "R2": 0.904}} 463 s
+donor {"SOAP|KRR-laplacian": {"MAE": 0.2786, "R2": 0.543}, "SOAP|KRR-gaussian": {"MAE": 0.3287, "R2": 0.358}, "SOAP|XGB(PCA100)": {"MAE": 0.2841, "R2": 0.531}, "3D descriptors|KRR-laplacian": {"MAE": 0.2067, "R2": 0.742}, "SOAP(PCA100)+3D|XGB": {"MAE": 0.1921, "R2": 0.769}} 574 s
+acceptor {"SOAP|KRR-laplacian": {"MAE": 0.2651, "R2": 0.571}, "SOAP|KRR-gaussian": {"MAE": 0.3032, "R2": 0.413}, "SOAP|XGB(PCA100)": {"MAE": 0.2891, "R2": 0.489}, "3D descriptors|KRR-laplacian": {"MAE": 0.2279, "R2": 0.684}, "SOAP(PCA100)+3D|XGB": {"MAE": 0.2301, "R2": 0.655}} 686 s
+donor+acceptor {"SOAP|KRR-laplacian": {"MAE": 0.333, "R2": 0.297}, "SOAP|KRR-gaussian": {"MAE": 0.3993, "R2": -0.013}, "SOAP|XGB(PCA100)": {"MAE": 0.3359, "R2": 0.282}, "3D descriptors|KRR-laplacian": {"MAE": 0.3099, "R2": 0.394}, "SOAP(PCA100)+3D|XGB": {"MAE": 0.2922, "R2": 0.455}} 768 s
