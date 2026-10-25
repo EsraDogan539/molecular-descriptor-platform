@@ -1,0 +1,4 @@
+MMFF done 3086 {'MMFF94': 2561, 'UFF': 525} 68 s
+DFT vs MMFF {"bondlen_mean_N-S": {"pearson": 0.051, "mean_abs_diff": 0.0282, "n": 773}, "bondlen_mean_C-S": {"pearson": 0.451, "mean_abs_diff": 0.0434, "n": 2642}, "bondlen_mean_C-Se": {"pearson": 0.077, "mean_abs_diff": 0.6875, "n": 365}, "bondlen_mean_N-Se": {"pearson": 0.143, "mean_abs_diff": 0.2629, "n": 178}, "bondlen_mean_C-N": {"pearson": 0.922, "mean_abs_diff": 0.0118, "n": 2886}, "bondlen_BLA_CC": {"pearson": 0.823, "mean_abs_diff": 0.0106, "n": 3086}, "planar_rms": {"pearson": 0.539, "mean_abs_diff": 0.3354, "n": 3086}}
+2D done 94 s
+polymer 3D 1064 97 s
