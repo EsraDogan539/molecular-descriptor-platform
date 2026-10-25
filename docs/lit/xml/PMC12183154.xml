@@ -1,0 +1,1025 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="marc202401110" xml:lang="en" article-type="research-article" dtd-version="1.4"><?da-xref-anchor-style autodetect?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Macromol Rapid Commun</journal-id><journal-id journal-id-type="iso-abbrev">Macromol Rapid Commun</journal-id><journal-id journal-id-type="pmc-domain-id">379</journal-id><journal-id journal-id-type="pmc-domain">blackwellopen</journal-id><journal-id journal-id-type="nlm-id">9888239</journal-id><journal-id journal-id-type="publisher-id">MARC</journal-id><journal-title-group><journal-title>Macromolecular Rapid Communications</journal-title></journal-title-group><issn pub-type="ppub">1022-1336</issn><issn pub-type="epub">1521-3927</issn><?publisher_abbrev blackwell?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>Wiley Open Access Collection</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12183154</article-id><article-id pub-id-type="pmcid-ver">PMC12183154.1</article-id><article-id pub-id-type="pmcaid">12183154</article-id><article-id pub-id-type="pmcaiid">12183154</article-id><article-id pub-id-type="pmid">40041953</article-id><article-id pub-id-type="doi">10.1002/marc.202401110</article-id><article-id pub-id-type="publisher-id">MARC202401110</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title>Near‐Infrared Electroluminescent Conjugated Copolymer: Triphenyalmine‐Functionalized Benzothiadiazole‐Thiophene System for Circularly Polarized OLEDs</article-title></title-group><contrib-group><contrib id="marc202401110-cr-0001" contrib-type="author"><name name-style="western"><surname>Squeo</surname><given-names initials="BM">Benedetta Maria</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5260-512X</contrib-id><xref rid="marc202401110-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="marc202401110-cr-0002" contrib-type="author"><name name-style="western"><surname>Arrigoni</surname><given-names initials="A">Alessia</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9682-0043</contrib-id><xref rid="marc202401110-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="marc202401110-cr-0003" contrib-type="author"><name name-style="western"><surname>Zinna</surname><given-names initials="F">Francesco</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-6331-6219</contrib-id><xref rid="marc202401110-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="marc202401110-cr-0004" contrib-type="author"><name name-style="western"><surname>Di Bari</surname><given-names initials="L">Lorenzo</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2347-2150</contrib-id><xref rid="marc202401110-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="marc202401110-cr-0005" contrib-type="author"><name name-style="western"><surname>Botta</surname><given-names initials="C">Chiara</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8722-0417</contrib-id><xref rid="marc202401110-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="marc202401110-cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Pasini</surname><given-names initials="M">Mariacecilia</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-7811-6367</contrib-id><xref rid="marc202401110-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>mariacecilia.pasini@scitec.cnr.it</email></address></contrib><contrib id="marc202401110-cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Giovanella</surname><given-names initials="U">Umberto</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2865-050X</contrib-id><xref rid="marc202401110-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>umberto.giovanella@cnr.it</email></address></contrib></contrib-group><aff id="marc202401110-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Consiglio Nazionale delle Ricerche</named-content>
+<institution>Istituto di Scienze e Tecnologie Chimiche “Giulio Natta” (CNR‐SCITEC)</institution>
+<named-content content-type="street">via A. Corti 12</named-content>
+<city>Milano</city>
+<country country="IT">Italy</country>
+</aff><aff id="marc202401110-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Dipartimento di Chimica e Chimica Industriale</named-content>
+<institution>Università di Pisa</institution>
+<named-content content-type="street">via Moruzzi 13</named-content>
+<city>Pisa</city>
+<country country="IT">Italy</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>Email: <email>mariacecilia.pasini@scitec.cnr.it</email>; <email>umberto.giovanella@cnr.it</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>05</day><month>3</month><year>2025</year></pub-date><pub-date pub-type="ppub"><day>20</day><month>6</month><year>2025</year></pub-date><volume>46</volume><issue seq="250">12</issue><issue-id pub-id-type="pmc-issue-id">491196</issue-id><issue-id pub-id-type="doi">10.1002/marc.v46.12</issue-id><elocation-id>2401110</elocation-id><history>
+<date date-type="rev-recd"><day>21</day><month>2</month><year>2025</year></date>
+<date date-type="received"><day>17</day><month>12</month><year>2024</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>23</day><month>06</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>24</day><month>06</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-06-24 00:25:16.993"><day>24</day><month>06</month><year>2025</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). Macromolecular Rapid Communications published by Wiley‐VCH GmbH</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="MARC-46-2401110.pdf"><?pdf-name MARC-46-2401110.pdf?><?pdf-size 1231892?><?pdf-md5 03a53164fe1c553f7683ce409b3cd32c?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:f21b/12183154/03a53164fe1c/MARC-46-2401110.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:MARC-46-2401110.pdf"/><abstract><title>Abstract</title><p>We present a conjugated copolymer designed as a near‐infrared (NIR) emitter for organic light‐emitting diodes (NIR‐OLEDs). The low bandgap donor‐acceptor copolymer, comprising a terthiophene derivative (3T) and benzothiadiazole (BT), is end‐capped with bulky triphenyalmine (TPA) groups (3TBT‐TPA). Compared with the parent homologue capped with simple phenyl rings, 3TBT‐TPA shows enhanced solubility in organic solvents with improved photoluminescence quantum yield thanks to a reduced close packing of chains. 3TBT‐TPA, used both as neat emitting layer and blended with fluorene‐benzothiadiazole (F8BT) host copolymer in a NIR‐OLEDs, shows external quantum efficiency up to 0.58%. Additionally, chiral induction is achieved in the F8BT:3TBT‐TPA blend film using a commercial chiral dopant, yielding circularly polarized (CP), photoluminescence (PL) and electroluminescence (EL) in the range 500–800 nm with a maximum dissymmetry factor in the range of 10<sup>−2</sup>. This is the first example of CP‐NIR EL from a conjugated polymer. This work highlights the potential of TPA‐capped strategy for low bandgap copolymers for efficient NIR‐OLEDs and opens new perspectives in the use of conjugated polymers in NIR photonic applications.</p></abstract><abstract id="marc202401110-abs-0001" abstract-type="graphical"><p>A low bandgap donor‐acceptor emitting copolymer used in NIR‐OLEDs achieves an external quantum efficiency of 0.58%. Through a co‐assembling strategy with a chiral inducer, the first example of circularly polarized near‐infrared electroluminescence (CP‐NIR‐OLED) from a conjugated polymer is presented, promising potential applications in NIR photonics.
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="MARC-46-2401110-g003.jpg"><?image-name MARC-46-2401110-g003.jpg?><?image-size 12582?><?image-md5 c5f63e67626f116eba1382aab68306ee?><?image-image-server-status NEVER_LOAD?><?image-original-height 100?><?image-original-width 180?><?image-scaled-height 100?><?image-scaled-width 180?><?image-cloudpmc-urn urn:cdn:blobs/f21b/12183154/c5f63e67626f/MARC-46-2401110-g003.jpg?></graphic></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="marc202401110-kwd-0001">Circularly polarized emission</kwd><kwd id="marc202401110-kwd-0002">Low bandgap copolymers</kwd><kwd id="marc202401110-kwd-0003">Near infrared electroluminescence</kwd><kwd id="marc202401110-kwd-0004">OLEDs</kwd><kwd id="marc202401110-kwd-0005">R5011</kwd></kwd-group><counts><fig-count count="5"/><table-count count="1"/><page-count count="7"/><word-count count="4404"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>June 20, 2025</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.5.7 mode:remove_FC converted:22.06.2025</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="marc202401110-cit-0001">
+<string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Squeo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Arrigoni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <article-title>Near‐Infrared Electroluminescent Conjugated Copolymer: Triphenyalmine‐Functionalized Benzothiadiazole‐Thiophene System for Circularly Polarized OLEDs</article-title>. <source>Macromol. Rapid Commun.</source>
+<year>2025</year>, <volume>46</volume>, <elocation-id>2401110</elocation-id>. <pub-id pub-id-type="doi">10.1002/marc.202401110</pub-id>
+<pub-id pub-id-type="pmcid">PMC12183154</pub-id><pub-id pub-id-type="pmid">40041953</pub-id></mixed-citation>
+</p></notes></front><body><sec id="marc202401110-sec-0010"><label>1</label><title>Introduction</title><p>NIR emitters are gathering considerable interest for integration into a variety of applications, ranging from photodynamic therapy to security and defence.<sup>[</sup>
+<xref rid="marc202401110-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref>, <xref rid="marc202401110-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>, <xref rid="marc202401110-bib-0003" ref-type="bibr">
+<sup>3</sup>
+</xref>
+<sup>]</sup> Incorporating NIR emitters into OLEDs<sup>[</sup>
+<xref rid="marc202401110-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="marc202401110-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref>, <xref rid="marc202401110-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="marc202401110-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>
+<sup>]</sup> allows these devices to remain small, thin, and flexible, thus reducing their invasiveness and weight, or enabling integration into compact consumer electronics.</p><p>One significant challenge is posed by the “energy‐gap law” for radiation less transitions, which suggests that the rate of the non‐radiative transition between two electronic states increases exponentially with a decrease in the energy difference between the states.<sup>[</sup>
+<xref rid="marc202401110-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref>
+<sup>]</sup> Additionally, NIR emitting dyes frequently encounter issues such as aggregation‐caused quenching due to their extensive π‐conjugated structures.<sup>[</sup>
+<xref rid="marc202401110-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref>, <xref rid="marc202401110-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>
+<sup>]</sup> Large π‐conjugated luminophores often exhibit low solubility and high molecular weight, complicating purification, solution processing, and sublimation.</p><p>A careful design of the donor (D) and acceptor (A) units is needed for charge‐transfer D–A emitters, such as thermally activated delayed fluorescence systems, as well as fluorescent copolymers to shift the PL to deep red and NIR. This design must ensure a sufficiently small highest occupied molecular orbital (HOMO)‐lowest unoccupied molecular orbital (LUMO) gap to achieve NIR emission, which requires the introduction of strong D and A groups. However, this strong charge transfer character may result in low oscillator strength or significant solvation‐induced quenching, adversely affecting luminescence performance.<sup>[</sup>
+<xref rid="marc202401110-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>
+<sup>]</sup> To achieve nearly pure NIR EL emission (with up to 95% of the overall emission), an effective design strategy has involved the use of copolymers based on benzothiadiazole.<sup>[</sup>
+<xref rid="marc202401110-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="marc202401110-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>
+<sup>]</sup>
+</p><p>A significant challenge for NIR emitters that would revolutionize NIR‐OLED technology<sup>[</sup>
+<xref rid="marc202401110-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>, <xref rid="marc202401110-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="marc202401110-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="marc202401110-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="marc202401110-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref>
+<sup>]</sup> is the achievement of a circular polarization of the emitted photons.</p><p>Identifying suitable organic NIR emitters for CP emitting devices is crucial. Some compounds have shown NIR or deep‐red CPPL including small organic compounds, aggregated systems, and organometallic complexes.<sup>[</sup>
+<xref rid="marc202401110-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="marc202401110-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref>
+<sup>]</sup> Notably, only a Pt(II) complex and recently a co‐assembly of organic conjugated molecule and a chiral inductor have generated CPEL in NIR‐OLEDs, to date.<sup>[</sup>
+<xref rid="marc202401110-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref>
+<sup>]</sup> The application of conjugated polymers is still an expectation.</p><p>In this work, we present a conjugated copolymer as a NIR electroluminescent emitter. Composed of a terthiophene derivative (3T) as donor and benzothiadiazole (BT) as acceptor, and end‐capped with triphenylamine moieties (TPA) (3TBT‐TPA), it shows good solubility and PL quantum yield (PLQY). When assessed as emitting layer into a device, 3TBT‐TPA emits with EL peaks in the range 730–794 nm. Further, thanks to a co‐assembling strategy, chirality induction in the F8BT:3TBT‐TPA blend is achieved through the incorporation of a chiral inducer and results in CPEL in the range 500–800 nm.</p></sec><sec id="marc202401110-sec-0020"><label>2</label><title>Results and Discussion</title><p>Polymers 3TBT‐TPA and phenyl‐capped 3TBT (hereafter 3TBT‐Ph, <bold>Figure</bold> <xref rid="marc202401110-fig-0001" ref-type="fig">
+<bold>1</bold>b</xref>), have been synthetized by Suzuki coupling, using 1:1 monomer feed ratios (Scheme <xref rid="marc202401110-supinfo-0001" ref-type="">S1</xref>). A solution of the commercially available 5,5′“‐dibromo‐3,3′”‐dihexyl‐2,2′:5′,2′'‐terthiophene and 2,1,3‐Benzothiadiazole‐4,7‐bis(boronic acid pinacol ester) were combined in a mixture of degassed toluene and 2 M degassed aqueous solution of K<sub>2</sub>CO<sub>3</sub> (1.5:1 organic solvent: aqueous solution by volume) in the presence of tetrakis(triphenylphosphine)palladium. The mixture was heated under stirring at 100 °C for 24 h. Polymer 3TBT‐Ph was capped 4‐Bromobenzene and 4‐phenylboronic acid, while polymer 3TBT‐TPA was capped with 4‐bromotriphenylamine and 4‐(diphenylamino)phenylboronic acid according to a consolidated end‐capping procedure.<sup>[</sup>
+<xref rid="marc202401110-bib-0018" ref-type="bibr">
+<sup>18</sup>
+</xref>, <xref rid="marc202401110-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>
+<sup>]</sup> Purification of the polymers was achieved by Soxhlet extraction with methanol, hexane and toluene. Toluene, that will be used also for film preparation (see below), is preferred to chloroform, which can lead to a residual acidity detrimental for the stability of TPA‐containing polymers. The toluene fractions were then concentrated under reduced pressure, precipitated in methanol, filtered and dried in vacuum, and characterized by <sup>1</sup>H NMR spectroscopy (Figures <xref rid="marc202401110-supinfo-0001" ref-type="">S1,S2</xref>). The molecular weights (Mw) determined by gel permeation chromatography (GPC) with polystyrene as standard were 1900 g/mol (with PDI 1.6) for 3TBT‐Ph and 5700 g/mol (with PDI 1.2) for 3TBT‐TPA. The difference in chain length can be attributed to the variations in the end‐capping, which involves a first bromine derivative capping, followed 12 hours later by a second capping step with a boronic derivative. The consistency of this difference in chain length was confirmed through simultaneous polymerizations of 3TBT‐Ph and 3TBT‐TPA using the same reagents, freshly distilled solvents, and identical reaction conditions. The reactions were repeated twice, further confirming the reproducibility of the observed polymer lengths.</p><fig position="float" fig-type="Figure" id="marc202401110-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Chemical structures of (a) 3TBT‐TPA and (b) 3TBT‐Ph copolymers.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="MARC-46-2401110-g002.jpg"><?image-name MARC-46-2401110-g002.jpg?><?image-size 17749?><?image-md5 318a6c22b7b2ab7bdf49135fbc6f64ae?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 205?><?image-original-width 822?><?image-scaled-height 137?><?image-scaled-width 548?><?image-cloudpmc-urn urn:cdn:blobs/f21b/12183154/318a6c22b7b2/MARC-46-2401110-g002.jpg?><?thumb-name MARC-46-2401110-g002.gif?><?thumb-size 5285?><?thumb-md5 754c89db60b292e7fbd4b25ab0791302?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 50?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/f21b/12183154/754c89db60b2/MARC-46-2401110-g002.gif?></graphic></fig><p>Notably, the nature of the end‐capping agent can significantly influence the final molecular weight of the polymer. For instance, when phenyl bromide is used as the end‐capper, the polymer chain growth may be quenched due to its high reactivity with boronic acid‐terminated polymer chains, compared to the reactivity of the diboronic starting monomer. This results in shorter polymer chains and a reduced Mw for 3TBT‐Ph. In contrast, the use of TPA bromide as the end‐capper leads to a competitive reaction rate of oxidative addition and trans‐metalation with polymer chain growth, allowing for the incorporation of more monomer units before chain termination. The reduced reactivity of TPA bromide can be attributed not only to its strong electron‐donating nature but also to its steric hindrance, which slows its insertion into the catalytic cycle and provides additional time for chain elongation. As a matter of fact, the 3TBT‐TPA polymer demonstrates enhanced solubility in toluene and superior film‐forming properties due to its increased Mw compared to 3TBT‐Ph.</p><p>Absorption spectrum of 3TBT‐TPA in toluene solution (<bold>Figure</bold> <xref rid="marc202401110-fig-0002" ref-type="fig">
+<bold>2</bold>a</xref> and Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S3a</xref>) is characterized by a main band peaked at 543 nm while in solid‐state, the maximum absorption is red‐shifted to 610 nm (<bold>Table</bold> <xref rid="marc202401110-tbl-0001" ref-type="table">
+<bold>1</bold>
+</xref>). The main absorption bands are very similar to 3TBT‐Ph copolymer. Similar behavior is observed for PL spectra (Figure <xref rid="marc202401110-fig-0002" ref-type="fig">2b</xref>, Table <xref rid="marc202401110-supinfo-0001" ref-type="">S1</xref>, and Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S3b,c</xref>). Main PL emission bands of 3TBT‐TPA solution and films are located at 689 and 775 nm, respectively. The slight red‐shift of PL peak (∼8 nm) of 3TBT‐Ph film with respect to 3TBT‐TPA suggests a possible contribution of chain aggregation in the former. In fact, 3TBT‐Ph is poorly soluble in toluene or in other common organic solvents, indicating that TPA bulky groups of 3TBT‐TPA are crucial in enabling solubility and processability of the compound to form high quality film proper for device testing.<sup>[</sup>
+<xref rid="marc202401110-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="marc202401110-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>, <xref rid="marc202401110-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> Notably, although the 3TBT‐TPA features higher Mw, its optical properties, such as the position of the absorption and emission spectra, are similar to those of the shorter 3TBT‐Ph (Figure <xref rid="marc202401110-fig-0002" ref-type="fig">2</xref>). This suggests that the effective conjugation length in these systems is already close to being maximized, even with a relatively low number of repeating units.</p><fig position="float" fig-type="Figure" id="marc202401110-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Optical properties. (a) absorption and (b) PL spectra of 3TBT‐TPA (coloured lines) and 3TBT‐Ph (filled areas) solutions (red) and films (blue).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="MARC-46-2401110-g004.jpg"><?image-name MARC-46-2401110-g004.jpg?><?image-size 37022?><?image-md5 81396c53614b9f983fd0b5a741a0b4ae?><?image-image-server-status NEVER_LOAD?><?image-original-height 206?><?image-original-width 600?><?image-scaled-height 206?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/f21b/12183154/81396c53614b/MARC-46-2401110-g004.jpg?><?thumb-name MARC-46-2401110-g004.gif?><?thumb-size 7474?><?thumb-md5 4e17438eb758f173fa21eae782dffed1?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 69?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/f21b/12183154/4e17438eb758/MARC-46-2401110-g004.gif?></graphic></fig><table-wrap position="float" id="marc202401110-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Summary of optical properties of 3TBT‐Ph, 3TBT‐TPA polymers in toluene solutions and as spin coated films, and films of 3TBT‐TPA blended with F8BT and chiral inducer: absorption (abs) and PL peaks, PLQY.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"/><th align="center" rowspan="1" colspan="1">abs<sub>MAX</sub>/ nm</th><th align="center" rowspan="1" colspan="1">PL<sub>MAX</sub>/ nm</th><th align="center" rowspan="1" colspan="1">PLQY<xref rid="marc202401110-tbl1-note-0001" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+<sup>)</sup>
+</th></tr></thead><tbody><tr><td rowspan="2" align="left" colspan="1">3TBT‐Ph</td><td align="left" rowspan="1" colspan="1">Solution</td><td align="center" rowspan="1" colspan="1">547</td><td align="center" rowspan="1" colspan="1">689</td><td align="center" rowspan="1" colspan="1">30</td></tr><tr><td align="left" rowspan="1" colspan="1">Film</td><td align="center" rowspan="1" colspan="1">615</td><td align="center" rowspan="1" colspan="1">783</td><td align="center" rowspan="1" colspan="1">/</td></tr><tr><td rowspan="2" align="left" colspan="1">3TBT‐TPA</td><td align="left" rowspan="1" colspan="1">Solution</td><td align="center" rowspan="1" colspan="1">543</td><td align="center" rowspan="1" colspan="1">689</td><td align="center" rowspan="1" colspan="1">30</td></tr><tr><td align="left" rowspan="1" colspan="1">Film</td><td align="center" rowspan="1" colspan="1">610</td><td align="center" rowspan="1" colspan="1">775</td><td align="center" rowspan="1" colspan="1">4</td></tr><tr><td align="left" rowspan="1" colspan="1">F8BT:3TBT‐TPA</td><td align="left" rowspan="1" colspan="1">Film</td><td align="center" rowspan="1" colspan="1">/</td><td align="center" rowspan="1" colspan="1">754</td><td align="center" rowspan="1" colspan="1">12</td></tr><tr><td align="left" rowspan="1" colspan="1">F8BT:3TBT‐TPA:R5011</td><td align="left" rowspan="1" colspan="1">Film</td><td align="center" rowspan="1" colspan="1">/</td><td align="center" rowspan="1" colspan="1">710</td><td align="center" rowspan="1" colspan="1">14</td></tr></tbody></table><table-wrap-foot><fn id="marc202401110-tbl1-note-0001"><label>
+<sup>a)</sup>
+</label><p>
+<italic toggle="yes">λ</italic>
+<sub>exc</sub> = 525 nm for the solutions and neat polymer films, <italic toggle="yes">λ</italic>
+<sub>exc</sub> = 450 nm for the blended film (excitation of the F8BT polymer).</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>HOMO and LUMO energy levels of 3TBT‐TPA, obtained from cyclic voltammetry analysis, are −3.02 and −4.98 eV respectively (Table <xref rid="marc202401110-supinfo-0001" ref-type="">S2</xref> and Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S4</xref>). The oxidation peak observed at 0.25 eV (calculated from the onset) and 0.44 eV (calculated from the peak) further confirms the presence of TPA, consistent with findings reported in the literature.<sup>[</sup>
+<xref rid="marc202401110-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref>, <xref rid="marc202401110-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref>
+<sup>]</sup>
+</p><p>The host‐guest polymer‐polymer approach is explored to investigate possible effects of aggregation on the performance of the copolymer thin film, also in view of the assessment as active layer (AL) in OLED prototypes.</p><p>The dispersion of 10 wt.% 3TBT‐TPA in F8BT results in a significant increase of PLQY (12%) with respect to neat 3TBT‐TPA film (∼ 4%), accompanied by an obvious blue‐shift of its emission from 775 nm to 754 nm (Table <xref rid="marc202401110-tbl-0001" ref-type="table">1</xref> and <bold>Figure</bold> <xref rid="marc202401110-fig-0003" ref-type="fig">
+<bold>3</bold>
+</xref>), with a minimal contribution of F8BT emission peaked at 537 nm.</p><fig position="float" fig-type="Figure" id="marc202401110-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Devices characterization. (a) Molecular structure of the organic materials used in the devices and (b) schematic energy diagram of the NIR‐OLED; PL (blue filled area) and EL (red line) spectra (c,d) (insets, images of devices in operation acquired by means of a NIR visor), (e,f) EQE and JLV characteristics of (c,e) OLED‐N and(d,f) OLED‐D.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="MARC-46-2401110-g005.jpg"><?image-name MARC-46-2401110-g005.jpg?><?image-size 78329?><?image-md5 0bfb075df41a8b2cbfc46dae2d3c42dd?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 935?><?image-original-width 820?><?image-scaled-height 623?><?image-scaled-width 546?><?image-cloudpmc-urn urn:cdn:blobs/f21b/12183154/0bfb075df41a/MARC-46-2401110-g005.jpg?><?thumb-name MARC-46-2401110-g005.gif?><?thumb-size 6999?><?thumb-md5 b719bbdb9497b0472ec165d488ee12fb?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 114?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f21b/12183154/b719bbdb9497/MARC-46-2401110-g005.gif?></graphic></fig><p>Interestingly, Förster resonance energy transfer (FRET) occurs from F8BT to 3TBT‐TPA. FRET is supported by the spectral overlap between the PL emission of F8BT and the absorption spectrum of 3TBT‐TPA (Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S5a</xref>). Furthermore, the PL excitation (PLE) spectrum of the F8BT:3TBT‐TPA blend film, recorded by monitoring the PL emission at the main 3TBT‐TPA peak (754 nm), closely resembles the absorption spectrum of F8BT (Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S5b</xref>). Such findings are crucial as they suggest potential applications in optoelectronic devices, where energy transfer efficiency can significantly enhance device performance.</p><p>Solution‐processed OLEDs were fabricated with neat 3TBT‐TPA (non‐doped) and F8BT: 3TBT‐TPA (doped) AL configurations. To enhance electron/hole balance and exciton confinement within the AL, which are crucial for optimal OLED performance, we employed a multi‐layered architecture with additional functional layers.<sup>[</sup>
+<xref rid="marc202401110-bib-0024" ref-type="bibr">
+<sup>24</sup>
+</xref>
+<sup>]</sup> Specifically, a hole‐transporting polymer, polyvinylcarbazole (PVK, Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3b</xref>), and an electron‐injecting molecule, 2,2′,2′'‐(1,3,5‐Benzinetriyl)‐tris(1‐phenyl‐1‐H‐benzimidazole) (TPBI, Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3b</xref>), were deposited as thin films using solution and thermal evaporation methods.<sup>[</sup>
+<xref rid="marc202401110-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref>
+<sup>]</sup> The device structure was as follows: Indium‐Tin Oxide (ITO)/Poly(2,3‐dihydrothieno‐1,4‐dioxin)‐poly(styrenesulfonate) (PEDOT:PSS)/PVK/AL/TPBI/LiF/Al (Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3a</xref>). These configurations are indicated as OLED‐N for non‐doped and OLED‐D for doped devices, respectively. In OLED‐D the F8BT:3TBT‐TPA mass ratio is fixed to 10:1 since it exhibits best performance (see Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S6</xref>).</p><p>All devices predominantly exhibit EL emission from 3TBT‐TPA (Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3c,d</xref>). The EL peaks are located at 753 nm to 794 nm for doped and non‐doped devices, respectively. Notably, not EL emission from F8BT was detected in OLED‐D architecture. The emission from OLED‐N is characterized by a truly NIR EL, whereas for OLED‐D, approximately 5% of the emission occurs below 700 nm (red filled area in Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3d</xref>). OLED‐N switches on at 5 V, with a EQE<sub>MAX</sub> of 0.072% and radiance (L) of 0.68 Wsr<sup>−1</sup>m<sup>−2</sup> at 12 V (Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3e</xref>). In the doped configuration, OLED‐D turns on at about 9 V and exhibits enhanced EQE<sub>MAX</sub> of 0.58% and L of 0.1 Wsr<sup>−1</sup>m<sup>−2</sup> at 12 V (Figure <xref rid="marc202401110-fig-0003" ref-type="fig">3f</xref>).</p><p>The performance of the devices are comparable to the results published in the literature for all organic NIR‐OLEDs, but they remarkably stand out when considering that the NIR emitter is a conjugated polymer.<sup>[</sup>
+<xref rid="marc202401110-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>, <xref rid="marc202401110-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="marc202401110-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref>
+<sup>]</sup>
+</p><p>Recent advancements in chirality induction within conjugated polymers have shown promising results, particularly through chirality transfer between a small chiral inducer and the achiral host polymer, leading to notable CPEL.<sup>[</sup>
+<xref rid="marc202401110-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref>, <xref rid="marc202401110-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref>, <xref rid="marc202401110-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>
+<sup>]</sup> Expanding on this strategy, we incorporated a commercial chiral inducer, marketed as R5011 (<bold>Figure</bold> <xref rid="marc202401110-fig-0004" ref-type="fig">
+<bold>4</bold>a</xref>), into the F8BT:3TBT‐TPA co‐assembled system. The goal is to induce chiral characteristics within the F8BT:3TBT‐TPA system, aiming to enhance NIR CPEL.</p><fig position="float" fig-type="Figure" id="marc202401110-fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Chiroptical characterization of film and devices embedding R5011 chiral inducer. (a) Chemical structure of the chiral inducer; (b) Absorption and ECD spectra, (c) PL and <italic toggle="yes">g</italic>
+<sub>PL</sub> of F8BT:3TBT‐TPA:R5011 film; (d) EL and <italic toggle="yes">g</italic>
+<sub>EL</sub> of ITO/PEDOT:PSS/F8BT:3TBT‐TPA:R5011/LiF/Al device.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="MARC-46-2401110-g001.jpg"><?image-name MARC-46-2401110-g001.jpg?><?image-size 50693?><?image-md5 f8d2a0438a831ff001706b53b638a364?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 598?><?image-original-width 820?><?image-scaled-height 398?><?image-scaled-width 546?><?image-cloudpmc-urn urn:cdn:blobs/f21b/12183154/f8d2a0438a83/MARC-46-2401110-g001.jpg?><?thumb-name MARC-46-2401110-g001.gif?><?thumb-size 5819?><?thumb-md5 c2d3e954e958399e87b6ef7dd8116a37?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 79?><?thumb-scaled-width 109?><?thumb-cloudpmc-urn urn:cdn:blobs/f21b/12183154/c2d3e954e958/MARC-46-2401110-g001.gif?></graphic></fig><p>R5011 was chosen due to its proven chiral induction efficacy to F8BT.<sup>[</sup>
+<xref rid="marc202401110-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>
+<sup>]</sup> By co‐assembling it with F8BT:3TBT‐TPA blend, the inducer is expected to interact with polymer chains, creating a helical conformation and producing a chiral environment in the polymer film. The F8BT:3TBT‐TPA:R5011 ternary blend film, with 10:1:2 mass content ratio, was thermally treated at 140 °C for 30 min<sup>[</sup>
+<xref rid="marc202401110-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>
+<sup>]</sup> to facilitate chiral self‐organization (Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S7</xref>).</p><p>The film exhibited a significant electronic circular dichroism (ECD) signal of approximately 1700 millidegrees at the absorption band of the achiral F8BT (467 nm, Figure <xref rid="marc202401110-fig-0004" ref-type="fig">4b</xref>), while no significant ECD band is observed for 3TBT‐TPA.</p><p>The degree of CP for both PL and EL emission was measured by means of the dissymmetry factor g (g<sub>PL/EL</sub>).<sup>[</sup>
+<xref rid="marc202401110-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref>, <xref rid="marc202401110-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+<sup>]</sup> The chiral co‐assembly displayed CPPL signal with g<sub>PL</sub> of about −0.07 in F8BT emission region between 530–550 nm. Surprisingly, CPPL is observed also for 3TBT‐TPA band with a negative g<sub>PL</sub> value again in the order of 10<sup>−2</sup> in the range 550–800 nm (Figure <xref rid="marc202401110-fig-0004" ref-type="fig">4c</xref>).</p><p>Besides its role in chirality induction, the R5011 additive acts as a dispersing agent for F8BT:3TBT‐TPA blend, producing a blue‐shift of PL band associated to 3TBT‐TPA with a minor increase in PLQY (14%) with respect to binary blend. At the same time, a slight increase in the contribution of F8BT emission to the overall PL spectrum (Figure <xref rid="marc202401110-fig-0004" ref-type="fig">4c</xref>) with respect to F8BT:3TBT‐TPA binary blend is observed.</p><p>Corresponding devices are manufactured with the basic architecture ITO/PEDOT:PSS/AL/LiF/Al (OLED‐C).</p><p>The integration of the chiral inducer into the system results in a blue shift of the NIR EL spectrum and a slight contribution of F8BT emission relative to the overall EL (Figure <xref rid="marc202401110-fig-0004" ref-type="fig">4d</xref>). Nevertheless, the devices predominantly exhibit NIR EL, with 75% of the EL spectrum located above 700 nm, achieving an EQE<sub>MAX</sub> of 0.28% and a L<sub>MAX</sub> of 3 Wsr<sup>−1</sup>m<sup>−2</sup> (Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S8</xref>).</p><p>Notably, OLED‐C demonstrated CPEL with a maximum <italic toggle="yes">g</italic>
+<sub>EL</sub> value of 0.01, that slightly decreases in the NIR region, reaching approximately 5×10<sup>−3</sup> in correspondence of the 3TBT‐TPA emission band. This represents the first example of CP‐NIR‐OLEDs with CPEL directly generated from a conjugated polymer.</p><p>The sign of CPEL is opposite to that of CPPL of corresponding film. This behavior may be rationalized by taking into account the circular self‐extinction within the active layer, due to a significant overlap between ECD bands and the emission profile. Recently, we have developed a model to (semi)‐quantitatively predict the polarization outcoupling (and therefore the g<sub>EL</sub>) of the device, from the g<sub>PL</sub> profile, cathode reflectance, absorption/ECD spectra of the active layer as well as the position of the recombination zone (see Supporting Information).<sup>[</sup>
+<xref rid="marc202401110-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref>, <xref rid="marc202401110-bib-0032" ref-type="bibr">
+<sup>–</sup>
+</xref>, <xref rid="marc202401110-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref>
+<sup>]</sup> Applying this model, we can reproduce the sign inversion (Figure <xref rid="marc202401110-supinfo-0001" ref-type="">S9,10</xref>), assuming that hole‐electron recombination occurs close to the cathode. The model is also able to reproduce correctly the order of magnitude of the g<sub>EL</sub>, especially at lower energy.</p></sec><sec id="marc202401110-sec-0030"><label>3</label><title>Conclusions</title><p>In summary, we have successfully developed and characterized a conjugated copolymer, 3TBT‐TPA, designed as a NIR emitter for OLEDs. The introduction of TPA bulky steric groups significantly enhanced solubility and the film‐forming ability with respect to the Ph‐capped copolymer. The NIR‐OLEDs fabricated using 3TBT‐TPA exhibited good EQE of 0.58% with EL peak at 753 nm. Notably, the induction of CPPL and CPEL is demonstrated by following a co‐assembling strategy with a chiral inducer achieving dissymmetry factors of ∼5×10<sup>−3</sup> for 3TBT‐TPA NIR emission. This represents the first example of CP‐NIR‐OLEDs with directly generated CPEL from a conjugated polymer. The observed inversion in the sign of CPEL compared to CPPL highlights the complex interplay of factors influencing device performance, including the circular self‐extinction within the active layer, the positioning of the radiative exciton recombination zone and the architecture of the device.</p><p>These findings open new avenues for the application of conjugated polymers in NIR photonic devices, suggesting a promising future for the development of efficient and versatile CP‐NIR‐OLEDs.</p><p>Further studies are needed to fully elucidate the mechanisms behind the observed phenomena and to optimize the performance of these innovative devices.</p></sec><sec id="marc202401110-sec-0040"><label>4</label><title>Experimental Section</title><sec id="marc202401110-sec-0070"><title>General Information for synthesis</title><p>All reagents were purchased from commercial sources and used without further purification. All solvents have been degassed bubbling nitrogen prior to use. All reactions were carried out in an inert atmosphere.</p></sec><sec id="marc202401110-sec-0080"><title>Synthesis of 3TBT‐TPA</title><p>A mixture of 5,5′“‐dibromo‐3,3′”‐dihexyl‐2,2′:5′,2′'‐terthiophene (250 mg, 0.235 mmol, 1 eq.), 2,1,3‐Benzothiadiazole‐4,7‐bis(boronic acid pinacol ester) (169 mg, 0.235 mmol, 1eq.), tetrakis(triphenylphosphine)palladium (10 mg, 2% mol), and TEBA (benzyltriethylammonium chloride) was added in a pre‐degassed Schlenk flask, followed by three vacuum/nitrogen cycles. Then degassed toluene (9 mL) and potassium carbonate 2 M water solution (2.25 mL) were added. After the mixture was heated under stirring at 100 °C for 24 h, 4‐bromotriphenylamine was added, followed, after 7 h, by 4‐(diphenylamino)phenylboronic acid. After 12 h the mixture was diluted with toluene and filtered on celite pad. The polymer was purified by precipitation in methanol and washed using a Soxhlet apparatus with methanol, hexane and toluene.<sup>[</sup>
+<xref rid="marc202401110-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+<sup>]</sup> The toluene fraction was concentrated under reduced pressure, precipitated in methanol, filtered, and dried in vacuum to give a purple powder (70 mg, 72% yield).</p></sec><sec id="marc202401110-sec-0090"><title>Synthesis of 3TBT‐Ph</title><p>A mixture of 5,5′“‐dibromo‐3,3′”‐dihexyl‐2,2′:5′,2′'‐terthiophene (148 mg, 0.258 mmol, 1 eq.), 2,1,3‐Benzothiadiazole‐4,7‐bis(boronic acid pinacol ester) (100 mg, 0.258 mmol, 1eq.), tetrakis(triphenylphosphine)palladium (6 mg, 2% mol), and TEBA (benzyltriethylammonium chloride) was added in a pre‐degassed Schlenk flask, followed by three vacuum/nitrogen cycles. Then degassed toluene (6 mL) and potassium carbonate 2 M water solution (1.50 mL) were added. After the mixture was heated under stirring at 100 °C for 24 h, 4‐bromophenyl was added, followed, after 7 h, by 4‐phenylboronic acid. After 12 h the mixture was diluted with toluene and filtered on celite pad. The polymer was purified by precipitation in methanol and washed using a Soxhlet apparatus with methanol, hexane, and toluene.<sup>[</sup>
+<xref rid="marc202401110-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+<sup>]</sup> The toluene fraction was concentrated under reduced pressure, precipitated in methanol, filtered, and dried in vacuum to give a purple powder (68 mg, 65% yield).</p></sec><sec id="marc202401110-sec-0100"><title>Chiroptical characterization</title><p>Electronic absorption spectra were carried out on a Perkin–Elmer Lambda 900 UV–vis NIR Spectrometer. ECD spectra were recorded with a Jasco J1500 spectropolarimeter. Steady‐state and time‐resolved PL spectra were recorded on a modified Jobin‐Yvon Horiba Fluorolog spectrofluorometer. PLQYs have been obtained with a home‐made integrating sphere. CPPL and CPEL activities are evaluated by means of a fixed linear polarizer (LP) and a rotating quarter wave plate (QWP) placed in front of the CCD detector, as previously described.<sup>[</sup>
+<xref rid="marc202401110-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref>
+<sup>]</sup> Control measurements were carried out with the home‐built spectrofluoropolarimeter described in ref. [<xref rid="marc202401110-bib-0035" ref-type="bibr">35</xref>] using a photo elastic modulator driven at <italic toggle="yes">f</italic> = 50 kHz. The residual fluorescence linear anisotropy component was measured with the same instrument by extracting the 2f signal of the PEM modulation.</p></sec><sec id="marc202401110-sec-0110"><title>Electrochemical measurements</title><p>Electrochemistry was performed at room temperature in acetonitrile under nitrogen in three electrode cells. The counter electrode was platinum; reference electrode was Ag/Ag<sup>+</sup> (0.1 m AgNO<sub>3</sub> in acetonitrile, 0.34 V versus SCE, −4.73 V versus vacuum), supporting electrolyte was 0.1 m tetrabutylammonium perchlorate). 3TBT‐TPA film was casted onto electrodes from toluene solution. The working electrode was a glassy‐carbon minidisc electrode (0.2 cm<sup>2</sup>). HOMO and LUMO levels were estimated according, to the Equation <italic toggle="yes">E</italic>
+<sub>HOMO</sub> = −(<italic toggle="yes">E</italic>
+<sub>ox</sub> + 4.39 + 0.34) and <italic toggle="yes">E</italic>
+<sub>LUMO</sub> = −(<italic toggle="yes">E</italic>
+<sub>Red</sub> + 4.39 + 0.34).<sup>[</sup>
+<xref rid="marc202401110-bib-0036" ref-type="bibr">
+<sup>36</sup>
+</xref>
+<sup>]</sup>
+</p></sec><sec id="marc202401110-sec-0120"><title>Film and Devices</title><p>Solutions of 3TBT‐TPA and F8BT with 10wt.% of 3TBT‐TPA in toluene at a total concentration of 20 mg/mL were spin‐coated on quartz substrates. Solutions of the F8BT:3TBT‐TPA blended with 20wt.% of R5011 in toluene at a total concentration of 20 mg/mL were spin‐coated on glass substrate and annealed at 140 °C for 30 min in inert atmosphere. For the manufacturing of devices indium thin oxide (ITO) was used as anode. After sequential cleaning of 2.5 cm x 2.5 cm sized ITO‐patterned‐coated glasses in acetone and isopropanol in a sonicator, they were treated with nitrogen plasma. PEDOT:PSS Clevios VPI 4083 was spin‐coated to form a ∼30 nm thick film. PVK (∼35 nm) film was deposited on top of PEDOT:PSS from a 10 mg/mL chlorobenzene solution and annealed at 150 °C for 15 min. Solution of the F8BT:3TBT‐TPA:R5011 was spin‐coated on top of the glass/ITO/PEDOT:PSS/PVK substrate. The TPBI electron transport/hole blocking layer (30 nm) was deposited using an Organic Molecular Beam Deposition system. Finally, 1.5 nm of LiF and 110 nm of Al were thermo‐sublimated inside the high vacuum evaporator to achieve a mirror cathode. Photons emitted in a forward direction through the glass substrate were collected by a calibrated photodiode. Current density‐light‐voltage curves were recorded by Keithley 2602 apparatus. The radiance of the devices was estimated using the same setup and Lambertian emission was assumed.</p></sec></sec><sec sec-type="COI-statement" id="marc202401110-sec-0140"><title>Conflict of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="marc202401110-supinfo-0001" position="float" content-type="local-data" orientation="portrait"/><supplementary-material id="marc202401110-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting Information</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="MARC-46-2401110-s001.pdf" position="float" orientation="portrait"><?suppdata-name MARC-46-2401110-s001.pdf?><?suppdata-size 842267?><?suppdata-md5 edb0b77b808cd0cc9c48d3447e8dcbcd?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:f21b/12183154/edb0b77b808c/MARC-46-2401110-s001.pdf?></media></supplementary-material></sec></body><back><ack id="marc202401110-sec-0130"><title>Acknowledgements</title><p>The authors have nothing to report.</p><p>Open access publishing facilitated by Consiglio Nazionale delle Ricerche, as part of the Wiley ‐ CRUI‐CARE agreement.</p></ack><sec sec-type="data-availability" id="marc202401110-sec-0160"><title>Data Availability Statement</title><p>The data that support the findings of this study are available in the supplementary material of this article.</p></sec><ref-list id="marc202401110-bibl-0001"><ref id="marc202401110-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="marc202401110-cite-0001">
+<string-name name-style="western">
+<given-names>J. C. G.</given-names>
+<surname>Bünzli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. V.</given-names>
+<surname>Eliseeva</surname>
+</string-name>, <source>J. of Rare Earths</source>
+<year>2010</year>, <volume>28</volume>, <fpage>824</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="marc202401110-cite-0002">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Vasilopoulou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fakharuddin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. P.</given-names>
+<surname>García de Arquer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Georgiadou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. R.</given-names>
+<surname>bin Mohd Yusoff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. K.</given-names>
+<surname>Nazeeruddin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Bolink</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. H.</given-names>
+<surname>Sargent</surname>
+</string-name>, <source>Nat. Photonics</source>
+<year>2021</year>, <volume>15</volume>, <fpage>656</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="marc202401110-cite-0003">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Zampetti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Minotto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Cacialli</surname>
+</string-name>, <source>Adv. Funct. Mater.</source>
+<year>2019</year>, <volume>29</volume>, <elocation-id>1807623</elocation-id>.</mixed-citation></ref><ref id="marc202401110-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="marc202401110-cite-0004">
+<string-name name-style="western">
+<given-names>P. L.</given-names>
+<surname>dos Santos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Stachelek</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Takeda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Pander</surname>
+</string-name>, <source>Mater. Chem. Front.</source>
+<year>2024</year>, <volume>8</volume>, <fpage>1731</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="marc202401110-cite-0005">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Xie</surname>
+</string-name>, <source>Mater. Chem. Front.</source>
+<year>2023</year>, <volume>7</volume>, <fpage>4744</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="marc202401110-cite-0006">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Deng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Si</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X. K.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Cao</surname>
+</string-name>, <source>Nat. Photonics</source>
+<year>2022</year>, <volume>16</volume>, <fpage>752</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="marc202401110-cite-0007">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Mróz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Squeo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Vercelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <source>Mater. Adv.</source>
+<year>2023</year>, <volume>4</volume>, <fpage>1702</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="marc202401110-cite-0008">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Englman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jortner</surname>
+</string-name>, <source>Mol. Phys.</source>
+<year>1970</year>, <volume>18</volume>, <fpage>145</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="marc202401110-cite-0009">
+<string-name name-style="western">
+<given-names>G. R.</given-names>
+<surname>Suman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pandey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S. J.</given-names>
+<surname>Chakravarthy</surname>
+</string-name>, <source>Mater. Chem. Front.</source>
+<year>2021</year>, <volume>5</volume>, <fpage>1541</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="marc202401110-cite-0010">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W. Y.</given-names>
+<surname>Lam</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Qin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. Z.</given-names>
+<surname>Tang</surname>
+</string-name>, <source>Adv. Mater.</source>
+<year>2014</year>, <volume>26</volume>, <fpage>5429</fpage>.<pub-id pub-id-type="pmid">24975272</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/adma.201401356</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="marc202401110-cite-0011">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Sudyoadsuk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Chasing</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kaewpuang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Manyum</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Chaiwai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Namuangruk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Promarak</surname>
+</string-name>, <source>J Mater Chem C Mater</source>
+<year>2020</year>, <volume>8</volume>, <fpage>5045</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="marc202401110-cite-0012">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Cai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Qiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Gu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Ma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Su</surname>
+</string-name>, <source>Front Chem</source>
+<year>2019</year>, <volume>7</volume>, <elocation-id>458664</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fchem.2019.00276</pub-id><pub-id pub-id-type="pmcid">PMC6482244</pub-id><pub-id pub-id-type="pmid">31058144</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="marc202401110-cite-0013">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sassi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Buccheri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Rooney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Bruni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Brovelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Beverina</surname>
+</string-name>, <source>Sci. Rep.</source>
+<year>2016</year>, <volume>6</volume>, <fpage>1</fpage>.<pub-id pub-id-type="pmid">27677240</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/srep34096</pub-id><pub-id pub-id-type="pmcid">PMC5039715</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="marc202401110-cite-0014">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Minotto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Bulut</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. G.</given-names>
+<surname>Rapidis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Carnicella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Patrini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Lunedei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. L.</given-names>
+<surname>Anderson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Cacialli</surname>
+</string-name>, <source>Light: Sci. Appl.</source>
+<year>2021</year>, <volume>10</volume>, <fpage>1</fpage>.<pub-id pub-id-type="pmid">33479197</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41377-020-00456-8</pub-id><pub-id pub-id-type="pmcid">PMC7820436</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="marc202401110-cite-0015">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Liang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Cao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Feng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>Yao</surname>
+</string-name>, <source>Mater. Today</source>
+<year>2024</year>, <volume>75</volume>, <fpage>309</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="marc202401110-cite-0016">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Vázquez‐Domínguez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Horojat</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Suits</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. J. F.</given-names>
+<surname>de Córdova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Vanthuyne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Jacquemin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ros</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Favereau</surname>
+</string-name>, <source>Mater. Chem. Front.</source>
+<year>2024</year>, <volume>8</volume>, <fpage>3799</fpage>.<pub-id pub-id-type="pmid">39347463</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1039/d4qm00632a</pub-id><pub-id pub-id-type="pmcid">PMC11423793</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="marc202401110-cite-0017">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Fu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Lü</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. Y.</given-names>
+<surname>Wong</surname>
+</string-name>, <source>J. Mater. Chem. C</source>
+<year>2019</year>, <volume>7</volume>, <elocation-id>13743</elocation-id>.</mixed-citation></ref><ref id="marc202401110-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="marc202401110-cite-0018">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bolognesi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Betti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Moreau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <source>Macromolecules</source>
+<year>2009</year>, <volume>42</volume>, <fpage>1107</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/cphc.200900260</pub-id><pub-id pub-id-type="pmid">19544493</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="marc202401110-cite-0019">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Betti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bolognesi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Melucci</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <source>Org. Electron.</source>
+<year>2010</year>, <volume>11</volume>, <fpage>2012</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="marc202401110-cite-0020">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Noda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Imae</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Noma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Shirota</surname>
+</string-name>, <source>Adv. Mater.</source>
+<year>1997</year>, <volume>9</volume>, <fpage>239</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="marc202401110-cite-0021">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Noda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ogawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Noma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Shirota</surname>
+</string-name>, <source>J. Mater. Chem.</source>
+<year>1999</year>, <volume>9</volume>, <fpage>2177</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="marc202401110-cite-0022">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <source>Synth. Met.</source>
+<year>2008</year>, <volume>158</volume>, <fpage>113</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="marc202401110-cite-0023">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Betti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bolognesi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Vercelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Zotti</surname>
+</string-name>, <source>ChemPhysChem</source>
+<year>2009</year>, <volume>10</volume>, <fpage>2143</fpage>.<pub-id pub-id-type="pmid">19544493</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/cphc.200900260</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="marc202401110-cite-0024">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Galeotti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Mróz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Squeo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Luzzati</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Scavia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <source>Macromol. Chem. Phys.</source>
+<year>2023</year>, <volume>224</volume>, <elocation-id>2300130</elocation-id>.</mixed-citation></ref><ref id="marc202401110-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="marc202401110-cite-0025">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Cabras</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Scavia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <source>Chirality</source>
+<year>2023</year>, <volume>35</volume>, <fpage>270</fpage>.<pub-id pub-id-type="pmid">36847610</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/chir.23538</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="marc202401110-cite-0026">
+<string-name name-style="western">
+<given-names>C. H.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. L.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. K.</given-names>
+<surname>Tan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Feng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Duan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. F.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <source>Adv. Mater.</source>
+<year>2024</year>, <volume>36</volume>, <elocation-id>2406550</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/adma.202406550</pub-id><pub-id pub-id-type="pmid">39054732</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="marc202401110-cite-0027">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wade</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Shi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Fuchter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Campbell</surname>
+</string-name>, <source>ACS Appl. Mater. Interfaces</source>
+<year>2020</year>, <volume>12</volume>, <elocation-id>39471</elocation-id>.<pub-id pub-id-type="pmid">32805911</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/acsami.0c09139</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="marc202401110-cite-0028">a) <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Da Costa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Smilgies</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Campbell</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Fuchter</surname>
+</string-name>, <source>Adv. Mater.</source>
+<year>2013</year>, <volume>25</volume>, <fpage>2624</fpage>.<pub-id pub-id-type="pmid">23554220</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/adma.201204961</pub-id><pub-id pub-id-type="pmcid">PMC3659407</pub-id></mixed-citation><mixed-citation publication-type="journal" id="marc202401110-cite-0029">b) <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Moreno‐Naranjo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Furlan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. T. J.</given-names>
+<surname>Ryan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Matulaitis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Minion</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Di Girolamo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Jávorfi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Siligardi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wade</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Gasparini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Zysman‐Colman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Fuchter</surname>
+</string-name>, <source>Adv. Mater.</source>
+<year>2024</year>, <volume>36</volume>, <elocation-id>2402194</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/adma.202402194</pub-id><pub-id pub-id-type="pmid">38865650</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="marc202401110-cite-0030">
+<string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. F.</given-names>
+<surname>Chen</surname>
+</string-name>, <source>Chem. Soc. Rev.</source>
+<year>2020</year>, <volume>49</volume>, <fpage>1331</fpage>.<pub-id pub-id-type="pmid">31999286</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1039/c9cs00680j</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="marc202401110-cite-0031">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Furlan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Moreno‐Naranjo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Gasparini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Feldmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wade</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Fuchter</surname>
+</string-name>, <source>Nat. Photonics</source>
+<year>2024</year>, <volume>18</volume>, <fpage>658</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="marc202401110-cite-0032">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Galeotti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <source>Adv. Funct. Mater.</source>
+<year>2017</year>, <volume>27</volume>, <elocation-id>1603719</elocation-id>.</mixed-citation></ref><ref id="marc202401110-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="marc202401110-cite-0033">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pescitelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <source>Chirality</source>
+<year>2020</year>, <volume>32</volume>, <fpage>765</fpage>.<pub-id pub-id-type="pmid">32162387</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/chir.23217</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="marc202401110-cite-0034">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Luzzati</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. D.</given-names>
+<surname>Bari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <source>Adv. Funct. Mater.</source>
+<year>2025</year>, <elocation-id>2423077</elocation-id>, <pub-id pub-id-type="doi">10.1002/adfm.202423077</pub-id>.</mixed-citation></ref><ref id="marc202401110-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="marc202401110-cite-0035">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Giovanella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Botta</surname>
+</string-name>, <source>Synth. Met.</source>
+<year>2008</year>, <volume>158</volume>, <fpage>113</fpage>.</mixed-citation></ref><ref id="marc202401110-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="marc202401110-cite-0036">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zinna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Bruhn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Guido</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ahrens</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bröring</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pescitelli</surname>
+</string-name>, <source>Chem. ‐ Eur. J.</source>
+<year>2016</year>, <volume>22</volume>, <elocation-id>16089</elocation-id>
+<pub-id pub-id-type="pmid">27658919</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/chem.201602684</pub-id></mixed-citation></ref><ref id="marc202401110-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="marc202401110-cite-0037">
+<string-name name-style="western">
+<given-names>M. D.</given-names>
+<surname>Iosip</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Destri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pasini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Porzio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. P.</given-names>
+<surname>Pernstich</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Batlogg</surname>
+</string-name>, <source>Synth. Met.</source>
+<year>2004</year>, <volume>146</volume>, <fpage>251</fpage>.</mixed-citation></ref></ref-list></back></article>

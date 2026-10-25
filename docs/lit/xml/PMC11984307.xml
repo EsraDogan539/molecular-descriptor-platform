@@ -1,0 +1,649 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article xml:lang="EN" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Macromolecules</journal-id><journal-id journal-id-type="iso-abbrev">Macromolecules</journal-id><journal-id journal-id-type="pmc-domain-id">822</journal-id><journal-id journal-id-type="pmc-domain">acssd</journal-id><journal-id journal-id-type="nlm-id">0365316</journal-id><journal-id journal-id-type="publisher-id">ma</journal-id><journal-title-group><journal-title>Macromolecules</journal-title></journal-title-group><issn pub-type="ppub">0024-9297</issn><issn pub-type="epub">1520-5835</issn><?publisher_abbrev acs?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>ACS AuthorChoice</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC11984307</article-id><article-id pub-id-type="pmcid-ver">PMC11984307.1</article-id><article-id pub-id-type="pmcaid">11984307</article-id><article-id pub-id-type="pmcaiid">11984307</article-id><article-id pub-id-type="pmid">40224167</article-id><article-id pub-id-type="doi">10.1021/acs.macromol.4c02854</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group><subject>Article</subject></subj-group></article-categories><title-group><article-title>Selective Tuning
+of Benzothiadiazole Functionality
+Enables High Crystallinity and Mobility in Regiorandom <italic toggle="yes">n</italic>-Type Polymers for Organic Field-Effect Transistors</article-title></title-group><contrib-group><contrib contrib-type="author" id="ath1"><name name-style="western"><surname>Kafourou</surname><given-names initials="P">Panagiota</given-names></name><xref rid="aff1" ref-type="aff">†</xref><xref rid="aff2" ref-type="aff">‡</xref></contrib><contrib contrib-type="author" id="ath2"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0002-9383-9387</contrib-id><name name-style="western"><surname>He</surname><given-names initials="Q">Qiao</given-names></name><xref rid="aff2" ref-type="aff">‡</xref></contrib><contrib contrib-type="author" id="ath3"><name name-style="western"><surname>Hu</surname><given-names initials="X">Xiantao</given-names></name><xref rid="aff2" ref-type="aff">‡</xref></contrib><contrib contrib-type="author" id="ath4"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0001-9352-1902</contrib-id><name name-style="western"><surname>Nugraha</surname><given-names initials="MI">Mohamad Insan</given-names></name><xref rid="aff1" ref-type="aff">†</xref><xref rid="aff4" ref-type="aff">∥</xref><xref rid="aff5" ref-type="aff">⊥</xref></contrib><contrib contrib-type="author" id="ath5"><name name-style="western"><surname>Tan</surname><given-names initials="WL">Wen Liang</given-names></name><xref rid="aff3" ref-type="aff">§</xref></contrib><contrib contrib-type="author" id="ath6"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-3208-8572</contrib-id><name name-style="western"><surname>Luke</surname><given-names initials="J">Joel</given-names></name><xref rid="aff1" ref-type="aff">†</xref></contrib><contrib contrib-type="author" id="ath7"><name name-style="western"><surname>Ding</surname><given-names initials="B">Bowen</given-names></name><xref rid="aff2" ref-type="aff">‡</xref></contrib><contrib contrib-type="author" id="ath8"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0001-5221-878X</contrib-id><name name-style="western"><surname>McNeill</surname><given-names initials="CR">Christopher R.</given-names></name><xref rid="aff3" ref-type="aff">§</xref></contrib><contrib contrib-type="author" id="ath9"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0002-0978-8813</contrib-id><name name-style="western"><surname>Anthopoulos</surname><given-names initials="TD">Thomas D.</given-names></name><xref rid="aff1" ref-type="aff">†</xref><xref rid="aff6" ref-type="aff">#</xref></contrib><contrib contrib-type="author" corresp="yes" id="ath10"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0001-6879-5020</contrib-id><name name-style="western"><surname>Heeney</surname><given-names initials="M">Martin</given-names></name><xref rid="cor1" ref-type="other">*</xref><xref rid="aff1" ref-type="aff">†</xref></contrib><aff id="aff1"><label>†</label>KAUST
+Solar Center, Physical Sciences and Engineering Division (PSE), <institution>King Abdullah University of Science and Technology
+(KAUST)</institution>, Thuwal 23955-6900, <country>Kingdom
+of Saudi Arabia</country></aff><aff id="aff2"><label>‡</label>Department
+of Chemistry and Centre for Processable Electronics, <institution>Imperial College London</institution>, London W12 0BZ, <country>U.K.</country></aff><aff id="aff3"><label>§</label>Department
+of Materials Engineering, <institution>Monash University</institution>, Clayton, Victoria 3800, <country>Australia</country></aff><aff id="aff4"><label>∥</label>Research
+Center for Nanotechnology Systems, <institution>National
+Research and Innovation Agency (BRIN)</institution>, South Tangerang, Banten 15314, <country>Indonesia</country></aff><aff id="aff5"><label>⊥</label>Collaboration
+Research Center for Advanced Energy Materials, <institution>National Research and Innovation Agency − Institut Teknologi
+Bandung</institution>, Jl Ganesha 10, Bandung 40132, <country>Indonesia</country></aff><aff id="aff6"><label>#</label>Henry Royce
+Institute and Photon Science Institute, Department of Electrical and
+Electronic Engineering, <institution>The University of
+Manchester</institution>, Oxford Road, Manchester M13 9PL, <country>U.K.</country></aff></contrib-group><author-notes><corresp id="cor1"><label>*</label> Email: <email>martin.heeney@kaust.edu.sa</email>.</corresp></author-notes><pub-date pub-type="epub"><day>21</day><month>03</month><year>2025</year></pub-date><pub-date pub-type="collection"><day>08</day><month>04</month><year>2025</year></pub-date><volume>58</volume><issue>7</issue><issue-id pub-id-type="pmc-issue-id">486385</issue-id><fpage>3694</fpage><lpage>3703</lpage><history><date date-type="received"><day>19</day><month>11</month><year>2024</year></date><date date-type="accepted"><day>13</day><month>03</month><year>2025</year></date><date date-type="rev-recd"><day>06</day><month>03</month><year>2025</year></date></history><pub-history><event event-type="pmc-release"><date><day>10</day><month>04</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>11</day><month>04</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-04-14 15:25:24.087"><day>14</day><month>04</month><year>2025</year></date></event></pub-history><permissions><copyright-statement>© 2025 The Authors. Published by American Chemical Society</copyright-statement><copyright-year>2025</copyright-year><copyright-holder>The Authors</copyright-holder><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>Permits the broadest form of re-use including for commercial purposes, provided that author attribution and integrity are maintained (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="ma4c02854.pdf"><?pdf-name ma4c02854.pdf?><?pdf-size 5194094?><?pdf-md5 cdfffdad4ed7e56479746ef08550145b?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:0579/11984307/cdfffdad4ed7/ma4c02854.pdf?></self-uri><abstract><p content-type="toc-graphic"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="ab-tgr1" position="float" orientation="portrait" xlink:href="ma4c02854_0006.jpg"><?image-name ma4c02854_0006.jpg?><?image-size 82122?><?image-md5 645ccdbb5c9bf915187f6bac1122d381?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 533?><?image-original-width 992?><?image-scaled-height 355?><?image-scaled-width 661?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/645ccdbb5c9b/ma4c02854_0006.jpg?><?thumb-name ma4c02854_0006.gif?><?thumb-size 15952?><?thumb-md5 546a7a9304b7c581778bd96854cb0d16?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 148?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/546a7a9304b7/ma4c02854_0006.gif?></graphic></p><p>We report three novel donor–acceptor (D–A)
+copolymers
+sharing a common fused donor unit (CDTT) but differing in the functionalization
+of the benzothiadiazole (BT) acceptor unit. Acceptors bearing two
+cyano groups (DCNBT) are compared to novel acceptors bearing one cyano
+and one fluorine group (FCNBT) or one nitro and one fluoro group (NO<sub>2</sub>FBT). The choice of the acceptor has a significant effect
+on the optoelectronic properties of the resulting polymers. In organic
+field-effect transistor (OFET) devices, PCDTT-DCNBT exhibited moderate
+performance with an electron mobility of 0.031 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>, whereas PCDTT-FCNBT demonstrated
+significantly improved electron mobility (0.4 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>). The improved performance
+is attributed to increased backbone linearity combined with a more
+coplanar backbone and high thin-film crystallinity. In comparison,
+the presence of the nitro group is shown to have a detrimental impact,
+with a blue-shifted absorption and a 0.2 eV increase in band gap compared
+to the cyanated polymers. Steric effects are shown to limit the nitro
+group’s π-accepting capability and result in reduced
+device performance, with an electron mobility of 0.024 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>. This study introduces
+a new BT building block and highlights that substituent tuning via
+cyano and fluorine groups is an effective approach for modulating
+polymer morphology and electron transport.</p></abstract><funding-group><award-group><funding-source><institution-wrap><institution>Engineering and Physical Sciences Research Council</institution><institution-id institution-id-type="doi">10.13039/501100000266</institution-id></institution-wrap></funding-source><award-id>EP/L016702/1</award-id></award-group></funding-group><funding-group><award-group><funding-source><institution-wrap><institution>Global Collaborative Research, King Abdullah University of Science and Technology</institution><institution-id institution-id-type="doi">10.13039/501100003422</institution-id></institution-wrap></funding-source><award-id>ORFA-CRG11-2022-5045</award-id></award-group></funding-group><funding-group><award-group><funding-source><institution-wrap><institution>Engineering and Physical Sciences Research Council</institution><institution-id institution-id-type="doi">10.13039/501100000266</institution-id></institution-wrap></funding-source><award-id>EP/T028513/1</award-id></award-group></funding-group><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>document-id-old-9</meta-name><meta-value>ma4c02854</meta-value></custom-meta><custom-meta><meta-name>document-id-new-14</meta-name><meta-value>ma4c02854</meta-value></custom-meta><custom-meta><meta-name>ccc-price</meta-name><meta-value/></custom-meta></custom-meta-group></article-meta></front><body><sec id="sec1"><title>Introduction</title><p>Semiconducting polymers are attractive
+components for cost-effective
+solution-processed organic solar cells (OSCs), biosensors, and organic
+field-effect transistors (OFETs).<sup><xref ref-type="bibr" rid="ref1">1</xref>−<xref ref-type="bibr" rid="ref4">4</xref></sup> For OFET circuits, both <italic toggle="yes">p</italic>-type (hole transporting) and <italic toggle="yes">n</italic>-type (electron transporting)
+semiconductors are required to ensure high noise immunity and low
+static power consumption.<sup><xref ref-type="bibr" rid="ref5">5</xref></sup> At present,
+the performance of <italic toggle="yes">n</italic>-type polymers lags behind <italic toggle="yes">p</italic>-type semiconductors due to various factors, such as increased
+synthetic complexity, limited electron-deficient building blocks,
+and more problematic air stability.<sup><xref ref-type="bibr" rid="ref5">5</xref>,<xref ref-type="bibr" rid="ref6">6</xref></sup> A common system
+used for the development of <italic toggle="yes">n</italic>-type polymer semiconductors
+is the donor–acceptor (D–A) structure that includes
+alternating electron-rich, donor (D), and electron poor, acceptor
+(A), units.<sup><xref ref-type="bibr" rid="ref7">7</xref></sup> The hybridization of molecular
+orbitals of such systems leads to narrowing of the band gap, and the
+selection of donor and/or acceptor units is crucial for tuning the
+higher occupied and lower unoccupied molecular orbitals (HOMO/LUMO)
+of the resulting semiconductor. Low-lying LUMO levels are important
+to facilitate electron injection and improve operational stability
+in the presence of water and oxygen.<sup><xref ref-type="bibr" rid="ref8">8</xref>−<xref ref-type="bibr" rid="ref10">10</xref></sup> Acceptor (A) comonomers
+are often electron-poor aromatics containing electron-withdrawing
+functional groups, like fluorine, or π-acceptors, such as cyano
+groups, and are crucial for determining the <italic toggle="yes">n</italic>-type
+properties of the conjugated polymer.<sup><xref ref-type="bibr" rid="ref5">5</xref>,<xref ref-type="bibr" rid="ref11">11</xref></sup> More specifically,
+control of <italic toggle="yes">n</italic>-type behavior is significantly affected
+by the π* energy of the individual A unit, which strongly influences
+the LUMO of the polymeric system.</p><p>Bridged bithiophenes have
+been commonly employed as electron-rich
+donor units in conjugated polymers.<sup><xref ref-type="bibr" rid="ref12">12</xref>,<xref ref-type="bibr" rid="ref13">13</xref></sup> The bridging
+in these units enforces thiophene coplanarity, which enhances electron
+delocalization and reduces reorganization energy of the polymer. Cyclopenta
+[2,1-<italic toggle="yes">b</italic>;3,4-<italic toggle="yes">b</italic>]dithiophene (CDT),<sup><xref ref-type="bibr" rid="ref14">14</xref>,<xref ref-type="bibr" rid="ref15">15</xref></sup> in which bithiophene is bridged by one carbon, has been extensively
+used in both OSCs<sup><xref ref-type="bibr" rid="ref16">16</xref>,<xref ref-type="bibr" rid="ref17">17</xref></sup> and OFETs.<sup><xref ref-type="bibr" rid="ref16">16</xref>,<xref ref-type="bibr" rid="ref18">18</xref>,<xref ref-type="bibr" rid="ref19">19</xref></sup> An extended analogue of CDT, 9H-thieno[3,2-<italic toggle="yes">b</italic>]thieno[2″,3″:4′,5′]thieno[2′,3′:3,4]cyclopenta-[1,2-<italic toggle="yes">d</italic>]thiophene (CDTT), in which bis(thieno[3,2-<italic toggle="yes">b</italic>]thiophene) is fused by a bridging carbon atom, has been developed
+to further enhance conjugation length and promote intermolecular packing.<sup><xref ref-type="bibr" rid="ref20">20</xref>,<xref ref-type="bibr" rid="ref21">21</xref></sup> Copolymers of CDTT with 2,1,3-benzothiadiazole (BT) have demonstrated
+promising performance in OFET devices, exhibiting unipolar <italic toggle="yes">p</italic>-type behavior, with a hole mobility up to 0.67 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>. Increasing the
+electron affinity of the BT comonomer by fluorination (5,6-difluoro-2,1,3-benzothiadiazole,
+DFBT) resulted in a polymer, PCDTT-DFBT, with a lower lying LUMO level
+that exhibited ambipolar performance in OFET devices, with a hole
+mobility of 0.38 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> and electron mobility of 0.17 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> (<xref rid="sch1" ref-type="scheme">Scheme <xref rid="sch1" ref-type="scheme">1</xref></xref>, top).<sup><xref ref-type="bibr" rid="ref20">20</xref></sup></p><fig id="sch1" position="float" orientation="portrait"><label>Scheme 1</label><caption><title>(Top) PCDTT-BT Polymers
+as Reported in the Literature and (Bottom)
+Our Work on Functionalization of the BT Monomer to Attribute <italic toggle="yes">n</italic>-Type Properties on CDTT-Based Polymers</title></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="gr1" position="float" orientation="portrait" xlink:href="ma4c02854_0004.jpg"><?image-name ma4c02854_0004.jpg?><?image-size 97856?><?image-md5 81c6cd29900894a043726c0d6b83b521?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 798?><?image-original-width 1500?><?image-scaled-height 399?><?image-scaled-width 750?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/81c6cd299008/ma4c02854_0004.jpg?><?thumb-name ma4c02854_0004.gif?><?thumb-size 13976?><?thumb-md5 f5c17408ef528bea6c8db28f1e19c1a6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 150?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/f5c17408ef52/ma4c02854_0004.gif?></graphic></fig><p>In our search for <italic toggle="yes">n</italic>-type polymers
+based on CDTT,
+we hypothesized that the use of a stronger electron-accepting comonomer
+than DFBT could enhance electron transport by lowering the LUMO level,
+thereby promoting electron injection from common electrode materials.
+Replacement of the fluorine groups of DFBT with two cyano groups is
+known to give the much stronger acceptor 5,6-dicyano-2,1,3-benzothiadiazole
+(DCNBT).<sup><xref ref-type="bibr" rid="ref22">22</xref>−<xref ref-type="bibr" rid="ref29">29</xref></sup> While this has previously been shown to promote <italic toggle="yes">n</italic>-type transport, it can also result in an undesirable disruption
+to backbone planarity due to the larger size of the cyano group compared
+to fluorine, which results in steric interactions with adjacent comonomers.<sup><xref ref-type="bibr" rid="ref23">23</xref></sup> To compensate for this, we designed a new, unreported
+BT monomer containing one cyano group and one fluorine group. The
+resulting monomer, 6-fluoro-5-cyano-2,1,3-benzothiadiazole (FCNBT),
+benefits from the combination of one fluorine group, facilitating
+backbone planarity,<sup><xref ref-type="bibr" rid="ref30">30</xref>,<xref ref-type="bibr" rid="ref31">31</xref></sup> and one cyano group, acting as
+a strong π-acceptor. As a comparison to the cyano in FCNBT,
+we also synthesized the monomer 5-fluoro-6-nitrobenzo-2,1,3-thiadiazole
+(NO<sub>2</sub>FBT) that utilizes a nitro group, to understand the
+impact of different π-acceptors on the structure and <italic toggle="yes">n</italic>-type properties of the polymer. Thus far, despite their
+strong acceptor character, nitro groups have rarely been investigated
+as π-acceptors in D–A polymer semiconductors. The use
+of nitrated BT derivatives as comonomers is hard to find,<sup><xref ref-type="bibr" rid="ref32">32</xref>−<xref ref-type="bibr" rid="ref34">34</xref></sup> despite the widespread prevalence of nitrated BT derivatives as
+precursors to quinoxaline and various fused carbazoles as materials
+for low band gap polymers. However, the utility of the nitro group
+has been explored in other systems. For example nitrated-pentacene
+derivatives have been used as acceptor materials in OSCs yielding
+lower lying LUMO energy levels when compared to other π-acceptors,
+including cyano groups.<sup><xref ref-type="bibr" rid="ref35">35</xref></sup> A copolymer of
+3,4-dinitrothiophenes and diketopyrrolopyrrole (DPP) has been reported
+as an <italic toggle="yes">n</italic>-type polymer for transparent OFETs.<sup><xref ref-type="bibr" rid="ref36">36</xref></sup> Nitrated fluorenone derivatives have also been
+reported, achieving modest electron mobilities (10<sup>–4</sup> cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>) in OFETs.<sup><xref ref-type="bibr" rid="ref37">37</xref>,<xref ref-type="bibr" rid="ref38">38</xref></sup></p><p>We hereby report three novel <italic toggle="yes">n</italic>-type D–A
+polymers, PCDTT-DCNBT, PCDTT-FCNBT and PCDTT-NO<sub>2</sub>FBT (<xref rid="sch1" ref-type="scheme">Scheme <xref rid="sch1" ref-type="scheme">1</xref></xref>), in which the CDTT
+core is copolymerized with DCNBT, FCNBT, and NO<sub>2</sub>FBT. By
+comparing the optoelectronic properties and structural characteristics
+of the three polymers, we demonstrate that PCDTT-FCNBT shows a similar
+optical response in the solid state being highly ordered and crystalline
+when compared to PCDTT-DCNBT. The polymer PCDTT-NO<sub>2</sub>FBT
+showed a less ordered structure, with the nitro group strengthening
+the electron-withdrawing effect but not facilitating planarization
+through intramolecular interactions along the backbone. All three
+polymers demonstrated electron transport behavior in transistor devices
+with PCDTT-FCNBT exhibiting the highest electron mobility at μ<sub>e,max</sub> ≈ 0.4 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> followed by PCDTT-DCNBT with moderate electron mobility
+at μ<sub>e,max</sub> ≈ 0.031 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> and PCDTT-NO<sub>2</sub>FBT at μ<sub>e,max</sub> ≈ 0.024 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>.</p><sec id="sec1.1"><title>Synthesis</title><p>The DCNBT monomer was synthesized following
+a modification of the reported protocol (<xref rid="sch2" ref-type="scheme">Scheme <xref rid="sch2" ref-type="scheme">2</xref></xref>).<sup><xref ref-type="bibr" rid="ref39">39</xref></sup> Thus, intermediate
+4,5-diamino-3,6-dibromopthalonitrile (1) was prepared by reaction
+of commercially available 4,5-diaminopthalonitrile with potassium
+bromide and hydrobromic acid in the presence of <italic toggle="yes">tert</italic>-butyl hydroperoxide in good yields over 78%.<sup><xref ref-type="bibr" rid="ref40">40</xref></sup> Subsequent reaction with thionyl chloride in the presence
+of triethylamine afforded DCNBT in 68% yield after column chromatography.<sup><xref ref-type="bibr" rid="ref41">41</xref></sup> FCNBT has not previously been reported but was
+readily prepared via controlled aromatic nucleophilic substitution,
+albeit in low isolated yield (10%), from the reaction of commercially
+available 4,7-dibromo-5,6-difluorobenzo[<italic toggle="yes">c</italic>][1,2,5]thiadiazole
+(2) with KCN and 18-crown-6 in a mixture of THF and DMF, with starting
+material recovery at 76% yield. Accounting for the unreacted starting
+material, which was separated by chromatography and reused, the yield
+of the product was 35%. Several other conditions were investigated
+to try to improve the yield, including the use of alternative aprotic
+solvents such as DMSO, DMAc, and NMP and varying the temperature from
+40–60 °C but no improvements in yield were observed. Monomer
+NO<sub>2</sub>FBT was prepared by nitration of commercially available
+4,7-dibromo-5-fluorobenzo[<italic toggle="yes">c</italic>][1,2,5]thiadiazole (3)
+with a mixture of concentrated nitric acid and concentrated triflic
+acid. The reaction proceeded smoothly, with the product isolated in
+a 61% yield.</p><fig id="sch2" position="float" orientation="portrait"><label>Scheme 2</label><caption><title>Synthesis of Monomers DCNBT, FCNBT, and NO<sub>2</sub>FBT and Polymers
+PCDTT-DCNBT, PCDTT-FCNBT, and PCDTT-NO<sub>2</sub>FBT</title></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="gr2" position="float" orientation="portrait" xlink:href="ma4c02854_0005.jpg"><?image-name ma4c02854_0005.jpg?><?image-size 655416?><?image-md5 3b678b3c1548e74d6d7a2e705f587eb8?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 422?><?image-original-width 1002?><?image-scaled-height 1760?><?image-scaled-width 4175?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/3b678b3c1548/ma4c02854_0005.jpg?><?thumb-name ma4c02854_0005.gif?><?thumb-size 4517?><?thumb-md5 943d79ed35a1f63dc2e19caeb44220ce?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 189?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/943d79ed35a1/ma4c02854_0005.gif?></graphic></fig><p>Polymers were prepared by the reaction of distannylated
+CDTT (4)<sup><xref ref-type="bibr" rid="ref19">19</xref></sup> with all three monomers via
+Stille polymerization
+under microwave heating. After 50 min of microwave heating with a
+gradual increase in the temperature from 120 to 180 °C, the polymers
+were precipitated into methanol and the resulting precipitate purified
+by sequential Soxhlet extraction to remove the catalyst and low-molecular-weight
+(MW) oligomers. Soxhlet was performed as follows: methanol, acetone,
+hexane, chloroform for the polymer PCDTT-NO<sub>2</sub>FBT and for
+polymers PCDTT-FCNBT and PCDTT-DCNBT, further extraction with chlorobenzene
+was required to extract most of the material. For PCDTT-DCNBT, further
+extraction of the remaining material with <italic toggle="yes">o</italic>-dichlorobenzene
+afforded a (presumably) higher weight polymer, but this was very poorly
+soluble after concentration and precipitation, precluding further
+analysis. The molecular weights of the resulting polymers were determined
+by gel permeation chromatography (GPC) against polystyrene standards,
+as shown in <xref rid="tbl1" ref-type="other">Table <xref rid="tbl1" ref-type="other">1</xref></xref>.</p><table-wrap id="tbl1" position="float" orientation="portrait"><label>Table 1</label><caption><title>Summary of Molecular Weights and Optical
+and Electronic Properties of Polymers</title></caption><table frame="hsides" rules="groups" border="0"><colgroup span="1"><col align="left" span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="(" span="1"/><col align="char" char="(" span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/><col align="char" char="." span="1"/></colgroup><thead><tr><th style="border:none;" align="center" colspan="1" rowspan="1"> </th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">M<sub>n</sub></italic> (kDa)<xref rid="t1fn1" ref-type="table-fn">a</xref></th><th style="border:none;" align="center" char="." colspan="1" rowspan="1">(Đ)</th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>(DFT)</sub> (HOMO, eV)<xref rid="t1fn2" ref-type="table-fn">b</xref></th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>(DFT)</sub> (LUMO, eV)<xref rid="t1fn2" ref-type="table-fn">b</xref></th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>(PESA)</sub> (HOMO, eV)<xref rid="t1fn3" ref-type="table-fn">c</xref></th><th style="border:none;" align="center" char="(" colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>ox,onset</sub> (V) (HOMO, eV)</th><th style="border:none;" align="center" char="(" colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>red,onset</sub> (V) (LUMO, eV)<xref rid="t1fn4" ref-type="table-fn">d</xref></th><th style="border:none;" align="center" char="." colspan="1" rowspan="1">λ<sub>max</sub>, nm (sol)</th><th style="border:none;" align="center" char="." colspan="1" rowspan="1">λ<sub>max</sub>, nm (film)</th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>g</sub>, (eV) (sol, opt)<xref rid="t1fn5" ref-type="table-fn">e</xref></th><th style="border:none;" align="center" char="." colspan="1" rowspan="1"><italic toggle="yes">E</italic><sub>g</sub>, (eV) (film, opt)<xref rid="t1fn6" ref-type="table-fn">f</xref></th></tr></thead><tbody><tr><td style="border:none;" align="left" colspan="1" rowspan="1">PCDTT-DCNBT</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">20.1</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.4</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–5.0</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–3.5</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–5.48</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">0.42 (−5.22)</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">–0.82 (−3.98)</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">820</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">862</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.33</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.31</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">PCDTT-FCNBT</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">56.9</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.6</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–4.8</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–3.3</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–5.40</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">0.54 (−5.34)</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">–1.23 (−3.57)</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">780</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">861</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.43</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.32</td></tr><tr><td style="border:none;" align="left" colspan="1" rowspan="1">PCDTT-NO<sub>2</sub>FBT</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">33.9</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">2.0</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–4.8</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–3.2</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">–5.51</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">0.60 (−5.40)</td><td style="border:none;" align="char" char="(" colspan="1" rowspan="1">–1.30 (−3.50)</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">721</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">755</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.51</td><td style="border:none;" align="char" char="." colspan="1" rowspan="1">1.45</td></tr></tbody></table><table-wrap-foot><fn id="t1fn1"><label>a</label><p>PCDTT-DCNBT, PCDTT-FCNBT, and PCDTT-NO<sub>2</sub>FBT.</p></fn><fn id="t1fn2"><label>b</label><p>Simulations
+were carried out on
+single molecules in the gas phase at the B3LYP level of theory with
+the basis set 6-31G(d,p).</p></fn><fn id="t1fn3"><label>c</label><p>PESA estimated HOMO levels for as-cast
+films. Error estimated as ±0.05 eV.</p></fn><fn id="t1fn4"><label>d</label><p>HOMO/LUMO levels were estimated
+from the onset of first oxidation/reduction and referenced against
+ferrocene/ferrocenium at −4.8 eV. Error ±0.1 eV.</p></fn><fn id="t1fn5"><label>e</label><p>Estimated from the absorption onset
+in solution with error ±0.01 eV.</p></fn><fn id="t1fn6"><label>f</label><p>Estimated from the absorption onset
+with error ±0.01 eV.</p></fn></table-wrap-foot></table-wrap></sec><sec id="sec1.2"><title>Optoelectronic Properties</title><p>The UV–vis absorption
+spectra of the polymers in chlorobenzene solution and as-spun thin
+films are shown in <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>. Note that the films were spun from different solvents in
+each case since these were visually found to afford the best-quality
+films. However, changing solvent did not significantly change the
+film spectra, as shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S2</ext-link>. Polymer
+PCDTT-DCNBT (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a,b green) has an absorption maximum at 820 nm in solution that is
+red-shifted by 42 nm in the solid state, including a clear vibronic
+shoulder at around 779 nm. The band gaps extracted from the absorption
+onset are 1.33 and 1.31 eV for solution and solid state, respectively.
+Reducing the strength of the electron-accepting unit by replacing
+a cyano group with a fluorine results in a blue shift in absorption
+in solution, with PCDTT-FCNBT (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a,b blue) absorbing at 780 nm. The band gap was calculated
+at 1.43 and 1.32 eV in solution and solid states, respectively. Interestingly,
+in the solid state, PCDTT-FCNBT and PCDTT-DCNBT have identical absorption
+maxima owing to the larger shift (80 nm) upon film formation for PCDTT-FCNBT.
+Polymer PCDTT-NO<sub>2</sub>FBT (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a,b red) shows a solution absorption maximum
+at 721 nm that is red-shifted by 34 nm in the solid state, with less
+defined vibronic features. The band gap was calculated at 1.51 and
+1.45 eV in solution and solid state, respectively.</p><fig id="fig1" position="float" orientation="portrait"><label>Figure 1</label><caption><p>Comparison of optical
+properties of polymers. UV–vis spectra
+in (a) chlorobenzene solution and (b) as-spun-cast thin films. Films
+were cast from <italic toggle="yes">o</italic>-dichlorobenzene (PCDTT-DCNB), chlorobenzene
+(PCDTT-FCNBT), and chloroform (PCDTT-NO<sub>2</sub>FBT). (c) Schematic
+diagram of the electronic energy levels derived from PESA and the
+optical band gap. (d–f) DFT-derived optimized geometries with
+dihedral angle of lowest energy conformation. <italic toggle="yes">Syn</italic> and <italic toggle="yes">anti</italic> refer to the respective orientations of
+sulfur atoms in the CDTT and BT. Simulations were carried out on single
+molecules in the gas phase at the B3LYP level of theory with the basis
+set 6-31G(d,p).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="gr3" position="float" orientation="portrait" xlink:href="ma4c02854_0001.jpg"><?image-name ma4c02854_0001.jpg?><?image-size 92567?><?image-md5 701ecfdfb929af7d11b997352be09c47?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 808?><?image-original-width 2088?><?image-scaled-height 269?><?image-scaled-width 696?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/701ecfdfb929/ma4c02854_0001.jpg?><?thumb-name ma4c02854_0001.gif?><?thumb-size 16060?><?thumb-md5 4b3ad38073e8874842aa9adab93eea56?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 77?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/4b3ad38073e8/ma4c02854_0001.gif?></graphic></fig><p>The larger bathochromic shift of PCDTT-FCNBT compared
+to PCDTT-DCNBT
+upon solidification suggests that the inclusion of one fluorine atom
+leads to more effective backbone planarization, as well as enhanced
+intra- and intermolecular interactions that have a significant effect
+on the optical response of the material. Unexpectedly, the inclusion
+of a nitro group (PCDTT-NO<sub>2</sub>FBT) does not reduce the band
+gap of the material in comparison to that of the cyano analogue (PCDTT-FCNBT).
+This is somewhat surprising since nitro groups are generally thought
+to be more electron-withdrawing than cyano groups. For example, by
+comparison of their Hammett parameters, it can be seen that the nitro
+group is more deactivating than cyano; σ<sub>para</sub> 0.78
+for NO<sub>2</sub> and 0.66 for CN; σ<sub>meta</sub> 0.71 for
+NO<sub>2</sub> and 0.56 for CN.<sup><xref ref-type="bibr" rid="ref42">42</xref></sup> However,
+as we discuss below, we attribute this to steric effects that twist
+the nitro group out of planarity, and therefore out of conjugation,
+with the BT, thereby reducing electron-withdrawing resonance effects
+(<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>f).</p><p>The frontier molecular orbital energy levels of all three polymers
+were estimated by cyclic voltammetry (CV), which was referenced against
+ferrocene (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S2</ext-link>). CV allowed for a
+direct experimental measurement of the reduction potential, which
+can be correlated to the LUMO energy. However, CV can be complicated
+by the presence of the solvent and electrolyte, which can potentially
+penetrate the film during measurements, changing the energetics. Therefore,
+photoelectron spectroscopy in air (PESA) was also used to measure
+the ionization potential of thin films. In order to compare between
+techniques, the ionization potential (PESA) and oxidation/reduction
+onsets (CV) were converted to HOMO/LUMO levels. Polymer films for
+PESA were prepared by spin coating, and films for CV were prepared
+via drop casting on a platinum rod working electrode and measured
+in a degassed solution of tetra-<italic toggle="yes">n</italic>-butylammonium hexafluorophosphate
+(0.1 M) in acetonitrile.</p><p>HOMO energy levels using PESA were
+estimated at −5.48 −5.40,
+and −5.51 eV for PCDTT-DCNBT, PCDTT-FCNBT, and PCDTT-NO<sub>2</sub>FBT, respectively. The measurements suggested changing a cyano
+group to a less electron-withdrawing fluorine group resulted in an
+increase in the HOMO energy, whereas changing to a nitro group resulted
+in a little change. Measurements on thermally annealed films (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S2b</ext-link>) were identical, within experimental
+error, suggesting that despite the changes observed by X-ray crystallography,
+the energetics do not change upon heating.</p><p>CV showed shallower
+HOMO energy levels compared to those of PESA,
+likely due to the different experimental conditions. All three polymers
+demonstrated excellent electrochemical stability during three cycles,
+as shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S2a</ext-link>. Of particular note
+is the stability of the reduction cycle, given the desired application
+as <italic toggle="yes">n</italic>-type materials. Both PCDTT-DCNBT and PCDTT-NO<sub>2</sub>FBT exhibited two quasi-reversible reduction peaks, whereas
+PCDTT-FCNBT only exhibited a single reversible peak. The energy levels
+were estimated from the onset of first oxidation (<italic toggle="yes">E</italic><sub>ox,onset</sub>) and first reduction (<italic toggle="yes">E</italic><sub>red,onset</sub>) peaks and are summarized in <xref rid="tbl1" ref-type="other">Table <xref rid="tbl1" ref-type="other">1</xref></xref>. The trend in LUMO levels is relatively
+clear, with PCDTT-DCNBT exhibiting the deepest LUMO. Changing a cyano
+to a fluorine or nitro group increased the LUMO. The HOMO levels demonstrated
+a different trend to the PESA measurements, with PCDTT-DCNBT exhibiting
+the shallowest, followed by PCDTT-FCNBT and then PCDTT-NO<sub>2</sub>FBT. It is notable that the oxidation onset is less sharp for PCDTT-DCNBT
+(<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S2a</ext-link>) than for the other two polymers,
+and it is possible that the lower molecular weight of PCDTT-DCNBT
+has an influence here. While the weight appears sufficient to be above
+the effective conjugation length, the lower relative value may result
+from a different morphology and changed swelling of the film, which
+may influence penetration of the electrolyte/solvent into the film,
+thereby influencing energetics. Therefore, the overall energetics
+(<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>c) were estimated
+using the thin-film I.P. measured by PESA, in combination with the
+optical band gap.</p><p>To compare the molecular conformations of
+the three polymers, the
+minimum energy structures were calculated with density functional
+theory (DFT) using the B3LYP functional and a 6-31G(d,p) basis set.
+To ensure a global minimum energy conformation was found, relaxed
+potential energy scans (PES) were also performed, in which the angles
+between the BT and CDTT units were scanned between 0 and 180°
+(<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S3</ext-link>). When a cyano or nitro group
+was present, the minimum energy structures of the polymers adopt a
+nonplanar configuration, due to interactions between these π-acceptor
+groups on the BT and the adjacent thienyl end groups of the CDTT units.
+Twist angles of 22 and 24° between the CDTT and the BT were found
+for the cyano- and nitro groups, respectively, with the lowest energy
+conformer being that where the sulfurs of BT and CDTT were <italic toggle="yes">syn</italic> in both cases. However, we note that the energetic penalty
+for planarization is relatively small (&lt;3 KJ mol<sup>–1</sup>). Conformers in the <italic toggle="yes">anti</italic> conformer exhibited a
+higher penalty to planarization, around 5–7 KJ mol<sup>–1</sup>, and the deviation from coplanarity is even more pronounced for
+the nitro group in the less preferred <italic toggle="yes">anti</italic> conformer.</p><p>On the side of fluorine, the BT and CDTT units adopt a near-planar
+arrangement, with an <italic toggle="yes">anti</italic>-conformation preferred
+but with a coplanar arrangement also observed in the slightly higher
+energy <italic toggle="yes">syn</italic> conformer. This preferred conformation
+results in a more linear backbone for both PCDTT-FCNBT and PCDTT-NO<sub>2</sub>FBT compared to PCDTT-DCNBT, which exhibits a notable curvature
+(<xref rid="fig1" ref-type="fig">Figures <xref rid="fig1" ref-type="fig">1</xref></xref>d–f
+and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">S4</ext-link>). The backbone curvature has previously
+been to result in reduced overlap of conjugated backbones and nonoptimal
+charge transfer characteristics.<sup><xref ref-type="bibr" rid="ref43">43</xref>−<xref ref-type="bibr" rid="ref45">45</xref></sup></p><p>In addition, a
+PES scan of the NO<sub>2</sub> group was also performed
+to look at its contribution to the π-system. As seen in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S5</ext-link>, the minimum energy is found when the
+NO<sub>2</sub> group is twisted away from planarity with the BT unit,
+to minimize interactions with the adjacent CDTT. This results in conjugation
+between the π system of the NO<sub>2</sub> group and the BT
+being disrupted, and therefore the electron-withdrawing effect of
+the nitro becomes an inductive effect, rather than a combination of
+resonance and induction. This explains the reduced effect of the nitro
+group in narrowing the band gap compared with the cyano group, which
+combines both the resonance and inductive effect.</p><p>The simulated
+HOMO/LUMO energy levels for trimer species (<xref rid="tbl1" ref-type="other">Table <xref rid="tbl1" ref-type="other">1</xref></xref>) show reasonable
+agreement with the trend of the experimental data in the case of LUMO,
+agreeing that PCDTT-DCNBT is the easiest to reduce. The trend of the
+HOMO is less clear-cut, predicting that PCDTT-DCNBT should be deeper
+lying than the other two polymers.</p></sec><sec id="sec1.3"><title>OFET Performance</title><p>The semiconducting properties of the
+three polymers were investigated in top-gate bottom-contact transistors,
+which employed Au source and drain electrodes, Al gate electrodes,
+and a poly(methyl methacrylate) (PMMA) gate dielectric (<xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>). A layer of aluminum (5 nm)
+was deposited before the Au (45 nm) to improve electrode adhesion.
+As discussed above, due to variations in the polymers’ solubility,
+different solvents were used to afford the visually smoothest films
+with <italic toggle="yes">o-</italic>dichlorobenzene (DCB) for PDCNBT-CDTT, chlorobenzene
+(CB) for PFCNBT-CDTT, and chloroform (CF) for PNO<sub>2</sub>FBT-CDTT
+films. Although solvent variation can influence the device performance
+for some polymers, here, we note that varying the solvent did not
+impact the thin-film UV–vis spectra (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S1</ext-link>) or the ionization potential as measured by PESA (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S6</ext-link>). Given the films all required annealing
+to afford optimal performance, we believe any variation in device
+performance arising from the solvent has a minor impact.</p><p>Annealing
+the semiconducting polymer film had a large impact on device performance,
+as summarized in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S7</ext-link>. Individual
+transfer and output plots for all devices as a function of temperature
+are shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S9–11</ext-link>. All polymers
+were annealed before deposition of the gate dielectric and gate electrode,
+and in all cases, the PMMA dielectric was dried at 90 °C to avoid
+leakage issues. An arbitrary annealing temperature of 120 °C
+was initially chosen, and measurements were then increased in 30 °C
+intervals, up to 250 °C. The mobility of PCDTT-DCNBT initially
+increases with temperature, peaking with annealing at 200 °C,
+before decreasing at higher temperatures. The maximum electron mobility
+(μ<sub>e,max</sub>) was 0.031 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>, with an on/off ratio of 5 × 10<sup>2</sup>, and a low threshold voltage of <italic toggle="yes">V</italic><sub>T</sub> ≈
+1.5 V. The performance of PCDTT-FCNBT shows a similar trend, increasing
+with annealing temperature, reaching μ<sub>e</sub> ≈
+0.22 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> at
+180 °C, followed by a decrease if annealed at 200 or 220 °C.
+Surprisingly, annealing to 250 °C resulted in a further increase
+in performance, reaching a μ<sub>e,max</sub> ≈ 0.4 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>. This indicates
+a clear impact of the morphology on defining the charge transport
+properties of PCDTT-FCNBT. At this peak mobility, both the on/off
+ratio (10<sup>4</sup>) and threshold voltage (<italic toggle="yes">V</italic><sub>T</sub> ≈ 25 V) are larger than those of PCDTT-DCNBT. Lastly,
+polymer PCDTT-NO<sub>2</sub>FBTshowed an optimum annealing temperature
+at 120 °C with electron mobility dropping significantly at higher
+annealing temperatures. Polymer PCDTT-NO<sub>2</sub>FBT demonstrated
+the lowest electron mobility, μ<sub>e,max</sub> ≈ 0.015
+cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>, with an
+on/off ratio of 10<sup>4</sup>, and <italic toggle="yes">V</italic><sub>T</sub> ≈ 30 V. When annealed at the highest temperature of 250 °C,
+the device performance degraded completely, possibly due to some degradation. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Table S1</ext-link> summarizes the mobility in relation
+to annealing temperature.</p><fig id="fig2" position="float" orientation="portrait"><label>Figure 2</label><caption><p>Transfer and output curves for (a) PCDTT-DCNBT
+annealed at 200
+°C, (b) PCDTT-FCNBT annealed at 250 °C, and (c) PCDTT-NO<sub>2</sub>FBT annealed at 120 °C.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="gr4" position="float" orientation="portrait" xlink:href="ma4c02854_0002.jpg"><?image-name ma4c02854_0002.jpg?><?image-size 75936?><?image-md5 b1a7ed77f17c59bafca471c9d2199284?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 972?><?image-original-width 2088?><?image-scaled-height 324?><?image-scaled-width 696?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/b1a7ed77f17c/ma4c02854_0002.jpg?><?thumb-name ma4c02854_0002.gif?><?thumb-size 12661?><?thumb-md5 239c28156c93892789f912c1950a16a5?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 171?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/239c28156c93/ma4c02854_0002.gif?></graphic></fig></sec><sec id="sec1.4"><title>Structural Analysis</title><p>The effect of temperature in polymer
+films was investigated using grazing-incidence wide-angle X-ray scattering
+(GIWAXS) analysis (<xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>) and temperature UV–vis (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S12</ext-link>). We note that for all polymers, no obvious transitions
+were observed by differential scanning calorimetry (DSC) (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S13</ext-link>), as is often observed for conjugated
+donor–acceptor-type polymers.</p><fig id="fig3" position="float" orientation="portrait"><label>Figure 3</label><caption><p>(a, b, d, e, g, h) 2D GIWAXS patterns
+and (c, f, i) scattering
+profiles of in-plane for as-cast and annealed PCDTT-DCNBT (top row),
+PCDTT-FCNBT (middle row), and PCDTT-NO<sub>2</sub>FBT (bottom row).
+For PCDTT-DCNBT, indexing of the IP peak at 0.7 Å<sup>–1</sup> (marked Δ) is uncertain, possibly the (200). Peaks marked
+with * are artifacts and originate from the substrate.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="gr5" position="float" orientation="portrait" xlink:href="ma4c02854_0003.jpg"><?image-name ma4c02854_0003.jpg?><?image-size 148742?><?image-md5 6457b36e6b4737ce6fb2b9dbfa52dbcd?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1807?><?image-original-width 2088?><?image-scaled-height 602?><?image-scaled-width 696?><?image-cloudpmc-urn urn:cdn:blobs/0579/11984307/6457b36e6b47/ma4c02854_0003.jpg?><?thumb-name ma4c02854_0003.gif?><?thumb-size 18873?><?thumb-md5 3b9da7058e660f394c190e7c42c47e8f?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 87?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/0579/11984307/3b9da7058e66/ma4c02854_0003.gif?></graphic></fig><p>GIWAXS reveals that the as-cast polymers were relatively
+disordered,
+especially when compared to polymers such as P3HT or PBTTT. The scattering
+pattern of PCDTT-DCNBT (<xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>a,b) resembles that of IDT-BT<sup><xref ref-type="bibr" rid="ref46">46</xref></sup> with coexisting face-on and edge-on oriented crystallites evidenced
+by the coappearance of side chain stacking and backbone stacking peaks
+in the out-of-plane direction. The in-plane diffraction peaks of PCDTT-DCNBT
+are assigned to backbone reflections, i.e., (00<italic toggle="yes">l</italic>)
+with a backbone repeat distance of <italic toggle="yes">d</italic><sub>001</sub> = 15.3 Å based on the location of the (001) peak at <italic toggle="yes">q</italic><sub>001</sub> = 0.41 Å<sup>–1</sup>. The π
+-stacking distance for PCDTT-DCNBT is also determined to be <italic toggle="yes">d</italic><sub>010</sub> = 4.0 Å. Annealing PCDTT-DCNBT at 200
+°C results in a narrowing of the in-plane (IP) backbone peak,
+indicating an increase in coherence length, while no significant change
+to the OOP π–π stacking peak is observed. This
+slight improvement in crystallinity correlates with the enhanced electron
+mobility after annealing at this temperature. The increase in the
+coherence length also correlates with the increase in UV/vis absorption
+observed after annealing at this temperature (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S12</ext-link>).</p><p>The as-cast GIWAXS pattern of PCDTT-FCNBT
+(<xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>d) shows similar
+but weaker scattering features
+compared to those of as-cast PCDTT-DCNBT. The first-order backbone
+peak appears at a higher <italic toggle="yes">q</italic> value, <italic toggle="yes">q</italic><sub>001</sub> = 0.46 Å<sup>–1</sup>, indicating a smaller <italic toggle="yes">d</italic>-spacing along the backbone direction of <italic toggle="yes">d</italic><sub>001</sub> = 13.7 Å. This observation suggests a different
+backbone conformation and/or different tilting of the backbone along
+this crystallographic axis. A slightly smaller π-stacking distance
+is also observed for PCDTT-FCNBT at <italic toggle="yes">d</italic><sub>010</sub> = 3.9 Å. Similar to PCDTT-DCNBT, annealing PCDTT-FCNBT at 180
+°C promotes lamellar and backbone order as indicated by the stronger
+OOP (100) and IP (001) peaks relative to the OOP π–π
+(010) peak, along with a larger coherence length as indicated by peak
+narrowing (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S14a</ext-link>). This increase
+in order coincides with the first peak in electron mobility following
+the annealing of the device. Annealing at a higher temperature of
+250 °C promotes crystallization of PCDTT-FCNBT into a crystalline
+form with a nonorthorhombic unit cell as indicated by the off-axis
+peaks (marked #, <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>e) including the near IP (<italic toggle="yes">h</italic>00) peaks. This improved
+crystallinity correlates with the maximum mobility achieved for PCDTT-FCNBT.
+The absorption of the film decreases after annealing at this temperature
+and subtly changes shape (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S12</ext-link>),
+which we relate to the different orientations with respect to the
+substrate and changes in the electronic couplings between the chains.</p><p>Lastly, as-cast PCDTT-NO<sub>2</sub>FBT appears to be essentially
+amorphous with a lack of well-defined scattering features (<xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>g). When PCDTT-NO<sub>2</sub>FBT is annealed at 120 °C, two isotropic rings form at
+0.86 and 1.42 Å<sup>–1</sup>, <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>h, correlating with the optimized mobility
+of this polymer. These isotropic rings then disappear upon annealing
+at 200 °C (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">Figure S14b</ext-link>), at which
+the transistor performance also drops significantly. Notably, unlike
+the two other polymers, PCDTT-NO<sub>2</sub>FBT does not exhibit (00<italic toggle="yes">l</italic>) backbone reflections, indicating reduced backbone ordering.
+Polymer PCDTT-NO<sub>2</sub>FBT shows similar absorption in the as-cast
+and 120 °C annealed films. When the annealing temperature is
+increased to 200 °C, a blue shift and decrease in absorption
+intensity is observed.</p><p>Overall, considering the changes in the
+nature of the BT group
+on the transistor performance, we show that the lower electron-withdrawing
+strength of fluorine is compensated by its relatively smaller size
+and its preference for the anti-conformation with the adjacent CDTT,
+resulting in a more linear backbone compared to the dicyanated monomer.
+Together with improvement in backbone planarity, this correlates with
+improved crystallinity after annealing, resulting in the highest electron
+mobility of PCDTT-FCNBT from the three polymers. We note that
+the polymer molecular weight may also play a role in the observed
+differences in device performance, considering the higher values of
+PCDTT-FCNBT compared to PCDTT-DCNBT.<sup><xref ref-type="bibr" rid="ref15">15</xref></sup> Comparing
+the cyano to nitro group, we show that the latter is less effective
+as a strong electron-withdrawing group since its larger size results
+in twist away from coplanarity with the backbone, thereby reducing
+the overlap of the nitro group’s π system and reducing
+its resonance-withdrawing effects. The larger size also results in
+more pronounced deviations from backbone coplanarity, and the combined
+effect results in the lowest electron mobility of the three polymers.</p></sec></sec><sec id="sec2"><title>Conclusions</title><p>In summary, we have presented the synthesis
+and characterization
+of three novel D–A polymers that share the same CDTT donor
+unit but differ in the functionalization of the benzothiadiazole acceptor
+unit. The most electron-deficient dicyanated monomer DCNBT resulted
+in polymer PCDTT-DCNBT that was compared and contrasted with its singly
+fluorinated analogue PCDTT-FCNBT. Substitution of one cyano group
+with one fluorine atom results in a blue shift in solution absorption,
+but interestingly, both polymers exhibit the same absorption maximum
+in the solid state. When the two materials were implemented in OFET
+devices, the more electron-deficient PCDTT-DCNBT polymer showed poor
+device performance with an electron mobility at μ<sub>e,max</sub> ≈ 0.031 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>, whereas the polymer PCDTT-FCNBT exhibited significantly improved
+performance, with an electron mobility 13 times higher at μ<sub>e,max</sub> ≈ 0.4 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> after annealing. The presence of fluorine promotes
+backbone planarity and changes the lowest energy conformation from <italic toggle="yes">syn</italic> to <italic toggle="yes">anti</italic>, resulting in a more linear
+backbone that exhibits high degrees of crystallinity. Additionally,
+we report the first nitro group functionalization of a BT unit in
+a polymeric semiconductor. The replacement of one cyano group with
+one nitro group produced polymer PCDTT-NO<sub>2</sub>FBT, and resulted
+in a blue shift of absorption and a 0.2 eV increase in the band gap.
+The effectiveness of the nitro group as an electron-withdrawing group
+was reduced by steric effects, which twisted the nitro group out of
+conjugation with benzothiadiazole, limiting its role as a π-acceptor
+and resulting in a reduced transistor performance with μ<sub>e,max</sub> ≈ 0.024 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup> when compared to its cyano counterpart (μ<sub>e,max</sub> ≈ 0.031 cm<sup>2</sup> V<sup>–1</sup> s<sup>–1</sup>).</p><p>Overall, we have shown that the systematic
+tuning of cyano and
+fluorine groups is an effective method for tuning the morphology and
+electron transport properties. The presence of fluorine is beneficial
+for enhancing polymer electron mobility by improving backbone linearity,
+planarity, and crystallinity. Nitro groups have not been greatly investigated
+as π-acceptors, and in this study, we demonstrate their poor
+efficacy as a strong electron-withdrawing group. Future use of the
+nitro group requires careful consideration of their sterics, such
+that the nitro group is able to orient in the same plane as the conjugated
+backbone, allowing for full overlap of the respective π systems
+and maximization of their undoubted electron-accepting behavior.</p></sec></body><back><notes id="notes-2" notes-type="si"><title>Supporting Information Available</title><p>The Supporting Information
+is available free of charge at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/10.1021/acs.macromol.4c02854?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acs.macromol.4c02854</ext-link>.<list id="silist" list-type="simple"><list-item><p>Experimental section; characterization techniques; device
+fabrication; <sup>1</sup>H, <sup>19</sup>F, and <sup>13</sup>C NMR
+spectra of intermediates, monomers and polymers; mass spectra; FTIR
+spectra; theoretical calculations; transfer and output plots; cyclic
+voltagramms; PESA plots; UV–vis spectra of annealed films;
+and TGA, DSC, and GIWAXS plots (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://pubs.acs.org/doi/suppl/10.1021/acs.macromol.4c02854/suppl_file/ma4c02854_si_001.pdf">PDF</ext-link>)</p></list-item></list></p></notes><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="sifile1" position="float" orientation="portrait"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ma4c02854_si_001.pdf" position="float" orientation="portrait"><?suppdata-name ma4c02854_si_001.pdf?><?suppdata-size 2062582?><?suppdata-md5 8c3b851367632d7fac91ce93202a1a46?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:0579/11984307/8c3b85136763/ma4c02854_si_001.pdf?><caption><p>ma4c02854_si_001.pdf</p></caption></media></supplementary-material></sec><notes notes-type="COI-statement" id="notes-1"><p>The authors
+declare no competing financial interest.</p></notes><ack><title>Acknowledgments</title><p>The authors thank EPSRC (EP/T028513/1 and EP/L016702/1) and
+the King Abdullah University of Science and Technology (KAUST) under
+Award ORFA-CRG11-2022-5045. This work was performed in part at the
+SAXS/WAXS beamline at the Australian Synchrotron, part of ANSTO.<sup><xref ref-type="bibr" rid="ref47">47</xref></sup> For computer time, this research used the resources
+of the Supercomputing Laboratory at King Abdullah University of Science
+&amp; Technology (KAUST) in Thuwal, Saudi Arabia.</p></ack><ref-list><title>References</title><ref id="ref1"><mixed-citation publication-type="journal" id="cit1"><name name-style="western"><surname>Jin</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>Q.</given-names></name>; <name name-style="western"><surname>Ma</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Shen</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Belfiore</surname><given-names>L. A.</given-names></name>; <name name-style="western"><surname>Bao</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Tang</surname><given-names>J.</given-names></name>
+<article-title>Recent Developments of Polymer Solar Cells with Photovoltaic
+Performance over 17%</article-title>. <source>Adv. Funct. Mater.</source>
+<year>2023</year>, <volume>33</volume> (<issue>14</issue>), <elocation-id>2213324</elocation-id><pub-id pub-id-type="doi">10.1002/adfm.202213324</pub-id>.</mixed-citation></ref><ref id="ref2"><mixed-citation publication-type="journal" id="cit2"><name name-style="western"><surname>Wang</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Ye</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Meng</surname><given-names>Q.</given-names></name>; <name name-style="western"><surname>Di</surname><given-names>C.-a.</given-names></name>; <name name-style="western"><surname>Zhu</surname><given-names>D.</given-names></name>
+<article-title>Advances in Organic
+Transistor-Based Biosensors</article-title>. <source>Adv. Mater. Technol.</source>
+<year>2020</year>, <volume>5</volume> (<issue>7</issue>), <elocation-id>2000218</elocation-id><pub-id pub-id-type="doi">10.1002/admt.202000218</pub-id>.</mixed-citation></ref><ref id="ref3"><mixed-citation publication-type="journal" id="cit3"><name name-style="western"><surname>Liu</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Ouyang</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Guo</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Guo</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Liu</surname><given-names>Y.</given-names></name>
+<article-title>Advances in
+flexible organic field-effect transistors and their applications for
+flexible electronics</article-title>. <source>npj Flexible Electron.</source>
+<year>2022</year>, <volume>6</volume> (<issue>1</issue>), <elocation-id>1</elocation-id><pub-id pub-id-type="doi">10.1038/s41528-022-00133-3</pub-id>.</mixed-citation></ref><ref id="ref4"><mixed-citation publication-type="journal" id="cit4"><name name-style="western"><surname>Riede</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Spoltore</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Leo</surname><given-names>K.</given-names></name>
+<article-title>Organic Solar
+Cells—The Path
+to Commercial Success</article-title>. <source>Adv. Energy Mater.</source>
+<year>2021</year>, <volume>11</volume> (<issue>1</issue>), <elocation-id>2002653</elocation-id><pub-id pub-id-type="doi">10.1002/aenm.202002653</pub-id>.</mixed-citation></ref><ref id="ref5"><mixed-citation publication-type="journal" id="cit5"><name name-style="western"><surname>Zhang</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Gao</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Ni</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Hu</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Dong</surname><given-names>H.</given-names></name>
+<article-title>Recent advances in
+n-type and ambipolar organic semiconductors
+and their multi-functional applications</article-title>. <source>Chem.
+Soc. Rev.</source>
+<year>2023</year>, <volume>52</volume> (<issue>4</issue>), <fpage>1331</fpage>–<lpage>1381</lpage>. <pub-id pub-id-type="doi">10.1039/D2CS00720G</pub-id>.<pub-id pub-id-type="pmid">36723084</pub-id>
+</mixed-citation></ref><ref id="ref6"><mixed-citation publication-type="journal" id="cit6"><name name-style="western"><surname>Griggs</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Marks</surname><given-names>A.</given-names></name>; <name name-style="western"><surname>Bristow</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>McCulloch</surname><given-names>I.</given-names></name>
+<article-title>n-Type organic
+semiconducting polymers: stability limitations, design considerations
+and applications</article-title>. <source>J. Mater. Chem. C</source>
+<year>2021</year>, <volume>9</volume> (<issue>26</issue>), <fpage>8099</fpage>–<lpage>8128</lpage>. <pub-id pub-id-type="doi">10.1039/D1TC02048J</pub-id>.<pub-id pub-id-type="pmcid">PMC8264852</pub-id><pub-id pub-id-type="pmid">34277009</pub-id></mixed-citation></ref><ref id="ref7"><mixed-citation publication-type="journal" id="cit7"><name name-style="western"><surname>Kim</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Ryu</surname><given-names>S. U.</given-names></name>; <name name-style="western"><surname>Park</surname><given-names>S. A.</given-names></name>; <name name-style="western"><surname>Choi</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Chung</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Park</surname><given-names>T.</given-names></name>
+<article-title>Donor–Acceptor-Conjugated
+Polymer for High-Performance Organic Field-Effect Transistors: A Progress
+Report</article-title>. <source>Adv. Funct. Mater.</source>
+<year>2020</year>, <volume>30</volume> (<issue>20</issue>), <elocation-id>1904545</elocation-id><pub-id pub-id-type="doi">10.1002/adfm.201904545</pub-id>.</mixed-citation></ref><ref id="ref8"><mixed-citation publication-type="journal" id="cit8"><name name-style="western"><surname>de
+Leeuw</surname><given-names>D. M.</given-names></name>; <name name-style="western"><surname>Simenon</surname><given-names>M. M. J.</given-names></name>; <name name-style="western"><surname>Brown</surname><given-names>A. R.</given-names></name>; <name name-style="western"><surname>Einerhand</surname><given-names>R. E. F.</given-names></name>
+<article-title>Stability
+of n-type doped conducting polymers and consequences for polymeric
+microelectronic devices</article-title>. <source>Synth. Met.</source>
+<year>1997</year>, <volume>87</volume> (<issue>1</issue>), <fpage>53</fpage>–<lpage>59</lpage>. <pub-id pub-id-type="doi">10.1016/S0379-6779(97)80097-5</pub-id>.</mixed-citation></ref><ref id="ref9"><mixed-citation publication-type="journal" id="cit9"><name name-style="western"><surname>Nicolai</surname><given-names>H. T.</given-names></name>; <name name-style="western"><surname>Kuik</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Wetzelaer</surname><given-names>G. A. H.</given-names></name>; <name name-style="western"><surname>de Boer</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Campbell</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Risko</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Brédas</surname><given-names>J. L.</given-names></name>; <name name-style="western"><surname>Blom</surname><given-names>P. W. M.</given-names></name>
+<article-title>Unification of
+trap-limited electron transport in semiconducting polymers</article-title>. <source>Nat. Mater.</source>
+<year>2012</year>, <volume>11</volume> (<issue>10</issue>), <fpage>882</fpage>–<lpage>887</lpage>. <pub-id pub-id-type="doi">10.1038/nmat3384</pub-id>.<pub-id pub-id-type="pmid">22842510</pub-id>
+</mixed-citation></ref><ref id="ref10"><mixed-citation publication-type="journal" id="cit10"><name name-style="western"><surname>Kafourou</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Park</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Luke</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Tan</surname><given-names>L.</given-names></name>; <name name-style="western"><surname>Panidi</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Glöcklhofer</surname><given-names>F.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>J.-S.</given-names></name>; <name name-style="western"><surname>Lee</surname><given-names>K.</given-names></name>; et al. <article-title>One-Step Sixfold Cyanation
+of Benzothiadiazole Acceptor Units for Air-Stable High-Performance
+n-Type Organic Field-Effect Transistors</article-title>. <source>Angew.
+Chem., Int. Ed.</source>
+<year>2021</year>, <volume>60</volume> (<issue>11</issue>), <fpage>5970</fpage>–<lpage>5977</lpage>. <pub-id pub-id-type="doi">10.1002/anie.202013625</pub-id>.<pub-id pub-id-type="pmcid">PMC7986693</pub-id><pub-id pub-id-type="pmid">33315288</pub-id></mixed-citation></ref><ref id="ref11"><mixed-citation publication-type="journal" id="cit11"><name name-style="western"><surname>Li</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Huang</surname><given-names>E.</given-names></name>; <name name-style="western"><surname>Guo</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Feng</surname><given-names>K.</given-names></name>
+<article-title>Cyano-functionalized
+organic and polymeric semiconductors for high-performance n-type organic
+electronic devices</article-title>. <source>Mater. Chem. Front.</source>
+<year>2023</year>, <volume>7</volume> (<issue>18</issue>), <fpage>3803</fpage>–<lpage>3819</lpage>. <pub-id pub-id-type="doi">10.1039/D3QM00201B</pub-id>.</mixed-citation></ref><ref id="ref12"><mixed-citation publication-type="journal" id="cit12"><name name-style="western"><surname>Shao</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Marder</surname><given-names>T. B.</given-names></name>; <name name-style="western"><surname>Xie</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Liu</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>L.</given-names></name>
+<article-title>N–B ← N Bridged Bithiophene:
+A Building Block with
+Reduced Band Gap to Design n-Type Conjugated Polymers</article-title>. <source>Macromolecules</source>
+<year>2021</year>, <volume>54</volume> (<issue>14</issue>), <fpage>6718</fpage>–<lpage>6725</lpage>. <pub-id pub-id-type="doi">10.1021/acs.macromol.1c01055</pub-id>.</mixed-citation></ref><ref id="ref13"><mixed-citation publication-type="journal" id="cit13"><name name-style="western"><surname>Sharma</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Sarothia</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Singh</surname><given-names>R.</given-names></name>; <name name-style="western"><surname>Kan</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Keivanidis</surname><given-names>P. E.</given-names></name>; <name name-style="western"><surname>Jacob</surname><given-names>J.</given-names></name>
+<article-title>Synthesis and characterization
+of light-absorbing cyclopentadithiophene-based
+donor–acceptor copolymers</article-title>. <source>Polym. Int.</source>
+<year>2016</year>, <volume>65</volume> (<issue>1</issue>), <fpage>57</fpage>–<lpage>65</lpage>. <pub-id pub-id-type="doi">10.1002/pi.5024</pub-id>.</mixed-citation></ref><ref id="ref14"><mixed-citation publication-type="journal" id="cit14"><name name-style="western"><surname>Coppo</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Turner</surname><given-names>M. L.</given-names></name>
+<article-title>Cyclopentadithiophene
+based electroactive materials</article-title>. <source>J. Mater. Chem.</source>
+<year>2005</year>, <volume>15</volume> (<issue>11</issue>), <fpage>1123</fpage>–<lpage>1133</lpage>. <pub-id pub-id-type="doi">10.1039/b412143k</pub-id>.</mixed-citation></ref><ref id="ref15"><mixed-citation publication-type="journal" id="cit15"><name name-style="western"><surname>Li</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>An</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Pisula</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Müllen</surname><given-names>K.</given-names></name>
+<article-title>Cyclopentadithiophene–Benzothiadiazole
+Donor–Acceptor Polymers as Prototypical Semiconductors for
+High-Performance Field-Effect Transistors</article-title>. <source>Acc.
+Chem. Res.</source>
+<year>2018</year>, <volume>51</volume> (<issue>5</issue>), <fpage>1196</fpage>–<lpage>1205</lpage>. <pub-id pub-id-type="doi">10.1021/acs.accounts.8b00025</pub-id>.<pub-id pub-id-type="pmid">29664608</pub-id>
+</mixed-citation></ref><ref id="ref16"><mixed-citation publication-type="journal" id="cit16"><name name-style="western"><surname>Horie</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Kettle</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Yu</surname><given-names>C.-Y.</given-names></name>; <name name-style="western"><surname>Majewski</surname><given-names>L. A.</given-names></name>; <name name-style="western"><surname>Chang</surname><given-names>S.-W.</given-names></name>; <name name-style="western"><surname>Kirkpatrick</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Tuladhar</surname><given-names>S. M.</given-names></name>; <name name-style="western"><surname>Nelson</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Saunders</surname><given-names>B. R.</given-names></name>; <name name-style="western"><surname>Turner</surname><given-names>M. L.</given-names></name>
+<article-title>Cyclopentadithiophene-benzothiadiazole
+oligomers and
+polymers; synthesis, characterisation, field-effect transistor and
+photovoltaic characteristics</article-title>. <source>J. Mater. Chem.</source>
+<year>2012</year>, <volume>22</volume> (<issue>2</issue>), <fpage>381</fpage>–<lpage>389</lpage>. <pub-id pub-id-type="doi">10.1039/C1JM12449H</pub-id>.</mixed-citation></ref><ref id="ref17"><mixed-citation publication-type="journal" id="cit17"><name name-style="western"><surname>Gu</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Huang</surname><given-names>H.</given-names></name>
+<article-title>The revival
+of 4H-cyclopenta[2,1-b:3,4-b′]dithiophene
+(CPDT) driven by low-cost and high-performance nonfused-ring electron
+acceptors</article-title>. <source>J. Mater. Chem. A</source>
+<year>2024</year>, <volume>12</volume> (<issue>29</issue>), <fpage>17973</fpage>–<lpage>17991</lpage>. <pub-id pub-id-type="doi">10.1039/D4TA02180K</pub-id>.</mixed-citation></ref><ref id="ref18"><mixed-citation publication-type="journal" id="cit18"><name name-style="western"><surname>Fei</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Gao</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Smith</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Pattanasattayavong</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Buchaca Domingo</surname><given-names>E.</given-names></name>; <name name-style="western"><surname>Stingelin</surname><given-names>N.</given-names></name>; <name name-style="western"><surname>Watkins</surname><given-names>S. E.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>Kline</surname><given-names>R. J.</given-names></name>; <name name-style="western"><surname>Heeney</surname><given-names>M.</given-names></name>
+<article-title>Near Infrared
+Absorbing Soluble Poly(cyclopenta[2,1-b:3,4-b′]dithiophen-4-one)vinylene
+Polymers Exhibiting High Hole and Electron Mobilities in Ambient Air</article-title>. <source>Chem. Mater.</source>
+<year>2013</year>, <volume>25</volume> (<issue>1</issue>), <fpage>59</fpage>–<lpage>68</lpage>. <pub-id pub-id-type="doi">10.1021/cm303166z</pub-id>.</mixed-citation></ref><ref id="ref19"><mixed-citation publication-type="journal" id="cit19"><name name-style="western"><surname>Yamashita</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Hinkel</surname><given-names>F.</given-names></name>; <name name-style="western"><surname>Marszalek</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Zajaczkowski</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Pisula</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Baumgarten</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Matsui</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Müllen</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Takeya</surname><given-names>J.</given-names></name>
+<article-title>Mobility Exceeding 10 cm2/(V·s) in Donor–Acceptor
+Polymer Transistors with Band-like Charge Transport</article-title>. <source>Chem. Mater.</source>
+<year>2016</year>, <volume>28</volume> (<issue>2</issue>), <fpage>420</fpage>–<lpage>424</lpage>. <pub-id pub-id-type="doi">10.1021/acs.chemmater.5b04567</pub-id>.</mixed-citation></ref><ref id="ref20"><mixed-citation publication-type="journal" id="cit20"><name name-style="western"><surname>Zhong</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Han</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Shaw</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>Heeney</surname><given-names>M.</given-names></name>
+<article-title>Fused Ring Cyclopentadithienothiophenes
+as Novel Building Blocks for High Field Effect Mobility Conjugated
+Polymers</article-title>. <source>Macromolecules</source>
+<year>2015</year>, <volume>48</volume> (<issue>16</issue>), <fpage>5605</fpage>–<lpage>5613</lpage>. <pub-id pub-id-type="doi">10.1021/acs.macromol.5b01278</pub-id>.</mixed-citation></ref><ref id="ref21"><mixed-citation publication-type="journal" id="cit21"><name name-style="western"><surname>He</surname><given-names>Q.</given-names></name>; <name name-style="western"><surname>Shahid</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Wu</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Jiao</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Eisner</surname><given-names>F. D.</given-names></name>; <name name-style="western"><surname>Hodsden</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Fei</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>McNeill</surname><given-names>C. R.</given-names></name>; <name name-style="western"><surname>Durrant</surname><given-names>J. R.</given-names></name>; et al. <article-title>Fused
+Cyclopentadithienothiophene
+Acceptor Enables Ultrahigh Short-Circuit Current and High Efficiency
+&gt;11% in As-Cast Organic Solar Cells</article-title>. <source>Adv.
+Funct.
+Mater.</source>
+<year>2019</year>, <volume>29</volume> (<issue>40</issue>), <elocation-id>1904956</elocation-id><pub-id pub-id-type="doi">10.1002/adfm.201904956</pub-id>.</mixed-citation></ref><ref id="ref22"><mixed-citation publication-type="journal" id="cit22"><name name-style="western"><surname>Casey</surname><given-names>A.</given-names></name>; <name name-style="western"><surname>Dimitrov</surname><given-names>D. S.</given-names></name>; <name name-style="western"><surname>Shakya-Tuladhar</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Fei</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Nguyen</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Han</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>D. T.</given-names></name>; <name name-style="western"><surname>Durrant</surname><given-names>R. J.</given-names></name>; <name name-style="western"><surname>Heeney</surname><given-names>M.</given-names></name>
+<article-title>Effect of
+Systematically Tuning Conjugated Donor Polymer Lowest Unoccupied Molecular
+Orbital Levels via Cyano Substitution on Organic Photovoltaic Device
+Performance</article-title>. <source>Chem. Mater.</source>
+<year>2016</year>, <volume>28</volume>, <fpage>5110</fpage>–<lpage>5120</lpage>. <pub-id pub-id-type="doi">10.1021/acs.chemmater.6b02030</pub-id>.</mixed-citation></ref><ref id="ref23"><mixed-citation publication-type="journal" id="cit23"><name name-style="western"><surname>Casey</surname><given-names>A.</given-names></name>; <name name-style="western"><surname>Han</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Fei</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>White</surname><given-names>A. J. P.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>Heeney</surname><given-names>M.</given-names></name>
+<article-title>Cyano substituted benzothiadiazole:
+a novel acceptor
+inducing n-type behaviour in conjugated polymers</article-title>. <source>J. Mater. Chem. C</source>
+<year>2015</year>, <volume>3</volume>, <fpage>265</fpage><pub-id pub-id-type="doi">10.1039/C4TC02008A</pub-id>.</mixed-citation></ref><ref id="ref24"><mixed-citation publication-type="journal" id="cit24"><name name-style="western"><surname>Shi</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Chen</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Chen</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Feng</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Liu</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Chen</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Liao</surname><given-names>Q.</given-names></name>; <name name-style="western"><surname>Tu</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Luo</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Su</surname><given-names>M.</given-names></name>; et al. <article-title>A Narrow-Bandgap n-Type
+Polymer Semiconductor Enabling
+Efficient All-Polymer Solar Cells</article-title>. <source>Adv. Mater.</source>
+<year>2019</year>, <volume>31</volume> (<issue>46</issue>), <elocation-id>1905161</elocation-id><pub-id pub-id-type="doi">10.1002/adma.201905161</pub-id>.<pub-id pub-id-type="pmid">31566274</pub-id></mixed-citation></ref><ref id="ref25"><mixed-citation publication-type="journal" id="cit25"><name name-style="western"><surname>Feng</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Huang</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Wu</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Shi</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Thomsen</surname><given-names>L.</given-names></name>; <name name-style="western"><surname>Tian</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Woo</surname><given-names>H. Y.</given-names></name>; <name name-style="western"><surname>McNeill</surname><given-names>C. R.</given-names></name>; <name name-style="western"><surname>Guo</surname><given-names>X.</given-names></name>
+<article-title>High-Performance All-Polymer Solar
+Cells Enabled by n-Type Polymers
+with an Ultranarrow Bandgap Down to 1.28 eV</article-title>. <source>Adv. Mater.</source>
+<year>2020</year>, <volume>32</volume> (<issue>30</issue>), <elocation-id>2001476</elocation-id><pub-id pub-id-type="doi">10.1002/adma.202001476</pub-id>.<pub-id pub-id-type="pmid">32519429</pub-id></mixed-citation></ref><ref id="ref26"><mixed-citation publication-type="journal" id="cit26"><name name-style="western"><surname>Iguchi</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Mikie</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Saito</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Komeyama</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Seo</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Ie</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Osaka</surname><given-names>I.</given-names></name>
+<article-title>N-type Semiconducting
+Polymers Based on Dicyano Naphthobisthiadiazole:
+High Electron Mobility with Unfavorable Backbone Twist</article-title>. <source>Chem. Mater.</source>
+<year>2021</year>, <volume>33</volume> (<issue>6</issue>), <fpage>2218</fpage>–<lpage>2228</lpage>. <pub-id pub-id-type="doi">10.1021/acs.chemmater.1c00204</pub-id>.</mixed-citation></ref><ref id="ref27"><mixed-citation publication-type="journal" id="cit27"><name name-style="western"><surname>Shi</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Chen</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Uddin</surname><given-names>M. A.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Tang</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Guo</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Cheng</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Woo</surname><given-names>H. Y.</given-names></name>; et al. <article-title>Cyano-substituted
+benzochalcogenadiazole-based polymer
+semiconductors for balanced ambipolar organic thin-film transistors</article-title>. <source>Polym. Chem.</source>
+<year>2018</year>, <volume>9</volume> (<issue>28</issue>), <fpage>3873</fpage>–<lpage>3884</lpage>. <pub-id pub-id-type="doi">10.1039/C8PY00540K</pub-id>.</mixed-citation></ref><ref id="ref28"><mixed-citation publication-type="journal" id="cit28"><name name-style="western"><surname>Shi</surname><given-names>Q.</given-names></name>; <name name-style="western"><surname>Tatum</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Scott</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Luscombe</surname><given-names>C. K.</given-names></name>; <name name-style="western"><surname>Marder</surname><given-names>S. R.</given-names></name>; <name name-style="western"><surname>Blakey</surname><given-names>S. B.</given-names></name>
+<article-title>The Direct
+Arylation Polymerization
+(DArP) of Well-Defined Alternating Copolymers Based On 5,6-Dicyano[2,1,3]benzothiadiazole
+(DCBT)</article-title>. <source>Asian J. Org. Chem.</source>
+<year>2018</year>, <volume>7</volume> (<issue>7</issue>), <fpage>1419</fpage>–<lpage>1425</lpage>. <pub-id pub-id-type="doi">10.1002/ajoc.201800232</pub-id>.</mixed-citation></ref><ref id="ref29"><mixed-citation publication-type="journal" id="cit29"><name name-style="western"><surname>Wudarczyk</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Papamokos</surname><given-names>G.</given-names></name>; <name name-style="western"><surname>Marszalek</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Nevolianis</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Schollmeyer</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Pisula</surname><given-names>W.</given-names></name>; <name name-style="western"><surname>Floudas</surname><given-names>G.</given-names></name>; <name name-style="western"><surname>Baumgarten</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Müllen</surname><given-names>K.</given-names></name>
+<article-title>Dicyanobenzothiadiazole Derivatives Possessing Switchable
+Dielectric Permittivities</article-title>. <source>ACS Appl. Mater.
+Interfaces</source>
+<year>2017</year>, <volume>9</volume> (<issue>24</issue>), <fpage>20527</fpage>–<lpage>20535</lpage>. <pub-id pub-id-type="doi">10.1021/acsami.7b03060</pub-id>.<pub-id pub-id-type="pmid">28562012</pub-id>
+</mixed-citation></ref><ref id="ref30"><mixed-citation publication-type="journal" id="cit30"><name name-style="western"><surname>Fei</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Boufflet</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Wood</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Wade</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Moriarty</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Gann</surname><given-names>E.</given-names></name>; <name name-style="western"><surname>Ratcliff</surname><given-names>E. L.</given-names></name>; <name name-style="western"><surname>McNeill</surname><given-names>C. R.</given-names></name>; <name name-style="western"><surname>Sirringhaus</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>J.-S.</given-names></name>; et al. <article-title>Influence of Backbone Fluorination in Regioregular
+Poly(3-alkyl-4-fluoro)thiophenes</article-title>. <source>J. Am. Chem.
+Soc.</source>
+<year>2015</year>, <volume>137</volume> (<issue>21</issue>), <fpage>6866</fpage>–<lpage>6879</lpage>. <pub-id pub-id-type="doi">10.1021/jacs.5b02785</pub-id>.<pub-id pub-id-type="pmid">25994804</pub-id>
+</mixed-citation></ref><ref id="ref31"><mixed-citation publication-type="journal" id="cit31"><name name-style="western"><surname>Cameron</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Kanibolotsky</surname><given-names>A. L.</given-names></name>; <name name-style="western"><surname>Skabara</surname><given-names>P. J.</given-names></name>
+<article-title>Lest We Forget–The Importance
+of Heteroatom Interactions in Heterocyclic Conjugated Systems, from
+Synthetic Metals to Organic Semiconductors</article-title>. <source>Adv. Mater.</source>
+<year>2024</year>, <volume>36</volume> (<issue>20</issue>), <elocation-id>2302259</elocation-id><pub-id pub-id-type="doi">10.1002/adma.202302259</pub-id>.<pub-id pub-id-type="pmid">37086184</pub-id></mixed-citation></ref><ref id="ref32"><mixed-citation publication-type="journal" id="cit32"><name name-style="western"><surname>He</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Zhang</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Li</surname><given-names>Y.</given-names></name>
+<article-title>Low Bandgap Polymers
+by Copolymerization of Thiophene with Benzothiadiazole</article-title>. <source>Macromol. Rapid Commun.</source>
+<year>2009</year>, <volume>30</volume> (<issue>1</issue>), <fpage>45</fpage>–<lpage>51</lpage>. <pub-id pub-id-type="doi">10.1002/marc.200800507</pub-id>.<pub-id pub-id-type="pmid">21706537</pub-id>
+</mixed-citation></ref><ref id="ref33"><mixed-citation publication-type="journal" id="cit33"><name name-style="western"><surname>Wang</surname><given-names>F.</given-names></name>; <name name-style="western"><surname>Liu</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Wan</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Zhou</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Chen</surname><given-names>Y.</given-names></name>
+<article-title>Synthesis and properties
+of copolymers based on 5,6-dinitrobenzothiadiazole with low band gap
+and broad absorption spectra</article-title>. <source>Sci. China:Chem.</source>
+<year>2011</year>, <volume>54</volume> (<issue>4</issue>), <fpage>617</fpage>–<lpage>624</lpage>. <pub-id pub-id-type="doi">10.1007/s11426-011-4244-8</pub-id>.</mixed-citation></ref><ref id="ref34"><mixed-citation publication-type="journal" id="cit34"><name name-style="western"><surname>Mo</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>Tong</surname><given-names>T.</given-names></name>
+<article-title>Nitrated benzothiadiazole-based D-A
+electrochromic polymers with tunable spectral properties</article-title>. <source>Synth. Met.</source>
+<year>2024</year>, <volume>308</volume>, <elocation-id>117711</elocation-id><pub-id pub-id-type="doi">10.1016/j.synthmet.2024.117711</pub-id>.</mixed-citation></ref><ref id="ref35"><mixed-citation publication-type="journal" id="cit35"><name name-style="western"><surname>Shu</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Lim</surname><given-names>Y.-F.</given-names></name>; <name name-style="western"><surname>Li</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Purushothaman</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Hallani</surname><given-names>R.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>J. E.</given-names></name>; <name name-style="western"><surname>Parkin</surname><given-names>S. R.</given-names></name>; <name name-style="western"><surname>Malliaras</surname><given-names>G. G.</given-names></name>; <name name-style="western"><surname>Anthony</surname><given-names>J. E.</given-names></name>
+<article-title>A survey of electron-deficient pentacenes
+as acceptors
+in polymer bulk heterojunction solar cells</article-title>. <source>Chem. Sci.</source>
+<year>2011</year>, <volume>2</volume> (<issue>2</issue>), <fpage>363</fpage>–<lpage>368</lpage>. <pub-id pub-id-type="doi">10.1039/C0SC00433B</pub-id>.</mixed-citation></ref><ref id="ref36"><mixed-citation publication-type="journal" id="cit36"><name name-style="western"><surname>Moon</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Lee</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>Y.</given-names></name>
+<article-title>Light-Insensitive Organic Field-Effect
+Transistors with n-Type Conjugated Polymers Containing Dinitrothiophene
+Units</article-title>. <source>Adv. Electron. Mater.</source>
+<year>2018</year>, <volume>4</volume> (<issue>11</issue>), <elocation-id>1800375</elocation-id><pub-id pub-id-type="doi">10.1002/aelm.201800375</pub-id>.</mixed-citation></ref><ref id="ref37"><mixed-citation publication-type="journal" id="cit37"><name name-style="western"><surname>Niazi</surname><given-names>M. R.</given-names></name>; <name name-style="western"><surname>Hamzehpoor</surname><given-names>E.</given-names></name>; <name name-style="western"><surname>Ghamari</surname><given-names>P.</given-names></name>; <name name-style="western"><surname>Perepichka</surname><given-names>I. F.</given-names></name>; <name name-style="western"><surname>Perepichka</surname><given-names>D. F.</given-names></name>
+<article-title>Nitroaromatics as n-type organic semiconductors for
+field effect transistors</article-title>. <source>Chem. Commun.</source>
+<year>2020</year>, <volume>56</volume> (<issue>47</issue>), <fpage>6432</fpage>–<lpage>6435</lpage>. <pub-id pub-id-type="doi">10.1039/D0CC01236J</pub-id>.<pub-id pub-id-type="pmid">32393948</pub-id></mixed-citation></ref><ref id="ref38"><mixed-citation publication-type="journal" id="cit38"><name name-style="western"><surname>Poronik</surname><given-names>Y.
+M.</given-names></name>; <name name-style="western"><surname>Baryshnikov</surname><given-names>G. V.</given-names></name>; <name name-style="western"><surname>Deperasińska</surname><given-names>I.</given-names></name>; <name name-style="western"><surname>Espinoza</surname><given-names>E. M.</given-names></name>; <name name-style="western"><surname>Clark</surname><given-names>J. A.</given-names></name>; <name name-style="western"><surname>Ågren</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Gryko</surname><given-names>D. T.</given-names></name>; <name name-style="western"><surname>Vullev</surname><given-names>V. I.</given-names></name>
+<article-title>Deciphering the
+unusual fluorescence in weakly coupled bis-nitro-pyrrolo[3,2-b]pyrroles</article-title>. <source>Commun. Chem.</source>
+<year>2020</year>, <volume>3</volume> (<issue>1</issue>), <elocation-id>190</elocation-id><pub-id pub-id-type="doi">10.1038/s42004-020-00434-6</pub-id>.<pub-id pub-id-type="pmid">36703353</pub-id>
+<pub-id pub-id-type="pmcid">PMC9814504</pub-id></mixed-citation></ref><ref id="ref39"><mixed-citation publication-type="journal" id="cit39"><name name-style="western"><surname>Wudarczyk</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Papamokos</surname><given-names>G.</given-names></name>; <name name-style="western"><surname>Margaritis</surname><given-names>V.</given-names></name>; <name name-style="western"><surname>Schollmeyer</surname><given-names>D.</given-names></name>; <name name-style="western"><surname>Hinkel</surname><given-names>F.</given-names></name>; <name name-style="western"><surname>Baumgarten</surname><given-names>M.</given-names></name>; <name name-style="western"><surname>Floudas</surname><given-names>G.</given-names></name>; <name name-style="western"><surname>Müllen</surname><given-names>K.</given-names></name>
+<article-title>Hexasubstituted
+Benzenes with Ultrastrong Dipole Moments</article-title>. <source>Angew.
+Chem., Int. Ed.</source>
+<year>2016</year>, <volume>55</volume> (<issue>9</issue>), <fpage>3220</fpage>–<lpage>3223</lpage>. <pub-id pub-id-type="doi">10.1002/anie.201508249</pub-id>.<pub-id pub-id-type="pmid">26836590</pub-id></mixed-citation></ref><ref id="ref40"><mixed-citation publication-type="journal" id="cit40"><name name-style="western"><surname>Barhate</surname><given-names>N. B.</given-names></name>; <name name-style="western"><surname>Gajare</surname><given-names>A. S.</given-names></name>; <name name-style="western"><surname>Wakharkar</surname><given-names>R. D.</given-names></name>; <name name-style="western"><surname>Bedekar</surname><given-names>A. V.</given-names></name>
+<article-title>Simple and efficient
+chlorination and bromination of aromatic compounds with aqueous TBHP
+(or H2O2) and a hydrohalic acid</article-title>. <source>Tetrahedron
+Lett.</source>
+<year>1998</year>, <volume>39</volume> (<issue>35</issue>), <fpage>6349</fpage>–<lpage>6350</lpage>. <pub-id pub-id-type="doi">10.1016/S0040-4039(98)01305-7</pub-id>.</mixed-citation></ref><ref id="ref41"><mixed-citation publication-type="journal" id="cit41"><name name-style="western"><surname>Zhou</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Yang</surname><given-names>L.</given-names></name>; <name name-style="western"><surname>Stuart</surname><given-names>A. C.</given-names></name>; <name name-style="western"><surname>Price</surname><given-names>S. C.</given-names></name>; <name name-style="western"><surname>Liu</surname><given-names>S.</given-names></name>; <name name-style="western"><surname>You</surname><given-names>W.</given-names></name>
+<article-title>Development of Fluorinated Benzothiadiazole as a Structural
+Unit
+for a Polymer Solar Cell of 7% Efficiency</article-title>. <source>Angew.
+Chem., Int. Ed.</source>
+<year>2011</year>, <volume>50</volume> (<issue>13</issue>), <fpage>2995</fpage>–<lpage>2998</lpage>. <pub-id pub-id-type="doi">10.1002/anie.201005451</pub-id>.<pub-id pub-id-type="pmid">21370359</pub-id></mixed-citation></ref><ref id="ref42"><mixed-citation publication-type="journal" id="cit42"><name name-style="western"><surname>Hansch</surname><given-names>C.</given-names></name>; <name name-style="western"><surname>Leo</surname><given-names>A.</given-names></name>; <name name-style="western"><surname>Taft</surname><given-names>R. W.</given-names></name>
+<article-title>A survey
+of Hammett substituent constants and resonance
+and field parameters</article-title>. <source>Chem. Rev.</source>
+<year>1991</year>, <volume>91</volume> (<issue>2</issue>), <fpage>165</fpage>–<lpage>195</lpage>. <pub-id pub-id-type="doi">10.1021/cr00002a004</pub-id>.</mixed-citation></ref><ref id="ref43"><mixed-citation publication-type="journal" id="cit43"><name name-style="western"><surname>Ding</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>G.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Eisner</surname><given-names>F. D.</given-names></name>; <name name-style="western"><surname>Gutiérrez-Fernández</surname><given-names>E.</given-names></name>; <name name-style="western"><surname>Martín</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Yoon</surname><given-names>M.-H.</given-names></name>; <name name-style="western"><surname>Heeney</surname><given-names>M.</given-names></name>
+<article-title>Influence of Backbone
+Curvature on the Organic Electrochemical Transistor Performance of
+Glycolated Donor–Acceptor Conjugated Polymers</article-title>. <source>Angew. Chem., Int. Ed.</source>
+<year>2021</year>, <volume>60</volume> (<issue>36</issue>), <fpage>19679</fpage>–<lpage>19684</lpage>. <pub-id pub-id-type="doi">10.1002/anie.202106084</pub-id>.<pub-id pub-id-type="pmcid">PMC8457089</pub-id><pub-id pub-id-type="pmid">34228896</pub-id></mixed-citation></ref><ref id="ref44"><mixed-citation publication-type="journal" id="cit44"><name name-style="western"><surname>Guo</surname><given-names>K.</given-names></name>; <name name-style="western"><surname>Wu</surname><given-names>B.</given-names></name>; <name name-style="western"><surname>Jiang</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Wang</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Liang</surname><given-names>Z.</given-names></name>; <name name-style="western"><surname>Li</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Deng</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Geng</surname><given-names>Y.</given-names></name>
+<article-title>Synthesis of an isomerically pure
+thienoquinoid for unipolar n-type conjugated polymers: effect of backbone
+curvature on charge transport performance</article-title>. <source>J.
+Mater. Chem. C</source>
+<year>2019</year>, <volume>7</volume> (<issue>33</issue>), <fpage>10352</fpage>–<lpage>10359</lpage>. <pub-id pub-id-type="doi">10.1039/C9TC03556G</pub-id>.</mixed-citation></ref><ref id="ref45"><mixed-citation publication-type="journal" id="cit45"><name name-style="western"><surname>Lei</surname><given-names>T.</given-names></name>; <name name-style="western"><surname>Cao</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Zhou</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Peng</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Bian</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Pei</surname><given-names>J.</given-names></name>
+<article-title>Systematic
+Investigation of Isoindigo-Based Polymeric Field-Effect Transistors:
+Design Strategy and Impact of Polymer Symmetry and Backbone Curvature</article-title>. <source>Chem. Mater.</source>
+<year>2012</year>, <volume>24</volume> (<issue>10</issue>), <fpage>1762</fpage>–<lpage>1770</lpage>. <pub-id pub-id-type="doi">10.1021/cm300117x</pub-id>.</mixed-citation></ref><ref id="ref46"><mixed-citation publication-type="journal" id="cit46"><name name-style="western"><surname>Zhang</surname><given-names>X.</given-names></name>; <name name-style="western"><surname>Bronstein</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Kronemeijer</surname><given-names>A. J.</given-names></name>; <name name-style="western"><surname>Smith</surname><given-names>J.</given-names></name>; <name name-style="western"><surname>Kim</surname><given-names>Y.</given-names></name>; <name name-style="western"><surname>Kline</surname><given-names>R. J.</given-names></name>; <name name-style="western"><surname>Richter</surname><given-names>L. J.</given-names></name>; <name name-style="western"><surname>Anthopoulos</surname><given-names>T. D.</given-names></name>; <name name-style="western"><surname>Sirringhaus</surname><given-names>H.</given-names></name>; <name name-style="western"><surname>Song</surname><given-names>K.</given-names></name>; et al. <article-title>Molecular origin of
+high field-effect mobility in an indacenodithiophene–benzothiadiazole
+copolymer</article-title>. <source>Nat. Commun.</source>
+<year>2013</year>, <volume>4</volume> (<issue>1</issue>), <elocation-id>2238</elocation-id><pub-id pub-id-type="doi">10.1038/ncomms3238</pub-id>.<pub-id pub-id-type="pmid">23900027</pub-id>
+</mixed-citation></ref><ref id="ref47"><mixed-citation publication-type="journal" id="cit47"><name name-style="western"><surname>Kirby</surname><given-names>N. M.</given-names></name>; <name name-style="western"><surname>Mudie</surname><given-names>S. T.</given-names></name>; <name name-style="western"><surname>Hawley</surname><given-names>A. M.</given-names></name>; <name name-style="western"><surname>Cookson</surname><given-names>D. J.</given-names></name>; <name name-style="western"><surname>Mertens</surname><given-names>H. D. T.</given-names></name>; <name name-style="western"><surname>Cowieson</surname><given-names>N.</given-names></name>; <name name-style="western"><surname>Samardzic-Boban</surname><given-names>V.</given-names></name>
+<article-title>A low-background-intensity
+focusing
+small-angle X-ray scattering undulator beamline</article-title>. <source>J. Appl. Crystallogr.</source>
+<year>2013</year>, <volume>46</volume> (<issue>6</issue>), <fpage>1670</fpage>–<lpage>1680</lpage>. <pub-id pub-id-type="doi">10.1107/S002188981302774X</pub-id>.</mixed-citation></ref></ref-list></back></article>
