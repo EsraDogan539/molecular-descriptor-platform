@@ -1,0 +1,6 @@
+records 3086 with 3D 3086
+NaN cells in raw descriptors: 54547 columns with NaN: 24
+random {'global': 0.1053, 'in_fold': 0.105}
+donor {'global': 0.1918, 'in_fold': 0.1902}
+acceptor {'global': 0.2367, 'in_fold': 0.2372}
+donor+acceptor {'global': 0.3028, 'in_fold': 0.3058}
