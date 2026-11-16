@@ -1,10 +1,10 @@
 # ChalMolDB database changelog
 
-## Database v1.3 (2026-11-16, tag `db-v1.3`)
+## Database v1.3 (2026-11-16, tag `db-v1.3`, DOI 10.5281/zenodo.24281244)
 
 Built from the Database v1.2 table (`data/releases/chalcogen_database_v1_2.csv.gz`) by
 `scripts/build_database_v1_3.py`. 5,276 records (3,088 development, 400 external, 1,520 polymer, 268 literature).
-All v1.2 values are unchanged (checked cell by cell in `tests/test_database_v1_2.py`). Two kinds of cells of
+All v1.2 values are unchanged (checked cell by cell in `tests/test_database_v1_3.py`). Two kinds of cells of
 v1.2 records change: the curation note of 15 polymers (below) and the derived `Duplicate_Flag` of one record whose
 structure now also occurs among the added records.
 

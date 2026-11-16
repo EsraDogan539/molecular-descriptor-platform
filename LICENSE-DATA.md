@@ -13,7 +13,7 @@ repository:
 
 You may share and adapt the data for any purpose, provided that you give appropriate credit, link to the licence
 and indicate whether changes were made. Please credit ChalMolDB as described in `CITATION.cff` (concept DOI
-https://doi.org/10.5281/zenodo.22903549) and, where you use them, the original sources:
+https://doi.org/10.5281/zenodo.23558297) and, where you use them, the original sources:
 
 - **Development collection:** T. Haciefendioglu, E. Yildirim, *J. Chem. Inf. Model.* 2025, 65, 5360–5369,
   https://doi.org/10.1021/acs.jcim.5c00345 (Supporting Information, CC BY 4.0). The 3D coordinates are
