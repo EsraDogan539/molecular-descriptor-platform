@@ -206,6 +206,8 @@ def _display_method(value):
 def eg_definition(row):
     """What the Eg value of a record means, in one sentence."""
     if pd.isna(pd.to_numeric(row.get("Eg_eV"), errors="coerce")):
+        if str(row.get("Record_ID", "")).startswith("POL_"):
+            return "no DFT value for this polymer; Exp. Eg is the optical gap measured in the source article"
         return "no value in the source (see the curation note)"
     if str(row.get("Method", "")).startswith("CCSD(T)"):
         return ("fundamental gap from CCSD(T) ionization potential and electron affinity (IP − EA), "
