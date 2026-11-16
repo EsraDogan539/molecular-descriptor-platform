@@ -4,14 +4,17 @@ title: "ChalMolDB Database v1.3 · Scientific Core v0.11.0 — Chalcogen Molecul
 type: software
 version: "db-v1.3"
 date-released: "2026-11-16"
-doi: "10.5281/zenodo.22903549"
+doi: "10.5281/zenodo.24281244"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24281244"
+    description: "Version DOI of Database v1.3 (db-v1.3)"
   - type: doi
     value: "10.5281/zenodo.23558298"
     description: "Version DOI of Database v1.2 (db-v1.2)"
   - type: doi
-    value: "10.5281/zenodo.22903549"
-    description: "Concept DOI (all versions)"
+    value: "10.5281/zenodo.23558297"
+    description: "Concept DOI (resolves to the latest version)"
 url: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 repository-code: "https://github.com/EsraDogan539/molecular-descriptor-platform"
 license: MIT

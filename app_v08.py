@@ -49,9 +49,9 @@ CHALMOLDB_ICON_SVG = """
 
 CHALMOLDB_LOGO_URL = f"{ASSET_BASE_URL}/chalmoldb_logo.svg"
 CHALMOLDB_ICON_URL = f"{ASSET_BASE_URL}/chalmoldb_icon.svg"
-CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.22903549"
-VERSION_DOI_URL = "https://doi.org/10.5281/zenodo.23558298"  # Database v1.2
-PREVIOUS_VERSION_DOI = "10.5281/zenodo.23238884"  # Database v1.1
+CONCEPT_DOI_URL = "https://doi.org/10.5281/zenodo.23558297"
+VERSION_DOI_URL = "https://doi.org/10.5281/zenodo.24281244"  # Database v1.3
+PREVIOUS_VERSION_DOI = "10.5281/zenodo.23558298"  # Database v1.2
 TEAM = [
     {
         "name": "Esra Nur Doğan",
@@ -1132,7 +1132,7 @@ if page == "home":
         <div class="citation-box">
           <strong>How to cite ChalMolDB</strong><br>
           Current release: Database v{DATABASE_VERSION} · Scientific Core v0.11.0<br>
-          Concept DOI (all versions, resolves to the latest): 10.5281/zenodo.22903549 · Database v1.2: 10.5281/zenodo.23558298
+          Concept DOI (resolves to the latest version): 10.5281/zenodo.23558297 · Database v1.3: 10.5281/zenodo.24281244
         </div>
         """,
         unsafe_allow_html=True,
@@ -1398,16 +1398,18 @@ to compute the same descriptors; your data are not added to the database.
     st.markdown('<div class="section-rule-title">Citation and data release</div>', unsafe_allow_html=True)
     st.write(
         f"The current release is ChalMolDB Database v{DATABASE_VERSION} · Scientific Core v0.11.0. All releases are "
-        "archived on Zenodo under the concept DOI 10.5281/zenodo.22903549, which always resolves to the latest "
-        "version; Database v1.2 has the version DOI 10.5281/zenodo.23558298, Database v1.1 the version DOI "
+        "archived on Zenodo. Since Database v1.2 the concept DOI 10.5281/zenodo.23558297 always resolves to the "
+        "latest version (earlier releases: concept DOI 10.5281/zenodo.22903549). Database v1.3 has the version DOI "
+        "10.5281/zenodo.24281244, Database v1.2 the version DOI 10.5281/zenodo.23558298, Database v1.1 the version DOI "
         "10.5281/zenodo.23238884 and Database v1 the version DOI 10.5281/zenodo.22903550. The changes between releases are listed in "
         "docs/DATABASE_CHANGELOG.md of the repository."
     )
     st.markdown(
+        "[Database v1.3 release](https://doi.org/10.5281/zenodo.24281244) · "
         "[Database v1.2 release](https://doi.org/10.5281/zenodo.23558298) · "
         "[Database v1.1 release](https://doi.org/10.5281/zenodo.23238884) · "
         "[Database v1 release](https://doi.org/10.5281/zenodo.22903550) · "
-        "[All archived versions](https://doi.org/10.5281/zenodo.22903549)"
+        "[Latest version](https://doi.org/10.5281/zenodo.23558297)"
     )
     render_credit_footer()
     st.stop()
@@ -1451,7 +1453,7 @@ if page == "about":
         <div class="resource-links">
           <a href="{page_href('documentation')}" target="_self">Documentation</a>
           <a href="https://github.com/EsraDogan539/molecular-descriptor-platform" target="_blank">GitHub repository</a>
-          <a href="https://doi.org/10.5281/zenodo.22903549" target="_blank">Zenodo (all versions)</a>
+          <a href="https://doi.org/10.5281/zenodo.23558297" target="_blank">Zenodo (latest version)</a>
         </div>
         """,
         unsafe_allow_html=True,

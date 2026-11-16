@@ -20,7 +20,7 @@ The field definitions are given in Table S1 of the Supporting Information of the
 
 - Latest release: `https://raw.githubusercontent.com/EsraDogan539/molecular-descriptor-platform/main/`
 - A fixed release (recommended for reproducible work): replace `main` with the release tag, or use the
-  Zenodo archive (concept DOI for all versions: https://doi.org/10.5281/zenodo.22903549).
+  Zenodo archive (concept DOI, resolves to the latest version: https://doi.org/10.5281/zenodo.23558297).
 
 ## Python
 

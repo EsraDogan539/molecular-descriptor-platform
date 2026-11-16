@@ -4,9 +4,11 @@
 A curated chalcogen-focused molecular database and Streamlit research interface for standardized molecular identity, electronic-property data, interpretable S/Se/Te descriptors, structure-first exploration, provenance-aware inspection, and reproducible query workflows.
 
 **Current release:** Database v1.3 · Scientific Core v0.11.0 (tag `db-v1.3`): 5,276 records in four collections, 4,443 unique standardized structures  
+**Database v1.3 version DOI:** https://doi.org/10.5281/zenodo.24281244  
 **Database v1.2 version DOI:** https://doi.org/10.5281/zenodo.23558298  
 **Database v1.1 version DOI:** https://doi.org/10.5281/zenodo.23238884  
-**Concept DOI (all versions, resolves to the latest):** https://doi.org/10.5281/zenodo.22903549  
+**Concept DOI (resolves to the latest version, from v1.2 on):** https://doi.org/10.5281/zenodo.23558297  
+**Concept DOI of the earlier releases (v0.11.0, v1.1):** https://doi.org/10.5281/zenodo.22903549  
 **Database v1 (v0.11.0) version DOI:** https://doi.org/10.5281/zenodo.22903550  
 **Web platform:** https://chalmoldb.streamlit.app
 
@@ -16,9 +18,9 @@ Embedding the platform in another website: [`docs/EMBEDDING.md`](docs/EMBEDDING.
 
 ## Citation
 
-Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.3 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22903549
+Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.3 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24281244
 
-The concept DOI (10.5281/zenodo.22903549) covers all versions; cite the version DOI of the release you used.
+The concept DOI (10.5281/zenodo.23558297) resolves to the latest version; cite the version DOI of the release you used.
 
 ## What ChalMolDB offers
 
