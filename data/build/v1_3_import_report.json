@@ -1,0 +1,25 @@
+{
+ "records_total": 5276,
+ "records_v1_2": 5029,
+ "added_polymer_records": 197,
+ "added_literature_records": 50,
+ "added_polymers_film": 185,
+ "added_new_structures_sharing_inchikey_with_v1_2": 5,
+ "unverified_polymers_noted": 15,
+ "polymer_records": 1520,
+ "literature_records": 268,
+ "unique_inchikeys_total": 4443,
+ "experimental_eg_total": 1562,
+ "core_SSeTe": 5019,
+ "records_with_S_Se_Te": {
+  "S": 4551,
+  "Se": 846,
+  "Te": 199
+ },
+ "added_chalcogen_type": {
+  "S": 211,
+  "Mixed": 24,
+  "None (control)": 9,
+  "Se": 3
+ }
+}

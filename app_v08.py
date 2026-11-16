@@ -1104,10 +1104,10 @@ if page == "home":
         f"""
         <div class="section-label">Database at a glance</div>
         <div class="metric-row">
-          <div class="metric-item"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">S/Se/Te records</span></div>
-          <div class="metric-item"><span class="metric-number">1,371</span><span class="metric-label">Experimental gaps</span></div>
+          <div class="metric-item"><span class="metric-number">5,276</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">4,443</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">5,019</span><span class="metric-label">S/Se/Te records</span></div>
+          <div class="metric-item"><span class="metric-number">1,568</span><span class="metric-label">Experimental gaps</span></div>
         </div>
         <div class="source-strip">
           <div><b>Development collection · 3,088 records</b>Donor–acceptor molecules with exact structures and 3D
@@ -1115,14 +1115,15 @@ if page == "home":
           <div><b>External collection · 400 records</b>Benzochalcogenadiazole and chalcogendiazoloquinoxaline
           oligomers and polymers, B3LYP and LC-BLYP; O. Ozkilinc, H. Kayi, J. Mol. Model. 2019, 25, 167 and
           H. Kayi, E. Sen, O. Ozkilinc, J. Mol. Model. 2024, 30, 179.</div>
-          <div><b>Polymer collection · 1,323 records</b>Conjugated polymers with experimental optical gaps (and
+          <div><b>Polymer collection · 1,520 records</b>Conjugated polymers with experimental optical gaps (and
           HOMO/LUMO for 1,096), with B3LYP-D3/6-31G* values of their oligomers; B. Liu, Y. Yan, M. Liu, Nanoscale
           2025, 17, 7865, experimental data compiled by S. Nagasawa, E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett.
-          2018, 9, 2639.</div>
-          <div><b>Literature collection · 218 records</b>S/Se/Te series from recent articles: thia-, seleno- and
+          2018, 9, 2639. Since v1.3 also 197 donor–acceptor polymers published 2015–2026, with the optical gap
+          measured in each source article.</div>
+          <div><b>Literature collection · 268 records</b>S/Se/Te series from recent articles: thia-, seleno- and
           telluro[n]helicenes with 13 DFT functionals and CCSD(T) reference gaps (R. Kumar, R. Kar, D. K. Maity,
-          J. Comput. Chem. 2025, 46, e70175) and Se/Te fused bicyclic monomers (Z. Büyükmumcu, F. Selampinar,
-          ACS Omega 2026, 11, 15694).</div>
+          J. Comput. Chem. 2025, 46, e70175), Se/Te fused bicyclic monomers (Z. Büyükmumcu, F. Selampinar,
+          ACS Omega 2026, 11, 15694) and, since v1.3, B3LYP gaps of 50 model compounds of literature polymers.</div>
         </div>
         <div class="quiet-note">
           Database v{DATABASE_VERSION} &nbsp;&middot;&nbsp; Structures standardized with RDKit
@@ -1203,10 +1204,10 @@ to compute the same descriptors; your data are not added to the database.
     st.markdown(
         """
         <div class="metric-row" style="margin:1.1rem 0 1.8rem 0; justify-content:flex-start;">
-          <div class="metric-item" style="padding-left:0;"><span class="metric-number">5,029</span><span class="metric-label">Records</span></div>
-          <div class="metric-item"><span class="metric-number">4,781</span><span class="metric-label">Core S/Se/Te</span></div>
-          <div class="metric-item"><span class="metric-number">4,229</span><span class="metric-label">Unique structures</span></div>
-          <div class="metric-item"><span class="metric-number">5,022</span><span class="metric-label">Eg values</span></div>
+          <div class="metric-item" style="padding-left:0;"><span class="metric-number">5,276</span><span class="metric-label">Records</span></div>
+          <div class="metric-item"><span class="metric-number">5,019</span><span class="metric-label">Core S/Se/Te</span></div>
+          <div class="metric-item"><span class="metric-number">4,443</span><span class="metric-label">Unique structures</span></div>
+          <div class="metric-item"><span class="metric-number">5,072</span><span class="metric-label">Eg values</span></div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1438,7 +1439,7 @@ if page == "about":
         f"""
         <div class="release-card">
           <strong>{RELEASE_LABEL}</strong>
-          <span>5,029 records · 4,229 unique standardized structures · 1,371 experimental optical gaps</span>
+          <span>5,276 records · 4,443 unique standardized structures · 1,568 experimental optical gaps</span>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1491,7 +1492,8 @@ if page == "about":
         "E. Al-Naamani, A. Saeki, J. Phys. Chem. Lett. 2018, 9, 2639. Database content is released under CC BY 4.0 "
         "(the polymer-collection source files keep their MIT licence notice) and the software under the MIT licence. "
         "Literature collection: R. Kumar, R. Kar, D. K. Maity, J. Comput. Chem. 2025, 46, e70175 and Z. Büyükmumcu, "
-        "F. Selampinar, ACS Omega 2026, 11, 15694 (both CC BY 4.0)."
+        "F. Selampinar, ACS Omega 2026, 11, 15694 (both CC BY 4.0). Polymers published 2015–2026 and model "
+        "compounds of literature polymers (added in v1.3): values taken from the source article cited in each record."
     )
     render_credit_footer()
     st.stop()

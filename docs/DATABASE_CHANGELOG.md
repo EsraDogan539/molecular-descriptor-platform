@@ -1,5 +1,43 @@
 # ChalMolDB database changelog
 
+## Database v1.3 (2026-11-16, tag `db-v1.3`)
+
+Built from the Database v1.2 table (`data/releases/chalcogen_database_v1_2.csv.gz`) by
+`scripts/build_database_v1_3.py`. 5,276 records (3,088 development, 400 external, 1,520 polymer, 268 literature).
+All v1.2 values are unchanged (checked cell by cell in `tests/test_database_v1_2.py`). Two kinds of cells of
+v1.2 records change: the curation note of 15 polymers (below) and the derived `Duplicate_Flag` of one record whose
+structure now also occurs among the added records.
+
+**Added: 197 polymers published 2015–2026 (polymer collection, POL_1324–POL_1520)**
+- Linear donor–acceptor polymers from articles published 2015–2026, with the optical gap measured in the source
+  article (185 film values, 12 solution values marked in `Solvent_or_Conditions`) and the source DOI in every record
+  (`data/sources/dogan_kayi_2026_external/external_polymers_2015_2026.csv`).
+- The record structure is the methyl-truncated oligomer built from the repeat unit with the convention of the
+  existing polymer records; the repeat unit with full side chains is kept in `Source_Monomer_SMILES`. These records
+  have no DFT values.
+- Polymers already in the collection (same name with the same backbone, or the same source article; 23) are not
+  added again.
+
+**Added: 50 model compounds of literature polymers (literature collection, LIT_0219–LIT_0268)**
+- B3LYP HOMO–LUMO gaps (HOMO and LUMO where given) of oligomer models reported in the source articles: gas phase,
+  basis set and number of repeat units stated (`data/sources/dogan_kayi_2026_external/literature_model_compounds.csv`).
+- The structure is built from the repeat unit with the ChalMolDB oligomer convention; the model of the source
+  article may truncate side chains differently (noted in `Curation_Note`).
+
+**Curation notes: 15 polymers of the 227-polymer set**
+- POL_1116–1119, POL_1122–1125, POL_1135, POL_1141–1143, POL_1145, POL_1147, POL_1148: the source article given
+  in the compilation could not be verified. The records and their values are kept as published in the compilation.
+
+**Summary statistics (v1.2 → v1.3)**
+
+| | v1.2 | v1.3 |
+|---|---|---|
+| Records | 5,029 | 5,276 |
+| Unique InChIKeys | 4,229 | 4,443 |
+| S/Se/Te core scope | 4,781 | 5,019 |
+| Records containing S / Se / Te | 4,344 / 847 / 227 | 4,579 / 874 / 227 |
+| Experimental optical gaps | 1,371 | 1,568 |
+
 ## Database v1.2 (2026-10-22, tag `db-v1.2`, DOI 10.5281/zenodo.23558298)
 
 Built from the Database v1.1 table (`data/releases/chalcogen_database_v1_1.csv.gz`) by

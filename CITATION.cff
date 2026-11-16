@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use ChalMolDB in your research, please cite this software release."
-title: "ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
+title: "ChalMolDB Database v1.3 · Scientific Core v0.11.0 — Chalcogen Molecular Database"
 type: software
-version: "db-v1.2"
-date-released: "2026-10-22"
-doi: "10.5281/zenodo.23558298"
+version: "db-v1.3"
+date-released: "2026-11-16"
+doi: "10.5281/zenodo.22903549"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23558298"

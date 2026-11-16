@@ -7,13 +7,17 @@ import pytest
 
 DB = "data/chalcogen_database_v1_master.csv.gz"
 V11 = "data/releases/chalcogen_database_v1_1.csv.gz"
+V12 = "data/releases/chalcogen_database_v1_2.csv.gz"
 POLY_SDF = "data/structures_3d_polymer.sdf.gz"
 SRC = "data/sources/liu_2025_nanoscale"
 
 
 @pytest.fixture(scope="module")
 def db():
-    return pd.read_csv(DB, dtype=str, keep_default_na=False, na_values=[""])
+    """The v1.2 records of the current table (later releases add records after them)."""
+    d = pd.read_csv(DB, dtype=str, keep_default_na=False, na_values=[""])
+    ids = set(pd.read_csv(V12, usecols=["Record_ID"]).Record_ID)
+    return d[d.Record_ID.isin(ids)].reset_index(drop=True)
 
 
 @pytest.fixture(scope="module")

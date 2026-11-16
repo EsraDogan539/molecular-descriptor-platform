@@ -2,11 +2,15 @@ import pandas as pd
 import pytest
 
 DB = "data/chalcogen_database_v1_master.csv.gz"
+V12 = "data/releases/chalcogen_database_v1_2.csv.gz"
 
 
 @pytest.fixture(scope="module")
 def db():
-    return pd.read_csv(DB, low_memory=False)
+    """The v1.2 records of the current table (later releases add records after them)."""
+    d = pd.read_csv(DB, low_memory=False)
+    ids = set(pd.read_csv(V12, usecols=["Record_ID"]).Record_ID)
+    return d[d.Record_ID.isin(ids)].reset_index(drop=True)
 
 
 def test_record_counts_unchanged(db):
@@ -33,7 +37,8 @@ def test_no_person_named_collection_labels(db):
         assert "erol" not in values and "hakan" not in values
 
 
-def test_duplicate_flag_is_shared_inchikey(db):
+def test_duplicate_flag_is_shared_inchikey():
+    db = pd.read_csv(DB, low_memory=False)
     shared = db.InChIKey.notna() & db.InChIKey.duplicated(keep=False)
     assert (db.Duplicate_Flag.astype(bool) == shared).all()
 

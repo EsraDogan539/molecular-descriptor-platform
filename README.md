@@ -3,7 +3,7 @@
 
 A curated chalcogen-focused molecular database and Streamlit research interface for standardized molecular identity, electronic-property data, interpretable S/Se/Te descriptors, structure-first exploration, provenance-aware inspection, and reproducible query workflows.
 
-**Current release:** Database v1.2 · Scientific Core v0.11.0 (tag `db-v1.2`): 5,029 records in four collections, 4,229 unique standardized structures  
+**Current release:** Database v1.3 · Scientific Core v0.11.0 (tag `db-v1.3`): 5,276 records in four collections, 4,443 unique standardized structures  
 **Database v1.2 version DOI:** https://doi.org/10.5281/zenodo.23558298  
 **Database v1.1 version DOI:** https://doi.org/10.5281/zenodo.23238884  
 **Concept DOI (all versions, resolves to the latest):** https://doi.org/10.5281/zenodo.22903549  
@@ -16,18 +16,20 @@ Embedding the platform in another website: [`docs/EMBEDDING.md`](docs/EMBEDDING.
 
 ## Citation
 
-Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.2 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23558298
+Doğan, E. N.; Kayı, H. (2026). *ChalMolDB Database v1.3 · Scientific Core v0.11.0 — Chalcogen Molecular Database* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22903549
 
 The concept DOI (10.5281/zenodo.22903549) covers all versions; cite the version DOI of the release you used.
 
 ## What ChalMolDB offers
 
-**Curated database (Database v1.2)**
-- 5,029 records in four collections: 3,088 donor–acceptor molecules with DFT-optimized structures; 400 oligomer
-  and polymer records of two chalcogen-substituted donor–acceptor–donor families; 1,323 conjugated polymers
-  with experimental optical gaps (experimental HOMO/LUMO for 1,096) and DFT values of their oligomers
-  (Liu, Yan & Liu, Nanoscale 2025, 17, 7865); and 218 literature records of S/Se/Te series (helicenes with
-  13 DFT functionals and CCSD(T) reference gaps, J. Comput. Chem. 2025; Se/Te bicyclic monomers, ACS Omega 2026)
+**Curated database (Database v1.3)**
+- 5,276 records in four collections: 3,088 donor–acceptor molecules with DFT-optimized structures; 400 oligomer
+  and polymer records of two chalcogen-substituted donor–acceptor–donor families; 1,520 conjugated polymers
+  with experimental optical gaps: 1,323 with experimental HOMO/LUMO for 1,096 and DFT values of their oligomers
+  (Liu, Yan & Liu, Nanoscale 2025, 17, 7865) and 197 donor–acceptor polymers published 2015–2026 with the
+  optical gap measured in each source article; and 268 literature records (S/Se/Te helicenes with 13 DFT
+  functionals and CCSD(T) reference gaps, J. Comput. Chem. 2025; Se/Te bicyclic monomers, ACS Omega 2026;
+  B3LYP gaps of 50 model compounds of literature polymers)
 - Standardized identity (RDKit canonical SMILES, InChI, InChIKey); repeated structures flagged, not removed
 - Record-level provenance: source, level of theory, solvation, curation notes
 - 3D structures for 4,211 records, with an interactive in-browser viewer and SDF download
@@ -65,7 +67,7 @@ Department of Chemical Engineering, Faculty of Engineering, Ankara University, A
 
 ## Scientific Core terminology
 
-The publication-oriented scientific core uses a fixed S/Se/Te-focused descriptor vocabulary. The current release is Database v1.2 with Scientific Core v0.11.0.
+The publication-oriented scientific core uses a fixed S/Se/Te-focused descriptor vocabulary. The current release is Database v1.3 with Scientific Core v0.11.0.
 
 - **Target Chalcogen Count** = `Sulfur Count + Selenium Count + Tellurium Count`
 - **Target Chalcogen Fraction** = `Target Chalcogen Count / Heavy Atom Count`
